@@ -1,15 +1,16 @@
 # 1MT461 Mezinárodní finanční management
 
-> Zpracováno ze `sylabus.txt` (InSIS, ZS 2026/27). Sekce **Klíčové pojmy** je můj návrh podle literatury — upřesnit podle přednášek.
+> Zdroje: `sylabus.txt` (InSIS) a `Zakladni_info_o_1MT461_Mezinarodni_financni_management.doc` (oficiální harmonogram od vyučujících — **má přednost**). Sekce **Klíčové pojmy** je u témat bez prezentace můj návrh podle literatury — upřesnit podle přednášek.
 
 ## Přehled
 
 | | |
 |---|---|
 | Kredity | 6 ECTS · 2/2 (přednáška/cvičení) |
-| Rozvrh | Př Po 09:15–10:45 RB 109 · Cv Po 11:00–12:30 RB 109 |
-| Vyučující | doc. Ing. Karel Brůna, Ph.D. · Ing. Ondřej Šíma, Ph.D. · garant prof. Ing. Martin Mandel, CSc. |
-| Ukončení | zkouška |
+| Rozvrh | Po 09:15–12:30 RB 109 (přednáška + cvičení) |
+| Vyučující | doc. Ing. Karel Brůna, Ph.D. (**KB**, NB 293, bruna@vse.cz) · Ing. Ondřej Šíma, Ph.D. (**OŠ**, NB 291, xsimo09@vse.cz) · garant prof. Ing. Martin Mandel, CSc. |
+| Katedra | měnové teorie a politiky |
+| Ukončení | písemná zkouška = průběžný + závěrečný test |
 | Omezení | nelze po absolvování / současně s 1MT400 |
 
 **O čem to je:** jak firmy v mezinárodním prostředí fungují na devizovém trhu, řídí kurzové riziko, investují a financují se v zahraničí. První polovina z pohledu exportéra/importéra, druhá z pohledu nadnárodní firmy.
@@ -23,46 +24,64 @@
 
 Známky: 1 = 90–100 % · 2 = 75–89 % · 3 = 60–74 % · 4 = pod 60 %
 
-**Termíny testů sylabus neuvádí** → doplnit do `courses.js` (`events`), až budou oznámeny.
+**Termíny testů nejsou známé** → doplnit do `courses.js` (`events`), až budou oznámeny. Rozsah průběžného testu také zatím neznámý.
 
-## Témata
+## Harmonogram a témata
 
-Sylabus témata nepřiřazuje k týdnům; v harmonogramu platí téma N = týden N (13. týden rezerva / opakování).
-Předpoklad: průběžný test pokryje témata 1–6 (exportér/importér), závěrečný celý kurz — ověřit.
+Podle oficiálního harmonogramu (pořadí se liší od InSIS sylabu). Číslo tématu = sekce `#topic-N` = `subtopic` v quizu.
 
-| # | Téma (zkratka) | Ze sylabu | Klíčové pojmy |
-|---|---|---|---|
-| 1 | Firmy na devizovém trhu | Nadnárodní a exportní/importní společnosti na devizovém trhu | účastníci trhu, spot/forward/swap, přímá a nepřímá kotace, bid/ask, křížové kurzy, dlouhá/krátká pozice exportéra a importéra |
-| 2 | Technologie FX obchodování | Klientské platformy, webové systémy, prime brokerage, HFT | single-bank vs. multi-bank platformy, ECN (EBS), prime brokerage, algoritmické a vysokofrekvenční obchodování, last look |
-| 3 | Měnové forwardy | Řízení kurzového rizika forwardy | krytá úroková parita, forwardové body, prémie/diskont, outright vs. swap, forward s opcí na datum (window), NDF |
-| 4 | Měnové opce | Řízení kurzového rizika opcemi | call/put, evropská/americká, prémie, vnitřní a časová hodnota, exportér kupuje put / importér call, collar (zero-cost), participating forward, bariérové opce |
-| 5 | Devizová likvidita, kurz v krátkém období | Řízení devizové likvidity, krátkodobé faktory kurzu | FX swap pro řízení likvidity, úrokový diferenciál, carry trade, kapitálové toky, intervence, sentiment a zprávy |
-| 6 | Transakční a ekonomická expozice | Transakční a ekonomická expozice a jejich řízení | transakční vs. ekonomická (vs. translační) expozice, přirozený hedging, matching, leading & lagging, volba fakturační měny |
-| 7 | Režimy měnového kurzu | Režimy kurzu v kontextu kurzového rizika | pevný, řízený floating, volný floating, currency board, měnová unie, kurzový závazek ČNB 2013–2017 jako zdroj rizika |
-| 8 | Kurz v dlouhém období | Dlouhodobé faktory měnového kurzu | PPP (absolutní/relativní), reálný kurz, Balassa–Samuelson, produktivita, prognózování kurzu a jeho limity |
-| 9 | Nadnárodní firmy a PZI | Vznik nadnárodních firem, efektivnost a rizika PZI | motivy PZI (Dunningova OLI), formy expanze (licence, JV, greenfield, akvizice), NPV projektu z pohledu mateřské vs. dceřiné firmy, country riziko |
-| 10 | Europeněžní a eurokapitálový trh | Eurotrhy jako zdroj financování | euroměna (mimo zemi emise), eurobond vs. zahraniční dluhopis, FRN, zero-coupon, konvertibilní dluhopisy, syndikace, referenční sazby (€STR, SOFR) |
-| 11 | Mezinárodní financování, měnové swapy | Podmínky financování, měnové swapy | faktory podmínek financování (rating, spready, globální likvidita), měnový vs. úrokový swap, komparativní výhoda, cross-currency basis |
-| 12 | Cash pooling a netting | Centralizace řízení likvidity a rizik | fyzický (zero balancing) vs. notional cash pooling, multilaterální netting, reinvoicing centrum, in-house banka |
+| Týden | Datum | Téma | Kdo | Podklady |
+|---|---|---|---|---|
+| 1 | 21. 9. | **1** Nadnárodní a exportně/importně orientovaná firma na devizovém trhu | KB | prezentace 1 ✔ |
+| 2 | 28. 9. | *státní svátek — výuka odpadá* (v dokumentu překlep „28. října“) | | |
+| 3 | 5. 10. | **2** Řízení kurzového rizika prostřednictvím měnových forwardů | OŠ | |
+| 4 | 12. 10. | **3** Řízení kurzového rizika prostřednictvím měnových opcí | OŠ | |
+| 5 | 19. 10. | **4** Technologie a motivace obchodování firem na devizovém trhu | KB | |
+| 6 | 26. 10. | **5** Investování nadnárodních firem a predikce měnového kurzu v dlouhém období | OŠ | |
+| 7 | 2. 11. | *inovační týden — výuka odpadá* | | |
+| 8 | 9. 11. | **6** Řízení devizové likvidity a predikce měnového kurzu v krátkém období | KB | |
+| 9 | 16. 11. | **7** Transakční a ekonomická devizová expozice exportně/importně orientované firmy | KB | |
+| 10 | 23. 11. | **8** Kurzové systémy jako faktor kurzového vývoje a rizika | KB | |
+| 11 | 30. 11. | **9** Vznik nadnárodních firem, analýza efektivnosti a rizik PZI | OŠ | |
+| 12 | 7. 12. | **10** Řízení kurzového rizika v rámci financování nadnárodní firmy | KB | |
+| 13 | 14. 12. | **11** Centralizace řízení likvidity a rizik, cash pooling a multilaterální netting | KB | |
+
+## Klíčové pojmy po tématech
+
+| # | Klíčové pojmy |
+|---|---|
+| 1 | *(z prezentace)* zdroje volatility (flash crash GBP 2016, intervence JPY), časová pásma a likvidita, struktura obratu podle místa / měny / protistrany / instrumentu (BIS 2025), trendové změny struktury trhu, evropská vs. americká kotace, big/small figure, base/quoted currency, křížový kurz vč. bid/ask |
+| 2 | krytá úroková parita, forwardové body, prémie/diskont, outright vs. swap, forward s volným datem plnění, NDF |
+| 3 | call/put, evropská/americká, prémie, vnitřní a časová hodnota, exportér kupuje put / importér call, collar (zero-cost), participating forward, bariérové opce |
+| 4 | single-bank vs. multi-bank platformy, ECN, prime brokerage, algoritmické a vysokofrekvenční obchodování, last look; motivy obchodů firem (zajištění, platby, investice) |
+| 5 | PPP (absolutní/relativní), reálný kurz, Balassa–Samuelson, produktivita, dlouhodobá predikce kurzu a její limity; mezinárodní portfoliové investice |
+| 6 | FX swap pro řízení likvidity, úrokový diferenciál, carry trade, kapitálové toky, intervence, sentiment; krátkodobá predikce (technická analýza, forward jako prediktor) |
+| 7 | transakční vs. ekonomická (vs. translační) expozice, přirozený hedging, matching, leading & lagging, volba fakturační měny |
+| 8 | pevný, řízený floating, volný floating, currency board, měnová unie, kurzový závazek ČNB 2013–2017 jako zdroj rizika |
+| 9 | motivy PZI (Dunningova OLI), formy expanze (licence, JV, greenfield, akvizice), NPV projektu z pohledu mateřské vs. dceřiné firmy, country riziko |
+| 10 | eurotrhy (euroměna mimo zemi emise), eurobond vs. zahraniční dluhopis, FRN, podmínky financování (rating, spready, globální likvidita), měnový vs. úrokový swap, cross-currency basis |
+| 11 | fyzický (zero balancing) vs. notional cash pooling, multilaterální netting, reinvoicing centrum, in-house banka |
 
 ## Výsledky učení → kde se testují
 
-- dopady devizového trhu na firmy → 1, 5, 7
-- volba a použití zajišťovacích operací → 3, 4, 11
-- otevřené pozice, kurzové riziko spolu s cenovým a úrokovým → 3–6, 11
-- transakční, ekonomická a **translační** expozice (translační v obsahu chybí, ve výsledcích je) → 6
-- centralizované řízení likvidity a rizik → 12
+- dopady devizového trhu na firmy → 1, 6, 8
+- volba a použití zajišťovacích operací → 2, 3, 10
+- otevřené pozice, kurzové riziko spolu s cenovým a úrokovým → 2, 3, 7, 10
+- transakční, ekonomická a **translační** expozice (translační v obsahu chybí, ve výsledcích je) → 7
+- centralizované řízení likvidity a rizik → 11
 - mezinárodní expanze, efektivnost PZI → 9
-- výhodnost financování eurobondy, podmínky financování → 10, 11
-- limity prognózování kurzu → 8
+- výhodnost financování eurobondy, podmínky financování → 10
+- limity prognózování kurzu → 5, 6
 
 ## Literatura
 
-- **Základní:** MANDEL, M., DURČÁKOVÁ, J. *Mezinárodní finance a devizový trh.* 2. vyd. Ekopress, 2020. → terminologii a značení v poznámkách držet podle ní (garant = autor)
-- Doporučená: EUN, C., RESNICK, B. *International Finance.* McGraw-Hill, 2014
-- Doporučená: MADURA, J., FOX, R. *International Financial Management.* Cengage, 2011
+- **Povinná:** DURČÁKOVÁ, J., MANDEL, M. *Mezinárodní finance a devizový trh.* 2020 → terminologii a značení v poznámkách držet podle ní a podle přednášek
+- Doporučená: EUN, C., RESNICK, B. *International Financial Management.* McGraw-Hill, 2014
+- Doporučená: BEKAERT, G., HODRICK, R. *International Financial Management.* Pearson, 2012
+- (InSIS navíc uvádí MADURA, J., FOX, R. *International Financial Management.* Cengage, 2011)
 
 ## Na co se zaměřit v podkladech
 
-- **Početní příklady:** forwardový kurz a body, výsledek zajištění forwardem vs. opcí vs. nezajištěná pozice, křížové kurzy, PPP, NPV zahraničního projektu, netting
+- **Značení kurzu na přednáškách:** `25,264 CZK/EUR` = 25,264 CZK za 1 EUR (kotovaná měna / báze) — opačně než tržní zápis EUR/CZK
+- **Početní příklady:** křížové kurzy s bid/ask, forwardový kurz a body, výsledek zajištění forwardem vs. opcí vs. bez zajištění, PPP, NPV zahraničního projektu, netting
 - **Rozhodovací otázky:** co zvolit (forward / opce / collar) pro exportéra a pro importéra, jaký typ expozice to je

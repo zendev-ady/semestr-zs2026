@@ -38,6 +38,7 @@
                     <strong class="d-block mb-2 text-muted" style="font-size:0.8rem;text-transform:uppercase;letter-spacing:.05em">Obsah</strong>
                     <ul class="nav flex-column">
                         <li><a class="nav-link py-1" href="#harmonogram">Harmonogram</a></li>
+                        <li><a class="nav-link py-1" href="#topic-1">1. Firmy na devizovém trhu</a></li>
                     </ul>
                 </nav>
             </div>
@@ -52,8 +53,138 @@
                 </section>
 
                 <!-- Témata ze sylabu: <section class="topic-section" id="topic-N"> … (viz skill semestr) -->
+                <section class="topic-section" id="topic-1">
+                    <h3>1. Nadnárodní a exportně/importně orientovaná firma na devizovém trhu</h3>
+                    <p class="text-muted small">Přednáška 21. 9. · Karel Brůna · zdroj: prezentace 1, data BIS Triennial Survey 2025</p>
+
+                    <h4>Devizový trh a pozice firmy</h4>
+                    <div class="def-box"><strong>Devizový trh:</strong> decentralizovaný mimoburzovní (OTC) trh, kde se obchoduje 24 hodin denně od pondělí do pátku. Je to největší a nejlikvidnější finanční trh: denní obrat je zhruba <strong>9,6 bil. USD</strong> (BIS, duben 2025).</div>
+                    <p>Nefinanční firmy tvoří jen asi <strong>5 %</strong> obratu. Na trhu jsou tedy „malým“ hráčem a kurz berou jako danou veličinu, kterou neovlivní. Proto musí řídit riziko jeho pohybu.</p>
+
+                    <p class="small text-muted mb-1">Tabulka níže je doplněna z literatury, na slidech je jen jako oblast „pozice firmy“; podrobně v tématech 2, 3 a 7.</p>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th></th><th>Exportér</th><th>Importér</th></tr></thead>
+                        <tbody>
+                            <tr><td>Peněžní toky v cizí měně</td><td>příjmy (inkaso)</td><td>výdaje (platby)</td></tr>
+                            <tr><td>Devizová pozice</td><td><strong>dlouhá</strong> v cizí měně</td><td><strong>krátká</strong> v cizí měně</td></tr>
+                            <tr><td>Škodí mu</td><td><strong>posílení</strong> domácí měny (za EUR dostane méně CZK)</td><td><strong>oslabení</strong> domácí měny (za EUR zaplatí více CZK)</td></tr>
+                            <tr><td>Typické zajištění</td><td>prodej cizí měny forwardem, nákup put opce</td><td>nákup cizí měny forwardem, nákup call opce</td></tr>
+                        </tbody>
+                    </table>
+                    <p><strong>Nadnárodní firma</strong> má expozici v mnoha měnách najednou (dceřiné společnosti, vnitroskupinové toky). Díky tomu může pozice vzájemně započítat a řízení centralizovat (téma 11).</p>
+
+                    <h4>Hlavní rizika, kterým firmy na devizovém trhu čelí</h4>
+                    <ul>
+                        <li><strong>Kurzové riziko:</strong> volatilita kurzu mění hodnotu budoucích příjmů a plateb v domácí měně.</li>
+                        <li><strong>Riziko likvidity:</strong> když je na trhu málo obchodů, rozšiřuje se spread a kurz může náhle skočit.</li>
+                        <li><strong>Riziko zásahu autorit:</strong> intervence centrální banky nebo změna kurzového režimu (téma 8, např. konec kurzového závazku ČNB v roce 2017).</li>
+                    </ul>
+                    <div class="ex-box"><strong>Příklad (GBP/USD flash crash, 7. 10. 2016):</strong> kolem 00:07 londýnského času, tedy v asijské seanci s nízkou likviditou, spadla libra během zhruba dvou minut z přibližně 1,26 na přibližně 1,14 USD. Futures na CME se automaticky zastavily, potom se kurz částečně vrátil.
+                        <br><strong>Ponaučení:</strong> v době nízké likvidity může i relativně malý objem obchodů vyvolat extrémní pohyb kurzu.</div>
+                    <div class="ex-box"><strong>Příklad (intervence na podporu jenu, 2024 a 2026):</strong> když USD/JPY vystoupal k hranici přibližně 160 jenů za dolar, japonské úřady opakovaně intervenovaly a kurz se skokově vrátil. Pro firmu to znamená riziko náhlého zlomu trendu, který nevyplývá z fundamentů.</div>
+
+                    <h4>Časová pásma a likvidita</h4>
+                    <p>Obchodování se během dne posouvá mezi hlavními centry: <strong>Sydney → Tokio → Londýn → New York</strong>. Likvidita i volatilita (měřená v pipech) proto během dne kolísá:</p>
+                    <ul>
+                        <li><strong>maximum</strong> je při otevření Londýna a hlavně při <strong>překryvu Londýn–New York</strong> (odpoledne SEČ),</li>
+                        <li><strong>minimum</strong> je po zavření New Yorku, než se naplno rozjede Asie, a také během poledních pauz.</li>
+                    </ul>
+                    <div class="insight-box"><strong>Intuice:</strong> když je otevřeno víc center najednou, je víc protistran. Díky tomu jsou spready užší a velký obchod pohne kurzem méně. Firma, která potřebuje směnit velkou částku, by to měla dělat v nejlikvidnějších hodinách, ne v noci.</div>
+
+                    <h4>Struktura devizového trhu (BIS 2025)</h4>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Hledisko</th><th>Hlavní údaje (podíl na denním obratu)</th></tr></thead>
+                        <tbody>
+                            <tr><td>Místo (sídlo reportující strany)</td><td>Velká Británie 37,8 % · USA 18,6 % · Singapur 11,8 % · Hongkong 7,0 % · Japonsko 3,5 % · Německo 3,1 % · Švýcarsko 2,9 %</td></tr>
+                            <tr><td>Měna (součet = 200 %)</td><td>USD 89,2 % · EUR 28,9 % · JPY 16,8 % · GBP 10,2 % · CNY 8,5 % · CHF 6,4 %</td></tr>
+                            <tr><td>Měnový pár</td><td>USD/EUR 21,2 % · USD/JPY 14,3 % · USD/CNY 8,1 % · USD/GBP 7,6 %</td></tr>
+                            <tr><td>Protistrana</td><td>reportující dealeři 46 % · <strong>ostatní finanční instituce 50 %</strong> (nereportující banky 24, instituc. investoři 13, hedge fondy a PTF 8) · nefinanční klienti 5 %</td></tr>
+                            <tr><td>Instrument (2022 → 2025)</td><td><strong>FX swapy 51 → 42 %</strong> · spot 28 → 31 % · outright forwardy 15 → 19 % · opce 4 → 7 % · měnové swapy 2 → 2 %</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong>
+                        <ul class="mb-0">
+                            <li>Podíly měn dávají dohromady <strong>200 %</strong>, protože v každém obchodu jsou dvě měny. USD je ve zhruba 89 % obchodů, protože slouží jako „vehicle currency“: i obchod mezi dvěma jinými měnami se často provádí přes dolar.</li>
+                            <li><strong>FX swap</strong> (spot + opačný forward, nejobchodovanější instrument) není <strong>měnový swap</strong> (currency swap: výměna jistin a úrokových plateb na delší dobu, jen 2 %).</li>
+                            <li>Hlavním centrem je <strong>Londýn</strong>, ne New York. Dvojnásobné započtení obchodů mezi dealery je ze statistik odstraněno (tzv. net-net báze).</li>
+                        </ul>
+                    </div>
+
+                    <h4>Trendové změny ve struktuře trhu</h4>
+                    <ul>
+                        <li>Celkový objem roste, jen s krátkými poklesy likvidity v krizích (finanční krize, dluhová krize).</li>
+                        <li><strong>Klesá podíl obchodů mezi dealery</strong>: velcí market makeři přesouvají pozice na klienty a zároveň roste koncentrace, tedy trh obsluhuje méně velkých market makerů.</li>
+                        <li><strong>Roste podíl ostatních finančních institucí</strong>, a to díky:
+                            <ul>
+                                <li>algoritmickému a vysokofrekvenčnímu obchodování,</li>
+                                <li>přesunu malých bank mezi klienty,</li>
+                                <li>mezinárodní diverzifikaci portfoliových investorů a zajišťování jejich kurzového rizika,</li>
+                                <li>investorům s pákou a krátkým horizontem (hedge fondy, retail: obchody na margin, carry trade),</li>
+                                <li>růstu profesionálních správců aktiv (hedge, podílové a penzijní fondy).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Obchody nefinančních firem klesají</strong>. Důvody jsou pomalejší růst HDP a zahraničního obchodu, omezení syndikovaného financování a centralizace cash managementu nadnárodních firem, díky které se toky nejdřív započítají uvnitř skupiny.</li>
+                        <li><strong>Rostou retailoví investoři</strong>, kteří obchodují přes on-line platformy (tzv. retail aggregators).</li>
+                    </ul>
+
+                    <h4>Kotace kurzu</h4>
+                    <div class="def-box"><strong>Značení na přednášce:</strong> <code>25,264 CZK/EUR</code> znamená 25,264 CZK za 1 EUR.
+                        <ul class="mb-0">
+                            <li><strong>base currency</strong> (báze) = měna, jejíž 1 jednotka se oceňuje: zde <strong>EUR</strong>, píše se <em>za</em> lomítko,</li>
+                            <li><strong>quoted currency</strong> (kotovaná měna) = měna, ve které je vyjádřena cena: zde <strong>CZK</strong>, píše se <em>před</em> lomítko.</li>
+                        </ul>
+                    </div>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th></th><th>Evropská kotace</th><th>Americká kotace</th></tr></thead>
+                        <tbody>
+                            <tr><td>Příklad</td><td><strong>25,264 CZK/EUR</strong></td><td><strong>0,0396 EUR/CZK</strong></td></tr>
+                            <tr><td>Význam</td><td>kolik domácí měny (CZK) za 1 jednotku zahraniční (EUR)</td><td>kolik zahraniční měny (EUR) za 1 jednotku domácí (CZK)</td></tr>
+                            <tr><td>Big figure</td><td>25,2</td><td>0,03</td></tr>
+                            <tr><td>Small figure (poslední dvě místa = pipy)</td><td>64</td><td>96</td></tr>
+                        </tbody>
+                    </table>
+                    <p>Obě kotace jsou <strong>navzájem převrácené</strong>: $1 / 25{,}264 = 0{,}0396$. Oba kurzy jsou <strong>outright quotation</strong>, tedy kurz vyjádřený celým číslem. Opakem je kotace ve forwardových bodech (téma 2). Dealeři si mezi sebou často sdělují jen small figure („64“), protože big figure je všem známá.</p>
+                    <div class="warn-box"><strong>⚠️ Pozor na zápis:</strong>
+                        <ul class="mb-0">
+                            <li>Na trhu (Reuters, Bloomberg, grafy) se píše <strong>opačně</strong>: <code>EUR/CZK 25,264</code> = báze první. Grafy ve stejné prezentaci používají tržní zápis: „EUR/USD“ kolem 1,2–1,6 znamená USD za 1 EUR.</li>
+                            <li>V testu vždy nejdřív urči, <strong>která měna je jednotka</strong>. Nejrychleji to poznáš podle velikosti čísla: 25 CZK za EUR dává smysl, 25 EUR za CZK ne.</li>
+                            <li>Anglické učebnice (Eun–Resnick) definují „European / American terms“ vůči USD. Na test platí definice z přednášky.</li>
+                        </ul>
+                    </div>
+                    <div class="def-box"><strong>Bid / ask:</strong> market maker kotuje dva kurzy báze: <strong>bid</strong> (za tolik bázi <em>nakupuje</em>) a <strong>ask</strong> (za tolik ji <em>prodává</em>), přičemž bid &lt; ask. Klient tedy prodává za bid a kupuje za ask. Rozdíl mezi nimi (spread) je výdělek market makera.</div>
+
+                    <h4>Křížový kurz</h4>
+                    <p>Křížový kurz počítá kurz dvou měn přes třetí, typicky USD. Postup závisí na tom, jak jsou zadané výchozí kurzy.</p>
+                    <p><strong>a) Obě výchozí kotace mají stejnou bázi (USD)</strong> → kurzy se <strong>dělí</strong>, bid se dělí askem:</p>
+                    <div class="formula-block">$$\text{EUR/GBP} = \frac{\text{EUR/USD}}{\text{GBP/USD}}$$ $$\text{EUR/GBP}_{bid} = \frac{\text{EUR/USD}_{bid}}{\text{GBP/USD}_{ask}} \qquad \text{EUR/GBP}_{ask} = \frac{\text{EUR/USD}_{ask}}{\text{GBP/USD}_{bid}}$$</div>
+                    <p><strong>b) USD je jednou báze a jednou kotovaná měna</strong> → kurzy se <strong>násobí</strong> („cross rate rule“: prostřední měna se vykrátí), bid s bidem a ask s askem:</p>
+                    <div class="formula-block">$$\text{EUR/GBP} = \text{USD/GBP} \cdot \text{EUR/USD}$$ $$\text{EUR/GBP}_{bid} = \text{USD/GBP}_{bid} \cdot \text{EUR/USD}_{bid}$$ $$\text{EUR/GBP}_{ask} = \text{USD/GBP}_{ask} \cdot \text{EUR/USD}_{ask}$$</div>
+                    <div class="ex-box"><strong>Příklad (dělení):</strong> EUR/USD = 0,8540–0,8550 (EUR za 1 USD), GBP/USD = 0,7400–0,7410 (GBP za 1 USD). Kolik EUR stojí 1 GBP?
+                        <br>Bid: $0{,}8540 / 0{,}7410 = 1{,}1525$ EUR/GBP
+                        <br>Ask: $0{,}8550 / 0{,}7400 = 1{,}1554$ EUR/GBP
+                        <br>Kontrola: bid &lt; ask ✔, spread 29 pipů je širší než spread každého z výchozích kurzů.</div>
+                    <div class="ex-box"><strong>Příklad (násobení):</strong> CZK/EUR = 25,250–25,280, EUR/USD = 0,8540–0,8550. Kolik CZK stojí 1 USD?
+                        <br>$\text{CZK/USD} = \text{CZK/EUR} \cdot \text{EUR/USD}$ (EUR se vykrátí)
+                        <br>Bid: $25{,}250 \cdot 0{,}8540 = 21{,}5635$ · Ask: $25{,}280 \cdot 0{,}8550 = 21{,}6144$ CZK/USD</div>
+                    <div class="insight-box"><strong>Intuice k bid/ask:</strong> křížový obchod jsou ve skutečnosti dva obchody za sebou a klient v každém z nich platí spread. Proto musí být křížový bid co nejnižší a ask co nejvyšší. Když ti vyjde bid &gt; ask nebo spread užší než u výchozích kurzů, máš prohozené bid a ask.</div>
+                    <div class="insight-box"><strong>Dynamická aplikace:</strong> podle pravidla $\text{CZK/USD} = \text{CZK/EUR} \cdot \text{EUR/USD}$ platí, že když je koruna vůči euru relativně stabilní, kurz <strong>CZK/USD kopíruje pohyb EUR/USD</strong>. Když v roce 2008 euro vůči dolaru extrémně posílilo (tržně EUR/USD ≈ 1,6), dolar klesl k 15 CZK. Pro českou firmu fakturující v USD je tedy velká část rizika ve skutečnosti riziko pohybu eura vůči dolaru.</div>
+
+                    <div class="summary-box"><strong>Shrnutí:</strong>
+                        <ul>
+                            <li>Devizový trh je OTC, běží 24 h denně od pondělí do pátku a jeho obrat je zhruba 9,6 bil. USD denně. Nefinanční firmy tvoří jen asi 5 % obratu.</li>
+                            <li>Exportér má dlouhou pozici v cizí měně a škodí mu posílení domácí měny. Importér má krátkou pozici a škodí mu její oslabení.</li>
+                            <li>Likvidita je nejvyšší při překryvu Londýn–NY. Při nízké likviditě hrozí skoky kurzu (flash crash GBP 2016). Intervence mohou náhle zlomit trend (JPY).</li>
+                            <li>BIS 2025: hlavním centrem je Londýn (38 %), USD je v 89 % obchodů (měny dohromady 200 %), nejobchodovanějším instrumentem jsou FX swapy (42 %), nadpoloviční podíl mají ostatní finanční instituce.</li>
+                            <li>Trendy: klesá podíl obchodů mezi dealery i obchodů firem, roste podíl ostatních finančních institucí (HFT, fondy, retail).</li>
+                            <li>Zápis na přednášce: CZK/EUR = CZK za 1 EUR, báze je za lomítkem. Evropská kotace je domácí měna za 1 zahraniční, americká je její převrácená hodnota.</li>
+                            <li>Křížový kurz: se stejnou bází se dělí (bid/ask, ask/bid), s prostřední měnou, která se vykrátí, se násobí (bid·bid, ask·ask).</li>
+                        </ul>
+                    </div>
+                    <p class="mb-0"><a href="../quiz.html?course=1MT461&topic=1"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
+                </section>
+
                 <div class="alert alert-secondary">
-                    Poznámky zatím chybí — nahraj sylabus do <code>podklady/1MT461/</code> a požádej Clauda o jejich vytvoření.
+                    Další témata přibudou s prezentacemi z přednášek (<code>podklady/1MT461/</code>).
                 </div>
             </div>
         </div>

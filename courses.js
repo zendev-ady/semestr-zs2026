@@ -2,6 +2,7 @@
    Obsah za "window.COURSES =" musí zůstat čistý JSON (čte ho i quiz.py).
    topics = seznam témat ze sylabu; pořadí = číslo sekce #topic-N = subtopic v quizu
             (v harmonogramu = týden výuky, pokud sylabus neříká jinak).
+   topicWeeks = volitelně týden výuky pro každé téma, když neplatí téma N = týden N (svátky, inovační týden).
    grading = jednořádkové hodnocení ze sylabu.
    events = termíny: {"date": "YYYY-MM-DD", "type": "test|zkouska|deadline|jine", "title": "..."} */
 window.COURSES = [
@@ -57,18 +58,18 @@ window.COURSES = [
     "grading": "Průběžný test 40 % · Závěrečný test 60 %",
     "topics": [
       "Firmy na devizovém trhu",
-      "Technologie FX obchodování",
       "Měnové forwardy",
       "Měnové opce",
+      "Technologie a motivace obchodování",
+      "Investování nadnárodních firem, kurz v dlouhém období",
       "Devizová likvidita, kurz v krátkém období",
       "Transakční a ekonomická expozice",
-      "Režimy měnového kurzu",
-      "Kurz v dlouhém období",
+      "Kurzové systémy",
       "Nadnárodní firmy a PZI",
-      "Europeněžní a eurokapitálový trh",
-      "Mezinárodní financování, měnové swapy",
+      "Kurzové riziko ve financování nadnárodní firmy",
       "Cash pooling a netting"
     ],
+    "topicWeeks": [1, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13],
     "events": []
   },
   {
@@ -112,8 +113,18 @@ window.COURSES = [
   }
 ];
 
-/* Semestr — ověřit v harmonogramu VŠE (začátek výuky = pondělí 1. týdne). */
-window.SEMESTER = { "name": "ZS 2026/2027", "start": "2026-09-21", "weeks": 13 };
+/* Semestr — začátek výuky = pondělí 1. týdne. Volna: výuka v těchto dnech odpadá. */
+window.SEMESTER = {
+  "name": "ZS 2026/2027",
+  "start": "2026-09-21",
+  "weeks": 13,
+  "holidays": [
+    { "from": "2026-09-28", "to": "2026-09-28", "title": "Státní svátek" },
+    { "from": "2026-10-28", "to": "2026-10-28", "title": "Státní svátek" },
+    { "from": "2026-11-02", "to": "2026-11-06", "title": "Inovační týden" },
+    { "from": "2026-11-17", "to": "2026-11-17", "title": "Státní svátek" }
+  ]
+};
 
 window.courseByCode = (code) => window.COURSES.find((c) => c.code === code);
 
