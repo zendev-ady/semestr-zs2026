@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz | ZS 2026/27</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="shared.css">
+    <style>
+        .quiz-navbar { background: #1e293b !important; }
+
+        .topic-btn {
+            border: 2px solid transparent;
+            border-radius: 8px;
+            padding: .45rem 1rem;
+            font-size: .85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all .15s;
+            background: #f1f5f9;
+            color: #334155;
+        }
+        .topic-btn:hover { filter: brightness(.93); }
+        .topic-btn.active { color: #fff; border-color: transparent; background: var(--c, #1e293b); }
+        .topic-btn .btn-count { opacity: .6; font-weight: 400; margin-left: .25rem; }
+
+        .option-btn {
+            display: block;
+            width: 100%;
+            text-align: left;
+            padding: .75rem 1rem;
+            margin-bottom: .5rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            background: #fff;
+            color: #0f172a;
+            font-size: .93rem;
+            cursor: pointer;
+            transition: border-color .1s, background .1s;
+        }
+        .option-btn:hover:not(:disabled) { border-color: #94a3b8; background: #f8fafc; }
+        .option-btn.correct  { border-color: #16A34A; background: #f0fdf4; color: #14532d; font-weight: 600; }
+        .option-btn.wrong    { border-color: #dc2626; background: #fef2f2; color: #7f1d1d; }
+        .option-btn:disabled { cursor: default; }
+
+        .progress-bar-custom {
+            height: 6px;
+            border-radius: 3px;
+            background: #e2e8f0;
+            margin-bottom: 1.5rem;
+        }
+        .progress-bar-fill {
+            height: 100%;
+            border-radius: 3px;
+            background: #2563EB;
+            transition: width .3s;
+        }
+
+        #explanation-box {
+            border-radius: 6px;
+            padding: .75rem 1rem;
+            margin-top: 1rem;
+            font-size: .88rem;
+            background: #fefce8;
+            border-left: 4px solid #ca8a04;
+        }
+
+        .score-circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 6px solid #2563EB;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+        .score-circle .score-num { font-size: 2rem; font-weight: 700; line-height: 1; }
+        .score-circle .score-sub { font-size: .75rem; color: #64748b; }
+
+        #screen-start, #screen-quiz, #screen-result { display: none; }
+        #screen-start.active, #screen-quiz.active, #screen-result.active { display: block; }
+
+        .count-btn {
+            border: 2px solid #e2e8f0;
+            border-radius: 6px;
+            padding: .3rem .8rem;
+            font-size: .85rem;
+            cursor: pointer;
+            background: #f8fafc;
+            color: #334155;
+            font-weight: 600;
+            transition: all .1s;
+        }
+        .count-btn.active { border-color: #1e293b; background: #1e293b; color: #fff; }
+
+        body.dark-mode .option-btn { background: #1e293b; border-color: #334155; color: #e2e8f0; }
+        body.dark-mode .option-btn:hover:not(:disabled) { border-color: #64748b; background: #0f172a; }
+        body.dark-mode .option-btn.correct { background: #14532d; border-color: #16A34A; color: #bbf7d0; }
+        body.dark-mode .option-btn.wrong   { background: #450a0a; border-color: #dc2626; color: #fecaca; }
+        body.dark-mode #explanation-box    { background: #1e1a00; border-left-color: #ca8a04; color: #fef9c3; }
+        body.dark-mode .count-btn          { background: #1e293b; border-color: #334155; color: #e2e8f0; }
+        body.dark-mode .count-btn.active   { background: #e2e8f0; border-color: #e2e8f0; color: #0f172a; }
+        body.dark-mode .topic-btn          { background: #1e293b; color: #94a3b8; }
+        body.dark-mode .progress-bar-custom { background: #334155; }
+
+        .filter-wrong-btn {
+            border: 2px solid #dc2626;
+            border-radius: 8px;
+            padding: .45rem 1rem;
+            font-size: .85rem;
+            font-weight: 600;
+            cursor: pointer;
+            background: #fff;
+            color: #dc2626;
+            transition: all .15s;
+        }
+        .filter-wrong-btn.active { background: #dc2626; color: #fff; }
+        .filter-wrong-btn:disabled { opacity: .4; cursor: default; }
+        body.dark-mode .filter-wrong-btn { background: #1e293b; }
+        body.dark-mode .filter-wrong-btn.active { background: #dc2626; color: #fff; }
+
+        .history-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: .4rem 0;
+            font-size: .85rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .history-item:last-child { border-bottom: none; }
+        body.dark-mode .history-item { border-bottom-color: #334155; }
+        .history-badge {
+            padding: .15rem .55rem;
+            border-radius: 99px;
+            font-size: .78rem;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-dark fixed-top quiz-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-arrow-left me-2"></i>Dashboard</a>
+            <span class="navbar-text fw-bold">Quiz</span>
+            <button class="btn btn-link text-white" onclick="document.body.classList.toggle('dark-mode')" title="Dark mode">
+                <i class="fas fa-adjust"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="container py-4" style="max-width:680px">
+
+        <!-- START -->
+        <div id="screen-start" class="active">
+            <h2 class="fw-bold mb-1">Procvičování</h2>
+            <p class="text-muted mb-4">Vyber téma a počet otázek.</p>
+
+            <div class="topic-section mb-3">
+                <div class="topic-section" style="padding:1.25rem">
+                    <h3 style="font-size:1rem;border:none;padding:0;margin-bottom:.75rem;color:#334155">Předmět</h3>
+                    <div class="d-flex flex-wrap gap-2" id="topic-buttons"></div>
+                    <div id="subtopic-block" style="display:none">
+                        <h3 style="font-size:1rem;border:none;padding:0;margin:1rem 0 .75rem;color:#334155">Téma</h3>
+                        <div class="d-flex flex-wrap gap-2" id="subtopic-buttons"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="topic-section mb-4">
+                <div class="topic-section" style="padding:1.25rem">
+                    <h3 style="font-size:1rem;border:none;padding:0;margin-bottom:.75rem;color:#334155">Počet otázek</h3>
+                    <div class="d-flex gap-2" id="count-buttons">
+                        <button class="count-btn" data-count="5">5</button>
+                        <button class="count-btn active" data-count="10">10</button>
+                        <button class="count-btn" data-count="20">20</button>
+                        <button class="count-btn" data-count="25">25</button>
+                        <button class="count-btn" data-count="999">Vše</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="topic-section mb-4">
+                <div class="topic-section" style="padding:1.25rem">
+                    <h3 style="font-size:1rem;border:none;padding:0;margin-bottom:.75rem;color:#334155">Filtr</h3>
+                    <button class="filter-wrong-btn" id="btn-filter-wrong" onclick="toggleFilterWrong()">
+                        <i class="fas fa-times-circle me-1"></i>Pouze chybné
+                        <span id="wrong-count-badge" class="ms-1"></span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="start-info" class="text-muted mb-3" style="font-size:.88rem"></div>
+            <button class="btn btn-dark btn-lg w-100" id="btn-start" onclick="startQuiz()">
+                <i class="fas fa-play me-2"></i>Spustit quiz
+            </button>
+            <div id="no-questions-msg" class="alert alert-warning mt-3" style="display:none">
+                Pro tento výběr nejsou žádné otázky. Požádej Clauda o jejich vygenerování a spusť <code>python3 quiz.py export</code>.
+            </div>
+
+            <div id="history-section" class="topic-section mt-4" style="display:none">
+                <div style="padding:1.25rem">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <h3 style="font-size:1rem;border:none;padding:0;color:#334155">Poslední výsledky</h3>
+                        <button class="btn btn-link text-muted p-0" style="font-size:.78rem" onclick="clearHistory()">Smazat</button>
+                    </div>
+                    <div id="history-list"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- QUIZ -->
+        <div id="screen-quiz">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <span id="q-counter" class="text-muted" style="font-size:.85rem"></span>
+                <span id="q-score-live" class="fw-bold" style="font-size:.85rem"></span>
+            </div>
+            <div class="progress-bar-custom">
+                <div class="progress-bar-fill" id="progress-fill" style="width:0%"></div>
+            </div>
+            <div class="topic-section mb-3">
+                <div style="padding:.25rem 0">
+                    <p class="text-muted mb-2" style="font-size:.8rem;text-transform:uppercase;letter-spacing:.05em" id="q-topic-label"></p>
+                    <p class="fw-semibold mb-3" style="font-size:1.05rem" id="q-text"></p>
+                    <div id="q-options"></div>
+                    <div id="explanation-box" style="display:none"></div>
+                </div>
+            </div>
+            <div class="d-flex gap-2">
+                <button class="btn btn-outline-secondary" onclick="goToStart()">
+                    <i class="fas fa-times me-1"></i>Ukončit
+                </button>
+                <button class="btn btn-dark flex-grow-1" id="btn-next" onclick="nextQuestion()" style="display:none">
+                    Další <i class="fas fa-arrow-right ms-1"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- VÝSLEDEK -->
+        <div id="screen-result">
+            <div class="topic-section text-center" style="padding:2rem">
+                <div class="score-circle" id="result-circle">
+                    <span class="score-num" id="result-score"></span>
+                    <span class="score-sub" id="result-total"></span>
+                </div>
+                <h3 id="result-label" style="font-size:1.3rem;border:none;padding:0;color:#0f172a"></h3>
+                <p class="text-muted" id="result-sub"></p>
+                <div class="d-flex gap-2 justify-content-center mt-3">
+                    <button class="btn btn-outline-secondary" onclick="goToStart()">
+                        <i class="fas fa-home me-1"></i>Zpět
+                    </button>
+                    <button class="btn btn-dark" onclick="startQuiz()">
+                        <i class="fas fa-redo me-1"></i>Znovu
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="courses.js"></script>
+    <script src="quiz-data.js"></script>
+    <script>
+    let allQuestions = [];
+    let quizQuestions = [];
+    let currentIdx = 0;
+    let score = 0;
+    let selectedTopic = 'vse';
+    let selectedSubtopic = null;
+    let selectedCount = 10;
+    let filterWrong = false;
+
+    // localStorage je u file:// sdílený s jinými projekty → vlastní prefix klíčů
+    const STORAGE_PREFIX = 'zs2026_';
+
+    function subtopicLabel(course, n) {
+        const name = course && course.topics[n - 1];
+        return name ? `${n}. ${name}` : `Téma ${n}`;
+    }
+
+    // topic = kód předmětu, případně "KÓD:N" pro konkrétní téma
+    function topicLabel(key) {
+        if (key === 'vse') return 'Vše';
+        const [code, sub] = String(key).split(':');
+        const course = courseByCode(code);
+        const name = course ? course.name : code;
+        return sub ? `${name} · ${subtopicLabel(course, Number(sub))}` : name;
+    }
+
+    let historyClearedManually = false;
+    const stateLoadPromise = loadInitialState();
+
+    async function loadInitialState() {
+        let hasStats = false;
+        let hasHistory = false;
+        try {
+            hasStats = localStorage.getItem(STORAGE_PREFIX + 'quiz_stats') !== null;
+            hasHistory = localStorage.getItem(STORAGE_PREFIX + 'quiz_history') !== null;
+        } catch {
+            return;
+        }
+        if (hasStats && hasHistory) return;
+
+        try {
+            if (!hasStats) {
+                const stats = await loadJsonFile('quiz_stats.json', {});
+                localStorage.setItem(STORAGE_PREFIX + 'quiz_stats', JSON.stringify(stats));
+            }
+            if (!hasHistory && !historyClearedManually) {
+                const history = await loadJsonFile('quiz_history.json', []);
+                const trimmed = Array.isArray(history) ? history.slice(0, 10) : [];
+                localStorage.setItem(STORAGE_PREFIX + 'quiz_history', JSON.stringify(trimmed));
+            }
+        } catch {
+            // fetch failed; localStorage remains source of truth
+        }
+    }
+
+    async function loadJsonFile(url, fallback) {
+        const response = await fetch(url);
+        if (!response.ok) return fallback;
+        return await response.json();
+    }
+
+    // ── localStorage helpers ───────────────────────────────────────────
+    function getStoredState(key, fallback) {
+        try {
+            const value = localStorage.getItem(STORAGE_PREFIX + key);
+            return value === null ? fallback : JSON.parse(value);
+        } catch {
+            return fallback;
+        }
+    }
+    function setStoredState(key, value) {
+        try {
+            localStorage.setItem(STORAGE_PREFIX + key, JSON.stringify(value));
+        } catch {
+            // úložiště nedostupné — statistiky se neuloží
+        }
+    }
+
+    function getStats() {
+        return getStoredState('quiz_stats', {});
+    }
+    function saveStats(stats) {
+        setStoredState('quiz_stats', stats);
+    }
+    function recordAnswer(questionId, isCorrect) {
+        const stats = getStats();
+        if (!stats[questionId]) stats[questionId] = { correct: 0, wrong: 0 };
+        if (isCorrect) stats[questionId].correct++;
+        else stats[questionId].wrong++;
+        saveStats(stats);
+    }
+
+    function getHistory() {
+        const history = getStoredState('quiz_history', []);
+        return Array.isArray(history) ? history : [];
+    }
+    function saveHistoryEntry(topic, score, total) {
+        const history = getHistory();
+        history.unshift({
+            date: new Date().toLocaleDateString('cs-CZ', { day: '2-digit', month: '2-digit' }),
+            topic,
+            score,
+            total,
+        });
+        setStoredState('quiz_history', history.slice(0, 10));
+    }
+    function clearHistory() {
+        historyClearedManually = true;
+        setStoredState('quiz_history', []);
+        renderHistory();
+    }
+
+    // ── question filtering ─────────────────────────────────────────────
+    function filteredQuestions() {
+        let pool = selectedTopic === 'vse' ? allQuestions : allQuestions.filter(q => q.topic === selectedTopic);
+        if (selectedSubtopic !== null) pool = pool.filter(q => q.subtopic === selectedSubtopic);
+        if (filterWrong) {
+            const stats = getStats();
+            pool = pool.filter(q => {
+                const s = stats[q.id];
+                return s && s.wrong > s.correct;
+            });
+        }
+        return pool;
+    }
+
+    function wrongQuestionsCount() {
+        const stats = getStats();
+        return allQuestions.filter(q => {
+            const s = stats[q.id];
+            return s && s.wrong > s.correct;
+        }).length;
+    }
+
+    // ── UI event listeners ─────────────────────────────────────────────
+    function renderTopicButtons() {
+        const count = code => allQuestions.filter(q => code === 'vse' || q.topic === code).length;
+        const buttons = [{ code: 'vse', name: 'Vše', color: '#1e293b' }, ...COURSES].map(c =>
+            `<button class="topic-btn${c.code === selectedTopic ? ' active' : ''}" data-topic="${c.code}" style="--c:${c.color}"
+                     title="${c.code}">${c.name}<span class="btn-count">${count(c.code)}</span></button>`);
+        document.getElementById('topic-buttons').innerHTML = buttons.join('');
+        renderSubtopicButtons();
+    }
+
+    function renderSubtopicButtons() {
+        const block = document.getElementById('subtopic-block');
+        const course = courseByCode(selectedTopic);
+        const inCourse = allQuestions.filter(q => q.topic === selectedTopic);
+        const numbers = [...new Set([
+            ...(course ? course.topics.map((_, i) => i + 1) : []),
+            ...inCourse.map(q => q.subtopic).filter(n => n),
+        ])].sort((a, b) => a - b);
+        if (!course || numbers.length === 0) {
+            block.style.display = 'none';
+            return;
+        }
+        block.style.display = '';
+        const btn = (n, label) => {
+            const cnt = n === null ? inCourse.length : inCourse.filter(q => q.subtopic === n).length;
+            return `<button class="topic-btn${n === selectedSubtopic ? ' active' : ''}" data-subtopic="${n ?? ''}" style="--c:${course.color}">${label}<span class="btn-count">${cnt}</span></button>`;
+        };
+        document.getElementById('subtopic-buttons').innerHTML =
+            [btn(null, 'Všechna témata'), ...numbers.map(n => btn(n, subtopicLabel(course, n)))].join('');
+    }
+
+    document.getElementById('topic-buttons').addEventListener('click', e => {
+        const btn = e.target.closest('.topic-btn');
+        if (!btn) return;
+        selectedTopic = btn.dataset.topic;
+        selectedSubtopic = null;
+        renderTopicButtons();
+        updateStartInfo();
+    });
+
+    document.getElementById('subtopic-buttons').addEventListener('click', e => {
+        const btn = e.target.closest('.topic-btn');
+        if (!btn) return;
+        selectedSubtopic = btn.dataset.subtopic ? Number(btn.dataset.subtopic) : null;
+        renderSubtopicButtons();
+        updateStartInfo();
+    });
+
+    document.getElementById('count-buttons').addEventListener('click', e => {
+        const btn = e.target.closest('.count-btn');
+        if (!btn) return;
+        document.querySelectorAll('.count-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        selectedCount = parseInt(btn.dataset.count);
+        updateStartInfo();
+    });
+
+    function toggleFilterWrong() {
+        filterWrong = !filterWrong;
+        document.getElementById('btn-filter-wrong').classList.toggle('active', filterWrong);
+        updateStartInfo();
+    }
+
+    // ── start screen ───────────────────────────────────────────────────
+    function updateStartInfo() {
+        const wrongCount = wrongQuestionsCount();
+        const badge = document.getElementById('wrong-count-badge');
+        badge.textContent = wrongCount > 0 ? `(${wrongCount})` : '';
+        const filterBtn = document.getElementById('btn-filter-wrong');
+        filterBtn.disabled = wrongCount === 0;
+        if (wrongCount === 0 && filterWrong) {
+            filterWrong = false;
+            filterBtn.classList.remove('active');
+        }
+
+        const pool = filteredQuestions();
+        const count = Math.min(selectedCount, pool.length);
+        const msg = document.getElementById('start-info');
+        const noQ = document.getElementById('no-questions-msg');
+        const btn = document.getElementById('btn-start');
+        if (pool.length === 0) {
+            noQ.style.display = '';
+            btn.disabled = true;
+            msg.textContent = filterWrong ? 'Žádné chybné otázky pro toto téma.' : '';
+        } else {
+            noQ.style.display = 'none';
+            btn.disabled = false;
+            const filterNote = filterWrong ? ' (filtr: chybné)' : '';
+            msg.textContent = `${pool.length} otázek k dispozici · bude vybráno ${count}${filterNote}`;
+        }
+
+        renderHistory();
+    }
+
+    function renderHistory() {
+        const history = getHistory();
+        const section = document.getElementById('history-section');
+        const list = document.getElementById('history-list');
+        if (history.length === 0) { section.style.display = 'none'; return; }
+        section.style.display = '';
+        list.innerHTML = history.map(h => {
+            const pct = Math.round(h.score / h.total * 100);
+            const color = pct >= 70 ? '#16A34A' : pct >= 50 ? '#ca8a04' : '#dc2626';
+            return `<div class="history-item">
+                <span class="text-muted">${h.date} &nbsp;·&nbsp; ${topicLabel(h.topic)}</span>
+                <span class="history-badge" style="background:${color}20;color:${color}">${h.score}/${h.total} &nbsp;${pct}%</span>
+            </div>`;
+        }).join('');
+    }
+
+    // ── quiz flow ──────────────────────────────────────────────────────
+    function shuffle(arr) {
+        const a = [...arr];
+        for (let i = a.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [a[i], a[j]] = [a[j], a[i]];
+        }
+        return a;
+    }
+
+    async function startQuiz() {
+        await stateLoadPromise;
+        const pool = filteredQuestions();
+        quizQuestions = shuffle(pool).slice(0, Math.min(selectedCount, pool.length));
+        currentIdx = 0;
+        score = 0;
+        showScreen('quiz');
+        renderQuestion();
+    }
+
+    function renderQuestion() {
+        const q = quizQuestions[currentIdx];
+        const total = quizQuestions.length;
+
+        document.getElementById('q-counter').textContent = `${currentIdx + 1} / ${total}`;
+        document.getElementById('q-score-live').textContent = `${score} správně`;
+        document.getElementById('progress-fill').style.width = `${(currentIdx / total) * 100}%`;
+        document.getElementById('q-topic-label').textContent = topicLabel(q.subtopic ? `${q.topic}:${q.subtopic}` : q.topic);
+        document.getElementById('q-text').textContent = q.question;
+        document.getElementById('explanation-box').style.display = 'none';
+        document.getElementById('btn-next').style.display = 'none';
+
+        const opts = document.getElementById('q-options');
+        opts.innerHTML = '';
+        ['A', 'B', 'C', 'D'].forEach(letter => {
+            const btn = document.createElement('button');
+            btn.className = 'option-btn';
+            btn.innerHTML = `<strong>${letter})</strong> ${q['option_' + letter.toLowerCase()]}`;
+            btn.onclick = () => answerQuestion(letter, q);
+            opts.appendChild(btn);
+        });
+    }
+
+    function answerQuestion(chosen, q) {
+        const opts = document.getElementById('q-options').querySelectorAll('.option-btn');
+        opts.forEach(btn => btn.disabled = true);
+
+        const correct = q.correct.toUpperCase();
+        const isCorrect = chosen === correct;
+        opts.forEach((btn, i) => {
+            const letter = ['A', 'B', 'C', 'D'][i];
+            if (letter === correct) btn.classList.add('correct');
+            else if (letter === chosen) btn.classList.add('wrong');
+        });
+
+        if (isCorrect) score++;
+        recordAnswer(q.id, isCorrect);
+
+        if (q.explanation) {
+            const box = document.getElementById('explanation-box');
+            box.textContent = q.explanation;
+            box.style.display = '';
+        }
+
+        const isLast = currentIdx === quizQuestions.length - 1;
+        const nextBtn = document.getElementById('btn-next');
+        nextBtn.style.display = '';
+        nextBtn.innerHTML = isLast
+            ? '<i class="fas fa-flag-checkered me-1"></i>Zobrazit výsledek'
+            : 'Další <i class="fas fa-arrow-right ms-1"></i>';
+    }
+
+    function nextQuestion() {
+        if (currentIdx < quizQuestions.length - 1) {
+            currentIdx++;
+            renderQuestion();
+        } else {
+            showResult();
+        }
+    }
+
+    function showResult() {
+        const total = quizQuestions.length;
+        const pct = Math.round(score / total * 100);
+        document.getElementById('result-score').textContent = `${score}/${total}`;
+        document.getElementById('result-total').textContent = `${pct} %`;
+
+        const circle = document.getElementById('result-circle');
+        circle.style.borderColor = pct >= 70 ? '#16A34A' : pct >= 50 ? '#ca8a04' : '#dc2626';
+
+        const label = document.getElementById('result-label');
+        const sub = document.getElementById('result-sub');
+        if (pct >= 80) { label.textContent = 'Výborně!'; sub.textContent = 'Tohle zvládáš.'; }
+        else if (pct >= 60) { label.textContent = 'Dobrá práce'; sub.textContent = 'Ještě trochu procvičit.'; }
+        else { label.textContent = 'Zkus to znovu'; sub.textContent = 'Přečti si látku a opakuj.'; }
+
+        saveHistoryEntry(selectedSubtopic !== null ? `${selectedTopic}:${selectedSubtopic}` : selectedTopic, score, total);
+        showScreen('result');
+    }
+
+    async function goToStart() {
+        await stateLoadPromise;
+        showScreen('start');
+        updateStartInfo();
+    }
+
+    function showScreen(name) {
+        ['start', 'quiz', 'result'].forEach(s => {
+            document.getElementById(`screen-${s}`).classList.toggle('active', s === name);
+        });
+    }
+
+    // ── init ───────────────────────────────────────────────────────────
+    // quiz.html?course=KÓD&topic=N — odkaz ze stránky předmětu
+    const params = new URLSearchParams(location.search);
+    if (courseByCode(params.get('course'))) {
+        selectedTopic = params.get('course');
+        if (params.get('topic')) selectedSubtopic = Number(params.get('topic'));
+    }
+
+    if (typeof window.QUIZ_DATA !== 'undefined') {
+        allQuestions = window.QUIZ_DATA;
+    } else {
+        document.getElementById('start-info').textContent =
+            'quiz-data.js nenalezen — spusť: python3 quiz.py export';
+        document.getElementById('btn-start').disabled = true;
+    }
+    renderTopicButtons();
+    stateLoadPromise.then(() => updateStartInfo());
+    </script>
+</body>
+</html>

@@ -1,0 +1,275 @@
+/* ============================================================
+   shared.css — Semestr ZS 2026/27 · sdílené styly
+   ============================================================ */
+
+/* Base — --accent nastavuje courses.js podle <body data-course> */
+:root { --accent: #1e293b; }
+
+body {
+    padding-top: 56px;
+    background: #f8f9fa;
+    font-size: 0.95rem;
+}
+
+/* ── Navbar ────────────────────────────────────────────────── */
+.subject-navbar {
+    background-color: var(--accent) !important;
+}
+
+/* ── H3 barva ──────────────────────────────────────────────── */
+.topic-section h3 { color: var(--accent); }
+
+/* ── Sidebar TOC ───────────────────────────────────────────── */
+.topic-nav {
+    position: sticky;
+    top: 72px;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.topic-nav .nav-link {
+    color: #475569;
+    font-size: 0.85rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+}
+
+.topic-nav .nav-link:hover,
+.topic-nav .nav-link.active {
+    background: #f1f5f9;
+    color: #0f172a;
+}
+
+/* ── Sekce ─────────────────────────────────────────────────── */
+.topic-section {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.topic-section h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    border-bottom: 2px solid currentColor;
+    padding-bottom: 0.4rem;
+    margin-bottom: 1rem;
+}
+
+.topic-section h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #334155;
+    margin-top: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+/* ── Boxy ──────────────────────────────────────────────────── */
+.def-box,
+.thm-box,
+.ex-box,
+.warn-box,
+.insight-box,
+.summary-box {
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    margin: 0.75rem 0;
+    font-size: 0.9rem;
+    border-left: 4px solid transparent;
+}
+
+/* Definice — barva předmětu */
+.def-box {
+    background: color-mix(in srgb, var(--accent) 8%, #fff);
+    border-left-color: var(--accent);
+}
+
+/* Věta — zelená */
+.thm-box {
+    background: #f0fdf4;
+    border-left-color: #16A34A;
+}
+
+/* Příklad — cyan */
+.ex-box {
+    background: #ecfeff;
+    border-left-color: #06b6d4;
+}
+
+/* Záludnost — žlutá */
+.warn-box {
+    background: #fefce8;
+    border-left-color: #ca8a04;
+}
+
+/* Intuice — fialová */
+.insight-box {
+    background: #faf5ff;
+    border-left-color: #9333ea;
+}
+
+/* Shrnutí — šedá */
+.summary-box {
+    background: #f8fafc;
+    border-left-color: #94a3b8;
+}
+
+.summary-box ul {
+    margin-bottom: 0;
+    padding-left: 1.2rem;
+}
+
+/* ── Vzorce ────────────────────────────────────────────────── */
+.formula-block {
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    margin: 0.75rem 0;
+    text-align: center;
+    font-size: 1.05rem;
+    overflow-x: auto;
+}
+
+/* ── Tabulky ───────────────────────────────────────────────── */
+.summary-table {
+    font-size: 0.875rem;
+}
+
+.summary-table thead {
+    background: #f1f5f9;
+}
+
+/* ── Dark mode ─────────────────────────────────────────────── */
+body.dark-mode {
+    background: #0f172a;
+    color: #e2e8f0;
+}
+
+body.dark-mode .topic-section {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+body.dark-mode .topic-nav {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+body.dark-mode .topic-nav .nav-link { color: #94a3b8; }
+body.dark-mode .topic-nav .nav-link:hover,
+body.dark-mode .topic-nav .nav-link.active { background: #334155; color: #f1f5f9; }
+
+body.dark-mode .def-box,
+body.dark-mode .thm-box,
+body.dark-mode .ex-box,
+body.dark-mode .warn-box,
+body.dark-mode .insight-box,
+body.dark-mode .summary-box { filter: brightness(0.75); }
+
+body.dark-mode .formula-block {
+    background: #1e293b;
+    border-color: #334155;
+    color: #e2e8f0;
+}
+
+body.dark-mode .summary-table thead { background: #1e293b; }
+body.dark-mode .table { color: #e2e8f0; }
+body.dark-mode .table-bordered { border-color: #334155; }
+body.dark-mode .table-bordered td,
+body.dark-mode .table-bordered th { border-color: #334155; }
+
+/* ── Dashboard karty ───────────────────────────────────────── */
+.subject-card {
+    border-radius: 12px;
+    border: none;
+    transition: transform 0.15s, box-shadow 0.15s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.subject-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    color: inherit;
+}
+
+.subject-card .card-body {
+    padding: 1.5rem;
+}
+
+.subject-card .card-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ── Harmonogram ───────────────────────────────────────────── */
+.timetable {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: .5rem;
+}
+.timetable .day-col h6 {
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color: #64748b;
+    margin-bottom: .4rem;
+}
+.timetable .day-col.today h6 { color: #0f172a; font-weight: 700; }
+.slot {
+    display: block;
+    border-left: 4px solid var(--c, #94a3b8);
+    background: color-mix(in srgb, var(--c, #94a3b8) 10%, #fff);
+    border-radius: 6px;
+    padding: .4rem .55rem;
+    margin-bottom: .4rem;
+    font-size: .78rem;
+    line-height: 1.3;
+    color: #0f172a;
+    text-decoration: none;
+}
+.slot:hover { color: #0f172a; filter: brightness(.96); }
+.slot .slot-time { font-weight: 700; }
+.slot .slot-room { color: #64748b; }
+
+@media (max-width: 767px) {
+    .timetable { grid-template-columns: 1fr; }
+}
+
+.event-item {
+    display: flex;
+    gap: .75rem;
+    align-items: baseline;
+    padding: .45rem 0;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: .88rem;
+}
+.event-item:last-child { border-bottom: none; }
+.event-item .event-date { min-width: 5.5rem; font-weight: 700; }
+.event-item .event-dot {
+    width: .6rem; height: .6rem; border-radius: 50%;
+    background: var(--c, #94a3b8); flex-shrink: 0; align-self: center;
+}
+.event-item.past { opacity: .45; }
+.event-type {
+    font-size: .7rem; font-weight: 700; text-transform: uppercase;
+    padding: .1rem .45rem; border-radius: 99px; background: #f1f5f9; color: #475569;
+}
+.event-type.test, .event-type.zkouska { background: #fef2f2; color: #b91c1c; }
+.event-type.deadline { background: #fefce8; color: #a16207; }
+
+.week-row.current { background: color-mix(in srgb, var(--accent) 10%, #fff); font-weight: 600; }
+
+body.dark-mode .slot { background: #1e293b; color: #e2e8f0; }
+body.dark-mode .slot .slot-room { color: #94a3b8; }
+body.dark-mode .timetable .day-col.today h6 { color: #f1f5f9; }
+body.dark-mode .event-item { border-bottom-color: #334155; }
+body.dark-mode .event-type { background: #334155; color: #e2e8f0; }
+body.dark-mode .week-row.current { background: #334155; }
