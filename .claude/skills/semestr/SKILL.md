@@ -5,7 +5,7 @@ description: Studijní podklady k předmětům ZS 2026/27 (FFÚ VŠE) — zpraco
 
 ## Kontext
 
-Podklady k předmětům ZS 2026/27 (FFÚ VŠE, bankovnictví a kapitálové trhy) pro průběžné testy a zkoušky. Statický web bez buildu: `index.html` (dashboard + harmonogram), `courses/<slug>.html` (poznámky), `quiz.html` (quiz).
+Podklady k předmětům ZS 2026/27 (FFÚ VŠE, program Finance a technologie) pro průběžné testy a zkoušky. Statický web bez buildu: `index.html` (dashboard + harmonogram), `courses/<slug>.html` (poznámky), `quiz.html` (quiz).
 
 **`courses.js` je jediný zdroj pravdy** — předměty, barvy, rozvrh, `grading`, `topics`, `events`. Dashboard, harmonogram, stránky i quiz se z něj generují. Obsah za `window.COURSES =` musí zůstat čistý JSON (čte ho `quiz.py`).
 
