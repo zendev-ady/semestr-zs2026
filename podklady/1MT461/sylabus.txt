@@ -1,0 +1,81 @@
+Kód předmětu:	1MT461
+Název v jazyce výuky:	Mezinárodní finanční management
+Název česky:	Mezinárodní finanční management
+Název anglicky:	International financial management
+Počet přidělených ECTS kreditů:	6 (1 ECTS kredit = 26 hodin studijní zátěže)
+Forma výuky:	prezenční; 2/2 (počet hodin přednášek týdně / počet hodin cvičení týdně) při semestrální výuce
+Forma ukončení:	zkouška
+Jazyk výuky:	čeština
+Doporučený typ a ročník studia:	magisterský navazující (druhý cyklus): 1
+Semestr:	ZS 2026/2027
+Vyučující:	doc. Ing. Karel Brůna, Ph.D. (cvičící, přednášející, zkoušející)
+prof. Ing. Martin Mandel, CSc. (garant)
+Ing. Ondřej Šíma, Ph.D. (cvičící, přednášející, zkoušející)
+Omezení pro zápis:	nelze studovat po absolvování 1MT400 a nelze studovat současně s 1MT400
+Doporučené doplňky:	žádné
+Vyžadovaná praxe:	žádná
+ 
+Zaměření předmětu:
+Kurz propojuje teoretické znalosti z oblasti mezinárodních financí s praktickými znalostmi v oblastech fungování devizových trhů, řízení devizové expozice a kurzového rizika, mezinárodního investování a financování, využití devizových operací, prognózování měnových kurzů, řízení multiměnové likvidity. Kurz se zaměřuje na zkušenosti společností operujících v mezinárodním prostředí. První část přednášek a cvičení bude akcentovat pohled exportních/importních společností, ve druhé části pak budou problémy rozšířeny o přístupy a zkušenosti nadnárodních společností. Výklad se soustředí na aktuální problémy, kterým společnosti v tomto prostředí čelí, a to jak z pohledu makroekonomického (např. změny v aplikovaném režimu měnového kurzu jako zdroj kurzového rizika, zlomy v trendovém vývoji měnového kurzu), tak i mikroekonomického (např. volba vhodného zajišťovacího instrumentu při řízení měnového rizika, formy mezinárodní expanze firmy).
+ 
+Výsledky učení:
+Po úspěšném absolvování budou studenti schopni:
+- Chápat dopady dění na devizovém trhu na firemní sféru.
+- Zhodnotit výhody a nevýhody různých devizových operací v kontextu zajištění devizového rizika a tyto operace aktivně používat
+- Samostatně analyzovat případy otevřených devizových pozic a řešit problém kurzového rizika v kontextu dalších tržních rizik (pohyb cen a úrokových sazeb),
+- Rozlišit a kvantifikovat transakční, ekonomickou a translační devizovou expozici.
+- Zhodnotit výnosy i náklady spojené se zavedením centralizovaného systému řízení likvidity a rizik u nadnárodních společností
+- Porozumět možnostem a způsobům mezinárodní expanze firmy.
+- Analyzovat efektivnost přímých zahraničních investic.
+- Posoudit (ne)výhodnost financování na eurobondovém trhu u jednotlivých typů dluhopisů.
+- Analyzovat faktory, které způsobují změny podmínek financování na mezinárodních finančních trzích
+- Porozumět omezením jednotlivých technik prognózování měnového kurzu
+ 
+Obsah předmětu:
+1. Nadnárodní a exportní/importní společnosti na devizovém trhu
+2. Technologie obchodování na devizovém trhu (klientské obchodní platformy, webové obchodní systémy, prime brokerage, vysokofrekvenční obchodování)
+3. Řízení kurzového rizika prostřednictvím měnových forwardů.
+4. Řízení kurzového rizika prostřednictvím měnových opcí.
+5. Řízení devizové likvidity a faktory ovlivňující měnový kurz v krátkém období
+6. Transakční a ekonomická devizová expozice a způsoby jejich řízení
+7. Režimy měnového kurzu v kontextu řízení kurzového rizika
+8. Faktory ovlivňující měnový kurz v dlouhém období
+9. Vznik nadnárodních firem, jejich investování, analýza efektivnosti a rizik přímých zahraničních investic
+10. Europeněžní a eurokapitálový trh jako možný zdroj financování nadnárodní firmy
+11. Podmínky financování na mezinárodních finančních trzích a využití měnových swapů při řízení kurzových a úrokových rizik
+12. Centralizace řízení likvidity a rizik nadnárodních společností, cash pooling a multilaterální netting
+ 
+Způsob studia, metody výuky a studijní zátěž (počet hodin):
+Druh	Prezenční studium
+Účast na přednáškách	26 h
+Účast na cvičeních/seminářích/tutoriálech	26 h
+Příprava na přednášky a cvičení samostudiem	26 h
+Příprava na průběžný test (testy)	26 h
+Příprava na závěrečný test	52 h
+Celkem	156 h
+ 
+Způsoby a kritéria hodnocení:
+Druh	Prezenční studium
+Absolvování průběžného testu (testů)	40 %
+Absolvování závěrečného testu	60 %
+Celkem	100 %
+ 
+Hodnocení:
+Zkoušky
+1	Výborně (90 - 100 %)
+2	Velmi dobře (75 - 89 %)
+3	Dobře (60 - 74 %)
+4	Nedostatečně (0 - 59 %)
+Zápočty
+Z	Započteno
+NZ	Nezapočteno
+Zvláštní podmínky a podrobnosti:
+Tento kurz byl spolufinancován Evropskou unií, Národním plánem obnovy z projektu NPO_VŠE_MSMT-16603/2022.
+ 
+Literatura:
+Základní:
+MANDEL, Martin a DURČÁKOVÁ, Jaroslava. Mezinárodní finance a devizový trh. 2. vyd. Praha: Ekopress, s.r.o, 2020. 452 s. ISBN 978-80-87865-65-1.
+Doporučená:
+RESNICK, Bruce G. a EUN, Cheol S. International finance. Maidenhead: McGraw-Hill Education, 2014. ISBN 978-0-07-716161-3. 
+MADURA, Jeff; FOX, Roland. International financial management. Andover: South-Western/Cengage Learning, 2011. ISBN 978-1-4080-3229-9. 
+

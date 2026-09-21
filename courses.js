@@ -2,6 +2,7 @@
    Obsah za "window.COURSES =" musí zůstat čistý JSON (čte ho i quiz.py).
    topics = seznam témat ze sylabu; pořadí = číslo sekce #topic-N = subtopic v quizu
             (v harmonogramu = týden výuky, pokud sylabus neříká jinak).
+   grading = jednořádkové hodnocení ze sylabu.
    events = termíny: {"date": "YYYY-MM-DD", "type": "test|zkouska|deadline|jine", "title": "..."} */
 window.COURSES = [
   {
@@ -53,7 +54,21 @@ window.COURSES = [
     "lang": "cz",
     "group": "P",
     "schedule": ["Př Po 09:15–10:45 RB 109", "Cv Po 11:00–12:30 RB 109"],
-    "topics": [],
+    "grading": "Průběžný test 40 % · Závěrečný test 60 %",
+    "topics": [
+      "Firmy na devizovém trhu",
+      "Technologie FX obchodování",
+      "Měnové forwardy",
+      "Měnové opce",
+      "Devizová likvidita, kurz v krátkém období",
+      "Transakční a ekonomická expozice",
+      "Režimy měnového kurzu",
+      "Kurz v dlouhém období",
+      "Nadnárodní firmy a PZI",
+      "Europeněžní a eurokapitálový trh",
+      "Mezinárodní financování, měnové swapy",
+      "Cash pooling a netting"
+    ],
     "events": []
   },
   {
