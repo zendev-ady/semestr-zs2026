@@ -26,16 +26,16 @@ Pokud není jasné, na čem pracovat:
 
 ## 1. Zpracování sylabu
 
-Vstup: `podklady/<KÓD>/sylabus.txt` (text zkopírovaný z InSIS — neměnit).
+Vstup: `podklady/<KÓD>/sylabus.txt` (text zkopírovaný z InSIS — neměnit), případně oficiální harmonogram od vyučujících (.doc/.pdf). **Harmonogram od vyučujících má přednost** před pořadím v InSIS. `.doc` převeď přes `soffice --headless --convert-to txt:Text --outdir <scratchpad> soubor.doc`.
 
 1. Napiš `podklady/<KÓD>/studijni_plan.md` podle vzoru `podklady/1MT461/studijni_plan.md`: přehled, hodnocení, tabulka témat (zkratka · text ze sylabu · klíčové pojmy), výsledky učení → témata, literatura, na co se zaměřit. Klíčové pojmy, které nejsou ze sylabu, označ jako návrh.
-2. V `courses.js` doplň `grading` a `topics` (krátké názvy; index + 1 = týden výuky = `#topic-N` = `subtopic` v quizu; pokud sylabus týdny nepřiřazuje, platí téma N = týden N).
+2. V `courses.js` doplň `grading` a `topics` (krátké názvy; index + 1 = `#topic-N` = `subtopic` v quizu). Pokud výuka odpadá (svátky, inovační týden), doplň `topicWeeks` = týden výuky pro každé téma; jinak platí téma N = týden N. Celoškolní volna patří do `SEMESTER.holidays`.
 3. V `courses/<slug>.html` nahraď pod `<h1>` „zkouška“ textem z `grading`.
 4. Na co sylabus neodpovídá (termíny testů, rozsah průběžného testu), napiš uživateli jako otevřené otázky.
 
 ## 2. Poznámky
 
-Před psaním si přečti `studijni_plan.md`, stávající stránku a `shared.css`. Pracuj po tématech; každé téma = jedna sekce.
+Před psaním si přečti `studijni_plan.md`, stávající stránku a `shared.css`. Hlavní zdroj je prezentace z přednášky (`podklady/<KÓD>/*.pdf`); co v ní není a doplňuješ z literatury, výslovně označ. Pracuj po tématech; každé téma = jedna sekce, pod `<h3>` řádek „Přednáška datum · vyučující · zdroj“.
 
 - do TOC přidej `<li><a class="nav-link py-1" href="#topic-N">N. Zkratka</a></li>`
 - placeholder `alert` nahraď sekcemi; sekci Harmonogram ani skripty na konci stránky neměň
