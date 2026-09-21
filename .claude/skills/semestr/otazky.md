@@ -1,4 +1,4 @@
-# Generátor otázek do quiz.db
+# Otázky do quiz.db
 
 Výstupem jsou `python3 quiz.py add` příkazy, na konci `python3 quiz.py export`.
 
@@ -28,7 +28,7 @@ python3 quiz.py add '[
 
 ## Zdroj otázek
 
-Otázky vycházej z poznámek (`courses/<slug>.html`) a sylabu — netestuj nic, co v poznámkách není. Když při psaní otázky zjistíš mezeru v poznámkách, doplň ji tam.
+Otázky vycházej z poznámek (`courses/<slug>.html`) a `studijni_plan.md` — netestuj nic, co v poznámkách není. Když při psaní otázky zjistíš mezeru v poznámkách, doplň ji tam.
 
 Rozsah: cca 8–12 otázek na téma, víc u početních a klíčových témat.
 
