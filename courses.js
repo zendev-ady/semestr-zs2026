@@ -96,7 +96,7 @@ window.COURSES = [
     "credits": 4,
     "lang": "eng",
     "group": "V",
-    "schedule": ["Cv Út 14:30–16:00 NB B"],
+    "schedule": ["Př Út 14:30–16:00 NB B"],
     "grading": "Semestrální práce (50 %) · Závěrečný test (50 %)",
     "topics": [
       "Capital Markets Overview",

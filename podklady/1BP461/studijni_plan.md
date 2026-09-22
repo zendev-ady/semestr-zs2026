@@ -1,19 +1,19 @@
 # 1BP461 Case Studies in Capital Markets and Banking
 
-> Zdroj: `sylabus.txt` (InSIS). Oficiální harmonogram od vyučujícího zatím není — rozvržení témat do týdnů je **můj návrh** podle volen. Sekce **Klíčové pojmy** nad rámec sylabu jsou návrh podle literatury (Witzany, Hull) — upřesnit podle cvičení. Poznámky a otázky k předmětu jsou **anglicky**.
+> Zdroj: `sylabus.txt` (InSIS). Oficiální harmonogram od vyučujícího zatím není — rozvržení témat do týdnů je **můj návrh** podle volen. Sekce **Klíčové pojmy** nad rámec sylabu jsou návrh podle literatury (Witzany, Hull) — upřesnit podle přednášek. Poznámky a otázky k předmětu jsou **anglicky**.
 
 ## Přehled
 
 | | |
 |---|---|
-| Kredity | 4 ECTS · 0/2 (jen cvičení) |
-| Rozvrh | Út 14:30–16:00 NB B |
-| Vyučující | Ing. Milan Fičura, Ph.D. (cvičící, garant, zkoušející) |
+| Kredity | 4 ECTS · v InSIS 0/2, ve skutečnosti jen přednášky (cvičení nejsou — 1. hodina 22. 9.) |
+| Rozvrh | Út 14:30–16:00 NB B (přednáška) |
+| Vyučující | Ing. Milan Fičura, Ph.D. (přednášející, garant, zkoušející) |
 | Jazyk | angličtina |
 | Ukončení | zkouška = semestrální práce + závěrečný test |
 | Navazuje na | Kapitálové trhy II, Finanční deriváty I |
 
-**O čem to je:** praktická aplikace modelů výnosnosti a rizika (akcie, dluhopisy, deriváty) na reálná data — CAPM/APT/faktorové modely, výnosová křivka, oceňování derivátů, contango/backwardation, stochastické procesy cen a Value at Risk. Důraz na „case studies“ → počítání na datech (Excel / Python / R — upřesnit).
+**O čem to je:** praktická aplikace modelů výnosnosti a rizika (akcie, dluhopisy, deriváty) na reálná data — CAPM/APT/faktorové modely, výnosová křivka, oceňování derivátů, contango/backwardation, stochastické procesy cen a Value at Risk. Důraz na „case studies“ → počítání na datech v **R (RStudio)** — instalace a úvod do R na 1. přednášce 22. 9.
 
 ## Hodnocení
 
@@ -28,7 +28,7 @@ Termíny: zatím neznámé (zadání a odevzdání semestrální práce, termín
 
 ## Harmonogram a témata
 
-Výuka v úterý. Odpadá: 7. týden (3. 11., inovační týden) a 9. týden (17. 11., státní svátek) → 11 cvičení na 10 témat. **Návrh** rozvržení (téma N = týden N do 6. týdne, pak posun), 13. týden rezerva / opakování. Číslo tématu = `#topic-N` = `subtopic` v quizu.
+Výuka v úterý. Odpadá: 7. týden (3. 11., inovační týden) a 9. týden (17. 11., státní svátek) → 11 přednášek na 10 témat. **Návrh** rozvržení (téma N = týden N do 6. týdne, pak posun), 13. týden rezerva / opakování. Číslo tématu = `#topic-N` = `subtopic` v quizu.
 
 | Týden | Datum | Téma |
 |---|---|---|

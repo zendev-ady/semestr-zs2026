@@ -273,3 +273,18 @@ body.dark-mode .timetable .day-col.today h6 { color: #f1f5f9; }
 body.dark-mode .event-item { border-bottom-color: #334155; }
 body.dark-mode .event-type { background: #334155; color: #e2e8f0; }
 body.dark-mode .week-row.current { background: #334155; }
+
+/* ── Kód (R lab) ───────────────────────────────────────────── */
+.r-box {
+    background: #0f172a;
+    color: #e2e8f0;
+    border-radius: 6px;
+    border-left: 4px solid var(--accent);
+    padding: 0.75rem 1rem;
+    margin: 0.75rem 0;
+    font-size: 0.8rem;
+    line-height: 1.45;
+    overflow-x: auto;
+    white-space: pre;
+}
+.r-box code { color: inherit; background: none; padding: 0; font-size: inherit; }
