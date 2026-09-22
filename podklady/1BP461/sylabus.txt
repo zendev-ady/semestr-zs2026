@@ -1,0 +1,75 @@
+Kód předmětu:    1BP461
+Název v jazyce výuky:    Case Studies in Capital Markets and Banking
+Název česky:    Případové studie z kapitálových trhů a bankovnictví (v angličtině)
+Název anglicky:    Case Studies in Capital Markets and Banking
+Počet přidělených ECTS kreditů:    4 (1 ECTS kredit = 26 hodin studijní zátěže)
+Forma výuky:    prezenční; 0/2 (počet hodin přednášek týdně / počet hodin cvičení týdně) při semestrální výuce
+Forma ukončení:    zkouška
+Jazyk výuky:    angličtina
+Doporučený typ a ročník studia:    bakalářský (první cyklus): 3; magisterský navazující (druhý cyklus): 1; doktorský (třetí cyklus): 1
+Semestr:    ZS 2026/2027
+Vyučující:    Ing. Milan Fičura, Ph.D. (cvičící, garant, zkoušející)
+Omezení pro zápis:    žádné
+Doporučené doplňky:    žádné
+Vyžadovaná praxe:    žádná
+ 
+Zaměření předmětu:
+Kurz je zaměřen na praktickou aplikaci metod z oblasti bankovnictví, kapitálových trhů a finančních derivátů na reálná finanční data. Přednáška navazuje na kurzy Kapitálové trhy II a Finanční deriváty I. V průběhu kurzu budou postupně probrány a aplikovány na reálných datech hlavní modely pro výpočet očekávané výnosnosti a rizika různých druhů finančních aktiv (akcie, dluhopisy a deriváty). Mezi modely na které se kurz zaměří spadají modely CAPM, APT a faktorové modely, modely výnosové křivky, metody pro oceňování finančních derivátů, modely normal-backwardation a contanga na futures trzích, modely dynamiky cen finančních aktiv, a modely pro výpočet Value at Risk.
+ 
+Výsledky učení:
+Po úspěšném absolvování budou studenti schopni:
+- Modelovat očekávanou výnosnost a riziko portfolia tvořeného z různých druhů finančních aktiv
+(akcie, dluhopisy, deriváty)
+- Oceňovat standardní i exotické finanční deriváty (forwardy, swapy, opce)
+- Zajistit portfolio tvořené z akcií, dluhopisů a derivátů proti různým druhům rizika
+- Modelovat dynamiku akciových kurzů, úrokových sazeb a volatility na finančních trzích
+ 
+Obsah předmětu:
+1. Typy kapitálových trhů, instrumenty na kapitálových trzích, funkce kapitálových trhů, subjekty na kapitálových trzích, postavení bank a pojišťoven na kapitálových trzích
+2. Akciové trhy, teorie portfolia, model CAPM, APT, faktorové modely, tržní riziková prémie, ekvity premium puzzle
+3. Aktivní vs. pasivní investování, teorie efektivních trhů, fundamentální a technická analýza, empirické testy tržní efektivnosti, tržní anomálie
+4. Dluhopisové trhy, rizika na dluhopisových trzích, durace a konvexita, modely výnosové křivky, likviditní prémie, forwardové úrokové sazby
+5. Forwardové a futures trhy, rozdíl mezi forwardy a futures, zajištění akciového a dluhopisového portfolia pomocí futures
+6. Rovnováha spekulanta a arbitražéra na futures trzích, rovnovážná cena futures, normální vs. invertovaná futures křivka, situace contango a backwardation
+7. Swapové trhy, úrokové swapy, měnové swapy, equity swapy, CDS
+8. Opční trhy, put-call parita, Black-Scholesův model, binomické stromy, metoda Monte-Carlo, option greeks, hedging opčního portfolia, opční investiční strategie
+9. Dynamika cen finančních aktiv, volatility smile, alternativní stochastické procesy, oceňování exotických opcí, dynamika úrokových sazeb
+10. Modelování cen finančních aktiv, stochastická volatilita a korelace, řízení tržního rizika, výpočet Value at Risk a Expected Shortfall dle různých přístupů
+ 
+Způsob studia, metody výuky a studijní zátěž (počet hodin):
+Druh    Prezenční studium
+Účast na cvičeních/seminářích/tutoriálech    26 h
+Příprava na přednášky a cvičení samostudiem    26 h
+Příprava semestrální práce    26 h
+Příprava na závěrečný test    26 h
+Celkem    104 h
+ 
+Způsoby a kritéria hodnocení:
+Druh    Prezenční studium
+Vypracování semestrální práce    50 %
+Absolvování závěrečného testu    50 %
+Celkem    100 %
+ 
+Hodnocení:
+Zkoušky
+1    Výborně (90 - 100 %)
+2    Velmi dobře (75 - 89 %)
+3    Dobře (60 - 74 %)
+4    Nedostatečně (0 - 59 %)
+Zápočty
+Z    Započteno
+NZ    Nezapočteno
+Zvláštní podmínky a podrobnosti:
+Tento předmět byl podpořen z Evropské unie, Evropských strukturálních a investičních fondů, Operačního programu Výzkum, vývoj a vzdělávání.
+ 
+Literatura:
+Základní:
+WITZANY, Jiří. Financial Derivatives. Valuation, Hedging and Risk Management. 1. vyd. Praha: Nakladatelství Oeconomica, 2013. 374 s. ISBN 978-80-245-1980-7.
+Doporučená:
+WITZANY, Jiří. International Financial Markets. 2. vyd. Praha: Nakladatelství Oeconomica, 2012. 212 s. ISBN 978-80-245-1902-9.
+HULL, John. Options, futures and other derivatives. Boston: Pearson, 2015. ISBN 978-0-13-345631-8. 
+HULL, John. Risk management and financial institutions. Hoboken: John Wiley & Sons, 2012. ISBN 978-1-118-26903-9. 
+BODIE, Zvi; MARCUS, Alan J.; KANE, Alex. Investments. Boston: McGraw-Hill, 2009. ISBN 978-0-07-338237-1. 
+MISHKIN, Frederic S. a EAKINS, Stanley G. Financial markets and institutions. Harlow: Person, 2018. ISBN 978-1-292-21500-6. 
+WILMOTT, Paul. Paul Wilmott on quantitative finance. Volume two. Chichester: John Wiley, 2006. ISBN 978-0-470-01870-5. 
+RAČEV, Svetlozar. Financial econometrics : from basics to advanced modeling techniques. Hoboken: John Wiley & Sons, 2007. ISBN 978-0-471-78450-0. 

@@ -55,7 +55,7 @@ window.COURSES = [
     "lang": "cz",
     "group": "P",
     "schedule": ["Př Po 09:15–10:45 RB 109", "Cv Po 11:00–12:30 RB 109"],
-    "grading": "Průběžný test 40 % · Závěrečný test 60 %",
+    "grading": "Průběžný test 26. 10. (40 %) · Závěrečný test ve zkouškovém (60 %)",
     "topics": [
       "Firmy na devizovém trhu",
       "Měnové forwardy",
@@ -70,7 +70,9 @@ window.COURSES = [
       "Cash pooling a netting"
     ],
     "topicWeeks": [1, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13],
-    "events": []
+    "events": [
+      {"date": "2026-10-26", "type": "test", "title": "Průběžný test (40 %)"}
+    ]
   },
   {
     "code": "1BP441",
@@ -95,7 +97,20 @@ window.COURSES = [
     "lang": "eng",
     "group": "V",
     "schedule": ["Cv Út 14:30–16:00 NB B"],
-    "topics": [],
+    "grading": "Semestrální práce (50 %) · Závěrečný test (50 %)",
+    "topics": [
+      "Capital Markets Overview",
+      "Portfolio Theory, CAPM & APT",
+      "Market Efficiency",
+      "Bond Markets & Yield Curve",
+      "Forwards & Futures Hedging",
+      "Contango & Backwardation",
+      "Swaps & CDS",
+      "Options Pricing & Greeks",
+      "Asset Price Dynamics & Exotics",
+      "Market Risk, VaR & ES"
+    ],
+    "topicWeeks": [1, 2, 3, 4, 5, 6, 8, 10, 11, 12],
     "events": []
   },
   {
