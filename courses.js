@@ -99,16 +99,16 @@ window.COURSES = [
     "schedule": ["Př Út 14:30–16:00 NB B"],
     "grading": "Semestrální práce (50 %) · Závěrečný test (50 %)",
     "topics": [
-      "Capital Markets Overview",
-      "Portfolio Theory, CAPM & APT",
-      "Market Efficiency",
-      "Bond Markets & Yield Curve",
-      "Forwards & Futures Hedging",
-      "Contango & Backwardation",
-      "Swaps & CDS",
-      "Options Pricing & Greeks",
-      "Asset Price Dynamics & Exotics",
-      "Market Risk, VaR & ES"
+      "Kapitálové trhy",
+      "Portfolio, CAPM a APT",
+      "Efektivita trhu",
+      "Dluhopisy a výnosová křivka",
+      "Forwardy, futures a zajištění",
+      "Contango a backwardation",
+      "Swapy a CDS",
+      "Opce a řecká písmena",
+      "Dynamika cen a exotické opce",
+      "Tržní riziko, VaR a ES"
     ],
     "topicWeeks": [1, 2, 3, 4, 5, 6, 8, 10, 11, 12],
     "events": []

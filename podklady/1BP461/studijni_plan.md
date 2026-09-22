@@ -1,6 +1,6 @@
 # 1BP461 Case Studies in Capital Markets and Banking
 
-> Zdroj: `sylabus.txt` (InSIS). Oficiální harmonogram od vyučujícího zatím není — rozvržení témat do týdnů je **můj návrh** podle volen. Sekce **Klíčové pojmy** nad rámec sylabu jsou návrh podle literatury (Witzany, Hull) — upřesnit podle přednášek. Poznámky a otázky k předmětu jsou **anglicky**.
+> Zdroj: `sylabus.txt` (InSIS). Oficiální harmonogram od vyučujícího zatím není — rozvržení témat do týdnů je **můj návrh** podle volen. Sekce **Klíčové pojmy** nad rámec sylabu jsou návrh podle literatury (Witzany, Hull) — upřesnit podle přednášek. Poznámky jsou **česky** s anglickými pojmy v závorce, otázky do quizu **anglicky** (výuka i test jsou anglicky).
 
 ## Přehled
 

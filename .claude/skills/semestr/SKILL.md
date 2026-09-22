@@ -71,7 +71,7 @@ MathJax: inline `$...$`, blokově `$$...$$`.
 - každá sekce končí `summary-box` a odkazem „Procvičit téma“
 - aktuální data (sazby, regulace, tržní čísla) označ rokem, ke kterému platí
 
-**Jazyk:** 1BP461 anglicky (český ekvivalent klíčových pojmů v závorce, `<html lang="en">`), ostatní česky; zavedené anglické pojmy (hedging, duration, cash pooling) ponech a vysvětli.
+**Jazyk:** poznámky česky, srozumitelně (krátké věty, každý pojem vysvětlit). U 1BP461 (výuka i test anglicky) dávej ke klíčovým pojmům anglický název do závorky; zavedené anglické pojmy (hedging, duration, cash pooling) ponech a vysvětli.
 
 ## 3. Otázky do quizu
 

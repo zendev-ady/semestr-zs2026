@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,16 +38,16 @@
                     <strong class="d-block mb-2 text-muted" style="font-size:0.8rem;text-transform:uppercase;letter-spacing:.05em">Obsah</strong>
                     <ul class="nav flex-column">
                         <li><a class="nav-link py-1" href="#harmonogram">Harmonogram</a></li>
-                        <li><a class="nav-link py-1" href="#topic-1">1. Capital Markets Overview</a></li>
-                        <li><a class="nav-link py-1" href="#topic-2">2. Portfolio Theory, CAPM &amp; APT</a></li>
-                        <li><a class="nav-link py-1" href="#topic-3">3. Market Efficiency</a></li>
-                        <li><a class="nav-link py-1" href="#topic-4">4. Bond Markets &amp; Yield Curve</a></li>
-                        <li><a class="nav-link py-1" href="#topic-5">5. Forwards &amp; Futures Hedging</a></li>
-                        <li><a class="nav-link py-1" href="#topic-6">6. Contango &amp; Backwardation</a></li>
-                        <li><a class="nav-link py-1" href="#topic-7">7. Swaps &amp; CDS</a></li>
-                        <li><a class="nav-link py-1" href="#topic-8">8. Options Pricing &amp; Greeks</a></li>
-                        <li><a class="nav-link py-1" href="#topic-9">9. Asset Price Dynamics &amp; Exotics</a></li>
-                        <li><a class="nav-link py-1" href="#topic-10">10. Market Risk, VaR &amp; ES</a></li>
+                        <li><a class="nav-link py-1" href="#topic-1">1. Kapitálové trhy</a></li>
+                        <li><a class="nav-link py-1" href="#topic-2">2. Portfolio, CAPM a APT</a></li>
+                        <li><a class="nav-link py-1" href="#topic-3">3. Efektivita trhu</a></li>
+                        <li><a class="nav-link py-1" href="#topic-4">4. Dluhopisy a výnosová křivka</a></li>
+                        <li><a class="nav-link py-1" href="#topic-5">5. Forwardy, futures a zajištění</a></li>
+                        <li><a class="nav-link py-1" href="#topic-6">6. Contango a backwardation</a></li>
+                        <li><a class="nav-link py-1" href="#topic-7">7. Swapy a CDS</a></li>
+                        <li><a class="nav-link py-1" href="#topic-8">8. Opce a řecká písmena</a></li>
+                        <li><a class="nav-link py-1" href="#topic-9">9. Dynamika cen a exotické opce</a></li>
+                        <li><a class="nav-link py-1" href="#topic-10">10. Tržní riziko, VaR a ES</a></li>
                     </ul>
                 </nav>
             </div>
@@ -62,360 +62,366 @@
                 </section>
 
                 <!-- Témata ze sylabu: <section class="topic-section" id="topic-N"> … (viz skill semestr) -->
-                <div class="insight-box mb-4"><strong>How to use these notes:</strong> every topic has the theory you need for the final test (definitions, formulas, worked examples, typical traps) and an <strong>R lab</strong>: code you can run in RStudio and reuse in the term project. The course is about applying models to <em>real data</em>, so each lab says where to get the data. All numbers in the worked examples were checked in R. No lecture slides are available yet, so the content follows the syllabus and the literature (Witzany <em>Financial Derivatives</em> as the core text; Hull, Bodie–Kane–Marcus). Once slides are out, the lecturer's notation takes precedence.</div>
+                <div class="insight-box mb-4"><strong>Jak s poznámkami pracovat:</strong> každé téma má teorii na závěrečný test (definice, vzorce, spočítané příklady, typické chytáky) a <strong>R lab</strong> – kód, který spustíš v RStudiu a můžeš ho použít v semestrální práci. Předmět je o tom, jak modely použít na <em>skutečná data</em>, proto u každého labu stojí, kde data vzít. Všechna čísla v příkladech jsou ověřená v R. Předmět se učí <strong>anglicky</strong> a test bude nejspíš taky anglicky, proto je u důležitých pojmů v závorce anglický název. Slidy z přednášek zatím nejsou, obsah vychází ze sylabu a literatury (hlavně Witzany <em>Financial Derivatives</em>, dále Hull a Bodie–Kane–Marcus). Až slidy budou, platí značení přednášejícího.</div>
 
                 <section class="topic-section" id="topic-1">
-                    <h3>1. Capital Markets Overview</h3>
-                    <p class="text-muted small">Lecture 22 Sep · Milan Fičura · source: literature (Witzany <em>International Financial Markets</em>; Mishkin–Eakins), intro to R from lecture 1</p>
+                    <h3>1. Kapitálové trhy – přehled</h3>
+                    <p class="text-muted small">Přednáška 22. 9. · Milan Fičura · zdroj: literatura (Witzany <em>International Financial Markets</em>; Mishkin–Eakins), úvod do R z 1. přednášky</p>
 
-                    <h4>Types of financial markets</h4>
-                    <div class="def-box"><strong>Financial market</strong> (finanční trh): place or network where financial instruments are issued and traded. It channels savings from surplus units (households) to deficit units (firms, governments), either <strong>directly</strong> (securities markets) or <strong>indirectly</strong> through intermediaries (banks, insurers, funds).</div>
+                    <h4>Druhy finančních trhů</h4>
+                    <div class="def-box"><strong>Finanční trh</strong> (financial market): místo nebo síť, kde se vydávají a obchodují finanční nástroje. Přesouvá úspory od těch, kdo peníze mají navíc (domácnosti), k těm, kdo je potřebují (firmy, stát). Buď <strong>přímo</strong> – přes trh cenných papírů, nebo <strong>nepřímo</strong> – přes prostředníky (banky, pojišťovny, fondy).</div>
                     <table class="table table-bordered summary-table">
-                        <thead><tr><th>Criterion</th><th>Split</th><th>Key point</th></tr></thead>
+                        <thead><tr><th>Podle čeho dělíme</th><th>Rozdělení</th><th>Co si zapamatovat</th></tr></thead>
                         <tbody>
-                            <tr><td>Maturity</td><td><strong>money market</strong> (peněžní trh, &lt; 1 year) × <strong>capital market</strong> (kapitálový trh, &gt; 1 year or no maturity)</td><td>money market = liquidity management (T-bills, repo, interbank deposits); capital market = long-term financing (bonds, shares)</td></tr>
-                            <tr><td>Issue × trading</td><td><strong>primary</strong> (primární) × <strong>secondary</strong> (sekundární)</td><td>primary = issuer raises new money (IPO, bond auction); secondary = investors trade among themselves, issuer gets nothing but liquidity makes the primary issue possible</td></tr>
-                            <tr><td>Organisation</td><td><strong>exchange</strong> (burza) × <strong>OTC</strong> (mimoburzovní)</td><td>exchange: standardised contracts, central order book, clearing house; OTC: bilateral, tailor-made, counterparty risk</td></tr>
-                            <tr><td>Instrument</td><td>equity × debt × derivatives × FX × commodities</td><td>derivatives derive their value from an underlying asset (topics 5–9)</td></tr>
-                            <tr><td>Delivery</td><td><strong>spot</strong> (promptní) × <strong>forward/futures</strong> (termínový)</td><td>spot settles in T+1/T+2, forward at an agreed future date</td></tr>
+                            <tr><td>Splatnost</td><td><strong>peněžní trh</strong> (money market, do 1 roku) × <strong>kapitálový trh</strong> (capital market, nad 1 rok nebo bez splatnosti)</td><td>peněžní trh = řízení likvidity (pokladniční poukázky, repo, mezibankovní vklady); kapitálový trh = dlouhodobé financování (dluhopisy, akcie)</td></tr>
+                            <tr><td>Emise × obchodování</td><td><strong>primární</strong> (primary) × <strong>sekundární</strong> (secondary)</td><td>primární = emitent získává nové peníze (IPO, aukce dluhopisů); sekundární = investoři obchodují mezi sebou, emitent nedostane nic – ale díky tomu, že se dá papír později prodat, ho lidé vůbec kupují na primárním trhu</td></tr>
+                            <tr><td>Organizace</td><td><strong>burza</strong> (exchange) × <strong>mimoburzovní trh</strong> (OTC, over-the-counter)</td><td>burza: standardizované kontrakty, centrální kniha příkazů, clearingové centrum; OTC: dvoustranné smlouvy na míru, riziko protistrany</td></tr>
+                            <tr><td>Nástroj</td><td>akcie × dluh × deriváty × měny × komodity</td><td>derivát odvozuje svou hodnotu od podkladového aktiva (témata 5–9)</td></tr>
+                            <tr><td>Dodání</td><td><strong>promptní</strong> (spot) × <strong>termínový</strong> (forward/futures)</td><td>spot se vypořádá za 1–2 dny (T+1/T+2), forward k dohodnutému datu v budoucnu</td></tr>
                         </tbody>
                     </table>
 
-                    <h4>Functions of capital markets</h4>
+                    <h4>K čemu kapitálové trhy slouží</h4>
                     <ul>
-                        <li><strong>Allocation of capital</strong>: savings flow to the most productive uses.</li>
-                        <li><strong>Price discovery</strong>: prices aggregate information (link to market efficiency, topic 3).</li>
-                        <li><strong>Liquidity</strong>: investors can exit before maturity.</li>
-                        <li><strong>Risk sharing and transfer</strong>: diversification, hedging with derivatives.</li>
-                        <li><strong>Corporate governance</strong>: share price disciplines management; takeovers.</li>
+                        <li><strong>Alokace kapitálu</strong> (allocation): úspory tečou tam, kde přinesou nejvíc.</li>
+                        <li><strong>Tvorba ceny</strong> (price discovery): v ceně se sejdou informace všech účastníků (souvisí s efektivitou trhu, téma 3).</li>
+                        <li><strong>Likvidita</strong>: investor může z investice vystoupit dřív, než je splatná.</li>
+                        <li><strong>Sdílení a přenos rizika</strong>: diverzifikace, zajištění deriváty.</li>
+                        <li><strong>Kontrola firem</strong> (corporate governance): cena akcie „hodnotí“ management; hrozba převzetí.</li>
                     </ul>
 
-                    <h4>Market participants</h4>
+                    <h4>Kdo na trhu je</h4>
                     <table class="table table-bordered summary-table">
-                        <thead><tr><th>Group</th><th>Examples</th><th>Role</th></tr></thead>
+                        <thead><tr><th>Skupina</th><th>Příklady</th><th>Role</th></tr></thead>
                         <tbody>
-                            <tr><td>Issuers</td><td>governments, corporations, banks</td><td>raise funds</td></tr>
-                            <tr><td>Investors</td><td>households, pension funds, insurers, mutual funds, hedge funds</td><td>provide funds, bear risk</td></tr>
-                            <tr><td>Intermediaries</td><td>investment banks (underwriting), brokers, dealers / market makers</td><td>bring issuers and investors together, provide liquidity</td></tr>
-                            <tr><td>Infrastructure</td><td>exchanges, CCPs (clearing), central securities depositories</td><td>trading, settlement, reduction of counterparty risk</td></tr>
-                            <tr><td>Regulators</td><td>central bank (in CZ: ČNB is also the financial-market supervisor), ESMA, EBA</td><td>stability, investor protection</td></tr>
+                            <tr><td>Emitenti (issuers)</td><td>státy, firmy, banky</td><td>získávají peníze</td></tr>
+                            <tr><td>Investoři</td><td>domácnosti, penzijní fondy, pojišťovny, podílové fondy, hedge fondy</td><td>dávají peníze, nesou riziko</td></tr>
+                            <tr><td>Zprostředkovatelé</td><td>investiční banky (upisování emisí), brokeři, dealeři / tvůrci trhu (market makers)</td><td>propojují emitenty a investory, dodávají likviditu</td></tr>
+                            <tr><td>Infrastruktura</td><td>burzy, centrální protistrany (CCP, clearing), centrální depozitáře</td><td>obchodování, vypořádání, snížení rizika protistrany</td></tr>
+                            <tr><td>Regulátoři</td><td>centrální banka (v ČR je ČNB zároveň dohled nad finančním trhem), ESMA, EBA</td><td>stabilita, ochrana investorů</td></tr>
                         </tbody>
                     </table>
-                    <div class="def-box"><strong>Hedger × speculator × arbitrageur:</strong> the three motives on derivatives markets. <strong>Hedger</strong> reduces an existing risk; <strong>speculator</strong> takes on risk to profit from an expected price move; <strong>arbitrageur</strong> locks in a riskless profit from a mispricing between two markets. Their interaction sets the futures price (topic 6).</div>
+                    <div class="def-box"><strong>Hedger × spekulant × arbitražér</strong> – tři důvody, proč někdo obchoduje deriváty. <strong>Hedger</strong> snižuje riziko, které už má (např. vývozce zajišťuje kurz). <strong>Spekulant</strong> riziko naopak bere, protože sází na pohyb ceny. <strong>Arbitražér</strong> využívá, když je stejná věc na dvou trzích za různou cenu, a vydělá bez rizika. Z jejich souhry vzniká cena futures (téma 6).</div>
 
-                    <h4>Banks and insurers on capital markets</h4>
+                    <h4>Banky a pojišťovny na kapitálovém trhu</h4>
                     <table class="table table-bordered summary-table">
-                        <thead><tr><th></th><th>Commercial bank</th><th>Insurance company</th></tr></thead>
+                        <thead><tr><th></th><th>Komerční banka</th><th>Pojišťovna</th></tr></thead>
                         <tbody>
-                            <tr><td>Liabilities</td><td>short-term deposits (payable on demand)</td><td>long-term technical provisions (future claims, life policies)</td></tr>
-                            <tr><td>Assets</td><td>loans, government bonds, interbank</td><td>mostly bonds (long duration), some equity and real estate</td></tr>
-                            <tr><td>Main market risk</td><td>interest-rate risk from <strong>maturity transformation</strong> (borrow short, lend long), liquidity risk</td><td>reinvestment risk; life insurers are <strong>short duration</strong> → hurt by falling rates</td></tr>
-                            <tr><td>Role on capital market</td><td>dealer, underwriter, custodian, large bond investor, derivatives counterparty</td><td>big long-term institutional investor, buyer of long bonds</td></tr>
-                            <tr><td>Regulation</td><td>Basel III / CRR (capital, LCR, NSFR)</td><td>Solvency II</td></tr>
+                            <tr><td>Pasiva (odkud má peníze)</td><td>krátkodobé vklady (klient si je může kdykoli vybrat)</td><td>dlouhodobé technické rezervy (budoucí pojistná plnění, životní pojistky)</td></tr>
+                            <tr><td>Aktiva (kam je dává)</td><td>úvěry, státní dluhopisy, mezibankovní trh</td><td>hlavně dluhopisy (dlouhá durace), trochu akcií a nemovitostí</td></tr>
+                            <tr><td>Hlavní tržní riziko</td><td>úrokové riziko z <strong>transformace splatnosti</strong> (půjčuje si krátce, půjčuje dlouze), riziko likvidity</td><td>riziko reinvestice; životní pojišťovna má aktiva kratší než závazky → škodí jí <strong>pokles</strong> sazeb</td></tr>
+                            <tr><td>Role na trhu</td><td>dealer, upisovatel emisí, custodian, velký investor do dluhopisů, protistrana v derivátech</td><td>velký dlouhodobý institucionální investor, kupuje dlouhé dluhopisy</td></tr>
+                            <tr><td>Regulace</td><td>Basel III / CRR (kapitál, LCR, NSFR)</td><td>Solventnost II (Solvency II)</td></tr>
                         </tbody>
                     </table>
-                    <div class="insight-box"><strong>Intuition:</strong> a bank and a life insurer are mirror images. The bank's liabilities are short and its assets long, so rising rates hurt it (deposits reprice faster). The life insurer's liabilities are longer than its bonds, so falling rates hurt it (the PV of promised benefits rises more than its assets). Both are managed with duration (topic 4) and swaps (topic 7).</div>
-                    <div class="def-box"><strong>Disintermediation</strong> (dezintermediace): firms borrow directly on the capital market (bonds, commercial paper) instead of taking bank loans. Typical of the US (market-based system); continental Europe incl. CZ is still <strong>bank-based</strong>.</div>
+                    <div class="insight-box"><strong>Intuice:</strong> banka a životní pojišťovna jsou zrcadlové obrazy. Banka má krátká pasiva a dlouhá aktiva, takže jí škodí <em>růst</em> sazeb (za vklady musí platit víc hned, úvěry jí ale nesou pořád starou sazbu). Pojišťovna má závazky delší než své dluhopisy, takže jí škodí <em>pokles</em> sazeb (současná hodnota slíbených plnění naroste víc než hodnota jejích aktiv). Obě to řídí pomocí durace (téma 4) a swapů (téma 7).</div>
+                    <div class="def-box"><strong>Dezintermediace</strong> (disintermediation): firmy si půjčují přímo na kapitálovém trhu (dluhopisy, krátkodobé směnky) místo u banky. Typické pro USA (systém založený na trhu – market-based); kontinentální Evropa včetně ČR je pořád založená na bankách (<strong>bank-based</strong>).</div>
 
-                    <h4>Returns: the basic object of the whole course</h4>
+                    <h4>Výnosy – základ celého předmětu</h4>
                     <div class="formula-block">$$R_t = \frac{P_t + D_t - P_{t-1}}{P_{t-1}} \qquad r_t = \ln\frac{P_t + D_t}{P_{t-1}} = \ln(1+R_t)$$</div>
-                    <div class="thm-box"><strong>Simple × log returns:</strong> simple returns aggregate across <em>assets</em> (portfolio return = $\sum w_i R_i$); log returns aggregate across <em>time</em> (multi-period return = $\sum r_t$). Annualisation (i.i.d. returns): $\mu_{year} = 252\,\mu_{day}$, $\sigma_{year} = \sqrt{252}\,\sigma_{day}$.</div>
-                    <div class="ex-box"><strong>Example:</strong> price 100 → 110 → 99.
-                        <br>Simple returns: +10 %, −10 %. Average +0 %, yet the investor lost 1 %: $1.10 \cdot 0.90 - 1 = -1\%$.
-                        <br>Log returns: $\ln(1.1) = 0.0953$, $\ln(0.9) = -0.1054$. Sum $= -0.0101$ → $e^{-0.0101}-1 = -1\%$. ✔</div>
-                    <div class="warn-box"><strong>⚠️ Pozor:</strong> the arithmetic mean of simple returns overstates the realised growth (volatility drag). $\sqrt{T}$ scaling of volatility assumes independent returns; with autocorrelation or volatility clustering it is only an approximation (topic 10).</div>
+                    <p>$P$ = cena, $D$ = dividenda. $R_t$ je <strong>prostý</strong> (simple) výnos, $r_t$ je <strong>logaritmický</strong> (log) výnos.</p>
+                    <div class="thm-box"><strong>Prosté × log výnosy:</strong> prosté výnosy se dají sčítat přes <em>aktiva</em> (výnos portfolia = $\sum w_i R_i$); log výnosy se dají sčítat přes <em>čas</em> (výnos za více období = $\sum r_t$). Převod na roční hodnoty (když jsou výnosy nezávislé): $\mu_{rok} = 252\,\mu_{den}$, $\sigma_{rok} = \sqrt{252}\,\sigma_{den}$ (252 = obchodních dní v roce).</div>
+                    <div class="ex-box"><strong>Příklad:</strong> cena 100 → 110 → 99.
+                        <br>Prosté výnosy: +10 %, −10 %. Průměr je 0 %, přitom investor 1 % prodělal: $1{,}10 \cdot 0{,}90 - 1 = -1\%$.
+                        <br>Log výnosy: $\ln(1{,}1) = 0{,}0953$, $\ln(0{,}9) = -0{,}1054$. Součet $= -0{,}0101$ → $e^{-0{,}0101}-1 = -1\%$. ✔ Log výnosy stačí sečíst.</div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> aritmetický průměr prostých výnosů nadhodnocuje skutečný růst – čím víc cena kolísá, tím víc (volatility drag). Převod volatility přes $\sqrt{T}$ platí jen pro nezávislé výnosy; když jsou výnosy autokorelované nebo se volatilita shlukuje, je to jen přibližné (téma 10).</div>
 
-                    <h4>R lab: setting up and getting data</h4>
-                    <p>R + RStudio, packages installed once with <code>install.packages()</code> and loaded each session with <code>library()</code>. <code>quantmod</code> downloads prices from Yahoo Finance into <code>xts</code> time series; use <strong>adjusted close</strong> (corrected for dividends and splits) to compute returns.</p>
-                    <pre class="r-box"><code># one-time setup
+                    <h4>R lab: příprava a stažení dat</h4>
+                    <p>R + RStudio. Balíčky se instalují jednou přes <code>install.packages()</code> a v každé relaci se načtou přes <code>library()</code>. Balíček <code>quantmod</code> stahuje ceny z Yahoo Finance jako časové řady <code>xts</code>. Pro výpočet výnosů ber <strong>upravenou zavírací cenu</strong> (adjusted close – očištěnou o dividendy a splity akcií).</p>
+                    <pre class="r-box"><code># jednorázová instalace
 install.packages(c("quantmod", "PerformanceAnalytics", "rugarch", "quadprog"))
 
 library(quantmod)
 getSymbols(c("SPY", "AAPL"), src = "yahoo", from = "2020-01-01")
-p &lt;- Ad(AAPL)                        # adjusted close (dividends + splits)
-r &lt;- na.omit(diff(log(p)))           # daily log returns (xts)
+p &lt;- Ad(AAPL)                        # upravená zavírací cena (dividendy + splity)
+r &lt;- na.omit(diff(log(p)))           # denní log výnosy (xts)
 c(ann_mean = mean(r) * 252, ann_vol = sd(r) * sqrt(252))</code></pre>
                     <pre class="r-box"><code>p &lt;- c(100, 110, 99)
 simple &lt;- diff(p) / head(p, -1)      #  0.10  -0.10
 logret &lt;- diff(log(p))               #  0.0953 -0.1054
-prod(1 + simple) - 1                 # -0.01  simple returns compound multiplicatively
-exp(sum(logret)) - 1                 # -0.01  log returns simply add up</code></pre>
-                    <div class="insight-box"><strong>Case-study angle:</strong> almost every analysis starts the same way: download → clean (missing days, align dates with <code>merge()</code>) → returns → annualised mean and volatility. Useful data sources: Yahoo Finance (<code>quantmod</code>), FRED (<code>getSymbols(src = "FRED")</code> for rates), Kenneth French data library (factors), ČNB ARAD (Czech rates), ECB Data Portal (euro yield curve).</div>
+prod(1 + simple) - 1                 # -0.01  prosté výnosy se násobí
+exp(sum(logret)) - 1                 # -0.01  log výnosy se jen sečtou</code></pre>
+                    <div class="insight-box"><strong>Pro semestrální práci:</strong> skoro každá analýza začíná stejně: stáhnout → vyčistit (chybějící dny, sladit data přes <code>merge()</code>) → výnosy → roční průměr a volatilita. Užitečné zdroje dat: Yahoo Finance (<code>quantmod</code>), FRED (<code>getSymbols(src = "FRED")</code> pro sazby), Kenneth French data library (faktory), ČNB ARAD (české sazby), ECB Data Portal (výnosová křivka eurozóny).</div>
 
-                    <div class="summary-box"><strong>Summary:</strong>
+                    <div class="summary-box"><strong>Shrnutí:</strong>
                         <ul>
-                            <li>money × capital, primary × secondary, exchange × OTC, spot × forward</li>
-                            <li>functions: allocation, price discovery, liquidity, risk transfer</li>
-                            <li>hedger reduces risk, speculator takes it, arbitrageur locks in riskless profit</li>
-                            <li>bank = maturity transformation (hurt by rising rates), life insurer = long liabilities (hurt by falling rates)</li>
-                            <li>log returns add up over time, simple returns over assets</li>
+                            <li>peněžní × kapitálový, primární × sekundární, burza × OTC, spot × forward</li>
+                            <li>funkce trhu: alokace kapitálu, tvorba ceny, likvidita, přenos rizika</li>
+                            <li>hedger riziko snižuje, spekulant ho bere, arbitražér vydělává bez rizika na rozdílu cen</li>
+                            <li>banka = transformace splatnosti (škodí jí růst sazeb), životní pojišťovna = dlouhé závazky (škodí jí pokles sazeb)</li>
+                            <li>log výnosy se sčítají přes čas, prosté přes aktiva v portfoliu</li>
                         </ul>
                     </div>
                     <p class="mb-0"><a href="../quiz.html?course=1BP461&topic=1"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
                 </section>
 
                 <section class="topic-section" id="topic-2">
-                    <h3>2. Portfolio Theory, CAPM &amp; APT</h3>
-                    <p class="text-muted small">Lecture 29 Sep · Milan Fičura · source: literature (Bodie–Kane–Marcus ch. 6–10)</p>
+                    <h3>2. Teorie portfolia, CAPM a APT</h3>
+                    <p class="text-muted small">Přednáška 29. 9. · Milan Fičura · zdroj: literatura (Bodie–Kane–Marcus kap. 6–10)</p>
 
-                    <h4>Mean–variance portfolio theory (Markowitz)</h4>
+                    <h4>Markowitzova teorie portfolia (výnos × riziko)</h4>
                     <div class="formula-block">$$E(R_p) = \sum_i w_i E(R_i) \qquad \sigma_p^2 = \mathbf{w}^\top \Sigma \mathbf{w} = \sum_i \sum_j w_i w_j \sigma_i \sigma_j \rho_{ij}$$</div>
-                    <div class="thm-box"><strong>Diversification:</strong> with $\rho &lt; 1$ the portfolio volatility is <em>less</em> than the weighted average of volatilities. With many assets the idiosyncratic variance vanishes and only the average covariance remains → <strong>systematic</strong> (market, nediverzifikovatelné) risk can't be diversified away, <strong>idiosyncratic</strong> (specifické) can.</div>
-                    <div class="ex-box"><strong>Example (two assets):</strong> $w_1 = 0.6$, $\sigma_1 = 20\%$, $w_2 = 0.4$, $\sigma_2 = 30\%$, $\rho = 0.2$.
-                        <br>$\sigma_p^2 = 0.36 \cdot 0.04 + 0.16 \cdot 0.09 + 2 \cdot 0.6 \cdot 0.4 \cdot 0.2 \cdot 0.2 \cdot 0.3 = 0.0144 + 0.0144 + 0.00576 = 0.03456$ → $\sigma_p = 18.59\%$ (weighted average would be 24 %).
-                        <br><strong>Minimum-variance weight:</strong> $w_1^* = \dfrac{\sigma_2^2 - \rho\sigma_1\sigma_2}{\sigma_1^2 + \sigma_2^2 - 2\rho\sigma_1\sigma_2} = \dfrac{0.09 - 0.012}{0.13 - 0.024} = 0.736$ → $\sigma_{min} = 18.06\%$.</div>
-                    <div class="def-box"><strong>Efficient frontier</strong> (efektivní hranice): portfolios with the highest expected return for a given volatility. Adding a riskless asset gives the <strong>Capital Allocation Line</strong>; the best one touches the frontier at the <strong>tangency portfolio</strong> (max Sharpe ratio). If everyone holds it, it is the market portfolio and the line is the <strong>Capital Market Line</strong> (CML): $E(R_p) = r_f + \dfrac{E(R_M) - r_f}{\sigma_M}\sigma_p$.</div>
+                    <p>$w_i$ = váha aktiva v portfoliu, $\sigma$ = volatilita, $\rho$ = korelace, $\Sigma$ = kovarianční matice. Očekávaný výnos portfolia je obyčejný vážený průměr. Riziko ale <em>ne</em> – záleží na tom, jak spolu aktiva hýbou.</p>
+                    <div class="thm-box"><strong>Diverzifikace:</strong> když je korelace $\rho &lt; 1$, je volatilita portfolia <em>menší</em> než vážený průměr volatilit. Při velkém počtu aktiv zmizí specifické riziko jednotlivých firem a zůstane jen to, co mají všechna společné. Proto: <strong>systematické</strong> (tržní, nediverzifikovatelné – systematic) riziko odstranit nejde, <strong>specifické</strong> (idiosyncratic) ano.</div>
+                    <div class="ex-box"><strong>Příklad (dvě aktiva):</strong> $w_1 = 0{,}6$, $\sigma_1 = 20\%$, $w_2 = 0{,}4$, $\sigma_2 = 30\%$, $\rho = 0{,}2$.
+                        <br>$\sigma_p^2 = 0{,}36 \cdot 0{,}04 + 0{,}16 \cdot 0{,}09 + 2 \cdot 0{,}6 \cdot 0{,}4 \cdot 0{,}2 \cdot 0{,}2 \cdot 0{,}3 = 0{,}0144 + 0{,}0144 + 0{,}00576 = 0{,}03456$ → $\sigma_p = 18{,}59\%$ (vážený průměr by byl 24 %).
+                        <br><strong>Váha s minimálním rozptylem:</strong> $w_1^* = \dfrac{\sigma_2^2 - \rho\sigma_1\sigma_2}{\sigma_1^2 + \sigma_2^2 - 2\rho\sigma_1\sigma_2} = \dfrac{0{,}09 - 0{,}012}{0{,}13 - 0{,}024} = 0{,}736$ → $\sigma_{min} = 18{,}06\%$.</div>
+                    <div class="def-box"><strong>Efektivní hranice</strong> (efficient frontier): portfolia, která mají při dané volatilitě nejvyšší očekávaný výnos. Když přidáme bezrizikové aktivum, vznikne přímka <strong>Capital Allocation Line</strong>. Nejlepší z nich se hranice dotkne v <strong>tečném portfoliu</strong> (tangency portfolio – nejvyšší Sharpeho poměr). Když ho drží všichni, je to tržní portfolio a přímka je <strong>přímka kapitálového trhu</strong> (Capital Market Line, CML): $E(R_p) = r_f + \dfrac{E(R_M) - r_f}{\sigma_M}\sigma_p$.</div>
 
                     <h4>CAPM</h4>
                     <div class="formula-block">$$E(R_i) = r_f + \beta_i\,[E(R_M) - r_f] \qquad \beta_i = \frac{\operatorname{cov}(R_i, R_M)}{\sigma_M^2} = \rho_{iM}\frac{\sigma_i}{\sigma_M}$$</div>
-                    <p>Only systematic risk (beta) is priced. The relation is the <strong>Security Market Line</strong> (SML). A stock above the SML has positive <strong>alpha</strong> (Jensen's alpha) — undervalued according to CAPM.</p>
-                    <div class="ex-box"><strong>Example:</strong> $r_f = 2\%$, $E(R_M) = 8\%$, $\beta = 1.3$ → $E(R) = 2\% + 1.3 \cdot 6\% = 9.8\%$. If analysts expect 11 %, alpha = +1.2 % → buy.</div>
+                    <p>Česky: očekávaný výnos akcie = bezriziková sazba + beta × tržní riziková prémie. Trh platí jen za systematické riziko (betu), protože specifické riziko si každý zdarma zdiverzifikuje. Tomuto vztahu se říká <strong>přímka trhu cenných papírů</strong> (Security Market Line, SML). Akcie nad SML má kladnou <strong>alfu</strong> (Jensenova alfa) – podle CAPM je podhodnocená.</p>
+                    <div class="ex-box"><strong>Příklad:</strong> $r_f = 2\%$, $E(R_M) = 8\%$, $\beta = 1{,}3$ → $E(R) = 2\% + 1{,}3 \cdot 6\% = 9{,}8\%$. Když analytici čekají 11 %, alfa = +1,2 % → koupit.</div>
                     <table class="table table-bordered summary-table">
                         <thead><tr><th></th><th>CML</th><th>SML</th></tr></thead>
                         <tbody>
-                            <tr><td>x-axis</td><td>total risk $\sigma$</td><td>systematic risk $\beta$</td></tr>
-                            <tr><td>valid for</td><td>efficient portfolios only</td><td>every asset and portfolio</td></tr>
-                            <tr><td>slope</td><td>Sharpe ratio of the market</td><td>market risk premium</td></tr>
+                            <tr><td>osa x</td><td>celkové riziko $\sigma$</td><td>systematické riziko $\beta$</td></tr>
+                            <tr><td>platí pro</td><td>jen efektivní portfolia</td><td>každé aktivum i portfolio</td></tr>
+                            <tr><td>sklon</td><td>Sharpeho poměr trhu</td><td>tržní riziková prémie</td></tr>
                         </tbody>
                     </table>
-                    <div class="def-box"><strong>Performance measures:</strong> <strong>Sharpe</strong> $=\dfrac{\bar R_p - r_f}{\sigma_p}$ (total risk; for the whole portfolio) · <strong>Treynor</strong> $=\dfrac{\bar R_p - r_f}{\beta_p}$ (systematic risk; for a part of a diversified portfolio) · <strong>Jensen's alpha</strong> $= \bar R_p - [r_f + \beta_p(\bar R_M - r_f)]$ · <strong>information ratio</strong> $=\alpha / \sigma(\varepsilon)$.</div>
+                    <div class="def-box"><strong>Měřítka výkonnosti:</strong> <strong>Sharpe</strong> $=\dfrac{\bar R_p - r_f}{\sigma_p}$ (výnos na jednotku celkového rizika; pro celé portfolio) · <strong>Treynor</strong> $=\dfrac{\bar R_p - r_f}{\beta_p}$ (na jednotku systematického rizika; pro část dobře diverzifikovaného portfolia) · <strong>Jensenova alfa</strong> $= \bar R_p - [r_f + \beta_p(\bar R_M - r_f)]$ (o kolik porazil CAPM) · <strong>information ratio</strong> $=\alpha / \sigma(\varepsilon)$ (alfa na jednotku specifického rizika).</div>
 
-                    <h4>Estimating beta: the market model</h4>
+                    <h4>Jak odhadnout betu: tržní model</h4>
                     <div class="formula-block">$$R_{i,t} - r_{f,t} = \alpha_i + \beta_i (R_{M,t} - r_{f,t}) + \varepsilon_{i,t}$$</div>
-                    <p>OLS slope = beta, intercept = alpha, $R^2$ = share of systematic risk in total variance: $\sigma_i^2 = \beta_i^2\sigma_M^2 + \sigma_\varepsilon^2$.</p>
-                    <div class="warn-box"><strong>⚠️ Pozor:</strong> beta depends on choices — data frequency (daily × monthly), window length (typically 2–5 years), index used as market proxy. Betas are unstable and mean-revert to 1 (Blume adjustment: $\beta_{adj} = \tfrac{2}{3}\hat\beta + \tfrac{1}{3}$). The <strong>Roll critique</strong>: the true market portfolio is unobservable, so CAPM can't really be tested.</div>
+                    <p>Regrese nadvýnosu akcie na nadvýnos trhu (OLS): sklon = beta, úrovňová konstanta = alfa, $R^2$ = jaký podíl rozptylu je systematické riziko: $\sigma_i^2 = \beta_i^2\sigma_M^2 + \sigma_\varepsilon^2$.</p>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> beta závisí na tom, jak ji počítáš – frekvence dat (denní × měsíční), délka okna (obvykle 2–5 let), jaký index bereš jako „trh“. Bety nejsou stabilní a v čase se vracejí k 1 (Blumeova úprava: $\beta_{adj} = \tfrac{2}{3}\hat\beta + \tfrac{1}{3}$). <strong>Rollova kritika</strong>: skutečné tržní portfolio (všechna aktiva světa) nikdo nepozoruje, takže CAPM se vlastně nedá pořádně otestovat.</div>
 
-                    <h4>APT and factor models</h4>
+                    <h4>APT a faktorové modely</h4>
                     <div class="formula-block">$$E(R_i) = r_f + \beta_{i1}\lambda_1 + \beta_{i2}\lambda_2 + \dots + \beta_{ik}\lambda_k$$</div>
-                    <div class="def-box"><strong>APT</strong> (Ross, 1976): if returns are driven by $k$ common factors and there's no arbitrage, expected return is linear in factor betas; $\lambda_k$ = risk premium of factor $k$. Unlike CAPM it needs no market portfolio and no assumptions about preferences, but it doesn't say <em>which</em> factors.</div>
+                    <div class="def-box"><strong>APT</strong> (arbitrážní teorie oceňování, Ross 1976): když výnosy ovlivňuje $k$ společných faktorů a na trhu není arbitráž, je očekávaný výnos lineární funkcí citlivostí na faktory (faktorových bet); $\lambda_k$ = riziková prémie faktoru $k$. Na rozdíl od CAPM nepotřebuje tržní portfolio ani předpoklady o preferencích investorů – ale neřekne ti, <em>které</em> faktory to jsou.</div>
                     <table class="table table-bordered summary-table">
-                        <thead><tr><th>Model</th><th>Factors</th></tr></thead>
+                        <thead><tr><th>Model</th><th>Faktory</th></tr></thead>
                         <tbody>
-                            <tr><td>Fama–French 3 (1993)</td><td>MKT (market excess), <strong>SMB</strong> (small minus big — size), <strong>HML</strong> (high minus low book-to-market — value)</td></tr>
-                            <tr><td>Carhart 4 (1997)</td><td>+ <strong>MOM / WML</strong> (momentum: past 12-month winners minus losers)</td></tr>
-                            <tr><td>Fama–French 5 (2015)</td><td>+ <strong>RMW</strong> (robust minus weak profitability), <strong>CMA</strong> (conservative minus aggressive investment)</td></tr>
-                            <tr><td>Macro factor models</td><td>industrial production, inflation, term spread, credit spread (Chen–Roll–Ross)</td></tr>
+                            <tr><td>Fama–French 3 (1993)</td><td>MKT (nadvýnos trhu), <strong>SMB</strong> (small minus big – malé firmy mínus velké), <strong>HML</strong> (high minus low – „levné“ akcie s vysokým poměrem účetní/tržní hodnoty mínus „drahé“ = value)</td></tr>
+                            <tr><td>Carhart 4 (1997)</td><td>+ <strong>MOM / WML</strong> (momentum: vítězové posledních 12 měsíců mínus poražení)</td></tr>
+                            <tr><td>Fama–French 5 (2015)</td><td>+ <strong>RMW</strong> (vysoce ziskové mínus málo ziskové), <strong>CMA</strong> (konzervativně mínus agresivně investující firmy)</td></tr>
+                            <tr><td>Makroekonomické modely</td><td>průmyslová výroba, inflace, sklon výnosové křivky, kreditní spread (Chen–Roll–Ross)</td></tr>
                         </tbody>
                     </table>
 
-                    <h4>Market risk premium and the equity premium puzzle</h4>
-                    <p>The <strong>market risk premium</strong> $E(R_M) - r_f$ is the key input to CAPM, cost of equity and valuation. Estimates:</p>
+                    <h4>Tržní riziková prémie a „equity premium puzzle“</h4>
+                    <p><strong>Tržní riziková prémie</strong> (market risk premium) $E(R_M) - r_f$ = o kolik víc čekáme od akcií než od bezrizikového aktiva. Je to klíčový vstup do CAPM, nákladů vlastního kapitálu a oceňování firem. Jak ji odhadnout:</p>
                     <ul>
-                        <li><strong>historical</strong>: average excess return over a long period (US ≈ 5–8 % p.a. vs. bills, depends on period, arithmetic × geometric mean),</li>
-                        <li><strong>implied / forward-looking</strong>: from the dividend discount (Gordon) model: $E(R_M) = D_1/P_0 + g$,</li>
-                        <li><strong>surveys</strong> of CFOs and analysts.</li>
+                        <li><strong>historicky</strong>: průměrný nadvýnos za dlouhé období (USA ≈ 5–8 % ročně oproti pokladničním poukázkám; záleží na období a na tom, jestli bereš aritmetický, nebo geometrický průměr),</li>
+                        <li><strong>implicitně</strong> (z dnešních cen): z Gordonova dividendového modelu $E(R_M) = D_1/P_0 + g$,</li>
+                        <li><strong>průzkumy</strong> mezi finančními řediteli a analytiky.</li>
                     </ul>
-                    <div class="def-box"><strong>Equity premium puzzle</strong> (Mehra–Prescott, 1985): the historical equity premium (~6 %) is far too high to be explained by standard consumption-based models; it would require an implausibly high risk aversion (coefficient ≈ 30–50). Explanations: survivorship bias (the US market was a winner), loss aversion / myopic loss aversion, rare disasters, the premium was partly unexpected re-pricing.</div>
-                    <div class="warn-box"><strong>⚠️ Pozor:</strong> the historical average has a huge standard error. With $\sigma_M = 20\%$ and 50 years of data, SE $= 20\%/\sqrt{50} \approx 2.8\%$ → the 95% CI for a 6% premium is roughly 0.5–11.5 %.</div>
+                    <div class="def-box"><strong>Equity premium puzzle</strong> (hádanka akciové prémie, Mehra–Prescott 1985): historická akciová prémie (~6 %) je tak vysoká, že ji standardní ekonomické modely nevysvětlí – lidé by museli být nereálně averzní k riziku (koeficient ≈ 30–50). Možná vysvětlení: survivorship bias (americký trh byl „vítěz“, zkrachovalé trhy v datech nejsou), averze ke ztrátě (loss aversion), vzácné katastrofy, část prémie byla nečekané přecenění.</div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> historický průměr je velmi nepřesný. Při $\sigma_M = 20\%$ a 50 letech dat je směrodatná chyba $20\%/\sqrt{50} \approx 2{,}8\%$ → 95% interval spolehlivosti pro prémii 6 % je zhruba 0,5–11,5 %.</div>
 
-                    <h4>R lab: beta, frontier, factor regression</h4>
+                    <h4>R lab: beta, efektivní hranice, faktorová regrese</h4>
                     <pre class="r-box"><code>set.seed(42)
-n  &lt;- 1250                                   # ~5 years of trading days
+n  &lt;- 1250                                   # ~5 let obchodních dní
 rf &lt;- 0.02 / 252
 mkt   &lt;- rnorm(n, 0.07 / 252, 0.18 / sqrt(252))
 stock &lt;- rf + 1.3 * (mkt - rf) + rnorm(n, 0, 0.20 / sqrt(252))
 
-capm &lt;- lm(I(stock - rf) ~ I(mkt - rf))      # excess-return regression
-coef(summary(capm))                          # (Intercept) = alpha, slope = beta
-summary(capm)$r.squared                      # share of systematic risk
-# real data: stock &lt;- dailyReturn(Ad(AAPL)); mkt &lt;- dailyReturn(Ad(SPY)); merge() them first</code></pre>
+capm &lt;- lm(I(stock - rf) ~ I(mkt - rf))      # regrese nadvýnosů
+coef(summary(capm))                          # (Intercept) = alfa, sklon = beta
+summary(capm)$r.squared                      # podíl systematického rizika
+# reálná data: stock &lt;- dailyReturn(Ad(AAPL)); mkt &lt;- dailyReturn(Ad(SPY)); nejdřív merge()</code></pre>
                     <pre class="r-box"><code>library(quadprog)
-mu    &lt;- c(0.08, 0.10, 0.12)                 # expected returns
+mu    &lt;- c(0.08, 0.10, 0.12)                 # očekávané výnosy
 sigma &lt;- c(0.15, 0.20, 0.30)
 rho   &lt;- matrix(c(1, .3, .2,  .3, 1, .4,  .2, .4, 1), 3)
 Sigma &lt;- diag(sigma) %*% rho %*% diag(sigma)
 
-frontier_w &lt;- function(target) {             # min w'Σw  s.t. Σw = 1, w'μ = target, w &gt;= 0
+frontier_w &lt;- function(target) {             # min w'Σw  za podmínek Σw = 1, w'μ = target, w &gt;= 0
   A &lt;- cbind(1, mu, diag(3))
   solve.QP(Dmat = 2 * Sigma, dvec = rep(0, 3), Amat = A,
            bvec = c(1, target, rep(0, 3)), meq = 2)$solution
 }
 targets &lt;- seq(0.085, 0.115, by = 0.005)
 vols &lt;- sapply(targets, function(m) { w &lt;- frontier_w(m); sqrt(t(w) %*% Sigma %*% w) })
-plot(vols, targets, type = "b", xlab = "volatility", ylab = "expected return")</code></pre>
-                    <pre class="r-box"><code># Fama–French 3-factor: factors from Kenneth French's data library (package frenchdata or CSV)
-# ff: data frame with columns Mkt.RF, SMB, HML, RF (in %), aligned with the stock's returns
+plot(vols, targets, type = "b", xlab = "volatilita", ylab = "očekávaný výnos")</code></pre>
+                    <pre class="r-box"><code># Fama–French 3 faktory: data z Kenneth French data library (balíček frenchdata nebo CSV)
+# ff: data frame se sloupci Mkt.RF, SMB, HML, RF (v %), sladěný s výnosy akcie
 ff3 &lt;- lm(I(ret - RF) ~ Mkt.RF + SMB + HML, data = ff)
-summary(ff3)   # alpha should vanish if the 3 factors explain the returns</code></pre>
-                    <div class="insight-box"><strong>Case-study angle:</strong> typical tasks: estimate betas of a set of stocks and plot them against average returns (does the SML hold empirically? — usually it's too flat); build the efficient frontier from real returns and compare in-sample × out-of-sample performance; run FF3/FF5 regressions for a fund and decide whether its alpha is significant. <code>PerformanceAnalytics</code> has <code>SharpeRatio()</code>, <code>CAPM.beta()</code>, <code>CAPM.alpha()</code>.</div>
+summary(ff3)   # když 3 faktory výnosy vysvětlí, alfa vyjde nevýznamná</code></pre>
+                    <div class="insight-box"><strong>Pro semestrální práci:</strong> typické úlohy: odhadnout bety sady akcií a vynést je proti průměrným výnosům (platí SML i v datech? – obvykle je moc plochá); postavit efektivní hranici z reálných výnosů a porovnat výsledky na datech, ze kterých byla odhadnutá (in-sample), a na nových (out-of-sample); spustit FF3/FF5 regresi pro fond a rozhodnout, jestli je jeho alfa významná. <code>PerformanceAnalytics</code> má <code>SharpeRatio()</code>, <code>CAPM.beta()</code>, <code>CAPM.alpha()</code>.</div>
 
-                    <div class="summary-box"><strong>Summary:</strong>
+                    <div class="summary-box"><strong>Shrnutí:</strong>
                         <ul>
-                            <li>$\sigma_p^2 = \mathbf w^\top\Sigma\mathbf w$; correlation &lt; 1 → diversification; only systematic risk is priced</li>
-                            <li>CAPM: $E(R_i) = r_f + \beta_i(E(R_M) - r_f)$; beta = regression slope on market excess return</li>
-                            <li>CML (σ, efficient portfolios) × SML (β, all assets); Sharpe × Treynor × alpha</li>
-                            <li>APT: several factors, no-arbitrage; FF3 = MKT, SMB, HML; FF5 + RMW, CMA; Carhart + MOM</li>
-                            <li>equity premium puzzle = premium too high for plausible risk aversion</li>
+                            <li>$\sigma_p^2 = \mathbf w^\top\Sigma\mathbf w$; korelace &lt; 1 → diverzifikace; trh platí jen za systematické riziko</li>
+                            <li>CAPM: $E(R_i) = r_f + \beta_i(E(R_M) - r_f)$; beta = sklon regrese na nadvýnos trhu</li>
+                            <li>CML (σ, jen efektivní portfolia) × SML (β, všechna aktiva); Sharpe × Treynor × alfa</li>
+                            <li>APT: více faktorů, bez arbitráže; FF3 = MKT, SMB, HML; FF5 + RMW, CMA; Carhart + MOM</li>
+                            <li>equity premium puzzle = prémie je na rozumnou averzi k riziku moc vysoká</li>
                         </ul>
                     </div>
                     <p class="mb-0"><a href="../quiz.html?course=1BP461&topic=2"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
                 </section>
 
                 <section class="topic-section" id="topic-3">
-                    <h3>3. Market Efficiency</h3>
-                    <p class="text-muted small">Lecture 6 Oct · Milan Fičura · source: literature (Bodie–Kane–Marcus ch. 11–12)</p>
+                    <h3>3. Efektivita trhu</h3>
+                    <p class="text-muted small">Přednáška 6. 10. · Milan Fičura · zdroj: literatura (Bodie–Kane–Marcus kap. 11–12)</p>
 
-                    <h4>Efficient market hypothesis (EMH)</h4>
-                    <div class="def-box"><strong>Efficient market</strong> (efektivní trh, Fama 1970): prices fully reflect all available information → no one can systematically earn risk-adjusted excess returns (alpha) using that information. Prices move only on <em>new</em> information, which is unpredictable → prices follow (roughly) a <strong>random walk</strong>.</div>
+                    <h4>Hypotéza efektivního trhu (EMH)</h4>
+                    <div class="def-box"><strong>Efektivní trh</strong> (efficient market, Fama 1970): ceny už obsahují všechny dostupné informace → nikdo nemůže s těmito informacemi soustavně vydělávat víc, než odpovídá riziku (tj. mít alfu). Ceny se hýbou jen kvůli <em>novým</em> informacím, a ty se předpovědět nedají → ceny se chovají (zhruba) jako <strong>náhodná procházka</strong> (random walk).</div>
                     <table class="table table-bordered summary-table">
-                        <thead><tr><th>Form</th><th>Information reflected in price</th><th>What becomes useless</th><th>Test</th></tr></thead>
+                        <thead><tr><th>Forma</th><th>Co už je v ceně</th><th>Co přestává fungovat</th><th>Jak se testuje</th></tr></thead>
                         <tbody>
-                            <tr><td><strong>weak</strong> (slabá)</td><td>past prices and volumes</td><td>technical analysis</td><td>autocorrelation, runs, variance ratio, trading-rule backtests</td></tr>
-                            <tr><td><strong>semi-strong</strong> (středně silná)</td><td>all public information (reports, news)</td><td>+ fundamental analysis</td><td>event studies</td></tr>
-                            <tr><td><strong>strong</strong> (silná)</td><td>all information incl. private (insider)</td><td>+ insider trading</td><td>performance of insiders, fund managers</td></tr>
+                            <tr><td><strong>slabá</strong> (weak)</td><td>minulé ceny a objemy</td><td>technická analýza</td><td>autokorelace, testy běhů, variance ratio, backtest obchodních pravidel</td></tr>
+                            <tr><td><strong>středně silná</strong> (semi-strong)</td><td>všechny veřejné informace (výroční zprávy, zprávy)</td><td>+ fundamentální analýza</td><td>event studies (studie událostí)</td></tr>
+                            <tr><td><strong>silná</strong> (strong)</td><td>všechny informace vč. neveřejných (insider)</td><td>+ obchodování s vnitřní informací</td><td>výkonnost insiderů a správců fondů</td></tr>
                         </tbody>
                     </table>
-                    <div class="warn-box"><strong>⚠️ Pozor:</strong> each stronger form <em>includes</em> the weaker ones (strong ⇒ semi-strong ⇒ weak). EMH does <strong>not</strong> say prices are "correct" or that you can't earn money — you earn the fair risk premium, just not alpha. It also doesn't say prices don't move: they move a lot, but unpredictably.</div>
-                    <div class="def-box"><strong>Joint hypothesis problem:</strong> every efficiency test needs a model of "normal" (expected) return, e.g. CAPM. If we find abnormal returns, either the market is inefficient <em>or</em> the model is wrong — we can't tell which. That's why anomalies like size or value can be read as missing risk factors (→ Fama–French).</div>
-                    <div class="insight-box"><strong>Grossman–Stiglitz paradox:</strong> if markets were perfectly efficient, nobody would be paid to gather information, so nobody would do it, and prices couldn't be efficient. Equilibrium: markets are "efficiently inefficient" — just enough mispricing to reward the cost of analysis.</div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> silnější forma v sobě <em>obsahuje</em> slabší (silná ⇒ středně silná ⇒ slabá). EMH <strong>neříká</strong>, že ceny jsou „správné“, ani že se nedá vydělat – vyděláš férovou rizikovou prémii, jen ne alfu. Ani neříká, že se ceny nehýbou: hýbou se hodně, jen nepředvídatelně.</div>
+                    <div class="def-box"><strong>Problém společné hypotézy</strong> (joint hypothesis problem): každý test efektivity potřebuje model „normálního“ (očekávaného) výnosu, třeba CAPM. Když najdeme nadvýnos, je buď trh neefektivní, <em>nebo</em> je špatný model – a nevíme, co z toho. Proto se anomálie jako size nebo value dají vykládat i jako chybějící rizikové faktory (→ Fama–French).</div>
+                    <div class="insight-box"><strong>Grossman–Stiglitzův paradox:</strong> kdyby byl trh dokonale efektivní, nikomu by se nevyplatilo sbírat informace, takže by to nikdo nedělal – a ceny by pak efektivní být nemohly. Rovnováha: trhy jsou „efektivně neefektivní“ – chyb v cenách je přesně tolik, aby se analýza zaplatila.</div>
 
-                    <h4>Active × passive investing</h4>
+                    <h4>Aktivní × pasivní investování</h4>
                     <table class="table table-bordered summary-table">
-                        <thead><tr><th></th><th>Active</th><th>Passive</th></tr></thead>
+                        <thead><tr><th></th><th>Aktivní</th><th>Pasivní</th></tr></thead>
                         <tbody>
-                            <tr><td>Goal</td><td>beat a benchmark (positive alpha)</td><td>replicate the benchmark (index fund, ETF)</td></tr>
-                            <tr><td>Tools</td><td>stock picking, market timing, fundamental and technical analysis</td><td>buy and hold, periodic rebalancing</td></tr>
-                            <tr><td>Costs</td><td>high (fees 1–2 %, trading costs)</td><td>low (ETF TER ≈ 0.05–0.3 %)</td></tr>
-                            <tr><td>Evidence</td><td>most active funds underperform their index after fees (SPIVA reports); past winners don't persist</td><td></td></tr>
+                            <tr><td>Cíl</td><td>porazit benchmark (kladná alfa)</td><td>kopírovat benchmark (indexový fond, ETF)</td></tr>
+                            <tr><td>Nástroje</td><td>výběr akcií, časování trhu, fundamentální a technická analýza</td><td>koupit a držet, občas vyvážit (rebalancing)</td></tr>
+                            <tr><td>Náklady</td><td>vysoké (poplatky 1–2 %, transakční náklady)</td><td>nízké (TER u ETF ≈ 0,05–0,3 %)</td></tr>
+                            <tr><td>Co ukazují data</td><td>většina aktivních fondů po poplatcích zaostává za indexem (zprávy SPIVA); kdo vyhrál minule, nevyhrává spolehlivě znovu</td><td></td></tr>
                         </tbody>
                     </table>
-                    <div class="thm-box"><strong>Sharpe's arithmetic of active management:</strong> before costs, the average actively managed dollar must earn the market return (because active + passive = market). After costs, the average active dollar must underperform passive.</div>
-                    <p><strong>Fundamental analysis</strong>: estimates intrinsic value from cash flows, earnings, balance sheet, macro (DCF, multiples). <strong>Technical analysis</strong>: looks for patterns in past prices and volumes (moving averages, support/resistance, momentum indicators) — contradicts the weak form.</p>
+                    <div class="thm-box"><strong>Sharpeova aritmetika aktivní správy:</strong> před náklady musí průměrný aktivně spravovaný dolar vydělat přesně tržní výnos (protože aktivní + pasivní = celý trh a pasivní má tržní výnos). Po nákladech tedy průměrný aktivní dolar za pasivním <em>musí</em> zaostat.</div>
+                    <p><strong>Fundamentální analýza</strong> odhaduje vnitřní hodnotu firmy z peněžních toků, zisků, rozvahy a makroekonomiky (DCF, násobky). <strong>Technická analýza</strong> hledá vzorce v minulých cenách a objemech (klouzavé průměry, supporty a rezistence, momentum indikátory) – to je v rozporu se slabou formou EMH.</p>
 
-                    <h4>Empirical tests</h4>
+                    <h4>Jak se efektivita testuje</h4>
                     <ul>
-                        <li><strong>Autocorrelation</strong> of returns: under a random walk $\rho_k = 0$. Ljung–Box test $Q = T(T+2)\sum_{k=1}^m \frac{\hat\rho_k^2}{T-k} \sim \chi^2_m$.</li>
-                        <li><strong>Variance ratio</strong> (Lo–MacKinlay): $VR(q) = \dfrac{\operatorname{Var}(r_t + \dots + r_{t-q+1})}{q\,\operatorname{Var}(r_t)}$. Random walk → $VR = 1$; $VR &gt; 1$ positive autocorrelation (momentum), $VR &lt; 1$ mean reversion.</li>
-                        <li><strong>Event study</strong>: reaction of prices to announcements (earnings, M&amp;A, dividends). Efficient market → immediate jump on the event day, no drift afterwards.</li>
-                        <li><strong>Fund performance</strong>: do managers have persistent alpha?</li>
+                        <li><strong>Autokorelace</strong> výnosů: při náhodné procházce je $\rho_k = 0$ (dnešní výnos neříká nic o zítřejším). Ljungův–Boxův test $Q = T(T+2)\sum_{k=1}^m \frac{\hat\rho_k^2}{T-k} \sim \chi^2_m$.</li>
+                        <li><strong>Variance ratio</strong> (Lo–MacKinlay): $VR(q) = \dfrac{\operatorname{Var}(r_t + \dots + r_{t-q+1})}{q\,\operatorname{Var}(r_t)}$. Náhodná procházka → $VR = 1$; $VR &gt; 1$ kladná autokorelace (momentum), $VR &lt; 1$ návrat k průměru (mean reversion).</li>
+                        <li><strong>Event study</strong>: jak ceny reagují na oznámení (výsledky, fúze, dividendy). Efektivní trh → cena skočí hned v den oznámení a pak už dál „nedojíždí“.</li>
+                        <li><strong>Výkonnost fondů</strong>: mají manažeři trvale alfu?</li>
                     </ul>
                     <div class="formula-block">$$AR_{i,t} = R_{i,t} - (\hat\alpha_i + \hat\beta_i R_{M,t}) \qquad CAR_i(t_1, t_2) = \sum_{t=t_1}^{t_2} AR_{i,t}$$</div>
-                    <div class="ex-box"><strong>Example (abnormal return):</strong> market model estimated on pre-event data: $\hat\alpha = 0.1\%$, $\hat\beta = 1.2$. On the announcement day the market returns 1 % and the stock 4 %.
-                        <br>Expected (normal) return $= 0.1\% + 1.2 \cdot 1\% = 1.3\%$ → $AR = 4\% - 1.3\% = 2.7\%$.
-                        <br>Efficient market: CAR jumps to ≈ 2.7 % on day 0 and stays flat. A continued rise afterwards (drift) = slow reaction = inefficiency.</div>
+                    <p>$AR$ = abnormální výnos (skutečný mínus „normální“ podle tržního modelu), $CAR$ = kumulovaný abnormální výnos přes okno události.</p>
+                    <div class="ex-box"><strong>Příklad (abnormální výnos):</strong> tržní model odhadnutý na datech před událostí: $\hat\alpha = 0{,}1\%$, $\hat\beta = 1{,}2$. V den oznámení vydělá trh 1 % a akcie 4 %.
+                        <br>Normální výnos $= 0{,}1\% + 1{,}2 \cdot 1\% = 1{,}3\%$ → $AR = 4\% - 1{,}3\% = 2{,}7\%$.
+                        <br>Efektivní trh: CAR v den 0 vyskočí na ≈ 2,7 % a pak zůstane rovně. Kdyby dál rostl (drift), trh reaguje pomalu = neefektivita.</div>
 
-                    <h4>Anomalies</h4>
+                    <h4>Anomálie</h4>
                     <table class="table table-bordered summary-table">
-                        <thead><tr><th>Anomaly</th><th>Description</th><th>Contradicts</th></tr></thead>
+                        <thead><tr><th>Anomálie</th><th>Co to je</th><th>Odporuje</th></tr></thead>
                         <tbody>
-                            <tr><td>Momentum</td><td>past 3–12 month winners keep outperforming losers (Jegadeesh–Titman)</td><td>weak form</td></tr>
-                            <tr><td>Long-term reversal</td><td>3–5 year losers outperform winners (De Bondt–Thaler overreaction)</td><td>weak form</td></tr>
-                            <tr><td>Size effect</td><td>small caps earn more than CAPM predicts</td><td>semi-strong (or CAPM)</td></tr>
-                            <tr><td>Value effect</td><td>high book-to-market / low P/E stocks outperform</td><td>semi-strong (or CAPM)</td></tr>
-                            <tr><td>January effect</td><td>small caps do well in January (tax-loss selling in December)</td><td>weak form</td></tr>
-                            <tr><td>Post-earnings announcement drift</td><td>prices keep drifting in the direction of an earnings surprise</td><td>semi-strong</td></tr>
+                            <tr><td>Momentum</td><td>akcie, které rostly posledních 3–12 měsíců, dál porážejí ty, které padaly (Jegadeesh–Titman)</td><td>slabé formě</td></tr>
+                            <tr><td>Dlouhodobý obrat (reversal)</td><td>poražení za 3–5 let pak porážejí vítěze (De Bondt–Thaler: trh přestřelí)</td><td>slabé formě</td></tr>
+                            <tr><td>Size efekt</td><td>malé firmy vydělávají víc, než říká CAPM</td><td>středně silné formě (nebo CAPM)</td></tr>
+                            <tr><td>Value efekt</td><td>akcie s vysokým poměrem účetní/tržní hodnoty nebo nízkým P/E porážejí trh</td><td>středně silné formě (nebo CAPM)</td></tr>
+                            <tr><td>Lednový efekt</td><td>malé firmy se v lednu daří (v prosinci je lidé prodávají kvůli daním)</td><td>slabé formě</td></tr>
+                            <tr><td>Post-earnings announcement drift (PEAD)</td><td>po překvapivých výsledcích cena ještě dlouho „dojíždí“ stejným směrem</td><td>středně silné formě</td></tr>
                         </tbody>
                     </table>
-                    <div class="warn-box"><strong>⚠️ Pozor:</strong> an anomaly is not automatically an inefficiency: it can be (1) a missing risk factor (joint hypothesis), (2) <strong>data mining</strong> — test enough strategies and some will look profitable by chance, (3) not exploitable after transaction costs, (4) disappear after publication. Behavioural finance explains anomalies by investor biases (overconfidence, loss aversion, herding) plus <strong>limits to arbitrage</strong>.</div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> anomálie neznamená automaticky neefektivitu. Může to být (1) chybějící rizikový faktor (společná hypotéza), (2) <strong>data mining</strong> – když otestuješ dost strategií, některé vyjdou ziskové čistě náhodou, (3) po transakčních nákladech se nedá využít, (4) po zveřejnění zmizí. Behaviorální finance vysvětluje anomálie chybami investorů (přílišná sebedůvěra, averze ke ztrátě, stádní chování) plus <strong>limity arbitráže</strong> (limits to arbitrage – chybu v ceně je drahé nebo riskantní opravit).</div>
 
-                    <h4>R lab: random-walk tests and an event study</h4>
+                    <h4>R lab: testy náhodné procházky a event study</h4>
                     <pre class="r-box"><code>set.seed(1)
-r &lt;- rnorm(1000, 0, 0.01)                    # returns under the random-walk null
+r &lt;- rnorm(1000, 0, 0.01)                    # výnosy podle nulové hypotézy (náhodná procházka)
 
-acf(r, lag.max = 10)                         # bars inside the band → no autocorrelation
-Box.test(r, lag = 10, type = "Ljung-Box")    # H0: no autocorrelation up to lag 10
+acf(r, lag.max = 10)                         # sloupce uvnitř pásma → žádná autokorelace
+Box.test(r, lag = 10, type = "Ljung-Box")    # H0: žádná autokorelace do zpoždění 10
 
-variance_ratio &lt;- function(r, q) {           # VR(q) = Var(q-period return) / (q · Var(1-period))
+variance_ratio &lt;- function(r, q) {           # VR(q) = Var(q-denního výnosu) / (q · Var(1-denního))
   rq &lt;- stats::filter(r, rep(1, q), sides = 1)
   var(rq, na.rm = TRUE) / (q * var(r))
 }
-variance_ratio(r, 5)                         # ≈ 1 under a random walk</code></pre>
-                    <pre class="r-box"><code># event study: estimation window [-250, -11], event window [-5, +5] around day 0
+variance_ratio(r, 5)                         # ≈ 1 při náhodné procházce</code></pre>
+                    <pre class="r-box"><code># event study: odhadové okno [-250, -11], okno události [-5, +5] kolem dne 0
 est &lt;- 1:240; evt &lt;- 246:256
 set.seed(5)
 mkt   &lt;- rnorm(256, 0.0004, 0.01)
 stock &lt;- 0.001 + 1.2 * mkt + rnorm(256, 0, 0.008)
-stock[251] &lt;- stock[251] + 0.05   # +5 % news shock on day 0
+stock[251] &lt;- stock[251] + 0.05   # zpráva v den 0: +5 %
 
-mm  &lt;- lm(stock[est] ~ mkt[est])             # market model: R_i = α + β R_m + ε
+mm  &lt;- lm(stock[est] ~ mkt[est])             # tržní model: R_i = α + β R_m + ε
 AR  &lt;- stock[evt] - (coef(mm)[1] + coef(mm)[2] * mkt[evt])
 CAR &lt;- cumsum(AR)
 t_stat &lt;- CAR[length(CAR)] / (sd(resid(mm)) * sqrt(length(evt)))
 round(c(CAR = tail(CAR, 1), t = t_stat), 3)   # CAR ≈ 0.069, t ≈ 2.56</code></pre>
-                    <div class="insight-box"><strong>Case-study angle:</strong> classic project ideas — test weak-form efficiency on an index (daily × weekly × monthly autocorrelation, variance ratios); backtest a moving-average crossover rule vs. buy-and-hold <em>including</em> transaction costs; run an event study of earnings announcements or ECB/ČNB rate decisions on a set of stocks and plot the average CAR. Watch out for look-ahead bias (using data not available at the time of the trade).</div>
+                    <div class="insight-box"><strong>Pro semestrální práci:</strong> klasická témata – otestovat slabou formu efektivity na indexu (autokorelace denních × týdenních × měsíčních výnosů, variance ratio); backtest pravidla „křížení klouzavých průměrů“ proti koupit-a-držet <em>včetně</em> transakčních nákladů; event study oznámení výsledků nebo rozhodnutí ECB/ČNB o sazbách na sadě akcií s grafem průměrného CAR. Pozor na look-ahead bias (použití dat, která v době obchodu ještě nebyla známá).</div>
 
-                    <div class="summary-box"><strong>Summary:</strong>
+                    <div class="summary-box"><strong>Shrnutí:</strong>
                         <ul>
-                            <li>weak (past prices) ⊂ semi-strong (public info) ⊂ strong (all info incl. private)</li>
-                            <li>EMH = no risk-adjusted excess returns, not "prices are right"</li>
-                            <li>joint hypothesis problem: every test needs a model of normal return</li>
-                            <li>tests: autocorrelation / Ljung–Box, variance ratio, event study (AR, CAR)</li>
-                            <li>anomalies: momentum, reversal, size, value, January, PEAD; risk × mispricing × data mining</li>
+                            <li>slabá (minulé ceny) ⊂ středně silná (veřejné info) ⊂ silná (všechny info vč. neveřejných)</li>
+                            <li>EMH = nedá se soustavně vydělat víc, než odpovídá riziku; neznamená „ceny jsou správně“</li>
+                            <li>problém společné hypotézy: každý test potřebuje model normálního výnosu</li>
+                            <li>testy: autokorelace / Ljung–Box, variance ratio, event study (AR, CAR)</li>
+                            <li>anomálie: momentum, reversal, size, value, leden, PEAD; vysvětlení riziko × chyba v ceně × data mining</li>
                         </ul>
                     </div>
                     <p class="mb-0"><a href="../quiz.html?course=1BP461&topic=3"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
                 </section>
 
                 <section class="topic-section" id="topic-4">
-                    <h3>4. Bond Markets &amp; Yield Curve</h3>
-                    <p class="text-muted small">Lecture 13 Oct · Milan Fičura · source: literature (Witzany <em>Financial Derivatives</em>; Bodie–Kane–Marcus ch. 14–16)</p>
+                    <h3>4. Dluhopisové trhy a výnosová křivka</h3>
+                    <p class="text-muted small">Přednáška 13. 10. · Milan Fičura · zdroj: literatura (Witzany <em>Financial Derivatives</em>; Bodie–Kane–Marcus kap. 14–16)</p>
 
-                    <h4>Bond pricing and risks</h4>
+                    <h4>Cena dluhopisu a jeho rizika</h4>
                     <div class="formula-block">$$P = \sum_{t=1}^{n} \frac{C}{(1+y)^t} + \frac{F}{(1+y)^n} = \sum_{t=1}^{n} CF_t \cdot DF(t)$$</div>
-                    <div class="def-box"><strong>Yield to maturity</strong> (YTM, výnos do splatnosti): the single discount rate $y$ that equates the PV of cash flows to the price (IRR of the bond). <strong>Spot / zero rate</strong> $z(t)$: yield of a zero-coupon bond maturing at $t$. The correct price discounts each cash flow by its own zero rate: $P = \sum CF_t\,(1+z_t)^{-t}$.</div>
+                    <p>Cena = současná hodnota všech plateb: kupony $C$ a na konci nominál $F$. $DF(t)$ = diskontní faktor (kolik dnes stojí 1 Kč zaplacená v čase $t$).</p>
+                    <div class="def-box"><strong>Výnos do splatnosti</strong> (yield to maturity, YTM): jedna jediná sazba $y$, se kterou vyjde současná hodnota plateb rovna ceně (vnitřní výnosové procento dluhopisu). <strong>Spotová / nulová sazba</strong> (spot / zero rate) $z(t)$: výnos bezkuponového dluhopisu splatného v čase $t$. Správně se každá platba diskontuje <em>svou vlastní</em> nulovou sazbou: $P = \sum CF_t\,(1+z_t)^{-t}$.</div>
                     <table class="table table-bordered summary-table">
-                        <thead><tr><th>Risk</th><th>Description</th></tr></thead>
+                        <thead><tr><th>Riziko</th><th>Co to znamená</th></tr></thead>
                         <tbody>
-                            <tr><td>Interest-rate (price) risk</td><td>rates ↑ → price ↓; measured by duration and convexity</td></tr>
-                            <tr><td>Reinvestment risk</td><td>coupons reinvested at lower rates; opposite sign to price risk (→ immunisation)</td></tr>
-                            <tr><td>Credit / default risk</td><td>issuer fails to pay; priced via credit spread (topic 7, CDS)</td></tr>
-                            <tr><td>Liquidity risk</td><td>wide bid-ask, can't sell quickly without discount</td></tr>
-                            <tr><td>Inflation, FX, call (prepayment) risk</td><td>real value erosion; currency of denomination; issuer redeems early when rates fall</td></tr>
+                            <tr><td>Úrokové (cenové) riziko</td><td>sazby ↑ → cena ↓; měří se durací a konvexitou</td></tr>
+                            <tr><td>Riziko reinvestice</td><td>kupony se musí znovu investovat za nižší sazby; působí opačně než cenové riziko (→ imunizace)</td></tr>
+                            <tr><td>Kreditní riziko (riziko selhání)</td><td>emitent nezaplatí; v ceně se projeví jako kreditní spread (téma 7, CDS)</td></tr>
+                            <tr><td>Riziko likvidity</td><td>velký rozdíl mezi nákupní a prodejní cenou (bid-ask), rychle prodat jde jen se slevou</td></tr>
+                            <tr><td>Inflace, měna, předčasné splacení</td><td>inflace snižuje reálnou hodnotu; měnové riziko; emitent splatí dřív, když sazby klesnou (callable)</td></tr>
                         </tbody>
                     </table>
 
-                    <h4>Duration and convexity</h4>
+                    <h4>Durace a konvexita</h4>
                     <div class="formula-block">$$D_{Mac} = \frac{1}{P}\sum_t t\,\frac{CF_t}{(1+y)^t} \qquad D_{mod} = \frac{D_{Mac}}{1+y} \qquad C = \frac{1}{P}\sum_t \frac{t(t+1)\,CF_t}{(1+y)^{t+2}}$$</div>
-                    <div class="formula-block">$$\frac{\Delta P}{P} \approx -D_{mod}\,\Delta y + \tfrac{1}{2}\,C\,(\Delta y)^2 \qquad DV01 = D_{mod}\cdot P \cdot 0.0001$$</div>
-                    <div class="ex-box"><strong>Example:</strong> 3-year bond, 5 % annual coupon, face 100, YTM 4 %.
-                        <br>PVs of cash flows: $5/1.04 = 4.808$, $5/1.04^2 = 4.623$, $105/1.04^3 = 93.345$ → $P = 102.775$.
-                        <br>$D_{Mac} = (1 \cdot 4.808 + 2 \cdot 4.623 + 3 \cdot 93.345)/102.775 = 2.861$ years; $D_{mod} = 2.861/1.04 = 2.751$; $C = 10.41$.
-                        <br>Yield +100 bp: duration only $-2.751 \cdot 0.01 \cdot 102.775 = -2.828$; with convexity $-2.828 + \tfrac12 \cdot 10.41 \cdot 0.0001 \cdot 102.775 = -2.774$; exact repricing $-2.775$. DV01 = 0.0283 per 100 face.</div>
-                    <div class="insight-box"><strong>Intuition:</strong> Macaulay duration = weighted average time to cash flows (weights = PV shares); for a zero-coupon bond it equals maturity. Duration is higher for longer maturity, lower coupon and lower yield. Convexity is the curvature: positive convexity means price rises more when yields fall than it drops when yields rise — good for the holder.</div>
-                    <div class="warn-box"><strong>⚠️ Pozor:</strong> use <em>modified</em> duration for the % price change, not Macaulay. With continuous compounding $D_{mod} = D_{Mac}$. Duration assumes a <strong>parallel shift</strong> of a flat curve; real curves also twist and bend (key-rate durations handle that). Portfolio duration = value-weighted average of bond durations.</div>
-                    <div class="def-box"><strong>Immunisation:</strong> match the duration of assets to the duration of liabilities (and PV) → a small parallel rate shift changes both sides equally; price and reinvestment effects offset. Requires rebalancing as time passes and rates change.</div>
+                    <div class="formula-block">$$\frac{\Delta P}{P} \approx -D_{mod}\,\Delta y + \tfrac{1}{2}\,C\,(\Delta y)^2 \qquad DV01 = D_{mod}\cdot P \cdot 0{,}0001$$</div>
+                    <p>Česky: o kolik procent se změní cena, když se výnos změní o $\Delta y$. $DV01$ = o kolik se změní cena při posunu výnosu o 1 bazický bod (0,01 %).</p>
+                    <div class="ex-box"><strong>Příklad:</strong> 3letý dluhopis, roční kupon 5 %, nominál 100, YTM 4 %.
+                        <br>Současné hodnoty plateb: $5/1{,}04 = 4{,}808$, $5/1{,}04^2 = 4{,}623$, $105/1{,}04^3 = 93{,}345$ → $P = 102{,}775$.
+                        <br>$D_{Mac} = (1 \cdot 4{,}808 + 2 \cdot 4{,}623 + 3 \cdot 93{,}345)/102{,}775 = 2{,}861$ roku; $D_{mod} = 2{,}861/1{,}04 = 2{,}751$; $C = 10{,}41$.
+                        <br>Výnos +100 bp: jen s durací $-2{,}751 \cdot 0{,}01 \cdot 102{,}775 = -2{,}828$; s konvexitou $-2{,}828 + \tfrac12 \cdot 10{,}41 \cdot 0{,}0001 \cdot 102{,}775 = -2{,}774$; přesné přecenění $-2{,}775$. DV01 = 0,0283 na 100 nominálu.</div>
+                    <div class="insight-box"><strong>Intuice:</strong> Macaulayova durace = průměrná doba, za kterou dostaneš peníze zpět (vážená podílem současné hodnoty každé platby). U bezkuponového dluhopisu je rovna splatnosti. Durace je vyšší, když je delší splatnost, nižší kupon a nižší výnos. Konvexita je zakřivení vztahu cena–výnos: kladná konvexita znamená, že při poklesu výnosů cena vzroste víc, než při stejném růstu výnosů klesne – pro držitele dobře.</div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> pro procentní změnu ceny se používá <em>modifikovaná</em> durace, ne Macaulayova. Při spojitém úročení platí $D_{mod} = D_{Mac}$. Durace předpokládá <strong>paralelní posun</strong> ploché křivky; skutečná křivka se ale i natáčí a ohýbá (to řeší key-rate durace). Durace portfolia = průměr durací vážený hodnotou dluhopisů.</div>
+                    <div class="def-box"><strong>Imunizace</strong> (immunisation): nastavit duraci aktiv stejně jako duraci závazků (a stejnou současnou hodnotu) → malý paralelní posun sazeb změní obě strany stejně; cenový efekt a efekt reinvestice se vyruší. Časem a se změnou sazeb se musí přenastavovat.</div>
 
-                    <h4>Forward rates and the term structure</h4>
-                    <div class="formula-block">$$(1+z_2)^2 = (1+z_1)(1+f_{1,2}) \;\Rightarrow\; f_{1,2} = \frac{(1+z_2)^2}{1+z_1} - 1 \qquad \text{(continuous: } f_{t_1,t_2} = \tfrac{z_2 t_2 - z_1 t_1}{t_2 - t_1}\text{)}$$</div>
-                    <div class="ex-box"><strong>Example:</strong> $z_1 = 3\%$, $z_2 = 4\%$ → $f_{1,2} = 1.04^2/1.03 - 1 = 5.01\%$. Investing 2 years at 4 % = investing 1 year at 3 % and locking in 5.01 % for the second year (via an FRA).</div>
-                    <div class="def-box"><strong>Bootstrapping:</strong> recovering zero rates (discount factors) from coupon bonds or par yields step by step, shortest maturity first: $DF_n = \dfrac{100 - c_n \sum_{t&lt;n} DF_t}{100 + c_n}$.</div>
+                    <h4>Forwardové sazby a časová struktura</h4>
+                    <div class="formula-block">$$(1+z_2)^2 = (1+z_1)(1+f_{1,2}) \;\Rightarrow\; f_{1,2} = \frac{(1+z_2)^2}{1+z_1} - 1 \qquad \text{(spojitě: } f_{t_1,t_2} = \tfrac{z_2 t_2 - z_1 t_1}{t_2 - t_1}\text{)}$$</div>
+                    <p>Myšlenka: investovat na 2 roky za $z_2$ musí dát totéž jako investovat na 1 rok za $z_1$ a pak na další rok za forwardovou sazbu $f_{1,2}$. Jinak by šla arbitráž.</p>
+                    <div class="ex-box"><strong>Příklad:</strong> $z_1 = 3\%$, $z_2 = 4\%$ → $f_{1,2} = 1{,}04^2/1{,}03 - 1 = 5{,}01\%$. Investice na 2 roky za 4 % = investice na 1 rok za 3 % a zamknutí 5,01 % na druhý rok (přes FRA).</div>
+                    <div class="def-box"><strong>Bootstrapping:</strong> postupné dopočítání nulových sazeb (diskontních faktorů) z kuponových dluhopisů nebo par výnosů – od nejkratší splatnosti: $DF_n = \dfrac{100 - c_n \sum_{t&lt;n} DF_t}{100 + c_n}$.</div>
                     <table class="table table-bordered summary-table">
-                        <thead><tr><th>Theory</th><th>Forward rate =</th><th>Explains</th></tr></thead>
+                        <thead><tr><th>Teorie</th><th>Forwardová sazba =</th><th>Co vysvětluje</th></tr></thead>
                         <tbody>
-                            <tr><td><strong>Pure expectations</strong></td><td>expected future spot rate</td><td>upward curve ⇔ rates expected to rise</td></tr>
-                            <tr><td><strong>Liquidity preference</strong></td><td>expected spot rate + <strong>liquidity (term) premium</strong> rising with maturity</td><td>why the curve is usually upward-sloping</td></tr>
-                            <tr><td><strong>Market segmentation</strong> / preferred habitat</td><td>set by supply and demand in each maturity segment</td><td>kinks; demand of pension funds for long bonds</td></tr>
+                            <tr><td><strong>Čistá teorie očekávání</strong> (pure expectations)</td><td>očekávaná budoucí spotová sazba</td><td>rostoucí křivka ⇔ trh čeká růst sazeb</td></tr>
+                            <tr><td><strong>Teorie preference likvidity</strong> (liquidity preference)</td><td>očekávaná spotová sazba + <strong>prémie za likviditu (termínová prémie)</strong>, která roste se splatností</td><td>proč je křivka většinou rostoucí</td></tr>
+                            <tr><td><strong>Teorie segmentovaného trhu</strong> / preferovaného prostředí</td><td>nabídka a poptávka v každém segmentu splatností zvlášť</td><td>zlomy na křivce; poptávka penzijních fondů po dlouhých dluhopisech</td></tr>
                         </tbody>
                     </table>
-                    <div class="warn-box"><strong>⚠️ Pozor:</strong> with a liquidity premium the forward rate is a <em>biased</em> (too high) predictor of future spot rates. A flat curve under liquidity preference means the market expects <em>slightly falling</em> rates. An inverted curve historically preceded recessions.</div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> kvůli prémii za likviditu je forwardová sazba <em>vychýleným</em> (příliš vysokým) odhadem budoucí spotové sazby. Plochá křivka podle teorie preference likvidity tedy znamená, že trh čeká <em>mírný pokles</em> sazeb. Inverzní (klesající) křivka historicky předcházela recesím.</div>
 
-                    <h4>Yield-curve models</h4>
+                    <h4>Modely výnosové křivky</h4>
                     <div class="formula-block">$$y(m) = \beta_0 + \beta_1 \frac{1 - e^{-m/\tau}}{m/\tau} + \beta_2\left(\frac{1 - e^{-m/\tau}}{m/\tau} - e^{-m/\tau}\right)$$</div>
-                    <p><strong>Nelson–Siegel</strong>: $\beta_0$ = <strong>level</strong> (long-term rate, $m\to\infty$), $\beta_1$ = <strong>slope</strong> (short rate = $\beta_0 + \beta_1$), $\beta_2$ = <strong>curvature</strong> (hump), $\tau$ = where the hump sits. <strong>Svensson</strong> adds a second hump term (used by ECB and many central banks). Alternatives: splines (smooth interpolation), and dynamic short-rate models (topic 9). PCA of yield changes gives the same three shapes: level (~90 % of variance), slope, curvature.</p>
+                    <p><strong>Nelson–Siegel</strong>: $\beta_0$ = <strong>úroveň</strong> (level – dlouhodobá sazba, pro $m\to\infty$), $\beta_1$ = <strong>sklon</strong> (slope – krátká sazba = $\beta_0 + \beta_1$), $\beta_2$ = <strong>zakřivení</strong> (curvature – „hrb“), $\tau$ = kde hrb leží. <strong>Svensson</strong> přidává druhý hrb (používá ho ECB a řada centrálních bank). Alternativy: spliny (hladká interpolace) a dynamické modely krátké sazby (téma 9). Analýza hlavních komponent (PCA) změn výnosů dá stejné tři tvary: úroveň (~90 % rozptylu), sklon, zakřivení.</p>
 
-                    <h4>R lab: bond analytics and curve fitting</h4>
-                    <pre class="r-box"><code>bond &lt;- function(cf, t, y) {                 # annual compounding
+                    <h4>R lab: výpočty dluhopisů a proložení křivky</h4>
+                    <pre class="r-box"><code>bond &lt;- function(cf, t, y) {                 # roční úročení
   pv &lt;- cf / (1 + y)^t
   P  &lt;- sum(pv)
-  D  &lt;- sum(t * pv) / P                      # Macaulay
+  D  &lt;- sum(t * pv) / P                      # Macaulayova durace
   c(price = P, macaulay = D, modified = D / (1 + y),
     convexity = sum(t * (t + 1) * pv) / (P * (1 + y)^2))
 }
 b &lt;- bond(cf = c(5, 5, 105), t = 1:3, y = 0.04)
 round(b, 4)                                  # 102.7751  2.8615  2.7514  10.4127
 dy &lt;- 0.01
-b["price"] * (-b["modified"] * dy + 0.5 * b["convexity"] * dy^2)   # -2.774 (exact: -2.775)</code></pre>
-                    <pre class="r-box"><code># bootstrapping zero rates from par yields (annual coupons, par = 100)
+b["price"] * (-b["modified"] * dy + 0.5 * b["convexity"] * dy^2)   # -2.774 (přesně: -2.775)</code></pre>
+                    <pre class="r-box"><code># bootstrapping nulových sazeb z par výnosů (roční kupony, par = 100)
 par_y &lt;- c(0.030, 0.035, 0.038, 0.040)
 DF &lt;- numeric(4)
 for (n in 1:4) {
   c_n  &lt;- 100 * par_y[n]
   DF[n] &lt;- (100 - c_n * sum(DF[seq_len(n - 1)])) / (100 + c_n)
 }
-zero &lt;- DF^(-1 / (1:4)) - 1                  # spot (zero) rates
-fwd  &lt;- DF[-4] / DF[-1] - 1                  # 1-year forward rates f(n, n+1)
+zero &lt;- DF^(-1 / (1:4)) - 1                  # spotové (nulové) sazby
+fwd  &lt;- DF[-4] / DF[-1] - 1                  # roční forwardové sazby f(n, n+1)
 round(cbind(par = par_y, DF, zero, fwd = c(zero[1], fwd)), 5)</code></pre>
-                    <pre class="r-box"><code># Nelson–Siegel fit: y(m) = b0 + b1·L1(m) + b2·(L1(m) - e^{-m/tau})
+                    <pre class="r-box"><code># proložení Nelson–Siegel: y(m) = b0 + b1·L1(m) + b2·(L1(m) - e^{-m/tau})
 ns &lt;- function(m, b0, b1, b2, tau) {
   L1 &lt;- (1 - exp(-m / tau)) / (m / tau)
   b0 + b1 * L1 + b2 * (L1 - exp(-m / tau))
@@ -423,272 +429,277 @@ ns &lt;- function(m, b0, b1, b2, tau) {
 m &lt;- c(0.25, 0.5, 1, 2, 3, 5, 7, 10, 20, 30)
 y &lt;- c(3.60, 3.50, 3.30, 3.10, 3.05, 3.10, 3.25, 3.40, 3.70, 3.75) / 100
 fit &lt;- nls(y ~ ns(m, b0, b1, b2, tau), start = list(b0 = .04, b1 = -.01, b2 = .01, tau = 2))
-round(coef(fit), 4)                          # b0 = long rate, b0 + b1 = short rate
+round(coef(fit), 4)                          # b0 = dlouhá sazba, b0 + b1 = krátká sazba
 curve(ns(x, coef(fit)[1], coef(fit)[2], coef(fit)[3], coef(fit)[4]), 0.1, 30)
 points(m, y)</code></pre>
-                    <div class="insight-box"><strong>Case-study angle:</strong> download a yield curve (US Treasury from FRED: <code>DGS3MO, DGS1, DGS2, DGS5, DGS10, DGS30</code>; euro area from ECB; Czech from ČNB), fit Nelson–Siegel for each date and look at how level/slope/curvature evolved (e.g. inversion 2022–2024); compute duration/DV01 of a bond portfolio and the P&amp;L of a +100 bp shock; PCA of daily yield changes with <code>prcomp()</code>.</div>
+                    <div class="insight-box"><strong>Pro semestrální práci:</strong> stáhnout výnosovou křivku (americké státní dluhopisy z FRED: <code>DGS3MO, DGS1, DGS2, DGS5, DGS10, DGS30</code>; eurozóna z ECB; ČR z ČNB), pro každý den proložit Nelson–Siegel a sledovat, jak se vyvíjela úroveň/sklon/zakřivení (např. inverze 2022–2024); spočítat duraci/DV01 portfolia dluhopisů a zisk/ztrátu při šoku +100 bp; PCA denních změn výnosů přes <code>prcomp()</code>.</div>
 
-                    <div class="summary-box"><strong>Summary:</strong>
+                    <div class="summary-box"><strong>Shrnutí:</strong>
                         <ul>
-                            <li>price = PV of cash flows; YTM = IRR; zero rates discount each cash flow separately</li>
+                            <li>cena = současná hodnota plateb; YTM = vnitřní výnosové procento; nulové sazby diskontují každou platbu zvlášť</li>
                             <li>$\Delta P/P \approx -D_{mod}\Delta y + \frac12 C\Delta y^2$; DV01 = $D_{mod}\cdot P\cdot 10^{-4}$</li>
-                            <li>forward rate from two zero rates; bootstrapping from par yields</li>
-                            <li>expectations × liquidity preference (term premium) × segmentation</li>
-                            <li>Nelson–Siegel: level, slope, curvature</li>
+                            <li>forwardová sazba ze dvou nulových sazeb; bootstrapping z par výnosů</li>
+                            <li>teorie očekávání × preference likvidity (termínová prémie) × segmentace</li>
+                            <li>Nelson–Siegel: úroveň, sklon, zakřivení</li>
                         </ul>
                     </div>
                     <p class="mb-0"><a href="../quiz.html?course=1BP461&topic=4"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
                 </section>
 
                 <section class="topic-section" id="topic-5">
-                    <h3>5. Forwards &amp; Futures Hedging</h3>
-                    <p class="text-muted small">Lecture 20 Oct · Milan Fičura · source: literature (Witzany <em>Financial Derivatives</em>; Hull ch. 2–6)</p>
+                    <h3>5. Forwardy, futures a zajištění</h3>
+                    <p class="text-muted small">Přednáška 20. 10. · Milan Fičura · zdroj: literatura (Witzany <em>Financial Derivatives</em>; Hull kap. 2–6)</p>
 
                     <h4>Forward × futures</h4>
+                    <p>Obojí je dohoda, že koupíš/prodáš něco v budoucnu za cenu dohodnutou dnes. Liší se v tom, kde a jak se obchoduje:</p>
                     <table class="table table-bordered summary-table">
                         <thead><tr><th></th><th>Forward</th><th>Futures</th></tr></thead>
                         <tbody>
-                            <tr><td>Market</td><td>OTC, bilateral</td><td>exchange (CME, Eurex, ICE)</td></tr>
-                            <tr><td>Contract</td><td>tailor-made (amount, date)</td><td>standardised (size, delivery months)</td></tr>
-                            <tr><td>Settlement</td><td>once at maturity</td><td><strong>daily marking to market</strong> (denní přecenění) via margin account</td></tr>
-                            <tr><td>Counterparty risk</td><td>yes (mitigated by CSA collateral)</td><td>practically none — clearing house (CCP) is the counterparty</td></tr>
-                            <tr><td>Delivery</td><td>usually delivered or cash-settled</td><td>mostly closed out before maturity</td></tr>
+                            <tr><td>Trh</td><td>OTC, dvoustranná smlouva</td><td>burza (CME, Eurex, ICE)</td></tr>
+                            <tr><td>Kontrakt</td><td>na míru (částka, datum)</td><td>standardizovaný (velikost, měsíce dodání)</td></tr>
+                            <tr><td>Vypořádání</td><td>jednou, při splatnosti</td><td><strong>denní přecenění</strong> (marking to market) přes maržový účet</td></tr>
+                            <tr><td>Riziko protistrany</td><td>ano (snižuje se kolaterálem podle CSA)</td><td>prakticky žádné – protistranou je clearingové centrum (CCP)</td></tr>
+                            <tr><td>Dodání</td><td>obvykle se dodá nebo vypořádá v penězích</td><td>většinou se uzavře ještě před splatností</td></tr>
                         </tbody>
                     </table>
-                    <div class="def-box"><strong>Margin:</strong> <strong>initial margin</strong> deposited when opening; daily gains/losses are credited/debited; if the balance falls below the <strong>maintenance margin</strong>, a <strong>margin call</strong> requires topping up to the initial margin (variation margin).</div>
-                    <div class="thm-box"><strong>Forward = futures price?</strong> With deterministic interest rates, yes. If the underlying is positively correlated with rates, the futures is worth slightly more (gains are reinvested at higher rates) → futures &gt; forward. For long-dated interest-rate futures this <strong>convexity adjustment</strong> matters.</div>
+                    <div class="def-box"><strong>Marže</strong> (margin): při otevření pozice složíš <strong>počáteční marži</strong> (initial margin). Každý den se ti na účet připíše zisk nebo odečte ztráta. Když zůstatek klesne pod <strong>udržovací marži</strong> (maintenance margin), přijde <strong>margin call</strong> – musíš doplnit zpět na počáteční marži (variační marže).</div>
+                    <div class="thm-box"><strong>Je cena forwardu = cena futures?</strong> Když jsou úrokové sazby známé dopředu, ano. Když podklad roste zároveň se sazbami (kladná korelace), je futures o trochu dražší (zisky z denního přecenění investuješ za vyšší sazby) → futures &gt; forward. U dlouhých úrokových futures je tahle <strong>konvexní úprava</strong> (convexity adjustment) podstatná.</div>
 
-                    <h4>Pricing: cost of carry</h4>
+                    <h4>Cena: model nákladů držby (cost of carry)</h4>
                     <div class="formula-block">$$F_0 = S_0\,e^{(r - q)T} \qquad F_0 = (S_0 - I)\,e^{rT} \qquad F_0 = S_0\,e^{(r + u - y)T}$$</div>
-                    <p>Asset with continuous yield $q$ (index dividends, foreign rate for FX) · known income $I$ (coupon, dividend) · commodities with storage cost $u$ and convenience yield $y$ (topic 6). Value of an existing long forward: $f = (F_0 - K)e^{-rT}$.</p>
-                    <div class="thm-box"><strong>No-arbitrage argument:</strong> if $F_0 &gt; S_0 e^{rT}$: borrow, buy the asset, sell the forward → riskless profit (<strong>cash and carry</strong>). If $F_0 &lt; S_0 e^{rT}$: short the asset, invest, buy the forward (<strong>reverse cash and carry</strong>).</div>
-                    <div class="ex-box"><strong>Example:</strong> index 5 000, $r = 4\%$, dividend yield $q = 1.5\%$, $T = 0.5$ → $F_0 = 5000\,e^{(0.04 - 0.015)\cdot 0.5} = 5062.89$. If the futures trades at 5 100: sell futures, buy the index basket, borrow → profit ≈ 37 points at maturity (before costs).</div>
+                    <p>Aktivum se spojitým výnosem $q$ (dividendy indexu, zahraniční sazba u měn) · se známým příjmem $I$ (kupon, dividenda) · komodity se skladovacími náklady $u$ a výnosem z držby $y$ (téma 6). Hodnota už existujícího dlouhého forwardu: $f = (F_0 - K)e^{-rT}$.</p>
+                    <div class="thm-box"><strong>Argument „bez arbitráže“:</strong> když $F_0 &gt; S_0 e^{rT}$: půjč si, kup aktivum, prodej forward → zisk bez rizika (<strong>cash and carry</strong>). Když $F_0 &lt; S_0 e^{rT}$: prodej aktivum nakrátko, peníze ulož, kup forward (<strong>reverse cash and carry</strong>). Proto se cena forwardu musí držet u $S_0 e^{rT}$.</div>
+                    <div class="ex-box"><strong>Příklad:</strong> index 5 000, $r = 4\%$, dividendový výnos $q = 1{,}5\%$, $T = 0{,}5$ → $F_0 = 5000\,e^{(0{,}04 - 0{,}015)\cdot 0{,}5} = 5062{,}89$. Když se futures obchoduje za 5 100: prodej futures, kup koš akcií indexu, půjč si → při splatnosti zisk ≈ 37 bodů (před náklady).</div>
 
-                    <h4>Hedging with futures</h4>
-                    <div class="def-box"><strong>Basis</strong> (báze) $= S_t - F_t$. At maturity the basis converges to 0. <strong>Basis risk</strong>: when the hedge is closed before maturity, or the futures is on a different asset (cross hedge), the basis at closing is uncertain → hedge is imperfect. Effective price for a short hedger = $F_0 + b_2$.</div>
-                    <div class="formula-block">$$h^* = \rho\,\frac{\sigma_S}{\sigma_F} \qquad N^* = h^*\frac{Q_A}{Q_F} \qquad \text{hedge effectiveness} = \rho^2$$</div>
-                    <p>The <strong>minimum-variance hedge ratio</strong> = OLS slope from regressing spot changes on futures changes. $Q_A$ = size of exposure, $Q_F$ = size of one contract.</p>
-                    <div class="ex-box"><strong>Example (hedge ratio):</strong> $\sigma_S = 3\%$, $\sigma_F = 4\%$, $\rho = 0.9$ → $h^* = 0.9 \cdot 0.03/0.04 = 0.675$; hedge removes $\rho^2 = 81\%$ of variance.</div>
+                    <h4>Zajištění pomocí futures</h4>
+                    <div class="def-box"><strong>Báze</strong> (basis) $= S_t - F_t$. Při splatnosti se báze stáhne k 0. <strong>Bazické riziko</strong> (basis risk): když zajištění uzavřeš před splatností, nebo když futures je na jiné aktivum, než které zajišťuješ (cross hedge), nevíš, jaká bude báze při uzavření → zajištění není dokonalé. Efektivní cena pro toho, kdo zajišťuje prodejem (short hedger) = $F_0 + b_2$ ($b_2$ = báze při uzavření).</div>
+                    <div class="formula-block">$$h^* = \rho\,\frac{\sigma_S}{\sigma_F} \qquad N^* = h^*\frac{Q_A}{Q_F} \qquad \text{účinnost zajištění} = \rho^2$$</div>
+                    <p><strong>Poměr zajištění s minimálním rozptylem</strong> (minimum-variance hedge ratio) = sklon regrese změn spotu na změny futures (OLS). $Q_A$ = velikost expozice, $Q_F$ = velikost jednoho kontraktu, $N^*$ = počet kontraktů.</p>
+                    <div class="ex-box"><strong>Příklad (poměr zajištění):</strong> $\sigma_S = 3\%$, $\sigma_F = 4\%$, $\rho = 0{,}9$ → $h^* = 0{,}9 \cdot 0{,}03/0{,}04 = 0{,}675$; zajištění odstraní $\rho^2 = 81\%$ rozptylu.</div>
 
-                    <h4>Hedging an equity portfolio (beta hedge)</h4>
-                    <div class="formula-block">$$N^* = \beta\,\frac{V_A}{V_F} \qquad \text{change beta from } \beta \text{ to } \beta^*: \; N = (\beta - \beta^*)\,\frac{V_A}{V_F}$$</div>
-                    <div class="ex-box"><strong>Example:</strong> portfolio 10 mil. USD, $\beta = 1.2$, index futures at 5 000, multiplier 50 USD → one contract $V_F = 250\,000$.
-                        <br>Full hedge: $N = 1.2 \cdot 10\,000\,000/250\,000 = 48$ contracts <strong>short</strong>. To cut beta to 0.6: short 24. To raise it to 1.5: <strong>buy</strong> 12.</div>
-                    <div class="insight-box"><strong>Intuition:</strong> the beta hedge removes market risk only; what's left is the portfolio's alpha (and idiosyncratic noise) plus the risk-free rate. That's how a stock picker "ports" alpha without taking a market view.</div>
+                    <h4>Zajištění akciového portfolia (beta hedge)</h4>
+                    <div class="formula-block">$$N^* = \beta\,\frac{V_A}{V_F} \qquad \text{změna bety z } \beta \text{ na } \beta^*: \; N = (\beta - \beta^*)\,\frac{V_A}{V_F}$$</div>
+                    <div class="ex-box"><strong>Příklad:</strong> portfolio 10 mil. USD, $\beta = 1{,}2$, indexové futures za 5 000, multiplikátor 50 USD → jeden kontrakt $V_F = 250\,000$.
+                        <br>Plné zajištění: $N = 1{,}2 \cdot 10\,000\,000/250\,000 = 48$ kontraktů <strong>prodat</strong>. Snížit betu na 0,6: prodat 24. Zvýšit na 1,5: <strong>koupit</strong> 12.</div>
+                    <div class="insight-box"><strong>Intuice:</strong> beta hedge odstraní jen tržní riziko; zůstane alfa portfolia (a specifický šum) plus bezriziková sazba. Tak může dobrý „vybírač akcií“ prodávat svou alfu, aniž by sázel na směr celého trhu (portable alpha).</div>
 
-                    <h4>Hedging a bond portfolio (duration hedge)</h4>
+                    <h4>Zajištění dluhopisového portfolia (durační hedge)</h4>
                     <div class="formula-block">$$N^* = \frac{P \cdot D_P}{F_C \cdot D_F}$$</div>
-                    <p>$P$, $D_P$ = value and duration of the portfolio; $F_C$ = contract price (value), $D_F$ = duration of the underlying of the futures (for bond futures, the <strong>cheapest-to-deliver</strong> (CTD) bond). Same logic in DV01 terms: $N = DV01_P / DV01_F$.</p>
-                    <div class="ex-box"><strong>Example:</strong> bond portfolio 20 mil., duration 6.5; bond futures contract value 110 000, CTD duration 8 → $N = 20\,000\,000 \cdot 6.5/(110\,000 \cdot 8) = 147.7$ → short ≈ 148 contracts.</div>
-                    <div class="warn-box"><strong>⚠️ Pozor:</strong> to protect against <em>rising</em> rates (falling prices) you <strong>sell</strong> bond futures. Treasury bond futures: the short chooses which bond to deliver (CTD) using <strong>conversion factors</strong>; the duration of the futures follows the CTD. Duration hedge again assumes parallel shifts.</div>
-                    <div class="warn-box"><strong>⚠️ Pozor:</strong> <strong>tailing the hedge</strong>: with daily settlement, the optimal number of futures uses $V_F$ = futures price × size (not spot). And a hedge that eliminates losses also eliminates gains — hedging reduces variance, not expected return.</div>
+                    <p>$P$, $D_P$ = hodnota a durace portfolia; $F_C$ = hodnota kontraktu, $D_F$ = durace podkladu futures (u dluhopisových futures durace <strong>nejlevnějšího dodatelného dluhopisu</strong> – cheapest-to-deliver, CTD). Totéž přes DV01: $N = DV01_P / DV01_F$.</p>
+                    <div class="ex-box"><strong>Příklad:</strong> portfolio dluhopisů 20 mil., durace 6,5; hodnota kontraktu 110 000, durace CTD 8 → $N = 20\,000\,000 \cdot 6{,}5/(110\,000 \cdot 8) = 147{,}7$ → prodat ≈ 148 kontraktů.</div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> proti <em>růstu</em> sazeb (poklesu cen dluhopisů) se chráníš <strong>prodejem</strong> dluhopisových futures. U futures na státní dluhopisy si prodávající vybírá, který dluhopis dodá (CTD), podle <strong>konverzních faktorů</strong>; durace futures se řídí CTD. Durační hedge zase předpokládá paralelní posun křivky.</div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> <strong>tailing the hedge</strong> (úprava kvůli dennímu vypořádání): v optimálním počtu kontraktů se jako $V_F$ bere cena futures × velikost kontraktu (ne spot). A zajištění, které odstraní ztráty, odstraní i zisky – zajištění snižuje rozptyl, ne očekávaný výnos.</div>
 
-                    <h4>R lab: hedge ratios from data</h4>
+                    <h4>R lab: poměr zajištění z dat</h4>
                     <pre class="r-box"><code>set.seed(3)
-dF &lt;- rnorm(250, 0, 0.012)                   # daily futures returns
-dS &lt;- 0.9 * dF + rnorm(250, 0, 0.005)        # spot portfolio returns
+dF &lt;- rnorm(250, 0, 0.012)                   # denní výnosy futures
+dS &lt;- 0.9 * dF + rnorm(250, 0, 0.005)        # výnosy spotového portfolia
 
-h &lt;- coef(lm(dS ~ dF))[2]                    # minimum-variance hedge ratio = cov/var(F)
+h &lt;- coef(lm(dS ~ dF))[2]                    # poměr zajištění s min. rozptylem = cov/var(F)
 c(h_ols = unname(h), h_formula = cor(dS, dF) * sd(dS) / sd(dF))
-hedge_eff &lt;- summary(lm(dS ~ dF))$r.squared  # hedge effectiveness = R²
+hedge_eff &lt;- summary(lm(dS ~ dF))$r.squared  # účinnost zajištění = R²
 
-# number of contracts
+# počet kontraktů
 V_A &lt;- 10e6; beta &lt;- 1.2; F0 &lt;- 5000; mult &lt;- 50
-N_beta &lt;- beta * V_A / (F0 * mult)           # 48 short index futures</code></pre>
-                    <div class="insight-box"><strong>Case-study angle:</strong> estimate the minimum-variance hedge ratio of a sector ETF (or a Czech stock) with S&amp;P 500 / Euro Stoxx futures, compare in-sample and out-of-sample hedge effectiveness, rolling-window hedge ratios (<code>rollapply()</code> from <code>zoo</code>), and daily × weekly data (daily ratios are usually too low due to asynchronous trading).</div>
+N_beta &lt;- beta * V_A / (F0 * mult)           # prodat 48 indexových futures</code></pre>
+                    <div class="insight-box"><strong>Pro semestrální práci:</strong> odhadnout poměr zajištění sektorového ETF (nebo české akcie) futures na S&amp;P 500 / Euro Stoxx, porovnat účinnost zajištění in-sample a out-of-sample, poměr zajištění v klouzavém okně (<code>rollapply()</code> z <code>zoo</code>), denní × týdenní data (denní poměry vycházejí obvykle moc nízko, protože trhy neobchodují ve stejný čas).</div>
 
-                    <div class="summary-box"><strong>Summary:</strong>
+                    <div class="summary-box"><strong>Shrnutí:</strong>
                         <ul>
-                            <li>forward = OTC, settles at maturity; futures = exchange, daily MtM, margin, CCP</li>
-                            <li>$F_0 = S_0 e^{(r-q)T}$; deviation → cash-and-carry arbitrage</li>
-                            <li>basis = S − F; basis risk makes hedges imperfect</li>
-                            <li>$h^* = \rho\sigma_S/\sigma_F$ = OLS slope; effectiveness = $\rho^2$</li>
-                            <li>equity: $N = (\beta - \beta^*)V_A/V_F$; bonds: $N = P D_P/(F_C D_F)$</li>
+                            <li>forward = OTC, vypořádá se při splatnosti; futures = burza, denní přecenění, marže, CCP</li>
+                            <li>$F_0 = S_0 e^{(r-q)T}$; když cena uteče → arbitráž cash and carry</li>
+                            <li>báze = S − F; bazické riziko dělá zajištění nedokonalým</li>
+                            <li>$h^* = \rho\sigma_S/\sigma_F$ = sklon OLS; účinnost = $\rho^2$</li>
+                            <li>akcie: $N = (\beta - \beta^*)V_A/V_F$; dluhopisy: $N = P D_P/(F_C D_F)$</li>
                         </ul>
                     </div>
                     <p class="mb-0"><a href="../quiz.html?course=1BP461&topic=5"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
                 </section>
 
                 <section class="topic-section" id="topic-6">
-                    <h3>6. Contango &amp; Backwardation</h3>
-                    <p class="text-muted small">Lecture 27 Oct · Milan Fičura · source: literature (Hull ch. 5; Witzany <em>Financial Derivatives</em>; Keynes, Hicks)</p>
+                    <h3>6. Contango a backwardation</h3>
+                    <p class="text-muted small">Přednáška 27. 10. · Milan Fičura · zdroj: literatura (Hull kap. 5; Witzany <em>Financial Derivatives</em>; Keynes, Hicks)</p>
 
-                    <h4>Two meanings you must keep apart</h4>
+                    <h4>Dva různé významy – nepleť si je</h4>
                     <table class="table table-bordered summary-table">
                         <thead><tr><th></th><th>Contango</th><th>Backwardation</th></tr></thead>
                         <tbody>
-                            <tr><td><strong>Shape of the futures curve</strong> (vs. spot)</td><td>$F &gt; S$, curve rising with maturity — <strong>normal</strong> curve</td><td>$F &lt; S$, curve falling with maturity — <strong>inverted</strong> curve</td></tr>
-                            <tr><td><strong>Futures vs. expected spot</strong> (Keynes)</td><td>$F_0 &gt; E(S_T)$ — futures price expected to fall towards $S_T$</td><td>$F_0 &lt; E(S_T)$ — futures expected to rise → long futures earns a premium (<strong>normal backwardation</strong>)</td></tr>
-                            <tr><td>Typical market</td><td>gold, equity index (when $r &gt; q$), grains after harvest, oil in a glut (2020)</td><td>oil and gas in tight markets, commodities in shortage</td></tr>
+                            <tr><td><strong>Tvar futures křivky</strong> (oproti spotu)</td><td>$F &gt; S$, křivka se splatností roste – <strong>normální</strong> křivka</td><td>$F &lt; S$, křivka se splatností klesá – <strong>inverzní</strong> křivka</td></tr>
+                            <tr><td><strong>Futures oproti očekávanému spotu</strong> (Keynes)</td><td>$F_0 &gt; E(S_T)$ – čekáme, že cena futures klesne k $S_T$</td><td>$F_0 &lt; E(S_T)$ – čekáme, že cena futures poroste → dlouhá pozice ve futures vydělává prémii (<strong>normální backwardation</strong>)</td></tr>
+                            <tr><td>Typický trh</td><td>zlato, akciový index (když $r &gt; q$), obilí po sklizni, ropa při přebytku (2020)</td><td>ropa a plyn při nedostatku, komodity, kterých je málo</td></tr>
                         </tbody>
                     </table>
-                    <div class="warn-box"><strong>⚠️ Pozor:</strong> "normal backwardation" (Keynes) is about $F$ vs. <em>expected</em> spot, not about the curve shape. Confusingly, the "normal" curve shape is contango. Read the question carefully: is it comparing futures with the current spot, or with the expected future spot?</div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> „normální backwardation“ (Keynes) je o porovnání $F$ s <em>očekávaným</em> spotem, ne o tvaru křivky. A matoucí je, že „normální“ tvar křivky je contango. Čti otázku pozorně: srovnává futures s dnešním spotem, nebo s očekávaným budoucím spotem?</div>
 
-                    <h4>Equilibrium futures price: cost of carry for commodities</h4>
+                    <h4>Rovnovážná cena futures: náklady držby u komodit</h4>
                     <div class="formula-block">$$F_0 = S_0\,e^{(r + u - y)T}$$</div>
-                    <div class="def-box"><strong>Storage cost</strong> $u$ (skladovací náklady) raises the futures price. <strong>Convenience yield</strong> $y$ (výnos z držby): the benefit of physically holding the commodity (keep production running, profit from a temporary shortage) — reduces it. $r + u - y$ = net <strong>cost of carry</strong>. Contango ⇔ $r + u &gt; y$; backwardation ⇔ $y &gt; r + u$.</div>
-                    <div class="ex-box"><strong>Example (implied convenience yield):</strong> oil spot 80, 1-year futures 78, $r = 4\%$, storage $u = 1\%$ (continuous).
-                        <br>$y = r + u - \dfrac{\ln(F_0/S_0)}{T} = 0.04 + 0.01 - \ln(78/80) = 0.05 + 0.0253 = 7.53\%$.
-                        <br>Market is in backwardation because holders value physical oil at 7.5 % p.a. — a sign of tight inventories.</div>
-                    <div class="insight-box"><strong>Theory of storage (Kaldor, Working):</strong> convenience yield is high when inventories are low. Low inventories → spot price spikes above futures (backwardation); abundant inventories → full storage-cost contango, capped by $F_0 \le S_0 e^{(r+u)T}$ (above that, cash-and-carry arbitrage by storing). There is no such cap from below: nobody can "borrow" a commodity they don't have, so backwardation can be steep.</div>
-                    <div class="warn-box"><strong>⚠️ Pozor:</strong> for <strong>consumption</strong> assets (oil, copper, wheat) only $F_0 \le S_0e^{(r+u)T}$ holds via arbitrage. For <strong>investment</strong> assets (gold, index) the equality holds, because reverse cash-and-carry works (holders are willing to lend/sell the asset).</div>
+                    <div class="def-box"><strong>Skladovací náklady</strong> $u$ (storage cost) cenu futures zvyšují. <strong>Výnos z držby</strong> $y$ (convenience yield) ji snižuje: je to užitek z toho, že komoditu fyzicky máš (výroba nemusí stát, můžeš vydělat na dočasném nedostatku). $r + u - y$ = čisté <strong>náklady držby</strong> (cost of carry). Contango ⇔ $r + u &gt; y$; backwardation ⇔ $y &gt; r + u$.</div>
+                    <div class="ex-box"><strong>Příklad (implicitní výnos z držby):</strong> ropa spot 80, roční futures 78, $r = 4\%$, skladování $u = 1\%$ (spojitě).
+                        <br>$y = r + u - \dfrac{\ln(F_0/S_0)}{T} = 0{,}04 + 0{,}01 - \ln(78/80) = 0{,}05 + 0{,}0253 = 7{,}53\%$.
+                        <br>Trh je v backwardation, protože držitelé si fyzické ropy cení na 7,5 % ročně – znak, že zásoby jsou nízké.</div>
+                    <div class="insight-box"><strong>Teorie skladování (Kaldor, Working):</strong> výnos z držby je vysoký, když jsou zásoby nízké. Nízké zásoby → spot vyskočí nad futures (backwardation); velké zásoby → contango až do výše plných nákladů skladování, víc ne: $F_0 \le S_0 e^{(r+u)T}$ (nad tím by se vyplatilo koupit, uskladnit a prodat futures). Zdola takový strop není: komoditu, kterou nemáš, si nikdo „nepůjčí“, takže backwardation může být hodně strmá.</div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> u <strong>spotřebních</strong> komodit (ropa, měď, pšenice) platí přes arbitráž jen nerovnost $F_0 \le S_0e^{(r+u)T}$. U <strong>investičních</strong> aktiv (zlato, index) platí rovnost, protože funguje i reverse cash and carry (držitelé jsou ochotní aktivum půjčit/prodat).</div>
 
-                    <h4>Speculator × hedger equilibrium: why futures may be biased</h4>
+                    <h4>Spekulanti × hedgeři: proč futures nemusí být nestranný odhad</h4>
                     <ul>
-                        <li><strong>Keynes–Hicks hedging pressure</strong>: producers (farmers, oil firms) hedge by <em>selling</em> futures. Speculators must take the long side and want a risk premium → $F_0 &lt; E(S_T)$ = <strong>normal backwardation</strong>; the futures price drifts up over its life.</li>
-                        <li>If hedgers are net <em>long</em> (consumers, airlines buying jet fuel) → $F_0 &gt; E(S_T)$ = contango in this sense.</li>
-                        <li><strong>CAPM view</strong>: $F_0 = E(S_T)e^{(r - k)T}$, where $k$ = required return on the underlying. Positive systematic risk ($k &gt; r$) → $F_0 &lt; E(S_T)$; zero beta → $F_0 = E(S_T)$ (unbiased predictor).</li>
-                        <li><strong>Arbitrageur</strong> ties $F$ to $S$ (cost of carry); <strong>speculator</strong> ties $F$ to $E(S_T)$. Both relations together link the curve shape to expectations and risk premia.</li>
+                        <li><strong>Keynes–Hicks – tlak hedgerů</strong>: výrobci (farmáři, těžaři ropy) se zajišťují <em>prodejem</em> futures. Dlouhou stranu musí vzít spekulanti a za riziko chtějí prémii → $F_0 &lt; E(S_T)$ = <strong>normální backwardation</strong>; cena futures během života kontraktu v průměru roste.</li>
+                        <li>Když jsou hedgeři v součtu na <em>dlouhé</em> straně (spotřebitelé, aerolinky kupující palivo) → $F_0 &gt; E(S_T)$ = contango v tomto smyslu.</li>
+                        <li><strong>Pohled CAPM</strong>: $F_0 = E(S_T)e^{(r - k)T}$, kde $k$ = požadovaný výnos podkladu. Kladné systematické riziko ($k &gt; r$) → $F_0 &lt; E(S_T)$; nulová beta → $F_0 = E(S_T)$ (nestranný odhad).</li>
+                        <li><strong>Arbitražér</strong> váže $F$ na dnešní $S$ (náklady držby); <strong>spekulant</strong> váže $F$ na očekávané $E(S_T)$. Oba vztahy dohromady propojují tvar křivky s očekáváními a rizikovými prémiemi.</li>
                     </ul>
 
                     <h4>Roll yield</h4>
-                    <div class="def-box"><strong>Roll yield:</strong> return of a long futures position from rolling contracts: sell the expiring one, buy the next. In <strong>backwardation</strong> you buy the next contract cheaper → positive roll yield. In <strong>contango</strong> you keep buying more expensive contracts → negative roll yield, which bleeds commodity ETFs even if spot is flat.</div>
-                    <div class="formula-block">$$R_{futures} \approx \underbrace{\Delta S / S}_{\text{spot return}} + \underbrace{(S - F)/F}_{\text{roll yield}} + r_f \;\;\text{(collateral)}$$</div>
-                    <div class="ex-box"><strong>Example (contango, April 2020):</strong> WTI front month fell below zero (−37 USD on 20 Apr 2020) because storage at Cushing was full — long holders forced to take delivery had nowhere to put the oil. The curve was in super-contango and the oil ETF USO lost heavily on rolls.</div>
+                    <div class="def-box"><strong>Roll yield</strong> (výnos z „přetáčení“): výnos dlouhé pozice ve futures z toho, že kontrakty průběžně obnovuješ – prodáš ten, co končí, a koupíš další. V <strong>backwardation</strong> kupuješ další kontrakt levněji → kladný roll yield. V <strong>contangu</strong> kupuješ pořád dražší kontrakty → záporný roll yield, který ukrajuje z komoditních ETF, i když se spot nehne.</div>
+                    <div class="formula-block">$$R_{futures} \approx \underbrace{\Delta S / S}_{\text{výnos spotu}} + \underbrace{(S - F)/F}_{\text{roll yield}} + \underbrace{r_f}_{\text{úrok z kolaterálu}}$$</div>
+                    <div class="ex-box"><strong>Příklad (contango, duben 2020):</strong> nejbližší kontrakt na ropu WTI spadl pod nulu (−37 USD 20. 4. 2020), protože sklady v Cushingu byly plné – kdo držel dlouhou pozici a musel ropu převzít, neměl ji kam dát. Křivka byla v extrémním contangu a ropný ETF USO na přetáčení kontraktů hodně prodělal.</div>
 
-                    <h4>R lab: futures curve and implied convenience yield</h4>
-                    <pre class="r-box"><code>S &lt;- 80; r &lt;- 0.04; u &lt;- 0.01                # spot, rate, storage cost (cont.)
+                    <h4>R lab: futures křivka a implicitní výnos z držby</h4>
+                    <pre class="r-box"><code>S &lt;- 80; r &lt;- 0.04; u &lt;- 0.01                # spot, sazba, skladovací náklady (spojitě)
 T_ &lt;- c(0.25, 0.5, 1, 1.5, 2)
-F_ &lt;- c(79.6, 79.1, 78.0, 77.2, 76.5)        # observed futures curve (backwardation)
+F_ &lt;- c(79.6, 79.1, 78.0, 77.2, 76.5)        # pozorovaná futures křivka (backwardation)
 
-y_conv &lt;- r + u - log(F_ / S) / T_           # implied convenience yield
+y_conv &lt;- r + u - log(F_ / S) / T_           # implicitní výnos z držby
 round(cbind(T_, F_, y_conv), 4)
-plot(T_, F_, type = "b", ylim = c(75, 85)); abline(h = S, lty = 2)   # below spot → backwardation
-# data: Yahoo generic front contract "CL=F"; full curve from CME / Refinitiv / Quandl</code></pre>
-                    <div class="insight-box"><strong>Case-study angle:</strong> compute the implied convenience yield / roll yield over time for oil, natural gas or gold and relate it to inventories (EIA data); compare the return of a futures roll strategy with the spot return; test whether the futures price is an unbiased predictor of the future spot: regress $S_T - F_0$ on a constant (mean ≠ 0 ⇒ risk premium) or $S_T$ on $F_0$ (slope 1, intercept 0).</div>
+plot(T_, F_, type = "b", ylim = c(75, 85)); abline(h = S, lty = 2)   # pod spotem → backwardation
+# data: Yahoo, nejbližší kontrakt "CL=F"; celá křivka z CME / Refinitiv / Quandl</code></pre>
+                    <div class="insight-box"><strong>Pro semestrální práci:</strong> spočítat v čase implicitní výnos z držby / roll yield pro ropu, zemní plyn nebo zlato a porovnat se zásobami (data EIA); porovnat výnos strategie přetáčení futures s výnosem spotu; otestovat, jestli je cena futures nestranným odhadem budoucího spotu: regrese $S_T - F_0$ na konstantu (průměr ≠ 0 ⇒ riziková prémie) nebo $S_T$ na $F_0$ (sklon 1, konstanta 0).</div>
 
-                    <div class="summary-box"><strong>Summary:</strong>
+                    <div class="summary-box"><strong>Shrnutí:</strong>
                         <ul>
-                            <li>curve shape: contango $F &gt; S$ (normal), backwardation $F &lt; S$ (inverted)</li>
-                            <li>Keynes: normal backwardation = $F_0 &lt; E(S_T)$, speculators paid for bearing hedgers' risk</li>
-                            <li>$F_0 = S_0 e^{(r+u-y)T}$; convenience yield high when inventories are low</li>
-                            <li>consumption assets: only upper arbitrage bound</li>
-                            <li>roll yield positive in backwardation, negative in contango</li>
+                            <li>tvar křivky: contango $F &gt; S$ (normální), backwardation $F &lt; S$ (inverzní)</li>
+                            <li>Keynes: normální backwardation = $F_0 &lt; E(S_T)$, spekulanti dostávají zaplaceno za riziko hedgerů</li>
+                            <li>$F_0 = S_0 e^{(r+u-y)T}$; výnos z držby je vysoký, když jsou zásoby nízké</li>
+                            <li>spotřební komodity: arbitráž hlídá jen horní hranici</li>
+                            <li>roll yield je kladný v backwardation, záporný v contangu</li>
                         </ul>
                     </div>
                     <p class="mb-0"><a href="../quiz.html?course=1BP461&topic=6"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
                 </section>
 
                 <section class="topic-section" id="topic-7">
-                    <h3>7. Swaps &amp; CDS</h3>
-                    <p class="text-muted small">Lecture 10 Nov · Milan Fičura · source: literature (Witzany <em>Financial Derivatives</em>; Hull ch. 7, 24–25)</p>
+                    <h3>7. Swapy a CDS</h3>
+                    <p class="text-muted small">Přednáška 10. 11. · Milan Fičura · zdroj: literatura (Witzany <em>Financial Derivatives</em>; Hull kap. 7, 24–25)</p>
 
-                    <h4>Interest rate swap (IRS)</h4>
-                    <div class="def-box"><strong>Plain vanilla IRS</strong> (úrokový swap): exchange of fixed-rate payments for floating-rate payments (e.g. 6M EURIBOR, SOFR, €STR) on a notional principal that is <em>not</em> exchanged. <strong>Payer</strong> swap = pay fixed, receive floating; <strong>receiver</strong> swap = receive fixed, pay floating.</div>
-                    <p>Uses: a firm with a floating-rate loan pays fixed → converts it to fixed rate; a bank transforms asset/liability duration; comparative advantage argument (each party borrows where it's relatively cheaper, then swaps).</p>
-                    <div class="formula-block">$$V_{receive\ fixed} = B_{fix} - B_{fl} \qquad B_{fix} = \sum_i c\,N\,DF(t_i) + N\,DF(t_n) \qquad B_{fl} = N \text{ (right after reset)}$$</div>
-                    <div class="formula-block">$$\text{par swap rate: } \; s_n = \frac{1 - DF(t_n)}{\sum_{i=1}^n \tau_i\, DF(t_i)}$$</div>
-                    <p>Two valuation approaches: <strong>bond approach</strong> (swap = long fixed bond − floating bond) and <strong>FRA approach</strong> (swap = portfolio of FRAs; floating payments replaced by forward rates).</p>
-                    <div class="ex-box"><strong>Example:</strong> notional 100, receive 3 % annually, pay floating, 3 years left, just after a reset. Continuous zero rates: 2.5 %, 2.8 %, 3.0 %.
-                        <br>$DF = e^{-0.025} = 0.9753$, $e^{-0.056} = 0.9455$, $e^{-0.09} = 0.9139$; $\sum DF = 2.8348$.
-                        <br>$B_{fix} = 3 \cdot 2.8348 + 100 \cdot 0.9139 = 99.897$; $B_{fl} = 100$ → $V = -0.103$ (per 100).
-                        <br>Par swap rate $= (1 - 0.9139)/2.8348 = 3.036\%$ &gt; 3 % → receiving only 3 % is slightly below market → negative value. ✔</div>
-                    <div class="insight-box"><strong>Intuition:</strong> a receiver swap behaves like a long fixed-rate bond financed at floating → it has positive duration (gains when rates fall). A payer swap has negative duration — a cheap way for a bank to shorten its asset duration without selling loans.</div>
+                    <h4>Úrokový swap (IRS)</h4>
+                    <div class="def-box"><strong>Plain vanilla IRS</strong> (úrokový swap): dvě strany si vyměňují platby s pevnou sazbou za platby s pohyblivou sazbou (např. 6M EURIBOR, SOFR, €STR) z nominální částky (notional), která se sama <em>nevyměňuje</em> – slouží jen k výpočtu úroků. <strong>Payer</strong> swap = platím pevnou, dostávám pohyblivou; <strong>receiver</strong> swap = dostávám pevnou, platím pohyblivou.</div>
+                    <p>K čemu: firma s úvěrem s pohyblivou sazbou si přes swap „zafixuje“ sazbu (platí pevnou); banka upravuje duraci aktiv a pasiv; argument komparativní výhody (každý si půjčí tam, kde je relativně levnější, a pak si platby vymění).</p>
+                    <div class="formula-block">$$V_{dostávám\ pevnou} = B_{fix} - B_{fl} \qquad B_{fix} = \sum_i c\,N\,DF(t_i) + N\,DF(t_n) \qquad B_{fl} = N \text{ (hned po refixaci)}$$</div>
+                    <div class="formula-block">$$\text{par swapová sazba: } \; s_n = \frac{1 - DF(t_n)}{\sum_{i=1}^n \tau_i\, DF(t_i)}$$</div>
+                    <p>Dva způsoby ocenění: <strong>přes dluhopisy</strong> (swap = dlouhá pozice v dluhopisu s pevným kuponem − dluhopis s pohyblivým kuponem) a <strong>přes FRA</strong> (swap = balík FRA; pohyblivé platby se nahradí forwardovými sazbami). Par swapová sazba je taková pevná sazba, při které má swap dnes hodnotu 0.</p>
+                    <div class="ex-box"><strong>Příklad:</strong> nominál 100, dostávám 3 % ročně, platím pohyblivou, zbývají 3 roky, hned po refixaci. Spojité nulové sazby: 2,5 %, 2,8 %, 3,0 %.
+                        <br>$DF = e^{-0{,}025} = 0{,}9753$, $e^{-0{,}056} = 0{,}9455$, $e^{-0{,}09} = 0{,}9139$; $\sum DF = 2{,}8348$.
+                        <br>$B_{fix} = 3 \cdot 2{,}8348 + 100 \cdot 0{,}9139 = 99{,}897$; $B_{fl} = 100$ → $V = -0{,}103$ (na 100).
+                        <br>Par swapová sazba $= (1 - 0{,}9139)/2{,}8348 = 3{,}036\%$ &gt; 3 % → dostávat jen 3 % je o chlup pod trhem → záporná hodnota. ✔</div>
+                    <div class="insight-box"><strong>Intuice:</strong> receiver swap se chová jako koupený dluhopis s pevným kuponem, financovaný pohyblivou sazbou → má kladnou duraci (vydělá, když sazby klesnou). Payer swap má zápornou duraci – levný způsob, jak může banka zkrátit duraci aktiv, aniž by prodávala úvěry.</div>
 
-                    <h4>Currency and equity swaps</h4>
-                    <div class="def-box"><strong>Currency swap</strong> (měnový swap): exchange of principal <em>and</em> interest in two currencies — principals exchanged at start and re-exchanged at maturity at the <em>initial</em> rate. Valuation: $V = B_D - S_0 B_F$ (domestic bond − foreign bond converted at spot), or as a series of FX forwards. <strong>Cross-currency basis</strong>: in practice a spread is added to one floating leg (deviation from covered interest parity).</div>
-                    <div class="warn-box"><strong>⚠️ Pozor:</strong> FX swap ≠ currency swap. <strong>FX swap</strong> = spot + opposite forward (short-term, money market, no coupons). <strong>Currency swap</strong> (cross-currency swap) = long-term, periodic interest in both currencies. In an IRS no principal is exchanged; in a currency swap it is.</div>
-                    <div class="def-box"><strong>Equity swap</strong> (total return swap): one leg pays the total return of a stock or index (price change + dividends), the other pays floating + spread. Gives exposure without owning the shares (no voting rights, avoids transaction costs; note the Archegos case 2021 — hidden leveraged positions via TRS).</div>
+                    <h4>Měnové a akciové swapy</h4>
+                    <div class="def-box"><strong>Měnový swap</strong> (currency swap, cross-currency swap): výměna jistiny <em>i</em> úroků ve dvou měnách – jistiny se vymění na začátku a na konci zpět za <em>původní</em> kurz. Ocenění: $V = B_D - S_0 B_F$ (domácí dluhopis − zahraniční dluhopis přepočtený spotovým kurzem), nebo jako řada měnových forwardů. <strong>Cross-currency basis</strong>: v praxi se k jedné pohyblivé noze přičítá spread (odchylka od kryté úrokové parity).</div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> FX swap ≠ měnový swap. <strong>FX swap</strong> = spot + opačný forward (krátkodobý, peněžní trh, bez kuponů). <strong>Měnový swap</strong> (cross-currency swap) = dlouhodobý, pravidelné úroky v obou měnách. U IRS se jistina nevyměňuje, u měnového swapu ano.</div>
+                    <div class="def-box"><strong>Akciový swap</strong> (equity swap, total return swap): jedna noha platí celkový výnos akcie nebo indexu (změna ceny + dividendy), druhá pohyblivou sazbu + spread. Dává expozici vůči akcii, aniž bys ji vlastnil (bez hlasovacích práv, bez transakčních nákladů; viz případ Archegos 2021 – skryté pákové pozice přes TRS).</div>
 
                     <h4>Credit default swap (CDS)</h4>
-                    <div class="def-box"><strong>CDS:</strong> protection buyer pays a periodic premium (<strong>CDS spread</strong>, bp p.a. of notional) to the protection seller; if the reference entity defaults (<strong>credit event</strong>), the seller pays $N(1 - R)$, where $R$ = <strong>recovery rate</strong>. Economically insurance against default, but you don't need to own the bond (naked CDS).</div>
-                    <div class="formula-block">$$s \approx \lambda\,(1 - R) \qquad \lambda \approx \frac{s}{1 - R} \qquad Q(t) = e^{-\lambda t} \;\text{(survival)} \qquad PD(0,t) = 1 - e^{-\lambda t}$$</div>
-                    <div class="ex-box"><strong>Example:</strong> 5-year CDS spread 150 bp, recovery 40 %.
-                        <br>Hazard rate $\lambda = 0.015/0.6 = 2.5\%$ p.a. → 5-year survival $e^{-0.125} = 88.25\%$ → cumulative PD = 11.75 %.
-                        <br>Conversely: $\lambda = 2\%$, $R = 40\%$ → fair spread ≈ $2\% \cdot 0.6 = 120$ bp.</div>
-                    <div class="thm-box"><strong>CDS–bond basis:</strong> buying a risky bond + buying CDS protection ≈ risk-free bond → CDS spread ≈ bond yield spread over the risk-free rate (asset swap spread). Basis = CDS spread − bond spread; non-zero because of liquidity, funding and delivery option.</div>
-                    <div class="warn-box"><strong>⚠️ Pozor:</strong> hazard rates implied from CDS or bond spreads are <strong>risk-neutral</strong> — much higher than real-world (historical) default probabilities, because spreads also contain risk and liquidity premia. For pricing use risk-neutral, for scenario analysis / capital use real-world. Also: the seller of protection is <em>long</em> credit risk (like holding the bond).</div>
+                    <div class="def-box"><strong>CDS:</strong> kupující ochrany platí prodávajícímu pravidelnou prémii (<strong>CDS spread</strong>, v bazických bodech ročně z nominálu). Když referenční subjekt zkrachuje (<strong>úvěrová událost</strong> – credit event), prodávající zaplatí $N(1 - R)$, kde $R$ = <strong>míra návratnosti</strong> (recovery rate – kolik se z dluhu nakonec vrátí). Ekonomicky je to pojištění proti krachu, jen nemusíš vlastnit samotný dluhopis (naked CDS).</div>
+                    <div class="formula-block">$$s \approx \lambda\,(1 - R) \qquad \lambda \approx \frac{s}{1 - R} \qquad Q(t) = e^{-\lambda t} \;\text{(přežití)} \qquad PD(0,t) = 1 - e^{-\lambda t}$$</div>
+                    <p>$\lambda$ = intenzita selhání (hazard rate – zhruba roční pravděpodobnost krachu), $Q(t)$ = pravděpodobnost, že firma do $t$ nezkrachuje, $PD$ = kumulovaná pravděpodobnost selhání. Vztahu $s \approx \lambda(1-R)$ se říká „credit triangle“.</p>
+                    <div class="ex-box"><strong>Příklad:</strong> 5letý CDS spread 150 bp, návratnost 40 %.
+                        <br>Intenzita selhání $\lambda = 0{,}015/0{,}6 = 2{,}5\%$ ročně → pravděpodobnost přežití 5 let $e^{-0{,}125} = 88{,}25\%$ → kumulovaná PD = 11,75 %.
+                        <br>Opačně: $\lambda = 2\%$, $R = 40\%$ → férový spread ≈ $2\% \cdot 0{,}6 = 120$ bp.</div>
+                    <div class="thm-box"><strong>CDS–bond basis:</strong> koupit rizikový dluhopis + koupit k němu CDS ochranu ≈ bezrizikový dluhopis → CDS spread ≈ o kolik dluhopis vynáší víc než bezriziková sazba (asset swap spread). Báze = CDS spread − spread dluhopisu; nenulová kvůli likviditě, financování a možnosti vybrat si, který dluhopis dodat.</div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> intenzity selhání spočítané z CDS nebo spreadů dluhopisů jsou <strong>rizikově neutrální</strong> – mnohem vyšší než skutečné (historické) pravděpodobnosti krachu, protože spread obsahuje i prémii za riziko a likviditu. Na oceňování se berou rizikově neutrální, na scénáře a kapitál skutečné. A ještě: prodávající ochrany je vůči kreditnímu riziku <em>long</em> (jako by držel dluhopis).</div>
 
-                    <h4>R lab: swap and CDS valuation</h4>
-                    <pre class="r-box"><code>z  &lt;- c(0.025, 0.028, 0.030)                 # continuously compounded zero rates, years 1–3
+                    <h4>R lab: ocenění swapu a CDS</h4>
+                    <pre class="r-box"><code>z  &lt;- c(0.025, 0.028, 0.030)                 # spojité nulové sazby, roky 1–3
 t_ &lt;- 1:3
 DF &lt;- exp(-z * t_)
 
-swap_rate &lt;- (1 - DF[3]) / sum(DF)           # par swap rate: fixed leg PV = floating leg PV
-V_fixed &lt;- 100 * (0.03 * sum(DF) + DF[3])    # fixed "bond" (per 100 notional)
-V_float &lt;- 100                               # floating bond right after a reset
+swap_rate &lt;- (1 - DF[3]) / sum(DF)           # par swapová sazba: PV pevné nohy = PV pohyblivé
+V_fixed &lt;- 100 * (0.03 * sum(DF) + DF[3])    # „dluhopis“ s pevným kuponem (na 100 nominálu)
+V_float &lt;- 100                               # pohyblivý dluhopis hned po refixaci
 V_receive_fixed &lt;- V_fixed - V_float
 round(c(swap_rate = swap_rate, V_receive_fixed = V_receive_fixed), 5)   # 0.03036  -0.10254</code></pre>
                     <pre class="r-box"><code>spread &lt;- 0.015; R &lt;- 0.40
-lambda &lt;- spread / (1 - R)                   # credit triangle: hazard rate ≈ 2.5 % p.a.
+lambda &lt;- spread / (1 - R)                   # credit triangle: intenzita selhání ≈ 2,5 % ročně
 t_ &lt;- 1:5
-surv &lt;- exp(-lambda * t_)                    # survival probabilities
-PD_cum &lt;- 1 - surv                           # cumulative default probabilities
+surv &lt;- exp(-lambda * t_)                    # pravděpodobnosti přežití
+PD_cum &lt;- 1 - surv                           # kumulované pravděpodobnosti selhání
 round(rbind(surv, PD_cum), 4)</code></pre>
-                    <div class="insight-box"><strong>Case-study angle:</strong> build discount factors from a real curve (topic 4), value an existing swap and compute its DV01 by bumping the curve by 1 bp and repricing; bootstrap a term structure of hazard rates from CDS spreads at 1–10 years (sovereign CDS of Italy, Greece 2010–12, or a corporate); compare implied PDs with rating-agency default rates.</div>
+                    <div class="insight-box"><strong>Pro semestrální práci:</strong> sestavit diskontní faktory z reálné křivky (téma 4), ocenit existující swap a spočítat jeho DV01 tak, že posuneš křivku o 1 bp a přeceníš; bootstrapnout časovou strukturu intenzit selhání z CDS spreadů na 1–10 let (státní CDS Itálie, Řecka 2010–12, nebo firmy); porovnat implicitní PD s četností defaultů podle ratingových agentur.</div>
 
-                    <div class="summary-box"><strong>Summary:</strong>
+                    <div class="summary-box"><strong>Shrnutí:</strong>
                         <ul>
-                            <li>IRS: fixed × floating on a notional that isn't exchanged; payer × receiver</li>
-                            <li>$V_{rec} = B_{fix} - B_{fl}$; par swap rate $= (1 - DF_n)/\sum \tau_i DF_i$</li>
-                            <li>currency swap exchanges principals; equity swap pays total return</li>
-                            <li>CDS: premium $s$ vs. payment $N(1-R)$; $s \approx \lambda(1-R)$; survival $e^{-\lambda t}$</li>
-                            <li>implied PDs are risk-neutral (&gt; historical)</li>
+                            <li>IRS: pevná × pohyblivá sazba z nominálu, který se nevyměňuje; payer × receiver</li>
+                            <li>$V_{rec} = B_{fix} - B_{fl}$; par swapová sazba $= (1 - DF_n)/\sum \tau_i DF_i$</li>
+                            <li>měnový swap vyměňuje i jistiny; akciový swap platí celkový výnos</li>
+                            <li>CDS: prémie $s$ proti platbě $N(1-R)$; $s \approx \lambda(1-R)$; přežití $e^{-\lambda t}$</li>
+                            <li>implicitní PD jsou rizikově neutrální (&gt; historické)</li>
                         </ul>
                     </div>
                     <p class="mb-0"><a href="../quiz.html?course=1BP461&topic=7"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
                 </section>
 
                 <section class="topic-section" id="topic-8">
-                    <h3>8. Options Pricing &amp; Greeks</h3>
-                    <p class="text-muted small">Lecture 24 Nov · Milan Fičura · source: literature (Witzany <em>Financial Derivatives</em>; Hull ch. 10–15, 19)</p>
+                    <h3>8. Oceňování opcí a řecká písmena</h3>
+                    <p class="text-muted small">Přednáška 24. 11. · Milan Fičura · zdroj: literatura (Witzany <em>Financial Derivatives</em>; Hull kap. 10–15, 19)</p>
 
-                    <h4>Payoffs and put-call parity</h4>
-                    <div class="def-box"><strong>Call</strong> = right (not obligation) to buy at strike $K$: payoff $\max(S_T - K, 0)$. <strong>Put</strong> = right to sell: $\max(K - S_T, 0)$. <strong>European</strong> = exercise only at maturity; <strong>American</strong> = any time. Option value = <strong>intrinsic value</strong> + <strong>time value</strong>.</div>
-                    <div class="formula-block">$$c + K e^{-rT} = p + S_0 \qquad \text{(with dividend yield: } c + Ke^{-rT} = p + S_0e^{-qT}\text{)}$$</div>
-                    <div class="ex-box"><strong>Example (parity check):</strong> $S = 100$, $K = 100$, $r = 5\%$, $T = 1$, call = 10.45 → put $= 10.45 + 100e^{-0.05} - 100 = 10.45 - 4.88 = 5.57$. If the market put is 6.00, it's too expensive: sell put, buy call, short the stock, invest $K e^{-rT}$ → profit 0.43.</div>
-                    <div class="insight-box"><strong>Intuition:</strong> both sides pay $\max(S_T, K)$ at maturity. Long call + short put = long forward: $c - p = S_0 - Ke^{-rT}$. Never exercise an American call on a non-dividend stock early (you'd lose time value and interest on $K$) → American call = European call. American put may be exercised early (deep in the money).</div>
+                    <h4>Výplaty a put-call parita</h4>
+                    <div class="def-box"><strong>Kupní opce</strong> (call) = právo (ne povinnost) koupit za realizační cenu $K$ (strike): výplata $\max(S_T - K, 0)$. <strong>Prodejní opce</strong> (put) = právo prodat: $\max(K - S_T, 0)$. <strong>Evropská</strong> = uplatnit jen při splatnosti; <strong>americká</strong> = kdykoli. Cena opce = <strong>vnitřní hodnota</strong> (intrinsic value – kolik by vynesla, kdyby se uplatnila hned) + <strong>časová hodnota</strong> (time value).</div>
+                    <div class="formula-block">$$c + K e^{-rT} = p + S_0 \qquad \text{(s dividendovým výnosem: } c + Ke^{-rT} = p + S_0e^{-qT}\text{)}$$</div>
+                    <div class="ex-box"><strong>Příklad (kontrola parity):</strong> $S = 100$, $K = 100$, $r = 5\%$, $T = 1$, call = 10,45 → put $= 10{,}45 + 100e^{-0{,}05} - 100 = 10{,}45 - 4{,}88 = 5{,}57$. Když se put na trhu prodává za 6,00, je moc drahý: prodej put, kup call, prodej akcii nakrátko, ulož $K e^{-rT}$ → zisk 0,43.</div>
+                    <div class="insight-box"><strong>Intuice:</strong> obě strany rovnice vyplatí při splatnosti $\max(S_T, K)$, takže musí stát stejně. Koupený call + prodaný put = koupený forward: $c - p = S_0 - Ke^{-rT}$. Americký call na akcii bez dividend se nikdy nevyplatí uplatnit dřív (ztratil bys časovou hodnotu a úrok z $K$) → americký call = evropský call. Americký put se naopak dřív uplatnit vyplatit může (hluboko v penězích).</div>
 
-                    <h4>Binomial tree (Cox–Ross–Rubinstein)</h4>
+                    <h4>Binomický strom (Cox–Ross–Rubinstein)</h4>
                     <div class="formula-block">$$u = e^{\sigma\sqrt{\Delta t}},\; d = 1/u,\; q = \frac{e^{r\Delta t} - d}{u - d} \qquad V = e^{-r\Delta t}\,[q V_u + (1 - q) V_d] \qquad \Delta = \frac{V_u - V_d}{S_u - S_d}$$</div>
-                    <div class="def-box"><strong>Risk-neutral valuation:</strong> price = expected payoff under the risk-neutral probability $q$, discounted at $r$. The real-world probability and investors' risk preferences don't matter, because the option can be replicated by $\Delta$ shares + bond.</div>
-                    <div class="ex-box"><strong>Example (2-step call):</strong> $S = 100$, $K = 100$, $r = 5\%$, $\sigma = 20\%$, $T = 1$, $\Delta t = 0.5$.
-                        <br>$u = e^{0.2\sqrt{0.5}} = 1.1519$, $d = 0.8681$, $q = (e^{0.025} - 0.8681)/(1.1519 - 0.8681) = 0.5539$.
-                        <br>Final prices: 132.69 / 100 / 75.36 → payoffs 32.69 / 0 / 0.
-                        <br>Up node: $e^{-0.025}(0.5539 \cdot 32.69) = 17.66$; down node: 0.
-                        <br>Root: $e^{-0.025}(0.5539 \cdot 17.66) = \mathbf{9.54}$. Initial delta $= (17.66 - 0)/(115.19 - 86.81) = 0.622$.
-                        <br>With 500 steps the tree converges to Black–Scholes 10.45.</div>
-                    <p>For an <strong>American</strong> option compare at each node the continuation value with immediate exercise and take the maximum.</p>
+                    <p>Cena v každém kroku buď vyroste $u$-krát, nebo klesne $d$-krát. Od konce stromu jdeš zpátky: v každém uzlu spočítáš vážený průměr dvou budoucích hodnot a zdiskontuješ.</p>
+                    <div class="def-box"><strong>Rizikově neutrální oceňování</strong> (risk-neutral valuation): cena = očekávaná výplata podle rizikově neutrální pravděpodobnosti $q$, zdiskontovaná sazbou $r$. Skutečná pravděpodobnost růstu ani postoj investorů k riziku nehrají roli, protože opci jde přesně napodobit (replikovat) portfoliem z $\Delta$ akcií + dluhopisu.</div>
+                    <div class="ex-box"><strong>Příklad (call, 2 kroky):</strong> $S = 100$, $K = 100$, $r = 5\%$, $\sigma = 20\%$, $T = 1$, $\Delta t = 0{,}5$.
+                        <br>$u = e^{0{,}2\sqrt{0{,}5}} = 1{,}1519$, $d = 0{,}8681$, $q = (e^{0{,}025} - 0{,}8681)/(1{,}1519 - 0{,}8681) = 0{,}5539$.
+                        <br>Koncové ceny: 132,69 / 100 / 75,36 → výplaty 32,69 / 0 / 0.
+                        <br>Horní uzel: $e^{-0{,}025}(0{,}5539 \cdot 32{,}69) = 17{,}66$; dolní uzel: 0.
+                        <br>Kořen: $e^{-0{,}025}(0{,}5539 \cdot 17{,}66) = \mathbf{9{,}54}$. Počáteční delta $= (17{,}66 - 0)/(115{,}19 - 86{,}81) = 0{,}622$.
+                        <br>S 500 kroky strom konverguje k Black–Scholesovi 10,45.</div>
+                    <p>U <strong>americké</strong> opce porovnáš v každém uzlu hodnotu „držet dál“ s okamžitým uplatněním a vezmeš větší z nich.</p>
 
                     <h4>Black–Scholes–Merton</h4>
                     <div class="formula-block">$$c = S_0 N(d_1) - K e^{-rT} N(d_2) \qquad p = K e^{-rT} N(-d_2) - S_0 N(-d_1)$$ $$d_1 = \frac{\ln(S_0/K) + (r + \sigma^2/2)T}{\sigma\sqrt{T}} \qquad d_2 = d_1 - \sigma\sqrt{T}$$</div>
-                    <div class="ex-box"><strong>Example:</strong> $S = K = 100$, $r = 5\%$, $\sigma = 20\%$, $T = 1$.
-                        <br>$d_1 = (0 + 0.07)/0.2 = 0.35$, $d_2 = 0.15$; $N(0.35) = 0.6368$, $N(0.15) = 0.5596$.
-                        <br>$c = 100 \cdot 0.6368 - 95.12 \cdot 0.5596 = \mathbf{10.45}$; $p = \mathbf{5.57}$.</div>
-                    <div class="thm-box"><strong>Assumptions:</strong> GBM with constant $\sigma$ and $r$, continuous trading, no transaction costs, no arbitrage, European exercise. $N(d_2)$ = risk-neutral probability of exercise; $N(d_1)$ = delta of the call. Dividends: replace $S_0$ by $S_0e^{-qT}$ (Merton); FX options: $q = r_f$ (Garman–Kohlhagen).</div>
-                    <p><strong>Monte Carlo</strong>: simulate $S_T = S_0 \exp[(r - \sigma^2/2)T + \sigma\sqrt{T}Z]$, average the discounted payoffs. Error falls with $1/\sqrt{M}$; slow for vanilla options but the only practical method for path-dependent and multi-asset payoffs (topic 9).</p>
+                    <p>$N(\cdot)$ = distribuční funkce normovaného normálního rozdělení.</p>
+                    <div class="ex-box"><strong>Příklad:</strong> $S = K = 100$, $r = 5\%$, $\sigma = 20\%$, $T = 1$.
+                        <br>$d_1 = (0 + 0{,}07)/0{,}2 = 0{,}35$, $d_2 = 0{,}15$; $N(0{,}35) = 0{,}6368$, $N(0{,}15) = 0{,}5596$.
+                        <br>$c = 100 \cdot 0{,}6368 - 95{,}12 \cdot 0{,}5596 = \mathbf{10{,}45}$; $p = \mathbf{5{,}57}$.</div>
+                    <div class="thm-box"><strong>Předpoklady:</strong> cena se řídí geometrickým Brownovým pohybem s konstantní $\sigma$ a $r$, obchoduje se spojitě, bez transakčních nákladů, bez arbitráže, evropské uplatnění. $N(d_2)$ = rizikově neutrální pravděpodobnost, že se opce uplatní; $N(d_1)$ = delta callu. Dividendy: místo $S_0$ dosadíš $S_0e^{-qT}$ (Merton); měnové opce: $q = r_f$ (Garman–Kohlhagen).</div>
+                    <p><strong>Monte Carlo</strong>: nasimuluješ $S_T = S_0 \exp[(r - \sigma^2/2)T + \sigma\sqrt{T}Z]$ a zprůměruješ zdiskontované výplaty. Chyba klesá s $1/\sqrt{M}$ ($M$ = počet simulací); na obyčejné opce je to pomalé, ale na opce závislé na celé cestě ceny a na více aktivech je to jediná praktická metoda (téma 9).</p>
 
-                    <h4>Greeks and hedging</h4>
+                    <h4>Řecká písmena (Greeks) a zajištění</h4>
+                    <p>Řecká písmena říkají, jak citlivá je cena opce na změnu jednotlivých vstupů.</p>
                     <table class="table table-bordered summary-table">
-                        <thead><tr><th>Greek</th><th>Definition</th><th>Call (BS)</th><th>Example value</th><th>Note</th></tr></thead>
+                        <thead><tr><th>Písmeno</th><th>Definice</th><th>Call (BS)</th><th>Hodnota v příkladu</th><th>Poznámka</th></tr></thead>
                         <tbody>
-                            <tr><td><strong>Delta</strong> Δ</td><td>$\partial V/\partial S$</td><td>$N(d_1)$</td><td>0.637</td><td>put: $N(d_1) - 1$; hedge with the underlying</td></tr>
-                            <tr><td><strong>Gamma</strong> Γ</td><td>$\partial^2 V/\partial S^2$</td><td>$\dfrac{N'(d_1)}{S\sigma\sqrt T}$</td><td>0.0188</td><td>same for call and put; max at the money near expiry; hedge only with options</td></tr>
-                            <tr><td><strong>Vega</strong> ν</td><td>$\partial V/\partial\sigma$</td><td>$S\sqrt T N'(d_1)$</td><td>37.5 (0.375 per 1 vol pt)</td><td>long options = long vega</td></tr>
-                            <tr><td><strong>Theta</strong> Θ</td><td>$\partial V/\partial t$</td><td>…</td><td>−6.41 p.a.</td><td>time decay; long options lose value</td></tr>
-                            <tr><td><strong>Rho</strong> ρ</td><td>$\partial V/\partial r$</td><td>$KTe^{-rT}N(d_2)$</td><td>53.2</td><td>call +, put −</td></tr>
+                            <tr><td><strong>Delta</strong> Δ</td><td>$\partial V/\partial S$ – citlivost na cenu podkladu</td><td>$N(d_1)$</td><td>0,637</td><td>put: $N(d_1) - 1$; zajišťuje se podkladem</td></tr>
+                            <tr><td><strong>Gama</strong> Γ</td><td>$\partial^2 V/\partial S^2$ – jak rychle se mění delta</td><td>$\dfrac{N'(d_1)}{S\sigma\sqrt T}$</td><td>0,0188</td><td>stejná pro call i put; nejvyšší „at the money“ těsně před splatností; zajistit jde jen opcemi</td></tr>
+                            <tr><td><strong>Vega</strong> ν</td><td>$\partial V/\partial\sigma$ – citlivost na volatilitu</td><td>$S\sqrt T N'(d_1)$</td><td>37,5 (0,375 na 1 p. b. volatility)</td><td>koupené opce = long vega</td></tr>
+                            <tr><td><strong>Théta</strong> Θ</td><td>$\partial V/\partial t$ – ubývání s časem</td><td>…</td><td>−6,41 ročně</td><td>časový rozpad; koupené opce ztrácejí hodnotu</td></tr>
+                            <tr><td><strong>Ró</strong> ρ</td><td>$\partial V/\partial r$ – citlivost na sazbu</td><td>$KTe^{-rT}N(d_2)$</td><td>53,2</td><td>call +, put −</td></tr>
                         </tbody>
                     </table>
                     <div class="formula-block">$$\Delta V \approx \Delta\cdot\Delta S + \tfrac{1}{2}\Gamma(\Delta S)^2 + \Theta\,\Delta t + \nu\,\Delta\sigma \qquad \Theta + rS\Delta + \tfrac12\sigma^2S^2\Gamma = rV$$</div>
-                    <div class="ex-box"><strong>Example (delta hedge):</strong> a bank sold 1 000 calls (per 1 share each) from the example above, delta 0.6368. To be delta-neutral it buys $1000 \cdot 0.6368 \approx 637$ shares. If $S$ rises, delta rises → buy more shares (and sell when it falls) — <strong>buy high, sell low</strong>; that's the cost of being short gamma, paid for by the option premium (theta).</div>
-                    <div class="warn-box"><strong>⚠️ Pozor:</strong> <strong>gamma-neutral</strong> requires another <em>option</em> (underlying has gamma 0): first choose the number of options to kill gamma, <em>then</em> fix delta with the underlying. Delta-neutral protects only against small moves; big jumps hurt a short-gamma position.</div>
+                    <div class="ex-box"><strong>Příklad (delta hedge):</strong> banka prodala 1 000 callů (každý na 1 akcii) z příkladu výše, delta 0,6368. Aby byla delta-neutrální, koupí $1000 \cdot 0{,}6368 \approx 637$ akcií. Když $S$ roste, delta roste → musí dokupovat akcie (a když klesá, prodávat) – <strong>kupuje draho, prodává levně</strong>. To je cena za to, že je short gama; zaplacená je z prémie za opci (théta).</div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> <strong>gama-neutrální</strong> pozice potřebuje další <em>opci</em> (podklad má gamu 0): nejdřív zvolíš počet opcí, aby zmizela gama, <em>pak</em> dorovnáš deltu podkladem. Delta-neutrální pozice chrání jen proti malým pohybům; velké skoky pozici se zápornou gamou bolí.</div>
 
-                    <h4>Option strategies</h4>
+                    <h4>Opční strategie</h4>
                     <table class="table table-bordered summary-table">
-                        <thead><tr><th>Strategy</th><th>Construction</th><th>View</th></tr></thead>
+                        <thead><tr><th>Strategie</th><th>Jak se složí</th><th>Na co sází</th></tr></thead>
                         <tbody>
-                            <tr><td>Covered call</td><td>long stock + short call</td><td>neutral / mildly bullish, earn premium, capped upside</td></tr>
-                            <tr><td>Protective put</td><td>long stock + long put</td><td>insurance: floor at $K$</td></tr>
-                            <tr><td>Bull spread</td><td>long call $K_1$ + short call $K_2 &gt; K_1$</td><td>moderately bullish, cheaper than a call</td></tr>
-                            <tr><td>Bear spread</td><td>long put $K_2$ + short put $K_1 &lt; K_2$</td><td>moderately bearish</td></tr>
-                            <tr><td>Butterfly</td><td>long $K_1$, 2× short $K_2$, long $K_3$ calls</td><td>price stays near $K_2$ (short volatility, limited risk)</td></tr>
-                            <tr><td>Straddle</td><td>long call + long put, same $K$</td><td>big move either way (long volatility)</td></tr>
-                            <tr><td>Strangle</td><td>long OTM call + long OTM put</td><td>big move, cheaper than straddle</td></tr>
-                            <tr><td>Collar</td><td>long stock + long put + short call</td><td>zero-cost protection; floor and cap</td></tr>
+                            <tr><td>Covered call (krytý call)</td><td>koupená akcie + prodaný call</td><td>neutrální / mírně býčí, inkasuješ prémii, zisk je shora omezený</td></tr>
+                            <tr><td>Protective put (ochranný put)</td><td>koupená akcie + koupený put</td><td>pojištění: dno na $K$</td></tr>
+                            <tr><td>Bull spread</td><td>koupený call $K_1$ + prodaný call $K_2 &gt; K_1$</td><td>mírně býčí, levnější než samotný call</td></tr>
+                            <tr><td>Bear spread</td><td>koupený put $K_2$ + prodaný put $K_1 &lt; K_2$</td><td>mírně medvědí</td></tr>
+                            <tr><td>Butterfly (motýl)</td><td>koupený call $K_1$, 2× prodaný $K_2$, koupený $K_3$</td><td>cena zůstane u $K_2$ (short volatilita, omezené riziko)</td></tr>
+                            <tr><td>Straddle</td><td>koupený call + koupený put, stejné $K$</td><td>velký pohyb kterýmkoli směrem (long volatilita)</td></tr>
+                            <tr><td>Strangle</td><td>koupený call mimo peníze + koupený put mimo peníze (OTM)</td><td>velký pohyb, levnější než straddle</td></tr>
+                            <tr><td>Collar</td><td>koupená akcie + koupený put + prodaný call</td><td>ochrana zadarmo; dno i strop</td></tr>
                         </tbody>
                     </table>
 
-                    <h4>R lab: BS, trees, Monte Carlo and delta hedging</h4>
+                    <h4>R lab: BS, stromy, Monte Carlo a delta hedging</h4>
                     <pre class="r-box"><code>bs &lt;- function(S, K, r, sigma, T, type = "call") {
   d1 &lt;- (log(S / K) + (r + sigma^2 / 2) * T) / (sigma * sqrt(T))
   d2 &lt;- d1 - sigma * sqrt(T)
@@ -699,7 +710,7 @@ greeks_call &lt;- function(S, K, r, sigma, T) {
   d1 &lt;- (log(S / K) + (r + sigma^2 / 2) * T) / (sigma * sqrt(T)); d2 &lt;- d1 - sigma * sqrt(T)
   c(delta = pnorm(d1),
     gamma = dnorm(d1) / (S * sigma * sqrt(T)),
-    vega  = S * dnorm(d1) * sqrt(T),                       # per 1.00 change of sigma
+    vega  = S * dnorm(d1) * sqrt(T),                       # na změnu sigma o 1.00
     theta = -S * dnorm(d1) * sigma / (2 * sqrt(T)) - r * K * exp(-r * T) * pnorm(d2),
     rho   = K * T * exp(-r * T) * pnorm(d2))
 }
@@ -708,7 +719,7 @@ bs(100, 100, 0.05, 0.2, 1, "put")            #  5.5735
 round(greeks_call(100, 100, 0.05, 0.2, 1), 4)</code></pre>
                     <pre class="r-box"><code>crr &lt;- function(S, K, r, sigma, T, n, type = "call", american = FALSE) {
   dt &lt;- T / n; u &lt;- exp(sigma * sqrt(dt)); d &lt;- 1 / u
-  q  &lt;- (exp(r * dt) - d) / (u - d)                         # risk-neutral probability
+  q  &lt;- (exp(r * dt) - d) / (u - d)                         # rizikově neutrální pravděpodobnost
   payoff &lt;- function(s) if (type == "call") pmax(s - K, 0) else pmax(K - s, 0)
   V &lt;- payoff(S * u^(n:0) * d^(0:n))
   for (i in (n - 1):0) {
@@ -718,20 +729,20 @@ round(greeks_call(100, 100, 0.05, 0.2, 1), 4)</code></pre>
   V
 }
 crr(100, 100, 0.05, 0.2, 1, n = 2)           # 9.5405
-crr(100, 100, 0.05, 0.2, 1, n = 500)         # → 10.45 (converges to Black–Scholes)
-crr(100, 100, 0.05, 0.2, 1, 500, "put", american = TRUE)   # early exercise premium vs 5.57
+crr(100, 100, 0.05, 0.2, 1, n = 500)         # → 10.45 (konverguje k Black–Scholesovi)
+crr(100, 100, 0.05, 0.2, 1, 500, "put", american = TRUE)   # prémie za předčasné uplatnění oproti 5.57
 
 set.seed(1)                                  # Monte Carlo
 Z  &lt;- rnorm(1e6)
 ST &lt;- 100 * exp((0.05 - 0.2^2 / 2) * 1 + 0.2 * Z)
 exp(-0.05) * mean(pmax(ST - 100, 0))         # ≈ 10.45</code></pre>
-                    <pre class="r-box"><code># discrete delta hedging of a short call (source of hedging error = gamma × rebalancing gap)
+                    <pre class="r-box"><code># diskrétní delta hedging prodaného callu (chyba zajištění = gama × mezery mezi přenastavením)
 set.seed(11)
 S0 &lt;- 100; K &lt;- 100; r &lt;- 0.05; sigma &lt;- 0.2; T &lt;- 1; n &lt;- 52; dt &lt;- T / n
 delta_c &lt;- function(S, tau) pnorm((log(S / K) + (r + sigma^2 / 2) * tau) / (sigma * sqrt(tau)))
 S &lt;- S0 * exp(cumsum(c(0, (r - sigma^2 / 2) * dt + sigma * sqrt(dt) * rnorm(n))))
 
-cash  &lt;- bs(S0, K, r, sigma, T)              # premium received
+cash  &lt;- bs(S0, K, r, sigma, T)              # přijatá prémie
 delta &lt;- delta_c(S0, T); cash &lt;- cash - delta * S0
 for (i in 2:n) {
   cash  &lt;- cash * exp(r * dt)
@@ -739,100 +750,100 @@ for (i in 2:n) {
   cash  &lt;- cash - (new_d - delta) * S[i]; delta &lt;- new_d
 }
 pnl &lt;- cash * exp(r * dt) + delta * S[n + 1] - max(S[n + 1] - K, 0)
-pnl                                          # close to 0; shrinks with more frequent rebalancing</code></pre>
-                    <div class="insight-box"><strong>Case-study angle:</strong> download an option chain (<code>getOptionChain("SPY")</code> in <code>quantmod</code>), compare market prices with BS using historical volatility, compute implied volatilities (topic 9); simulate delta hedging with weekly × daily rebalancing and show that the hedging error shrinks with frequency, and what happens when realised volatility ≠ implied; plot payoff diagrams of strategies with <code>pmax()</code>.</div>
+pnl                                          # blízko 0; zmenšuje se s častějším přenastavením</code></pre>
+                    <div class="insight-box"><strong>Pro semestrální práci:</strong> stáhnout opční řetězec (<code>getOptionChain("SPY")</code> v <code>quantmod</code>), porovnat tržní ceny s BS při historické volatilitě, spočítat implikované volatility (téma 9); nasimulovat delta hedging s týdenním × denním přenastavením a ukázat, že chyba zajištění s frekvencí klesá, a co se stane, když skutečná volatilita ≠ implikovaná; nakreslit výplatní diagramy strategií přes <code>pmax()</code>.</div>
 
-                    <div class="summary-box"><strong>Summary:</strong>
+                    <div class="summary-box"><strong>Shrnutí:</strong>
                         <ul>
-                            <li>put-call parity $c + Ke^{-rT} = p + S_0$; arbitrage when violated</li>
-                            <li>CRR tree: $u = e^{\sigma\sqrt{\Delta t}}$, $q = (e^{r\Delta t} - d)/(u - d)$, backward induction</li>
-                            <li>BS: $c = SN(d_1) - Ke^{-rT}N(d_2)$; example 10.45 / 5.57</li>
-                            <li>delta hedge with the underlying, gamma hedge only with options; short gamma = buy high, sell low</li>
-                            <li>straddle/strangle = long vol; butterfly = short vol; covered call, protective put, collar</li>
+                            <li>put-call parita $c + Ke^{-rT} = p + S_0$; když neplatí → arbitráž</li>
+                            <li>CRR strom: $u = e^{\sigma\sqrt{\Delta t}}$, $q = (e^{r\Delta t} - d)/(u - d)$, počítá se od konce</li>
+                            <li>BS: $c = SN(d_1) - Ke^{-rT}N(d_2)$; příklad 10,45 / 5,57</li>
+                            <li>deltu zajistíš podkladem, gamu jen opcemi; short gama = kupuješ draho, prodáváš levně</li>
+                            <li>straddle/strangle = long volatilita; butterfly = short volatilita; covered call, protective put, collar</li>
                         </ul>
                     </div>
                     <p class="mb-0"><a href="../quiz.html?course=1BP461&topic=8"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
                 </section>
 
                 <section class="topic-section" id="topic-9">
-                    <h3>9. Asset Price Dynamics &amp; Exotics</h3>
-                    <p class="text-muted small">Lecture 1 Dec · Milan Fičura · source: literature (Witzany <em>Financial Derivatives</em>; Hull ch. 20, 26, 31; Wilmott vol. 2)</p>
+                    <h3>9. Dynamika cen aktiv a exotické opce</h3>
+                    <p class="text-muted small">Přednáška 1. 12. · Milan Fičura · zdroj: literatura (Witzany <em>Financial Derivatives</em>; Hull kap. 20, 26, 31; Wilmott sv. 2)</p>
 
-                    <h4>Geometric Brownian motion</h4>
+                    <h4>Geometrický Brownův pohyb (GBM)</h4>
                     <div class="formula-block">$$dS = \mu S\,dt + \sigma S\,dW \quad\Rightarrow\quad S_T = S_0 \exp\!\left[\left(\mu - \tfrac{\sigma^2}{2}\right)T + \sigma\sqrt{T}\,Z\right],\; Z \sim N(0,1)$$</div>
-                    <p>Log returns are normal and i.i.d., prices lognormal. For pricing replace $\mu$ by $r$ (risk-neutral drift). The $-\sigma^2/2$ term (from Itô's lemma) is the gap between the arithmetic and geometric (median) growth.</p>
-                    <div class="warn-box"><strong>⚠️ Pozor — what GBM gets wrong (stylised facts):</strong> real returns have <strong>fat tails</strong> (excess kurtosis), <strong>negative skew</strong> for equities, <strong>volatility clustering</strong> (calm and turbulent periods), <strong>leverage effect</strong> (volatility rises when prices fall), <strong>jumps</strong>. Squared returns are autocorrelated even when returns aren't.</div>
+                    <p>Česky: cena roste v průměru tempem $\mu$ a k tomu náhodně kolísá s volatilitou $\sigma$. Log výnosy jsou pak normálně rozdělené a nezávislé, ceny lognormální (nikdy nejsou záporné). Při oceňování derivátů se místo $\mu$ dosadí $r$ (rizikově neutrální drift). Člen $-\sigma^2/2$ (z Itôova lemmatu) je rozdíl mezi aritmetickým a geometrickým (mediánovým) růstem.</p>
+                    <div class="warn-box"><strong>⚠️ Pozor – v čem se GBM mýlí (stylizovaná fakta, stylised facts):</strong> skutečné výnosy mají <strong>tlusté chvosty</strong> (fat tails – extrémní pohyby jsou častější, než říká normální rozdělení), u akcií <strong>zápornou šikmost</strong> (velké propady jsou častější než velké růsty), <strong>shlukování volatility</strong> (volatility clustering – klidná a bouřlivá období se střídají), <strong>pákový efekt</strong> (leverage effect – když ceny padají, volatilita roste), <strong>skoky</strong>. Druhé mocniny výnosů jsou autokorelované, i když samotné výnosy ne.</div>
 
-                    <h4>Implied volatility and the smile</h4>
-                    <div class="def-box"><strong>Implied volatility</strong> (implikovaná volatilita): the $\sigma$ that makes the BS price equal the market price. Found numerically (Newton, bisection, <code>uniroot</code>). <strong>Historical</strong> volatility is estimated from past returns — implied is forward-looking and includes a risk premium (implied usually &gt; realised → selling options earns the variance risk premium). VIX = implied vol of S&amp;P 500 options (30 days).</div>
-                    <div class="ex-box"><strong>Example:</strong> ATM call, $S = K = 100$, $r = 5\%$, $T = 1$, market price 12.00. At $\sigma = 20\%$ BS gives 10.45 → too low; at $\sigma = 25\%$ ≈ 12.34. Solving gives $\sigma_{impl} = 24.1\%$.</div>
+                    <h4>Implikovaná volatilita a „úsměv“</h4>
+                    <div class="def-box"><strong>Implikovaná volatilita</strong> (implied volatility): taková $\sigma$, se kterou vyjde cena podle BS stejná jako tržní cena. Hledá se numericky (Newton, bisekce, <code>uniroot</code>). <strong>Historická</strong> volatilita se počítá z minulých výnosů – implikovaná se dívá dopředu a obsahuje prémii za riziko (implikovaná bývá vyšší než skutečně realizovaná → prodávat opce v průměru vydělává, variance risk premium). VIX = implikovaná volatilita opcí na S&amp;P 500 na 30 dní.</div>
+                    <div class="ex-box"><strong>Příklad:</strong> call „at the money“, $S = K = 100$, $r = 5\%$, $T = 1$, tržní cena 12,00. Při $\sigma = 20\%$ dá BS 10,45 → málo; při $\sigma = 25\%$ ≈ 12,34 → moc. Řešení: $\sigma_{impl} = 24{,}1\%$.</div>
                     <table class="table table-bordered summary-table">
-                        <thead><tr><th>Market</th><th>Shape</th><th>Implied distribution vs. lognormal</th></tr></thead>
+                        <thead><tr><th>Trh</th><th>Tvar</th><th>Co to říká o rozdělení (oproti lognormálnímu)</th></tr></thead>
                         <tbody>
-                            <tr><td>Equity (since 1987)</td><td><strong>skew / smirk</strong>: low strikes have higher IV</td><td>fatter left tail, thinner right tail (crash fear, leverage effect)</td></tr>
-                            <tr><td>FX</td><td><strong>smile</strong>: both wings higher</td><td>both tails fatter (jumps either way)</td></tr>
-                            <tr><td>Commodities</td><td>often reverse skew (higher IV for high strikes)</td><td>fatter right tail (supply shocks)</td></tr>
+                            <tr><td>Akcie (od krachu 1987)</td><td><strong>skew / smirk</strong> (úšklebek): nízké strike ceny mají vyšší IV</td><td>tlustší levý chvost, tenčí pravý (strach z krachu, pákový efekt)</td></tr>
+                            <tr><td>Měny</td><td><strong>smile</strong> (úsměv): obě křídla výš</td><td>oba chvosty tlustší (skoky oběma směry)</td></tr>
+                            <tr><td>Komodity</td><td>často obrácený skew (vyšší IV pro vysoké strike ceny)</td><td>tlustší pravý chvost (výpadky nabídky)</td></tr>
                         </tbody>
                     </table>
-                    <div class="insight-box"><strong>Intuition:</strong> if BS were right, IV would be the same for all strikes and maturities. The smile shows the market prices a non-lognormal distribution. <strong>Volatility surface</strong> = IV by strike and maturity; the <strong>term structure</strong> of IV tends to mean-revert toward a long-run level.</div>
+                    <div class="insight-box"><strong>Intuice:</strong> kdyby platil Black–Scholes, byla by IV stejná pro všechny strike ceny i splatnosti. Úsměv ukazuje, že trh počítá s jiným než lognormálním rozdělením. <strong>Volatilní plocha</strong> (volatility surface) = IV podle strike ceny a splatnosti; <strong>časová struktura</strong> IV se obvykle vrací k dlouhodobé úrovni.</div>
 
-                    <h4>Alternative stochastic processes</h4>
+                    <h4>Jiné stochastické procesy</h4>
                     <table class="table table-bordered summary-table">
-                        <thead><tr><th>Model</th><th>Dynamics</th><th>Captures</th></tr></thead>
+                        <thead><tr><th>Model</th><th>Jak funguje</th><th>Co zachytí</th></tr></thead>
                         <tbody>
-                            <tr><td><strong>Merton jump diffusion</strong></td><td>GBM + Poisson jumps with lognormal size</td><td>fat tails, short-maturity smile</td></tr>
-                            <tr><td><strong>Local volatility</strong> (Dupire)</td><td>$\sigma(S, t)$ calibrated to the whole surface</td><td>fits today's smile exactly, but wrong smile dynamics</td></tr>
-                            <tr><td><strong>Stochastic volatility</strong> (Heston)</td><td>$dv = \kappa(\theta - v)dt + \xi\sqrt v\,dW_2$, $\operatorname{corr}(dW_1, dW_2) = \rho &lt; 0$</td><td>skew (via $\rho$), vol clustering, mean-reverting vol</td></tr>
-                            <tr><td>SABR, Lévy (variance gamma)</td><td>…</td><td>rates smile; heavy tails</td></tr>
+                            <tr><td><strong>Mertonův model se skoky</strong> (jump diffusion)</td><td>GBM + náhodné skoky (Poissonův proces) s lognormální velikostí</td><td>tlusté chvosty, úsměv u krátkých splatností</td></tr>
+                            <tr><td><strong>Lokální volatilita</strong> (local volatility, Dupire)</td><td>$\sigma(S, t)$ nakalibrovaná na celou plochu</td><td>dnešní úsměv sedí přesně, ale špatně předpovídá, jak se bude měnit</td></tr>
+                            <tr><td><strong>Stochastická volatilita</strong> (Heston)</td><td>$dv = \kappa(\theta - v)dt + \xi\sqrt v\,dW_2$, $\operatorname{corr}(dW_1, dW_2) = \rho &lt; 0$</td><td>skew (díky $\rho$), shlukování volatility, návrat volatility k průměru</td></tr>
+                            <tr><td>SABR, Lévyho procesy (variance gamma)</td><td>…</td><td>úsměv u úrokových opcí; těžké chvosty</td></tr>
                         </tbody>
                     </table>
 
-                    <h4>Exotic options</h4>
+                    <h4>Exotické opce</h4>
                     <table class="table table-bordered summary-table">
-                        <thead><tr><th>Type</th><th>Payoff</th><th>Price vs. vanilla</th></tr></thead>
+                        <thead><tr><th>Typ</th><th>Výplata</th><th>Cena oproti obyčejné opci</th></tr></thead>
                         <tbody>
-                            <tr><td><strong>Asian</strong></td><td>on the average price $\max(\bar S - K, 0)$</td><td>cheaper (average is less volatile); used for commodities, FX flows</td></tr>
-                            <tr><td><strong>Barrier</strong> (knock-in / knock-out, up/down)</td><td>activated or cancelled when price hits a barrier $H$</td><td>cheaper; in + out = vanilla</td></tr>
-                            <tr><td><strong>Lookback</strong></td><td>on the max/min price over the life</td><td>more expensive</td></tr>
-                            <tr><td><strong>Digital (binary)</strong></td><td>fixed amount if $S_T &gt; K$; cash-or-nothing call $= e^{-rT}N(d_2)$</td><td>—</td></tr>
-                            <tr><td><strong>Basket / rainbow</strong></td><td>on several assets</td><td>depends on correlation</td></tr>
-                            <tr><td>Compound, chooser, forward-start, quanto</td><td>option on option; choose call/put later; strike set later; foreign asset paid in domestic currency</td><td></td></tr>
+                            <tr><td><strong>Asijská</strong> (Asian)</td><td>z průměrné ceny $\max(\bar S - K, 0)$</td><td>levnější (průměr kolísá méně); používá se u komodit a pravidelných měnových toků</td></tr>
+                            <tr><td><strong>Bariérová</strong> (barrier: knock-in / knock-out, up/down)</td><td>zapne se nebo zruší, když cena dosáhne bariéry $H$</td><td>levnější; in + out = obyčejná opce</td></tr>
+                            <tr><td><strong>Lookback</strong></td><td>z maxima/minima ceny za dobu života</td><td>dražší</td></tr>
+                            <tr><td><strong>Digitální (binární)</strong></td><td>pevná částka, když $S_T &gt; K$; cash-or-nothing call $= e^{-rT}N(d_2)$</td><td>—</td></tr>
+                            <tr><td><strong>Basket / rainbow</strong></td><td>na více aktiv najednou</td><td>záleží na korelaci</td></tr>
+                            <tr><td>Compound, chooser, forward-start, quanto</td><td>opce na opci; call/put si vybereš později; strike se určí později; zahraniční aktivum vyplacené v domácí měně</td><td></td></tr>
                         </tbody>
                     </table>
-                    <div class="thm-box"><strong>In-out parity:</strong> knock-in + knock-out (same barrier and strike) = vanilla option. Path-dependent exotics are usually priced by <strong>Monte Carlo</strong> (simulate the whole path) or trees / PDE.</div>
-                    <div class="warn-box"><strong>⚠️ Pozor:</strong> Monte Carlo with discrete monitoring (daily steps) overprices knock-out options relative to continuous monitoring — the path can cross the barrier between steps unnoticed. Barrier options near the barrier have huge gamma — hard to hedge.</div>
+                    <div class="thm-box"><strong>In-out parita:</strong> knock-in + knock-out (stejná bariéra a strike) = obyčejná opce. Dohromady totiž vyplatí vždycky přesně jedna z nich. Exotické opce závislé na cestě ceny se oceňují obvykle <strong>Monte Carlem</strong> (simuluje se celá cesta) nebo stromy / parciálními diferenciálními rovnicemi.</div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> Monte Carlo s diskrétním sledováním (denní kroky) nadhodnocuje knock-out opce oproti spojitému sledování – cena může bariéru mezi kroky překročit a simulace si toho nevšimne. Bariérové opce blízko bariéry mají obrovskou gamu – těžko se zajišťují.</div>
 
-                    <h4>Interest-rate dynamics</h4>
+                    <h4>Dynamika úrokových sazeb</h4>
                     <div class="formula-block">$$\text{Vasicek: } dr = a(b - r)\,dt + \sigma\,dW \qquad \text{CIR: } dr = a(b - r)\,dt + \sigma\sqrt{r}\,dW \qquad E[r_T] = b + (r_0 - b)e^{-aT}$$</div>
                     <ul>
-                        <li><strong>Mean reversion</strong>: rates are pulled toward the long-run level $b$ with speed $a$ (half-life $\ln 2/a$).</li>
-                        <li><strong>Vasicek</strong>: normal rates, can become negative (after the 2014–2022 negative-rate era in the euro area no longer seen as a flaw). <strong>CIR</strong>: volatility ∝ $\sqrt r$, rates stay non-negative.</li>
-                        <li><strong>Equilibrium</strong> models (Vasicek, CIR) produce a yield curve that generally doesn't match today's; <strong>no-arbitrage</strong> models (Ho–Lee, <strong>Hull–White</strong> with $b(t)$ time-dependent) are calibrated to fit it exactly → used for pricing bond options, caps, swaptions.</li>
+                        <li><strong>Návrat k průměru</strong> (mean reversion): sazba je přitahována k dlouhodobé úrovni $b$ rychlostí $a$ (poločas návratu $\ln 2/a$).</li>
+                        <li><strong>Vasicek</strong>: sazby normálně rozdělené, můžou být záporné (po éře záporných sazeb v eurozóně 2014–2022 už to není bráno jako vada). <strong>CIR</strong>: volatilita ∝ $\sqrt r$, sazby zůstanou nezáporné.</li>
+                        <li><strong>Rovnovážné</strong> modely (Vasicek, CIR) dají výnosovou křivku, která obecně nesedí na dnešní; <strong>bezarbitrážní</strong> modely (Ho–Lee, <strong>Hull–White</strong> s časově proměnným $b(t)$) se na ni nakalibrují přesně → používají se na oceňování opcí na dluhopisy, capů, swapcí.</li>
                     </ul>
-                    <div class="ex-box"><strong>Example (Vasicek expectation):</strong> $r_0 = 2\%$, $b = 4\%$, $a = 0.5$, $T = 2$ → $E[r_2] = 4\% + (2\% - 4\%)e^{-1} = 4\% - 0.736\% = 3.26\%$. Half-life $= \ln 2/0.5 = 1.39$ years.</div>
+                    <div class="ex-box"><strong>Příklad (očekávaná sazba ve Vasickově modelu):</strong> $r_0 = 2\%$, $b = 4\%$, $a = 0{,}5$, $T = 2$ → $E[r_2] = 4\% + (2\% - 4\%)e^{-1} = 4\% - 0{,}736\% = 3{,}26\%$. Poločas $= \ln 2/0{,}5 = 1{,}39$ roku.</div>
 
-                    <h4>R lab: implied vol, simulation of paths, exotics, short rates</h4>
-                    <pre class="r-box"><code># implied volatility: invert Black–Scholes numerically
+                    <h4>R lab: implikovaná volatilita, simulace cest, exotické opce, krátké sazby</h4>
+                    <pre class="r-box"><code># implikovaná volatilita: numericky obrátit Black–Scholese
 implied_vol &lt;- function(price, S, K, r, T, type = "call")
   uniroot(function(s) bs(S, K, r, s, T, type) - price, c(1e-4, 3))$root
 implied_vol(12, 100, 100, 0.05, 1)          # 0.2411
 
 K      &lt;- c(80, 90, 100, 110, 120)
-prices &lt;- c(25.5, 17.2, 10.45, 5.2, 2.4)     # market call prices (made up)
+prices &lt;- c(25.5, 17.2, 10.45, 5.2, 2.4)     # tržní ceny callů (vymyšlené)
 iv &lt;- mapply(implied_vol, prices, 100, K, 0.05, 1)
 plot(K, iv, type = "b")                      # smile / skew</code></pre>
-                    <pre class="r-box"><code># GBM paths and an arithmetic Asian call by Monte Carlo
+                    <pre class="r-box"><code># cesty GBM a aritmetický asijský call Monte Carlem
 set.seed(5)
 S0 &lt;- 100; r &lt;- 0.05; sigma &lt;- 0.2; T &lt;- 1; n &lt;- 252; M &lt;- 20000; dt &lt;- T / n
 Z &lt;- matrix(rnorm(M * n), M, n)
 logS &lt;- log(S0) + t(apply((r - sigma^2 / 2) * dt + sigma * sqrt(dt) * Z, 1, cumsum))
-S &lt;- exp(logS)                               # M × n matrix of paths
+S &lt;- exp(logS)                               # matice cest M × n
 matplot(t(S[1:20, ]), type = "l", lty = 1)
 
-asian   &lt;- exp(-r * T) * mean(pmax(rowMeans(S) - 100, 0))           # ≈ 5.8 (&lt; vanilla 10.45)
+asian   &lt;- exp(-r * T) * mean(pmax(rowMeans(S) - 100, 0))           # ≈ 5.8 (&lt; obyčejný 10.45)
 barrier &lt;- exp(-r * T) * mean(pmax(S[, n] - 100, 0) * (apply(S, 1, max) &lt; 130))  # up-and-out
 c(asian = asian, up_and_out = barrier)</code></pre>
-                    <pre class="r-box"><code># Vasicek short rate: dr = a(b - r)dt + sigma dW  (Euler scheme)
+                    <pre class="r-box"><code># Vasicek krátká sazba: dr = a(b - r)dt + sigma dW  (Eulerovo schéma)
 vasicek &lt;- function(r0, a, b, sigma, T, n) {
   dt &lt;- T / n; r &lt;- numeric(n + 1); r[1] &lt;- r0
   for (i in 1:n) r[i + 1] &lt;- r[i] + a * (b - r[i]) * dt + sigma * sqrt(dt) * rnorm(1)
@@ -841,67 +852,68 @@ vasicek &lt;- function(r0, a, b, sigma, T, n) {
 set.seed(2)
 paths &lt;- replicate(2000, vasicek(0.02, 0.5, 0.04, 0.01, 2, 200))
 mean(paths[201, ])                           # ≈ b + (r0 - b)·e^{-aT} = 3.26 %
-# CIR: replace sigma * ... by sigma * sqrt(max(r[i], 0)) * ... → rates stay non-negative</code></pre>
-                    <div class="insight-box"><strong>Case-study angle:</strong> plot the implied-vol smile/skew from a real option chain for two maturities; check stylised facts on real returns (histogram vs. normal, <code>qqnorm()</code>, kurtosis, ACF of squared returns); price an Asian or barrier option by Monte Carlo and study convergence (standard error $\hat\sigma/\sqrt M$, antithetic variates); estimate Vasicek on short-rate data by regressing $r_{t+1}$ on $r_t$ (AR(1): $a = -\ln(\text{slope})/\Delta t$).</div>
+# CIR: nahraď sigma * ... za sigma * sqrt(max(r[i], 0)) * ... → sazby zůstanou nezáporné</code></pre>
+                    <div class="insight-box"><strong>Pro semestrální práci:</strong> vykreslit úsměv/skew implikované volatility z reálného opčního řetězce pro dvě splatnosti; ověřit stylizovaná fakta na reálných výnosech (histogram proti normálnímu, <code>qqnorm()</code>, špičatost, ACF druhých mocnin výnosů); ocenit asijskou nebo bariérovou opci Monte Carlem a sledovat konvergenci (směrodatná chyba $\hat\sigma/\sqrt M$, antitetické proměnné); odhadnout Vasicka na datech krátké sazby regresí $r_{t+1}$ na $r_t$ (AR(1): $a = -\ln(\text{sklon})/\Delta t$).</div>
 
-                    <div class="summary-box"><strong>Summary:</strong>
+                    <div class="summary-box"><strong>Shrnutí:</strong>
                         <ul>
-                            <li>GBM → lognormal prices; misses fat tails, skew, vol clustering, jumps</li>
-                            <li>implied vol = σ that matches market price; equity skew, FX smile</li>
-                            <li>jump diffusion, local vol, stochastic vol (Heston, $\rho &lt; 0$ → skew)</li>
-                            <li>Asian (average, cheaper), barrier (in + out = vanilla), lookback (dearer), digital</li>
-                            <li>Vasicek / CIR mean reversion; Hull–White fits today's curve</li>
+                            <li>GBM → lognormální ceny; nezachytí tlusté chvosty, šikmost, shlukování volatility, skoky</li>
+                            <li>implikovaná volatilita = σ, se kterou BS dá tržní cenu; akcie skew, měny smile</li>
+                            <li>skoky, lokální volatilita, stochastická volatilita (Heston, $\rho &lt; 0$ → skew)</li>
+                            <li>asijská (průměr, levnější), bariérová (in + out = obyčejná), lookback (dražší), digitální</li>
+                            <li>Vasicek / CIR návrat k průměru; Hull–White sedí na dnešní křivku</li>
                         </ul>
                     </div>
                     <p class="mb-0"><a href="../quiz.html?course=1BP461&topic=9"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
                 </section>
 
                 <section class="topic-section" id="topic-10">
-                    <h3>10. Market Risk, VaR &amp; ES</h3>
-                    <p class="text-muted small">Lecture 8 Dec · Milan Fičura · source: literature (Hull <em>Risk Management and Financial Institutions</em> ch. 10–14; Witzany <em>Financial Derivatives</em>)</p>
+                    <h3>10. Tržní riziko, VaR a ES</h3>
+                    <p class="text-muted small">Přednáška 8. 12. · Milan Fičura · zdroj: literatura (Hull <em>Risk Management and Financial Institutions</em> kap. 10–14; Witzany <em>Financial Derivatives</em>)</p>
 
-                    <h4>Value at Risk and Expected Shortfall</h4>
-                    <div class="def-box"><strong>VaR</strong> at confidence $\alpha$ over horizon $h$: the loss that will not be exceeded with probability $\alpha$ — i.e. the $\alpha$-quantile of the loss distribution. "With 99 % probability we won't lose more than X in 10 days." <strong>Expected Shortfall</strong> (ES, CVaR): the <em>average</em> loss given that the loss exceeds VaR: $ES_\alpha = E[L \mid L &gt; VaR_\alpha]$.</div>
-                    <div class="formula-block">$$VaR_\alpha = (z_\alpha\,\sigma - \mu)\,V \qquad ES_\alpha = \left(\sigma\,\frac{\varphi(z_\alpha)}{1-\alpha} - \mu\right)V \qquad VaR_{h\text{ days}} \approx VaR_{1} \sqrt{h}$$</div>
-                    <div class="ex-box"><strong>Example (parametric, normal):</strong> portfolio 1 mil., daily volatility 1.5 %, $\mu \approx 0$.
-                        <br>99 % 1-day VaR $= 2.326 \cdot 0.015 \cdot 1\,000\,000 = 34\,895$.
-                        <br>10-day: $34\,895 \cdot \sqrt{10} = 110\,348$.
-                        <br>99 % 1-day ES $= 0.015 \cdot \varphi(2.326)/0.01 \cdot 10^6 = 0.015 \cdot 2.665 \cdot 10^6 = 39\,978$.
-                        <br>97.5 % 1-day ES under normality ≈ 99 % VaR (35 k) — that's why Basel FRTB replaced 99 % VaR by 97.5 % ES.</div>
-                    <div class="thm-box"><strong>Coherent risk measure</strong> (Artzner et al.): monotonicity, translation invariance, positive homogeneity, <strong>subadditivity</strong> $\rho(A + B) \le \rho(A) + \rho(B)$. ES is coherent; <strong>VaR is not subadditive</strong> in general (can penalise diversification, e.g. with bonds that default with low probability). VaR also says nothing about the size of losses beyond it.</div>
+                    <h4>Value at Risk a Expected Shortfall</h4>
+                    <div class="def-box"><strong>VaR</strong> (hodnota v riziku) na hladině spolehlivosti $\alpha$ a horizontu $h$: ztráta, která se s pravděpodobností $\alpha$ nepřekročí – tedy $\alpha$-kvantil rozdělení ztrát. „S pravděpodobností 99 % neprodělám za 10 dní víc než X.“ <strong>Expected Shortfall</strong> (ES, CVaR, očekávaná ztráta v chvostu): <em>průměrná</em> ztráta v případech, kdy ztráta VaR překročí: $ES_\alpha = E[L \mid L &gt; VaR_\alpha]$.</div>
+                    <div class="formula-block">$$VaR_\alpha = (z_\alpha\,\sigma - \mu)\,V \qquad ES_\alpha = \left(\sigma\,\frac{\varphi(z_\alpha)}{1-\alpha} - \mu\right)V \qquad VaR_{h\text{ dní}} \approx VaR_{1} \sqrt{h}$$</div>
+                    <p>$V$ = hodnota portfolia, $z_\alpha$ = kvantil normovaného normálního rozdělení (99 % → 2,326; 95 % → 1,645), $\varphi$ = jeho hustota.</p>
+                    <div class="ex-box"><strong>Příklad (parametricky, normální rozdělení):</strong> portfolio 1 mil., denní volatilita 1,5 %, $\mu \approx 0$.
+                        <br>99% denní VaR $= 2{,}326 \cdot 0{,}015 \cdot 1\,000\,000 = 34\,895$.
+                        <br>Na 10 dní: $34\,895 \cdot \sqrt{10} = 110\,348$.
+                        <br>99% denní ES $= 0{,}015 \cdot \varphi(2{,}326)/0{,}01 \cdot 10^6 = 0{,}015 \cdot 2{,}665 \cdot 10^6 = 39\,978$.
+                        <br>97,5% denní ES při normalitě ≈ 99% VaR (35 tis.) – proto Basel FRTB nahradil 99% VaR 97,5% ES (podobná výše, ale ES vidí i do chvostu).</div>
+                    <div class="thm-box"><strong>Koherentní míra rizika</strong> (coherent risk measure, Artzner a kol.): monotonie, translační invariance, kladná homogenita, <strong>subaditivita</strong> $\rho(A + B) \le \rho(A) + \rho(B)$ (riziko spojeného portfolia není větší než součet rizik – diverzifikace neškodí). ES je koherentní; <strong>VaR obecně subaditivní není</strong> (může trestat diverzifikaci, např. u dluhopisů s malou pravděpodobností krachu). VaR navíc neříká nic o tom, jak velké jsou ztráty za ním.</div>
 
-                    <h4>Approaches to VaR</h4>
+                    <h4>Jak se VaR počítá</h4>
                     <table class="table table-bordered summary-table">
-                        <thead><tr><th>Approach</th><th>How</th><th>+</th><th>−</th></tr></thead>
+                        <thead><tr><th>Metoda</th><th>Jak</th><th>+</th><th>−</th></tr></thead>
                         <tbody>
-                            <tr><td><strong>Historical simulation</strong></td><td>revalue today's portfolio under the last $N$ days of actual market changes (e.g. 500), take the quantile of P&amp;L</td><td>no distribution assumption, fat tails and correlations built in</td><td>past = future; slow to react; few tail observations</td></tr>
-                            <tr><td><strong>Parametric</strong> (variance–covariance, delta-normal)</td><td>$\sigma_p = \sqrt{\mathbf w^\top\Sigma\mathbf w}$, VaR $= z_\alpha\sigma_p V$</td><td>fast, analytical, easy decomposition</td><td>normality underestimates tails; nonlinear positions (options) need delta-gamma</td></tr>
-                            <tr><td><strong>Monte Carlo</strong></td><td>simulate risk factors from a model (e.g. GARCH, copula), fully revalue the portfolio</td><td>flexible, handles options and any distribution</td><td>computationally heavy, model risk</td></tr>
+                            <tr><td><strong>Historická simulace</strong></td><td>dnešní portfolio přeceníš podle skutečných tržních změn za posledních $N$ dní (např. 500) a vezmeš kvantil zisků/ztrát</td><td>žádný předpoklad o rozdělení, tlusté chvosty a korelace jsou v datech</td><td>minulost = budoucnost; pomalu reaguje; málo pozorování v chvostu</td></tr>
+                            <tr><td><strong>Parametrická</strong> (variance–covariance, delta-normal)</td><td>$\sigma_p = \sqrt{\mathbf w^\top\Sigma\mathbf w}$, VaR $= z_\alpha\sigma_p V$</td><td>rychlá, analytická, snadno se rozloží na části</td><td>normalita podceňuje chvosty; nelineární pozice (opce) potřebují delta-gama</td></tr>
+                            <tr><td><strong>Monte Carlo</strong></td><td>nasimuluješ rizikové faktory z modelu (např. GARCH, kopula) a portfolio pokaždé celé přeceníš</td><td>pružná, zvládne opce i jakékoli rozdělení</td><td>výpočetně náročná, riziko špatného modelu</td></tr>
                         </tbody>
                     </table>
-                    <div class="warn-box"><strong>⚠️ Pozor:</strong> VaR is a <em>positive</em> number representing a loss. $\sqrt h$ scaling assumes i.i.d. returns with zero mean. For an option portfolio delta-normal VaR is wrong for large moves: a short straddle (negative gamma) has more risk than delta suggests. Historical simulation with $N = 500$ and 99 %: VaR = 5th worst loss (500 × 1 %).</div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> VaR se udává jako <em>kladné</em> číslo, které znamená ztrátu. Převod přes $\sqrt h$ předpokládá nezávislé výnosy s nulovým průměrem. U portfolia opcí je delta-normal VaR pro velké pohyby špatně: prodaný straddle (záporná gama) je rizikovější, než ukazuje delta. Historická simulace s $N = 500$ a 99 %: VaR = 5. nejhorší ztráta (500 × 1 %).</div>
 
-                    <h4>Modelling volatility and correlation</h4>
+                    <h4>Modelování volatility a korelace</h4>
                     <div class="formula-block">$$\text{EWMA: } \sigma_t^2 = \lambda\sigma_{t-1}^2 + (1-\lambda)r_{t-1}^2 \qquad \text{GARCH(1,1): } \sigma_t^2 = \omega + \alpha r_{t-1}^2 + \beta\sigma_{t-1}^2$$</div>
                     <ul>
-                        <li><strong>EWMA</strong> (RiskMetrics, $\lambda = 0.94$ daily): recent returns get more weight; no mean reversion.</li>
-                        <li><strong>GARCH(1,1)</strong>: stationary if $\alpha + \beta &lt; 1$; long-run variance $V_L = \omega/(1 - \alpha - \beta)$; <strong>persistence</strong> $\alpha + \beta$ (≈ 0.98 for equities). EWMA = GARCH with $\omega = 0$, $\alpha + \beta = 1$. Estimated by maximum likelihood. Asymmetric versions (GJR, EGARCH) capture the leverage effect.</li>
-                        <li><strong>Correlation</strong>: EWMA covariance $\text{cov}_t = \lambda\,\text{cov}_{t-1} + (1-\lambda)x_{t-1}y_{t-1}$; multivariate GARCH (DCC). Correlations rise in crises — diversification fails exactly when needed.</li>
-                        <li><strong>Stochastic volatility</strong> (Heston, SV models): volatility has its own random shock — the continuous-time counterpart used in option pricing (topic 9).</li>
+                        <li><strong>EWMA</strong> (exponenciálně vážený klouzavý průměr, RiskMetrics, $\lambda = 0{,}94$ pro denní data): nedávné výnosy mají větší váhu; volatilita se nevrací k žádnému průměru.</li>
+                        <li><strong>GARCH(1,1)</strong>: stacionární, když $\alpha + \beta &lt; 1$; dlouhodobý rozptyl $V_L = \omega/(1 - \alpha - \beta)$ – k němu se volatilita vrací; <strong>perzistence</strong> $\alpha + \beta$ (u akcií ≈ 0,98 – šoky doznívají pomalu). EWMA = GARCH s $\omega = 0$ a $\alpha + \beta = 1$. Odhaduje se metodou maximální věrohodnosti. Asymetrické verze (GJR, EGARCH) zachytí pákový efekt.</li>
+                        <li><strong>Korelace</strong>: EWMA kovariance $\text{cov}_t = \lambda\,\text{cov}_{t-1} + (1-\lambda)x_{t-1}y_{t-1}$; vícerozměrný GARCH (DCC). V krizích korelace rostou – diverzifikace selže přesně tehdy, kdy je nejvíc potřeba.</li>
+                        <li><strong>Stochastická volatilita</strong> (Heston, SV modely): volatilita má vlastní náhodný šok – spojitá obdoba používaná při oceňování opcí (téma 9).</li>
                     </ul>
-                    <div class="ex-box"><strong>Example (EWMA update):</strong> yesterday's volatility estimate 1 %, yesterday's return 2 %, $\lambda = 0.94$.
-                        <br>$\sigma_t^2 = 0.94 \cdot 0.0001 + 0.06 \cdot 0.0004 = 0.000118$ → $\sigma_t = 1.086\%$.
-                        <br><strong>GARCH long-run vol:</strong> $\omega = 0.000002$, $\alpha = 0.08$, $\beta = 0.90$ → $V_L = 0.000002/0.02 = 0.0001$ → 1 % daily ≈ 15.9 % annual.</div>
+                    <div class="ex-box"><strong>Příklad (aktualizace EWMA):</strong> včerejší odhad volatility 1 %, včerejší výnos 2 %, $\lambda = 0{,}94$.
+                        <br>$\sigma_t^2 = 0{,}94 \cdot 0{,}0001 + 0{,}06 \cdot 0{,}0004 = 0{,}000118$ → $\sigma_t = 1{,}086\%$.
+                        <br><strong>Dlouhodobá volatilita v GARCH:</strong> $\omega = 0{,}000002$, $\alpha = 0{,}08$, $\beta = 0{,}90$ → $V_L = 0{,}000002/0{,}02 = 0{,}0001$ → denně 1 % ≈ ročně 15,9 %.</div>
 
-                    <h4>Backtesting and regulation</h4>
-                    <div class="def-box"><strong>Backtesting:</strong> compare VaR with realised P&amp;L; count <strong>exceptions</strong> (loss &gt; VaR). With 99 % VaR over 250 days we expect 2.5. <strong>Kupiec POF test</strong>: $LR = -2\ln\!\left[(1-p)^{N-x}p^x\right] + 2\ln\!\left[(1-\hat p)^{N-x}\hat p^{x}\right] \sim \chi^2_1$, $\hat p = x/N$. <strong>Christoffersen</strong> test adds independence (exceptions shouldn't cluster). <strong>Basel traffic light</strong> (250 days, 99 %): 0–4 green, 5–9 yellow (higher multiplier), 10+ red.</div>
-                    <div class="ex-box"><strong>Example (Kupiec):</strong> 6 exceptions in 250 days at 99 % VaR → $LR = 3.56 &lt; 3.84 = \chi^2_{1;0.95}$ → do not reject the model at 5 %; but in the Basel <em>yellow</em> zone.</div>
-                    <div class="def-box"><strong>Regulation:</strong> Basel II.5 (2009): 10-day 99 % VaR + <strong>stressed VaR</strong> (calibrated on a crisis year). Basel III <strong>FRTB</strong> (Fundamental Review of the Trading Book): <strong>97.5 % ES</strong> with liquidity horizons 10–120 days by risk factor, calibrated to a stressed period. In the EU applied through CRR3; the start of FRTB own-funds requirements was postponed (to 2027 per EU decision in 2025 — check current status).</div>
-                    <div class="insight-box"><strong>Intuition:</strong> VaR answers "how bad is a bad day?"; ES answers "if it's worse than that, how bad on average?". <strong>Stress testing</strong> complements both: specific scenarios (2008, COVID 2020, rate shock 2022) that may not be in the historical window.</div>
+                    <h4>Zpětné testování a regulace</h4>
+                    <div class="def-box"><strong>Zpětné testování</strong> (backtesting): porovnáš VaR se skutečnými zisky/ztrátami a spočítáš <strong>překročení</strong> (exceptions – dny, kdy byla ztráta větší než VaR). U 99% VaR za 250 dní čekáme 2,5 překročení. <strong>Kupiecův POF test</strong>: $LR = -2\ln\!\left[(1-p)^{N-x}p^x\right] + 2\ln\!\left[(1-\hat p)^{N-x}\hat p^{x}\right] \sim \chi^2_1$, $\hat p = x/N$ – testuje, jestli je překročení tolik, kolik má být. <strong>Christoffersenův</strong> test přidává nezávislost (překročení by se neměla shlukovat). <strong>Basel semafor</strong> (traffic light; 250 dní, 99 %): 0–4 zelená, 5–9 žlutá (vyšší násobitel kapitálu), 10+ červená.</div>
+                    <div class="ex-box"><strong>Příklad (Kupiec):</strong> 6 překročení za 250 dní u 99% VaR → $LR = 3{,}56 &lt; 3{,}84 = \chi^2_{1;0{,}95}$ → model na 5 % nezamítáme; ale v Basel semaforu je to <em>žlutá</em> zóna.</div>
+                    <div class="def-box"><strong>Regulace:</strong> Basel II.5 (2009): 10denní 99% VaR + <strong>stresový VaR</strong> (stressed VaR – spočítaný na krizovém roce). Basel III <strong>FRTB</strong> (Fundamental Review of the Trading Book – revize obchodního portfolia): <strong>97,5% ES</strong> s horizonty likvidity 10–120 dní podle rizikového faktoru, kalibrovaný na stresové období. V EU se zavádí přes CRR3; začátek kapitálových požadavků podle FRTB byl odložen (na 2027 podle rozhodnutí EU z roku 2025 – ověř aktuální stav).</div>
+                    <div class="insight-box"><strong>Intuice:</strong> VaR odpovídá na otázku „jak zlý je špatný den?“; ES na „a když je to ještě horší, jak zlé to je v průměru?“. <strong>Stresové testování</strong> obojí doplňuje: konkrétní scénáře (2008, COVID 2020, šok sazeb 2022), které v historickém okně vůbec nemusí být.</div>
 
-                    <h4>R lab: VaR, ES, EWMA/GARCH and backtesting</h4>
+                    <h4>R lab: VaR, ES, EWMA/GARCH a zpětné testování</h4>
                     <pre class="r-box"><code>set.seed(9)
-r &lt;- rt(1000, df = 4) * 0.01                 # fat-tailed daily P&amp;L returns
+r &lt;- rt(1000, df = 4) * 0.01                 # denní výnosy s tlustými chvosty
 V &lt;- 1e6; alpha &lt;- 0.99
 
 VaR_hist  &lt;- -quantile(r, 1 - alpha) * V
@@ -910,7 +922,7 @@ VaR_param &lt;- (qnorm(alpha) * sd(r) - mean(r)) * V
 ES_param  &lt;- (sd(r) * dnorm(qnorm(alpha)) / (1 - alpha) - mean(r)) * V
 round(c(VaR_hist = unname(VaR_hist), VaR_param = VaR_param,
         ES_hist = ES_hist, ES_param = ES_param))
-# with fat tails the historical numbers exceed the normal ones — the model misses the tail</code></pre>
+# s tlustými chvosty vyjdou historická čísla vyšší než normální – model chvost nevidí</code></pre>
                     <pre class="r-box"><code>ewma_vol &lt;- function(r, lambda = 0.94) {     # RiskMetrics
   s2 &lt;- numeric(length(r)); s2[1] &lt;- var(r)
   for (t in 2:length(r)) s2[t] &lt;- lambda * s2[t - 1] + (1 - lambda) * r[t - 1]^2
@@ -918,28 +930,28 @@ round(c(VaR_hist = unname(VaR_hist), VaR_param = VaR_param,
 }
 sig &lt;- ewma_vol(r)
 
-library(rugarch)                             # GARCH(1,1) with Student-t innovations
+library(rugarch)                             # GARCH(1,1) se Studentovým t rozdělením
 spec &lt;- ugarchspec(variance.model = list(model = "sGARCH", garchOrder = c(1, 1)),
                    mean.model = list(armaOrder = c(0, 0)), distribution.model = "std")
 fit &lt;- ugarchfit(spec, r)
 coef(fit)                                    # omega, alpha1, beta1 (alpha1 + beta1 &lt; 1)
 sigma_fc &lt;- sigma(ugarchforecast(fit, n.ahead = 10))</code></pre>
-                    <pre class="r-box"><code># Kupiec POF backtest: are the VaR exceptions as frequent as they should be?
-kupiec &lt;- function(x, N, p) {                # x exceptions in N days, VaR level 1 - p
+                    <pre class="r-box"><code># Kupiecův POF backtest: je překročení VaR tolik, kolik má být?
+kupiec &lt;- function(x, N, p) {                # x překročení za N dní, VaR na hladině 1 - p
   ph &lt;- x / N
   LR &lt;- -2 * (log((1 - p)^(N - x) * p^x) - log((1 - ph)^(N - x) * ph^x))
   c(LR = LR, p_value = 1 - pchisq(LR, 1))
 }
-kupiec(6, 250, 0.01)                         # LR 3.56 &lt; 3.84 → do not reject at 5 %</code></pre>
-                    <div class="insight-box"><strong>Case-study angle</strong> (the most typical term-project topic): take a portfolio of stocks / indices / FX, compute rolling 1-day 99 % VaR and 97.5 % ES by historical simulation, normal parametric, EWMA and GARCH-t over several years; backtest each (exceptions, Kupiec, Christoffersen; <code>PerformanceAnalytics::VaR()</code> and <code>ES()</code>, <code>rugarch::VaRTest()</code>), and discuss which method reacts best to crises (2008, 2020, 2022). Plot returns with the −VaR line and mark the exceptions.</div>
+kupiec(6, 250, 0.01)                         # LR 3.56 &lt; 3.84 → na 5 % nezamítáme</code></pre>
+                    <div class="insight-box"><strong>Pro semestrální práci</strong> (nejtypičtější téma): vzít portfolio akcií / indexů / měn, spočítat klouzavý denní 99% VaR a 97,5% ES historickou simulací, normálně parametricky, EWMA a GARCH-t za několik let; každou metodu zpětně otestovat (počet překročení, Kupiec, Christoffersen; <code>PerformanceAnalytics::VaR()</code> a <code>ES()</code>, <code>rugarch::VaRTest()</code>) a rozebrat, která nejlíp reaguje na krize (2008, 2020, 2022). Do grafu výnosů přidat čáru −VaR a vyznačit překročení.</div>
 
-                    <div class="summary-box"><strong>Summary:</strong>
+                    <div class="summary-box"><strong>Shrnutí:</strong>
                         <ul>
-                            <li>VaR = quantile of loss; ES = average loss beyond VaR; ES is coherent (subadditive), VaR is not</li>
-                            <li>normal: VaR $= z_\alpha\sigma V$, ES $= \sigma\varphi(z_\alpha)/(1-\alpha)\,V$; $\sqrt h$ scaling</li>
-                            <li>historical × parametric × Monte Carlo — assumptions and weaknesses</li>
-                            <li>EWMA ($\lambda = 0.94$), GARCH(1,1): $V_L = \omega/(1-\alpha-\beta)$</li>
-                            <li>backtesting: Kupiec, traffic light (0–4 / 5–9 / 10+); FRTB → 97.5 % ES</li>
+                            <li>VaR = kvantil ztráty; ES = průměrná ztráta za VaR; ES je koherentní (subaditivní), VaR ne</li>
+                            <li>normálně: VaR $= z_\alpha\sigma V$, ES $= \sigma\varphi(z_\alpha)/(1-\alpha)\,V$; převod přes $\sqrt h$</li>
+                            <li>historická × parametrická × Monte Carlo – předpoklady a slabiny</li>
+                            <li>EWMA ($\lambda = 0{,}94$), GARCH(1,1): $V_L = \omega/(1-\alpha-\beta)$</li>
+                            <li>zpětné testování: Kupiec, semafor (0–4 / 5–9 / 10+); FRTB → 97,5% ES</li>
                         </ul>
                     </div>
                     <p class="mb-0"><a href="../quiz.html?course=1BP461&topic=10"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
