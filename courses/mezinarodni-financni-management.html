@@ -45,7 +45,8 @@
 
             <div class="col-lg-9">
                 <h1 class="mb-1">Mezinárodní finanční management</h1>
-                <p class="text-muted mb-4">1MT461 &middot; 6 kreditů &middot; Průběžný test 40 % &middot; Závěrečný test 60 %</p>
+                <p class="text-muted mb-2">1MT461 &middot; 6 kreditů &middot; Průběžný test 26. 10. (40 %) &middot; Závěrečný test ve zkouškovém (60 %)</p>
+                <div class="insight-box mb-4"><strong>Struktura obou testů (100 b):</strong> 10 otázek a–d po 4 b (40 b) · 2 početní příklady po 15 b (30 b; hodnotí se hlavně správný postup, ne složité počty) · 1 otevřená otázka s delší odpovědí (30 b). Závěrečný test má dva řádné termíny ve zkouškovém a předtermín před Vánoci.</div>
 
                 <section class="topic-section" id="harmonogram">
                     <h3>Harmonogram</h3>
@@ -55,11 +56,21 @@
                 <!-- Témata ze sylabu: <section class="topic-section" id="topic-N"> … (viz skill semestr) -->
                 <section class="topic-section" id="topic-1">
                     <h3>1. Nadnárodní a exportně/importně orientovaná firma na devizovém trhu</h3>
-                    <p class="text-muted small">Přednáška 21. 9. · Karel Brůna · zdroj: prezentace 1, data BIS Triennial Survey 2025</p>
+                    <p class="text-muted small">Přednáška 21. 9. · Karel Brůna · zdroj: prezentace 1, zápisky z přednášky, data BIS Triennial Survey 2025</p>
 
                     <h4>Devizový trh a pozice firmy</h4>
                     <div class="def-box"><strong>Devizový trh:</strong> decentralizovaný mimoburzovní (OTC) trh, kde se obchoduje 24 hodin denně od pondělí do pátku. Je to největší a nejlikvidnější finanční trh: denní obrat je zhruba <strong>9,6 bil. USD</strong> (BIS, duben 2025).</div>
                     <p>Nefinanční firmy tvoří jen asi <strong>5 %</strong> obratu. Na trhu jsou tedy „malým“ hráčem a kurz berou jako danou veličinu, kterou neovlivní. Proto musí řídit riziko jeho pohybu.</p>
+
+                    <div class="def-box"><strong>Market maker × price taker:</strong>
+                        <ul class="mb-0">
+                            <li><strong>market maker</strong> (tvůrce trhu, např. ČSOB) průběžně kotuje dvě ceny: <strong>bid</strong> (za tolik bázi <em>nakupuje</em>) a <strong>ask</strong> (za tolik ji <em>prodává</em>), bid &lt; ask. Rozdíl je <strong>spread</strong>, výdělek market makera.</li>
+                            <li><strong>price taker</strong> (typicky firma) kotaci jen přijímá: prodává za bid, kupuje za ask.</li>
+                            <li><strong>kotace trhu</strong> = bid / ask + <strong>volume</strong> (objem, pro který kotace platí).</li>
+                        </ul>
+                    </div>
+                    <p>Devizový trh je <strong>OTC</strong> (over the counter): neexistuje jedna burza, obchody se uzavírají přímo mezi protistranami. Klient obchoduje buď přímo s bankou, nebo přes <strong>agregátor</strong>, platformu, která sbírá kotace více market makerů a ukáže nejlepší z nich.</p>
+                    <div class="insight-box"><strong>Fragmentace:</strong> protože trh nemá jedno centrum, je <strong>fragmentovaný</strong>: na různých místech (u různých bank a platforem) je ve stejnou chvíli trochu jiná cena. Je to neefektivita, na které vydělává řada algo traderů: rychle koupí tam, kde je levněji, a prodají tam, kde je dráž.</div>
 
                     <p class="small text-muted mb-1">Tabulka níže je doplněna z literatury, na slidech je jen jako oblast „pozice firmy“; podrobně v tématech 2, 3 a 7.</p>
                     <table class="table table-bordered summary-table">
@@ -74,11 +85,19 @@
                     <p><strong>Nadnárodní firma</strong> má expozici v mnoha měnách najednou (dceřiné společnosti, vnitroskupinové toky). Díky tomu může pozice vzájemně započítat a řízení centralizovat (téma 11).</p>
 
                     <h4>Hlavní rizika, kterým firmy na devizovém trhu čelí</h4>
+                    <div class="def-box"><strong>Riziko × expozice:</strong>
+                        <ul class="mb-0">
+                            <li><strong>riziko</strong> = odchylka skutečnosti od očekávání (kurz se vyvine jinak, než firma předpokládala),</li>
+                            <li><strong>expozice</strong> = míra, v jaké je firma pohybu kurzu vystavena, tedy <em>kolik</em> a <em>čeho</em> je v sázce (např. pohledávka 1 mil. EUR). <span class="text-muted small">(upřesnění z literatury)</span></li>
+                        </ul>
+                    </div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> expozice ≠ riziko. Firma může mít velkou expozici (hodně EUR příjmů) a přitom malé riziko, když je kurz stabilní nebo očekávaný vývoj dobře predikovatelný. A naopak: riziko vzniká jen tam, kde je nějaká expozice. Podrobně téma 7.</div>
                     <ul>
                         <li><strong>Kurzové riziko:</strong> volatilita kurzu mění hodnotu budoucích příjmů a plateb v domácí měně.</li>
                         <li><strong>Riziko likvidity:</strong> když je na trhu málo obchodů, rozšiřuje se spread a kurz může náhle skočit.</li>
                         <li><strong>Riziko zásahu autorit:</strong> intervence centrální banky nebo změna kurzového režimu (téma 8, např. konec kurzového závazku ČNB v roce 2017).</li>
                     </ul>
+                    <div class="def-box"><strong>Flash crash:</strong> trh vyhodnotí informaci, která ve skutečnosti důležitá není, jako důležitou → prudká změna kurzu během minut, která se brzy vrátí zpět. Nízká likvidita pohyb ještě zesílí.</div>
                     <div class="ex-box"><strong>Příklad (GBP/USD flash crash, 7. 10. 2016):</strong> kolem 00:07 londýnského času, tedy v asijské seanci s nízkou likviditou, spadla libra během zhruba dvou minut z přibližně 1,26 na přibližně 1,14 USD. Futures na CME se automaticky zastavily, potom se kurz částečně vrátil.
                         <br><strong>Ponaučení:</strong> v době nízké likvidity může i relativně malý objem obchodů vyvolat extrémní pohyb kurzu.</div>
                     <div class="ex-box"><strong>Příklad (intervence na podporu jenu, 2024 a 2026):</strong> když USD/JPY vystoupal k hranici přibližně 160 jenů za dolar, japonské úřady opakovaně intervenovaly a kurz se skokově vrátil. Pro firmu to znamená riziko náhlého zlomu trendu, který nevyplývá z fundamentů.</div>
@@ -124,11 +143,27 @@
                             </ul>
                         </li>
                         <li><strong>Obchody nefinančních firem klesají</strong>. Důvody jsou pomalejší růst HDP a zahraničního obchodu, omezení syndikovaného financování a centralizace cash managementu nadnárodních firem, díky které se toky nejdřív započítají uvnitř skupiny.</li>
-                        <li><strong>Rostou retailoví investoři</strong>, kteří obchodují přes on-line platformy (tzv. retail aggregators).</li>
+                        <li><strong>Rostou retailoví investoři</strong>, kteří obchodují přes on-line platformy a brokery (tzv. retail aggregators).</li>
                     </ul>
+                    <div class="insight-box"><strong>Jak to shrnul přednášející:</strong> většina market makerů z trhu odešla a zůstalo jich jen pár. Zato roste aktivita klientů: HFT a algoritmické obchodování, retail přes brokery a mezinárodní diverzifikace správců majetku. Na trh tak vstupuje hodně nových investorů ochotných nést vyšší riziko, tzv. <strong>leverage investoři</strong> (obchodují na páku).</div>
+
+                    <h4>Spot, forward a vehicle currency</h4>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th></th><th>Spot</th><th>Forward (derivát)</th></tr></thead>
+                        <tbody>
+                            <tr><td>Kurz</td><td>aktuální spotový kurz v okamžiku obchodu</td><td>fixně domluvený dopředu</td></tr>
+                            <tr><td>Vypořádání</td><td>zpravidla za <strong>2 pracovní dny</strong> (T+2)</td><td>v domluvený termín (např. za 3 měsíce)</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="def-box"><strong>Vehicle currency (VC):</strong> měna, přes kterou se obchodují a kotují ostatní měny.
+                        <ul class="mb-0">
+                            <li><strong>USD</strong> – globální VC: EUR, GBP, JPY, CAD, AUD… (velké měny napříč světem),</li>
+                            <li><strong>EUR</strong> – regionální VC pro Evropu: CZK, NOK, HUF, CHF, SEK…</li>
+                        </ul>
+                    </div>
 
                     <h4>Kotace kurzu</h4>
-                    <div class="def-box"><strong>Značení na přednášce:</strong> <code>25,264 CZK/EUR</code> znamená 25,264 CZK za 1 EUR.
+                    <div class="def-box"><strong>Značení na přednášce:</strong> <code>25,264 CZK/EUR</code> znamená 25,264 CZK za 1 EUR (měna za lomítkem = jednotka).
                         <ul class="mb-0">
                             <li><strong>base currency</strong> (báze) = měna, jejíž 1 jednotka se oceňuje: zde <strong>EUR</strong>, píše se <em>za</em> lomítko,</li>
                             <li><strong>quoted currency</strong> (kotovaná měna) = měna, ve které je vyjádřena cena: zde <strong>CZK</strong>, píše se <em>před</em> lomítko.</li>
@@ -137,21 +172,22 @@
                     <table class="table table-bordered summary-table">
                         <thead><tr><th></th><th>Evropská kotace</th><th>Americká kotace</th></tr></thead>
                         <tbody>
-                            <tr><td>Příklad</td><td><strong>25,264 CZK/EUR</strong></td><td><strong>0,0396 EUR/CZK</strong></td></tr>
-                            <tr><td>Význam</td><td>kolik domácí měny (CZK) za 1 jednotku zahraniční (EUR)</td><td>kolik zahraniční měny (EUR) za 1 jednotku domácí (CZK)</td></tr>
-                            <tr><td>Big figure</td><td>25,2</td><td>0,03</td></tr>
-                            <tr><td>Small figure (poslední dvě místa = pipy)</td><td>64</td><td>96</td></tr>
+                            <tr><td>Kde je vehicle currency</td><td><strong>za</strong> lomítkem (VC je báze)</td><td><strong>před</strong> lomítkem (VC je kotovaná měna)</td></tr>
+                            <tr><td>Význam</td><td>kolik jednotek dané měny za 1 jednotku VC</td><td>kolik jednotek VC za 1 jednotku dané měny</td></tr>
+                            <tr><td>Příklad</td><td><strong>25,264 CZK/EUR</strong> (VC = EUR)</td><td><strong>1,1527 USD/EUR</strong> (VC = USD) · <strong>0,0396 EUR/CZK</strong> (VC = EUR, slide)</td></tr>
+                            <tr><td>Big figure</td><td>25,2</td><td>1,15 · 0,03</td></tr>
+                            <tr><td>Small figure (poslední dvě místa = pipy)</td><td>64</td><td>27 · 96</td></tr>
                         </tbody>
                     </table>
-                    <p>Obě kotace jsou <strong>navzájem převrácené</strong>: $1 / 25{,}264 = 0{,}0396$. Oba kurzy jsou <strong>outright quotation</strong>, tedy kurz vyjádřený celým číslem. Opakem je kotace ve forwardových bodech (téma 2). Dealeři si mezi sebou často sdělují jen small figure („64“), protože big figure je všem známá.</p>
+                    <p>Rozhoduje tedy, <strong>kde stojí vehicle currency</strong>, ne která měna je domácí. Evropská a americká kotace stejného páru jsou <strong>navzájem převrácené</strong>: $1 / 25{,}264 = 0{,}0396$. Oba kurzy jsou <strong>outright quotation</strong>, tedy kurz vyjádřený celým číslem. Opakem je kotace ve forwardových bodech (téma 2). Dealeři si mezi sebou často sdělují jen small figure („64“), protože big figure je všem známá.</p>
                     <div class="warn-box"><strong>⚠️ Pozor na zápis:</strong>
                         <ul class="mb-0">
                             <li>Na trhu (Reuters, Bloomberg, grafy) se píše <strong>opačně</strong>: <code>EUR/CZK 25,264</code> = báze první. Grafy ve stejné prezentaci používají tržní zápis: „EUR/USD“ kolem 1,2–1,6 znamená USD za 1 EUR.</li>
                             <li>V testu vždy nejdřív urči, <strong>která měna je jednotka</strong>. Nejrychleji to poznáš podle velikosti čísla: 25 CZK za EUR dává smysl, 25 EUR za CZK ne.</li>
-                            <li>Anglické učebnice (Eun–Resnick) definují „European / American terms“ vůči USD. Na test platí definice z přednášky.</li>
+                            <li>Anglické učebnice (Eun–Resnick) definují „European / American terms“ vůči USD (European = cizí měna za 1 USD). Přednáška to zobecňuje na libovolnou vehicle currency, pro USD obě definice souhlasí.</li>
                         </ul>
                     </div>
-                    <div class="def-box"><strong>Bid / ask:</strong> market maker kotuje dva kurzy báze: <strong>bid</strong> (za tolik bázi <em>nakupuje</em>) a <strong>ask</strong> (za tolik ji <em>prodává</em>), přičemž bid &lt; ask. Klient tedy prodává za bid a kupuje za ask. Rozdíl mezi nimi (spread) je výdělek market makera.</div>
+                    <p>Bid a ask se vždy vztahují k <strong>bázi</strong> (měně za lomítkem): u 25,250–25,280 CZK/EUR banka kupuje EUR za 25,250 a prodává za 25,280 CZK.</p>
 
                     <h4>Křížový kurz</h4>
                     <p>Křížový kurz počítá kurz dvou měn přes třetí, typicky USD. Postup závisí na tom, jak jsou zadané výchozí kurzy.</p>
@@ -169,6 +205,23 @@
                     <div class="insight-box"><strong>Intuice k bid/ask:</strong> křížový obchod jsou ve skutečnosti dva obchody za sebou a klient v každém z nich platí spread. Proto musí být křížový bid co nejnižší a ask co nejvyšší. Když ti vyjde bid &gt; ask nebo spread užší než u výchozích kurzů, máš prohozené bid a ask.</div>
                     <div class="insight-box"><strong>Dynamická aplikace:</strong> podle pravidla $\text{CZK/USD} = \text{CZK/EUR} \cdot \text{EUR/USD}$ platí, že když je koruna vůči euru relativně stabilní, kurz <strong>CZK/USD kopíruje pohyb EUR/USD</strong>. Když v roce 2008 euro vůči dolaru extrémně posílilo (tržně EUR/USD ≈ 1,6), dolar klesl k 15 CZK. Pro českou firmu fakturující v USD je tedy velká část rizika ve skutečnosti riziko pohybu eura vůči dolaru.</div>
 
+                    <h4>Trojúhelníková arbitráž</h4>
+                    <p>Na cvičení jsme přes křížové kurzy zkoumali, jestli se vyplatí přesunout peníze přes více měn. Když se kótovaný křížový kurz liší od kurzu spočteného přes třetí měnu, projdeš „trojúhelník“ tří směn a jedním směrem skončíš s víc penězi, než s kolika jsi začal. To je <strong>arbitráž</strong>, výdělek bez rizika. Opačným směrem naopak proděláš, protože v každé směně platíš spread.</p>
+                    <div class="ex-box"><strong>Příklad</strong> <span class="text-muted small">(vymyšlené kurzy, stejný typ jako na cvičení)</span>: banky kotují
+                        EUR/USD = 0,8540–0,8550 (EUR za 1 USD), GBP/USD = 0,7400–0,7410 (GBP za 1 USD) a jiná banka EUR/GBP = 1,1600–1,1610 (EUR za 1 GBP). Máme 1 000 000 USD.
+                        <br><strong>0. Křížový kurz:</strong> z příkladu výše vychází EUR/GBP = 1,1525–1,1554. Kótovaný bid 1,1600 je <strong>nad</strong> syntetickým askem 1,1554 → libra je u třetí banky drahá, arbitráž je možná.
+                        <br><strong>Cesta A: USD → EUR → GBP → USD</strong>
+                        <br>USD → EUR: banka od nás kupuje USD (bázi) za bid: $1\,000\,000 \cdot 0{,}8540 = 854\,000$ EUR
+                        <br>EUR → GBP: kupujeme GBP (bázi) za ask: $854\,000 / 1{,}1610 = 735\,573$ GBP
+                        <br>GBP → USD: kupujeme USD (bázi) za ask: $735\,573 / 0{,}7410 = 992\,676$ USD → <strong>ztráta 7 324 USD</strong>
+                        <br><strong>Cesta B: USD → GBP → EUR → USD</strong>
+                        <br>USD → GBP: prodáváme USD za bid: $1\,000\,000 \cdot 0{,}7400 = 740\,000$ GBP
+                        <br>GBP → EUR: prodáváme drahou GBP za bid: $740\,000 \cdot 1{,}1600 = 858\,400$ EUR
+                        <br>EUR → USD: kupujeme USD za ask: $858\,400 / 0{,}8550 = 1\,003\,977$ USD → <strong>zisk 3 977 USD</strong></div>
+                    <div class="insight-box"><strong>Proč vydělává cesta B:</strong> libra je u třetí banky nadhodnocená, takže vyhraje směr, ve kterém ji tam <strong>prodáme</strong> (GBP → EUR). Cesta A ji tam naopak draze kupuje.</div>
+                    <div class="thm-box"><strong>Jak nastavit kotaci, aby arbitráž nebyla možná:</strong> kótovaný křížový kurz se musí <strong>překrývat</strong> s rozpětím spočteným z ostatních dvou kotací. Vlastní bid nesmí být nad syntetickým askem a vlastní ask pod syntetickým bidem. V příkladu by to znamenalo EUR/GBP bid ≤ 1,1554 a ask ≥ 1,1525.</div>
+                    <div class="warn-box"><strong>⚠️ Postup v testu:</strong> u každé směny si nejdřív řekni, která měna je báze a jestli ji kupuješ (ask) nebo prodáváš (bid). Pak <strong>násobíš</strong>, když směňuješ bázi na kotovanou měnu, a <strong>dělíš</strong>, když směňuješ kotovanou měnu na bázi. Spočítej oba směry trojúhelníku: jeden vyjde se ztrátou (spread) a jeden případně se ziskem.</div>
+
                     <div class="summary-box"><strong>Shrnutí:</strong>
                         <ul>
                             <li>Devizový trh je OTC, běží 24 h denně od pondělí do pátku a jeho obrat je zhruba 9,6 bil. USD denně. Nefinanční firmy tvoří jen asi 5 % obratu.</li>
@@ -176,8 +229,12 @@
                             <li>Likvidita je nejvyšší při překryvu Londýn–NY. Při nízké likviditě hrozí skoky kurzu (flash crash GBP 2016). Intervence mohou náhle zlomit trend (JPY).</li>
                             <li>BIS 2025: hlavním centrem je Londýn (38 %), USD je v 89 % obchodů (měny dohromady 200 %), nejobchodovanějším instrumentem jsou FX swapy (42 %), nadpoloviční podíl mají ostatní finanční instituce.</li>
                             <li>Trendy: klesá podíl obchodů mezi dealery i obchodů firem, roste podíl ostatních finančních institucí (HFT, fondy, retail).</li>
-                            <li>Zápis na přednášce: CZK/EUR = CZK za 1 EUR, báze je za lomítkem. Evropská kotace je domácí měna za 1 zahraniční, americká je její převrácená hodnota.</li>
+                            <li>Market maker kotuje bid/ask (+ volume), price taker kotaci přijímá. Trh je OTC a fragmentovaný: na různých místech jiná cena.</li>
+                            <li>Riziko = odchylka od očekávání, expozice = čemu a v jaké výši je firma vystavena.</li>
+                            <li>Spot se vypořádává zpravidla T+2, forward v domluvený termín za předem fixovaný kurz. Vehicle currency: USD globálně, EUR v Evropě.</li>
+                            <li>Zápis na přednášce: CZK/EUR = CZK za 1 EUR, báze je za lomítkem. Evropská kotace má vehicle currency za lomítkem (25,264 CZK/EUR), americká před lomítkem (1,1527 USD/EUR).</li>
                             <li>Křížový kurz: se stejnou bází se dělí (bid/ask, ask/bid), s prostřední měnou, která se vykrátí, se násobí (bid·bid, ask·ask).</li>
+                            <li>Trojúhelníková arbitráž: když kótovaný křížový kurz leží mimo rozpětí spočtené z ostatních kotací, jeden směr trojúhelníku (USD → GBP → EUR → USD) vydělá a opačný prodělá. Bez arbitráže se rozpětí musí překrývat.</li>
                         </ul>
                     </div>
                     <p class="mb-0"><a href="../quiz.html?course=1MT461&topic=1"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>

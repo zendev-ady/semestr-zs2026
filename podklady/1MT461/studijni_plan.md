@@ -24,7 +24,9 @@
 
 Známky: 1 = 90–100 % · 2 = 75–89 % · 3 = 60–74 % · 4 = pod 60 %
 
-**Termíny testů nejsou známé** → doplnit do `courses.js` (`events`), až budou oznámeny. Rozsah průběžného testu také zatím neznámý.
+Termíny (z 1. přednášky): **průběžný test 26. 10.** · závěrečný test ve zkouškovém: 2 řádné termíny + předtermín před Vánoci (data zatím neznámá). Rozsah průběžného testu zatím neznámý.
+
+**Struktura obou testů (100 b):** 10 otázek a–d × 4 b = 40 b · 2 početní příklady × 15 b = 30 b (hodnotí se hlavně postup) · 1 otevřená otázka = 30 b.
 
 ## Harmonogram a témata
 
@@ -50,7 +52,7 @@ Podle oficiálního harmonogramu (pořadí se liší od InSIS sylabu). Číslo t
 
 | # | Klíčové pojmy |
 |---|---|
-| 1 | *(z prezentace)* zdroje volatility (flash crash GBP 2016, intervence JPY), časová pásma a likvidita, struktura obratu podle místa / měny / protistrany / instrumentu (BIS 2025), trendové změny struktury trhu, evropská vs. americká kotace, big/small figure, base/quoted currency, křížový kurz vč. bid/ask |
+| 1 | *(z prezentace)* zdroje volatility (flash crash GBP 2016, intervence JPY), časová pásma a likvidita, struktura obratu podle místa / měny / protistrany / instrumentu (BIS 2025), trendové změny struktury trhu, market maker × price taker, bid/ask/spread/volume, OTC a fragmentace trhu, klient × agregátor, riziko × expozice, spot (T+2) × forward, vehicle currency (USD, EUR), evropská vs. americká kotace (podle pozice VC), big/small figure, base/quoted currency, křížový kurz vč. bid/ask, trojúhelníková arbitráž |
 | 2 | krytá úroková parita, forwardové body, prémie/diskont, outright vs. swap, forward s volným datem plnění, NDF |
 | 3 | call/put, evropská/americká, prémie, vnitřní a časová hodnota, exportér kupuje put / importér call, collar (zero-cost), participating forward, bariérové opce |
 | 4 | single-bank vs. multi-bank platformy, ECN, prime brokerage, algoritmické a vysokofrekvenční obchodování, last look; motivy obchodů firem (zajištění, platby, investice) |
