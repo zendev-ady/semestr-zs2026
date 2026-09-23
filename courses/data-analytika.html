@@ -24,6 +24,7 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="../index.html"><i class="fas fa-arrow-left me-2"></i>Dashboard</a>
             <span class="navbar-text mx-auto"><strong>Data a analytika pro finanční sektor</strong></span>
+            <a class="btn btn-link text-white" href="../plan.html?course=1BP443" title="Studijní plán"><i class="fas fa-book-open"></i></a>
             <a class="btn btn-link text-white" href="../quiz.html?course=1BP443" title="Procvičit v quizu"><i class="fas fa-question-circle"></i></a>
             <button class="btn btn-link text-white" onclick="document.body.classList.toggle('dark-mode')" title="Přepnout dark mode">
                 <i class="fas fa-adjust"></i>
@@ -38,13 +39,23 @@
                     <strong class="d-block mb-2 text-muted" style="font-size:0.8rem;text-transform:uppercase;letter-spacing:.05em">Obsah</strong>
                     <ul class="nav flex-column">
                         <li><a class="nav-link py-1" href="#harmonogram">Harmonogram</a></li>
+                        <li><a class="nav-link py-1" href="#topic-1">1. Úvod</a></li>
+                        <li><a class="nav-link py-1" href="#topic-2">2. Komerční banky</a></li>
+                        <li><a class="nav-link py-1" href="#topic-3">3. Centrální banka</a></li>
+                        <li><a class="nav-link py-1" href="#topic-4">4. Pojišťovny</a></li>
+                        <li><a class="nav-link py-1" href="#topic-5">5. Zprostředkovatelé</a></li>
+                        <li><a class="nav-link py-1" href="#topic-6">6. Zadání a business case</a></li>
+                        <li><a class="nav-link py-1" href="#topic-7">7. Data a příprava</a></li>
+                        <li><a class="nav-link py-1" href="#topic-8">8. Analýza a modely</a></li>
+                        <li><a class="nav-link py-1" href="#topic-9">9. Vizualizace a dashboard</a></li>
+                        <li><a class="nav-link py-1" href="#topic-10">10. Prezentace a obhajoba</a></li>
                     </ul>
                 </nav>
             </div>
 
             <div class="col-lg-9">
                 <h1 class="mb-1">Data a analytika pro finanční sektor</h1>
-                <p class="text-muted mb-4">1BP443 &middot; 3 kreditů &middot; zkouška</p>
+                <p class="text-muted mb-4">1BP443 &middot; 3 kreditů &middot; Datově analytické řešení a obhajoba (60 %) &middot; Ústní zkouška (40 %) &middot; min. 50 % z každé části</p>
 
                 <section class="topic-section" id="harmonogram">
                     <h3>Harmonogram</h3>
@@ -52,9 +63,479 @@
                 </section>
 
                 <!-- Témata ze sylabu: <section class="topic-section" id="topic-N"> … (viz skill semestr) -->
-                <div class="alert alert-secondary">
-                    Poznámky zatím chybí — nahraj sylabus do <code>podklady/1BP443/</code> a požádej Clauda o jejich vytvoření.
-                </div>
+                <div class="insight-box mb-4"><strong>Jak s poznámkami pracovat:</strong> předmět má dvě části. Na <strong>ústní zkoušku (40 %)</strong> jsou témata 1–5: k čemu jednotlivé finanční instituce používají data a analytiku. Na <strong>projekt (60 %)</strong> jsou témata 6–10: jak ve třech lidech postavit datově analytické řešení a obhájit jeho hodnotu. Z obou částí je potřeba aspoň 50 %. Slidy ani Slánského knihy zatím nemám, proto obsah vychází ze sylabu a obecné literatury (CRISP-DM, DAMA-DMBOK, regulace finančního sektoru). Až budou podklady ze seminářů, platí terminologie vyučujícího. Otázky „Jak se můžou ptát“ jsou můj odhad, ne oficiální okruhy.</div>
+
+                <section class="topic-section" id="topic-1">
+                    <h3>1. Data a analytika – úvod</h3>
+                    <p class="text-muted small">Seminář 23. 9. · David Slánský · zdroj: sylabus a obecná literatura (bez slidů)</p>
+
+                    <h4>Od dat k rozhodnutí</h4>
+                    <div class="def-box"><strong>DIKW pyramida:</strong> <strong>data</strong> (surová fakta: „klient zaplatil 12. 3. o 5 dní později“) → <strong>informace</strong> (data v kontextu: „30 % klientů segmentu X platí pozdě“) → <strong>znalost</strong> (pochopení příčiny: „pozdě platí ti, kterým klesl příjem“) → <strong>moudrost / rozhodnutí</strong> („těmto klientům nabídneme odklad splátky“). Data mají hodnotu teprve tehdy, když na jejich základě někdo udělá lepší rozhodnutí.</div>
+
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Dělení dat</th><th>Typy</th><th>Příklad ve finančnictví</th></tr></thead>
+                        <tbody>
+                            <tr><td>Struktura</td><td><strong>strukturovaná</strong> (tabulky) × <strong>nestrukturovaná</strong> (text, obrázky, hlas)</td><td>transakce na účtu × e-maily klientů, fotky škod, nahrávky call centra</td></tr>
+                            <tr><td>Role</td><td><strong>kmenová</strong> (master: kdo je klient) × <strong>transakční</strong> (co se stalo) × <strong>referenční</strong> (číselníky)</td><td>klient a jeho adresa × platba kartou × číselník měn a poboček</td></tr>
+                            <tr><td>Původ</td><td><strong>interní</strong> × <strong>externí</strong></td><td>vlastní core banking × registr dlužníků, ČSÚ, kurzy ČNB, sociální sítě</td></tr>
+                            <tr><td>Big data (V)</td><td>volume, velocity, variety (+ veracity, value)</td><td>miliony karetních transakcí denně, které je potřeba vyhodnotit v reálném čase kvůli podvodům</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h4>Čtyři úrovně analytiky</h4>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Úroveň</th><th>Otázka</th><th>Příklad (banka)</th><th>Typický nástroj</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Deskriptivní</strong> (popisná)</td><td>Co se stalo?</td><td>měsíční report objemu hypoték a podílu nesplácených úvěrů</td><td>Excel, Power BI, reporting</td></tr>
+                            <tr><td><strong>Diagnostická</strong></td><td>Proč se to stalo?</td><td>rozpad nesplácení podle regionu, produktu a pobočky, drill-down</td><td>interaktivní dashboard, kontingenční tabulky</td></tr>
+                            <tr><td><strong>Prediktivní</strong></td><td>Co se stane?</td><td>skóringový model odhadne pravděpodobnost nesplácení (PD) nového žadatele</td><td>statistika, strojové učení (ML)</td></tr>
+                            <tr><td><strong>Preskriptivní</strong></td><td>Co máme udělat?</td><td>systém doporučí, jakou nabídku a za jakou cenu dát konkrétnímu klientovi</td><td>optimalizace, pravidla, next best action</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="insight-box"><strong>Intuice:</strong> s každou úrovní roste přidaná hodnota i náročnost (Gartnerův model). Většina dat ve firmách pořád slouží k popisné analytice (reporting), a i ta má velkou hodnotu, když je rychlá a spolehlivá. Business intelligence (BI) = deskriptivní a diagnostická analytika. „Pokročilá analytika“ a umělá inteligence (AI) = prediktivní a preskriptivní.</div>
+
+                    <h4>Jak data v organizaci tečou (datová architektura)</h4>
+                    <div class="formula-block">zdrojové systémy (core banking, karty, CRM, pojistné smlouvy) → <strong>ETL / ELT</strong> (extract, transform, load) → <strong>datový sklad</strong> (DWH) / <strong>data lake</strong> → datová tržiště (data marts) → reporty, dashboardy, modely</div>
+                    <ul>
+                        <li><strong>Datový sklad</strong> (data warehouse): vyčištěná, strukturovaná a historizovaná data připravená pro reporting. Je to „jedna verze pravdy“.</li>
+                        <li><strong>Data lake</strong>: surová data v původní podobě, i nestrukturovaná. Hodí se pro data science. <strong>Lakehouse</strong> kombinuje obojí.</li>
+                        <li><strong>Self-service BI</strong>: business uživatel si sám připojí data a vytvoří report bez IT (Power BI, Tableau, Qlik, Excel s Power Query). Na tom stojí role citizen data analyst.</li>
+                    </ul>
+
+                    <h4>Kdo s daty pracuje</h4>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Role</th><th>Co dělá</th></tr></thead>
+                        <tbody>
+                            <tr><td>Data engineer</td><td>staví datové toky (pipelines) a sklad</td></tr>
+                            <tr><td>Data scientist</td><td>vyvíjí prediktivní modely, programuje (Python, R)</td></tr>
+                            <tr><td>Data / BI analyst</td><td>reporty, dashboardy, analýzy pro business</td></tr>
+                            <tr><td><strong>Citizen data analyst</strong></td><td>člověk z businessu (obchod, riziko, finance), který sám pracuje s daty v nástrojích bez programování. Zná problém i data, a tak rychle dojde k užitečnému výstupu</td></tr>
+                            <tr><td>Data owner / data steward</td><td>odpovídá za význam a kvalitu konkrétních dat (např. „klientská data“)</td></tr>
+                            <tr><td>CDO (Chief Data Officer)</td><td>řídí data a analytiku za celou firmu, datová strategie</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h4>Data governance a kvalita dat</h4>
+                    <div class="def-box"><strong>Data governance:</strong> pravidla, role a procesy, které určují, kdo za data odpovídá, jak jsou definovaná (datový slovník, business glossary), kdo k nim smí a jak se hlídá jejich kvalita. Rámec: DAMA-DMBOK.</div>
+                    <p><strong>Dimenze kvality dat:</strong> úplnost (chybějící hodnoty), přesnost (odpovídá realitě), konzistence (stejná hodnota ve všech systémech), včasnost (je k dispozici, když je potřeba), jedinečnost (bez duplicit), validita (správný formát a rozsah, např. rodné číslo).</p>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> „garbage in, garbage out“. Nejlepší model na špatných datech dá špatný výsledek. Kvalita dat je ve finančním sektoru i <em>regulatorní</em> požadavek, nejen technický problém (BCBS 239 níže).</div>
+
+                    <h4>Regulace, která se datové analytiky týká</h4>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Předpis</th><th>Co požaduje</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>GDPR</strong> (od 2018)</td><td>právní základ pro zpracování osobních údajů, minimalizace dat, účelové omezení. Čl. 22: právo nebýt předmětem <em>čistě automatizovaného</em> rozhodnutí s právními účinky (např. zamítnutí úvěru jen algoritmem) bez záruk</td></tr>
+                            <tr><td><strong>BCBS 239</strong> (Basilejský výbor, 2013)</td><td>14 principů pro agregaci rizikových dat a rizikový reporting velkých bank: přesnost, úplnost, včasnost, přizpůsobivost. Vznikly po krizi 2008, kdy banky nedokázaly rychle zjistit svou celkovou expozici</td></tr>
+                            <tr><td><strong>AI Act</strong> (EU 2024/1689)</td><td>přístup podle rizika. <strong>Vysoce rizikové</strong> je mj. hodnocení úvěruschopnosti fyzických osob a stanovení rizika a ceny v životním a zdravotním pojištění → dokumentace, kvalita dat, lidský dohled, vysvětlitelnost. Povinnosti pro vysoce rizikové systémy měly platit od srpna 2026, Komise ale navrhla odklad (stav 2026 ověřit)</td></tr>
+                            <tr><td><strong>DORA</strong> (od 17. 1. 2025)</td><td>digitální provozní odolnost: řízení ICT rizik, incidentů a dodavatelů (cloud)</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h4>Postup analytického projektu: CRISP-DM</h4>
+                    <div class="thm-box"><strong>CRISP-DM</strong> (6 fází, cyklicky): 1. <strong>porozumění businessu</strong> → 2. porozumění datům → 3. příprava dat → 4. modelování → 5. vyhodnocení → 6. nasazení. Fáze 1 a 6 rozhodují o tom, jestli má projekt vůbec hodnotu. Příprava dat obvykle zabere většinu času. Podle tohoto postupu jsou udělaná i témata 6–10.</div>
+                    <div class="insight-box"><strong>Use case = problém + data + analytika + akce.</strong> Chybí-li akce (nikdo podle výsledku nic neudělá), hodnota je nulová. Tohle je nejdůležitější myšlenka celého kurzu: u každého příkladu v tématech 2–5 se ptejte, <em>kdo</em> na základě výstupu <em>jaké rozhodnutí</em> udělá.</div>
+
+                    <h4>Jak se můžou ptát u ústní zkoušky (odhad)</h4>
+                    <ul>
+                        <li>Vysvětlete rozdíl mezi deskriptivní, diagnostickou, prediktivní a preskriptivní analytikou na příkladu banky.</li>
+                        <li>Kdo je citizen data analyst a proč ho finanční instituce potřebují?</li>
+                        <li>Proč je kvalita dat v bankách regulatorní téma? (BCBS 239)</li>
+                        <li>Jaké limity klade na analytiku GDPR a AI Act?</li>
+                    </ul>
+
+                    <div class="summary-box"><strong>Shrnutí:</strong>
+                        <ul>
+                            <li>Data mají hodnotu, jen když vedou k lepšímu rozhodnutí (DIKW, use case = problém + data + analytika + akce).</li>
+                            <li>Čtyři úrovně analytiky: co se stalo → proč → co se stane → co udělat.</li>
+                            <li>Data tečou ze zdrojových systémů přes ETL do skladu nebo data lake a odtud do reportů a modelů.</li>
+                            <li>Citizen data analyst = člověk z businessu, který s daty pracuje sám, bez programování.</li>
+                            <li>Kvalita dat a governance jsou v bankách a pojišťovnách povinnost (BCBS 239, GDPR, AI Act, DORA).</li>
+                        </ul>
+                    </div>
+                    <p class="mb-0"><a href="../quiz.html?course=1BP443&topic=1"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
+                </section>
+
+                <section class="topic-section" id="topic-2">
+                    <h3>2. Komerční banky</h3>
+                    <p class="text-muted small">Seminář 30. 9. · David Slánský · zdroj: sylabus a obecná literatura (bez slidů)</p>
+
+                    <h4>Přehled use cases</h4>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Oblast</th><th>Use case</th><th>Data</th><th>Hodnota</th></tr></thead>
+                        <tbody>
+                            <tr><td rowspan="4">Riziko</td><td><strong>Credit scoring</strong>: aplikační (nový žadatel) × behaviorální (stávající klient)</td><td>žádost, registry dlužníků, historie účtu a splácení</td><td>méně ztrát, rychlé schválení (i online za minuty)</td></tr>
+                            <tr><td><strong>Early warning</strong> (včasné varování)</td><td>pokles příjmů na účtu, přečerpání, zpoždění plateb</td><td>zásah dřív, než klient přestane splácet (restrukturalizace)</td></tr>
+                            <tr><td><strong>Detekce podvodů</strong> (fraud)</td><td>karetní transakce v reálném čase, zařízení, lokalita</td><td>zablokování podezřelé platby, nižší ztráty</td></tr>
+                            <tr><td><strong>AML / KYC</strong> (praní peněz, znalost klienta)</td><td>transakce, protistrany, sankční seznamy</td><td>splnění zákona; analytika snižuje počet falešných poplachů</td></tr>
+                            <tr><td rowspan="4">Klient a obchod</td><td><strong>Segmentace</strong></td><td>demografie, produkty, chování</td><td>cílený marketing a produkty</td></tr>
+                            <tr><td><strong>Churn</strong> (odchod klienta)</td><td>pokles aktivity, odliv peněz, stížnosti</td><td>udržení klienta je levnější než získání nového</td></tr>
+                            <tr><td><strong>Next best offer / action</strong>, cross-sell</td><td>propensity model (sklon koupit produkt)</td><td>vyšší prodej, relevantnější nabídky</td></tr>
+                            <tr><td><strong>CLV</strong> (customer lifetime value)</td><td>marže, délka vztahu, produkty</td><td>kolik má smysl do klienta investovat</td></tr>
+                            <tr><td rowspan="2">Provoz a finance</td><td>Regulatorní reporting (COREP, FINREP, AnaCredit), ALM, likvidita</td><td>účetní a rizikové systémy</td><td>povinnost vůči ČNB/ECB, kvalita a rychlost</td></tr>
+                            <tr><td>Optimalizace sítě poboček a bankomatů, plnění bankomatů hotovostí</td><td>výběry, lokalita, návštěvnost</td><td>nižší náklady</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h4>Úvěrové riziko v číslech</h4>
+                    <div class="formula-block">$$EL = PD \cdot LGD \cdot EAD$$</div>
+                    <p><strong>EL</strong> = očekávaná ztráta (expected loss), <strong>PD</strong> = pravděpodobnost selhání (probability of default, obvykle do 1 roku), <strong>LGD</strong> = ztrátovost v případě selhání (loss given default, podíl, který banka nedostane zpět), <strong>EAD</strong> = expozice v okamžiku selhání (exposure at default).</p>
+                    <div class="ex-box"><strong>Příklad:</strong> úvěr 1 000 000 Kč, skóringový model dá PD = 2 %, LGD nezajištěného úvěru 45 %.
+                        <br>$EL = 0{,}02 \cdot 0{,}45 \cdot 1\,000\,000 = 9\,000$ Kč. Tuto ztrátu má banka pokrýt v ceně úvěru (riziková přirážka) a v opravných položkách.</div>
+                    <div class="def-box"><strong>IFRS 9 (od 2018):</strong> opravné položky podle <em>očekávané</em> ztráty (ECL). <strong>Stage 1</strong> (bez zhoršení): 12měsíční ECL. <strong>Stage 2</strong> (výrazné zvýšení úvěrového rizika): celoživotní ECL. <strong>Stage 3</strong> (úvěr v selhání): celoživotní ECL. Právě early warning a behaviorální skóre rozhodují o přesunu mezi stage 1 a 2.</div>
+
+                    <h4>Jak poznat, jestli je model dobrý</h4>
+                    <div class="ex-box"><strong>Příklad (churn model):</strong> 10 000 klientů, za rok jich 500 odejde. Model označí 800 klientů jako rizikové, z nich 300 opravdu odejde.
+                        <table class="table table-bordered summary-table mt-2 mb-2">
+                            <thead><tr><th></th><th>odejde</th><th>zůstane</th></tr></thead>
+                            <tbody>
+                                <tr><td>model: rizikový</td><td>TP = 300</td><td>FP = 500</td></tr>
+                                <tr><td>model: v pořádku</td><td>FN = 200</td><td>TN = 9 000</td></tr>
+                            </tbody>
+                        </table>
+                        Přesnost (accuracy) $= (300 + 9\,000)/10\,000 = 93\,\%$.
+                        <br>Precision $= 300/800 = 37{,}5\,\%$ (kolik z označených opravdu odejde).
+                        <br>Recall $= 300/500 = 60\,\%$ (kolik odcházejících model zachytí).
+                        <br><strong>Hodnota kampaně:</strong> retenční nabídka stojí 200 Kč na klienta → $800 \cdot 200 = 160\,000$ Kč. Udrží se 30 % skutečně odcházejících: $0{,}3 \cdot 300 = 90$ klientů × CLV 5 000 Kč $= 450\,000$ Kč. Čistý přínos $= 450\,000 - 160\,000 = 290\,000$ Kč.</div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> 93 % přesnosti zní dobře, ale „model“, který řekne, že <em>nikdo</em> neodejde, má přesnost $9\,500/10\,000 = 95\,\%$ a je k ničemu. U vzácných jevů (churn, default, podvod) se proto dívejte na precision, recall a hlavně na <strong>peníze</strong>, které model přinese.</div>
+                    <div class="thm-box"><strong>AUC a Gini:</strong> u skóringových modelů se měří, jak dobře skóre oddělí dobré a špatné klienty. AUC (plocha pod ROC křivkou) je 0,5 pro náhodu a 1 pro dokonalý model. V bankách se častěji uvádí <strong>Gini = 2 · AUC − 1</strong>. Například AUC 0,80 → Gini 0,60.</div>
+                    <div class="insight-box"><strong>Intuice k AML:</strong> pravidlové systémy (např. „hotovost nad X Kč“) vyhodí obrovské množství upozornění a naprostá většina z nich jsou falešné poplachy, které musí ručně projít analytik. Datová analytika tu šetří hlavně práci lidí: seřadí upozornění podle rizika, aby se analytici věnovali těm skutečně podezřelým.</div>
+
+                    <h4>Jak se můžou ptát u ústní zkoušky (odhad)</h4>
+                    <ul>
+                        <li>Uveďte tři use cases v komerční bance a u každého data, analytiku a přínos.</li>
+                        <li>Jaký je rozdíl mezi aplikačním a behaviorálním skóringem?</li>
+                        <li>Proč nestačí hodnotit model podle přesnosti (accuracy)?</li>
+                        <li>Jak souvisí analytika s IFRS 9 a regulatorním reportingem?</li>
+                    </ul>
+
+                    <div class="summary-box"><strong>Shrnutí:</strong>
+                        <ul>
+                            <li>Riziko: skóring, early warning, fraud, AML. Klient: segmentace, churn, next best offer, CLV. Provoz: reporting, pobočky, bankomaty.</li>
+                            <li>$EL = PD \cdot LGD \cdot EAD$. IFRS 9 dělí úvěry do tří stage podle zhoršení rizika.</li>
+                            <li>U vzácných jevů je přesnost zavádějící. Používá se precision, recall, Gini = 2·AUC − 1 a hlavně finanční přínos.</li>
+                        </ul>
+                    </div>
+                    <p class="mb-0"><a href="../quiz.html?course=1BP443&topic=2"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
+                </section>
+
+                <section class="topic-section" id="topic-3">
+                    <h3>3. Centrální banka</h3>
+                    <p class="text-muted small">Seminář 7. 10. · David Slánský · zdroj: sylabus a obecná literatura (bez slidů)</p>
+
+                    <h4>Role centrální banky a k čemu potřebuje data</h4>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Role ČNB</th><th>Use case</th><th>Data</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Měnová politika</strong> (inflační cíl 2 % ± 1 p. b.)</td><td>makroekonomická prognóza (jádrový model g3+), <strong>nowcasting</strong> (odhad současného vývoje dřív, než vyjdou oficiální statistiky), inflační očekávání</td><td>makro statistiky, šetření, vysokofrekvenční data (karetní platby, ceny z e-shopů, spotřeba elektřiny)</td></tr>
+                            <tr><td><strong>Finanční stabilita</strong> (makroobezřetnostní politika)</td><td>zátěžové testy bank a pojišťoven, indikátory systémového rizika, nastavení proticyklické kapitálové rezervy (CCyB), limity hypoték (LTV, DSTI)</td><td>úvěrová data, ceny nemovitostí, bilance bank</td></tr>
+                            <tr><td><strong>Dohled</strong> nad finančním trhem (ČNB je integrovaný regulátor)</td><td><strong>SupTech</strong>: automatická kontrola výkazů, včasné odhalení problémové instituce, analýza textu (výroční zprávy, stížnosti), trh: detekce manipulace</td><td>regulatorní výkazy (COREP, FINREP, QRT pojišťoven), transakční hlášení (MiFIR)</td></tr>
+                            <tr><td><strong>Statistika</strong></td><td>měnová a finanční statistika, platební bilance, databáze ARAD, Centrální registr úvěrů (CRÚ)</td><td>hlášení bank</td></tr>
+                            <tr><td><strong>Platební systém a hotovost</strong></td><td>provoz CERTIS (mezibankovní platby), prognóza poptávky po hotovosti a bankovkách</td><td>platební toky, oběh hotovosti</td></tr>
+                            <tr><td><strong>Komunikace</strong></td><td>textová analýza (sentiment) vlastních tiskových zpráv i médií, jak trh chápe signály banky</td><td>texty, zprávy</td></tr>
+                        </tbody>
+                    </table>
+
+                    <div class="def-box"><strong>Nowcasting:</strong> odhad „teď“. HDP za čtvrtletí vyjde se zpožděním cca měsíc a pak se ještě reviduje. Centrální banka ale rozhoduje o sazbách hned, proto odhaduje aktuální vývoj z dat, která jsou k dispozici rychle (karetní platby, průmyslová výroba, důvěra, vyhledávání na Googlu).</div>
+                    <div class="def-box"><strong>SupTech × RegTech:</strong> <strong>SupTech</strong> (supervisory technology) = technologie a analytika na straně <em>dohledu</em>. <strong>RegTech</strong> = technologie na straně <em>dohlížené instituce</em>, aby splnila regulaci (automatický reporting, AML monitoring).</div>
+                    <div class="insight-box"><strong>Intuice:</strong> centrální banka je v jiné pozici než komerční. Nemá zákazníky, kterým by prodávala, a její „klient“ je celá ekonomika. Její data jsou tedy hlavně <em>agregovaná</em> (za celý sektor) a výstupy slouží k politice: nastavení sazeb, kapitálových rezerv a limitů. Zároveň je největším příjemcem dat od ostatních: každá banka a pojišťovna jí pravidelně posílá výkazy.</div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> ČNB nedělá jen měnovou politiku. Od roku 2006 je i jediným dohledem nad celým finančním trhem (banky, pojišťovny, fondy, zprostředkovatelé). Velké banky eurozóny dohlíží ECB (SSM), ČR ale v eurozóně není, takže české banky dohlíží ČNB.</div>
+                    <div class="ex-box"><strong>Příklad (makroobezřetnost):</strong> CCyB se opírá o to, jak rychle rostou úvěry vůči HDP a jak se vyvíjejí ceny nemovitostí. Když úvěry rostou rychleji, než odpovídá ekonomice (úvěrový boom), centrální banka zvýší sazbu rezervy. Banky tak musí mít víc kapitálu na horší časy. Bez kvalitních dat o úvěrech (CRÚ, AnaCredit) by takové rozhodnutí nešlo udělat včas.</div>
+
+                    <h4>Jak se můžou ptát u ústní zkoušky (odhad)</h4>
+                    <ul>
+                        <li>K čemu centrální banka používá data? Uveďte příklady podle jejích rolí.</li>
+                        <li>Co je nowcasting a proč ho centrální banka potřebuje?</li>
+                        <li>Jaký je rozdíl mezi SupTech a RegTech?</li>
+                        <li>Čím se liší analytika centrální banky od analytiky komerční banky?</li>
+                    </ul>
+
+                    <div class="summary-box"><strong>Shrnutí:</strong>
+                        <ul>
+                            <li>Role ČNB: měnová politika, finanční stabilita, dohled, statistika, platby a hotovost. Každá má své use cases.</li>
+                            <li>Nowcasting = odhad současného vývoje z rychlých (vysokofrekvenčních, alternativních) dat.</li>
+                            <li>SupTech = analytika dohledu; RegTech = analytika instituce, aby splnila regulaci.</li>
+                            <li>Data centrální banky jsou agregovaná a slouží k politickým rozhodnutím, ne k prodeji.</li>
+                        </ul>
+                    </div>
+                    <p class="mb-0"><a href="../quiz.html?course=1BP443&topic=3"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
+                </section>
+
+                <section class="topic-section" id="topic-4">
+                    <h3>4. Pojišťovny</h3>
+                    <p class="text-muted small">Seminář 14. 10. · David Slánský · zdroj: sylabus a obecná literatura (bez slidů)</p>
+
+                    <h4>Přehled use cases v hodnotovém řetězci pojišťovny</h4>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Fáze</th><th>Use case</th><th>Hodnota</th></tr></thead>
+                        <tbody>
+                            <tr><td>Produkt a cena</td><td><strong>tarifikace</strong> (pricing): odhad frekvence a výše škod podle rizikových faktorů (GLM modely), cenová elasticita</td><td>přesná cena = neztrácím na drahých rizicích, neodháním levná</td></tr>
+                            <tr><td>Upisování (underwriting)</td><td>automatické přijetí rizika, <strong>telematika</strong> (data z auta: pay-as-you-drive / pay-how-you-drive), IoT v domácnosti</td><td>rychlost, cena podle skutečného chování</td></tr>
+                            <tr><td>Prodej a klient</td><td>cross-sell, <strong>retence</strong> (kdo nepřeobnoví smlouvu), CLV, výkonnost prodejních kanálů</td><td>vyšší prodej, méně odchodů</td></tr>
+                            <tr><td>Likvidace škod (claims)</td><td>automatické vyřízení jednoduchých škod, <strong>odhad škody z fotky</strong> (rozpoznávání obrazu), <strong>detekce pojistného podvodu</strong></td><td>nižší náklady, rychlost pro klienta, méně vyplacených podvodů</td></tr>
+                            <tr><td>Rezervy a kapitál</td><td>odhad technických rezerv (např. chain-ladder, IBNR = nahlášené až později), <strong>katastrofické modely</strong> (povodně, krupobití)</td><td>dostatek peněz na budoucí plnění</td></tr>
+                            <tr><td>Regulace</td><td><strong>Solventnost II</strong> (od 2016: kapitálový požadavek SCR, ORSA, výkazy QRT), <strong>IFRS 17</strong> (od 2023: účtování pojistných smluv, CSM)</td><td>povinnost, velké nároky na data</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h4>Cena pojištění z dat</h4>
+                    <div class="formula-block">$$\text{čisté rizikové pojistné} = \text{frekvence škod} \times \text{průměrná výše škody}$$</div>
+                    <div class="ex-box"><strong>Příklad:</strong> v havarijním pojištění mají řidiči v segmentu 0,05 škody na smlouvu ročně, průměrná škoda je 40 000 Kč.
+                        <br>Čisté rizikové pojistné $= 0{,}05 \cdot 40\,000 = 2\,000$ Kč.
+                        <br>Pojišťovna chce pokrýt náklady 25 % a zisk 5 % z pojistného → pojistné $= 2\,000 / (1 - 0{,}30) \approx 2\,857$ Kč.
+                        <br>Telematika zjistí, že řidič jezdí klidně a frekvence jeho škod je jen 0,03 → riziková složka 1 200 Kč → může dostat slevu, a přitom je pro pojišťovnu ziskový.</div>
+                    <div class="thm-box"><strong>Škodní poměr a combined ratio:</strong> škodní poměr (loss ratio) = škody / zasloužené pojistné. Nákladový poměr (expense ratio) = náklady / pojistné. <strong>Combined ratio</strong> = škodní + nákladový poměr. Pod 100 % pojišťovna vydělává už na samotném pojištění. Příklad: škody 70, náklady 25 ze 100 pojistného → combined ratio 95 %.</div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> čím přesnější cena podle individuálních dat, tím větší riziko diskriminace a regulatorního problému. V EU nesmí cena pojištění záviset na <strong>pohlaví</strong> (rozsudek Test-Achats, 2011). AI Act řadí oceňování životního a zdravotního pojištění mezi vysoce rizikové systémy (téma 1). Ne všechno, co v datech funguje, je dovolené.</div>
+                    <div class="insight-box"><strong>Intuice:</strong> pojišťovna má „obrácený výrobní cyklus“: cenu (pojistné) vybere dřív, než zná náklady (škody). Proto je u ní analytika od začátku základ byznysu, pojistná matematika je vlastně nejstarší datová věda ve financích. Nové je, že přibyla nestrukturovaná data (fotky, telematika, text hlášení škod).</div>
+
+                    <h4>Jak se můžou ptát u ústní zkoušky (odhad)</h4>
+                    <ul>
+                        <li>Projděte hodnotový řetězec pojišťovny a u každé fáze uveďte use case.</li>
+                        <li>Jak funguje telematické pojištění a jaké má přínosy a rizika?</li>
+                        <li>Jak analytika pomáhá při likvidaci škod a proti pojistným podvodům?</li>
+                        <li>Co je combined ratio a proč je pro pojišťovnu klíčové?</li>
+                    </ul>
+
+                    <div class="summary-box"><strong>Shrnutí:</strong>
+                        <ul>
+                            <li>Use cases podle řetězce: tarifikace → upisování (telematika) → prodej a retence → likvidace a podvody → rezervy a katastrofy → regulace (Solventnost II, IFRS 17).</li>
+                            <li>Čisté rizikové pojistné = frekvence × průměrná škoda. Combined ratio pod 100 % = zisk z pojištění.</li>
+                            <li>Individuální ceny naráží na zákaz diskriminace (pohlaví) a AI Act.</li>
+                        </ul>
+                    </div>
+                    <p class="mb-0"><a href="../quiz.html?course=1BP443&topic=4"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
+                </section>
+
+                <section class="topic-section" id="topic-5">
+                    <h3>5. Finanční zprostředkovatelé</h3>
+                    <p class="text-muted small">Seminář 21. 10. · David Slánský · zdroj: sylabus a obecná literatura (bez slidů)</p>
+
+                    <h4>Kdo to je</h4>
+                    <div class="def-box"><strong>Finanční zprostředkovatel</strong> prodává produkty jiných institucí (úvěry, pojištění, investice, penzijní spoření), ale sám je nevytváří a obvykle nenese jejich riziko. Patří sem poradenské a finanční sítě, pojišťovací makléři, hypoteční specialisté, online srovnávače a vázaní zástupci. Širším pojetím sem patří i fintechy mezi klientem a institucí (neobrokeři, robo-advisory). Registruje je a dohlíží ČNB.</div>
+                    <div class="insight-box"><strong>Intuice:</strong> zprostředkovatel vydělává na <strong>provizi</strong>. Jeho byznys je obchodní síť a vztah s klientem, ne rozvaha. Proto se jeho analytika točí kolem prodeje, výkonu poradců, kvality obchodů (storno) a compliance, ne kolem kapitálu a rezerv.</div>
+
+                    <h4>Use cases</h4>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Oblast</th><th>Use case</th></tr></thead>
+                        <tbody>
+                            <tr><td>Obchod</td><td><strong>obchodní trychtýř</strong> (funnel) a konverze, <strong>lead scoring</strong> (kterým zájemcům zavolat první), next best product pro stávající klienty, připomínka výročí smlouvy nebo konce fixace hypotéky</td></tr>
+                            <tr><td>Obchodní síť</td><td>výkonnost a produktivita poradců, provize, plánování a motivace, fluktuace poradců</td></tr>
+                            <tr><td>Kvalita obchodu</td><td><strong>storno</strong> (klient smlouvu brzy zruší → vratka provize), analýza stížností, reklamace</td></tr>
+                            <tr><td>Compliance</td><td>kontrola, že doporučení odpovídá potřebám klienta: <strong>IDD</strong> (pojištění, test požadavků a potřeb), <strong>MiFID II</strong> (investice, test vhodnosti), zákon o spotřebitelském úvěru (posouzení úvěruschopnosti). Odhalování podezřelých vzorců prodeje (misselling)</td></tr>
+                            <tr><td>Digitální kanály</td><td>srovnávače (cena a konverze online), robo-advisory (automatické investiční doporučení), marketingová atribuce (který kanál přivedl klienta)</td></tr>
+                        </tbody>
+                    </table>
+
+                    <div class="ex-box"><strong>Příklad (trychtýř):</strong> web má 10 000 návštěv → 800 vyplní formulář (lead, 8 %) → 240 schůzek (30 % leadů) → 60 uzavřených smluv (25 % schůzek).
+                        <br>Celková konverze $= 60 / 10\,000 = 0{,}6\,\%$ ($= 0{,}08 \cdot 0{,}30 \cdot 0{,}25$).
+                        <br>Když lead scoring zvýší podíl schůzek z leadů na 40 %, bude schůzek 320 a smluv 80, tedy o třetinu víc při stejném marketingu.
+                        <br><strong>Storno:</strong> z 60 smluv klienti do roka zruší 9 → storno $= 9/60 = 15\,\%$. Poradce s vysokým stornem je signál pro kontrolu kvality prodeje.</div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> počet uzavřených smluv sám o sobě je špatné KPI pro poradce. Motivuje k prodeji čehokoli (misselling), to se pak projeví stornem a stížnostmi. Dobrý dashboard pro síť ukazuje objem <em>spolu s</em> kvalitou (storno, stížnosti, soulad s IDD / MiFID II).</div>
+
+                    <h4>Jak se můžou ptát u ústní zkoušky (odhad)</h4>
+                    <ul>
+                        <li>Čím se liší využití dat u zprostředkovatele a u banky nebo pojišťovny?</li>
+                        <li>Jaká KPI byste sledovali pro obchodní síť a proč nestačí počet smluv?</li>
+                        <li>Jak může analytika pomoct se splněním IDD a MiFID II?</li>
+                    </ul>
+
+                    <div class="summary-box"><strong>Shrnutí:</strong>
+                        <ul>
+                            <li>Zprostředkovatel žije z provizí → analytika obchodu, sítě, kvality (storno) a compliance.</li>
+                            <li>Trychtýř: celková konverze = součin konverzí jednotlivých kroků. Lead scoring zlepšuje slabý krok.</li>
+                            <li>Objem prodeje vždy sledovat spolu s kvalitou (storno, stížnosti, IDD / MiFID II).</li>
+                        </ul>
+                    </div>
+                    <p class="mb-0"><a href="../quiz.html?course=1BP443&topic=5"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
+                </section>
+
+                <section class="topic-section" id="topic-6">
+                    <h3>6. Řešení: zadání a business case</h3>
+                    <p class="text-muted small">Seminář 11. 11. · David Slánský · zdroj: sylabus a obecná literatura (bez slidů; rozdělení projektu do fází je návrh)</p>
+
+                    <h4>Projekt v kostce</h4>
+                    <div class="def-box"><strong>Zadání ze sylabu:</strong> tým 3 lidí vytvoří datově analytický výstup z libovolné oblasti finančního sektoru. Může jít o reporting, sledování nebo predikci rizik, predikci nebo reporting chování a potřeb zákazníků či zaměstnanců. Téma je nutné dohodnout s vyučujícím. Na konci ho představíte a vysvětlíte jeho hodnotu pro organizaci. Tvoří <strong>60 % známky</strong>, potřeba je aspoň 50 %.</div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> hodnotí se <strong>řešení a jeho obhajoba</strong>, nejen technika. Krásný dashboard, u kterého neumíte říct, kdo ho bude používat a k jakému rozhodnutí, obhajobou neprojde dobře. Začněte problémem, ne daty nebo nástrojem.</div>
+
+                    <h4>Use-case canvas (na jednu stranu)</h4>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Otázka</th><th>Příklad: early warning pro spotřebitelské úvěry</th></tr></thead>
+                        <tbody>
+                            <tr><td>Jaký problém řešíme?</td><td>banka pozná, že klient nesplácí, až po zmeškané splátce, a pak už je pozdě</td></tr>
+                            <tr><td>Kdo je uživatel?</td><td>oddělení vymáhání a správy úvěrů</td></tr>
+                            <tr><td>Jaké rozhodnutí podpoříme?</td><td>kterým klientům se ozvat a nabídnout úpravu splátek</td></tr>
+                            <tr><td>Jaký výstup?</td><td>seznam klientů seřazený podle rizika + dashboard s vývojem</td></tr>
+                            <tr><td>Jaká data?</td><td>historie splácení, příjmy na účtu, přečerpání (v projektu: veřejný dataset)</td></tr>
+                            <tr><td>Jak změříme úspěch (KPI)?</td><td>podíl zachycených budoucích selhání (recall), pokles ztrát</td></tr>
+                            <tr><td>Jaká je hodnota?</td><td>X Kč nižší ztráty ročně (téma 10), méně klientů v exekuci</td></tr>
+                            <tr><td>Rizika a omezení</td><td>GDPR, férovost modelu, kvalita dat</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h4>Nápady na témata</h4>
+                    <ul>
+                        <li><strong>Reporting:</strong> dashboard vývoje úvěrů a úrokových sazeb v ČR (ARAD ČNB), dashboard pojistného trhu (ČAP, ČNB), srovnání bank podle výsledků.</li>
+                        <li><strong>Riziko:</strong> skóring nebo early warning (German Credit, Home Credit Default Risk), detekce karetních podvodů (Kaggle Credit Card Fraud).</li>
+                        <li><strong>Klienti:</strong> predikce odezvy na marketingovou kampaň banky (UCI Bank Marketing), churn klientů banky, segmentace (RFM).</li>
+                        <li><strong>Zaměstnanci:</strong> fluktuace zaměstnanců (HR analytics datasety), výkonnost poboček nebo poradců.</li>
+                    </ul>
+                    <div class="def-box"><strong>Kde vzít data:</strong> ČNB ARAD (měnová a finanční statistika), ČSÚ, Eurostat, ECB Data Portal, EIOPA (pojišťovny), data.gov.cz (Národní katalog otevřených dat), Kaggle a UCI Machine Learning Repository (anonymizované nebo syntetické datasety bank a pojišťoven). Skutečná klientská data z práce nepoužívat (GDPR, bankovní tajemství).</div>
+                    <div class="insight-box"><strong>Tip:</strong> téma zúžit. „Analýza bankovního trhu“ je moc široká; „Dashboard, který vedení banky ukáže, jak si stojí v hypotékách proti trhu“ má jasného uživatele i rozhodnutí.</div>
+
+                    <div class="summary-box"><strong>Shrnutí:</strong>
+                        <ul>
+                            <li>Začít problémem a uživatelem: kdo, jaké rozhodnutí, jaký výstup, jaké KPI, jaká hodnota.</li>
+                            <li>Téma zúžit a dohodnout s vyučujícím. Data z veřejných zdrojů, ne reálná klientská data.</li>
+                            <li>Hodnotí se řešení i obhajoba hodnoty, ne jen technika.</li>
+                        </ul>
+                    </div>
+                    <p class="mb-0"><a href="../quiz.html?course=1BP443&topic=6"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
+                </section>
+
+                <section class="topic-section" id="topic-7">
+                    <h3>7. Řešení: data a jejich příprava</h3>
+                    <p class="text-muted small">Seminář 18. 11. · David Slánský · zdroj: sylabus a obecná literatura (bez slidů)</p>
+
+                    <h4>Jak mají data vypadat</h4>
+                    <div class="def-box"><strong>Tidy data (uklizená data):</strong> jeden řádek = jedno pozorování (např. jedna transakce), jeden sloupec = jedna proměnná, jedna buňka = jedna hodnota. Žádné sloučené buňky, mezisoučty uprostřed tabulky, barvy místo hodnot nebo měsíce ve sloupcích.</div>
+                    <div class="def-box"><strong>Hvězdicové schéma (star schema):</strong> uprostřed <strong>tabulka faktů</strong> (události a čísla: transakce, splátky, škody), okolo <strong>tabulky dimenzí</strong> (popisy: klient, produkt, pobočka, datum). Spojují se klíčem (ID klienta, ID produktu). Na tomto modelu stojí Power BI i většina datových skladů.</div>
+
+                    <h4>Postup přípravy (např. v Power Query)</h4>
+                    <ol>
+                        <li><strong>Načíst</strong> zdroje (CSV, Excel, web, databáze) a nic neupravovat ručně v buňkách. Kroky se zaznamenají a dají se zopakovat při nových datech.</li>
+                        <li><strong>Datové typy:</strong> čísla jako čísla, data jako data (pozor na desetinnou čárku × tečku a formát data).</li>
+                        <li><strong>Čištění:</strong> chybějící hodnoty (smazat, doplnit, nebo nechat a označit), duplicity, překlepy v kategoriích („Praha“ × „praha“), extrémní hodnoty (chyba, nebo skutečnost?).</li>
+                        <li><strong>Spojení tabulek</strong> (merge / join): left join = všechny řádky z levé tabulky + co se najde v pravé; inner join = jen shody.</li>
+                        <li><strong>Odvozené proměnné:</strong> věk z data narození, poměr splátky k příjmu, počet transakcí za 3 měsíce.</li>
+                        <li><strong>Kontrola:</strong> sedí počty řádků a součty se zdrojem? Nevznikly spojením duplicity?</li>
+                    </ol>
+                    <div class="warn-box"><strong>⚠️ Pozor – granularita:</strong> když spojíte tabulku klientů (1 řádek na klienta) s tabulkou transakcí (mnoho řádků na klienta), klient se znásobí a součet jeho zůstatků vyjde mnohonásobně vyšší. Před spojením si ujasněte, co je jeden řádek, a případně nejdřív agregujte.</div>
+                    <div class="warn-box"><strong>⚠️ Pozor – únik informace (data leakage):</strong> do predikce nesmí vstoupit údaj, který v okamžiku rozhodnutí ještě neznáte. Např. „počet upomínek“ při predikci selhání v den schválení úvěru. Model pak v testu vypadá skvěle a v praxi nefunguje.</div>
+                    <div class="insight-box"><strong>Intuice:</strong> příprava dat zabere většinu času projektu, a to je normální. Dobře připravený datový model je polovina práce: dashboard a analýza nad ním jsou pak rychlé. Do obhajoby patří i krátce „co jsme s daty museli udělat“, protože ukazuje, že výsledkům můžete věřit.</div>
+
+                    <div class="summary-box"><strong>Shrnutí:</strong>
+                        <ul>
+                            <li>Tidy data a hvězdicové schéma (fakta × dimenze) jsou základ pro Power BI i analýzu.</li>
+                            <li>Postup: načíst → typy → čištění → spojení → odvozené proměnné → kontrola. Kroky opakovatelně (Power Query), ne ručně.</li>
+                            <li>Hlídat granularitu při spojování a únik informace (leakage) u predikcí.</li>
+                        </ul>
+                    </div>
+                    <p class="mb-0"><a href="../quiz.html?course=1BP443&topic=7"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
+                </section>
+
+                <section class="topic-section" id="topic-8">
+                    <h3>8. Řešení: analýza a modely</h3>
+                    <p class="text-muted small">Seminář 25. 11. · David Slánský · zdroj: sylabus a obecná literatura (bez slidů)</p>
+
+                    <h4>Jakou analýzu zvolit</h4>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Otázka</th><th>Metoda</th><th>Nástroj bez programování</th></tr></thead>
+                        <tbody>
+                            <tr><td>Jak to vypadá? Jak se to vyvíjí?</td><td>popisná statistika (průměr, medián, rozptyl), kontingenční tabulky, trendy</td><td>Excel, Power BI</td></tr>
+                            <tr><td>Co spolu souvisí?</td><td>korelace, srovnání skupin</td><td>Excel (Analýza dat), Power BI (Key influencers)</td></tr>
+                            <tr><td>Jaké skupiny klientů existují?</td><td><strong>segmentace</strong>: RFM (recency, frequency, monetary), shlukování k-means</td><td>Excel, KNIME, Orange</td></tr>
+                            <tr><td>Stane se to? (ano / ne)</td><td><strong>klasifikace</strong>: rozhodovací strom, logistická regrese</td><td>KNIME, Orange, AutoML nástroje</td></tr>
+                            <tr><td>Kolik? Kdy?</td><td>regrese, <strong>prognóza časové řady</strong></td><td>Excel (List prognózy / Forecast Sheet), Power BI forecast</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="warn-box"><strong>⚠️ Pozor – korelace není kauzalita:</strong> klienti s více produkty méně odcházejí. To neznamená, že když klientovi „vnutíte“ další produkt, zůstane. Možná jen spokojení klienti mají víc produktů. Při obhajobě formulujte opatrně: „souvisí“, ne „způsobuje“.</div>
+
+                    <h4>Jak model poctivě vyhodnotit</h4>
+                    <div class="def-box"><strong>Trénovací × testovací data:</strong> model se učí na jedné části dat (např. 70 %) a hodnotí se na zbytku, který nikdy neviděl. <strong>Přeučení</strong> (overfitting) = model si zapamatuje trénovací data včetně šumu, na nich vypadá výborně, na nových datech selže.</div>
+                    <div class="ex-box"><strong>Příklad (paradox přesnosti):</strong> 100 000 karetních transakcí, z toho 100 podvodů (0,1 %).
+                        <br>„Model“, který všechno označí jako v pořádku, má přesnost $99\,900/100\,000 = 99{,}9\,\%$, ale recall $0/100 = 0\,\%$ a nechytí ani jeden podvod.
+                        <br>Model, který označí 1 000 transakcí a chytí 80 podvodů: přesnost $(80 + 98\,980)/100\,000 = 99{,}06\,\%$ (nižší!), ale recall 80 % a precision 8 %. Je <em>mnohem</em> užitečnější.</div>
+                    <div class="insight-box"><strong>Intuice:</strong> ve finančním sektoru je model skoro vždy pomocník člověka, ne náhrada. Musí být <strong>vysvětlitelný</strong>: proč byl úvěr zamítnut, proč je transakce podezřelá (GDPR čl. 22, AI Act, požadavky dohledu na validaci modelů). Proto se v bankách pořád hodně používá logistická regrese a rozhodovací stromy, i když existují přesnější „černé skříňky“.</div>
+
+                    <div class="summary-box"><strong>Shrnutí:</strong>
+                        <ul>
+                            <li>Metodu vybrat podle otázky: popis, souvislost, segmentace, klasifikace, prognóza.</li>
+                            <li>Model hodnotit na testovacích datech. Pozor na přeučení a na paradox přesnosti u vzácných jevů.</li>
+                            <li>Korelace ≠ kauzalita. Ve financích je nutná vysvětlitelnost.</li>
+                        </ul>
+                    </div>
+                    <p class="mb-0"><a href="../quiz.html?course=1BP443&topic=8"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
+                </section>
+
+                <section class="topic-section" id="topic-9">
+                    <h3>9. Řešení: vizualizace a dashboard</h3>
+                    <p class="text-muted small">Seminář 2. 12. · David Slánský · zdroj: sylabus a obecná literatura (bez slidů; Knaflic <em>Storytelling with Data</em>)</p>
+
+                    <h4>Graf podle toho, co chcete říct</h4>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Sdělení</th><th>Graf</th><th>Příklad</th></tr></thead>
+                        <tbody>
+                            <tr><td>Srovnání kategorií</td><td>sloupcový / pruhový (seřazený)</td><td>objem úvěrů podle bank</td></tr>
+                            <tr><td>Vývoj v čase</td><td>spojnicový</td><td>úroková sazba hypoték po měsících</td></tr>
+                            <tr><td>Složení celku</td><td>skládaný sloupec (100 %); koláč jen pro 2–3 části</td><td>struktura portfolia podle produktů</td></tr>
+                            <tr><td>Rozdělení hodnot</td><td>histogram, krabicový graf</td><td>rozdělení výše škod</td></tr>
+                            <tr><td>Vztah dvou veličin</td><td>bodový (scatter)</td><td>příjem × výše úvěru</td></tr>
+                            <tr><td>Jedno klíčové číslo</td><td>KPI karta s porovnáním (vs. plán, vs. minulý rok)</td><td>NPL ratio 2,1 % (▲ 0,3 p. b.)</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> typické chyby: 3D grafy, koláč s deseti výsečemi, osa y nezačínající nulou u sloupců (zveličuje rozdíly), příliš mnoho barev, číslo bez kontextu („zisk 12 mil.“ – je to hodně, nebo málo?).</div>
+
+                    <h4>Pravidla dobrého dashboardu</h4>
+                    <ul>
+                        <li><strong>Jeden uživatel, jeden účel.</strong> Dashboard pro vedení (pár KPI, trend) ≠ pro analytika (detail, filtry).</li>
+                        <li><strong>Pravidlo 5 sekund:</strong> hlavní sdělení musí být jasné na první pohled. Nejdůležitější KPI vlevo nahoře, detail níž a vpravo.</li>
+                        <li>Méně je víc: cca 5–9 vizuálů na stránku, konzistentní barvy (jedna barva = jeden význam, červená jen pro problém).</li>
+                        <li><strong>Kontext:</strong> plán, minulé období, trh, limit.</li>
+                        <li><strong>Interaktivita:</strong> filtry (slicers) a drill-down (z celku do detailu), ale dashboard musí dávat smysl i bez klikání.</li>
+                    </ul>
+                    <div class="def-box"><strong>Power BI v kostce:</strong> <strong>Power Query</strong> (načtení a úprava dat, téma 7) → <strong>datový model</strong> (tabulky a vazby, hvězdicové schéma) → <strong>DAX</strong> (výpočty) → <strong>vizuály a filtry</strong> → publikace a sdílení. <strong>Míra</strong> (measure) se počítá až podle aktuálního filtru, např. „podíl nesplácených úvěrů“. <strong>Počítaný sloupec</strong> (calculated column) se spočítá jednou pro každý řádek. Poměry a podíly patří do měr.</div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> průměr podílů ≠ podíl součtů. Podíl nesplácených úvěrů za celou banku je (součet nesplácených) / (součet všech úvěrů), ne průměr podílů za jednotlivé pobočky. Malá pobočka by jinak vážila stejně jako velká. Proto míra v DAX, ne průměr sloupce.</div>
+                    <div class="insight-box"><strong>Storytelling:</strong> dashboard je nástroj, prezentace je příběh. Při obhajobě neukazujte všechno. Veďte posluchače: kontext → co jsme zjistili (1–3 hlavní zjištění) → co s tím udělat. Titulek grafu formulujte jako sdělení („Hypotéky rostou nejrychleji u klientů pod 35 let“), ne jako popis („Hypotéky podle věku“).</div>
+
+                    <div class="summary-box"><strong>Shrnutí:</strong>
+                        <ul>
+                            <li>Typ grafu podle sdělení: srovnání → sloupce, čas → čára, složení → 100% sloupec, rozdělení → histogram, vztah → scatter.</li>
+                            <li>Dashboard: jeden uživatel a účel, KPI vlevo nahoře, kontext, málo vizuálů, konzistentní barvy.</li>
+                            <li>Power BI: Power Query → model → DAX míry → vizuály. Podíly jako míry (podíl součtů, ne průměr podílů).</li>
+                        </ul>
+                    </div>
+                    <p class="mb-0"><a href="../quiz.html?course=1BP443&topic=9"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
+                </section>
+
+                <section class="topic-section" id="topic-10">
+                    <h3>10. Prezentace a obhajoba hodnoty</h3>
+                    <p class="text-muted small">Prezentace 9. 12. a 16. 12. (předpoklad) · David Slánský · zdroj: sylabus a obecná literatura (bez slidů; Minto <em>The Pyramid Principle</em>)</p>
+
+                    <h4>Struktura prezentace</h4>
+                    <ol>
+                        <li><strong>Hlavní sdělení hned na začátku</strong> (pyramidový princip: nejdřív závěr, pak argumenty): „Náš model early warning by bance ušetřil cca 12 mil. Kč ročně.“</li>
+                        <li><strong>Problém</strong>: kdo ho má, kolik stojí dnes.</li>
+                        <li><strong>Řešení</strong>: krátké demo dashboardu nebo modelu, 1–3 hlavní zjištění.</li>
+                        <li><strong>Hodnota</strong>: vyčíslená (níže).</li>
+                        <li><strong>Implementace</strong>: kdo to bude používat, jak často, jaká data a systémy jsou potřeba.</li>
+                        <li><strong>Rizika a omezení</strong>: kvalita dat, předpoklady, regulace (GDPR, AI Act), co byste udělali dál.</li>
+                    </ol>
+
+                    <h4>Jak vyčíslit hodnotu</h4>
+                    <p>Hodnota datového řešení má čtyři typické zdroje: <strong>vyšší výnosy</strong> (cross-sell, retence), <strong>nižší náklady</strong> (automatizace, méně ruční práce), <strong>nižší riziko</strong> (ztráty z úvěrů a podvodů) a <strong>splnění regulace</strong> (vyhnout se pokutám, rychlejší reporting).</p>
+                    <div class="formula-block">$$ROI = \frac{\text{přínos} - \text{náklady}}{\text{náklady}} \qquad \text{doba návratnosti} = \frac{\text{jednorázová investice}}{\text{roční čistý přínos}}$$</div>
+                    <div class="ex-box"><strong>Příklad:</strong> automatizovaný reporting ušetří 2 analytikům po 50 % času. Při nákladech 1,2 mil. Kč ročně na analytika je to přínos 1,2 mil. Kč ročně. Vývoj stojí jednorázově 800 tis. Kč a provoz 200 tis. Kč ročně.
+                        <br>Roční čistý přínos $= 1{,}2 - 0{,}2 = 1{,}0$ mil. Kč.
+                        <br>Doba návratnosti $= 0{,}8 / 1{,}0 = 0{,}8$ roku (necelých 10 měsíců).
+                        <br>ROI za první rok $= (1{,}2 - 1{,}0)/1{,}0 = 20\,\%$ (náklady prvního roku = 0,8 + 0,2 = 1,0 mil.).</div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> přínos odhadujte konzervativně a řekněte, z čeho vychází („předpokládáme, že udržíme 30 % klientů, které model označí“). Přestřelená čísla bez předpokladů auditorium nepřesvědčí a u dotazů se rozpadnou. Uveďte i to, co model nezvládne.</div>
+                    <div class="insight-box"><strong>Dotazy:</strong> připravte se na „Jak víte, že to funguje?“ (testovací data, validace), „Co když se data změní?“ (monitoring, přetrénování), „Smíme ta data použít?“ (GDPR), „Kolik to bude stát a kdo to bude udržovat?“. Rozdělte si v týmu, kdo odpovídá na jakou oblast.</div>
+
+                    <h4>Příprava na ústní zkoušku (40 %)</h4>
+                    <ul>
+                        <li>Pro každou instituci (komerční banka, centrální banka, pojišťovna, zprostředkovatel) umět 3–4 use cases ve struktuře <strong>problém → data → analytika → akce → hodnota → rizika a regulace</strong>.</li>
+                        <li>Umět zasadit use case do úrovně analytiky (deskriptivní až preskriptivní) a do postupu CRISP-DM.</li>
+                        <li>Umět obhájit a kriticky zhodnotit vlastní projekt: co byste udělali jinak.</li>
+                    </ul>
+
+                    <div class="summary-box"><strong>Shrnutí:</strong>
+                        <ul>
+                            <li>Závěr na začátek, pak problém → řešení → hodnota → implementace → rizika.</li>
+                            <li>Hodnota = výnosy, náklady, riziko, regulace. Vyčíslit (ROI, doba návratnosti) s jasnými a konzervativními předpoklady.</li>
+                            <li>Na zkoušku: use cases podle institucí ve struktuře problém → data → analytika → akce → hodnota.</li>
+                        </ul>
+                    </div>
+                    <p class="mb-0"><a href="../quiz.html?course=1BP443&topic=10"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
+                </section>
             </div>
         </div>
     </div>

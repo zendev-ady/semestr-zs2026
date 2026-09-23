@@ -16,7 +16,22 @@ window.COURSES = [
     "lang": "cz",
     "group": "P",
     "schedule": ["Př St 16:15–19:30 NB A"],
-    "topics": [],
+    "grading": "Semestrální práce (30 %, podmínka k testu) · Závěrečný test (70 %)",
+    "topics": [
+      "Bankovní bilance",
+      "Úrokové, tržní a měnové riziko",
+      "Podstata derivátů",
+      "Forwardy, futures a swapy",
+      "Opce, cap, floor, collar",
+      "Likviditní riziko",
+      "Úvěrové riziko a zelené úvěry",
+      "Kreditní deriváty",
+      "Kapitálové riziko",
+      "Operační riziko",
+      "Ziskovost banky",
+      "Účetní zobrazení derivátů"
+    ],
+    "topicWeeks": [1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 13, 13],
     "events": []
   },
   {
@@ -42,7 +57,22 @@ window.COURSES = [
     "lang": "cz",
     "group": "P",
     "schedule": ["Př St 11:00–12:30 NB 177B", "Cv St 12:45–14:15 NB 177B"],
-    "topics": [],
+    "grading": "Semestrální práce (30 %) · Průběžný test (20 %) · Závěrečný test (50 %)",
+    "topics": [
+      "Finanční trhy a instrumenty",
+      "Banky, fintech a instituce",
+      "CeFi: regulace a rizika",
+      "Kryptoměny, blockchain, smart kontrakty",
+      "DeFi ekosystém",
+      "DeFi: regulace a rizika",
+      "Udržitelné finanční trhy a instrumenty",
+      "Veřejný sektor v udržitelných financích",
+      "Udržitelné finance: regulace a rizika",
+      "ESG",
+      "ESG: regulace a rizika",
+      "Trendy v ESG"
+    ],
+    "topicWeeks": [1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 13, 13],
     "events": []
   },
   {
@@ -123,8 +153,24 @@ window.COURSES = [
     "lang": "cz",
     "group": "P",
     "schedule": ["Cv St 07:30–09:00 SB 236"],
-    "topics": [],
-    "events": []
+    "grading": "Datově analytické řešení a obhajoba (60 %) · Ústní zkouška (40 %) · min. 50 % z každé části",
+    "topics": [
+      "Data a analytika – úvod",
+      "Komerční banky",
+      "Centrální banka",
+      "Pojišťovny",
+      "Finanční zprostředkovatelé",
+      "Řešení: zadání a business case",
+      "Řešení: data a jejich příprava",
+      "Řešení: analýza a modely",
+      "Řešení: vizualizace a dashboard",
+      "Prezentace a obhajoba hodnoty"
+    ],
+    "topicWeeks": [1, 2, 3, 4, 5, 8, 9, 10, 11, 12],
+    "events": [
+      {"date": "2026-12-09", "type": "deadline", "title": "Prezentace řešení I (předpoklad podle sylabu)"},
+      {"date": "2026-12-16", "type": "deadline", "title": "Prezentace řešení II (předpoklad podle sylabu)"}
+    ]
   }
 ];
 

@@ -1,0 +1,101 @@
+Sylabus předmětu 1BP440 - Decentralizované a udržitelné finance   (FFU - ZS 2026/2027)
+1
+SylabusSylabus kurzu
+2
+ČeštinaAngličtina
+Kód předmětu:    1BP440
+Název v jazyce výuky:    Decentralizované a udržitelné finance
+Název česky:    Decentralizované a udržitelné finance
+Název anglicky:    Decentralized and sustainable finance
+Počet přidělených ECTS kreditů:    6 (1 ECTS kredit = 26 hodin studijní zátěže)
+Forma výuky:    prezenční; 2/2 (počet hodin přednášek týdně / počet hodin cvičení týdně) při semestrální výuce
+Forma ukončení:    zkouška
+Jazyk výuky:    čeština
+Doporučený typ a ročník studia:    magisterský navazující (druhý cyklus): 1
+Semestr:    ZS 2026/2027
+Vyučující:    prof. PhDr. Petr Teplý, Ph.D. (cvičící, garant, přednášející, zkoušející)
+Omezení pro zápis:    žádné
+Doporučené doplňky:    žádné
+Vyžadovaná praxe:    žádná
+
+Zaměření předmětu:
+Cílem kurzu je prohloubení znalostí centralizovaných financí a získat znalost decentralizovaných a udržitelných financí (DEFI) v kontextu současných ESG trendů, rizik a regulace. Důraz je položen na charakteristiku procesů a trendů probíhajících v DEFI. Akcent je kladen na schopnost studenta aplikovat znalosti při řešení konkrétních praktických situací z pozice klienta i manažera finančních institucí. Výuka bude obohacena o přednášky provedené externími lektory.
+
+Výsledky učení:
+Po úspěšném absolvování budou studenti schopni:
+• porozumět operacím probíhajícím v centralizovaných financí a DEFI,
+• chápat význam DEFI ve světovém finančním systému,
+• orientovat se v regulatorních a dohledových opatřeních týkajících se DEFI a ESG,
+• zvládnout základy řízení rizik v DEFI a ESG,
+• orientovat se v základních produktech,
+• rozumět aktuálním trendům v DEFI a ESG.
+
+Obsah předmětu:
+Blok A: Centralizované finance
+1. Finanční trhy, infrastruktura a instrumenty
+2. Banky, Fintech a finanční instituce
+3. Regulace a rizika
+
+Blok B: Decentralizované finance (DEFI)
+4. Základní pojmy: kryptoměny, blockchain, smart kontrakty
+5. DEFI ekosystém
+6. Regulace a rizika
+
+Blok C: Udržitelné finance
+7. Udržitelné finanční trhy, infrastruktura a instrumenty
+8. Role veřejného sektoru v udržitelných financí
+9. Regulace a rizika
+
+Blok D: ESG
+10. Environmental, social, and governance (ESG)
+11. Regulace a rizika
+12. Trendy v ESG
+
+Způsob studia, metody výuky a studijní zátěž (počet hodin):
+Druh    Prezenční studium
+Účast na přednáškách    26 h
+Účast na cvičeních/seminářích/tutoriálech    26 h
+Příprava na přednášky a cvičení samostudiem    26 h
+Příprava semestrální práce    22 h
+Příprava na průběžný test (testy)    26 h
+Příprava na závěrečný test    30 h
+Celkem    156 h
+
+Způsoby a kritéria hodnocení:
+Druh    Prezenční studium
+Vypracování semestrální práce    30 %
+Absolvování průběžného testu (testů)    20 %
+Absolvování závěrečného testu    50 %
+Celkem    100 %
+
+Hodnocení:
+Zkoušky
+1    Výborně (90 - 100 %)
+2    Velmi dobře (75 - 89 %)
+3    Dobře (60 - 74 %)
+4    Nedostatečně (0 - 59 %)
+Zápočty
+Z    Započteno
+NZ    Nezapočteno
+Zvláštní podmínky a podrobnosti:
+Tento kurz byl spolufinancován Evropskou unií, Národním plánem obnovy z projektu NPO_VŠE_MSMT-16603/2022.
+
+Literatura:
+Doporučená:
+BIRRER , T. K., AMSTUTZ, D., WENGER, P. Decentralized Finance. Springer, Berlin, 2023
+LEVIS, R. Understanding Decentralized Finance. Kogan Page Ltd, 2023
+
+Periodické rozvrhové akce:
+Den    Čas    Místnost    Typ akce    Četnost    Vyučující    Kapacita    Výjimky    Poznámka
+Středa
+11:00-12:30
+NB 177B
+Přednáška
+Každý týden
+prof. PhDr. Petr Teplý, Ph.D.    35        -
+Středa
+12:45-14:15
+NB 177B
+Cvičení
+Každý týden
+prof. PhDr. Petr Teplý, Ph.D.    35        -

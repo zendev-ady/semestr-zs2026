@@ -1,0 +1,69 @@
+Kód předmětu:    1BP443
+Název v jazyce výuky:    Data a analytika pro finanční sektor
+Název česky:    Data a analytika pro finanční sektor
+Název anglicky:    Data & Analytics for the Financial Sector
+Počet přidělených ECTS kreditů:    3 (1 ECTS kredit = 26 hodin studijní zátěže)
+Forma výuky:    prezenční; 0/2 (počet hodin přednášek týdně / počet hodin cvičení týdně) při semestrální výuce
+Forma ukončení:    zkouška
+Jazyk výuky:    čeština
+Doporučený typ a ročník studia:    magisterský navazující (druhý cyklus): 1
+Semestr:    ZS 2026/2027
+Vyučující:    Ing. David Slánský, Ph.D., LL.M., MBA (cvičící, přednášející, zkoušející)
+prof. PhDr. Petr Teplý, Ph.D. (garant)
+Omezení pro zápis:    žádné
+Doporučené doplňky:    žádné
+Vyžadovaná praxe:    žádná
+ 
+Zaměření předmětu:
+Cílem kurzu je připravit studenty pro každodenní praxi spojenou s využitím dat a analytiky v bankách, pojišťovnách či jiných finančních institucích. Kurz je tvořen kombinací seminářů (zde se počítá s aktivní participací studentů) a praktické práce s nástroji pro data a analytiku na úrovni „business uživatele“ (tedy ne programování). Na počátku kurzu se studenti seznámí s obvyklými případy využití dat a analytiky v organizacích finančního sektoru (centrální banka, komerční banka, pojišťovna, finanční zprostředkovatel). Následně si ve tříčlenných skupinách vytvoří datově-analytický výstup, který na konci kurzu představí a vysvětlí jeho hodnotu pro organizaci. Témata praktické práce si studenti zvolí po dohodě s vyučujícím a mohou být z jakékoliv oblasti finančního sektoru – od reportingu, přes řešení pro sledování či predikci rizik až po predikci či reporting chování a potřeb zákazníků či zaměstnanců.
+ 
+Výsledky učení:
+Po úspěšném absolvování kurzu budou studenti schopni:
+• Pochopit zařazení a přidanou hodnotu dat a analytiky ve finančních institucích.
+• Pracovat s daty a analytickými nástroji jako business uživatelé (tzv. „citizen data analyst“).
+• Vysvětlit využití konkrétního výstupu v organizaci a přesvědčit auditorium o jeho přidané hodnotě.
+ 
+Obsah předmětu:
+1. Základní vysvětlení dat a analytiky a uvedení do problematiky.
+2. Praktické ukázky z oblasti komerčních bank
+3. Praktické ukázky z oblasti centrálního bankovnictví
+4. Praktické ukázky z oblasti pojišťoven
+5. Praktické ukázky z oblasti finančních zprostředkovatelů
+6. Tvorba datově analytického řešení I 
+7. Tvorba datově analytického řešení II
+8. Tvorba datově analytického řešení III
+9. Tvorba datově analytického řešení IV
+10. Tvorba datově analytického řešení V 
+11. Prezentace vytvořených datově analytických řešení I 
+12. Prezentace vytvořených datově analytických řešení II.
+ 
+Způsob studia, metody výuky a studijní zátěž (počet hodin):
+Druh    Prezenční studium
+Účast na cvičeních/seminářích/tutoriálech    26 h
+Příprava na přednášky a cvičení samostudiem    6 h
+Příprava na závěrečnou ústní zkoušku    18 h
+Příprava datově analytického řešení    28 h
+Celkem    78 h
+ 
+Způsoby a kritéria hodnocení:
+Druh    Prezenční studium
+Absolvování závěrečné ústní zkoušky    40 %
+Tvorba datově analytického řešení a jeho obhajoba    60 %
+Celkem    100 %
+ 
+Hodnocení:
+Zkoušky
+1    Výborně (90 - 100 %)
+2    Velmi dobře (75 - 89 %)
+3    Dobře (60 - 74 %)
+4    Nedostatečně (0 - 59 %)
+Zápočty
+Z    Započteno
+NZ    Nezapočteno
+Zvláštní podmínky a podrobnosti:
+Pro hodnocení kurzu jiným stupněm než nedostatečně je nutno dosáhnout z každé části alespoň 50 % bodů. Tento kurz byl spolufinancován Evropskou unií, Národním plánem obnovy z projektu NPO_VŠE_MSMT-16603/2022.
+ 
+Literatura:
+Základní:
+SLÁNSKÝ, David. Data a analytika pro 21. století: Nástroje. Příbram: Professional Publishing, 2018. 20 s. ISBN 978-80-88260-24-0.
+SLÁNSKÝ, David. Data a analytika pro 21. století. Kniha 4, Praktické příklady. [Průhonice]: Professional Publishing, 2018. ISBN 978-80-88260-23-3.

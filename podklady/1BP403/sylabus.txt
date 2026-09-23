@@ -1,0 +1,80 @@
+Sylabus předmětu 1BP403 - Bankovnictví II   (FFU - ZS 2026/2027)
+1
+SylabusSylabus kurzu
+2
+ČeštinaAngličtina
+Kód předmětu:    1BP403
+Název v jazyce výuky:    Bankovnictví II
+Název česky:    Bankovnictví II
+Název anglicky:    Banking II
+Počet přidělených ECTS kreditů:    6 (1 ECTS kredit = 26 hodin studijní zátěže)
+Forma výuky:    prezenční; 4/0 (počet hodin přednášek týdně / počet hodin cvičení týdně) při semestrální výuce
+Forma ukončení:    zkouška
+Jazyk výuky:    čeština
+Doporučený typ a ročník studia:    magisterský navazující (druhý cyklus): 1
+Semestr:    ZS 2026/2027
+Vyučující:    doc. Ing. Petr Dvořák, Ph.D. (garant, přednášející, zkoušející)
+Ing. Luděk Palán (přednášející, zkoušející)
+Omezení pro zápis:    žádné
+Doporučené doplňky:    žádné
+Vyžadovaná praxe:    žádná
+ 
+Zaměření předmětu:
+Cílem předmětu je objasnění podstaty jednotlivých bankovních rizik včetně zohlednění ESG indikátorů a metod jejich měření a řízení, včetně správné interpretace výstupů, které tyto metody podávají. Dále je výklad zaměřen na objasnění konstrukce širokého spektra derivátových kontraktů a jejich využití k zajištění i jako nástrojů finančního investování a vyhodnocení realizace enviromentálních rizik.
+ 
+Výsledky učení:
+Po úspěšném absolvování budou studenti schopni:
+- pochopit podstatu bankovních rizik včetně nástrojů jejich regulace při zapojení a vyhodnocení přístupu ESG a osvojit si praktické využití metod jejich měření a řízení;
+- pochopit podstatu derivátových kontraktů včetně způsobu jejich obchodování a oceňování;
+- využít deriváty k zajištění bankovních rizik i jako investičního nástroje včetně schopnosti samostatné analýzy jejich výnosnosti a rizikovosti
+ 
+Obsah předmětu:
+1. Bankovní bilance
+2. Úrokové, tržní a měnové riziko, jejich měření, řízení a regulace, včetně zohlednění dopadu ESG rizikových faktorů
+3. Podstata derivátů
+4. Forvardové kontrakty, CFD, financial futures , swapy
+5. Opce, cap, floor, collar
+6. Likviditní riziko, jeho měření, řízení a regulace
+7. Úvěrové riziko, jeho měření, řízení a regulace. Zohlednění fyzických a tranzitivních enviromentálních rizik při vyhodnocování a monitoringu úvěrů, zelené úvěry
+8. Kreditní deriváty
+9. Kapitálové riziko, jeho měření, řízení a regulace
+10. Operační riziko banky a zajištění fungování a případné obnovy činnosti banky při výskytu nepříznivé události včetně ESG
+11. Měření a řízení ziskovosti banky
+12. Účetní zobrazení derivátů
+ 
+Způsob studia, metody výuky a studijní zátěž (počet hodin):
+Druh    Prezenční studium
+Účast na přednáškách    52 h
+Příprava na přednášky a cvičení samostudiem    26 h
+Příprava semestrální práce    39 h
+Příprava na závěrečný test    39 h
+Celkem    156 h
+ 
+Způsoby a kritéria hodnocení:
+Druh    Prezenční studium
+Vypracování semestrální práce    30 %
+Absolvování závěrečného testu    70 %
+Celkem    100 %
+ 
+Hodnocení:
+Zkoušky
+1    Výborně (90 - 100 %)
+2    Velmi dobře (75 - 89 %)
+3    Dobře (60 - 74 %)
+4    Nedostatečně (0 - 59 %)
+Zápočty
+Z    Započteno
+NZ    Nezapočteno
+Zvláštní podmínky a podrobnosti:
+Nutnou podmínkou pro přihlášení k závěrečnému testu je řádné odevzdání semestrální práce. (Tento kurz byl spolufinancován Evropskou unií, Národním plánem obnovy z projektu NPO_VSE_MSMT-2146/2024-5.)
+ 
+Literatura:
+Základní:
+DVOŘÁK, Petr. Bankovnictví pro bankéře a klienty. Praha: Linde, 2005. ISBN 80-7201-515-X. 
+DVOŘÁK, Petr. Deriváty. Praha: Oeconomica, 2008. ISBN 978-80-245-1435-2. 
+MACDONALD, Steven Scott a KOCH, Timothy W. Bank management. Mason: South-Western/Cengage Learning, 2010. ISBN 978-0-324-65578-0. 
+Doporučená:
+KAŠPAROVSKÁ, Vlasta. Řízení obchodních bank : vybrané kapitoly. Praha: Beck, 2006. ISBN 80-7179-381-7. 
+POLOUČEK, Stanislav. Bankovnictví. V Praze: Beck, 2006. ISBN 80-7179-462-7. 
+JÍLEK, Josef. Finanční a komoditní deriváty v praxi. Praha: Grada, 2010. ISBN 978-80-247-3696-9. 
+BESSIS, Joël. Risk management in banking. Chichester: John Wiley & Sons, 2010. ISBN 978-0-470-01913-9.

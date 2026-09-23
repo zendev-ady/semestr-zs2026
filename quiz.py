@@ -169,6 +169,21 @@ def export_json(output: str = "quiz-data.js"):
         json.dump(data, f, ensure_ascii=False, indent=2)
         f.write(";\n")
     print(f"Exportováno {len(data)} otázek → {out_path}")
+    export_plans()
+
+
+def export_plans(output: str = "plans-data.js"):
+    """Studijní plány podklady/<KÓD>/studijni_plan.md → plans-data.js (plan.html)."""
+    plans = {
+        path.parent.name: path.read_text(encoding="utf-8")
+        for path in sorted((ROOT / "podklady").glob("*/studijni_plan.md"))
+    }
+    out_path = ROOT / output
+    with open(out_path, "w", encoding="utf-8") as f:
+        f.write("window.PLANS = ")
+        json.dump(plans, f, ensure_ascii=False, indent=2)
+        f.write(";\n")
+    print(f"Exportováno {len(plans)} studijních plánů → {out_path}")
 
 
 def show_help():
@@ -179,7 +194,7 @@ Použití:
   python quiz.py topics                    Počty otázek po předmětech a tématech
   python quiz.py delete <id>               Smazat otázku
   python quiz.py add '<json>'              Přidat otázky z JSON (používá Claude)
-  python quiz.py export                    Export do quiz-data.js pro webový frontend
+  python quiz.py export                    Export do quiz-data.js a plans-data.js pro webový frontend
 
 Téma = kód předmětu z courses.js (např. 1BP403), subtopic = číslo tématu (#topic-N).
 
