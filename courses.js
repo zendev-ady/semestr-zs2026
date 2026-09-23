@@ -57,12 +57,12 @@ window.COURSES = [
     "lang": "cz",
     "group": "P",
     "schedule": ["Př St 11:00–12:30 NB 177B", "Cv St 12:45–14:15 NB 177B"],
-    "grading": "Semestrální práce (30 %) · Průběžný test (20 %) · Závěrečný test (50 %)",
+    "grading": "Průběžný online test 11. 11. (20 %) · Semestrální práce (30 %) · Závěrečný online test (50 %) · min. 60 bodů",
     "topics": [
-      "Finanční trhy a instrumenty",
-      "Banky, fintech a instituce",
+      "Finanční trhy, banky a instituce",
+      "Fintech",
       "CeFi: regulace a rizika",
-      "Kryptoměny, blockchain, smart kontrakty",
+      "Kryptoměny a blockchain",
       "DeFi ekosystém",
       "DeFi: regulace a rizika",
       "Udržitelné finanční trhy a instrumenty",
@@ -73,7 +73,10 @@ window.COURSES = [
       "Trendy v ESG"
     ],
     "topicWeeks": [1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 13, 13],
-    "events": []
+    "events": [
+      {"date": "2026-11-11", "type": "test", "title": "Průběžný online test 11:00–11:20, NB177B (první polovina semestru, 20 %)"},
+      {"date": "2026-11-30", "type": "jine", "title": "Termíny závěrečného testu vypsány v InSIS (3+1)"}
+    ]
   },
   {
     "code": "1MT461",

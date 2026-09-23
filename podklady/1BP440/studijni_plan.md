@@ -1,14 +1,15 @@
 # 1BP440 Decentralizované a udržitelné finance
 
-> Zdroj: `sylabus.txt` (InSIS). Oficiální harmonogram od vyučujícího zatím není. Rozvržení do týdnů je **můj návrh** podle volen. Klíčové pojmy jsou mimo sylabus **návrh** podle doporučené literatury (Birrer a kol. 2023, Levis 2023) a regulace EU. Upřesnit podle přednášek.
+> Zdroj: `sylabus.txt` (InSIS) + úvodní prezentace (23. 9. 2026), která má přednost. Rozvržení témat do týdnů je **můj návrh** podle volen. Klíčové pojmy jsou mimo sylabus **návrh** podle doporučené literatury (Birrer a kol. 2023, Levis 2023) a regulace EU. Upřesnit podle přednášek.
 
 ## Přehled
 
 | | |
 |---|---|
 | Kredity | 6 ECTS · 2/2 (přednáška/cvičení) |
-| Rozvrh | St 11:00–12:30 NB 177B (přednáška) · St 12:45–14:15 NB 177B (cvičení) |
-| Vyučující | prof. PhDr. Petr Teplý, Ph.D. (garant, přednášející, cvičící, zkoušející) + externí lektoři |
+| Rozvrh | St 11:00–12:30 NB 177B (přednáška) · St 12:45–14:15 NB 177B (cvičení) · 23. 9. online · 21. 10. a 18. 11. v NB139 |
+| Vyučující | prof. PhDr. Petr Teplý, Ph.D. (garant), Ing. Petra Jílková, Ph.D. + externí lektoři |
+| Zdroje | Moodle (přednášky, testy, odevzdání) · kontakt garant.ft@vse.cz |
 | Jazyk | čeština |
 | Ukončení | zkouška = semestrální práce + průběžný test + závěrečný test |
 
@@ -18,28 +19,28 @@
 
 | Část | Váha | Příprava podle sylabu |
 |---|---|---|
-| Semestrální práce | **30 %** | 22 h |
-| Průběžný test | **20 %** | 26 h |
-| Závěrečný test | **50 %** | 30 h |
+| Průběžný online test | **20 b** | St 11. 11. 2026 11:00–11:20, prezenčně NB177B, Moodle; první polovina semestru; nejde opakovat ani nahradit, bez minima |
+| Semestrální práce | **30 b** | týmová, zadání ve zvláštní prezentaci |
+| Závěrečný online test | **50 b** | celý semestr, 40 min, Moodle; 3+1 termíny v InSIS do 30. 11. 2026; opakovat jen s 4+, náhradní termín nebude |
 
-Známky: 1 = 90–100 % · 2 = 75–89 % · 3 = 60–74 % · 4 = pod 60 %
+K absolvování je potřeba **alespoň 60 bodů**. Známky: 1 = 90–100 · 2 = 75–89 · 3 = 60–74 · 4+ = 50–59 (Nevyhověl+, lze opakovat závěrečný test) · 4 = 0–49
 
-Termíny: zatím neznámé (termín a rozsah průběžného testu, zadání a odevzdání semestrální práce, termíny závěrečného testu).
+Termíny, které zatím nejsou známé: zadání a odevzdání semestrální práce, přesná data závěrečného testu.
 
 ## Harmonogram a témata
 
-Výuka ve středu. Odpadá 6. týden (28. 10., státní svátek) a 7. týden (4. 11., inovační týden) → **11 výukových týdnů na 12 témat**. Návrh: témata 11 a 12 (ESG: regulace a trendy) spolu ve 13. týdnu. Číslo tématu = `#topic-N` = `subtopic` v quizu.
+Výuka ve středu. Odpadá 6. týden (28. 10., státní svátek) a 7. týden (4. 11., inovační týden) → **11 výukových týdnů na 12 témat**. Návrh: témata 11 a 12 (ESG: regulace a trendy) spolu ve 13. týdnu. Číslo tématu = `#topic-N` = `subtopic` v quizu. Názvy témat 1–4 podle úvodní prezentace (liší se od InSIS: banky patří do tématu 1, fintech je samostatné téma 2).
 
 | Týden | Datum | Téma | Blok |
 |---|---|---|---|
-| 1 | 23. 9. | **1** Finanční trhy, infrastruktura a instrumenty | A |
-| 2 | 30. 9. | **2** Banky, fintech a finanční instituce | A |
+| 1 | 23. 9. | **1** Finanční trhy, banky a finanční instituce | A |
+| 2 | 30. 9. | **2** Fintech | A |
 | 3 | 7. 10. | **3** Centralizované finance: regulace a rizika | A |
-| 4 | 14. 10. | **4** Kryptoměny, blockchain, smart kontrakty | B |
+| 4 | 14. 10. | **4** Kryptoměny, blockchain | B |
 | 5 | 21. 10. | **5** DeFi ekosystém | B |
 | 6 | 28. 10. | *státní svátek, výuka odpadá* | |
 | 7 | 4. 11. | *inovační týden, výuka odpadá* | |
-| 8 | 11. 11. | **6** DeFi: regulace a rizika | B |
+| 8 | 11. 11. | **průběžný test 11:00–11:20** · **6** DeFi: regulace a rizika | B |
 | 9 | 18. 11. | **7** Udržitelné finanční trhy, infrastruktura a instrumenty | C |
 | 10 | 25. 11. | **8** Role veřejného sektoru v udržitelných financích | C |
 | 11 | 2. 12. | **9** Udržitelné finance: regulace a rizika | C |
