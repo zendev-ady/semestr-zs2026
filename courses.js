@@ -44,8 +44,30 @@ window.COURSES = [
     "lang": "cz",
     "group": "V",
     "schedule": ["Př Čt 09:15–12:30 NB B"],
-    "topics": [],
-    "events": []
+    "grading": "Průběžný test 26. 11. (40 %) · Ústní zkouška (40 %) · Projekt s obhajobou (20 %) · +5 b za aktivitu · min. 60 bodů",
+    "topics": [
+      "Finanční trhy a jejich struktura",
+      "Regulace a dohled",
+      "Kolektivní investování",
+      "Dluhové instrumenty",
+      "Penzijní fondy a investiční management",
+      "Finanční investování",
+      "Fundamentální akciová analýza",
+      "Technická analýza a psychologie trhů",
+      "Teorie efektivních trhů",
+      "Finanční krize",
+      "Mezinárodní investování a reálná aktiva",
+      "Investiční bankovnictví",
+      "Sekundární trhy"
+    ],
+    "topicWeeks": [1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 13],
+    "events": [
+      {"date": "2026-10-08", "type": "deadline", "title": "Projekt: nahlásit zvolené portfolio na přednášce"},
+      {"date": "2026-11-26", "type": "test", "title": "Průběžný test (předběžný termín; a–d + 2 investiční strategie + esej, 40 %)"},
+      {"date": "2026-12-10", "type": "deadline", "title": "Odevzdání projektu papírově na přednášce (20 %)"},
+      {"date": "2026-12-21", "type": "zkouska", "title": "Předtermín ústní zkoušky 8:30–11:00"},
+      {"date": "2027-01-04", "type": "zkouska", "title": "Ústní zkouška 8:30–11:00 (další termíny 5., 7., 12., 14., 18., 21., 28. 1.)"}
+    ]
   },
   {
     "code": "1BP440",
