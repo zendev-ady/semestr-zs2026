@@ -39,6 +39,9 @@
                     <strong class="d-block mb-2 text-muted" style="font-size:0.8rem;text-transform:uppercase;letter-spacing:.05em">Obsah</strong>
                     <ul class="nav flex-column">
                         <li><a class="nav-link py-1" href="#harmonogram">Harmonogram</a></li>
+                        <li><a class="nav-link py-1" href="#topic-1">1. Principy pojištění</a></li>
+                        <li><a class="nav-link py-1" href="#topic-2">2. Konstrukce produktů</a></li>
+                        <li><a class="nav-link py-1" href="#topic-3">3. Procesy v pojišťovně</a></li>
                     </ul>
                 </nav>
             </div>
@@ -53,9 +56,263 @@
                 </section>
 
                 <!-- Témata ze sylabu: <section class="topic-section" id="topic-N"> … (viz skill semestr) -->
-                <div class="alert alert-secondary">
-                    Poznámky zatím chybí — nahraj sylabus do <code>podklady/1BP441/</code> a požádej Clauda o jejich vytvoření.
-                </div>
+                <div class="warn-box mb-4"><strong>⚠️ Zdroj poznámek:</strong> témata 1–3 jsou zatím napsaná <strong>jen z literatury</strong> (Ducháčková, Daňhel 2012; Ducháčková: <em>Principy pojištění a pojišťovnictví</em>; zákon č. 277/2009 Sb. o pojišťovnictví; občanský zákoník), ne z prezentací. Po přednáškách je upravím podle vyučujících, jejich terminologie má přednost.</div>
+
+                <section class="topic-section" id="topic-1">
+                    <h3>1. Principy fungování pojištění a pojistných produktů</h3>
+                    <p class="text-muted small">Přednáška 24. 9. · vyučující upřesnit · zdroj: literatura, bez prezentace</p>
+
+                    <h4>Riziko a proč existuje pojištění</h4>
+                    <div class="def-box"><strong>Riziko:</strong> možnost, že skutečnost se odchýlí od očekávání. V pojištění nás zajímá hlavně <strong>čisté riziko</strong>: může nastat jen ztráta (požár, nehoda, smrt). U <strong>spekulativního rizika</strong> je možný zisk i ztráta (investice, podnikání) a to se běžně nepojišťuje.</div>
+                    <p>Subjekt může s rizikem naložit čtyřmi způsoby: riziku se <strong>vyhnout</strong> (nedělat rizikovou činnost), <strong>snížit</strong> ho (prevence, hasicí přístroj), <strong>ponechat si</strong> ho (vlastní rezerva, samopojištění) nebo ho <strong>přenést</strong> na jiného. Pojištění je nejrozšířenější forma <strong>přenosu rizika</strong>.</p>
+                    <div class="def-box"><strong>Pojištění:</strong> finanční služba, při které pojistník platí pojišťovně <strong>pojistné</strong> a pojišťovna se zavazuje, že při <strong>pojistné události</strong> vyplatí <strong>pojistné plnění</strong>. Ekonomicky jde o vytváření a rozdělování <strong>pojistného fondu</strong>: z příspěvků mnoha pojištěných se hradí škody těch několika, kterým událost nastala.</div>
+
+                    <h4>Vyrovnání rizika — podstata pojištění</h4>
+                    <div class="thm-box"><strong>Zákon velkých čísel:</strong> čím víc nezávislých stejnorodých rizik pojišťovna má, tím víc se skutečný počet škod blíží očekávanému a tím menší je <em>relativní</em> kolísání škod. Pro jednotlivce je škoda nepředvídatelná, pro velký soubor je předvídatelná.</div>
+                    <div class="formula-block">$$\text{variační koeficient počtu škod} = \frac{\sqrt{n\,p\,(1-p)}}{n\,p} = \sqrt{\frac{1-p}{n\,p}}$$</div>
+                    <div class="ex-box"><strong>Příklad:</strong> pravděpodobnost požáru domu za rok je $p = 1\,\%$.
+                        <ul class="mb-0">
+                            <li>pojišťovna se 100 domy: očekává 1 požár, variační koeficient $\sqrt{0{,}99/1} \approx 0{,}99$ → skutečnost může být klidně 0, nebo 3 požáry, tedy velká nejistota,</li>
+                            <li>pojišťovna s 10 000 domy: očekává 100 požárů, variační koeficient $\sqrt{0{,}99/100} \approx 0{,}10$ → skutečnost bude zhruba 80–120,</li>
+                            <li>100× víc smluv → relativní kolísání 10× menší ($\sqrt{100}$).</li>
+                        </ul>
+                    </div>
+                    <p>Pojišťovna vyrovnává riziko dvěma směry:</p>
+                    <ul>
+                        <li><strong>v pojistném kmeni</strong> (v prostoru): škody jedněch platí pojistné ostatních,</li>
+                        <li><strong>v čase</strong>: v dobrých letech tvoří rezervy, ze kterých kryje horší roky.</li>
+                    </ul>
+                    <p>Na co vyrovnání nestačí (velké katastrofy, velká jednotlivá rizika), pojišťovna přenese dál na <strong>zajišťovnu</strong> (téma 3).</p>
+
+                    <h4>Pojistitelnost rizika</h4>
+                    <div class="def-box"><strong>Pojistitelné riziko</strong> splňuje (zhruba) tyto podmínky:
+                        <ul class="mb-0">
+                            <li><strong>nahodilost</strong>: událost je možná, ale není jisté, zda a kdy nastane; nezávisí na vůli pojištěného,</li>
+                            <li><strong>odhadnutelnost</strong>: lze odhadnout pravděpodobnost a výši škody (statistika, data),</li>
+                            <li><strong>velký počet</strong> podobných a <strong>nezávislých</strong> rizik: jinak nefunguje zákon velkých čísel,</li>
+                            <li><strong>měřitelná škoda</strong>: lze určit, zda a kolik ztráty vzniklo,</li>
+                            <li><strong>únosnost</strong>: možná škoda není vzhledem ke kapitálu pojišťovny tak velká, aby ji zničila, a pojistné je pro klienta přijatelné.</li>
+                        </ul>
+                    </div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> nezávislost rizik je u katastrof (povodeň, zemětřesení, pandemie) porušená: škody přijdou naráz u mnoha klientů. Proto se tato rizika kryjí zajištěním, limity nebo zvláštními programy. U nových produktů Insurtech (kybernetické riziko, parametrické pojištění) je dobré se vždy ptát, jak splňují pojistitelnost.</div>
+
+                    <h4>Informační asymetrie</h4>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th></th><th>Nepříznivý výběr (adverse selection)</th><th>Morální hazard (moral hazard)</th></tr></thead>
+                        <tbody>
+                            <tr><td>Kdy</td><td><strong>před</strong> uzavřením smlouvy</td><td><strong>po</strong> uzavření smlouvy</td></tr>
+                            <tr><td>Co se děje</td><td>pojištění kupují hlavně ti s vyšším rizikem, které pojišťovna nepozná</td><td>pojištěný se chová méně opatrně, protože škodu nese pojišťovna</td></tr>
+                            <tr><td>Důsledek</td><td>průměrné pojistné nestačí → zdražení → odchod dobrých rizik → „spirála smrti“</td><td>vyšší škody, než pojišťovna kalkulovala</td></tr>
+                            <tr><td>Obrana</td><td>upisování (zdravotní dotazník), segmentace, čekací doby, povinné pojištění</td><td>spoluúčast, bonus/malus, výluky, prevence, monitoring (telematika)</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="insight-box"><strong>Intuice:</strong> skoro každá technologická inovace v pojištění (telematika, wearables, big data) je ve skutečnosti pokus zmenšit informační asymetrii: pojišťovna víc ví o riziku (proti nepříznivému výběru) a vidí chování klienta (proti morálnímu hazardu).</div>
+
+                    <h4>Solidarita × ekvivalence</h4>
+                    <ul>
+                        <li><strong>Princip ekvivalence:</strong> pojistné odpovídá riziku, které klient přináší (vyšší riziko → vyšší pojistné). Typické pro komerční pojištění.</li>
+                        <li><strong>Princip solidarity:</strong> všichni platí stejně nebo podle příjmu, bez ohledu na riziko (veřejné zdravotní pojištění, důchodové pojištění).</li>
+                    </ul>
+                    <p>Každé pojištění obsahuje prvek solidarity (šťastní platí za nešťastné). Čím jemnější je segmentace podle rizika, tím méně solidarity zůstává. Extrémní personalizace může udělat vysoká rizika nepojistitelnými.</p>
+
+                    <h4>Základní pojmy pojistné smlouvy</h4>
+                    <table class="table table-bordered summary-table">
+                        <tbody>
+                            <tr><td><strong>Pojistitel</strong></td><td>pojišťovna, nese riziko</td></tr>
+                            <tr><td><strong>Pojistník</strong></td><td>uzavírá smlouvu a platí pojistné</td></tr>
+                            <tr><td><strong>Pojištěný</strong></td><td>osoba, na jejíž život, zdraví, majetek nebo odpovědnost se pojištění vztahuje (může být jiná než pojistník)</td></tr>
+                            <tr><td><strong>Obmyšlený</strong></td><td>ten, komu vznikne právo na plnění při smrti pojištěného (životní pojištění)</td></tr>
+                            <tr><td><strong>Pojistný zájem</strong></td><td>oprávněná potřeba ochrany před následky pojistné události; bez něj je smlouva neplatná (§ 2761 OZ)</td></tr>
+                            <tr><td><strong>Pojistné nebezpečí</strong></td><td>možná příčina události (požár, krádež)</td></tr>
+                            <tr><td><strong>Pojistná událost</strong></td><td>nahodilá událost krytá pojištěním, se kterou je spojena povinnost pojistitele plnit</td></tr>
+                            <tr><td><strong>Pojistná částka</strong></td><td>horní hranice plnění, sjednaná ve smlouvě</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h4>Třídění pojištění</h4>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Hledisko</th><th>Druhy</th></tr></thead>
+                        <tbody>
+                            <tr><td>Podle zákona (pro licence)</td><td><strong>životní</strong> × <strong>neživotní</strong> (majetek, odpovědnost, úraz a nemoc, cestovní, úvěr a záruky…)</td></tr>
+                            <tr><td>Podle způsobu plnění</td><td><strong>škodové</strong> (plní se skutečná škoda, max. do výše škody — nelze se obohatit) × <strong>obnosové</strong> (plní se sjednaná částka bez ohledu na škodu — typicky život, úraz)</td></tr>
+                            <tr><td>Podle vzniku</td><td><strong>smluvní dobrovolné</strong> × <strong>povinné smluvní</strong> (zákon ukládá pojištění uzavřít, např. povinné ručení) × <strong>zákonné</strong> (vzniká přímo ze zákona, např. zákonné pojištění odpovědnosti zaměstnavatele)</td></tr>
+                            <tr><td>Podle tvorby rezervy</td><td><strong>rizikové</strong> (jen krytí rizika) × <strong>rezervotvorné</strong> (část pojistného se spoří — kapitálové, investiční životní pojištění)</td></tr>
+                            <tr><td>Podle klienta</td><td>pojištění <strong>občanů</strong> × <strong>podnikatelů</strong> (průmyslová a podnikatelská rizika)</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> škodové pojištění se řídí <strong>zákazem obohacení</strong> — při pojištění u více pojišťoven dohromady nedostaneš víc než škodu. U obnosového pojištění (úraz, život) můžeš mít víc smluv a dostat plnění z každé.</div>
+
+                    <div class="summary-box"><strong>Shrnutí:</strong>
+                        <ul>
+                            <li>pojištění = přenos rizika na pojišťovnu, která ho vyrovnává v kmeni a v čase díky zákonu velkých čísel</li>
+                            <li>pojistitelné riziko: nahodilé, odhadnutelné, hodně nezávislých případů, měřitelná a únosná škoda</li>
+                            <li>nepříznivý výběr (před smlouvou) × morální hazard (po smlouvě) — informační asymetrie</li>
+                            <li>škodové (zákaz obohacení) × obnosové; životní × neživotní; dobrovolné × povinné smluvní × zákonné</li>
+                        </ul>
+                    </div>
+                    <p class="mb-0"><a href="../quiz.html?course=1BP441&topic=1"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
+                </section>
+
+                <section class="topic-section" id="topic-2">
+                    <h3>2. Konstrukce pojistných produktů</h3>
+                    <p class="text-muted small">Přednáška 24. 9. · vyučující upřesnit · zdroj: literatura, bez prezentace</p>
+
+                    <p>Pojistný produkt má tři hlavní složky: <strong>cenu</strong> (pojistné), <strong>rozsah krytí</strong> (co, do jaké výše a za jakých podmínek se plní) a <strong>zajištění závazků</strong> (technické rezervy, ze kterých se bude plnit).</p>
+
+                    <h4>Pojistné: netto a brutto</h4>
+                    <div class="def-box"><strong>Netto (rizikové) pojistné:</strong> část pojistného, která pokrývá očekávaná pojistná plnění (u rezervotvorného pojištění navíc spořicí část). <strong>Brutto pojistné</strong> = netto pojistné + přirážky na správní a pořizovací náklady (provize), bezpečnostní přirážka a zisk. Klient platí brutto.</div>
+                    <div class="formula-block">$$\text{netto pojistné} = \text{pravděpodobnost události} \times \text{průměrná výše plnění}$$
+                    $$\text{brutto pojistné} = \frac{\text{netto pojistné}\,(1 + \text{bezpečnostní přirážka})}{1 - \alpha}$$</div>
+                    <p class="small text-muted">$\alpha$ = podíl nákladů a zisku na brutto pojistném.</p>
+                    <div class="ex-box"><strong>Příklad:</strong> pojištění domácnosti; pravděpodobnost škody za rok 5 %, průměrná škoda 20 000 Kč, bezpečnostní přirážka 10 %, náklady a zisk tvoří 30 % brutto pojistného.
+                        <ol class="mb-0">
+                            <li>netto: $0{,}05 \times 20\,000 = 1\,000$ Kč</li>
+                            <li>s bezpečnostní přirážkou: $1\,000 \times 1{,}1 = 1\,100$ Kč</li>
+                            <li>brutto: $1\,100 / (1 - 0{,}3) = 1\,571$ Kč</li>
+                            <li>kontrola: 30 % z 1 571 = 471 Kč na náklady a zisk, zbytek 1 100 Kč na plnění</li>
+                        </ol>
+                    </div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> náklady jsou zadané jako podíl <strong>brutto</strong> pojistného, proto se dělí $(1-\alpha)$, ne násobí $(1+\alpha)$. $1\,100 \times 1{,}3 = 1\,430$ by bylo špatně.</div>
+
+                    <h4>Tarifní faktory a segmentace</h4>
+                    <p>Pojistné se liší podle <strong>tarifních faktorů</strong>, které ovlivňují riziko: u auta věk řidiče, výkon vozu, region, škodní historie; u domácnosti lokalita, zabezpečení, hodnota; u života věk, zdravotní stav, kouření. Rozdělení klientů do rizikových skupin se nazývá <strong>segmentace</strong>. Omezení: faktory nesmí diskriminovat — v EU se od roku 2012 nesmí pojistné lišit podle <strong>pohlaví</strong> (rozsudek SDEU Test-Achats).</p>
+                    <div class="def-box"><strong>Bonus/malus:</strong> sleva (bonus) za období bez škody, přirážka (malus) po škodě. Typicky v povinném ručení a havarijním pojištění. Zpřesňuje cenu podle skutečného chování (ex post segmentace) a zároveň motivuje k opatrnosti.</div>
+
+                    <h4>Pojistná částka, pojistná hodnota a podpojištění</h4>
+                    <ul>
+                        <li><strong>pojistná hodnota</strong> = skutečná hodnota pojištěného majetku (nová cena = kolik stojí nová věc, nebo časová cena = po odečtení opotřebení),</li>
+                        <li><strong>pojistná částka</strong> = hodnota uvedená ve smlouvě, horní hranice plnění.</li>
+                    </ul>
+                    <div class="thm-box"><strong>Podpojištění a pravidlo proporcionality:</strong> je-li pojistná částka nižší než pojistná hodnota, pojišťovna plní jen poměrnou část škody.
+                        $$\text{plnění} = \text{škoda} \times \frac{\text{pojistná částka}}{\text{pojistná hodnota}}$$
+                    </div>
+                    <div class="ex-box"><strong>Příklad:</strong> dům má hodnotu 5 mil. Kč, pojištěn je na 4 mil. Kč. Požár způsobí škodu 1 mil. Kč, spoluúčast je 10 000 Kč (odečitatelná).
+                        <ol class="mb-0">
+                            <li>poměr: $4 / 5 = 0{,}8$ → podpojištění o 20 %</li>
+                            <li>plnění před spoluúčastí: $1\,000\,000 \times 0{,}8 = 800\,000$ Kč</li>
+                            <li>po spoluúčasti: $800\,000 - 10\,000 = 790\,000$ Kč</li>
+                        </ol>
+                        Klient nese 210 000 Kč, i když škoda (1 mil.) byla nižší než pojistná částka (4 mil.).
+                    </div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> podpojištění snižuje plnění i u <strong>malé</strong> škody, ne jen u totální. Naopak <strong>přepojištění</strong> (částka > hodnota) klientovi nic nepřinese — ve škodovém pojištění dostane max. skutečnou škodu, jen platí vyšší pojistné. Pořadí proporcionality a spoluúčasti určují pojistné podmínky; v testu se drž zadání.</div>
+                    <p>Pravidlo proporcionality lze vyloučit: <strong>pojištění na první riziko</strong> (plní se do pojistné částky bez krácení) nebo pojišťovna podpojištění neuplatní do určité hranice (např. 10–20 %). Pojištění na <strong>novou cenu</strong> s automatickou indexací chrání proti podpojištění kvůli inflaci.</p>
+
+                    <h4>Spoluúčast a limity</h4>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Typ</th><th>Jak funguje</th><th>Škoda 3 000 / 20 000 Kč, spoluúčast 5 000 Kč</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Integrální</strong> (franšíza)</td><td>pod hranicí se neplní nic, nad hranicí se plní celá škoda</td><td>0 / 20 000</td></tr>
+                            <tr><td><strong>Excedentní</strong> (odečitatelná)</td><td>hranice se odečte vždy</td><td>0 / 15 000</td></tr>
+                            <tr><td><strong>Procentní</strong></td><td>klient nese % ze škody (často s minimem)</td><td>při 10 %: 2 700 / 18 000</td></tr>
+                        </tbody>
+                    </table>
+                    <p>Spoluúčast: (1) odstraní drobné škody, u kterých by náklady likvidace převýšily plnění, (2) snižuje morální hazard, (3) snižuje pojistné. <strong>Limit plnění</strong> omezuje plnění pro určitý druh škody (např. cennosti v domácnosti), <strong>výluky</strong> vymezují, co pojištěno není (válka, úmysl, opotřebení).</p>
+
+                    <h4>Technické rezervy</h4>
+                    <div class="def-box"><strong>Technické rezervy:</strong> závazky pojišťovny vůči pojištěným — peníze, které má vybrané, ale bude je muset vyplatit. Jsou největší položkou pasiv pojišťovny; aktiva, která je kryjí, pojišťovna investuje.</div>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Rezerva</th><th>Na co</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Rezerva na nezasloužené pojistné</strong></td><td>pojistné zaplacené předem za období, které ještě neproběhlo (roční pojistné placené 1. 10. → 9/12 je k 31. 12. nezasloužených)</td></tr>
+                            <tr><td><strong>Rezerva na pojistná plnění — RBNS</strong></td><td>události <strong>nahlášené</strong>, ale ještě nezlikvidované (reported but not settled)</td></tr>
+                            <tr><td><strong>Rezerva na pojistná plnění — IBNR</strong></td><td>události, které <strong>nastaly, ale ještě nebyly nahlášeny</strong> (incurred but not reported) — odhad statisticky</td></tr>
+                            <tr><td><strong>Rezerva životních pojištění</strong></td><td>naspořená část pojistného v rezervotvorném životním pojištění</td></tr>
+                            <tr><td>Rezerva na prémie a slevy</td><td>slíbené podíly na zisku a slevy (bonusy)</td></tr>
+                        </tbody>
+                    </table>
+                    <p>Podle <strong>Solvency II</strong> se technické rezervy oceňují tržně: <strong>nejlepší odhad</strong> (best estimate — diskontované očekávané budoucí toky) + <strong>riziková přirážka</strong> (risk margin). Více v tématu 5.</p>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> RBNS × IBNR — rozhoduje, jestli pojišťovna o události <strong>už ví</strong>. Dlouhé zpoždění hlášení (odpovědnost, zdravotní škody) znamená velké IBNR.</div>
+
+                    <h4>Pojistné podmínky a životní cyklus produktu</h4>
+                    <p>Produkt je právně popsán <strong>pojistnou smlouvou</strong>, <strong>všeobecnými a zvláštními pojistnými podmínkami</strong>. Při prodeji spotřebiteli se v neživotním pojištění předává standardizovaný informační dokument <strong>IPID</strong> (podle IDD). Pojišťovna musí mít proces schvalování produktu <strong>POG</strong> (product oversight and governance): určit <strong>cílový trh</strong>, otestovat produkt a sledovat, zda mu slouží (téma 5).</p>
+
+                    <div class="summary-box"><strong>Shrnutí:</strong>
+                        <ul>
+                            <li>netto = pravděpodobnost × průměrné plnění; brutto = netto s přirážkami, $\div(1-\alpha)$ když jsou náklady podílem brutta</li>
+                            <li>podpojištění: plnění = škoda × PČ / PH; vyloučí ho pojištění na první riziko</li>
+                            <li>spoluúčast integrální (vše nebo nic) × excedentní (vždy odečíst) × procentní</li>
+                            <li>technické rezervy: nezasloužené pojistné, RBNS, IBNR, životní rezerva; v Solvency II = best estimate + risk margin</li>
+                        </ul>
+                    </div>
+                    <p class="mb-0"><a href="../quiz.html?course=1BP441&topic=2"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
+                </section>
+
+                <section class="topic-section" id="topic-3">
+                    <h3>3. Procesy v pojišťovně</h3>
+                    <p class="text-muted small">Přednáška 8. 10. · vyučující upřesnit · zdroj: literatura, bez prezentace</p>
+
+                    <h4>Hodnotový řetězec pojišťovny</h4>
+                    <p>Pojišťovna má <strong>obrácený výrobní cyklus</strong>: pojistné dostane <em>předem</em> a skutečné náklady (plnění) zná až <em>později</em>. Proto cenu stanovuje odhadem a musí tvořit rezervy.</p>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Proces</th><th>Co obsahuje</th><th>Kde se uplatní Insurtech (téma 12)</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>1. Vývoj produktu</strong></td><td>analýza potřeb a trhu, pojistná matematika, tarif, podmínky, schválení (POG)</td><td>data, personalizace, parametrické produkty</td></tr>
+                            <tr><td><strong>2. Distribuce</strong> (obchod)</td><td>vlastní síť, agenti, makléři, banky, přímý prodej</td><td>online prodej, srovnávače, embedded insurance</td></tr>
+                            <tr><td><strong>3. Upisování</strong> (underwriting)</td><td>posouzení rizika, rozhodnutí o přijetí a ceně, podmínky</td><td>automatické upisování, big data, AI</td></tr>
+                            <tr><td><strong>4. Správa smluv</strong></td><td>evidence, předpis a inkaso pojistného, změny, výročí, upomínky, zánik</td><td>klientské portály, automatizace (RPA)</td></tr>
+                            <tr><td><strong>5. Likvidace pojistných událostí</strong> (claims)</td><td>hlášení, šetření, stanovení plnění, výplata, regres</td><td>foto likvidace, AI odhad škody, detekce podvodů</td></tr>
+                            <tr><td><strong>6. Zajištění</strong></td><td>přenos části rizik na zajišťovnu</td><td>—</td></tr>
+                            <tr><td><strong>7. Investice</strong></td><td>umístění aktiv kryjících technické rezervy</td><td>—</td></tr>
+                        </tbody>
+                    </table>
+                    <p>Podpůrné procesy: řízení rizik, pojistná matematika (aktuár), compliance, vnitřní audit, IT, účetnictví a výkaznictví. Podle Solvency II jsou <strong>čtyři klíčové funkce</strong>: řízení rizik, compliance, vnitřní audit, pojistně-matematická funkce.</p>
+
+                    <h4>Upisování (underwriting)</h4>
+                    <div class="def-box"><strong>Upisování:</strong> proces, kterým pojišťovna posoudí riziko a rozhodne, zda ho přijme, za jakou cenu a za jakých podmínek (spoluúčast, výluky, limity). U hromadných produktů (auto, domácnost) je automatizované podle tarifu, u velkých rizik (průmysl) ho dělá individuálně underwriter, často s prohlídkou rizika.</div>
+                    <p>Výsledek: přijetí za standardních podmínek / přijetí s přirážkou nebo výlukou / odmítnutí. Upisování je hlavní obrana proti <strong>nepříznivému výběru</strong>.</p>
+
+                    <h4>Likvidace pojistných událostí</h4>
+                    <ol>
+                        <li><strong>hlášení</strong> škody (FNOL — first notice of loss),</li>
+                        <li><strong>šetření</strong>: zda jde o pojistnou událost, zda je krytá, prohlídka likvidátorem, znalec,</li>
+                        <li><strong>stanovení výše plnění</strong> (podpojištění, spoluúčast, limity),</li>
+                        <li><strong>výplata</strong> plnění (podle OZ do 15 dnů po skončení šetření; šetření má být skončeno do 3 měsíců od oznámení),</li>
+                        <li>případný <strong>regres</strong>: pojišťovna vymáhá plnění po tom, kdo škodu zavinil.</li>
+                    </ol>
+                    <p>Likvidace je pro klienta „okamžik pravdy“: tady se ukáže kvalita pojištění. Zároveň je to místo, kde se odhalují <strong>pojistné podvody</strong> (v ČR odhalí pojišťovny ročně podvody za zhruba 1–1,5 mld. Kč — údaj ČAP, řádově, ověřit aktuální rok).</p>
+
+                    <h4>Zajištění</h4>
+                    <div class="def-box"><strong>Zajištění (reinsurance):</strong> „pojištění pojišťoven“. Pojišťovna (<strong>cedent</strong>) přenese část rizik na <strong>zajišťovnu</strong> a zaplatí za to zajistné. Snižuje tak kolísání výsledků, chrání se před katastrofami a velkými škodami, uvolňuje kapitál a může upsat větší rizika.</div>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Typ</th><th>Princip</th><th>Příklady</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Proporcionální</strong></td><td>zajišťovna přebírá stejný <strong>podíl</strong> pojistného i škod</td><td>kvótové (quota share: např. 40 % každé smlouvy), excedentní (surplus: část rizika nad vlastní vrub)</td></tr>
+                            <tr><td><strong>Neproporcionální</strong></td><td>zajišťovna platí jen škodu <strong>nad sjednanou hranicí</strong> (priorita)</td><td>škodní nadměrek (XL — excess of loss, i katastrofický), nadměrek škodního poměru (stop loss)</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="ex-box"><strong>Příklad:</strong> škoda 30 mil. Kč.
+                        <ul class="mb-0">
+                            <li>kvótové zajištění 40 %: zajišťovna platí $0{,}4 \times 30 = 12$ mil., pojišťovna 18 mil.</li>
+                            <li>XL s prioritou 10 mil. a limitem 50 mil.: zajišťovna platí $30 - 10 = 20$ mil., pojišťovna 10 mil.</li>
+                            <li>škoda 8 mil. při stejném XL: zajišťovna neplatí nic (pod prioritou)</li>
+                        </ul>
+                    </div>
+
+                    <h4>Ukazatele výsledků pojišťovny</h4>
+                    <div class="formula-block">$$\text{škodní poměr (loss ratio)} = \frac{\text{náklady na pojistná plnění}}{\text{zasloužené pojistné}}$$
+                    $$\text{nákladový poměr (expense ratio)} = \frac{\text{provozní náklady}}{\text{zasloužené pojistné}}$$
+                    $$\text{kombinovaný ukazatel (combined ratio)} = \text{škodní poměr} + \text{nákladový poměr}$$</div>
+                    <div class="ex-box"><strong>Příklad:</strong> zasloužené pojistné 1 000 mil. Kč, náklady na plnění 650 mil., provozní náklady 300 mil., výnos z investic 80 mil.
+                        <ol class="mb-0">
+                            <li>škodní poměr $650 / 1\,000 = 65\,\%$</li>
+                            <li>nákladový poměr $300 / 1\,000 = 30\,\%$</li>
+                            <li>kombinovaný ukazatel $95\,\%$ → technický (pojistný) zisk 50 mil.</li>
+                            <li>s investicemi celkem $50 + 80 = 130$ mil.</li>
+                        </ol>
+                    </div>
+                    <div class="insight-box"><strong>Intuice:</strong> kombinovaný ukazatel pod 100 % = pojišťovna vydělává už na samotném pojišťování. Nad 100 % prodělává na pojištění a musí to dohnat investicemi — funguje to při vysokých úrokových sazbách, při nízkých ne. Kombinovaný ukazatel se používá u <strong>neživotního</strong> pojištění; u životního rozhodují hlavně investice a rezervy.</div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> ve jmenovateli je <strong>zasloužené</strong> (ne předepsané) pojistné. Předepsané = co bylo za období vyúčtováno klientům; zasloužené = část, která připadá na uplynulé období (předepsané − změna rezervy na nezasloužené pojistné).</div>
+
+                    <div class="summary-box"><strong>Shrnutí:</strong>
+                        <ul>
+                            <li>obrácený výrobní cyklus: pojistné předem, náklady později → rezervy, odhad ceny</li>
+                            <li>řetězec: produkt → distribuce → upisování → správa smluv → likvidace → zajištění → investice</li>
+                            <li>zajištění proporcionální (kvóta, excedent) × neproporcionální (XL, stop loss)</li>
+                            <li>combined ratio = škodní + nákladový poměr (vůči zaslouženému pojistnému); pod 100 % = technický zisk</li>
+                        </ul>
+                    </div>
+                    <p class="mb-0"><a href="../quiz.html?course=1BP441&topic=3"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
+                </section>
             </div>
         </div>
     </div>
