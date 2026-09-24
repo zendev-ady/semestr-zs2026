@@ -1,0 +1,86 @@
+Sylabus předmětu 1BP441 - Pojišťovnictví a Insurtech   (FFU - ZS 2026/2027)
+Kód předmětu:	1BP441
+Název v jazyce výuky:	Pojišťovnictví a Insurtech
+Název česky:	Pojišťovnictví a Insurtech
+Název anglicky:	Insurance industry and Insurtech
+Počet přidělených ECTS kreditů:	4 (1 ECTS kredit = 26 hodin studijní zátěže)
+Forma výuky:	prezenční; 2/1 (počet hodin přednášek týdně / počet hodin cvičení týdně) při semestrální výuce
+Forma ukončení:	zkouška
+Jazyk výuky:	čeština
+Doporučený typ a ročník studia:	magisterský navazující (druhý cyklus): 1
+Semestr:	ZS 2026/2027
+Vyučující:	prof. Ing. Eva Ducháčková, CSc. (garant, přednášející, zkoušející)
+Ing. Petra Vojtíková Tisová, Ph.D. (cvičící, přednášející, zkoušející)
+Omezení pro zápis:	žádné
+Doporučené doplňky:	žádné
+Vyžadovaná praxe:	žádná
+ 
+Zaměření předmětu:
+Cílem kurzu je prohloubení znalostí fungování pojištění a postupů při provozování pojistných produktů, objasnění problematiky Insurtech a možností uplatnění nových přístupů Insurtech při provozování pojistných produktů.
+ 
+Výsledky učení:
+Po úspěšném absolvování budou studenti schopni::
+- Vyhodnotit procesy v pojišťovně v souvislosti s podmínkami na pojistném trhu a regulací
+- Pochopit nové přístupy v rámci Insurtech
+- Analyzovat situaci na pojistném trhu z pohledu uplatnění nových přístupů v souvislosti s platnou regulací
+- Vyhodnotit možnosti uplatnění jednotlivých inovativních přístupů
+- Analyzovat příležitosti, výzvy a potenciální rizika Insurtech
+ 
+Obsah předmětu:
+1. Blok: Principy pojištění
+1) Principy fungování pojištění a pojistných produktů
+2) Konstrukce pojistných produktů
+3) Procesy v pojišťovně
+
+2. Blok: Regulace pojišťovnictví a pojistný trh
+4) Typy pojišťoven
+5) Regulatorní přístupy v rámci pojišťovnictví
+6) Analýza situace na pojistném trhu
+
+3. Blok: Charakteristika jednotlivých přístupů Insurtech
+7) Outsourcing
+8) Umělá inteligence v pojišťovnictví a její podoby
+9) P-2-P pojišťovny a jejich role na pojistných trzích, mikropojištění
+
+4. Blok: Tradiční pojišťovny vs. InsurTech
+10) Inovace v rámci distribuce pojistných produktů
+11) Inovace v konstrukci pojistných produktů
+12) Uplatnění Insurtech v rámci  procesů spojených s provozováním pojištění
+ 
+Způsob studia, metody výuky a studijní zátěž (počet hodin):
+Druh	Prezenční studium
+Účast na přednáškách	26 h
+Příprava na přednášky a cvičení samostudiem	23 h
+Příprava semestrální práce	10 h
+Příprava prezentace nebo obhajoby	10 h
+Příprava na průběžný test (testy)	20 h
+Příprava na závěrečný test	15 h
+Celkem	104 h
+ 
+Způsoby a kritéria hodnocení:
+Druh	Prezenční studium
+Vypracování semestrální práce	10 %
+Prezentace nebo obhajoba	10 %
+Absolvování průběžného testu (testů)	40 %
+Absolvování závěrečného testu	40 %
+Celkem	100 %
+ 
+Hodnocení:
+Zkoušky
+1	Výborně (90 - 100 %)
+2	Velmi dobře (75 - 89 %)
+3	Dobře (60 - 74 %)
+4	Nedostatečně (0 - 59 %)
+Zápočty
+Z	Započteno
+NZ	Nezapočteno
+Zvláštní podmínky a podrobnosti:
+Tento kurz byl spolufinancován Evropskou unií, Národním plánem obnovy z projektu NPO_VŠE_MSMT-16603/2022.
+ 
+Literatura:
+Základní:
+DUCHÁČKOVÁ, Eva; DAŇHEL, Jaroslav. Pojistné trhy: změny v postavení pojišťovnictví v globální éře. 1. vyd. Praha: Professional Publishing, 2012. 252 s. ISBN 978-80-7431-078-2.
+The InsurTECH book : the insurance technology handbook for investors, entrepreneurs and change-makers. Chichester, United Kingdom: Wiley, 2018. ISBN 9781119362241. 
+Doporučená:
+LUCERO, K. Artificial Intelligence Regulation and China’s Future. 2019. Columbia Journal of Asian Law. 33.
+ZOIDOV, K. Kh., S. V. PONOMAREVA, D. I. SEREBRYANSKIY a E. P. DUBROVINA Problems of Application of Innovative Digital Technologies and Artificial Intelligence in the Russian Banking Sector. Economics and Management [online]. 2019. , ISSN 1998-1627. Dostupné z: doi:10.35854/1998-1627-2019-8-45-53

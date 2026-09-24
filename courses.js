@@ -117,7 +117,22 @@ window.COURSES = [
     "lang": "cz",
     "group": "P",
     "schedule": ["Př Čt 11:00–12:30 NB 177A (L)", "Př Čt 12:45–14:15 NB 177A (L)", "Cv Čt 12:45–14:15 NB 177A (S)"],
-    "topics": [],
+    "grading": "Semestrální práce (10 %) · Prezentace (10 %) · Průběžný test (40 %) · Závěrečný test (40 %)",
+    "topics": [
+      "Principy pojištění",
+      "Konstrukce pojistných produktů",
+      "Procesy v pojišťovně",
+      "Typy pojišťoven",
+      "Regulace pojišťovnictví",
+      "Analýza pojistného trhu",
+      "Outsourcing",
+      "AI v pojišťovnictví",
+      "P2P pojištění a mikropojištění",
+      "Inovace v distribuci",
+      "Inovace v konstrukci produktů",
+      "Insurtech v procesech pojišťovny"
+    ],
+    "topicWeeks": [1, 1, 3, 3, 5, 5, 9, 9, 11, 11, 13, 13],
     "events": []
   },
   {

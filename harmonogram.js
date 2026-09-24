@@ -61,9 +61,10 @@
         return h ? h.title : null;
     }
 
-    /* index tématu probíraného v daném týdnu, nebo -1 */
-    function topicIndexForWeek(course, week) {
-        return course.topicWeeks ? course.topicWeeks.indexOf(week) : week - 1;
+    /* indexy témat probíraných v daném týdnu (může jich být víc, nebo žádné) */
+    function topicIndicesForWeek(course, week) {
+        if (!course.topicWeeks) return week - 1 < course.topics.length ? [week - 1] : [];
+        return course.topicWeeks.flatMap((w, i) => (w === week ? [i] : []));
     }
 
     function slotRunsInWeek(slot, week) {
@@ -154,11 +155,11 @@
         for (let w = 1; w <= weeks; w++) {
             const from = weekStart(w);
             const to = addDays(from, 6);
-            const idx = topicIndexForWeek(course, w);
-            const topic = course.topics[idx];
+            const idxs = topicIndicesForWeek(course, w);
+            const topic = idxs.length > 0;
             const holidays = [...new Set(slots.filter((s) => slotRunsInWeek(s, w)).map((s) => holidayOn(slotDate(s, w))).filter(Boolean))];
             const topicCell = topic
-                ? `<a href="#topic-${idx + 1}">${idx + 1}. ${topic}</a>`
+                ? idxs.map((i) => `<a href="#topic-${i + 1}">${i + 1}. ${course.topics[i]}</a>`).join('<br>')
                 : `<span class="text-muted">${holidays.length ? holidays.join(', ') + ' — výuka odpadá' : '—'}</span>`;
             const wEvents = events
                 .filter((e) => e.dateObj >= from && e.dateObj <= to)
