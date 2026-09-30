@@ -34,5 +34,35 @@
     "date": "2026-12-16",
     "type": "deadline",
     "title": "Prezentace řešení II (předpoklad podle sylabu)"
+  },
+  {
+    "courseCode": "1BP404",
+    "date": "2026-10-08",
+    "type": "deadline",
+    "title": "Projekt: nahlásit zvolené portfolio na přednášce"
+  },
+  {
+    "courseCode": "1BP404",
+    "date": "2026-11-26",
+    "type": "test",
+    "title": "Průběžný test (předběžný termín; a–d + 2 investiční strategie + esej, 40 %)"
+  },
+  {
+    "courseCode": "1BP404",
+    "date": "2026-12-10",
+    "type": "deadline",
+    "title": "Odevzdání projektu papírově na přednášce (20 %)"
+  },
+  {
+    "courseCode": "1BP404",
+    "date": "2026-12-21",
+    "type": "zkouska",
+    "title": "Předtermín ústní zkoušky 8:30–11:00"
+  },
+  {
+    "courseCode": "1BP404",
+    "date": "2027-01-04",
+    "type": "zkouska",
+    "title": "Ústní zkouška 8:30–11:00 (další termíny 5., 7., 12., 14., 18., 21., 28. 1.)"
   }
 ]

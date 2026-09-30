@@ -53,7 +53,37 @@
     "schedule": [
       "Př Čt 09:15–12:30 NB B"
     ],
-    "topics": []
+    "grading": "Průběžný test 26. 11. (40 %) · Ústní zkouška (40 %) · Projekt s obhajobou (20 %) · +5 b za aktivitu · min. 60 bodů",
+    "topics": [
+      "Finanční trhy a jejich struktura",
+      "Regulace a dohled",
+      "Kolektivní investování",
+      "Dluhové instrumenty",
+      "Penzijní fondy a investiční management",
+      "Finanční investování",
+      "Fundamentální akciová analýza",
+      "Technická analýza a psychologie trhů",
+      "Teorie efektivních trhů",
+      "Finanční krize",
+      "Mezinárodní investování a reálná aktiva",
+      "Investiční bankovnictví",
+      "Sekundární trhy"
+    ],
+    "topicWeeks": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      13
+    ]
   },
   {
     "code": "1BP440",

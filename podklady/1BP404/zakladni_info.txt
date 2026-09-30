@@ -1,0 +1,209 @@
+1BP-404 Kapitálové trhy II.
+prof. Ing. Petr Musílek, Ph.D.
+(Oficiální podklady od vyučujícího + ručně psané poznámky z 1. přednášky. Mají přednost před sylabus.txt z InSIS.)
+
+Zaměření a cíl předmětu
+Student získá znalosti o chování kapitálových trhů, jejich institucionálním uspořádání a analyzování faktorů, které ovlivňují nejen výnosovou míru investičních instrumentů, ale i výkonnost konzervativních, balancovaných a agresivně spravovaných portfolií. Významná část předmětu bude rovněž věnována příčinám a důsledkům finančních krizí. Pro úspěšné absolvování předmětu je nutná znalost předepsané základní literatury a přednášek (ověřeno průběžným testem a závěrečnou zkouškou) a zpracování a obhájení projektu správy zvoleného portfolia.
+Za základní myšlenky tohoto předmětu považujeme:
+
+1. Kapitálové trhy mají globální charakter a procházejí obrovskými změnami v posledních letech.
+2. Analýza investičních instrumentů se převážně uskutečňuje z hlediska výnosu, rizika a likvidity. Na efektivních trzích by měl existovat v delším období rovnovážný vztah mezi výnosovou mírou, rizikem a likviditou alternativních aktiv.
+3. Investiční instrumenty mají systematické a jedinečné riziko. Prémie za riziko se zejména vztahuje k riziku systematickému.
+4. Hodnota investičních instrumentů se zpravidla odvíjí od současné hodnoty budoucích příjmů a likvidity.
+5. Vyspělé likvidní kapitálové trhy jsou zpravidla efektivními ve středně-silné formě. Na těchto trzích lze velmi obtížně dosahovat dlouhodobě a pravidelně nadprůměrné investiční výsledky.
+6. Na méně vyspělých a málo likvidních kapitálových trzích lze dosahovat nadprůměrné výsledky i dlouhodobě a pravidelně prostřednictvím úspěšného využívání fundamentální analýzy a různých investičních strategií.
+7. Úspěšná strategie na akciovém trhu je primárně založena na prognóze růstu ekonomiky, zisku firmy a změně úrokových sazeb. Naopak na trhu dluhopisů jsou základními faktory úspěšné strategie vhodná prognóza chování úrokových sazeb a úspěšná predikce bonity emitenta.
+8. Chování cen investičních instrumentů může být v krátkém období výrazně ovlivňováno „stádním“ chováním investičního publika. Ceny investičních instrumentů na méně likvidních trzích mají obvykle nadprůměrnou volatilitu.
+9. Specializované finanční instituce se postupně transformují v univerzální finanční supermarkety (firmy diverzifikovaných finančních služeb), které podnikají na globálním kapitálovém trhu. Výrazné změny však může přinést implementace Volckerova nebo Vickersova pravidla.
+10. Globálnímu kapitálovému trhu by mělo odpovídat i vhodné institucionální uspořádání regulace.
+
+Hodnocení studentů
+Průběžná písemná forma (40 %, předběžný termín: 26. 11. 2026), ústní forma (40 %) a obhájení zpracovaného projektu (20 %).
+
+* výborně: 90-100 bodů
+* velmi dobře: 75-89 bodů
+* dobře: 60-74 bodů
+* nevyhověl +: 50-59 bodů
+* nevyhověl: 0-49 bodů
+
+Obsah předmětu
+1. Finanční trhy a jejich struktura
+* vývoj investiční teorie,
+* modely alokace úspor, charakteristika finančních trhů a jejich struktura,
+* dlouhodobé trendy na světových finančních trzích.
+Literatura: Musílek (2011): 1. kap., 2. kap.
+Zadání projektu (správa konzervativního portfolia, správa balancovaného portfolia, správa agresivního portfolia a správa udržitelného portfolia).
+
+2. Regulace a dohled nad kapitálovým trhem
+* důvody a metody regulace a dohledu,
+* regulace a dohled společností veřejného zájmu,
+* riziko investiční kriminality,
+* post-lehmanovský přístup k regulaci,
+* institucionální uspořádání regulace a dohledu,
+* Evropský systém finančního dohledu,
+* regulace a dohled v České republice.
+Literatura: Musílek (2011): 5. kap.; Zákon o podnikání na kapitálovém trhu; Zákon o dohledu nad kapitálovým trhem
+
+3. Instrumenty kolektivního investování
+* geneze kolektivního investování,
+* investiční a podílové fondy,
+* otevřené a uzavřené fondy,
+* investiční politika fondů,
+* ETF, hedgeové a privátní fondy,
+* české kolektivní investování.
+Literatura: Musílek (2011): 21., 22., 23. kap.; Zákon o investičních společnostech a fondech
+
+4. Dluhové instrumenty (doc. Stádník)
+* krátkodobé a dlouhodobé instrumenty,
+* konvertibilní a opční dluhopisy, junk bonds,
+* ohodnocování dluhopisů,
+* rating a jeho úspěšnost.
+Literatura: Musílek (2011): 2. kap., 20. kap., zákon o dluhopisech
+
+5. Instrumenty penzijního spoření a investování
+* role penzijních fondů na kapitálových trzích,
+* druhy kapitalizovaných fondů,
+* výkonnost penzijních portfolií,
+* důchodové, účastnické a penzijní fondy v ČR.
+Literatura: Musílek (2011): 24., 25. kap.; Zákon o penzijním připojištění; Zákony o důchodovém a doplňkovém penzijním spoření
+
+Investiční management
+* teorie portfolia,
+* teorie kapitálového trhu,
+* arbitrážní teorie oceňování,
+* globální přístup k investičnímu managementu,
+* strategická alokace aktiv,
+* taktická alokace aktiv,
+* krátkodobá a dlouhodobá investiční strategie,
+* aktivní investiční management,
+* pasivní investiční management,
+* algoritmický investiční management,
+* udržitelné investování,
+* metody měření výkonnosti portfolia (Treynorův index, Sharpův index, Jensenův index, information ratio),
+* investiční proces,
+* investiční reporting.
+Literatura: Musílek (2011): 16., 17. kap.
+Konzultace zpracování projektů (výběr strategií, stanovení benchmarku, kvantifikace výkonnosti, měření nákladovosti atd.).
+
+6. Finanční investování
+* poptávka po investičních instrumentech,
+* výnos, riziko, likvidita,
+* prémie za nelikviditu (Amihud-Mendelson versus Pástor),
+* transakční náklady a jejich kvantifikace,
+* výkonnost tradičního a udržitelného investování,
+* Capital Asset Pricing Model a jeho modifikace,
+* Fama-French Model,
+* investiční instrumenty (finanční instrumenty, nefinanční instrumenty a kryptoměny),
+* daňové zatížení investičních instrumentů.
+Literatura: Musílek (2011): 14. kap.
+
+7. Fundamentální akciová analýza
+* akcie, akciová společnost, uspořádání orgánů akciové společnosti,
+* dividendová politika, finanční politika, investiční politika,
+* globální a odvětvová analýza,
+* analýza jednotlivých společností a vnitřní hodnota akcie,
+* value screening,
+* fundamentální analýza versus technická analýza,
+* fundamentální analýza v kontextu efektivního chování trhu,
+* fundamentální analýza a „stádní“ chování investičního publika,
+* příklady úspěšných investičních strategií.
+Literatura: Musílek (2011): 2., 18., 15., 19. kap.
+
+8. Racionální a iracionální chování akciových trhů
+Technická analýza
+* Dow Theory,
+* grafické metody a technické indikátory,
+* hranice využitelnosti technické analýzy.
+Literatura: Musílek (2011): 19. kap.
+Vliv psychologie na chování trhů
+* tradiční teorie (Keynes, Kostolany),
+* behavioral finance (Kahneman, Tversky, Thaler),
+* spekulativní bubliny (akciové, dluhopisové a komoditní).
+Literatura: Musílek (2011): 19., 15. kap.
+
+9. Teorie efektivních trhů
+* charakteristika efektivního a neefektivního trhu,
+* předpoklady efektivního chování trhů,
+* formy efektivnosti,
+* volatilita efektivnosti,
+* speciální investiční příležitosti.
+Literatura: Musílek (2011): 15. kap.
+
+10. Finanční krize
+* charakteristika finanční krize,
+* druhy finančních krizí,
+* důsledky finančních krizí,
+* příklady finančních krizí,
+* odezva na globální finanční krizi a post-lehmanovská regulace.
+Literatura: Musílek (2011): 6. kap.
+
+11. Mezinárodní investování
+* výhody a nevýhody mezinárodního investování,
+* teorie mezinárodního investování a globalizace,
+* metody mezinárodního investování,
+* mezinárodní investování v post-lehmanovském období.
+Literatura: Musílek (2011): 14. kap.
+Reálná aktiva
+* motivy investování do reálných aktiv,
+* zlaté investiční instrumenty,
+* nemovitosti,
+* netradiční reálná aktiva.
+Literatura: přednáška
+Konzultace finalizace projektů (výběr strategií, stanovení benchmarku, kvantifikace výkonnosti, měření nákladovosti atd.).
+
+12. Investiční bankovnictví
+* vymezení a modely začlenění investičního bankovnictví,
+* Dodd-Frank Act,
+* Volckerovo pravidlo,
+* Vickersovo pravidlo,
+* investiční obchody a MIFID.
+Literatura: Musílek (2011): 7. až 13. kap.
+
+13. Sekundární trhy
+* burzovní a alternativní systémy,
+* vysokofrekvenční obchodování,
+* srovnání významných burzovních center,
+* inovace na burzách (REIT, SPAC a energie),
+* offshore finanční centra,
+* český trh cenných papírů a koncepce jeho rozvoje.
+Literatura: Musílek (2011): 3., 4. kap.; Zákon o podnikání na kapitálovém trhu
+
+Literatura
+A. Základní:
+1. Musílek, P.: Trhy cenných papírů. Ekopress, druhé, aktualizované a rozšířené vydání, 2011, ISBN 978-80-86929-70-25 (v podkladech s překlepem, správně 978-80-86929-70-5).
+2. ÚZ Cenné papíry, č. 1580, Sagit, 2/2024.
+3. ÚZ Penzijní spoření a připojištění, č. 1595, Sagit, 4/2024.
+
+B. Doplňková:
+1. Bell, A.R., Brooks, Ch., Prokopczuk, M.: Handbook of Research Methods and Applications in Empirical Finance. Edward Elgar, Cheltenham, 2013. ISBN 978-1-78254-017-5.
+2. Bruce, B.: Handbook of Behavioral Finance. Edward Elgar, Cheltenham, 2010. ISBN 978-0-85793-091-0.
+3. Evanoff, D., Moeller, W.F.: Dodd-Frank Wall Street Reform and Consumer Protection Act: Purpose, Critique, Implementation Status and Policy Issues. World Scientific Publishing, Singapore, 2014. ISBN 978-981-4590-03-7.
+4. Evans, L.L.: Why the Bubble Burst? Edward Elgar, Cheltenham, 2003. ISBN 1-84376-075-4.
+5. Geisst, Ch.R.: Wall Street. A history from its beginnings to the fall of Enron. Oxford University Press, 2004. ISBN 0-19-517060-1.
+6. Graham, B., Zweig, J.: Inteligentní investor. Grada Publishing, 2007, ISBN 978-80-247-1792-0.
+7. Krugman, P.: Návrat ekonomické krize. Vyšehrad, Praha, 2009. ISBN 978-80-7021-984-3.
+8. Ryder, N.: The Financial Crisis and White Collar Crime. Edward Elgar, Cheltenham, 2014. ISBN 978-1-78100-099-1.
+9. Schiller, R. J.: Iracionální nadšení na kapitálových trzích. Grada, Praha, 2010. ISBN 978-80-247-2482-9.
+
+Projekt 1BP404
+Obhájení zpracovaného projektu v rozsahu 2 stran (max. 20 bodů). Projekt bude zaměřen na vyhodnocení úspěšnosti správy zvoleného portfolia distribuovaného zejména v ČR (např. podílový fond, investiční fond, fond kvalifikovaných investorů, penzijní fond, účastnický fond).
+Projekt by měl zejména obsahovat:
+* popis investiční politiky (investiční strategie, benchmark, sektorové a teritoriální zaměření atd.),
+* kvantifikace výkonnosti (výnosnosti a rizik) a nákladovosti (2022-25) zvoleného fondu,
+* relativní vyhodnocení,
+* celkové závěrečné hodnocení (1, 2, 3, 4) (ručně: jako ve škole).
+
+Harmonogram:
+* 8. 10. 2026: nahlásit na přednášce zvolené portfolio
+* 26. 11. 2026: konzultace po průběžném testu (ručně: TEST (abcd), 40 b)
+* 10. 12. 2026: odevzdání projektu v papírové podobě na přednášce
+
+Ručně psané poznámky
+* Test: abcd (40 b) + dvě investiční strategie (počítání) (7 b) + esej (6 b)
+* Zkouška: 3 otázky (40 b)
+   * 1 se vrací
+   * 2: ústní zkouška
+   * začíná se rozpravou o zpracovaném projektu (na začátku taková obhajoba)
+* Termíny zkoušky: 8:30-11, pro 14 lidí
+* Předtermín: 21. 12.
+* Termíny: 4., 5., 7., 12., 14., 18., 21., 28. 1.
