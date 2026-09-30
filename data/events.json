@@ -1,0 +1,38 @@
+[
+  {
+    "courseCode": "1BP440",
+    "date": "2026-10-30",
+    "type": "deadline",
+    "title": "Týmový úkol: Regulace fintech — Word a PPTX dle šablon, prezentace na 30 minut"
+  },
+  {
+    "courseCode": "1BP440",
+    "date": "2026-11-11",
+    "type": "test",
+    "title": "Průběžný online test 11:00–11:20, NB177B (první polovina semestru, 20 %)"
+  },
+  {
+    "courseCode": "1BP440",
+    "date": "2026-11-30",
+    "type": "jine",
+    "title": "Termíny závěrečného testu vypsány v InSIS (3+1)"
+  },
+  {
+    "courseCode": "1MT461",
+    "date": "2026-10-26",
+    "type": "test",
+    "title": "Průběžný test (40 %)"
+  },
+  {
+    "courseCode": "1BP443",
+    "date": "2026-12-09",
+    "type": "deadline",
+    "title": "Prezentace řešení I (předpoklad podle sylabu)"
+  },
+  {
+    "courseCode": "1BP443",
+    "date": "2026-12-16",
+    "type": "deadline",
+    "title": "Prezentace řešení II (předpoklad podle sylabu)"
+  }
+]

@@ -1,4 +1,4 @@
-/* Harmonogram — rozvrh, týdny výuky a termíny. Vyžaduje courses.js. */
+/* Harmonogram — rozvrh, týdny výuky a termíny. Vyžaduje study-data.js. */
 (function () {
     const DAYS = ['Po', 'Út', 'St', 'Čt', 'Pá'];
     const TYPE_LABELS = { test: 'Test', zkouska: 'Zkouška', deadline: 'Deadline', jine: 'Termín' };
@@ -141,7 +141,7 @@
         const events = allEvents(courses);
         el.innerHTML = events.length
             ? events.map((e) => eventHtml(e, true, base)).join('')
-            : '<p class="text-muted small mb-0">Zatím žádné termíny — doplní se ze sylabů (<code>events</code> v courses.js).</p>';
+            : '<p class="text-muted small mb-0">Zatím žádné termíny — doplní se ze sylabů.</p>';
     }
 
     /* Stránka předmětu: rozvrh + tabulka týdnů s tématy a termíny */

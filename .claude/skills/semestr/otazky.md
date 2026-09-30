@@ -20,7 +20,7 @@ python3 quiz.py add '[
 ]'
 ```
 
-- `topic` = kód předmětu z `courses.js` (jiný kód `quiz.py` odmítne)
+- `topic` = kód předmětu z `data/courses.json` (jiný kód `quiz.py` odmítne)
 - `subtopic` = číslo tématu = index v `topics` + 1 = sekce `#topic-N` na stránce předmětu
 - `correct` = `"A"`–`"D"`, správnou pozici rovnoměrně střídej
 - max ~10 otázek na jeden `add` (délka příkazu); apostrof v textu zapiš jako `’`

@@ -20,12 +20,24 @@
 | Část | Váha | Příprava podle sylabu |
 |---|---|---|
 | Průběžný online test | **20 b** | St 11. 11. 2026 11:00–11:20, prezenčně NB177B, Moodle; první polovina semestru; nejde opakovat ani nahradit, bez minima |
-| Semestrální práce | **30 b** | týmová, zadání ve zvláštní prezentaci |
+| Semestrální práce | **30 b** | týmová: Regulace fintech; Word a PPTX podle šablon, prezentace na 30 minut; do 30. 10. 2026 |
 | Závěrečný online test | **50 b** | celý semestr, 40 min, Moodle; 3+1 termíny v InSIS do 30. 11. 2026; opakovat jen s 4+, náhradní termín nebude |
 
 K absolvování je potřeba **alespoň 60 bodů**. Známky: 1 = 90–100 · 2 = 75–89 · 3 = 60–74 · 4+ = 50–59 (Nevyhověl+, lze opakovat závěrečný test) · 4 = 0–49
 
-Termíny, které zatím nejsou známé: zadání a odevzdání semestrální práce, přesná data závěrečného testu.
+Termíny, které zatím nejsou známé: přesná data závěrečného testu.
+
+## Týmový úkol — Regulace fintech
+
+Zadání doplněno podle informace od studenta dne 30. 9. 2026.
+
+- **Téma:** regulace fintech.
+- **Termín dokončení:** do 30. 10. 2026.
+- **Výstupy:** dokument Word a prezentace PPTX podle zadaných šablon.
+- **Délka prezentace:** 30 minut.
+- **Forma práce:** týmová.
+
+Šablony zatím nejsou v repozitáři. Zbývá upřesnit rozsah dokumentu Word, složení a rozdělení práce v týmu a zda 30 minut zahrnuje diskusi. Samostatné datum vystoupení zatím není potvrzené.
 
 ## Harmonogram a témata
 

@@ -4,18 +4,12 @@ import random
 import sys
 import os
 import json
-import re
 from pathlib import Path
+
+from study_data import export_study_data, load_courses
 
 ROOT = Path(__file__).parent
 DB_PATH = ROOT / "quiz.db"
-
-
-def load_courses() -> dict:
-    """Kód předmětu → název, načteno z courses.js (JSON za 'window.COURSES =')."""
-    src = (ROOT / "courses.js").read_text(encoding="utf-8")
-    match = re.search(r"window\.COURSES = (\[.*?\n\]);", src, re.S)
-    return {c["code"]: c for c in json.loads(match.group(1))}
 
 
 def get_db():
@@ -160,6 +154,7 @@ def delete_question(qid: int):
 
 
 def export_json(output: str = "quiz-data.js"):
+    export_study_data()
     with get_db() as conn:
         rows = conn.execute("SELECT * FROM questions ORDER BY topic, subtopic, id").fetchall()
     data = [dict(r) for r in rows]
@@ -194,9 +189,9 @@ Použití:
   python quiz.py topics                    Počty otázek po předmětech a tématech
   python quiz.py delete <id>               Smazat otázku
   python quiz.py add '<json>'              Přidat otázky z JSON (používá Claude)
-  python quiz.py export                    Export do quiz-data.js a plans-data.js pro webový frontend
+  python quiz.py export                    Export study-data.js, quiz-data.js a plans-data.js pro web
 
-Téma = kód předmětu z courses.js (např. 1BP403), subtopic = číslo tématu (#topic-N).
+Téma = kód předmětu z data/courses.json (např. 1BP403), subtopic = číslo tématu (#topic-N).
 
 Příklady:
   python quiz.py quiz 1BP403

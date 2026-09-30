@@ -7,10 +7,15 @@ description: Studijní podklady k předmětům ZS 2026/27 (FFÚ VŠE) — zpraco
 
 Podklady k předmětům ZS 2026/27 (FFÚ VŠE, program Finance a technologie) pro průběžné testy a zkoušky. Statický web bez buildu: `index.html` (dashboard + harmonogram), `courses/<slug>.html` (poznámky), `quiz.html` (quiz).
 
-**`courses.js` je jediný zdroj pravdy** — předměty, barvy, rozvrh, `grading`, `topics`, `events`. Dashboard, harmonogram, stránky i quiz se z něj generují. Obsah za `window.COURSES =` musí zůstat čistý JSON (čte ho `quiz.py`).
+**Zdrojem pravdy jsou JSON soubory v `data/`**: `courses.json` (předměty, barvy, rozvrh, `grading`, `topics`), `events.json` (termíny s vazbou `courseCode`) a `semester.json` (semestr a volna). Po změně spusť `python3 quiz.py export`. Web čte generovaný `study-data.js`, Python načítá JSON přes `study_data.py`. Podrobnosti viz `data/README.md`.
 
 ```
-courses.js            # předměty: code, name, slug, color, schedule, grading, topics[], events[]
+data/courses.json     # předměty: code, name, slug, color, schedule, grading, topics[]
+data/events.json      # termíny: courseCode, date, type, title
+data/semester.json    # semestr: name, start, weeks, holidays[]
+study_data.py         # načítání, kontrola vazeb a export JSON
+study-data.js         # generovaný export pro web; neupravovat ručně
+courses.js            # pomocné funkce pro web
 harmonogram.js        # rozvrh, týdny výuky, termíny
 courses/<slug>.html   # poznámky k předmětu
 quiz.py / quiz.db     # banka otázek → quiz-data.js (python3 quiz.py export)
@@ -30,7 +35,7 @@ Pokud není jasné, na čem pracovat:
 Vstup: `podklady/<KÓD>/sylabus.txt` (text zkopírovaný z InSIS — neměnit), případně oficiální harmonogram od vyučujících (.doc/.pdf). **Harmonogram od vyučujících má přednost** před pořadím v InSIS. `.doc` převeď přes `soffice --headless --convert-to txt:Text --outdir <scratchpad> soubor.doc`.
 
 1. Napiš `podklady/<KÓD>/studijni_plan.md` podle vzoru `podklady/1MT461/studijni_plan.md`: přehled, hodnocení, tabulka témat (zkratka · text ze sylabu · klíčové pojmy), výsledky učení → témata, literatura, na co se zaměřit. Klíčové pojmy, které nejsou ze sylabu, označ jako návrh. Pak `python3 quiz.py export`, aby se plán objevil na webu.
-2. V `courses.js` doplň `grading` a `topics` (krátké názvy; index + 1 = `#topic-N` = `subtopic` v quizu). Pokud výuka odpadá (svátky, inovační týden), doplň `topicWeeks` = týden výuky pro každé téma; jinak platí téma N = týden N. Celoškolní volna patří do `SEMESTER.holidays`.
+2. V `data/courses.json` doplň `grading` a `topics` (krátké názvy; index + 1 = `#topic-N` = `subtopic` v quizu). Pokud výuka odpadá (svátky, inovační týden), doplň `topicWeeks` = týden výuky pro každé téma; jinak platí téma N = týden N. Celoškolní volna patří do `holidays` v `data/semester.json`. Po změně JSON spusť `python3 quiz.py export`.
 3. V `courses/<slug>.html` nahraď pod `<h1>` „zkouška“ textem z `grading`.
 4. Na co sylabus neodpovídá (termíny testů, rozsah průběžného testu), napiš uživateli jako otevřené otázky.
 
@@ -80,12 +85,12 @@ Postupuj podle [otazky.md](otazky.md). Otázky jen k tématům, která už mají
 
 ## 4. Termíny
 
-Termíny testů, odevzdání a zkoušek → `events` v `courses.js`:
-`{"date": "YYYY-MM-DD", "type": "test|zkouska|deadline|jine", "title": "..."}`.
-Když je znám jen týden, datum = den výuky předmětu v tom týdnu (`SEMESTER.start` + rozvrh). U testu uveď do `title` rozsah látky, pokud je znám (např. „Průběžný test (témata 1–6)“).
+Termíny testů, odevzdání a zkoušek → `data/events.json`; pak `python3 quiz.py export`:
+`{"courseCode": "1BP440", "date": "YYYY-MM-DD", "type": "test|zkouska|deadline|jine", "title": "..."}`.
+Když je znám jen týden, datum = den výuky předmětu v tom týdnu (`start` v `data/semester.json` + rozvrh předmětu). U testu uveď do `title` rozsah látky, pokud je znám (např. „Průběžný test (témata 1–6)“).
 
 ## Kontrola na konci
 
-- `courses.js` je pořád validní JSON: `python3 quiz.py topics` projde
+- JSON a vazby jsou validní: `python3 quiz.py topics` a `python3 quiz.py export` projdou
 - TOC odkazy odpovídají `id` sekcí, počet sekcí = `topics.length`
 - shrň uživateli, co přibylo a co zůstává otevřené
