@@ -1,83 +1,86 @@
 # 1BP441 Pojišťovnictví a Insurtech
 
-> Zdroj: `sylabus.txt` (InSIS, dodáno uživatelem pro ZS 2026/2027). Máme sylabus, zatím bez prezentací a podrobných poznámek. Rozdělení témat do týdnů je **návrh samostudia**, nikoli potvrzený harmonogram přednášek.
+> Zdroj: `sylabus.txt` (InSIS). Oficiální harmonogram od vyučujících zatím nemám, proto je **rozvržení témat do týdnů můj návrh** podle rozvrhu (dvojitá přednáška v lichých týdnech, cvičení v sudých). Klíčové pojmy jsou mimo sylabus **návrh** podle základní literatury (Ducháčková, Daňhel 2012; *The InsurTECH Book* 2018) a platné regulace (Solvency II, IDD, DORA, AI Act). Upřesnit podle přednášek.
 
 ## Přehled
 
 | | |
 |---|---|
-| Kredity | 4 ECTS · 104 h studijní zátěže |
-| Forma | prezenční · 2/1 (přednášky/cvičení) |
-| Jazyk a ukončení | čeština · zkouška |
-| Garant | prof. Ing. Eva Ducháčková, CSc. (také přednášející a zkoušející) |
-| Vyučující v rozvrhu | Ing. Petra Vojtíková Tisová, Ph.D. (cvičící, přednášející, zkoušející) |
-| Přednášky | Čt 11:00–12:30 a 12:45–14:15, NB 177A, liché týdny |
-| Cvičení | Čt 12:45–14:15, NB 177A, sudé týdny |
-| Omezení zápisu, doporučené doplňky, vyžadovaná praxe | žádné |
+| Kredity | 4 ECTS · 2/1 (přednáška/cvičení) |
+| Rozvrh | Čt 11:00–14:15 NB 177A — 2 přednášky v lichých týdnech · Čt 12:45–14:15 NB 177A — cvičení v sudých týdnech |
+| Vyučující | prof. Ing. Eva Ducháčková, CSc. (**ED**, garant, přednášející) · Ing. Petra Vojtíková Tisová, Ph.D. (**PVT**, cvičící, přednášející) |
+| Jazyk | čeština |
+| Ukončení | zkouška = semestrální práce + prezentace + průběžný test + závěrečný test |
 
-Kurz prohlubuje znalosti fungování pojištění a provozování pojistných produktů. Zabývá se Insurtech a možnostmi jeho uplatnění v produktech a procesech pojišťoven.
+**O čem to je:** čtyři bloky po třech tématech. Nejdřív klasické pojištění: proč a jak funguje, jak se staví produkt (pojistné, rezervy, podmínky) a jaké procesy v pojišťovně běží (upisování, správa smluv, likvidace škod, zajištění). Pak regulace a trh: jaké typy pojišťoven existují, jak je regulujeme (Solvency II, IDD) a jak číst data o pojistném trhu. Třetí blok představuje jednotlivé přístupy Insurtech: outsourcing, umělou inteligenci a P2P pojištění s mikropojištěním. Poslední blok srovnává tradiční pojišťovny a Insurtech v distribuci, v konstrukci produktů a v procesech. Linka celého předmětu: **každá inovace se hodnotí proti principům pojištění a proti regulaci**.
 
 ## Hodnocení
 
 | Část | Váha | Příprava podle sylabu |
 |---|---|---|
-| Semestrální práce | 10 % | 10 h |
-| Prezentace nebo obhajoba | 10 % | 10 h |
-| Průběžný test (testy) | 40 % | 20 h |
-| Závěrečný test | 40 % | 15 h |
+| Semestrální práce | **10 %** | 10 h |
+| Prezentace / obhajoba | **10 %** | 10 h |
+| Průběžný test (testy) | **40 %** | 20 h |
+| Závěrečný test | **40 %** | 15 h |
 
-Známky: 1 = 90–100 % · 2 = 75–89 % · 3 = 60–74 % · 4 = 0–59 %.
-Sylabus neuvádí minimum z jednotlivých částí ani počet průběžných testů.
+Známky: 1 = 90–100 % · 2 = 75–89 % · 3 = 60–74 % · 4 = pod 60 %
 
-Další zátěž: účast na přednáškách 26 h a příprava na přednášky a cvičení samostudiem 23 h. Celkem 104 h.
+Testy dohromady dávají 80 % hodnocení. Sylabus neuvádí počet průběžných testů ani jejich rozsah; z počtu hodin přípravy nelze rozsah odvodit.
+
+Zatím neznámé: termín a rozsah průběžného testu, termíny závěrečného testu, zadání a termín semestrální práce a prezentace, forma testů (uzavřené / otevřené otázky), minimum z jednotlivých částí.
 
 ## Harmonogram a témata
 
-**Návrh samostudia:** jedno téma na každý běžný výukový týden, včetně týdnů se cvičením. Sedmý týden (2.–6. 11.) je podle semestrálního kalendáře inovační týden. Témata nejsou přiřazena ke konkrétním přednáškám; přednášky probíhají ve dvou blocích v lichých týdnech. Po dodání harmonogramu od vyučující se přiřazení upraví.
+**Návrh** podle rozvrhu (Čt, liché týdny 2 přednášky = 2 témata). Inovační týden (5. 11.) výuka odpadá. Číslo tématu = sekce `#topic-N` = `subtopic` v quizu.
 
-| Týden | Čtvrtek daného týdne | Téma samostudia |
-|---|---|---|
-| 1 | 24. 9. | **1** Principy pojištění a pojistných produktů |
-| 2 | 1. 10. | **2** Konstrukce pojistných produktů |
-| 3 | 8. 10. | **3** Procesy v pojišťovně |
-| 4 | 15. 10. | **4** Typy pojišťoven |
-| 5 | 22. 10. | **5** Regulace pojišťovnictví |
-| 6 | 29. 10. | **6** Analýza pojistného trhu |
-| 8 | 12. 11. | **7** Outsourcing |
-| 9 | 19. 11. | **8** Umělá inteligence v pojišťovnictví |
-| 10 | 26. 11. | **9** P-2-P pojišťovny a mikropojištění |
-| 11 | 3. 12. | **10** Inovace v distribuci |
-| 12 | 10. 12. | **11** Inovace v konstrukci produktů |
-| 13 | 17. 12. | **12** Insurtech v pojistných procesech |
+| Týden | Datum | Přednáška (téma) | Cvičení |
+|---|---|---|---|
+| 1 | 24. 9. | **1** Principy fungování pojištění a pojistných produktů · **2** Konstrukce pojistných produktů | |
+| 2 | 1. 10. | | cvičení |
+| 3 | 8. 10. | **3** Procesy v pojišťovně · **4** Typy pojišťoven | |
+| 4 | 15. 10. | | cvičení |
+| 5 | 22. 10. | **5** Regulatorní přístupy v rámci pojišťovnictví · **6** Analýza situace na pojistném trhu | |
+| 6 | 29. 10. | | cvičení |
+| 7 | 5. 11. | *inovační týden — výuka odpadá* | |
+| 8 | 12. 11. | | cvičení |
+| 9 | 19. 11. | **7** Outsourcing · **8** Umělá inteligence v pojišťovnictví a její podoby | |
+| 10 | 26. 11. | | cvičení |
+| 11 | 3. 12. | **9** P-2-P pojišťovny a jejich role na pojistných trzích, mikropojištění · **10** Inovace v rámci distribuce pojistných produktů | |
+| 12 | 10. 12. | | cvičení |
+| 13 | 17. 12. | **11** Inovace v konstrukci pojistných produktů · **12** Uplatnění Insurtech v rámci procesů spojených s provozováním pojištění | |
 
-## Témata ze sylabu a klíčové pojmy
+## Témata a klíčové pojmy
 
-Pojmy v tabulce jsou převzaty přímo ze sylabu; podrobnější výklad doplníme z výukových materiálů. Číslo tématu odpovídá `#topic-N` na stránce předmětu.
+Text tématu je ze sylabu; klíčové pojmy jsou **návrh**.
 
-| # | Blok | Zkratka | Text ze sylabu | Klíčové pojmy |
-|---|---|---|---|---|
-| 1 | Principy pojištění | Principy pojištění a pojistných produktů | Principy fungování pojištění a pojistných produktů | principy fungování pojištění; pojistné produkty |
-| 2 | Principy pojištění | Konstrukce pojistných produktů | Konstrukce pojistných produktů | konstrukce pojistných produktů |
-| 3 | Principy pojištění | Procesy v pojišťovně | Procesy v pojišťovně | procesy v pojišťovně |
-| 4 | Regulace pojišťovnictví a pojistný trh | Typy pojišťoven | Typy pojišťoven | typy pojišťoven |
-| 5 | Regulace pojišťovnictví a pojistný trh | Regulace pojišťovnictví | Regulatorní přístupy v rámci pojišťovnictví | regulatorní přístupy |
-| 6 | Regulace pojišťovnictví a pojistný trh | Analýza pojistného trhu | Analýza situace na pojistném trhu | pojistný trh; analýza situace |
-| 7 | Charakteristika jednotlivých přístupů Insurtech | Outsourcing | Outsourcing | outsourcing |
-| 8 | Charakteristika jednotlivých přístupů Insurtech | Umělá inteligence v pojišťovnictví | Umělá inteligence v pojišťovnictví a její podoby | umělá inteligence a její podoby |
-| 9 | Charakteristika jednotlivých přístupů Insurtech | P-2-P pojišťovny a mikropojištění | P-2-P pojišťovny a jejich role na pojistných trzích, mikropojištění | P-2-P pojišťovny; mikropojištění |
-| 10 | Tradiční pojišťovny vs. InsurTech | Inovace v distribuci | Inovace v rámci distribuce pojistných produktů | distribuce pojistných produktů; inovace |
-| 11 | Tradiční pojišťovny vs. InsurTech | Inovace v konstrukci produktů | Inovace v konstrukci pojistných produktů | konstrukce produktů; inovace |
-| 12 | Tradiční pojišťovny vs. InsurTech | Insurtech v pojistných procesech | Uplatnění Insurtech v rámci  procesů spojených s provozováním pojištění | Insurtech; procesy provozování pojištění |
+| # | Zkratka | Téma ze sylabu | Klíčové pojmy |
+|---|---|---|---|
+| **Blok 1** | | **Principy pojištění** | |
+| 1 | Principy pojištění | Principy fungování pojištění a pojistných produktů | riziko a jeho přenos, pojistitelné riziko (nahodilost, odhadnutelnost, nezávislost, nevelká ekonomická škoda vůči rezervě), zákon velkých čísel, vyrovnání rizika v kolektivu a v čase, solidarita vs. ekvivalence, pojistný zájem, pojistná událost, pojistné plnění, obnosové vs. škodové pojištění, životní vs. neživotní pojištění, zákonné / povinné / smluvní pojištění, morální hazard, nepříznivý výběr (adverse selection), informační asymetrie |
+| 2 | Konstrukce produktů | Konstrukce pojistných produktů | netto a brutto pojistné, riziková přirážka, správní náklady a provize, pojistná matematika (pravděpodobnost × výše škody), technické rezervy (rezerva na nezasloužené pojistné, na pojistná plnění – RBNS, IBNR, životní rezerva), pojistné podmínky, pojistná částka, podpojištění a pravidlo proporcionality, spoluúčast (integrální, excedentní, procentní), limity, výluky, bonus/malus, segmentace a tarifní faktory, cenotvorba (pricing) |
+| 3 | Procesy v pojišťovně | Procesy v pojišťovně | hodnotový řetězec pojišťovny: vývoj produktu → distribuce → upisování (underwriting) → správa smluv → likvidace pojistných událostí (claims handling) → zajištění → investování; škodní poměr (loss ratio), nákladový poměr (expense ratio), kombinovaný ukazatel (combined ratio), prevence a řízení rizik, pojistné podvody, back office vs. front office |
+| **Blok 2** | | **Regulace pojišťovnictví a pojistný trh** | |
+| 4 | Typy pojišťoven | Typy pojišťoven | akciová pojišťovna, vzájemná pojišťovna (mutual), družstevní pojišťovna, captive pojišťovna, univerzální vs. specializovaná (životní / neživotní), zajišťovna, pobočka zahraniční pojišťovny, jednotná licence EU, bankopojištění (bancassurance), finanční skupiny a konglomeráty, managing general agent (MGA) |
+| 5 | Regulace | Regulatorní přístupy v rámci pojišťovnictví | důvody regulace (ochrana spotřebitele, systémová stabilita, informační asymetrie), materiální vs. normativní regulace, Solvency II (tři pilíře: kapitálové požadavky SCR a MCR, ORSA a řídicí systém, uveřejňování SFCR), regulace distribuce IDD (v ČR zákon o distribuci pojištění), zákon o pojišťovnictví, ČNB jako dohled, EIOPA, IFRS 17, DORA, AI Act, GDPR; regulatorní sandbox a inovační hub |
+| 6 | Pojistný trh | Analýza situace na pojistném trhu | předepsané pojistné, pojistná penetrace (pojistné / HDP), hustota pojištění (pojistné na obyvatele), podíl životního a neživotního pojištění, koncentrace trhu (podíly největších skupin, HHI), struktura distribučních kanálů, škodní a kombinovaný ukazatel na úrovni trhu, ČAP a ČNB jako zdroje dat, globální trendy (nízké úrokové sazby → inflace, klimatická rizika, NatCat) |
+| **Blok 3** | | **Charakteristika jednotlivých přístupů Insurtech** | |
+| 7 | Outsourcing | Outsourcing | vymezení Insurtech (nové technologie a modely v pojišťovnictví), Insurtech jako konkurent / partner / dodavatel (enabler) tradiční pojišťovny, outsourcing činností (IT, cloud, likvidace škod, správa smluv, call centrum), důležité (kritické) funkce a jejich outsourcing podle Solvency II, odpovědnost zůstává na pojišťovně, riziko třetích stran (DORA), white label, API a ekosystémy |
+| 8 | AI | Umělá inteligence v pojišťovnictví a její podoby | strojové učení, prediktivní modely, zpracování přirozeného jazyka a chatboty, generativní AI, počítačové vidění (odhad škody z fotografie), automatizované upisování a likvidace, detekce podvodů, personalizace cen; rizika: diskriminace, vysvětlitelnost (black box), ochrana dat; AI Act — vysoce rizikové systémy (životní a zdravotní pojištění), přístup EU vs. Čína (Lucero 2019) |
+| 9 | P2P a mikropojištění | P-2-P pojišťovny a jejich role na pojistných trzích, mikropojištění | peer-to-peer pojištění (skupina sdílí riziko, nevyčerpané pojistné se vrací), modely broker / carrier / self-governed, Friendsurance, Lemonade (Giveback), nižší morální hazard ve skupině, limity (velké škody → zajištění), mikropojištění (nízké pojistné, nízkorozpočtové skupiny, rozvojové země, mobilní platby), parametrické pojištění v mikropojištění, inkluzivní pojištění |
+| **Blok 4** | | **Tradiční pojišťovny vs. InsurTech** | |
+| 10 | Distribuce | Inovace v rámci distribuce pojistných produktů | tradiční kanály (vlastní síť, makléř, agent, banka), přímý prodej online, srovnávače (agregátory), embedded insurance (pojištění vložené do nákupu), pojištění na vyžádání (on-demand), mobilní aplikace, omnichannel, robo-advice, povinnosti podle IDD (požadavky a potřeby zákazníka, IPID) i pro online distribuci |
+| 11 | Konstrukce produktů | Inovace v konstrukci pojistných produktů | usage-based insurance (pay-as-you-drive, pay-how-you-drive), telematika, IoT a chytrá domácnost, wearables ve zdravotním a životním pojištění, parametrické pojištění (plnění podle indexu, ne podle škody), mikrotrvání (pojištění na hodiny), modulární produkty, kybernetické pojištění, personalizace vs. solidarita |
+| 12 | Insurtech v procesech | Uplatnění Insurtech v rámci procesů spojených s provozováním pojištění | digitalizace celého hodnotového řetězce (z tématu 3), automatizace (RPA), straight-through processing, blockchain a chytré kontrakty (automatické plnění), big data v upisování, digitální likvidace škod, prevence (hlášení rizika v reálném čase), legacy systémy, příležitosti × výzvy × rizika Insurtech (kybernetické riziko, závislost na dodavatelích, regulace) |
 
 ## Výsledky učení → témata
 
-- Vyhodnotit procesy v pojišťovně v souvislosti s podmínkami trhu a regulací → 1–6, 12.
-- Pochopit nové přístupy Insurtech → 7–12.
-- Analyzovat situaci na trhu z pohledu nových přístupů a platné regulace → 5–9.
-- Vyhodnotit možnosti jednotlivých inovativních přístupů → 7–12.
-- Analyzovat příležitosti, výzvy a potenciální rizika Insurtech → 7–12.
+Přiřazení je studijní návrh, nikoli potvrzený rozsah testů.
 
-Přiřazení výsledků učení k tématům je studijní návrh, nikoli vymezení rozsahu testů.
+- vyhodnotit procesy v pojišťovně vzhledem k trhu a regulaci → 3, 5, 6
+- pochopit nové přístupy Insurtech → 7, 8, 9
+- analyzovat pojistný trh z pohledu nových přístupů a regulace → 5, 6, 10
+- vyhodnotit možnosti uplatnění inovativních přístupů → 10, 11, 12
+- analyzovat příležitosti, výzvy a rizika Insurtech → 8, 9, 12
 
 ## Literatura
 
@@ -93,16 +96,15 @@ Přiřazení výsledků učení k tématům je studijní návrh, nikoli vymezen�
 
 ## Na co se zaměřit v podkladech
 
-Doporučený postup přípravy podle cílů sylabu:
+- **Principy jako měřítko:** u každé inovace umět říct, jestli zachovává zákon velkých čísel, pojistitelnost a vyrovnání rizika — a co se stane s morálním hazardem a nepříznivým výběrem (např. personalizace ceny a telematika snižují solidaritu)
+- **Pojmové dvojice na test:** obnosové × škodové · netto × brutto pojistné · RBNS × IBNR · akciová × vzájemná × captive · SCR × MCR · penetrace × hustota · škodní × kombinovaný ukazatel · P2P × mikropojištění · parametrické × škodové plnění
+- **Jednoduché výpočty (návrh):** pojistné plnění při podpojištění a spoluúčasti, netto pojistné z pravděpodobnosti a škody, škodní a kombinovaný ukazatel, penetrace a hustota
+- **Regulace u Insurtech:** outsourcing nezbavuje odpovědnosti, IDD platí i pro online a embedded prodej, AI Act a GDPR u automatizovaného upisování
+- **Aktuální čísla trhu** (ČAP, ČNB, EIOPA) vždy s rokem
 
-- Nejprve porozumět principům, konstrukci produktů a procesům pojišťovny (1–3).
-- Propojit typy pojišťoven, regulaci a situaci na trhu (4–6).
-- U každého přístupu Insurtech vysvětlit využití, příležitosti, výzvy a rizika (7–12).
-- Průběžné a závěrečné testy tvoří dohromady 80 % hodnocení; vedle nich plánovat práci a prezentaci či obhajobu.
+## Stav podkladů a studijní zátěž
 
-## Co zatím chybí
-
-- Prezentace a další výukové materiály pro podrobné poznámky a procvičování.
-- Oficiální harmonogram témat a počet, termíny, forma a rozsah průběžných testů.
-- Termín, forma a rozsah závěrečného testu.
-- Zadání, rozsah, způsob odevzdání a termín semestrální práce; termín a požadavky prezentace či obhajoby.
+- Sylabus je uložen v podobě dodané uživatelem pro ZS 2026/2027.
+- Témata 1–3 mají rozpracované poznámky z literatury, bez prezentací. U témat 4–12 je zatím osnova.
+- Celková zátěž je 104 h: přednášky 26 h, samostudium 23 h, práce 10 h, prezentace či obhajoba 10 h, příprava na průběžné testy 20 h a na závěrečný test 15 h.
+- Po dodání prezentací a oficiálního harmonogramu je potřeba upřesnit poznámky i přiřazení témat k týdnům.

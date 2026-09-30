@@ -253,16 +253,16 @@ window.COURSES = [
     "grading": "Semestrální práce (10 %) · Prezentace nebo obhajoba (10 %) · Průběžný test (testy) (40 %) · Závěrečný test (40 %)",
     "topicWeeks": [
       1,
-      2,
+      1,
       3,
-      4,
+      3,
       5,
-      6,
-      8,
+      5,
       9,
-      10,
+      9,
       11,
-      12,
+      11,
+      13,
       13
     ],
     "events": []
