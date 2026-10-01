@@ -13,7 +13,7 @@
 | Jazyk | čeština |
 | Ukončení | zkouška = semestrální práce + průběžný test + závěrečný test |
 
-**O čem to je:** čtyři bloky po třech tématech. Nejdřív klasické (centralizované) finance: trhy, banky a fintech, regulace. Pak decentralizované finance (DeFi): blockchain, smart kontrakty a protokoly, které nahrazují banky a burzy. Pak udržitelné finance: zelené dluhopisy, role státu a EU. Nakonec ESG: jak se měří a reguluje dopad firem na životní prostředí, společnost a řízení. Každý blok končí tématem **regulace a rizika**. Sylabus zdůrazňuje praktické situace z pohledu klienta i manažera finanční instituce.
+**O čem to je:** čtyři oblasti po třech tématech; poznámky postupují po jednotlivých tématech harmonogramu. Nejdřív klasické (centralizované) finance: trhy, banky a fintech, regulace. Pak decentralizované finance (DeFi): blockchain, smart kontrakty a protokoly, které automatizují finanční služby. Pak udržitelné finance: zelené dluhopisy, role státu a EU. Nakonec ESG: jak se měří a reguluje dopad firem na životní prostředí, společnost a řízení. Bloky A–C končí tématem **regulace a rizika**; v ESG je jím téma 11 a následují trendy. Sylabus zdůrazňuje praktické situace z pohledu klienta i manažera finanční instituce.
 
 ## Hodnocení
 
@@ -73,7 +73,7 @@ Výuka ve středu. Odpadá 6. týden (28. 10., státní svátek) a 7. týden (4.
 | 8 | Veřejný sektor | Role veřejného sektoru v udržitelných financích | *(návrh)* Pařížská dohoda, Zelená dohoda pro Evropu (Green Deal), Akční plán EU pro udržitelné finance (2018), EIB a národní rozvojové banky (NRB), NextGenerationEU a Národní plán obnovy, státní zelené dluhopisy, NGFS a centrální banky, klimatické zátěžové testy, blended finance |
 | 9 | UF regulace | Regulace a rizika | *(návrh)* taxonomie EU (6 cílů, substantial contribution, DNSH, minimální záruky), SFDR (článek 6 / 8 / 9), EU Green Bond Standard, klimatická rizika (fyzická × transformační), stranded assets, ESG rizika v Pilíři 2 a 3 (EBA), greenwashing |
 | 10 | ESG | Environmental, social, and governance (ESG) | *(návrh)* E / S / G faktory, ESG × CSR × udržitelnost, dvojí materialita (finanční × dopadová), ESG ratingy (MSCI, Sustainalytics) a jejich nesoulad, emise Scope 1 / 2 / 3, ESG investiční strategie (vylučování, best-in-class, integrace, engagement, impact) |
-| 11 | ESG regulace | Regulace a rizika | *(návrh)* CSRD a ESRS, Omnibus (zjednodušení 2025), CSDDD, reporting (GRI, ISSB/IFRS S1–S2, TCFD), nařízení o ESG ratinzích, ESG rizika bank, greenwashing a jeho postih |
+| 11 | ESG regulace | Regulace a rizika | *(návrh)* CSRD a ESRS, Omnibus (změny 2025–2026), CSDDD, reporting (GRI, ISSB/IFRS S1–S2, TCFD), nařízení o ESG ratinzích, ESG rizika bank, greenwashing a jeho postih |
 | 12 | Trendy ESG | Trendy v ESG | *(návrh)* ESG backlash a anti-ESG (USA), odliv z ESG fondů, net-zero aliance, přechodové plány (transition finance), biodiverzita (TNFD), AI a data v ESG, uhlíkové trhy a CBAM, tokenizace zelených aktiv (průnik DeFi a udržitelných financí) |
 
 ## Výsledky učení → kde se testují

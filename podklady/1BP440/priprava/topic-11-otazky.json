@@ -1,0 +1,90 @@
+[
+  {
+    "topic": "1BP440",
+    "subtopic": 11,
+    "question": "Které přiřazení odpovídá základní úloze CSRD, ESRS a CSDDD?",
+    "option_a": "CSRD: obsah zpráv; ESRS: rámec vykazování; CSDDD: náležitá péče.",
+    "option_b": "CSRD: rámec vykazování; ESRS: obsah zpráv; CSDDD: náležitá péče.",
+    "option_c": "CSRD: náležitá péče; ESRS: obsah zpráv; CSDDD: rámec vykazování.",
+    "option_d": "CSRD: rámec vykazování; ESRS: náležitá péče; CSDDD: obsah zpráv.",
+    "correct": "B",
+    "explanation": "CSRD vytváří rámec vykazování, ESRS určují obsah a způsob zpráv a CSDDD postupy náležité péče. Ostatní přiřazení zaměňují reportingové povinnosti, standardy a jednání vůči dopadům."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 11,
+    "question": "Česká firma porovnala svou velikost s novými evropskými prahy CSRD po přijetí Omnibus I. Co musí před rozhodnutím o zprávě za rok 2026 dále ověřit?",
+    "option_a": "Českou úpravu, přechodná pravidla a účetní období.",
+    "option_b": "Pouze datum schválení směrnice evropskou Radou.",
+    "option_c": "Pouze datum publikace směrnice v Úředním věstníku.",
+    "option_d": "Pouze existenci nezávazného vodítka od EFRAG.",
+    "correct": "A",
+    "explanation": "Evropská směrnice vyžaduje transpozici a časování pro konkrétní období. Samotné přijetí, publikace či metodické vodítko proto nerozhodnou aktuální českou povinnost."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 11,
+    "question": "Revidované ESRS byly přijaty a zveřejněny v roce 2026. Od jakého účetního období poznámky uvádějí jejich povinné použití, při odlišení přechodné volby pro rok 2026?",
+    "option_a": "Od období začínajících 1. 1. 2026.",
+    "option_b": "Od období začínajících 3. 7. 2026.",
+    "option_c": "Od období začínajících 24. 9. 2026.",
+    "option_d": "Od období začínajících 1. 1. 2027.",
+    "correct": "D",
+    "explanation": "Povinné použití se váže na období začínající od 1. ledna 2027; rok 2026 má přechodné možnosti. Přijetí v červenci a zveřejnění v září nejsou automaticky počátkem povinného účetního období."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 11,
+    "question": "Co znamená omezená jistota při nezávislém ověření zprávy o udržitelnosti?",
+    "option_a": "Přiměřená jistota s kratší platností závěru.",
+    "option_b": "Absolutní záruka správnosti vybraných ukazatelů.",
+    "option_c": "Menší rozsah postupů než u přiměřené jistoty.",
+    "option_d": "Záruka budoucího splnění zveřejněných cílů firmy.",
+    "correct": "C",
+    "explanation": "Limited assurance používá menší rozsah postupů než reasonable assurance. Ani jeden režim není absolutní zárukou a ověření zprávy neslibuje splnění budoucích cílů."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 11,
+    "question": "Jaký závěr lze vyvodit z toho, že poskytovatel ESG ratingu podléhá dohledu ESMA?",
+    "option_a": "Jeho hodnocení určuje pravděpodobnost nesplacení úvěru.",
+    "option_b": "Jeho metodika zajistí shodu skóre ostatních poskytovatelů.",
+    "option_c": "Uplatní se pravidla transparentnosti a řízení poskytovatele.",
+    "option_d": "Jeho závěr nahradí kontrolu peněžních toků dlužníka.",
+    "correct": "C",
+    "explanation": "Dohled řeší například transparentnost metodiky, governance a střety zájmů. Nedělá z ESG ratingu úvěrový rating, nesjednocuje všechny metodiky a nenahrazuje úvěrovou analýzu."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 11,
+    "question": "Firma modeluje 100 000 tunokilometrů přepravy s emisním faktorem 0,10 kg CO₂e/tunokilometr. Kolik tun CO₂e odhad vyčíslí?",
+    "option_a": "1 tunu",
+    "option_b": "100 tun",
+    "option_c": "10 000 tun",
+    "option_d": "10 tun",
+    "correct": "D",
+    "explanation": "Součin je 10 000 kg CO₂e, tedy 10 tun. Ostatní možnosti chybně násobí nebo převádějí kilogramy na tuny; výsledek zůstává odhadem, nikoli přímým měřením."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 11,
+    "question": "U expozice 10 mil. Kč je výchozí PD 2 % a LGD 40 %, ve scénáři PD 4 % a LGD 50 %. Při EL = PD × LGD × EAD a stejné EAD se očekávaná ztráta zvýší o:",
+    "option_a": "120 000 Kč",
+    "option_b": "80 000 Kč",
+    "option_c": "200 000 Kč",
+    "option_d": "280 000 Kč",
+    "correct": "A",
+    "explanation": "Výchozí EL je 80 tis. Kč a scénářová 200 tis. Kč, rozdíl tedy 120 tis. Kč. Jiné částky zaměňují rozdíl za jednu z hodnot nebo jejich součet; model není úplným účetním výpočtem podle IFRS 9."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 11,
+    "question": "Vedení firmy odrazuje pracovníky od hlášení úrazů a počet hlášených incidentů klesá. Jak má manažer tento ukazatel vyhodnotit?",
+    "option_a": "Považovat pokles za důkaz zlepšení bezpečnosti.",
+    "option_b": "Prověřit hlášení a skutečnou bezpečnost práce.",
+    "option_c": "Zvýšit rating pouze podle počtu hlášených úrazů.",
+    "option_d": "Nahradit kontrolu provozu zveřejněním kodexu.",
+    "correct": "B",
+    "explanation": "Pokles hlášení může odrážet slabé řízení a potlačování informací, nikoli bezpečnější provoz. Samotný počet, ratingová úprava či kodex nenahradí ověření skutečných podmínek."
+  }
+]

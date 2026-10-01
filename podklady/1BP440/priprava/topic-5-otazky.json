@@ -1,0 +1,90 @@
+[
+  {
+    "topic": "1BP440",
+    "subtopic": 5,
+    "question": "Klient používá aplikaci na veřejném blockchainu. Které zjištění nejlépe pomůže posoudit faktickou decentralizaci její správy?",
+    "option_a": "Zda klient vlastní klíče ke své osobní peněžence.",
+    "option_b": "Zda se převody veřejně zapisují do blockchainu.",
+    "option_c": "Zda se klient může přihlásit bez souhlasu firmy.",
+    "option_d": "Držitelé oprávnění měnit kód a parametry aplikace.",
+    "correct": "D",
+    "explanation": "Veřejný blockchain sám nezaručuje rozptýlenou kontrolu aplikace. Podstatná jsou oprávnění správců a rozdělení rozhodovací moci."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 5,
+    "question": "Pool AMM má 10 ETH a 20 000 S, udržuje součin rezerv a neúčtuje poplatky. Obchodník vloží 2 000 S; žádný jiný obchod neproběhne. Kolik ETH přibližně získá?",
+    "option_a": "1,0000 ETH",
+    "option_b": "0,9091 ETH",
+    "option_c": "1,1000 ETH",
+    "option_d": "0,0909 ETH",
+    "correct": "B",
+    "explanation": "Součin je 200 000 a nová rezerva ETH je 200 000 / 22 000 = 9,0909 ETH. Obchodník dostane rozdíl 10 − 9,0909 = 0,9091 ETH; počáteční cena neplatí pro celou velkou směnu."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 5,
+    "question": "Původní pool tvoří 10 ETH a 20 000 S. Po arbitráži při ceně 8 000 S za ETH obsahuje 5 ETH a 40 000 S. Bez poplatků porovnej hodnotu celého poolu s držením původních tokenů.",
+    "option_a": "Hodnota 80 000 S; proti držení je rozdíl +20 %.",
+    "option_b": "Hodnota 40 000 S; proti držení je rozdíl −60 %.",
+    "option_c": "Hodnota 80 000 S; proti držení je rozdíl −20 %.",
+    "option_d": "Hodnota 100 000 S; proti držení je rozdíl 0 %.",
+    "correct": "C",
+    "explanation": "Pool má hodnotu 5 × 8 000 + 40 000 = 80 000 S, původní tokeny by měly 100 000 S. Impermanent loss je relativní rozdíl −20 %, přesto hodnota poolu proti počátku vzrostla."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 5,
+    "question": "Kolaterál má hodnotu 1 800 USD, dluh 1 500 USD a likvidační práh 80 %. Jaký je health factor a důsledek v modelu z poznámek?",
+    "option_a": "HF je 0,96; pozice je způsobilá k likvidaci.",
+    "option_b": "HF je 1,20; pozice je způsobilá k likvidaci.",
+    "option_c": "HF je 0,96; pozice zůstává nad likvidačním limitem.",
+    "option_d": "HF je 1,20; pozice zůstává nad likvidačním limitem.",
+    "correct": "A",
+    "explanation": "HF = 1 800 × 0,8 / 1 500 = 0,96, tedy méně než 1. Zajištění přitom stále převyšuje dluh; likvidační práh vyžaduje další rezervu."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 5,
+    "question": "Čím se flash loan odlišuje od běžného několikaměsíčního úvěru?",
+    "option_a": "Jeho splatnost nastane po hlasování držitelů tokenů.",
+    "option_b": "Musí být splacen ve stejné blockchainové transakci.",
+    "option_c": "Jeho dluh se splácí až po prodeji zastaveného aktiva.",
+    "option_d": "Musí být uzavřen před první změnou tržní ceny.",
+    "correct": "B",
+    "explanation": "Flash loan musí být splacen včetně případného poplatku v téže blockchainové transakci. Jinak se změny stavu transakce vrátí; nejde o dlouhodobý nezajištěný úvěr."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 5,
+    "question": "Investor vloží 100 tokenů po 100 Kč. Po roce má 110 tokenů, ale cena je 70 Kč. Bez poplatků a daní činí korunový výnos:",
+    "option_a": "−30 %",
+    "option_b": "−20 %",
+    "option_c": "+10 %",
+    "option_d": "−23 %",
+    "correct": "D",
+    "explanation": "Počáteční hodnota je 10 000 Kč a konečná 110 × 70 = 7 700 Kč. Výnos je 7 700 / 10 000 − 1 = −23 %; růst počtu tokenů sám není korunový zisk."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 5,
+    "question": "Kontrakt stále drží 100 jednotek aktiva. Jeho cena vzroste z 2 000 na 3 000 USD a nic se nevloží ani nevybere. Co platí pro dolarovou TVL?",
+    "option_a": "Vzroste o 50 % i bez nového vkladu.",
+    "option_b": "Vzroste o 33 % i bez nového vkladu.",
+    "option_c": "Zůstane stejná bez nového vkladu.",
+    "option_d": "Klesne o 50 % bez nového vkladu.",
+    "correct": "A",
+    "explanation": "TVL vzroste z 200 000 na 300 000 USD, tedy o 50 %. TVL oceňuje vložená aktiva a její růst nemusí znamenat přítok prostředků ani zisk protokolu."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 5,
+    "question": "Které tvrzení o tokenizovaném nároku na nemovitost odpovídá výkladu RWA?",
+    "option_a": "Evidence tokenu nahrazuje ověření existence nemovitosti.",
+    "option_b": "Tokenizace sama rozptyluje rozhodovací pravomoci správce.",
+    "option_c": "Token vyžaduje právní vazbu na podkladovou nemovitost.",
+    "option_d": "Zápis tokenu garantuje budoucí nájemné z nemovitosti.",
+    "correct": "C",
+    "explanation": "RWA zde označuje real-world assets, tedy vazbu tokenu na aktivum mimo původní krypto prostředí. Blockchain sám nezaručuje existenci nemovitosti, právní vymahatelnost ani platby nájemníka."
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "topic": "1BP440",
+    "subtopic": 1,
+    "question": "Investor koupí již vydaný dluhopis od jiného investora. Komu připadne kupní cena?",
+    "option_a": "Bance vedoucí účet emitenta.",
+    "option_b": "Dosavadnímu držiteli dluhopisu.",
+    "option_c": "Emitentovi původního dluhopisu.",
+    "option_d": "Depozitáři evidujícímu emisi.",
+    "correct": "B",
+    "explanation": "Na sekundárním trhu prodává dosavadní držitel. Emitent získává nové prostředky při primární emisi."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 1,
+    "question": "Který nárok vzniká klientovi běžným bankovním vkladem?",
+    "option_a": "Podíl na rezervách centrální banky.",
+    "option_b": "Vlastnický podíl v bance.",
+    "option_c": "Pohledávka klienta vůči bance.",
+    "option_d": "Pohledávka vůči dlužníkům banky.",
+    "correct": "C",
+    "explanation": "Klient má nárok vůči bance, která vede vklad. Nemá přímý nárok vůči jejím úvěrovým klientům ani vlastnický podíl."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 1,
+    "question": "Banka poskytne úvěr a připíše částku na účet dlužníka. Co se přímo zvýší v její bilanci?",
+    "option_a": "Hotovostní aktiva a vkladové závazky.",
+    "option_b": "Úvěrová aktiva a vkladové závazky.",
+    "option_c": "Hotovostní aktiva a vlastní kapitál.",
+    "option_d": "Úvěrová aktiva a vlastní kapitál.",
+    "correct": "B",
+    "explanation": "Banka vytvoří úvěrovou pohledávku a odpovídající vklad. Tím sama nezíská hotovost ani nezvýší kapitál."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 1,
+    "question": "Klient banky A zaplatí z nového úvěru dodavateli u banky B. Co musí banka A zajistit pro mezibankovní vypořádání?",
+    "option_a": "Dostupné rezervy pro převod bance B.",
+    "option_b": "Souhlas ostatních vkladatelů banky A.",
+    "option_c": "Převod úvěrové pohledávky bance B.",
+    "option_d": "Nový vlastní kapitál ve výši platby.",
+    "correct": "A",
+    "explanation": "Při vypořádání banka A převádí rezervy a odečítá klientský vklad. Úvěrová pohledávka zůstává v bance A."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 1,
+    "question": "Exportér zajistí prodej 10 000 EUR forwardem za 25 Kč/EUR. Smlouva je řádně splněna, poplatky zanedbáme. Kolik korun získá při tržním kurzu 26 Kč/EUR?",
+    "option_a": "10 000 Kč",
+    "option_b": "240 000 Kč",
+    "option_c": "250 000 Kč",
+    "option_d": "260 000 Kč",
+    "correct": "C",
+    "explanation": "Forward stanoví kurz budoucího prodeje: 10 000 × 25 = 250 000 Kč. Zajištění stabilizuje výsledek, ale vzdává se výhody příznivějšího trhu."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 1,
+    "question": "Co odlišuje clearing od vypořádání obchodu?",
+    "option_a": "Clearing zpracuje závazky, vypořádání je splní převody.",
+    "option_b": "Clearing vydá instrument, vypořádání určí jeho emitenta.",
+    "option_c": "Clearing sjedná cenu, vypořádání vybere obchodní místo.",
+    "option_d": "Clearing převádí aktiva, vypořádání zveřejní jejich cenu.",
+    "correct": "A",
+    "explanation": "Clearing stanoví a zpracuje závazky stran. Vypořádání provede příslušné převody peněz a cenných papírů."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 1,
+    "question": "Který popis odpovídá úloze SWIFT?",
+    "option_a": "Nahrazuje centrální depozitář akcií.",
+    "option_b": "Vypořádává korunové platby v ČNB.",
+    "option_c": "Vede rezervní účty komerčních bank.",
+    "option_d": "Přenáší standardizované finanční zprávy.",
+    "correct": "D",
+    "explanation": "SWIFT je komunikační síť. Samotný přenos instrukce není převod prostředků ani evidence vlastnictví akcií."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 1,
+    "question": "Investor drží desetiletý dluhopis pouze dva týdny. Jak to mění jeho zařazení?",
+    "option_a": "Mění dluhovou pohledávku na akcii.",
+    "option_b": "Stává se instrumentem peněžního trhu.",
+    "option_c": "Přesouvá emisi na primární trh.",
+    "option_d": "Zůstává dluhovým instrumentem kapitálového trhu.",
+    "correct": "D",
+    "explanation": "Členění podle splatnosti se týká instrumentu, ne doby držení konkrétním investorem. Krátký investiční horizont také neodstraňuje cenové riziko."
+  }
+]

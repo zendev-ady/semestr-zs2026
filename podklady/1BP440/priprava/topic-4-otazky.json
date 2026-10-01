@@ -1,0 +1,90 @@
+[
+  {
+    "topic": "1BP440",
+    "subtopic": 4,
+    "question": "Co především umožňuje kryptografický hash dat?",
+    "option_a": "Obnovit původní zprávu z jejího krátkého otisku.",
+    "option_b": "Porovnat otisky a odhalit změnu kontrolovaných dat.",
+    "option_c": "Ověřit totožnost autora bez dalších údajů o podpisu.",
+    "option_d": "Utajit obsah zprávy před držiteli veřejného klíče.",
+    "correct": "B",
+    "explanation": "Hash je kontrolní otisk obsahu, nikoli šifrování nebo podpis. Sám neurčuje autora ani neumožňuje běžně obnovit původní zprávu."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 4,
+    "question": "Alice podepsala dva převody téhož bitcoinového výstupu různým příjemcům. Oba podpisy jsou pravé. Co musí síť zajistit?",
+    "option_a": "Přijetí obou převodů, protože autorizace je platná.",
+    "option_b": "Rozdělení výstupu napůl mezi oba podepsané převody.",
+    "option_c": "Odmítnutí obou podpisů, protože mají společný klíč.",
+    "option_d": "Přijetí jen jednoho utracení podle stavu a konsenzu.",
+    "correct": "D",
+    "explanation": "Podpis prokazuje autorizaci, ale neřeší dvojí utracení. Ověření stavu a konsenzus musí zabránit spotřebování stejného UTXO dvakrát."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 4,
+    "question": "Transakce spotřebuje UTXO 0,010 BTC a vytvoří výstup 0,006 BTC příjemci a 0,003 BTC odesílateli. Kolik činí poplatek?",
+    "option_a": "0,001 BTC",
+    "option_b": "0,003 BTC",
+    "option_c": "0,004 BTC",
+    "option_d": "0,009 BTC",
+    "correct": "A",
+    "explanation": "Poplatek je rozdíl vstupů a nových výstupů: 0,010 − 0,006 − 0,003 = 0,001 BTC. Vrácený zbytek 0,003 BTC je nový výstup, nikoli poplatek."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 4,
+    "question": "Modelový převod na základní síti Ethereum spotřebuje 21 000 gas. Base fee je 15 gwei a priority fee 3 gwei za gas; 1 gwei = 0,000000001 ETH. Jaký je celkový poplatek?",
+    "option_a": "0,000063 ETH",
+    "option_b": "0,000315 ETH",
+    "option_c": "0,000378 ETH",
+    "option_d": "0,003780 ETH",
+    "correct": "C",
+    "explanation": "Efektivní cena je 18 gwei a poplatek 21 000 × 18 = 378 000 gwei, tedy 0,000378 ETH. Použití pouze base fee nebo pouze priority fee nezahrnuje celý poplatek."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 4,
+    "question": "Proč je prosté hlasování podle počtu účtů zranitelné v otevřené síti?",
+    "option_a": "Počet účtů určuje cenu gasu a mění ověření podpisů.",
+    "option_b": "Veřejná adresa automaticky prokazuje jedinečnou osobu.",
+    "option_c": "Jeden účastník může vytvořit mnoho hlasujících identit.",
+    "option_d": "Každý účet musí nejdříve složit stejný validační vklad.",
+    "correct": "C",
+    "explanation": "Jde o Sybilův problém: mnoho identit nemusí znamenat mnoho nezávislých účastníků. PoW a PoS vážou vliv na zdroje a pravidla protokolu, nikoli jen na počet vytvořených účtů."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 4,
+    "question": "Smart kontrakt má vyplatit odměnu po splnění zakódované podmínky. Co běžně potřebuje k provedení změny stavu?",
+    "option_a": "Zavolání transakcí nebo jiným kontraktem.",
+    "option_b": "Samotné zveřejnění údaje bez vyvolání kontraktu.",
+    "option_c": "Nepřetržitý autonomní běh bez vnějšího vyvolání.",
+    "option_d": "Vypršení času bez jakéhokoli dalšího volání.",
+    "correct": "A",
+    "explanation": "Kontrakt běžně vykonává kód až po vyvolání. Automatické provedení po zavolání není totéž jako samovolné zjišťování událostí mimo blockchain."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 4,
+    "question": "Jakou funkci plní oracle při práci smart kontraktu?",
+    "option_a": "Zvyšuje množství gasu dostupné při provádění kódu.",
+    "option_b": "Převádí soukromý klíč na veřejnou adresu uživatele.",
+    "option_c": "Nahrazuje pravidla konsenzu při potvrzování bloků.",
+    "option_d": "Dodává cenu aktiva nebo další externí údaje.",
+    "correct": "D",
+    "explanation": "Oracle přivádí informace, které kontrakt sám nezná. Shoda sítě na jejich zápisu ještě nezaručuje pravdivost údajů mimo blockchain."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 4,
+    "question": "Co samo o sobě prokazuje vlastnictví NFT evidovaného podle ERC-721?",
+    "option_a": "Autorské právo k dílu spojenému s identifikátorem.",
+    "option_b": "Kontrolu daného tokenu podle pravidel jeho evidence.",
+    "option_c": "Vymahatelný nárok na fyzický předmět popsaný u tokenu.",
+    "option_d": "Schválení kvality podkladového díla validátory sítě.",
+    "correct": "B",
+    "explanation": "ERC-721 stanoví technickou evidenci nezaměnitelného tokenu. Autorská práva či nárok na fyzickou věc vyžadují další právní vazbu a neplynou automaticky z vlastnictví tokenu."
+  }
+]

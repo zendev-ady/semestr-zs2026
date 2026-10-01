@@ -1,0 +1,90 @@
+[
+  {
+    "topic": "1BP440",
+    "subtopic": 7,
+    "question": "Který znak odlišuje sustainability-linked dluhopis od účelového sustainability dluhopisu?",
+    "option_a": "Vyhrazení výnosů pro zelené a sociální projekty.",
+    "option_b": "Vazba smluvních podmínek na dosažení cílů dlužníka.",
+    "option_c": "Převod vlastnictví financovaných projektů na investora.",
+    "option_d": "Rozdělení výnosů mezi veřejné a soukromé emitenty.",
+    "correct": "B",
+    "explanation": "Sustainability-linked konstrukce váže podmínky na výsledky měřené KPI a SPT. Účelový sustainability dluhopis financuje zelené a sociální projekty; vlastnictví projektů ani typ emitenta rozdíl neurčují."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 7,
+    "question": "SLB má jistinu 100 mil. Kč a roční kupón 4 %. Při nesplnění cíle se kupón zvýší o 0,25 procentního bodu pro dvě zbývající roční platby. Kolik činí celkový dodatečný úrok bez diskontování?",
+    "option_a": "250 000 Kč",
+    "option_b": "2 500 000 Kč",
+    "option_c": "500 000 Kč",
+    "option_d": "8 500 000 Kč",
+    "correct": "C",
+    "explanation": "Roční zvýšení je 100 mil. × 0,0025 = 250 tis. Kč, za dva roky 500 tis. Kč. Ostatní částky zaměňují jednu platbu, velikost zvýšení nebo celkový úrok za dodatečný."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 7,
+    "question": "Ze zelené emise 100 mil. Kč bylo 60 mil. přiřazeno zateplení a 30 mil. fotovoltaice. Co tato informace sama dokládá?",
+    "option_a": "Alokaci 90 mil. Kč do vymezených projektů.",
+    "option_b": "Dosažení úspor energie za 90 mil. Kč ročně.",
+    "option_c": "Snížení úvěrového rizika emitenta o 90 %.",
+    "option_d": "Nové projekty v hodnotě celé emise 100 mil. Kč.",
+    "correct": "A",
+    "explanation": "Informace popisuje alokaci; 10 mil. Kč zůstává nepřiřazeno. Neudává dosažené úspory, snížení rizika ani to, zda jsou projekty nové, nebo refinancované."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 7,
+    "question": "Investor obdržel second-party opinion k rámci zeleného dluhopisu před jeho emisí. Který závěr je oprávněný?",
+    "option_a": "Splacení jistiny prošlo státní garancí.",
+    "option_b": "Budoucí dopad prošel konečným měřením.",
+    "option_c": "Projektové vlastnictví přešlo na investora.",
+    "option_d": "Nezávislý posuzovatel vydal stanovisko k rámci emise.",
+    "correct": "D",
+    "explanation": "SPO je nezávislé stanovisko k rámci či konstrukci emise. Není garancí dluhu, měřením dosud nenastalých výsledků ani převodem projektů."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 7,
+    "question": "Dvě srovnatelné nové emise za nominál mají výnos a kupón 4,00 % a 3,95 %. Zelená emise má nominál 100 mil. Kč. Jaký je modelový roční rozdíl úrokových nákladů ve prospěch emitenta?",
+    "option_a": "5 000 Kč",
+    "option_b": "500 000 Kč",
+    "option_c": "5 000 000 Kč",
+    "option_d": "50 000 Kč",
+    "correct": "D",
+    "explanation": "Rozdíl 0,05 procentního bodu je 0,0005; násobení 100 mil. Kč dává 50 tis. Kč. Jiné výsledky chybně převádějí procentní či bazické body; zjednodušení platí pro zadanou emisi za nominál."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 7,
+    "question": "Co je podstatným znakem impact investing vedle finančního výnosu?",
+    "option_a": "Povinnost vyřadit každé emisní odvětví.",
+    "option_b": "Záměr dosáhnout měřitelného přínosu vedle výnosu.",
+    "option_c": "Záruka získat nejvyšší skóre ESG ratingu.",
+    "option_d": "Nákup výhradně veřejných zelených emisí.",
+    "correct": "B",
+    "explanation": "Dopadové investování vyžaduje výslovný záměr a měření pozitivního dopadu. Samotné vyloučení odvětví, rating nebo druh emitenta tento mechanismus nedokládají."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 7,
+    "question": "V modelu EU ETS stojí snížení jedné tuny emisí provoz A 30 EUR a provoz B 90 EUR. Povolenka stojí 60 EUR/t; ostatní podmínky zanedbáme. Které rozhodnutí minimalizuje jejich náklady?",
+    "option_a": "A sníží emise, B využije povolenky.",
+    "option_b": "A využije povolenky, B sníží emise.",
+    "option_c": "Oba sníží emise za své dané náklady.",
+    "option_d": "Oba využijí povolenky za tržní cenu.",
+    "correct": "A",
+    "explanation": "A sníží tunu levněji než za cenu povolenky, zatímco B má dražší opatření. Obrácení voleb nebo stejná volba pro oba přehlíží rozdíl nákladů 30 a 90 EUR."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 7,
+    "question": "Vyberte nepravdivé tvrzení o zelených úvěrech a dluhopisech.",
+    "option_a": "Zelený úvěr vymezuje účel použití jeho prostředků.",
+    "option_b": "Zelená emise může podle rámce refinancovat investici.",
+    "option_c": "Zelené označení odstraňuje úvěrové riziko dlužníka.",
+    "option_d": "Alokační a dopadový report zachycují odlišné informace.",
+    "correct": "C",
+    "explanation": "Zelené označení úvěrové riziko neodstraňuje; dlužník stále může selhat. Ostatní tvrzení správně rozlišují účel, možné refinancování a tok peněz oproti výsledkům."
+  }
+]

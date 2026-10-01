@@ -79,6 +79,15 @@ MathJax: inline `$...$`, blokově `$$...$$`.
 
 **Jazyk:** poznámky česky, srozumitelně (krátké věty, každý pojem vysvětlit). U 1BP461 (výuka i test anglicky) dávej ke klíčovým pojmům anglický název do závorky; zavedené anglické pojmy (hedging, duration, cash pooling) ponech a vysvětli.
 
+### Zdroje a ověřování
+
+- Rozsah učiva určují sylabus a materiály vyučujícího. Externí zdroje používej k vysvětlení a doplnění; návrhy ve studijním plánu nevydávej za potvrzené požadavky předmětu.
+- Chybějící výklad dohledávej přednostně v materiálech VŠE (skripta, přednášky, publikace vyučujících) a předepsané literatuře. Dále používej oficiální výukové materiály a odborné publikace renomovaných univerzit, například MIT, LSE nebo Stanfordu. Samotná univerzitní doména nestačí — ověř autora, povahu dokumentu a jeho relevanci; studentská práce nemá stejnou váhu jako výukový materiál vyučujícího.
+- Regulaci a aktuální data ověřuj v primárních zdrojích: ČNB, ECB, BIS, EBA, ESMA, EIOPA, Eurostat nebo oficiální znění legislativy. Rozlišuj datum publikace, období dat a účinnost předpisu. Pokud se starší studijní podklad liší od aktuálního stavu, rozdíl výslovně označ.
+- Před použitím zdroj otevři a ověř, že podporuje dané tvrzení; nestačí úryvek z vyhledávače. Necituj knihu jako použitý zdroj, pokud máš jen bibliografický záznam. Nedostupný podklad nebo neověřenou informaci přiznej, nic nedomýšlej.
+- U každého tématu uveď konkrétní použité zdroje: název, autora nebo instituci, rok a odkaz či cestu k místnímu podkladu; u delších dokumentů podle možnosti stránku nebo kapitolu. U konkrétních dat a regulatorních tvrzení připoj odkaz přímo k tvrzení, aby byla vazba dohledatelná.
+- Odlišuj obsah přednášek, externí doplnění a vlastní modelové příklady. U témat připravených dopředu nepřipisuj externí výklad konkrétní přednášce nebo vyučujícímu bez podkladu.
+
 ## 3. Otázky do quizu
 
 Postupuj podle [otazky.md](otazky.md). Otázky jen k tématům, která už mají poznámky. Na konci `python3 quiz.py export`.

@@ -1,0 +1,90 @@
+[
+  {
+    "topic": "1BP440",
+    "subtopic": 12,
+    "question": "Která informace nejvíce pomáhá posoudit proveditelnost přechodového plánu továrny?",
+    "option_a": "Závazek vzdáleného cíle bez průběžných kroků.",
+    "option_b": "Celková hodnota všech vydaných dluhopisů.",
+    "option_c": "Počet nakoupených kreditů bez plánu investic.",
+    "option_d": "Investiční rozpočet, milníky a odpovědnost.",
+    "correct": "D",
+    "explanation": "Proveditelnost vyžaduje propojit konkrétní kroky, peníze a odpovědnost. Vzdálený závazek, celkový nominál dluhu či počet kreditů bez investičního plánu nevysvětlují, jak má přeměna nastat."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 12,
+    "question": "Továrna dál emituje 10 000 t CO₂e a koupí 10 000 kreditů z jiných projektů. Co samotný nákup dokládá?",
+    "option_a": "Redukci emisí továrny, nikoli pořízení kreditů.",
+    "option_b": "Pořízení kreditů, nikoli redukci emisí továrny.",
+    "option_c": "Odstranění CO₂, nezávisle na druhu kreditů.",
+    "option_d": "Dosažení net zero, nezávisle na kvalitě kreditů.",
+    "correct": "B",
+    "explanation": "Nákup neprokazuje změnu vlastních emisí a kredity mohou představovat různé typy výsledků. Ani odstranění ani net zero nelze odvodit bez znalosti mechanismu, kvality a hranic."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 12,
+    "question": "Co odlišuje carbon removal od zabránění emisím proti výchozímu scénáři?",
+    "option_a": "Odebrání atmosférického CO₂ a jeho následné uložení.",
+    "option_b": "Omezení očekávaných budoucích emisí zdroje.",
+    "option_c": "Převod vlastnictví kreditu mezi investory.",
+    "option_d": "Přepočet jiných skleníkových plynů na CO₂e.",
+    "correct": "A",
+    "explanation": "Removal odebírá již přítomný CO₂ z atmosféry a ukládá jej. Zabránění budoucím emisím, obchodování s kreditem a převod jednotek jsou jiné mechanismy."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 12,
+    "question": "Nápojový podnik potřebuje pro provoz vodu a znečišťuje ekosystém odpadní vodou. Jaká dvojice vystihuje potřebu vody pro provoz a znečišťování?",
+    "option_a": "Potřeba: dopad; znečištění: závislost.",
+    "option_b": "Potřeba: rating; znečištění: závislost.",
+    "option_c": "Potřeba: závislost; znečištění: dopad.",
+    "option_d": "Potřeba: závislost; znečištění: rating.",
+    "correct": "C",
+    "explanation": "Provoz potřebuje vodu, jde tedy o závislost, a znečištěním působí na přírodu, tedy vytváří dopad. Obrácení směrů nebo označení za rating zaměňuje vztah k přírodě za jeho hodnocení."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 12,
+    "question": "Které tvrzení správně charakterizuje TNFD?",
+    "option_a": "Povinný rámec ESG reportingu pro všechny evropské firmy.",
+    "option_b": "Úvěrový rating podniků podle jejich přírodních závislostí.",
+    "option_c": "Dobrovolný rámec zveřejnění přírodních závislostí a dopadů.",
+    "option_d": "Dobrovolný rámec zveřejňování omezený na klimatické emise.",
+    "correct": "C",
+    "explanation": "TNFD poskytuje dobrovolná doporučení pro přírodní závislosti, dopady, rizika a příležitosti. Není plošným právním reportingem, úvěrovým ratingem ani rámcem omezeným pouze na klimatické emise."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 12,
+    "question": "Co znamená interoperabilita ISSB a ESRS pro podnik používající oba rámce?",
+    "option_a": "Část shodných informací lze využít v obou rámcích.",
+    "option_b": "Oba rámce má právně plně zaměnitelné.",
+    "option_c": "Dopadovou významnost může vždy vynechat.",
+    "option_d": "Národní pravidla mu nahradí globální standard.",
+    "correct": "A",
+    "explanation": "Interoperabilita omezuje duplicity díky překryvu požadavků, ale rámce nejsou totožné ani právně rovnocenné. Neodstraňuje rozdíly významnosti či národní pravidla přijetí."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 12,
+    "question": "AI odhadne emise firmy na 1 200 t, firma vykáže 800 t. Jaký je první vhodný krok před jejich srovnáním?",
+    "option_a": "Nahradit údaj firmy vyšším číslem od modelu.",
+    "option_b": "Ověřit období, hranice a metodiku obou údajů.",
+    "option_c": "Nahradit odhad firmy nižším zveřejněným číslem.",
+    "option_d": "Použít aritmetický průměr jako ověřenou hodnotu.",
+    "correct": "B",
+    "explanation": "Rozdíl může vzniknout odlišným rokem, provozy či emisními rozsahy. Volba vyššího či nižšího čísla nebo jejich průměru bez kontroly neprokazuje správný, natož ověřený údaj."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 12,
+    "question": "Emitent eviduje dluhopis na solární projekt pomocí 100 tokenů. Který závěr je správný?",
+    "option_a": "Vydání tokenů samo zajišťuje novou výrobu elektřiny.",
+    "option_b": "Počet tokenů určuje množství odstraněného CO₂.",
+    "option_c": "Konsenzus sítě ověřuje pravdivost každého měřidla.",
+    "option_d": "Evidence nároku sama nedokazuje přínos projektu.",
+    "correct": "D",
+    "explanation": "Tokenizace mění evidenci a převod nároku, zatímco dopad musí vzniknout v projektu a být doložen. Nevytváří sama výrobu či odstranění CO₂ a konsenzus nezaručuje pravdivost vstupů z okolního světa."
+  }
+]

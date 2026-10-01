@@ -1,0 +1,90 @@
+[
+  {
+    "topic": "1BP440",
+    "subtopic": 2,
+    "question": "Rozpočtová aplikace pomocí AIS načítá transakce z účtů klienta. Co z tohoto oprávnění samo plyne?",
+    "option_a": "Může klientovi otevřít úvěrový rámec.",
+    "option_b": "Může zadávat platby z povolených účtů.",
+    "option_c": "Může zobrazovat povolené údaje o účtech.",
+    "option_d": "Může převést zůstatky na svůj účet.",
+    "correct": "C",
+    "explanation": "AIS je informační služba. Přístup k údajům sám nedává právo zahajovat platby nebo přesouvat prostředky."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 2,
+    "question": "Která informace nejlépe pomůže určit ochranu peněz v aplikaci označené jako neobanka?",
+    "option_a": "Smluvní poskytovatel služby a povaha pohledávky.",
+    "option_b": "Rozsah mobilních funkcí a počet poboček.",
+    "option_c": "Výše slíbeného úroku a rychlost založení.",
+    "option_d": "Počet uživatelů a délka provozu aplikace.",
+    "correct": "A",
+    "explanation": "Neobanka je obchodní označení, nikoli samostatná licence. Bankovní vklad a prostředky u platebního poskytovatele mají odlišné ochranné mechanismy."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 2,
+    "question": "Platební služba účtuje 1 % z platby a 5 Kč za transakci. Jaký je poplatek za jednu platbu 200 Kč, bez dalších nákladů?",
+    "option_a": "2 Kč",
+    "option_b": "7 Kč",
+    "option_c": "15 Kč",
+    "option_d": "5 Kč",
+    "correct": "B",
+    "explanation": "Procentní složka je 200 × 0,01 = 2 Kč, pevná složka 5 Kč. Celkem jde o 7 Kč."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 2,
+    "question": "Investor půjčí 10 000 Kč. S pravděpodobností 95 % dostane 10 800 Kč, jinak 4 000 Kč; vždy zaplatí poplatek 100 Kč. Jaký je očekávaný čistý výnos?",
+    "option_a": "−61,0 %",
+    "option_b": "4,6 %",
+    "option_c": "3,6 %",
+    "option_d": "8,0 %",
+    "correct": "C",
+    "explanation": "Očekávaná koncová částka je 0,95 × 10 800 + 0,05 × 4 000 − 100 = 10 360 Kč. Výnos 3,6 % není zárukou výsledku každého investora."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 2,
+    "question": "Proč propojení investorů a dlužníků přes online P2P platformu samo nedokazuje DeFi?",
+    "option_a": "P2P zaručuje rozhodování bez centrálního provozovatele.",
+    "option_b": "P2P znamená automatické provádění úvěrů na blockchainu.",
+    "option_c": "P2P vylučuje zprostředkovatele při organizování splátek.",
+    "option_d": "P2P popisuje financování, ne kontrolu nad službou.",
+    "correct": "D",
+    "explanation": "P2P popisuje úvěrový obchodní model, nikoli decentralizaci. Platforma může organizovat financování a obsluhu úvěrů jako centrální prostředník."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 2,
+    "question": "Robo-advisor udržuje 60 % akcií a 40 % dluhopisů. Akcie nyní mají hodnotu 72 000 Kč a dluhopisy 40 000 Kč. Jak obnoví váhy bez nákladů?",
+    "option_a": "Prodá akcie za 4 800 Kč a koupí dluhopisy.",
+    "option_b": "Prodá dluhopisy za 12 000 Kč a koupí akcie.",
+    "option_c": "Prodá akcie za 12 000 Kč a koupí dluhopisy.",
+    "option_d": "Prodá dluhopisy za 4 800 Kč a koupí akcie.",
+    "correct": "A",
+    "explanation": "Portfolio má hodnotu 112 000 Kč a cílová akciová část 67 200 Kč. Rebalancování přesune 4 800 Kč z akcií do dluhopisů."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 2,
+    "question": "Co charakterizuje Banking as a Service v modelu banka–fintech?",
+    "option_a": "Partner pouze analyzuje údaje z již vedených účtů.",
+    "option_b": "Partner získá vlastní licenci a nahradí původní banku.",
+    "option_c": "Partner přesune klienty do nové přímé banky.",
+    "option_d": "Partner začlení bankovní služby do vlastní nabídky.",
+    "correct": "D",
+    "explanation": "BaaS umožňuje partnerovi používat bankovní služby v jeho nabídce. Rozdělení rolí neruší nutnost určit smluvního poskytovatele a nositele rizika."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 2,
+    "question": "Které tvrzení o autorizaci karetní platby je správné?",
+    "option_a": "Dokončuje převod prostředků mezi zúčastněnými bankami.",
+    "option_b": "Může vytvořit blokaci před konečným vypořádáním.",
+    "option_c": "Nahrazuje clearing a stanovení mezibankovních závazků.",
+    "option_d": "Připíše konečnou platbu na účet příjemce u acquirera.",
+    "correct": "B",
+    "explanation": "Autorizace ověřuje možnost provedení transakce a může vytvořit blokaci. Clearing a vypořádání jsou další odlišné kroky."
+  }
+]

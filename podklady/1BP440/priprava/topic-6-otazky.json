@@ -1,0 +1,90 @@
+[
+  {
+    "topic": "1BP440",
+    "subtopic": 6,
+    "question": "Úvěrový kontrakt čerpá cenu z jediného malého poolu. Krátký výkyv nadhodnotí zástavu a umožní příliš velkou půjčku. Které riziko je bezprostředním zdrojem problému?",
+    "option_a": "Riziko oracle a manipulace cenového vstupu.",
+    "option_b": "Riziko odcizení podpisového klíče dlužníka.",
+    "option_c": "Riziko změny hlasovacích práv při správě protokolu.",
+    "option_d": "Riziko přetížení sítě při zařazení transakcí.",
+    "correct": "A",
+    "explanation": "Kontrakt může správně vykonat kód nad chybnou nebo manipulovanou cenou. Oracle spojuje ekonomickou realitu s pravidly úvěru a sám může být zdrojem nekrytého dluhu."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 6,
+    "question": "Klient zastavil 6 ETH a dluží 9 000 USD. Před likvidací cena ETH skokově klesne na 1 000 USD. Předpokládej prodej všech ETH za tuto cenu bez nákladů a celý výnos na dluh. Jaký schodek zbude?",
+    "option_a": "0 USD",
+    "option_b": "1 800 USD",
+    "option_c": "3 000 USD",
+    "option_d": "6 000 USD",
+    "correct": "C",
+    "explanation": "Zástava má hodnotu 6 × 1 000 = 6 000 USD a dluh je 9 000 USD, takže zbývá 3 000 USD. Likvidační pravidlo chybějící hodnotu nevytvoří a náklady mohou schodek zvětšit."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 6,
+    "question": "Klient drží 10 000 stablecoinových tokenů s cílovou cenou 1 USD. Na sekundárním trhu je jejich cena 0,90 USD. Co odpovídá depegu v této situaci?",
+    "option_a": "Tržní hodnota je 10 000 USD; cíl nahrazuje tržní cenu.",
+    "option_b": "Tržní hodnota je 9 000 USD; cíl negarantuje cenu trhu.",
+    "option_c": "Tržní hodnota je 9 900 USD; pokles se vztahuje k počtu tokenů.",
+    "option_d": "Tržní hodnota je 10 000 USD; výměna u emitenta je každý prodej.",
+    "correct": "B",
+    "explanation": "Tržní hodnota je 10 000 × 0,90 = 9 000 USD. Případný nárok na výměnu u emitenta a prodej na sekundárním trhu jsou odlišné operace."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 6,
+    "question": "V modelovém sandwich obchodu jiný účastník nakoupí v AMM těsně před klientem a prodá těsně po něm. Který mechanismus využívá?",
+    "option_a": "Výnos z úroků při půjčení klientových tokenů.",
+    "option_b": "Bonus za splacení podzajištěného klientova dluhu.",
+    "option_c": "Odměnu za poskytnutí likvidity obchodnímu poolu.",
+    "option_d": "Změnu ceny prostřednictvím pořadí transakcí.",
+    "correct": "D",
+    "explanation": "Účastník využije nákup před klientem k posunu ceny a následný prodej k získání hodnoty. Jde o jednu z praktik spojených s MEV; veřejné provedení samo nezaručuje férové pořadí."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 6,
+    "question": "Token usiluje o stabilní hodnotu odkazem na jednu oficiální měnu, například euro. Jaká definice MiCA tomu odpovídá?",
+    "option_a": "EMT, token elektronických peněz.",
+    "option_b": "ART, token odkazující na koš aktiv.",
+    "option_c": "CASP, poskytovatel tokenových služeb.",
+    "option_d": "DEX, decentralizovaná obchodní platforma.",
+    "correct": "A",
+    "explanation": "EMT odkazuje na jednu oficiální měnu; ART je odlišná kategorie. CASP označuje poskytovatele služby a DEX typ obchodní aplikace, nikoli tuto kategorii tokenu."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 6,
+    "question": "Firma označuje svou službu jako DeFi, ale spravuje klientská aktiva a řídí provádění pokynů. Jak posoudit možnost vynětí z MiCA pro plně decentralizované služby?",
+    "option_a": "Stačí označení DeFi, protože jde o veřejnou síť.",
+    "option_b": "Stačí vlastní klíč klienta, protože vylučuje prostředníka.",
+    "option_c": "Stačí veřejný kód, protože nahrazuje posouzení činnosti.",
+    "option_d": "Zkoumá se skutečná kontrola a přítomnost prostředníka.",
+    "correct": "D",
+    "explanation": "MiCA neuděluje automatickou výjimku každému projektu s názvem DeFi nebo DEX. Rozhodují konkrétní okolnosti a faktická decentralizace bez prostředníka."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 6,
+    "question": "Dosavadní český poskytovatel kryptoaktiv v září 2026 odkazuje pouze na přechodné období MiCA. Co platí pro pokračování příslušných služeb?",
+    "option_a": "Přechod pokračuje do konce kalendářního roku 2026.",
+    "option_b": "Přechod nahrazuje oprávnění při zachování stejné značky.",
+    "option_c": "Přechod skončil; je nutné odpovídající oprávnění či notifikace.",
+    "option_d": "Přechod končí až po první žádosti klienta o převod aktiv.",
+    "correct": "C",
+    "explanation": "Přechodné období skončilo 1. 7. 2026. Další poskytování vyžaduje příslušné oprávnění CASP nebo řádnou notifikaci oprávněné finanční instituce podle konkrétní služby."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 6,
+    "question": "Klient vybírá od CASP kryptoaktiva za 1 500 EUR na vlastní self-hosted adresu. Které tvrzení o TFR odpovídá poznámkám?",
+    "option_a": "Vlastní klíč vyjímá převod z informačních povinností CASP.",
+    "option_b": "Převod vyžaduje údaje a dodatečné posouzení kontroly adresy.",
+    "option_c": "Kontrola adresy vyžaduje předání soukromého klíče poskytovateli.",
+    "option_d": "Informační povinnosti vznikají až při prodeji přijatých tokenů.",
+    "correct": "B",
+    "explanation": "Účast CASP odlišuje tento případ od přímého P2P převodu bez poskytovatele. Nad 1 000 EUR se přidává posouzení vlastnictví či kontroly adresy, nikoli požadavek sdílet soukromý klíč."
+  }
+]

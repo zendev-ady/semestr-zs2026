@@ -1,0 +1,90 @@
+[
+  {
+    "topic": "1BP440",
+    "subtopic": 9,
+    "question": "Typ činnosti elektrárny je zahrnut v taxonomii, ale podnik nedoložil DNSH. Co lze při těchto informacích tvrdit?",
+    "option_a": "Činnost je způsobilá, soulad není prokázán.",
+    "option_b": "Činnost je v souladu díky obnovitelnému zdroji.",
+    "option_c": "Činnost je mimo taxonomii kvůli chybějícím datům.",
+    "option_d": "Činnost splňuje DNSH díky emisnímu přínosu.",
+    "correct": "A",
+    "explanation": "Eligibility znamená pokrytí typu činnosti; alignment vyžaduje splnění všech podmínek včetně DNSH. Obnovitelný zdroj ani emisní přínos nenahrazují důkaz nepoškozování jiných cílů."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 9,
+    "question": "Která podmínka patří mezi čtyři základní podmínky taxonomického souladu?",
+    "option_a": "Získání nejvyššího ESG ratingu.",
+    "option_b": "Zařazení produktu pod článek 9 SFDR.",
+    "option_c": "Splnění minimálních záruk odpovědného podnikání.",
+    "option_d": "Povinná emise zeleného dluhopisu.",
+    "correct": "C",
+    "explanation": "Minimální záruky doplňují významný přínos, DNSH a technická kritéria. Rating, kategorie produktu SFDR ani způsob financování tuto podmínku nenahrazují."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 9,
+    "question": "Portfolio má hodnotu 100 mil. Kč, z toho podnikové investice 60 mil. Kč a prokázaný taxonomický soulad 30 mil. Kč. Jaký je vlastní modelový podíl souladu na celém portfoliu?",
+    "option_a": "50 %",
+    "option_b": "60 %",
+    "option_c": "80 %",
+    "option_d": "30 %",
+    "correct": "D",
+    "explanation": "Se zadaným jmenovatelem je podíl 30/100 = 30 %. Výsledek 50 % používá jen podnikovou část; ostatní hodnoty nevyjadřují podíl prokázaného souladu a nejde zde o zákonný reportingový ukazatel."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 9,
+    "question": "Která dvojice správně odlišuje riziko udržitelnosti a PAI?",
+    "option_a": "Nepříznivý dopad investice; riziko pro hodnotu investice.",
+    "option_b": "Riziko pro hodnotu investice; nepříznivý dopad investice.",
+    "option_c": "Riziko pro hodnotu investice; náklady jejího vykazování.",
+    "option_d": "Náklady vykazování investice; nepříznivý dopad investice.",
+    "correct": "B",
+    "explanation": "Riziko udržitelnosti sleduje možný finanční dopad na investici, PAI hlavní nepříznivé dopady na faktory udržitelnosti. Obrácení směrů či záměna za administrativní náklady neodpovídají těmto pojmům."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 9,
+    "question": "Klient považuje fond článku 9 SFDR za bezpečnější než fond článku 8 pouze kvůli číslu článku. Co má poradce vysvětlit?",
+    "option_a": "Kategorie vymezují maximální ztrátu, ne složení.",
+    "option_b": "Kategorie vymezují cíle a informace, ne bezpečnost.",
+    "option_c": "Kategorie vymezují garanci jistiny, ne likviditu.",
+    "option_d": "Kategorie vymezují úvěrový rating, ne záměr fondu.",
+    "correct": "B",
+    "explanation": "Články 8 a 9 upravují vlastnosti či cíl a informační požadavky, nikoli stupnici bezpečnosti. Nelze z nich odvodit maximální ztrátu, garanci ani úvěrový rating."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 9,
+    "question": "Které tvrzení správně porovnává EuGB a zásady ICMA?",
+    "option_a": "EuGB i ICMA jsou dobrovolné zásady bez právních podmínek.",
+    "option_b": "EuGB jsou tržní zásady; ICMA dobrovolný právní standard.",
+    "option_c": "Emise podle ICMA automaticky splňuje také standard EuGB.",
+    "option_d": "EuGB: dobrovolný standard v právu; ICMA: tržní zásady.",
+    "correct": "D",
+    "explanation": "EuGB je dobrovolně zvolený standard zakotvený právně, zatímco ICMA poskytuje tržní zásady. Dobrovolnost EuGB neruší jeho právní podmínky a soulad s ICMA neznamená automatický soulad s EuGB."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 9,
+    "question": "Správci kvůli opravenému zavádějícímu tvrzení odejde 20 mil. Kč aktiv. Poplatek činí 1 % ročně. O kolik podle modelu klesne roční hrubý výnos z poplatků?",
+    "option_a": "20 000 Kč",
+    "option_b": "2 000 000 Kč",
+    "option_c": "200 000 Kč",
+    "option_d": "20 000 000 Kč",
+    "correct": "C",
+    "explanation": "Výpadek je 20 mil. × 0,01 = 200 tis. Kč ročně. Jiné částky chybně převádějí sazbu nebo zaměňují odliv aktiv za výnos; případné sankce nejsou součástí modelu."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 9,
+    "question": "Vyberte nepravdivé tvrzení o klimatických a environmentálních rizicích.",
+    "option_a": "Zelené portfolio zaručuje rozložení svých rizik.",
+    "option_b": "Povodeň může snížit hodnotu úvěrové zástavy.",
+    "option_c": "Nová technologie může znehodnotit starší aktivum.",
+    "option_d": "Společný vodní zdroj může propojit rizika firem.",
+    "correct": "A",
+    "explanation": "Zelené zaměření diverzifikaci nezajišťuje; investice mohou sdílet lokalitu, technologii či zdroje. Ostatní tvrzení popisují reálné kanály fyzických, transformačních a koncentračních rizik."
+  }
+]

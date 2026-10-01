@@ -1,0 +1,90 @@
+[
+  {
+    "topic": "1BP440",
+    "subtopic": 10,
+    "question": "Banka snižuje spotřebu elektřiny, ale obchodníky odměňuje jen podle objemu a prodává nevhodné produkty. Jaký závěr odpovídá ESG analýze?",
+    "option_a": "Zlepšení E nahrazuje kontrolu prodeje.",
+    "option_b": "Prodejní praxe patří pouze do složky E.",
+    "option_c": "Lepší E neruší problémy zákazníků a řízení.",
+    "option_d": "Systém odměn patří pouze do složky S.",
+    "correct": "C",
+    "explanation": "Úspory energie zlepšují E, zacházení s klienty souvisí se S a kontrola odměn s G. Jedna složka nenahrazuje ostatní a zařazení prodejní praxe či odměn je v chybných možnostech zaměněno."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 10,
+    "question": "Chemická firma významně poškozuje ekosystém, ale zatím se to neprojevuje v jejích peněžních tocích. Jak se otázka posoudí podle dvojí materiality?",
+    "option_a": "Je významná až po prokázané finanční ztrátě.",
+    "option_b": "Otázka je významná z dopadové perspektivy.",
+    "option_c": "Je významná jen při současném poklesu tržeb.",
+    "option_d": "Musí splnit zároveň oba pohledy významnosti.",
+    "correct": "B",
+    "explanation": "Dvojí materialita zahrnuje významnost finanční nebo dopadovou, případně obě. Podstatný dopad proto nemusí čekat na ztrátu, pokles tržeb ani splnění průniku perspektiv."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 10,
+    "question": "Firma spaluje plyn ve vlastním kotli, spotřebovává nakoupenou elektřinu a nakupuje materiál od dodavatelů. Které pořadí rozsahů odpovídá těmto emisím?",
+    "option_a": "Scope 2; Scope 1; Scope 3.",
+    "option_b": "Scope 1; Scope 3; Scope 2.",
+    "option_c": "Scope 3; Scope 2; Scope 1.",
+    "option_d": "Scope 1; Scope 2; Scope 3.",
+    "correct": "D",
+    "explanation": "Vlastní spalování je přímé Scope 1, výroba nakoupené energie Scope 2 a výroba materiálu v řetězci Scope 3. Ostatní pořadí zaměňují přímé emise, energii či další nepřímé emise."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 10,
+    "question": "Výrobce elektřiny vykáže určitou emisi ve Scope 1 a odběratel tutéž emisi ve Scope 2. Co z toho vyplývá pro součet firemních výkazů?",
+    "option_a": "Prostý součet může emisi započítat dvakrát.",
+    "option_b": "Odběratel musí převést emisi do Scope 1.",
+    "option_c": "Výrobce musí odstranit emisi ze Scope 1.",
+    "option_d": "Součet představuje dvě odlišné fyzické emise.",
+    "correct": "A",
+    "explanation": "Stejná fyzická emise může být v různých rozsazích různých firem. To nevyžaduje změnu klasifikace, ale kontrolu dvojího započtení při agregaci."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 10,
+    "question": "Při stejných hranicích firma zvýší produkci z 10 000 na 15 000 kusů a emise z 1 000 na 1 200 t CO₂e. Jak se změnila emisní intenzita na kus?",
+    "option_a": "Vzrostla o 20 %.",
+    "option_b": "Klesla o 50 %.",
+    "option_c": "Vzrostla o 50 %.",
+    "option_d": "Klesla o 20 %.",
+    "correct": "D",
+    "explanation": "Intenzita klesá z 0,10 na 0,08 t na kus, tedy o 20 %. Absolutní emise rostou o 20 % a produkce o 50 %; tyto změny nejsou změnou intenzity."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 10,
+    "question": "Firma vykazuje nízké Scope 2 podle market-based metody. Který závěr je správný?",
+    "option_a": "Výsledek odráží také smluvní nástroje dodávky.",
+    "option_b": "Výsledek dokazuje bezemisní proud v každé zásuvce.",
+    "option_c": "Výsledek se přičítá k location-based emisím.",
+    "option_d": "Výsledek nahrazuje vykázání emisí hodnotového řetězce.",
+    "correct": "A",
+    "explanation": "Market-based výsledek využívá smluvní údaje při splnění kvalitativních kritérií. Nedokládá fyzický původ každé dodávky, nesčítá se s alternativní metodou a nenahrazuje Scope 3."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 10,
+    "question": "Dva poskytovatelé dávají stejné firmě odlišné ESG ratingy. Co by měl analytik nejprve porovnat?",
+    "option_a": "Pouze váhy společných ukazatelů.",
+    "option_b": "Rozsah, způsob měření a váhy ukazatelů v metodikách.",
+    "option_c": "Pouze celkovou tržní kapitalizaci firmy.",
+    "option_d": "Pouze souhrnné skóre bez dílčích ukazatelů.",
+    "correct": "B",
+    "explanation": "Ratingy se mohou lišit rozsahem, způsobem měření i váhami. Samotné váhy, velikost firmy či souhrnné skóre bez metodiky rozdíly nevysvětlují."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 10,
+    "question": "Akcionář požaduje nezávislou kontrolu odměn vedení a sleduje její zavedení. Jaký investiční přístup tím přímo používá?",
+    "option_a": "Screening.",
+    "option_b": "Best-in-class.",
+    "option_c": "Engagement.",
+    "option_d": "Impact investing.",
+    "correct": "C",
+    "explanation": "Jde o působení na firmu a sledování změny, tedy engagement. Screening a best-in-class určují výběr investic; impact investing navíc vyžaduje záměr měřitelného pozitivního dopadu vedle výnosu."
+  }
+]

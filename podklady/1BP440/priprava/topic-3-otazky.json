@@ -1,0 +1,90 @@
+[
+  {
+    "topic": "1BP440",
+    "subtopic": 3,
+    "question": "Banka má kvalitní dlouhodobé úvěry, ale nestačí jí hotovost na dnešní výběry. Jaký problém situace přímo popisuje?",
+    "option_a": "Selhání všech úvěrových dlužníků.",
+    "option_b": "Nedostatek účetního vlastního kapitálu.",
+    "option_c": "Nedostatek likvidity financování.",
+    "option_d": "Zápornou čistou hodnotu aktiv.",
+    "correct": "C",
+    "explanation": "Likvidita znamená schopnost zaplatit včas. Dostatečná hodnota dlouhodobých aktiv sama nezajistí prostředky pro dnešní platby."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 3,
+    "question": "Banka má CET1 9 mil. Kč a RWA 60 mil. Kč. RWA vzrostou na 75 mil. Kč, CET1 zůstane stejný. Jak se změní poměr CET1/RWA?",
+    "option_a": "Z 15 % na 20 %.",
+    "option_b": "Z 12 % na 15 %.",
+    "option_c": "Z 15 % na 12 %.",
+    "option_d": "Z 10 % na 8 %.",
+    "correct": "C",
+    "explanation": "Původní poměr je 9 / 60 = 15 %, nový 9 / 75 = 12 %. Zvýšení rizikově vážených expozic sníží poměr i bez účetní ztráty."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 3,
+    "question": "Jaký je hlavní účel pákového poměru vedle rizikově vážených kapitálových poměrů?",
+    "option_a": "Omezovat expozice i při nízkých rizikových vahách.",
+    "option_b": "Měřit likvidní rezervu vůči krátkodobým odtokům.",
+    "option_c": "Vztahovat kapitál k rizikově váženým aktivům.",
+    "option_d": "Měřit stabilní financování vůči požadovaným zdrojům.",
+    "correct": "A",
+    "explanation": "Pákový poměr vztahuje kapitál k míře expozic bez běžného rizikového vážení. Likviditu sledují jiné ukazatele a posuzování dlužníků tím nezaniká."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 3,
+    "question": "U banky jsou uznatelná likvidní aktiva 12 mil. Kč a regulatorní čisté odtoky na 30 dní 10 mil. Kč. Jaká je hodnota LCR?",
+    "option_a": "83,3 %",
+    "option_b": "20 %",
+    "option_c": "2 %",
+    "option_d": "120 %",
+    "correct": "D",
+    "explanation": "LCR = vysoce kvalitní likvidní aktiva / regulatorní čisté odtoky. Zadané hodnoty dávají 12 / 10 = 120 %."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 3,
+    "question": "Klient má způsobilé vklady 30 000 EUR a 85 000 EUR u stejné banky. Bez úroků a zvýšené náhrady: kolik kryje běžný limit pojištění?",
+    "option_a": "85 000 EUR",
+    "option_b": "100 000 EUR",
+    "option_c": "115 000 EUR",
+    "option_d": "200 000 EUR",
+    "correct": "B",
+    "explanation": "Běžný limit se vztahuje na jednoho vkladatele u jedné banky, ne na každý účet. Vklady se sečtou a z celkových 115 000 EUR limit kryje 100 000 EUR."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 3,
+    "question": "Klient zná dluhopisy, ale peníze potřebuje za půl roku na bydlení. Poradce zvažuje desetiletý nelikvidní dluhopis. Co musí posoudit nad rámec znalostí produktu?",
+    "option_a": "Schopnost vysvětlit význam kupónu dluhopisu.",
+    "option_b": "Horizont klienta a schopnost nést ztrátu.",
+    "option_c": "Úroveň jeho znalostí dluhopisového trhu.",
+    "option_d": "Počet dříve přečtených emisních podmínek.",
+    "correct": "B",
+    "explanation": "Vhodnost zahrnuje i finanční situaci a investiční cíle, nikoli jen znalosti a zkušenosti. Znalost produktu nestačí k jeho doporučení pro krátký horizont."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 3,
+    "question": "Která situace nejlépe vystihuje makroobezřetnostní pohled?",
+    "option_a": "Jedna banka opravuje chybu v konkrétní platbě klienta.",
+    "option_b": "Jedna banka ověřuje příjem určitého žadatele o úvěr.",
+    "option_c": "Jedna banka kontroluje přístup zaměstnance k účtu.",
+    "option_d": "Současné prodeje aktiv více bank zesilují propad cen.",
+    "correct": "D",
+    "explanation": "Makroobezřetnost sleduje společné šoky a přenos problémů v systému. Rozumný prodej jedné banky může při souběhu s ostatními zhoršit situaci celého trhu."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 3,
+    "question": "Které tvrzení správně odlišuje Basel III od CRR a CRD?",
+    "option_a": "Basel je standard, CRR a CRD tvoří právní rámec EU.",
+    "option_b": "Basel se používá přímo, CRR a CRD ho pouze doporučují.",
+    "option_c": "Basel i CRR vyžadují transpozici, CRD se používá přímo.",
+    "option_d": "Basel, CRR i CRD jsou nezávazné metodiky dohledu.",
+    "correct": "A",
+    "explanation": "Basilejský výbor vytváří mezinárodní standardy. Právní povinnosti v EU vycházejí z evropských a národních předpisů, přičemž CRR je nařízení a CRD směrnice."
+  }
+]

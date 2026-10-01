@@ -1,0 +1,90 @@
+[
+  {
+    "topic": "1BP440",
+    "subtopic": 8,
+    "question": "Firma při výběru paliva nezahrnuje klimatické škody způsobené okolí. Jaký ekonomický problém tento případ ilustruje?",
+    "option_a": "Nedostatek zástavy.",
+    "option_b": "Nesoulad splatností.",
+    "option_c": "Riziko změny úroku.",
+    "option_d": "Negativní externalitu.",
+    "correct": "D",
+    "explanation": "Negativní externalita je škoda jiným, kterou původce plně nezahrnuje do svého rozhodování. Nedostatek zástavy, splatnost a úrok jsou jiné překážky či rizika financování."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 8,
+    "question": "Modelový projekt má současnou hodnotu nákladů 10 mil. Kč, soukromých přínosů 9 mil. a přínosů pro okolí 2 mil. Kč. Bez nákladů administrace a veřejných prostředků činí jeho společenská čistá hodnota:",
+    "option_a": "+1 mil. Kč",
+    "option_b": "−1 mil. Kč",
+    "option_c": "+2 mil. Kč",
+    "option_d": "+3 mil. Kč",
+    "correct": "A",
+    "explanation": "Společenská hodnota je 9 + 2 − 10 = +1 mil. Kč. Hodnota −1 mil. zahrnuje jen soukromé přínosy, další možnosti chybně zahrnují náklady či přínosy."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 8,
+    "question": "Veřejná záruka kryje 80 % konečné ztráty. Z úvěru 10 mil. Kč banka po selhání vymůže 4 mil. Kč. Kolik podle tohoto modelu zaplatí ručitel?",
+    "option_a": "8,0 mil. Kč",
+    "option_b": "3,2 mil. Kč",
+    "option_c": "4,8 mil. Kč",
+    "option_d": "1,2 mil. Kč",
+    "correct": "C",
+    "explanation": "Konečná ztráta činí 6 mil. Kč a 80 % z ní je 4,8 mil. Kč. Ostatní hodnoty počítají krytí z jistiny či výtěžku nebo zaměňují podíl banky za ručitele."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 8,
+    "question": "Který důsledek veřejné úvěrové záruky je správný?",
+    "option_a": "Zaručená část dluhu se dlužníkovi odpouští.",
+    "option_b": "Část rizika věřitele přebírá ručitel.",
+    "option_c": "Výše záruky se ihned vyplatí jako dotace.",
+    "option_d": "Posouzení splácení se nahrazuje označením projektu.",
+    "correct": "B",
+    "explanation": "Záruka smluvně přesouvá část rizika věřitele; dlužníka nezbavuje splácení. Není okamžitou dotací a zelený účel nenahrazuje úvěrové posouzení."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 8,
+    "question": "Projekt má veřejnou část 2 mil. Kč nesoucí první ztrátu a soukromou přednostní část 8 mil. Kč. Při konečné ztrátě 3 mil. Kč připadne soukromé části:",
+    "option_a": "0 mil. Kč",
+    "option_b": "1 mil. Kč",
+    "option_c": "2 mil. Kč",
+    "option_d": "3 mil. Kč",
+    "correct": "B",
+    "explanation": "Veřejná část absorbuje první 2 mil. Kč; zbývající 1 mil. nese soukromá část. Nulová ztráta přeceňuje ochranu, další částky zaměňují celkovou ztrátu nebo pořadí jejího nesení."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 8,
+    "question": "Bez podpory by investice činila 6 mil. Kč. S veřejnými 2 mil. a soukromými 8 mil. Kč dosáhne 10 mil. Kč. Jaký je dodatečný rozsah investice proti uvedené alternativě?",
+    "option_a": "2 mil. Kč",
+    "option_b": "8 mil. Kč",
+    "option_c": "4 mil. Kč",
+    "option_d": "10 mil. Kč",
+    "correct": "C",
+    "explanation": "Dodatečný rozsah je 10 − 6 = 4 mil. Kč. Veřejný vklad, přítomný soukromý kapitál ani celý projekt nejsou totožné s additionalitou objemu."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 8,
+    "question": "Která informace nejlépe odpovídá na otázku finanční additionality veřejné banky?",
+    "option_a": "Projekt bez zásahu nezíská potřebnou splatnost úvěru.",
+    "option_b": "Projekt s podporou dosáhne vysokého objemu financování.",
+    "option_c": "Projekt používá technologii označenou za ekologickou.",
+    "option_d": "Projekt po schválení podepíše smlouvu o financování.",
+    "correct": "A",
+    "explanation": "Finanční additionalita se hodnotí proti situaci bez zásahu a může spočívat v jinak nedostupné splatnosti. Velikost projektu, jeho označení či podpis smlouvy samy tuto odlišnost nedokládají."
+  },
+  {
+    "topic": "1BP440",
+    "subtopic": 8,
+    "question": "Banka používá NGFS scénář prudkého růstu ceny emisí. Jak má chápat jeho výsledek?",
+    "option_a": "Jako prognózu s předem určenou pravděpodobností.",
+    "option_b": "Jako rozhodnutí vlády zvýšit cenu emisí.",
+    "option_c": "Jako důkaz aktuálního selhání všech expozic.",
+    "option_d": "Jako podmíněný test citlivosti své bilance.",
+    "correct": "D",
+    "explanation": "Scénář zkoumá důsledky vybraných podmínek a není předpovědí jejich pravděpodobnosti. Nerozhoduje o vládní politice ani nedokazuje současné selhání úvěrů."
+  }
+]
