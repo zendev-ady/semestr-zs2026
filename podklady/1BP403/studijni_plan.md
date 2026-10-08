@@ -1,6 +1,6 @@
 # 1BP403 Bankovnictví II
 
-> Zdroj: `sylabus.txt` (InSIS). Oficiální harmonogram od vyučujících zatím není. Rozvržení do týdnů je **můj návrh** podle volen. Klíčové pojmy jsou mimo sylabus **návrh** podle základní literatury (Dvořák 2005, Dvořák 2008, MacDonald & Koch 2010) a aktuální regulace EU. Upřesnit podle přednášek.
+> Zdroje: `sylabus.txt` (InSIS) a **Charakteristika kurzu** doc. Dvořáka (`Charakteristika_kurzu_moderni_VSE_PROJEKCE.pptx`, ZS 2026/27) s oficiální osnovou 14 témat a hodnocením. Při rozporu mezi InSIS a charakteristikou kurzu platí **charakteristika kurzu** (vyučující mají přednost). Přednášky zatím vyšly v prezentacích: *Bilance banky*, *Charakteristika a druhy derivátů*, *Forwardové kontrakty* (Dvořák) a *Rizika v bankovnictví* (Palán). Rozvržení do týdnů je **můj návrh** (osnova zná jen pořadí). Klíčové pojmy u témat bez slidů (7, 8, 9, 13, 14) jsou **návrh** podle základní literatury (Dvořák 2005, Dvořák 2008, MacDonald & Koch 2010) a regulace EU.
 
 ## Přehled
 
@@ -8,83 +8,103 @@
 |---|---|
 | Kredity | 6 ECTS · 4/0 (jen přednášky, 4 h týdně) |
 | Rozvrh | St 16:15–19:30 NB A (přednáška) |
-| Vyučující | doc. Ing. Petr Dvořák, Ph.D. (**PD**, garant, přednášející, zkoušející) · Ing. Luděk Palán (**LP**, přednášející, zkoušející) |
+| Vyučující | doc. Ing. Petr Dvořák, Ph.D. (**PD**, garant, přednášející, zkoušející; dvorakp@vse.cz; konzultace St 9:00–10:00, m. č. 161 NB, předem dohodnout e-mailem nebo MS Teams) · Ing. Luděk Palán (**LP**, přednášející, zkoušející) |
 | Jazyk | čeština |
-| Ukončení | zkouška = semestrální práce + závěrečný test |
+| Ukončení | případová studie + závěrečná písemná zkouška |
 
-**O čem to je:** navazuje na Bankovnictví I. Probírá rizika banky a jak je banka měří, řídí a jak je reguluje dohled: úrokové, tržní, měnové, likviditní, úvěrové, kapitálové a operační riziko. Druhá linie jsou **deriváty**: jak jsou postavené (forward, futures, swap, opce, cap/floor/collar, kreditní deriváty), jak se obchodují a oceňují a jak s nimi banka zajišťuje rizika nebo spekuluje. Třetí linie je **ESG**: jak se environmentální rizika (fyzická × transformační) promítají do úrokového, úvěrového a operačního rizika, zelené úvěry. Na konci ziskovost banky a účetní zobrazení derivátů.
+**O čem to je:** navazuje na Bankovnictví I. Cíle podle charakteristiky kurzu: (I) **bankovní rizika a jejich řízení**: podstata rizik, přístupy k měření a řízení, nástroje regulace, dopad technologických změn; (II) **deriváty a aktuální vývoj**: deriváty jako nástroj řízení rizik (ale i zdroj rizika), využití k zajištění i jako investice (oceňování, obchodování, regulace).
+
+**Výstupy z učení** (charakteristika kurzu, sl. 5):
+1. Porozumět, z čeho, proč a jaká finanční rizika (nejen) pro banku vyplývají, jak je lze měřit a řídit
+2. Samostatně navrhnout, jak se lze pomocí derivátů proti rizikům zajistit
+3. Identifikovat rizika spojená s využitím derivátů
+4. Porozumět v širších souvislostech, jak a proč jsou rizika bank regulována, a kriticky zhodnotit výhody a nevýhody
+5. … a to vše v kontextu aktuálního vývoje a problémů v českém a světovém bankovnictví
 
 ## Hodnocení
 
-| Část | Váha | Příprava podle sylabu |
+| Část | Body | Poznámka |
 |---|---|---|
-| Semestrální práce | **30 %** | 39 h |
-| Závěrečný test | **70 %** | 39 h |
+| Zpracování a řádné odevzdání **případové studie** | 0–10 | **nutná podmínka** pro psaní testu |
+| **Závěrečná písemná zkouška** | 0–90 | |
+| Celkem | 100 | |
 
-Známky: 1 = 90–100 % · 2 = 75–89 % · 3 = 60–74 % · 4 = pod 60 %
+Klasifikace: 1 = 90–100 · 2 = 75–89 · 3 = 60–74 · **4+ = 50–59 (nevyhověl, blízko)** · 4 = méně než 50. Student má možnost opakování. Omluvit předmět lze jen ze závažných důvodů.
 
-**Podmínka:** k závěrečnému testu se lze přihlásit jen po **řádném odevzdání semestrální práce**.
+**Rozpor s InSIS:** sylabus uvádí semestrální práci 30 % (39 h přípravy) a test 70 % (39 h). Charakteristika kurzu uvádí **10 + 90 bodů**. Ověřit u Dvořáka.
 
-Termíny: zatím neznámé (zadání, téma a termín odevzdání semestrální práce, termíny závěrečného testu, struktura testu). Průběžný test sylabus neuvádí.
+Termíny: zatím neznámé (zadání, téma a termín odevzdání případové studie, termíny a struktura závěrečného testu). Průběžný test se neuvádí.
 
-## Harmonogram a témata
+## Harmonogram a témata (návrh)
 
-Výuka ve středu. Odpadá 6. týden (28. 10., státní svátek) a 7. týden (4. 11., inovační týden) → **11 výukových týdnů na 12 témat**. Návrh: témata 11 a 12 (ziskovost, účetnictví derivátů) spolu ve 13. týdnu — 4hodinový blok to unese. Číslo tématu = `#topic-N` = `subtopic` v quizu.
+Výuka ve středu. Odpadá 6. týden (28. 10., státní svátek) a 7. týden (4. 11., inovační týden) → **11 výukových týdnů**. Osnova má **14 témat** v **10 blocích** (témata 3–5, 10–11 a 12–13 jdou po skupinách), 13. týden proto zůstává jako rezerva. Číslo tématu = `#topic-N` = `subtopic` v quizu.
 
-| Týden | Datum | Téma | Linie |
+| Týden | Datum | Téma | Přednáší | Linie |
+|---|---|---|---|---|
+| 1 | 23. 9. | **1** Bankovní bilance | PD | základ |
+| 2 | 30. 9. | **2** Charakteristika a druhy derivátů | PD | deriváty |
+| 3 | 7. 10. | **3** Charakteristika rizik · **4** Úrokové riziko · **5** Tržní riziko | LP (slidy Rizika v bankovnictví) | rizika |
+| 4 | 14. 10. | **6** Forward rate agreement | PD | deriváty |
+| 5 | 21. 10. | **7** Swapy | PD | deriváty |
+| 6 | 28. 10. | *státní svátek, výuka odpadá* | | |
+| 7 | 4. 11. | *inovační týden, výuka odpadá* | | |
+| 8 | 11. 11. | **8** Financial futures | PD | deriváty |
+| 9 | 18. 11. | **9** Finanční opce (vč. cap, floor, collar) | PD | deriváty |
+| 10 | 25. 11. | **10** ESG rizika · **11** Likvidita | LP / PD | rizika |
+| 11 | 2. 12. | **12** Kreditní riziko · **13** Kreditní deriváty | LP / PD | rizika + deriváty |
+| 12 | 9. 12. | **14** Kapitálové riziko | PD | rizika |
+| 13 | 16. 12. | rezerva (případně shrnutí) | | |
+
+Kdo přednáší které téma, je **domněnka** podle autorů slidů (u témat bez slidů nevím).
+
+## Témata z osnovy a klíčové pojmy
+
+| # | Zkratka | Osnova (charakteristika kurzu) | Klíčové pojmy |
 |---|---|---|---|
-| 1 | 23. 9. | **1** Bankovní bilance | základ |
-| 2 | 30. 9. | **2** Úrokové, tržní a měnové riziko (vč. ESG faktorů) | rizika |
-| 3 | 7. 10. | **3** Podstata derivátů | deriváty |
-| 4 | 14. 10. | **4** Forwardy, CFD, financial futures, swapy | deriváty |
-| 5 | 21. 10. | **5** Opce, cap, floor, collar | deriváty |
-| 6 | 28. 10. | *státní svátek, výuka odpadá* | |
-| 7 | 4. 11. | *inovační týden, výuka odpadá* | |
-| 8 | 11. 11. | **6** Likviditní riziko | rizika |
-| 9 | 18. 11. | **7** Úvěrové riziko, environmentální rizika, zelené úvěry | rizika |
-| 10 | 25. 11. | **8** Kreditní deriváty | deriváty |
-| 11 | 2. 12. | **9** Kapitálové riziko | rizika |
-| 12 | 9. 12. | **10** Operační riziko, kontinuita a obnova činnosti (vč. ESG) | rizika |
-| 13 | 16. 12. | **11** Ziskovost banky · **12** Účetní zobrazení derivátů | výsledky |
+| 1 | Bilance | Struktura a obsah položek rozvahy, podrozvahy a VZZ banky; metody oceňování aktiv a pasiv; dopad regulačních opatření na strukturu a výši položek bilance; ukazatele z bilance a VZZ | rozvaha, podrozvaha; naběhlá hodnota × reálná hodnota (FVTOCI, FVTPL, úrovně 1–3); SPPI a obchodní model; efektivní úroková míra; PMR; Stage 1/2/3 a opravné položky, míra krytí; rezervy × opravné položky × rezervní fond; podřízený dluh; hypoteční zástavní listy; LTD; vlastní kapitál; ROE/ROA/NIM *(ukazatele návrh)* |
+| 2 | Deriváty | Příčiny vzniku a rozšíření; vymezení; přehled druhů; obecná podstata a využití; základní princip ohodnocování; vykazování; historie; současný vývoj, role derivátů v krizi | tři pohledy (ekonomický, právní, účetní IFRS 9); odvozenost, termínový charakter, pákový efekt; nominální × tržní hodnota; open interest × obrat; burzovní × OTC; clearing, CCP, marže; reforma OTC po 2009 (trade repositories); hedging, spekulace, arbitráž; účetnictví derivátů a hedge accounting *(návrh)* |
+| 3 | Charakteristika rizik | Charakteristika bankovních rizik, příčiny a projevy; vzájemné vazby mezi riziky; důvody a způsoby regulace | riziko, hrozba, zranitelnost; frekvence × dopad; Risk Appetite; přístupy (avoid, transfer, adapt, accept); taxonomie rizik; solventnost × likvidita; operační riziko (Basel, DORA *návrh*); regulace (Pilíře *návrh*) |
+| 4 | Úrokové riziko | Podstata metody GAP, durační metody, simulace; interpretace; výhody a nevýhody | IRRBB (gap, bazické, opční, credit spread); GAP, ΔNII; durace, durační gap, EVE; simulace; EBA šoky a outlier test |
+| 5 | Tržní riziko | Podstata tržního rizika, faktory; podstata metody VaR, interpretace, výhody a nevýhody | obchodní portfolio; obecné × specifické riziko; riziko tržní likvidity (fire-sale, black-hole); VaR (metody, √t), backtesting; měnová pozice |
+| 6 | FRA | Chování úrokových sazeb a úroková struktura; podstata FRA; odvození plnění; odvození FRA sazby a tržní hodnoty; využití k zajištění | forward, měnový forward (úroková parita); FRA období, FRA sazba, referenční sazba; plnění v T1 a T2; kupující × prodávající; FRA sazba z výnosové křivky; hodnota FRA |
+| 7 | Swapy | Charakteristika a princip; druhy (aktivní a pasivní; úrokové, měnové, akciové, komoditní); kombinace a zvláštní druhy; oceňování; využití; předčasné ukončení; swapy na burzách | IRS, CCS, FX swap, basis swap; pay × receive fixed; komparativní výhoda; ocenění (fix × float noha); ukončení |
+| 8 | Futures | Srovnání forward a futures; princip a průběh; obchodní systémy; oceňování; druhy; zajištění a spekulace | standardizace, clearing, marže, margin call, denní přeceňování; cost of carry; báze; short × long hedge; úrokové futures (100 − sazba) |
+| 9 | Opce | Podstata opcí, srovnání s pevnými kontrakty; burzovní opce; základní pozice; oceňování (meze, put-call parita); faktory, řecké proměnné; druhy podle podkladu; využití; kombinace a strategie; exotické; cap, floor, collar | call/put, long/short; prémie, vnitřní a časová hodnota; put-call parita; delta, gama, vega, théta; straddle, spread; swaptions; cap, floor, collar |
+| 10 | ESG | Charakteristika ESG rizik a faktorů, příčiny rostoucího významu, přístupy bank a autorit; hodnocení; regulace; analýza vlivu na tržní riziko; odraz ESG v investičních produktech | E-S-G; fyzická (akutní, chronická) × přechodová; body zvratu; dopady na PD, LGD, likviditu, provoz; uhlíková daň, ETS2; adaptační kapacita; ECB Guide, EBA/GL/2025/01; greenwashing |
+| 11 | Likvidita | Podstata a význam; druhy likvidity; metody měření a řízení; zdroje; regulace | likvidita financování × tržní; odtoky (deterministické × stochastické); liquidity gap; zdroje (rezervy, trh, centrální banka); LCR, NSFR, ILAAP *(doplněk)* |
+| 12 | Kreditní riziko | Podstata, složky, přístupy k měření; scoring; modely měření; regulace | default × migrace; koncentrace; riziko země; riziko protistrany; PD, LGD, EAD, EL; scoring × rating; IRB × standardizovaný přístup *(návrh)*; zelené úvěry *(návrh)* |
+| 13 | Kreditní deriváty | Podstata jednotlivých druhů; využití při řízení úvěrového rizika | CDS (spread ≈ PD · (1 − R)), kreditní událost; TRS; CLN; CDO/tranše; riziko protistrany *(návrh)* |
+| 14 | Kapitálové riziko | Podstata (riziko nesolventnosti); vztah k ostatním rizikům; kapitálová přiměřenost: vymezení kapitálu, požadavky k jednotlivým rizikům; aktuální problémy, Basel III | CET1, AT1, Tier 2; RWA; 4,5 / 6 / 8 %; rezervy; páka 3 %; Pilíře, ICAAP, SREP; CRR3, output floor 50 % → 72,5 % (2025–2030); MREL *(návrh)* |
 
-## Témata ze sylabu a klíčové pojmy
+## Co InSIS má a osnova ne
 
-| # | Zkratka | Text ze sylabu | Klíčové pojmy |
-|---|---|---|---|
-| 1 | Bilance | Bankovní bilance | *(návrh)* struktura aktiv (hotovost a pohledávky za ČNB, mezibankovní trh, úvěry klientům, cenné papíry, repo) a pasiv (vklady klientů, mezibankovní zdroje, emitované dluhopisy, vlastní kapitál), podrozvahové položky, bankovní × obchodní kniha, transformace splatnosti, úrokově citlivá aktiva a pasiva, vztah bilance a výkazu zisku a ztráty |
-| 2 | Úrokové, tržní, měnové | Úrokové, tržní a měnové riziko, jejich měření, řízení a regulace, včetně zohlednění dopadu ESG rizikových faktorů | *(návrh)* repricing (GAP) analýza, kumulativní gap, dopad změny sazeb na čistý úrokový výnos, durace (Macaulay, modifikovaná) a durační gap, konvexita, ekonomická hodnota kapitálu (EVE) × NII, IRRBB a standardní šokové scénáře (EBA), Value at Risk (historická simulace, parametrická, Monte Carlo), backtesting, stresové testy, otevřená devizová pozice (dlouhá × krátká, celková), FRTB; ESG: klimatické scénáře (NGFS), přecenění aktiv při přechodu na nízkouhlíkovou ekonomiku |
-| 3 | Podstata derivátů | Podstata derivátů | *(návrh)* podkladové aktivum, pevné (forward, futures, swap) × podmíněné (opce) deriváty, OTC × burzovní, zajištění (hedging) × spekulace × arbitráž, pákový efekt, clearing a CCP, marže, EMIR (povinný clearing, reporting), riziko protistrany, nominální hodnota × tržní hodnota |
-| 4 | Forwardy, futures, swapy | Forvardové kontrakty, CFD, financial futures, swapy | *(návrh)* měnový forward a krytá úroková parita, forwardové body, FRA (fixing, vyrovnání diskontované na začátek), CFD, úrokové, měnové a akciové futures, denní přeceňování (marking to market), počáteční a udržovací marže, báze, úrokový swap (IRS, pay fixed × receive fixed), měnový swap (CCS), FX swap, ocenění swapu jako portfolia dluhopisů nebo FRA, komparativní výhoda |
-| 5 | Opce, cap, floor | Opce, cap, floor, collar | *(návrh)* call × put, dlouhá × krátká pozice, evropská × americká, prémie, vnitřní a časová hodnota, ITM/ATM/OTM, profitové diagramy, put-call parita, faktory ceny opce, Black–Scholes, řecká písmena (delta, gama, vega, théta), opční strategie (straddle, strangle, spread), cap (strop sazby, capletty), floor, collar (zero-cost), swapce |
-| 6 | Likviditní riziko | Likviditní riziko, jeho měření, řízení a regulace | *(návrh)* likvidita financování × tržní likvidita, run na banku, likviditní gap (splatnostní profil), likvidní rezervy a buffer, ukazatele likvidity, LCR (HQLA / čisté odtoky 30 dní ≥ 100 %), NSFR (dostupné / požadované stabilní financování ≥ 100 %), stresové testy likvidity, contingency funding plan, ILAAP, věřitel poslední instance (ČNB, ECB) |
-| 7 | Úvěrové riziko | Úvěrové riziko, jeho měření, řízení a regulace. Zohlednění fyzických a tranzitivních environmentálních rizik při vyhodnocování a monitoringu úvěrů, zelené úvěry | *(návrh)* PD, LGD, EAD, očekávaná ztráta EL = PD · LGD · EAD, neočekávaná ztráta, scoring × rating, zajištění úvěru, koncentrace, IFRS 9 (stage 1/2/3, 12M × lifetime ECL), opravné položky, standardizovaný × IRB přístup, makroobezřetnostní limity (LTV, DSTI) — **ESG:** fyzická rizika (povodně, sucho), transformační rizika (regulace, uhlíková cena, stranded assets), EBA guidelines o poskytování úvěrů, zelené úvěry a Green Loan Principles, taxonomie EU, green asset ratio |
-| 8 | Kreditní deriváty | Kreditní deriváty | *(návrh)* credit default swap (CDS), kupující × prodávající ochrany, CDS spread, kreditní událost, fyzické × peněžní vypořádání, total return swap, credit-linked note, sekuritizace a CDO (tranše), role CDS v krizi 2008, využití k zajištění a přenosu úvěrového rizika |
-| 9 | Kapitálové riziko | Kapitálové riziko, jeho měření, řízení a regulace | *(návrh)* funkce kapitálu, Basel I → II → III (→ „Basel IV“, CRR3 od 2025), rizikově vážená aktiva (RWA), kapitál Tier 1 (CET1, AT1) a Tier 2, minimální požadavky (4,5 % / 6 % / 8 %), kapitálové rezervy (bezpečnostní, proticyklická, systémová, O-SII), Pilíř 1 / 2 / 3, ICAAP a SREP, pákový poměr, output floor, MREL, ekonomický kapitál, RAROC |
-| 10 | Operační riziko | Operační riziko banky a zajištění fungování a případné obnovy činnosti banky při výskytu nepříznivé události včetně ESG | *(návrh)* definice (selhání procesů, lidí, systémů, vnější události), kategorie ztrátových událostí (Basel), kapitál na operační riziko (standardizovaný přístup CRR3, business indicator), databáze ztrát, KRI, kybernetické riziko, DORA, business continuity plan (BCP), disaster recovery, ozdravný plán (recovery) × plán řešení krize (resolution), právní a reputační riziko, ESG: fyzická rizika pro provoz, greenwashing jako právní riziko |
-| 11 | Ziskovost | Měření a řízení ziskovosti banky | *(návrh)* struktura výnosů (čistý úrokový, poplatkový, z obchodování), NIM, ROA, ROE a jejich rozklad (DuPont: ROE = ROA · multiplikátor kapitálu), cost-to-income ratio, náklady rizika, RAROC, EVA, ALM a řízení úrokové marže, transferové ceny (FTP) |
-| 12 | Účetnictví derivátů | Účetní zobrazení derivátů | *(návrh)* IFRS 9 a zákon o účetnictví / vyhláška ČNB, derivát v reálné hodnotě do výsledku (FVTPL), zajišťovací účetnictví (fair value hedge × cash flow hedge × zajištění čisté investice), efektivnost zajištění, podrozvahová evidence nominálních hodnot, vložené deriváty |
+Sylabus (InSIS) uvádí navíc **operační riziko** (kontinuita a obnova činnosti), **ziskovost banky** a **účetní zobrazení derivátů**. V osnově kurzu jako samostatná témata nejsou. Pokrývají je: operační riziko → téma 3 (Palán: provozní odolnost, plány obnovy), ziskovost → téma 1 (VZZ a ukazatele), účetnictví derivátů → témata 1 a 2. Poznámky je zahrnují jako podsekce.
 
 ## Výsledky učení → kde se testují
 
-- podstata bankovních rizik a jejich regulace vč. ESG, metody měření a řízení → 2, 6, 7, 9, 10
-- podstata derivátů, obchodování a oceňování → 3, 4, 5, 8
-- deriváty k zajištění rizik i jako investice, analýza výnosnosti a rizikovosti → 4, 5, 8 (aplikace na rizika z 2 a 7), 12
+- podstata bankovních rizik, jejich měření a řízení → 3, 4, 5, 10, 11, 12, 14
+- samostatný návrh zajištění derivátem → 6, 7, 8, 9, 13
+- rizika spojená s deriváty → 2, 3 (riziko protistrany), 13
+- regulace rizik a její kritické zhodnocení → 1 (PMR), 3, 11, 14
+- aktuální vývoj → 2 (OTC reforma), 10 (ESG), 14 (CRR3)
 
 ## Literatura
 
 - **Základní:** DVOŘÁK, P. *Bankovnictví pro bankéře a klienty.* Linde, 2005 → terminologie k rizikům a bilanci
-- **Základní:** DVOŘÁK, P. *Deriváty.* Oeconomica, 2008 → terminologie a značení u derivátů (témata 3–5, 8, 12)
+- **Základní:** DVOŘÁK, P. *Deriváty.* Oeconomica, 2008 (skripta VŠE) → terminologie a značení u derivátů (témata 2, 6–9, 13), literatura Dvořákových slidů
 - **Základní:** MACDONALD, S. S., KOCH, T. W. *Bank Management.* Cengage, 2010 → GAP a durační analýza, ziskovost (ROE rozklad)
 - Doporučená: KAŠPAROVSKÁ, V. *Řízení obchodních bank: vybrané kapitoly.* Beck, 2006
 - Doporučená: POLOUČEK, S. *Bankovnictví.* Beck, 2006
 - Doporučená: JÍLEK, J. *Finanční a komoditní deriváty v praxi.* Grada, 2010
 - Doporučená: BESSIS, J. *Risk Management in Banking.* Wiley, 2010 → VaR, úvěrové riziko, RAROC
+- Slidy: Palán uvádí ECB *Guide on climate-related and environmental risks* (2020), NGFS *Guide for Supervisors* a Choudhry *The Principles of Banking* (Wiley, 2023); Dvořák: Základní účetní pravidla (příloha k VZ KB), statistiky BIS, studijní materiály burz (Euronext, CME, Eurex)
 - Literatura je z let 2005–2010 → regulaci (Basel III/CRR3, LCR/NSFR, IFRS 9, DORA, ESG) doplňovat podle přednášek a aktuálních předpisů, s rokem platnosti.
 
 ## Na co se zaměřit v podkladech
 
 - **Garant je autorem dvou ze tří základních učebnic** → definice a značení držet podle Dvořáka
-- **Početní příklady (předpoklad):** GAP analýza a dopad změny sazeb na zisk, durace a durační gap, VaR, otevřená devizová pozice, forwardový kurz, FRA vyrovnání, swap, výplatní profily opcí a collaru, EL = PD · LGD · EAD, LCR/NSFR, kapitálový poměr, ROE/ROA/NIM
-- **Rozhodovací otázky:** jaký derivát použít k zajištění konkrétního rizika banky (a z jaké pozice), jaká je výsledná pozice
-- **ESG** prochází tématy 2, 7 a 10 — sylabus ho výslovně zdůrazňuje, počítat s otázkami na fyzická × transformační rizika a zelené úvěry
-- **Semestrální práce** je podmínkou k testu a 30 % známky → zjistit zadání a termín co nejdřív
+- **Početní příklady (předpoklad):** efektivní úroková míra a naběhlá hodnota, míra krytí, PMR, GAP a durační gap, VaR, otevřená devizová pozice, forwardový kurz, **plnění z FRA v T1 a T2**, **FRA sazba z výnosové křivky**, hodnota FRA, swap, výplatní profily opcí a collaru, EL = PD · LGD · EAD, LCR/NSFR, kapitálový poměr, ROE/ROA/NIM
+- **Rozhodovací otázky** (výstup učení 2): jaký derivát použít k zajištění konkrétního rizika banky a z jaké pozice (kupující FRA × prodávající FRA; prodej futures při zajištění proti růstu sazeb; pay fixed)
+- **Slovní otázky z přednášek:** Dvořák klade na slidech otázky typu „proč mají banky tak nízký podíl kapitálu“, „proč se OTC deriváty reformovaly“, „jaký je rozdíl účetního a právního vymezení derivátu“
+- **ESG** prochází tématy 3, 10, 12: fyzická × přechodová rizika, dopady na PD, LGD, likviditu a provoz
+- **Případová studie** je podmínkou k testu → zjistit zadání a termín co nejdřív
