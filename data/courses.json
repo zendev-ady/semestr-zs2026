@@ -11,34 +11,38 @@
     "schedule": [
       "Př St 16:15–19:30 NB A"
     ],
-    "grading": "Semestrální práce (30 %, podmínka k testu) · Závěrečný test (70 %)",
+    "grading": "Případová studie (10 b., podmínka k testu) · Závěrečná písemná zkouška (90 b.)",
     "topics": [
       "Bankovní bilance",
-      "Úrokové, tržní a měnové riziko",
-      "Podstata derivátů",
-      "Forwardy, futures a swapy",
-      "Opce, cap, floor, collar",
-      "Likviditní riziko",
-      "Úvěrové riziko a zelené úvěry",
+      "Charakteristika a druhy derivátů",
+      "Charakteristika bankovních rizik",
+      "Úrokové riziko",
+      "Tržní riziko",
+      "Forward rate agreement (FRA)",
+      "Swapy",
+      "Financial futures",
+      "Finanční opce",
+      "ESG rizika",
+      "Likvidita",
+      "Kreditní riziko",
       "Kreditní deriváty",
-      "Kapitálové riziko",
-      "Operační riziko",
-      "Ziskovost banky",
-      "Účetní zobrazení derivátů"
+      "Kapitálové riziko"
     ],
     "topicWeeks": [
       1,
       2,
+      3,
+      3,
       3,
       4,
       5,
       8,
       9,
       10,
+      10,
       11,
-      12,
-      13,
-      13
+      11,
+      12
     ]
   },
   {

@@ -41,24 +41,26 @@
                     <ul class="nav flex-column">
                         <li><a class="nav-link py-1" href="#harmonogram">Harmonogram</a></li>
                         <li><a class="nav-link py-1" href="#topic-1">1. Bankovní bilance</a></li>
-                        <li><a class="nav-link py-1" href="#topic-2">2. Úrokové, tržní a měnové riziko</a></li>
-                        <li><a class="nav-link py-1" href="#topic-3">3. Podstata derivátů</a></li>
-                        <li><a class="nav-link py-1" href="#topic-4">4. Forwardy, futures, swapy</a></li>
-                        <li><a class="nav-link py-1" href="#topic-5">5. Opce, cap, floor, collar</a></li>
-                        <li><a class="nav-link py-1" href="#topic-6">6. Likviditní riziko</a></li>
-                        <li><a class="nav-link py-1" href="#topic-7">7. Úvěrové riziko</a></li>
-                        <li><a class="nav-link py-1" href="#topic-8">8. Kreditní deriváty</a></li>
-                        <li><a class="nav-link py-1" href="#topic-9">9. Kapitálové riziko</a></li>
-                        <li><a class="nav-link py-1" href="#topic-10">10. Operační riziko</a></li>
-                        <li><a class="nav-link py-1" href="#topic-11">11. Ziskovost banky</a></li>
-                        <li><a class="nav-link py-1" href="#topic-12">12. Účetnictví derivátů</a></li>
+                        <li><a class="nav-link py-1" href="#topic-2">2. Deriváty: charakteristika a druhy</a></li>
+                        <li><a class="nav-link py-1" href="#topic-3">3. Charakteristika bankovních rizik</a></li>
+                        <li><a class="nav-link py-1" href="#topic-4">4. Úrokové riziko</a></li>
+                        <li><a class="nav-link py-1" href="#topic-5">5. Tržní riziko</a></li>
+                        <li><a class="nav-link py-1" href="#topic-6">6. Forward rate agreement (FRA)</a></li>
+                        <li><a class="nav-link py-1" href="#topic-7">7. Swapy</a></li>
+                        <li><a class="nav-link py-1" href="#topic-8">8. Financial futures</a></li>
+                        <li><a class="nav-link py-1" href="#topic-9">9. Finanční opce</a></li>
+                        <li><a class="nav-link py-1" href="#topic-10">10. ESG rizika</a></li>
+                        <li><a class="nav-link py-1" href="#topic-11">11. Likvidita</a></li>
+                        <li><a class="nav-link py-1" href="#topic-12">12. Kreditní riziko</a></li>
+                        <li><a class="nav-link py-1" href="#topic-13">13. Kreditní deriváty</a></li>
+                        <li><a class="nav-link py-1" href="#topic-14">14. Kapitálové riziko</a></li>
                     </ul>
                 </nav>
             </div>
 
             <div class="col-lg-9">
                 <h1 class="mb-1">Bankovnictví II</h1>
-                <p class="text-muted mb-4">1BP403 &middot; 6 kreditů &middot; Semestrální práce (30 %, podmínka k testu) &middot; Závěrečný test (70 %)</p>
+                <p class="text-muted mb-4">1BP403 &middot; 6 kreditů &middot; Případová studie (10 b., podmínka k testu) &middot; Závěrečná písemná zkouška (90 b.)</p>
 
                 <section class="topic-section" id="harmonogram">
                     <h3>Harmonogram</h3>
@@ -66,233 +68,1078 @@
                 </section>
 
                 <div class="alert alert-info">
-                    Sylabus je zpracovaný ve <a href="../plan.html?course=1BP403">studijním plánu</a>. Níže jsou <strong>stručné poznámky ke všem 12 tématům</strong>. Quiz k tématům zatím neexistuje.
+                    Sylabus je zpracovaný ve <a href="../plan.html?course=1BP403">studijním plánu</a>. Poznámky jsou členěny podle <strong>oficiální osnovy kurzu (14 témat, doc. Dvořák)</strong>. U každého tématu je v řádku pod nadpisem uvedeno, z čeho vychází.
                 </div>
-                <div class="warn-box mb-4"><strong>⚠️ Zdroj poznámek:</strong> psáno <strong>bez prezentací z přednášek</strong>, z obecné bankovní a derivátové teorie (v duchu základní literatury: Dvořák, MacDonald &amp; Koch, Bessis) a znalosti regulace (CRR/CRD, Basel III, EBA, IFRS 9, DORA). Čísla regulace (stav 2025–26) a konkrétní zdroje jsem <strong>neověřoval v primárních textech</strong>; před testem je zkontroluj. Po přednáškách uprav podle Dvořáka a Palána, jejich značení má přednost. Termíny týdnů jsou návrh ze studijního plánu.</div>
+                <div class="warn-box mb-4"><strong>⚠️ Zdroj poznámek:</strong> <strong>z prezentací vycházejí témata 1, 2, 6</strong> (Dvořák: <em>Bilance banky</em>, <em>Charakteristika a druhy derivátů</em>, <em>Forwardové kontrakty</em>) a <strong>3, 4, 5, 10, 11, 12</strong> (Palán: <em>Rizika v bankovnictví</em>). <strong>Témata 7, 8, 9, 13, 14 jsou bez slidů</strong>: psáno podle osnovy kurzu a obecné teorie (Dvořák: <em>Deriváty</em>, MacDonald &amp; Koch, CRR/Basel III). Části označené <em>doplněk</em> ve slidech nejsou. Údaje označené ✔ jsem ověřil v primárním zdroji (PMR 4 % od 2. 1. 2025 – ČNB; EBA/RTS/2022/10; EBA/GL/2025/01; CRR3), ostatní regulatorní čísla neověřoval. Číselné příklady jsou vlastní modelové. <strong>Rozdělení témat do týdnů je návrh</strong>; po přednáškách uprav podle Dvořáka a Palána, jejich značení má přednost.</div>
 
                 <section class="topic-section" id="topic-1">
                     <h3>1. Bankovní bilance</h3>
-                    <p class="text-muted small">Návrh 23. 9. · zdroj: obecná literatura, bez prezentace</p>
-                    <div class="def-box"><strong>Bilance banky:</strong> <em>aktiva</em> (kam banka peníze umístila) = <em>pasiva</em> (odkud je získala) = cizí zdroje + vlastní kapitál. Banka má oproti firmě malý vlastní kapitál (typicky 5–10 % bilanční sumy), tedy vysokou páku.</div>
+                    <p class="text-muted small">Přednáška návrh 23. 9. · doc. Dvořák · zdroj: slidy <em>Bilance banky</em> (Dvořák 2026, <code>Bilance_26 (1).pdf</code>, čísla slidů v závorkách); co ve slidech není, je označeno <em>doplněk</em></p>
+
+                    <div class="insight-box"><strong>K čemu to je:</strong> Dvořák chce, abyste uměli vysvětlit položky bilance a jejich ocenění, věděli jejich řádový význam, posoudili dopad obchodů a regulace do bilance, objasnili krytí kreditního rizika a pochopili význam kapitálu (sl. 2). V testu čekejte otázky „co je v položce“, „jak se oceňuje“, „čím se kryje ztráta“.</div>
+
+                    <h4>1.1 Podstata bilance (sl. 4)</h4>
+                    <div class="def-box"><strong>Rozvaha:</strong> aktiva (majetek banky) = pasiva (zdroje financování = cizí zdroje + vlastní zdroje). <strong>Podrozvaha:</strong> budoucí potenciální nebo pevné pohledávky (aktiva) a závazky (pasiva), které se v rozvaze nevykazují, ale nesou riziko.</div>
+                    <p>U bank tvoří <strong>cizí zdroje zhruba 92 %</strong> a vlastní zdroje <strong>8 %</strong> (bankovní sektor ČR, 31. 12. 2022, ČNB; sl. 26). Slide k tomu klade tři otázky, které jsou typickým „proč“ v testu:</p>
+                    <ol>
+                        <li><strong>Důvody nízkého podílu vlastních zdrojů</strong> a <strong>proč právě u bank</strong> <em>(doplněk, vlastní úvaha podle bankovní teorie)</em>: banka je zprostředkovatel, jejím „produktem“ jsou závazky (vklady) a ne vlastní kapitál. Vklady jsou levnější než akciový kapitál, páka zvyšuje ROE a stabilitu zdrojů podporuje pojištění vkladů a dohled.</li>
+                        <li><strong>Riziko:</strong> už malý pokles hodnoty aktiv (několik procent) „sežere“ kapitál a banka se stane insolventní. Proto existuje kapitálová regulace (téma 14).</li>
+                    </ol>
+
+                    <h4>1.2 Oceňování finančních aktiv (sl. 8–13)</h4>
                     <table class="table table-bordered summary-table">
-                        <thead><tr><th>Aktiva</th><th>Pasiva</th></tr></thead>
+                        <thead><tr><th>Ocenění</th><th>Podmínky (IFRS 9, jak je uvádí slide 8)</th></tr></thead>
                         <tbody>
-                            <tr><td>hotovost a účty u centrální banky, mezibankovní pohledávky, úvěry klientům, cenné papíry (obchodní a bankovní kniha), ostatní</td><td>vklady klientů (hlavní zdroj), mezibankovní zdroje, repo, emitované dluhopisy, podřízený dluh, vlastní kapitál</td></tr>
+                            <tr><td><strong>Naběhlá hodnota</strong> (amortized cost)</td><td>a) obchodní model: <em>držet</em> aktiva a inkasovat smluvní peněžní toky, <strong>a zároveň</strong> b) smluvní toky jsou <em>výlučně splátky jistiny a úroků</em> (SPPI)</td></tr>
+                            <tr><td><strong>Reálná hodnota do ostatního úplného výsledku</strong> (FVTOCI)</td><td>a) obchodní model: inkaso toků <em>i prodej</em>, <strong>a</strong> b) SPPI</td></tr>
+                            <tr><td><strong>Reálná hodnota do zisku nebo ztráty</strong> (FVTPL)</td><td>vše ostatní. U kapitálových nástrojů lze při prvotním zaúčtování neodvolatelně zvolit vykazování změn do OCI. <em>Fair value option:</em> neodvolatelné zařazení do FVTPL, pokud tím zmizí účetní nesoulad</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="def-box"><strong>Reálná hodnota</strong> (sl. 9) je cena, která by byla obdržena při prodeji aktiva nebo zaplacena při převodu závazku v řádné transakci mezi účastníky trhu k datu ocenění. Hierarchie podle IFRS 7: <strong>úroveň 1</strong> = kótované ceny identických aktiv na aktivním trhu, <strong>úroveň 2</strong> = pozorovatelné vstupy (přímo ceny nebo odvozené), <strong>úroveň 3</strong> = nepozorovatelné vstupy. V bankách převládá úroveň 1 a 2 a aktiva v reálné hodnotě tvoří menší část bilance (sl. 10).</div>
+                    <div class="def-box"><strong>Naběhlá hodnota</strong> (sl. 11–12): hrubá naběhlá hodnota = pořizovací cena + naběhlé úroky − inkasované úroky, splátky jistiny a poplatky. <strong>Čistá naběhlá hodnota = hrubá − opravné položky.</strong> Naběhlé úroky se počítají z <strong>efektivní úrokové míry</strong>, tj. sazby, při které se současná hodnota očekávaných budoucích peněžních toků rovná účetní hodnotě pohledávky. Při jejím výpočtu se zohledňují smluvní podmínky včetně předčasného splacení a poplatků, ale <strong>ne budoucí ztráty z úvěrového rizika</strong>.</div>
+                    <div class="ex-box"><strong>Příklad (vlastní modelový, ne ze slidů):</strong> banka koupí dvouletý dluhopis s nominálem 100 a ročním kupónem 4 % za 95 a drží jej do splatnosti (naběhlá hodnota).<br>
+                        1) Efektivní úroková míra: $95 = \dfrac{4}{1+r} + \dfrac{104}{(1+r)^2}$ → $r \approx 6{,}76\,\%$.<br>
+                        2) Úrokový výnos za 1. rok = $95 \cdot 0{,}0676 \approx 6{,}42$ (ne kupón 4).<br>
+                        3) Naběhlá hodnota po roce = $95 + 6{,}42 - 4 \approx 97{,}42$. Dluhopis se tedy „dotahuje“ k nominálu 100.</div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> rozdíl mezi oceněním reálnou a naběhlou hodnotou není u bank významný (u KB sl. 13). Rozhodující pro zařazení jsou <strong>obchodní model a SPPI test</strong>, ne to, jestli je aktivum „obchodovatelné“.</div>
+
+                    <h4>1.3 Struktura aktiv (sl. 5–24)</h4>
+                    <ul>
+                        <li><strong>Hotovost a pohledávky za centrální bankou</strong> (sl. 14): ukazatel „hotovost u centrálních bank“ zachycuje jen vklady u ČNB <em>splatné do 24 hodin</em>. Pohledávky za ČNB se splatností delší než den jsou v položce <em>Úvěry a jiné pohledávky</em>.</li>
+                        <li><strong>Úvěry</strong> jsou dominantní položkou aktiv, ale <strong>nejde jen o úvěry klientům</strong> (sl. 16). V ČR zahrnují i úvěry a vklady u centrální banky, což je z hlediska sektorů největší podíl, následují domácnosti a nefinanční podniky (sl. 17).</li>
+                        <li><strong>Účasti</strong> (sl. 22): podle §17a zákona o bankách smí banka nabýt podíl v jiné osobě (nebo ji založit), pokud se nestane společníkem s neomezeným ručením, nejde o osobu s kvalifikovanou účastí v bance, jsou zajištěny informace pro dohled a průhlednost konsolidačního celku, nebo je investice v souladu se strategií a banka řídí související rizika. Nabytí kvalifikované účasti musí oznámit ČNB.</li>
+                        <li><strong>Měnová struktura</strong> (sl. 23–24): vysoký podíl cizoměnových úvěrů může být zdrojem měnového rizika pro klienty i banku.</li>
+                    </ul>
+                    <h4>Povinné minimální rezervy (PMR, sl. 15)</h4>
+                    <div class="thm-box"><strong>Požadovaná průměrná výše PMR</strong> = stav primárních závazků vůči nebankovním subjektům se splatností do 2 let (k ultimu měsíce) × sazba PMR (<strong>4 %</strong>). <strong>Skutečná průměrná výše</strong> = součet konečných denních stavů účtu platebního styku a účtu pro výběr a skládání hotovosti během udržovacího období ÷ počet kalendářních dní. PMR je splněna, když skutečná ≥ požadovaná.</div>
+                    <ul>
+                        <li>Do základu patří vklady a přijaté úvěry, emitované neobchodovatelné CP a ostatní emitované dluhové CP se splatností do 2 let od osob, které nejsou banka ani družstevní záložna.</li>
+                        <li>Při nesplnění může ČNB účtovat <strong>úrok ve výši dvojnásobku lombardní sazby</strong> z chybějící částky.</li>
+                        <li>PMR jsou likvidní prostředky u centrální banky, ale <strong>nejde o aktivně používaný nástroj</strong> ke korekci likvidity bank (sl. 15).</li>
+                        <li>Sazba 4 % platí od 2. 1. 2025 (do té doby 2 %); ověřeno v <a href="https://www.cnb.cz/cs/cnb-news/tiskove-zpravy/CNB-zvysuje-povinne-minimalni-rezervy/" target="_blank" rel="noopener">tiskové zprávě ČNB</a>. Právní základ: vyhláška č. 253/2013 Sb. (sl. 15).</li>
+                    </ul>
+
+                    <h4>1.4 Opravné položky a kreditní riziko v aktivech (sl. 18–19)</h4>
+                    <div class="def-box"><strong>Tři rizikové úrovně (stages) podle IFRS 9:</strong><br>
+                        <strong>Stage 1</strong> – bez významného zvýšení úvěrového rizika od vzniku (nebo nízké riziko) → <em>12měsíční očekávaná ztráta</em>.<br>
+                        <strong>Stage 2</strong> – významné zvýšení rizika, ale ještě není objektivní evidence znehodnocení → <em>očekávaná ztráta za celou dobu životnosti</em>.<br>
+                        <strong>Stage 3</strong> – objektivní evidence znehodnocení (selhání) → <em>ztráta za celou dobu životnosti</em>. Stage 3 lze ztotožnit s nevýkonnými úvěry (sl. 19).</div>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Klientské úvěry v ČR, 12/2021 (ČNB, sl. 19)</th><th>Expozice (mld. Kč)</th><th>Opravné položky (mld. Kč)</th><th>Míra krytí</th></tr></thead>
+                        <tbody>
+                            <tr><td>Stage 1</td><td>3 254</td><td>8,54</td><td>0,26 %</td></tr>
+                            <tr><td>Stage 2</td><td>399</td><td>16,38</td><td>4,10 %</td></tr>
+                            <tr><td>Stage 3</td><td>85</td><td>45,74</td><td>53,79 %</td></tr>
+                            <tr><td><strong>Celkem</strong></td><td><strong>3 738</strong></td><td><strong>70,66</strong></td><td><strong>1,89 %</strong></td></tr>
+                        </tbody>
+                    </table>
+                    <p><strong>Míra krytí</strong> = opravné položky ÷ expozice. Roste prudce se stage: stage 3 má krytí řádově 50 %, stage 1 pod 1 %. Opravné položky se tvoří na vrub nákladů a snižují hodnotu aktiva (čistá naběhlá hodnota).</p>
+
+                    <h4>1.5 Struktura pasiv (sl. 26–38)</h4>
+                    <ul>
+                        <li><strong>Vklady klientů</strong> jsou dominantní položkou (sl. 28). Podle sektorů největší podíl domácnosti, pak finanční instituce a nefinanční podniky. Vklady v úvěrových institucích tvoří zhruba 2/3 prostředků klientů umístěných na finančním trhu (sl. 33).</li>
+                        <li><strong>Členění vkladů</strong> (sl. 34): běžné účty a jiné vklady na viděnou (dispozice nijak neomezena), úsporné vklady (spořicí účty, stavební spoření), termínované vklady (omezení dobou splatnosti nebo výpovědní lhůtou), vkladové listy a certifikáty.</li>
+                        <li><strong>Vklady a úvěry od úvěrových institucí</strong> (sl. 32): všechny nesekuritizované závazky vůči jiným bankám, tuzemským i zahraničním. <strong>Závazky vůči ČNB</strong> jsou zanedbatelné: koncem 2018 jen 0,3 % pasiv bankovního sektoru (sl. 31).</li>
+                    </ul>
+                    <div class="thm-box"><strong>Loan-to-Deposit ratio</strong> $LTD = \dfrac{\text{úvěry celkem}}{\text{vklady celkem}}$ (sl. 35). Příliš vysoký → banka nemusí mít dostatečnou likviditu. Příliš nízký → banka nevydělává, kolik by mohla.</div>
+                    <h4>Emitované cenné papíry a podřízený dluh (sl. 36–37)</h4>
+                    <ul>
+                        <li><strong>Emitované neobchodovatelné CP:</strong> depozitní směnky a ostatní neobchodovatelné dluhové CP.</li>
+                        <li><strong>Hypoteční zástavní listy:</strong> dluhopisy bank se speciální licencí. Zdroje z nich lze použít jen na hypoteční úvěry, přičemž úvěr nesmí převýšit <strong>70 % ceny zastavených nemovitostí</strong>.</li>
+                        <li><strong>Podřízené dluhopisy / podřízené závazky:</strong> při likvidaci, konkurzu nebo nuceném vyrovnání se splácejí <em>až po uspokojení všech ostatních věřitelů</em> (kromě stejně podřízených). Vyšší riziko věřitel dostane zaplaceno <strong>vyšším úročením</strong>.</li>
+                        <li><strong>Ostatní emitované dluhové CP:</strong> kuponové a bezkuponové dluhopisy mimo předchozí skupiny.</li>
+                    </ul>
+
+                    <h4>1.6 Zdroje krytí ztrát a vlastní kapitál (sl. 38–40)</h4>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Zdroj</th><th>Podstata</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Opravné položky</strong></td><td>tvoří se na vrub nákladů <em>účelově k jednotlivým pohledávkám</em> (aktivům), u nichž hrozí nesplacení; snižují aktiva</td></tr>
+                            <tr><td><strong>Rezervy</strong></td><td>položka <em>pasiv</em>: pravděpodobné plnění s nejistým časem a výší. Vznikají, když (1) existuje právní nebo věcná povinnost z minulých událostí, (2) je pravděpodobný odtok prostředků a (3) lze provést spolehlivý odhad. Tvorba je náklad; banka posuzuje jejich dostatečnost alespoň <strong>jednou za čtvrtletí</strong> (to platí i pro rezervy k podrozvahovým položkám)</td></tr>
+                            <tr><td><strong>Tiché rezervy</strong></td><td>nejsou v rozvaze; plynou z rozdílu mezi oceněním aktiv v rozvaze a jejich skutečnou tržní cenou</td></tr>
+                            <tr><td><strong>Rezervní fond</strong></td><td>tvoří se ze <em>zdaněného zisku</em></td></tr>
+                            <tr><td><strong>Kapitálové fondy</strong></td><td>tvoří se z jiného zdroje než zisku banky</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="def-box"><strong>Vlastní kapitál banky</strong> (sl. 39): základní kapitál (součet nominálních hodnot emitovaných akcií), emisní ážio a vydané kapitálové nástroje, rezervní fondy a ostatní fondy ze zisku, kapitálové fondy, zisk účetního období (kladný rozdíl výnosů a nákladů), převedený zisk z minulých období (ještě nerozdělený), ostatní položky se záporným znaménkem.</div>
+                    <p><strong>Hospodářský výsledek</strong> (sl. 40): výkaz zisku a ztráty (náklady × výnosy) určuje zisk nebo ztrátu běžného období, která se v rozvaze objeví v pasivech: zisk (nerozdělený z předchozích období, z běžného období) a ztráta (neuhrazená z předchozích období, z běžného období) se záporným znaménkem. Vazba VZZ → rozvaha je tedy přes vlastní kapitál.</p>
+                    <p><em>Doplněk (není ve slidech, funkce kapitálu):</em> kapitál pohlcuje ztráty (tlumič), signalizuje věřitelům a vkladatelům důvěryhodnost, je regulatorním minimem pro činnost a omezuje nadměrné riskování vlastníků. Viz téma 14.</p>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> <strong>opravné položky ≠ rezervy.</strong> Opravná položka snižuje <em>aktivum</em> (k úvěru, který už existuje), rezerva je <em>pasivum</em> (závazek nejisté výše, např. z poskytnuté záruky nebo příslibu). <strong>Rezervní fond ≠ rezerva:</strong> rezervní fond vzniká ze zisku a je součástí vlastního kapitálu, rezerva je náklad.</div>
+
+                    <h4>1.7 Podrozvaha (sl. 42–45)</h4>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Podrozvahová aktiva</th><th>Podrozvahová pasiva</th></tr></thead>
+                        <tbody>
+                            <tr><td>poskytnuté přísliby a záruky, poskytnuté zástavy</td><td>přijaté přísliby a záruky, přijaté zástavy</td></tr>
+                            <tr><td>pohledávky ze spotových operací, z pevných termínových operací a z opcí</td><td>závazky ze spotových operací, z pevných termínových operací a z opcí</td></tr>
+                            <tr><td>odepsané pohledávky</td><td>—</td></tr>
+                            <tr><td>hodnoty předané do úschovy, správy a k uložení; předané k obhospodařování</td><td>hodnoty převzaté do úschovy, správy a k uložení; převzaté k obhospodařování</td></tr>
                         </tbody>
                     </table>
                     <ul>
-                        <li><strong>Podrozvaha:</strong> záruky, úvěrové přísliby, deriváty (nominál). Nejsou v bilanci, ale nesou riziko.</li>
-                        <li><strong>Bankovní × obchodní kniha:</strong> obchodní kniha = pozice držené k obchodování (tržní riziko, ocenění reálnou hodnotou); bankovní kniha = zbytek (úvěry, vklady; úrokové riziko IRRBB).</li>
-                        <li><strong>Transformace splatnosti:</strong> banka si půjčuje krátce (vklady) a půjčuje dlouho (úvěry). Vydělává na úrokové marži, ale nese úrokové a likviditní riziko.</li>
+                        <li><strong>Podmíněné aktivum / závazek:</strong> možné aktivum (závazek) z minulých událostí, jehož existence se potvrdí až budoucí nejistou událostí, kterou banka plně nekontroluje. Podmíněným závazkem je i existující závazek, u něhož není pravděpodobný odtok prostředků nebo nelze spolehlivě vyčíslit výši. Příklady: <strong>neodvolatelné úvěrové přísliby, záruky, bankovní akcepty, akreditivy, warranty</strong> (sl. 42, 45).</li>
+                        <li>V podrozvaze se vedou také aktiva ve správě a úschově (a závazek je klientům vrátit).</li>
+                        <li><strong>Deriváty:</strong> podrozvahovými položkami jsou <strong>nominální hodnoty</strong> úrokových a měnových nástrojů včetně forwardů, swapů, opcí a futures (sl. 42, 45). Podrozvahová evidence ukazuje rizika, ne hodnotu. Skutečná kladná/záporná reálná hodnota derivátu je v rozvaze (téma 2).</li>
                     </ul>
-                    <div class="insight-box"><strong>Intuice:</strong> bilance je mapa všech rizik. Úvěry → úvěrové, rozdíl splatností → úrokové a likviditní, cizí měna → měnové, cenné papíry → tržní, tenký kapitál → kapitálové riziko.</div>
-                    <div class="summary-box"><strong>Shrnutí:</strong><ul><li>Aktiva = pasiva; kapitál je malý, páka velká.</li><li>Rozlišuj bilanci, podrozvahu, bankovní a obchodní knihu.</li><li>Základní byznys = transformace splatnosti.</li></ul></div>
+
+                    <h4>1.8 Výkaz zisku a ztráty a ukazatele</h4>
+                    <p><em>Struktura VZZ (ze slidů Palána, sl. 28 jeho prezentace):</em> čisté úrokové výnosy + čisté výnosy z poplatků a provizí + zisk z obchodování + ostatní provozní výnosy a náklady = <strong>provozní zisk</strong>; − správní náklady (zaměstnanci, ostatní) − znehodnocení finančních aktiv ± ostatní náklady a výnosy = <strong>zisk před zdaněním</strong>.</p>
+                    <p><em>Doplněk (ukazatele podle MacDonald &amp; Koch, ve slidech nejsou; osnova je uvádí jako „ukazatele z bilance a VZZ“):</em></p>
+                    <div class="thm-box"><strong>NIM</strong> $= \dfrac{NII}{\text{průměrná úročená aktiva}}$ &nbsp;·&nbsp; <strong>Cost-to-income</strong> $= \dfrac{\text{provozní náklady}}{\text{provozní výnosy}}$ &nbsp;·&nbsp; $ROA = \dfrac{ČZ}{A}$ &nbsp;·&nbsp; <strong>DuPont:</strong> $ROE = \dfrac{ČZ}{K} = ROA\cdot\dfrac{A}{K}$</div>
+                    <div class="ex-box"><strong>Příklad:</strong> ROA = 1 %, aktiva/kapitál = 12 (kapitál ≈ 8,3 % aktiv, jako v ČR) → ROE = 12 %. Páka zvyšuje ROE, ale banka je zranitelnější. RAROC a EVA zohledňují riziko; transferové ceny (FTP) rozdělují marži mezi jednotky.</div>
+
+                    <div class="summary-box"><strong>Shrnutí:</strong>
+                        <ul>
+                            <li>Aktiva = pasiva; cizí zdroje ~92 %, vlastní ~8 %; podrozvaha ukazuje potenciální a pevné nároky a nominály derivátů.</li>
+                            <li>Ocenění aktiv: naběhlá hodnota (držet + SPPI), FVTOCI (držet i prodávat + SPPI), FVTPL (zbytek); reálná hodnota má 3 úrovně.</li>
+                            <li>Naběhlá hodnota čistá = hrubá − opravné položky; úrok z efektivní úrokové míry bez budoucích ztrát.</li>
+                            <li>IFRS 9: Stage 1 = 12M ECL, Stage 2 a 3 = ECL za celou dobu životnosti; míra krytí roste se stage.</li>
+                            <li>Opravné položky (snižují aktivum) ≠ rezervy (pasivum) ≠ rezervní fond (ze zisku).</li>
+                            <li>PMR: 4 % ze závazků do 2 let vůči nebankám, plní se průměrem; sankce 2× lombardní sazba.</li>
+                        </ul>
+                    </div>
+                    <p class="mb-0"><a href="../quiz.html?course=1BP403&topic=1"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
                 </section>
 
                 <section class="topic-section" id="topic-2">
-                    <h3>2. Úrokové, tržní a měnové riziko</h3>
-                    <p class="text-muted small">Návrh 30. 9. · zdroj: obecná literatura a regulace, bez prezentace</p>
-                    <h4>Úrokové riziko (bankovní kniha)</h4>
-                    <div class="def-box"><strong>GAP (repricing gap):</strong> $\text{GAP} = RSA - RSL$ (úrokově citlivá aktiva − pasiva v daném časovém pásmu). Změna čistého úrokového výnosu: $\Delta NII = \text{GAP}\cdot\Delta r$.</div>
-                    <div class="ex-box"><strong>Příklad:</strong> RSA = 400, RSL = 300 do 1 roku → GAP = +100. Sazby +1 p. b. → ΔNII = +1. Sazby −1 p. b. → −1. Kladný gap = banka profituje z růstu sazeb.</div>
-                    <div class="thm-box"><strong>Durační gap (pohled na hodnotu):</strong> $\Delta EVE \approx -\left(D_A\cdot A - D_L\cdot L\right)\dfrac{\Delta y}{1+y}$</div>
-                    <div class="ex-box"><strong>Příklad:</strong> A = 100, L = 90, $D_A$ = 4, $D_L$ = 2, y = 5 %, Δy = +1 p. b.<br>$\Delta EVE \approx -(400 - 180)\cdot 0{,}01/1{,}05 \approx -2{,}1$. Kapitál je 10, takže ztráta ≈ 21 % kapitálu.</div>
-                    <ul>
-                        <li><strong>NII × EVE:</strong> NII = krátkodobý pohled na výnos, EVE (ekonomická hodnota kapitálu) = dlouhodobý pohled na hodnotu.</li>
-                        <li><strong>IRRBB:</strong> regulace (EBA) předepisuje standardní šokové scénáře (paralelní nahoru/dolů, steepener, flattener, krátké sazby nahoru/dolů). Pokles EVE nad 15 % Tier 1 spouští dohledový zásah (outlier test).</li>
-                        <li>Řízení: úrokové swapy, FRA, struktura splatností, limity.</li>
-                    </ul>
-                    <h4>Tržní riziko (obchodní kniha)</h4>
-                    <div class="def-box"><strong>Value at Risk (VaR):</strong> ztráta, která při dané pravděpodobnosti (např. 99 %) a horizontu nebude překročena. Metody: historická simulace, parametrická (variance-kovariance), Monte Carlo.</div>
-                    <div class="ex-box"><strong>Příklad:</strong> pozice 10 mil., denní σ = 1 %. VaR 1 den 99 % = 2,33 · 1 % · 10 = 0,233 mil. 10denní VaR = 0,233 · √10 ≈ 0,737 mil.</div>
-                    <div class="warn-box"><strong>⚠️ Pozor:</strong> VaR neříká, jak velká bude ztráta v tom zbylém 1 % případů (to řeší Expected Shortfall, který používá FRTB). Backtesting = porovnání VaR se skutečnými ztrátami. Stresové testy doplňují VaR o extrémní scénáře.</div>
-                    <h4>Měnové riziko</h4>
-                    <p><strong>Otevřená devizová pozice</strong> = rozdíl mezi aktivy a pasivy (včetně podrozvahy) v dané měně. Dlouhá pozice (aktiva &gt; pasiva) ztrácí, když měna oslabí; krátká ztrácí, když posílí. Celková pozice = větší ze součtu dlouhých a součtu krátkých pozic. Zajištění: FX forward, swap.</p>
-                    <h4>ESG</h4>
-                    <p>Klimatické faktory vstupují do ocenění (přecenění aktiv při přechodu na nízkouhlíkovou ekonomiku), do scénářů a stresových testů (NGFS scénáře) a do tržní volatility.</p>
-                    <div class="summary-box"><strong>Shrnutí:</strong><ul><li>GAP → dopad na NII; durační gap → dopad na EVE.</li><li>VaR škáluje √t; neříká nic o ocasu rozdělení.</li><li>Otevřená devizová pozice = aktiva − pasiva v měně.</li></ul></div>
-                </section>
+                    <h3>2. Charakteristika a druhy derivátů</h3>
+                    <p class="text-muted small">Přednáška návrh 30. 9. · doc. Dvořák · zdroj: slidy <em>Charakteristika a druhy derivátů</em> (Dvořák 2026, <code>Charakteristika_derivatu_26.pdf</code>, čísla slidů v závorkách); literatura slidů: Dvořák, P.: <em>Deriváty</em>, skripta VŠE. Co ve slidech není, je označeno <em>doplněk</em></p>
 
-                <section class="topic-section" id="topic-3">
-                    <h3>3. Podstata derivátů</h3>
-                    <p class="text-muted small">Návrh 7. 10. · zdroj: obecná literatura, bez prezentace</p>
-                    <div class="def-box"><strong>Derivát:</strong> kontrakt, jehož hodnota se odvozuje od <em>podkladového aktiva</em> (měna, sazba, akcie, komodita, úvěrové riziko). Platí se v budoucnu, počáteční investice je malá nebo žádná.</div>
+                    <h4>2.1 Historie (sl. 3)</h4>
+                    <ul>
+                        <li>Antika: kolem 580 př. n. l. Thalés z Milétu koupil opce na olivové lisy. Osaka 1650: první „futures“ na rýži.</li>
+                        <li><strong>1848</strong> založen Chicago Board of Trade (CBOT); <strong>1851</strong> první forward na kukuřici; <strong>1865</strong> první standardizovaný futures; <strong>1925</strong> první clearinghouse.</li>
+                        <li><strong>1972</strong> první devizový futures; <strong>1973</strong> první burzovní opce na finanční instrument; <strong>1975</strong> úrokové futures; <strong>1980</strong> první měnový swap; <strong>1981</strong> první úrokový swap; <strong>1982</strong> kontrakt na akciový index; <strong>1992</strong> elektronické obchodování na CME.</li>
+                        <li><strong>90. léta</strong> kreditní deriváty a strukturované produkty; <strong>2009</strong> reforma OTC derivátového trhu.</li>
+                    </ul>
+
+                    <h4>2.2 Vymezení derivátů: tři pohledy (sl. 4)</h4>
+                    <p>Dvořák rozlišuje <strong>ekonomickou podstatu</strong>, <strong>právní vymezení</strong> a <strong>účetní zobrazení</strong>. Nejsou totožné.</p>
+                    <div class="def-box"><strong>Ekonomická podstata (sl. 5):</strong> (1) derivát je <em>odvozen od jiného (podkladového, bazického, underlying) instrumentu</em>, což může být finanční nástroj, komodita, index či jiná veličina; (2) má <em>termínový charakter</em>; (3) jeho sjednání vyžaduje <em>investici nižší</em>, než je obvyklé u obchodů s podobným výnosově-ztrátovým profilem, což dává <strong>pákový efekt</strong>.</div>
+                    <ul>
+                        <li><strong>Propojení s podkladem</strong> (sl. 6): cena derivátu je přes (potenciální) <em>arbitráže</em> svázána s cenou podkladu. Podklad je předmětem plnění při fyzickém vypořádání, <strong>ALE</strong> při sjednání (a u finančního vypořádání i při realizaci) <strong>není nutné podklad vlastnit</strong>.</li>
+                        <li><strong>Termínový charakter</strong> (sl. 8): spot se vypořádá do 2–5 dnů (technická realizace), derivát je většinou do 1 roku, ale i 10 a více let. Ve splatnosti splývá termínový kontrakt se spotovým: <em>termínová cena ve splatnosti = spotová cena</em>.</li>
+                        <li><strong>Pákový efekt</strong> (sl. 9–10): podklad stojí 100 Kč. Roste-li o 10 %, nákup podkladu vydělá 10 Kč (10 %) při investici 100. Derivát vyžaduje investici 0 nebo velmi nízkou a vydělá zhruba také 10 Kč, tedy procentně <em>výrazně</em> více než 10 %. Při poklesu o 10 % je to stejně naopak: ztráta ≈ 10 Kč při nulové investici, tj. až <strong>100 % a víc investovaného kapitálu</strong>.</li>
+                    </ul>
+                    <div class="ex-box"><strong>Příklad (vlastní, ilustrace slidu 9):</strong> akcie za 100 Kč, derivát s marží 10 Kč. Cena +10 % → zisk 10 Kč. Na podkladu = 10 % z 100, na derivátu = 100 % z marže 10. Cena −10 % → ztráta 10 Kč = celá marže (−100 %). Páka = 100/10 = 10.</div>
+                    <div class="def-box"><strong>Právní vymezení</strong> (sl. 11–12) vychází z toho, co jsou investiční nástroje: opce, futures, swapy, forwardy a dohody o budoucích úrokových sazbách vázané na cenné papíry, měny, úrokové sazby, indexy; komoditní deriváty (podle způsobu vypořádání a obchodování), <strong>nástroje k převodu úvěrového rizika</strong>, <strong>finanční rozdílové smlouvy (CFD)</strong>, deriváty na klimatické proměnné, přepravné, <strong>emisní povolenky</strong> a inflaci. Slidy citují směrnici <em>2004/39/ES</em> (MiFID I) a v ČR zákon č. 256/2004 Sb. o podnikání na kapitálovém trhu. <em>Doplněk:</em> směrnici 2004/39/ES nahradila MiFID II (2014/65/EU); věcně se výčet nástrojů nemění.</div>
+                    <div class="def-box"><strong>Účetní vymezení</strong> (IFRS 9, sl. 14): derivát je finanční nástroj nebo smlouva, která má <em>všechny tři</em> znaky: (1) hodnota se mění podle <em>podkladové proměnné</em> (úroková míra, cena nástroje či komodity, měnový kurz, index, rating…; nefinanční proměnná nesmí být specifická pro stranu smlouvy), (2) <strong>nevyžaduje žádnou čistou počáteční investici</strong> nebo jen nižší, než by vyžadovaly jiné smlouvy s podobnou reakcí na trh, (3) <strong>vypořádá se v budoucnosti</strong>.</div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> <strong>účetní × právní vymezení</strong> (sl. 13). Účetní vymezení má věrně zobrazit význam derivátu pro finanční pozici, výkonnost a peněžní toky. Právní vymezení vyjadřuje práva a povinnosti stran. Účetní zachycení tedy <em>nevychází z právního charakteru</em>: tentýž právní instrument může být účetně zachycen různě.</div>
+
+                    <h4>2.3 Statistické vykazování (sl. 15–18)</h4>
                     <table class="table table-bordered summary-table">
-                        <thead><tr><th></th><th>Pevné (symetrické)</th><th>Podmíněné (asymetrické)</th></tr></thead>
+                        <thead><tr><th>Ukazatel objemu</th><th>Co zachycuje</th></tr></thead>
                         <tbody>
-                            <tr><td>Příklady</td><td>forward, futures, swap</td><td>opce, cap, floor</td></tr>
-                            <tr><td>Povinnost</td><td>obě strany musí plnit</td><td>kupující má právo, prodávající povinnost</td></tr>
-                            <tr><td>Zisk/ztráta</td><td>oběma směry neomezené</td><td>kupující max. ztráta = prémie</td></tr>
+                            <tr><td><strong>Nominální hodnota</strong> (notional principal)</td><td>objem podkladu, ze kterého se počítá plnění; <em>není</em> skutečná expozice</td></tr>
+                            <tr><td><strong>Tržní hodnota</strong> (market value, hrubá)</td><td>aktuální hodnota kontraktů (zisk/ztráta při okamžitém uzavření); malý zlomek nominálu</td></tr>
+                            <tr><td><strong>Počet kontraktů</strong></td><td>používá se u burzovních derivátů</td></tr>
                         </tbody>
                     </table>
                     <ul>
-                        <li><strong>OTC × burzovní:</strong> OTC je na míru a nese riziko protistrany; burzovní je standardizované, přes clearing (CCP), s maržemi.</li>
-                        <li><strong>Účel:</strong> zajištění (hedging), spekulace, arbitráž. Páka: malý vklad kontroluje velkou nominální hodnotu.</li>
-                        <li><strong>EMIR:</strong> povinný clearing standardních OTC derivátů a reporting do registrů obchodů.</li>
+                        <li><strong>Časové hledisko:</strong> <em>stav otevřených pozic</em> (amounts outstanding, open interest) = objem otevřených pozic k datu; <em>obrat</em> (turnover) = objem všech obchodů za období.</li>
+                        <li><strong>Vztah tržní a nominální hodnoty</strong> (sl. 17, BIS): u OTC derivátů je nominál v řádu stovek bilionů USD, hrubá tržní hodnota jen v řádu jednotek až desítek bilionů (několik procent nominálu).</li>
+                        <li><strong>Open interest × obrat</strong> (sl. 18): vyšší open interest spíše ukazuje na využití pro <strong>hedging</strong>, vyšší obrat spíše na <strong>spekulaci</strong>.</li>
+                        <li><strong>Velikost trhu</strong> (sl. 6, citace přes simtrade.fr z dat BIS, stav 2025): nominál přibližně <strong>964 bil. USD</strong>, z toho <strong>OTC ≈ 88 %</strong>, burzovní (ETD) ≈ 118 bil. USD. <em>Číslo jsem neověřoval v původním zdroji BIS.</em></li>
+                        <li><strong>Struktura OTC</strong> (sl. 20, BIS): v nominálu dominují <strong>úrokové deriváty</strong>, následují měnové; akciové, komoditní a CDS tvoří malou část.</li>
                     </ul>
-                    <div class="warn-box"><strong>⚠️ Pozor:</strong> nominální hodnota není expozice. Skutečná expozice je tržní hodnota (kladná, pokud protistrana dluží bance), tedy zlomek nominálu.</div>
-                    <div class="summary-box"><strong>Shrnutí:</strong><ul><li>Pevné deriváty mají symetrické výplaty, opce asymetrické.</li><li>OTC = riziko protistrany; burza/CCP = marže.</li><li>Tři motivy: hedging, spekulace, arbitráž.</li></ul></div>
-                </section>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> velké bilionové číslo o derivátech je <strong>nominální hodnota</strong>. Skutečná expozice (a tedy riziko protistrany) odpovídá hrubé tržní hodnotě, resp. kreditní expozici po započtení, tedy zlomku nominálu. Typická testová otázka: „co vyjadřuje údaj 964 bil. USD“.</div>
 
-                <section class="topic-section" id="topic-4">
-                    <h3>4. Forwardy, CFD, financial futures, swapy</h3>
-                    <p class="text-muted small">Návrh 14. 10. · zdroj: obecná literatura, bez prezentace</p>
-                    <div class="thm-box"><strong>Měnový forward (krytá úroková parita):</strong> $F = S\cdot\dfrac{1 + i_{CZK}\,t}{1 + i_{EUR}\,t}$ (kotace CZK za 1 EUR). Měna s vyšší sazbou je na forwardu slabší (diskont).</div>
-                    <div class="ex-box"><strong>Příklad:</strong> S = 25,00, $i_{CZK}$ = 4 %, $i_{EUR}$ = 2 %, t = 1 rok → F = 25 · 1,04/1,02 ≈ 25,49. Forwardové body = +0,49.</div>
-                    <ul>
-                        <li><strong>FRA:</strong> fixace sazby pro budoucí období. Kupující (platí fix) dostane vyrovnání, když tržní sazba vyroste. Vyrovnání na začátku období: $\dfrac{(r_{ref} - r_{FRA})\cdot N\cdot t}{1 + r_{ref}\cdot t}$.</li>
-                        <li><strong>Futures:</strong> standardizovaný forward na burze, denní přeceňování (marking to market), počáteční a udržovací marže, margin call. Téměř nemá riziko protistrany.</li>
-                        <li><strong>CFD:</strong> smlouva o vyrovnání rozdílu ceny (bez dodání aktiva), s pákou.</li>
-                        <li><strong>IRS (úrokový swap):</strong> výměna fixní a pohyblivé sazby z nominálu (nominál se nevyměňuje). Pay fixed zajišťuje proti růstu sazeb. Hodnota = rozdíl hodnot fixní a pohyblivé „nohy“.</li>
-                        <li><strong>Měnový swap (CCS):</strong> výměna jistin i úroků ve dvou měnách. <strong>FX swap:</strong> spot + opačný forward.</li>
-                    </ul>
-                    <div class="ex-box"><strong>Příklad (IRS):</strong> nominál 100 mil., platím fix 3 %, dostávám 6M sazbu, ta je 3,5 %. Vyrovnání za půl roku: (3,5 % − 3 %) · 100 · 0,5 = +0,25 mil. pro mne.</div>
-                    <div class="summary-box"><strong>Shrnutí:</strong><ul><li>Forward kurz plyne z rozdílu úrokových sazeb, ne z předpovědi.</li><li>Futures = forward + burza + denní vyrovnání.</li><li>Swap = řada forwardů; IRS vyměňuje jen úrokové toky.</li></ul></div>
-                </section>
-
-                <section class="topic-section" id="topic-5">
-                    <h3>5. Opce, cap, floor, collar</h3>
-                    <p class="text-muted small">Návrh 21. 10. · zdroj: obecná literatura, bez prezentace</p>
-                    <div class="def-box"><strong>Call</strong> = právo koupit za realizační cenu K; <strong>put</strong> = právo prodat. Kupující platí prémii. Výplata call: $\max(S-K,0)$; put: $\max(K-S,0)$. Hodnota opce = vnitřní + časová hodnota.</div>
-                    <div class="ex-box"><strong>Příklad:</strong> dlouhý call, K = 100, prémie 5. Break-even = 105. Max. ztráta = 5 (S ≤ 100). Zisk neomezený. Prodávající (short call) má opak: max. zisk 5, ztráta neomezená.</div>
-                    <ul>
-                        <li><strong>ITM/ATM/OTM:</strong> call je ITM, když S &gt; K.</li>
-                        <li><strong>Put-call parita</strong> (evropské opce): $C - P = S - K e^{-rT}$.</li>
-                        <li><strong>Cena roste s:</strong> volatilitou, dobou do splatnosti; call roste se S a klesá s K; put naopak.</li>
-                        <li><strong>Řecká písmena:</strong> delta (citlivost na S), gama (citlivost delty), vega (volatilita), théta (čas).</li>
-                        <li><strong>Strategie:</strong> straddle (call + put, sázka na pohyb), strangle, spready.</li>
-                    </ul>
-                    <h4>Cap, floor, collar</h4>
-                    <ul>
-                        <li><strong>Cap:</strong> řada call opcí na sazbu (capletů). Dlužník s pohyblivou sazbou je chráněn před růstem nad strop.</li>
-                        <li><strong>Floor:</strong> řada put opcí; chrání věřitele/investora před poklesem sazby.</li>
-                        <li><strong>Collar:</strong> nákup capu + prodej floor. Prémie z floor financuje cap; „zero-cost“ collar má čistou prémii nulovou. Cena: dlužník se vzdává prospěchu z poklesu pod floor.</li>
-                    </ul>
-                    <div class="warn-box"><strong>⚠️ Pozor:</strong> kdo je dlouhý a kdo krátký? Kupující opce má právo, prodávající povinnost. Banka s úvěry na pohyblivou sazbu a vklady na fix se chrání před poklesem sazeb floorem, klient-dlužník před růstem capem.</div>
-                    <div class="summary-box"><strong>Shrnutí:</strong><ul><li>Kupující: ztráta omezená na prémii; prodávající: zisk omezený na prémii.</li><li>Cap = strop, floor = podlaha sazby, collar = obojí.</li><li>Put-call parita propojuje ceny call a put.</li></ul></div>
-                </section>
-
-                <section class="topic-section" id="topic-6">
-                    <h3>6. Likviditní riziko</h3>
-                    <p class="text-muted small">Návrh 11. 11. · zdroj: obecná literatura a regulace (CRR), bez prezentace</p>
-                    <div class="def-box"><strong>Likviditní riziko:</strong> banka nedokáže včas plnit závazky (<em>riziko financování</em>) nebo nedokáže prodat aktivum bez velké ztráty (<em>tržní likvidita</em>). Vzniká z transformace splatností; extrémní podoba = run na banku.</div>
-                    <ul>
-                        <li><strong>Likviditní gap:</strong> rozdíl přítoků a odtoků po splatnostních pásmech.</li>
-                        <li><strong>Řízení:</strong> likvidní rezervy, diverzifikace zdrojů, stresové testy, contingency funding plan (plán pro krizi), ILAAP (interní hodnocení likvidity). Věřitel poslední instance = centrální banka.</li>
-                    </ul>
-                    <div class="thm-box"><strong>LCR</strong> $= \dfrac{HQLA}{\text{čisté odtoky za 30 dní ve stresu}} \ge 100\,\%$ &nbsp;·&nbsp; <strong>NSFR</strong> $= \dfrac{\text{dostupné stabilní financování}}{\text{požadované stabilní financování}} \ge 100\,\%$</div>
-                    <div class="ex-box"><strong>Příklad:</strong> HQLA = 120, odtoky 150, přítoky 40 → čisté odtoky 110 (přítoky jsou omezeny na 75 % odtoků, tedy 112,5, takže limit nehraje roli). LCR = 120/110 ≈ 109 % ✔.</div>
-                    <div class="insight-box"><strong>Intuice:</strong> LCR = přežití měsíc bez cizí pomoci (krátký horizont, kvalita aktiv); NSFR = dlouhodobá strukturální rovnováha (aktiva financovaná stabilními zdroji, horizont 1 rok).</div>
-                    <div class="summary-box"><strong>Shrnutí:</strong><ul><li>LCR (30 dní) a NSFR (1 rok) musí být ≥ 100 %.</li><li>HQLA = vysoce kvalitní likvidní aktiva (hotovost, rezervy u CB, státní dluhopisy).</li><li>Likviditu hlídají stresové testy a plán pro krizi.</li></ul></div>
-                </section>
-
-                <section class="topic-section" id="topic-7">
-                    <h3>7. Úvěrové riziko a zelené úvěry</h3>
-                    <p class="text-muted small">Návrh 18. 11. · zdroj: obecná literatura a regulace, bez prezentace</p>
-                    <div class="def-box"><strong>Úvěrové riziko:</strong> dlužník (protistrana) nesplní závazek. Měří se třemi parametry: PD (pravděpodobnost selhání), LGD (ztráta při selhání, po započtení zajištění), EAD (expozice v okamžiku selhání).</div>
-                    <div class="thm-box"><strong>Očekávaná ztráta:</strong> $EL = PD\cdot LGD\cdot EAD$. Kryje se cenou (marží) a opravnými položkami. <strong>Neočekávaná ztráta</strong> (odchylka od EL) se kryje kapitálem.</div>
-                    <div class="ex-box"><strong>Příklad:</strong> úvěr 10 mil., PD = 2 %, LGD = 45 % → EL = 0,02 · 0,45 · 10 = 0,09 mil. (90 tis.).</div>
-                    <ul>
-                        <li><strong>Řízení:</strong> scoring/rating, zajištění, limity, diversifikace, monitoring; makroobezřetnostní limity (LTV, DSTI).</li>
-                        <li><strong>IFRS 9:</strong> opravné položky podle očekávané ztráty: stage 1 = 12měsíční ECL, stage 2 (významné zhoršení) a stage 3 (selhání) = ECL za celou dobu života.</li>
-                        <li><strong>Regulace:</strong> standardizovaný přístup (váhy podle ratingu) × IRB (vlastní odhady PD, LGD).</li>
-                    </ul>
-                    <h4>ESG</h4>
-                    <ul>
-                        <li><strong>Fyzická rizika:</strong> povodně, sucho, požáry ničí zajištění a příjmy dlužníka.</li>
-                        <li><strong>Transformační rizika:</strong> regulace, uhlíková cena, změna technologií (stranded assets) zhoršují bonitu „hnědých“ odvětví.</li>
-                        <li><strong>Zelené úvěry:</strong> účelové financování environmentálně udržitelných projektů (Green Loan Principles, taxonomie EU); banka sleduje green asset ratio.</li>
-                    </ul>
-                    <div class="summary-box"><strong>Shrnutí:</strong><ul><li>EL = PD · LGD · EAD.</li><li>IFRS 9: stage 1 → 12M ECL, stage 2/3 → lifetime ECL.</li><li>ESG = fyzická × transformační rizika, zelené úvěry mají přesně vymezený účel.</li></ul></div>
-                </section>
-
-                <section class="topic-section" id="topic-8">
-                    <h3>8. Kreditní deriváty</h3>
-                    <p class="text-muted small">Návrh 25. 11. · zdroj: obecná literatura, bez prezentace</p>
-                    <div class="def-box"><strong>Credit default swap (CDS):</strong> kupující ochrany platí pravidelně <em>CDS spread</em> (prémii v b. p. z nominálu); při <em>kreditní události</em> (selhání, restrukturalizace) mu prodávající ochrany nahradí ztrátu. Funguje jako pojištění úvěru.</div>
-                    <div class="ex-box"><strong>Příklad:</strong> banka má úvěr 100 mil. firmě, koupí CDS se spreadem 150 b. p. → platí 1,5 mil. ročně. Při selhání s návratností 40 % dostane 60 mil. (fyzické vypořádání: odevzdá závazek za 100; peněžní: rozdíl 100 − 40).</div>
-                    <ul>
-                        <li><strong>Total return swap (TRS):</strong> jedna strana předá celkový výnos aktiva (úrok + změna ceny) a dostane pohyblivou sazbu; přenáší i tržní riziko.</li>
-                        <li><strong>Credit-linked note (CLN):</strong> dluhopis, jehož výplata závisí na úvěrové události.</li>
-                        <li><strong>Sekuritizace (CDO):</strong> pool pohledávek rozdělený na tranše (senior, mezanin, equity); ztráty nesou nejdřív nižší tranše.</li>
-                    </ul>
-                    <div class="warn-box"><strong>⚠️ Pozor:</strong> kdo je kdo: kupující ochrany je <em>krátký</em> na úvěrové riziko (profituje ze zhoršení); prodávající ochrany je dlouhý jako věřitel. Riziko protistrany: prodávající může při krizi sám selhat (AIG 2008).</div>
-                    <div class="summary-box"><strong>Shrnutí:</strong><ul><li>CDS = pojištění úvěrového rizika, cena = spread.</li><li>TRS přenáší i tržní riziko, CLN je dluhopis s úvěrovou složkou.</li><li>Použití: zajištění, přenos rizika, spekulace.</li></ul></div>
-                </section>
-
-                <section class="topic-section" id="topic-9">
-                    <h3>9. Kapitálové riziko</h3>
-                    <p class="text-muted small">Návrh 2. 12. · zdroj: obecná literatura a regulace (CRR/CRD, Basel III), bez prezentace</p>
-                    <div class="def-box"><strong>Kapitálové riziko:</strong> banka nemá dost kapitálu na pokrytí ztrát. Kapitál = tlumič ztrát. Regulace určuje minimum vzhledem k <strong>rizikově váženým aktivům (RWA)</strong>.</div>
+                    <h4>2.4 Druhy derivátů (sl. 19–28)</h4>
                     <table class="table table-bordered summary-table">
-                        <thead><tr><th>Požadavek (Pilíř 1)</th><th>Min. podíl na RWA</th></tr></thead>
+                        <thead><tr><th>Hledisko</th><th>Členění</th></tr></thead>
                         <tbody>
-                            <tr><td>CET1 (základní kapitál Tier 1)</td><td>4,5 %</td></tr>
-                            <tr><td>Tier 1 (CET1 + AT1)</td><td>6 %</td></tr>
-                            <tr><td>Celkový kapitál (Tier 1 + Tier 2)</td><td>8 %</td></tr>
+                            <tr><td><strong>Podle rizika</strong> (sl. 19)</td><td><em>tržní rizika:</em> úrokové, měnové, akciové, komoditní; <em>úvěrové riziko</em> (plnění vázáno na kreditní událost); <em>jiná rizika</em> (plnění odvozené od vývoje určité veličiny)</td></tr>
+                            <tr><td><strong>Podle způsobu obchodování</strong> (sl. 22)</td><td>burzovní · centrálně zúčtované · mimoburzovní (OTC)</td></tr>
+                            <tr><td><strong>Podle práva a povinnosti</strong> (sl. 28)</td><td><em>pevné (nepodmíněné):</em> forwardy, futures, swapy · <em>opční (podmíněné)</em></td></tr>
                         </tbody>
                     </table>
-                    <ul>
-                        <li><strong>Rezervy navíc (CET1):</strong> ochranná 2,5 %, proticyklická (ČNB nastavuje), systémová/O-SII.</li>
-                        <li><strong>Pilíře:</strong> 1 = minimální požadavky (úvěrové, tržní, operační riziko); 2 = ICAAP + SREP (dohled, dodatečný požadavek); 3 = zveřejňování.</li>
-                        <li><strong>Pákový poměr</strong> (Tier 1 / celková expozice, min. 3 %) nezávisí na rizikových vahách. <strong>MREL</strong> = požadavek na pohltivé zdroje při řešení krize.</li>
-                        <li><strong>Vývoj:</strong> Basel I → II (rizikové váhy, 3 pilíře) → III (kvalita kapitálu, rezervy, páka, likvidita). V EU „Basel III dokončený“ (CRR3) platí od 2025: output floor (postupně na 72,5 % RWA podle standardizovaných přístupů) a nový přístup k operačnímu riziku.</li>
-                        <li><strong>Ekonomický kapitál, RAROC:</strong> interní měření kapitálu a výnosu očištěného o riziko.</li>
-                    </ul>
-                    <div class="ex-box"><strong>Příklad:</strong> CET1 = 9, Tier 1 = 10, celkový kapitál = 12, RWA = 100 → CET1 9 %, T1 10 %, celkem 12 %. Požadavek CET1 včetně ochranné rezervy = 4,5 + 2,5 = 7 % ✔ (plus případné další rezervy a Pilíř 2).</div>
-                    <div class="summary-box"><strong>Shrnutí:</strong><ul><li>4,5 / 6 / 8 % RWA + rezervy; páka min. 3 %.</li><li>Pilíře: minima, dohled, disclosure.</li><li>CRR3 od 2025: output floor.</li></ul></div>
-                </section>
+                    <div class="thm-box"><strong>Burzovní × OTC</strong> (sl. 23): burzovní deriváty jsou <strong>standardizované</strong> (podmínky určuje burza); splnění garantuje <strong>clearingový dům</strong>, takže je nižší kreditní riziko; centrální protistranou všech obchodů je clearingový dům, takže <em>zrcadlová pozice otevřenou pozici okamžitě vyrovná</em>; při sjednání se skládá <strong>marže</strong>; lze denně zjistit <strong>objektivní tržní cenu</strong> a tedy reálnou hodnotu.</div>
+                    <div class="def-box"><strong>Reforma OTC trhu</strong> (sl. 24, po roce 2009): (1) všechny OTC kontrakty se hlásí do <strong>registrů obchodních údajů</strong> (trade repositories); (2) <strong>standardizované</strong> kontrakty se obchodují na burzách či elektronických platformách a <strong>zúčtují přes ústřední protistrany</strong> (CCP); (3) kontrakty <strong>nezúčtované přes CCP</strong> podléhají <strong>vyšším kapitálovým</strong> a <strong>maržovým požadavkům</strong>. <em>Doplněk:</em> v EU to provádí nařízení EMIR.</div>
+                    <p><strong>Využití derivátů</strong> (sl. 29): <em>zajištění</em> (hedging), <em>spekulace</em>, <em>arbitráž</em> (teritoriální; časová = spot × termín). <strong>Objem obchodů roste s volatilitou</strong> (sl. 30): v srpnu 2011 (měsíční volatilita indexu STOXX Global 1800 přes 30 %) dosáhl měsíční počet obchodovaných akciových derivátů vrcholu.</p>
 
-                <section class="topic-section" id="topic-10">
-                    <h3>10. Operační riziko a kontinuita činnosti</h3>
-                    <p class="text-muted small">Návrh 9. 12. · zdroj: obecná literatura a regulace (CRR3, DORA), bez prezentace</p>
-                    <div class="def-box"><strong>Operační riziko:</strong> ztráta způsobená selháním vnitřních procesů, lidí, systémů nebo vnějšími událostmi; zahrnuje právní riziko, nezahrnuje strategické a reputační riziko.</div>
-                    <ul>
-                        <li><strong>Kategorie ztrátových událostí (Basel):</strong> interní podvod, externí podvod, zaměstnanecké praktiky, klienti a produkty, škody na majetku, přerušení provozu a selhání systémů, řízení procesů.</li>
-                        <li><strong>Měření a řízení:</strong> databáze ztrát, klíčové rizikové indikátory (KRI), sebehodnocení, kontroly, pojištění, outsourcing s kontrolou. Kapitálový požadavek: od 2025 jednotný standardizovaný přístup založený na <em>business indicator</em> (CRR3).</li>
-                        <li><strong>Kyberrizika a DORA:</strong> nařízení o digitální provozní odolnosti (platí od 1/2025): řízení ICT rizik, hlášení incidentů, testování, dohled nad ICT dodavateli.</li>
-                        <li><strong>Kontinuita:</strong> business continuity plan (BCP) a disaster recovery (obnova IT). <strong>Ozdravný plán</strong> (recovery, banka sama) × <strong>plán řešení krize</strong> (resolution, orgán).</li>
-                        <li><strong>ESG:</strong> fyzická rizika pro provoz (povodeň datacentra), greenwashing jako právní a reputační riziko.</li>
-                    </ul>
-                    <div class="summary-box"><strong>Shrnutí:</strong><ul><li>Čtyři zdroje: procesy, lidé, systémy, vnější události.</li><li>DORA = ICT odolnost; BCP/DR = pokračování provozu.</li><li>Recovery plán sestavuje banka, resolution plán orgán.</li></ul></div>
-                </section>
+                    <h4>2.5 Cena a hodnota pevných derivátů (z přednášky o forwardech, sl. 25 jejich slidů)</h4>
+                    <div class="def-box"><strong>Cena</strong> pevného derivátu = <em>termínová cena</em>, za kterou se kontrakt sjednává (a realizuje ve splatnosti), případně rovnovážná (teoretická) cena z oceňovacího modelu. <strong>Hodnota</strong> = aktuální zisk nebo ztráta, která by plynula z pozice při jejím okamžitém uzavření (rozdíl mezi sjednanou a aktuální tržní cenou). Při sjednání je hodnota (férového) kontraktu <strong>nula</strong>, cena ne. Podrobně viz téma 6.</div>
 
-                <section class="topic-section" id="topic-11">
-                    <h3>11. Měření a řízení ziskovosti banky</h3>
-                    <p class="text-muted small">Návrh 16. 12. · zdroj: obecná literatura (MacDonald &amp; Koch), bez prezentace</p>
+                    <h4>2.6 Účetní zobrazení derivátů (doplněk)</h4>
+                    <p><em>Osnova kurzu i slidy k bilanci zmiňují „účetní zobrazení derivátů“, ale ve slidech je jen definice podle IFRS 9 (viz výše) a podrozvaha. Následující shrnutí je z IFRS 9 a neověřoval jsem je v původním znění ani v českých předpisech; přednost má přednáška.</em></p>
                     <ul>
-                        <li><strong>Výnosy:</strong> čistý úrokový výnos (NII), poplatky a provize, výnosy z obchodování. Náklady: provozní, náklady rizika (opravné položky), daně.</li>
-                        <li><strong>NIM</strong> $= \dfrac{NII}{\text{průměrná úročená aktiva}}$ &nbsp;·&nbsp; <strong>Cost-to-income</strong> $= \dfrac{\text{provozní náklady}}{\text{provozní výnosy}}$</li>
-                    </ul>
-                    <div class="thm-box"><strong>DuPont:</strong> $ROE = \dfrac{ČZ}{K} = ROA\cdot\dfrac{A}{K}$ (multiplikátor kapitálu = páka). $ROA = \dfrac{ČZ}{A}$.</div>
-                    <div class="ex-box"><strong>Příklad:</strong> ROA = 1 %, aktiva/kapitál = 10 → ROE = 10 %. Při páce 12 je ROE 12 %, ale banka je zranitelnější (a regulace páku omezuje).</div>
-                    <ul>
-                        <li><strong>RAROC</strong> = výnos po odečtení očekávané ztráty ÷ ekonomický kapitál; porovnává ziskovost s rizikem. <strong>EVA</strong> = zisk − náklady na kapitál.</li>
-                        <li><strong>FTP (transferové ceny):</strong> interní cena financování, která rozděluje marži mezi obchodní jednotky a řídí úrokovou marži.</li>
-                    </ul>
-                    <div class="summary-box"><strong>Shrnutí:</strong><ul><li>ROE = ROA · páka.</li><li>NIM měří marži, C/I efektivitu.</li><li>RAROC a EVA zohledňují riziko a cenu kapitálu.</li></ul></div>
-                </section>
-
-                <section class="topic-section" id="topic-12">
-                    <h3>12. Účetní zobrazení derivátů</h3>
-                    <p class="text-muted small">Návrh 16. 12. · zdroj: obecná literatura (IFRS 9), bez prezentace; české předpisy neověřeny</p>
-                    <ul>
-                        <li><strong>Základní pravidlo:</strong> derivát se vykazuje v <em>reálné hodnotě</em>: kladná je aktivum, záporná závazek. Změna hodnoty jde standardně do výsledku (FVTPL, obchodní deriváty).</li>
-                        <li><strong>Podrozvaha:</strong> nominální hodnota se eviduje mimo bilanci.</li>
+                        <li><strong>Základní pravidlo:</strong> derivát se vykazuje v <em>reálné hodnotě</em>: kladná je aktivum, záporná závazek. Změna hodnoty jde standardně do výsledku (FVTPL, obchodní deriváty). Nominál je v podrozvaze (téma 1).</li>
                         <li><strong>Vložený derivát:</strong> část hybridní smlouvy; někdy se odděluje a účtuje samostatně.</li>
                     </ul>
-                    <h4>Zajišťovací účetnictví (hedge accounting)</h4>
-                    <p>Cíl: srovnat v čase účetní dopad zajišťovacího derivátu a zajišťované položky, aby výsledek neskákal. Vyžaduje formální dokumentaci a prokázanou efektivnost zajištění.</p>
                     <table class="table table-bordered summary-table">
-                        <thead><tr><th>Typ</th><th>Co se zajišťuje</th><th>Účtování</th></tr></thead>
+                        <thead><tr><th>Zajišťovací účetnictví</th><th>Co se zajišťuje</th><th>Účtování</th></tr></thead>
                         <tbody>
-                            <tr><td><strong>Fair value hedge</strong></td><td>změna reálné hodnoty položky (např. fixní úvěr/dluhopis)</td><td>změna derivátu i zajištěné položky do výsledku → kompenzace</td></tr>
-                            <tr><td><strong>Cash flow hedge</strong></td><td>kolísání budoucích peněžních toků (např. pohyblivá sazba)</td><td>efektivní část derivátu do ostatního výsledku (OCI), do výsledku až při realizaci toku; neefektivní část hned do výsledku</td></tr>
+                            <tr><td><strong>Fair value hedge</strong></td><td>změna reálné hodnoty položky (fixní úvěr/dluhopis)</td><td>změna derivátu i zajištěné položky do výsledku → kompenzace</td></tr>
+                            <tr><td><strong>Cash flow hedge</strong></td><td>kolísání budoucích peněžních toků (pohyblivá sazba)</td><td>efektivní část derivátu do OCI, do výsledku až při realizaci toku; neefektivní část hned do výsledku</td></tr>
                             <tr><td><strong>Net investment hedge</strong></td><td>čistá investice do zahraniční jednotky</td><td>kurzové rozdíly do OCI</td></tr>
                         </tbody>
                     </table>
-                    <div class="warn-box"><strong>⚠️ Pozor:</strong> bez splnění podmínek zajišťovacího účetnictví jde i zajišťovací derivát do výsledku jako obchodní, ale zajištěná položka ne → výsledek kolísá, ačkoli ekonomicky je banka zajištěná. IRS „pay fixed“ na úvěr s pohyblivou sazbou = cash flow hedge; IRS „receive fixed“ na fixní úvěr/dluhopis = fair value hedge.</div>
-                    <div class="summary-box"><strong>Shrnutí:</strong><ul><li>Derivát = reálná hodnota, standardně přes výsledek.</li><li>Fair value × cash flow × net investment hedge.</li><li>Zajišťovací účetnictví potřebuje dokumentaci a efektivnost.</li></ul></div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> zajišťovací účetnictví vyžaduje formální dokumentaci a prokázanou efektivnost. Bez ní jde zajišťovací derivát do výsledku jako obchodní, ale zajištěná položka ne → výsledek kolísá, ačkoli je banka ekonomicky zajištěná. IRS „pay fixed“ na úvěr s pohyblivou sazbou = cash flow hedge; IRS „receive fixed“ na fixní úvěr/dluhopis = fair value hedge.</div>
+
+                    <div class="summary-box"><strong>Shrnutí:</strong>
+                        <ul>
+                            <li>Derivát: odvozená hodnota od podkladu, termínový charakter, nízká počáteční investice → páka (zisk i ztráta mnohonásobně větší než investice).</li>
+                            <li>Tři pohledy: ekonomický, právní (výčet investičních nástrojů), účetní (IFRS 9, 3 znaky). Účetní zachycení nevychází z právního.</li>
+                            <li>Nominální hodnota ≠ expozice; tržní hodnota je zlomek nominálu; open interest → hedging, obrat → spekulace.</li>
+                            <li>Pevné (forward, futures, swap) × opční deriváty; burzovní (standardizace, CCP, marže) × OTC.</li>
+                            <li>Reforma OTC po 2009: trade repositories, clearing přes CCP, vyšší kapitálové a maržové požadavky pro nezúčtované.</li>
+                        </ul>
+                    </div>
+                    <p class="mb-0"><a href="../quiz.html?course=1BP403&topic=2"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
+                </section>
+
+                <section class="topic-section" id="topic-3">
+                    <h3>3. Charakteristika bankovních rizik</h3>
+                    <p class="text-muted small">Přednáška návrh 7. 10. · Ing. Palán · zdroj: slidy <em>Rizika v bankovnictví</em> (Palán, <code>TaxonomieRizik.pdf</code>, čísla slidů v závorkách). Co v nich není (regulace, CRR3, DORA), je označeno <em>doplněk</em></p>
+
+                    <div class="insight-box"><strong>Jak to číst:</strong> tahle sekce je „mapa“. Rizika samotná (likvidita, úvěrové, tržní, úrokové, ESG, operační) se rozebírají podrobněji v tématech 4, 5, 10, 11, 12 a 14. Tady jde o společný rámec: co je riziko, jak se jednotlivá rizika <em>navzájem ovlivňují</em> a jak se s nimi zachází.</div>
+
+                    <h4>3.1 Riziko a řízení rizik (sl. 2–6)</h4>
+                    <div class="def-box"><strong>Řízení rizik</strong> (sl. 2) je proces, v němž se instituce snaží zabránit nečekaným ztrátám a navrhuje opatření k omezení či eliminaci existujících i budoucích hrozeb a k využití pozitivních vlivů. Rozhoduje <strong>představenstvo</strong> (nebo jím pověřený orgán). Je <strong>reaktivní</strong> (poučení z chyb) i <strong>proaktivní</strong> (hledání slabých míst). Cíl: <em>going concern</em>, tj. životaschopnost banky během celého hospodářského cyklu, protože bankovnictví je přijímání rizik při zprostředkování mezi poskytovateli a uživateli zdrojů.</div>
+                    <div class="def-box"><strong>Riziko</strong> (sl. 5) = <em>nežádoucí odchylka od očekávaného stavu</em> (v obchodním plánu: horší než očekávaný výsledek = <em>downside risk</em>, lepší = <em>upside risk</em>, sl. 4). <strong>Úroveň rizika</strong> závisí na třech věcech: <strong>hodnotě aktiva</strong>, <strong>zranitelnosti aktiva</strong> (citlivost na hrozbu) a <strong>úrovni hrozby</strong> (nebezpečnost, pravděpodobnost). Jedno aktivum může být citlivé na více hrozeb a více aktiv na tutéž hrozbu.</div>
+                    <ul>
+                        <li><strong>Aktivum:</strong> cokoli s objektivní nebo subjektivní hodnotou: finanční aktiva, informace, zaměstnanci a jejich znalosti, hmotná aktiva.</li>
+                        <li><strong>Hrozba / událost:</strong> cokoli, co má nežádoucí vliv na aktivum. <strong>Rizikový faktor</strong> hrozbu spouští (např. zhoršení ratingu, růst úrokových sazeb).</li>
+                        <li><strong>Obecné rizikové faktory</strong> (makroekonomika, geopolitika, regulace, technologie, konkurence) × <strong>specifické</strong> (produkty, procesy, systémy, kultura, hodnoty) vedou k neočekávané události a jinému než očekávanému vývoji (sl. 4). <strong>Limity Risk Appetite</strong> a <strong>limity ozdravného plánu</strong> jsou dvě „hranice“ nepříznivé odchylky od obchodního plánu.</li>
+                    </ul>
+
+                    <h4>3.2 Vazby mezi riziky: jedna událost, tři dopady (sl. 6)</h4>
+                    <p>Jedna událost (zhoršení ratingu, růst sazeb) se projeví <strong>do výsledku (P&amp;L), do likvidity a do kapitálové přiměřenosti</strong>. Slide to ukazuje na státním dluhopisu podle účetního zařazení:</p>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Státní dluhopis… (pokles ceny)</th><th>Dopad do P&amp;L</th><th>Dopad do likvidity</th><th>Dopad do kapitálové přiměřenosti</th></tr></thead>
+                        <tbody>
+                            <tr><td>v obchodním portfoliu</td><td>ztráta z obchodování</td><td>snížení likviditního polštáře</td><td>ano, pokud ztráta z P&amp;L povede ke ztrátě</td></tr>
+                            <tr><td>přeceňovaný do kapitálu (FVTOCI)</td><td>navýšení opravných položek</td><td>snížení likviditního polštáře</td><td>ano, <strong>přes OCI</strong> (snížení CET1)</td></tr>
+                            <tr><td>v naběhlé hodnotě</td><td>navýšení opravných položek</td><td>snížení likviditního polštáře</td><td>ano, pokud <strong>přes nárůst rizikových vah</strong> (banky s IRB)</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="insight-box"><strong>Intuice:</strong> nikdy neposuzuj riziko izolovaně. Pokles ceny dluhopisu je tržní riziko, ale zároveň zmenšuje likvidní polštář (riziko likvidity) a může snížit kapitál (kapitálové riziko).</div>
+
+                    <h4>3.3 Frekvence × dopad (sl. 7)</h4>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th></th><th>Malý dopad</th><th>Velký dopad</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Nízká frekvence</strong></td><td><em>low frequency / low severity</em>: nevýznamné; sleduje se jen to, zda se frekvence či dopad v čase nemění (kvůli kapitálovému požadavku)</td><td><em>low frequency / high severity</em>: <strong>klíčové události</strong> pro stanovení kapitálového požadavku (neočekávaná ztráta)</td></tr>
+                            <tr><td><strong>Vysoká frekvence</strong></td><td><em>high frequency / low severity</em>: lze odhadovat z dat, obvykle zahrnuty v <em>očekávaných ztrátách</em> a sledovány přes <strong>KRI</strong></td><td><em>high frequency / high severity</em>: <strong>neslučitelné s životaschopností instituce</strong></td></tr>
+                        </tbody>
+                    </table>
+
+                    <h4>3.4 Přístupy k riziku (sl. 8)</h4>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Přístup</th><th>Obsah</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Odmítnutí</strong> (Avoid)</td><td>vědomé rozhodnutí vedení po analýze dopadů; zachycené v <em>Risk Appetite Statement</em>; otázka, nakolik je vyhnutí se riziku efektivní vzhledem k dlouhodobému obchodnímu modelu</td></tr>
+                            <tr><td><strong>Přenesení</strong> (Transfer)</td><td>pojištění, zajišťovací operace; obrana proti hrozbám s <em>malou frekvencí a velkým dopadem</em>; optimalizace výnosu z kapitálu, když je přenesení levnější než držení kapitálu</td></tr>
+                            <tr><td><strong>Přizpůsobení</strong> (Adapt)</td><td>systém včasného varování, adaptační opatření a testování jejich účinnosti</td></tr>
+                            <tr><td><strong>Přijetí</strong> (Accept)</td><td>dostatečná diverzifikace, ex-ante analýza scénářů; <em>možný rozpor vlastníků</em> (neomezený zisk, omezená ztráta) a <em>věřitelů</em> (nepodílí se na zisku, nesou ztrátu)</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h4>3.5 Identifikace a vyhodnocení rizik (sl. 9–12)</h4>
+                    <ul>
+                        <li><strong>Taxonomie rizik</strong> (sl. 9): interní (nespoléhat na regulatorní), obsahuje <em>všechna</em> rizika (i nevýznamná, se zdůvodněním proč), definuje významnost, přiměřený detail, zahrnuje i rizika outsourcingu. Zohledňuje <strong>inherentní</strong> (ne reziduální) riziko, včetně koncentrace uvnitř rizik i mezi riziky a ESG. Vyhodnocuje se <strong>alespoň jednou ročně</strong> a při změnách (nový produkt, proces, IT systém). Pro významná rizika se alokuje kapitál; pro ta, která kapitálem kryta nejsou, se dokumentuje proč.</li>
+                        <li><strong>Časový horizont</strong> (sl. 10): čím delší doba, tím větší možná odchylka. U úvěrů: 0,5 roku = aktuální situace klienta; 3 roky (spotřebitelské úvěry) = střednědobé změny (makro, sociální koheze, „černé labutě“); 5 a více let (hypotéky, nemovitosti, projekty) = dlouhodobá schopnost klienta zajistit příjmy i za nepříznivých podmínek (strukturální změny, klima).</li>
+                        <li><strong>Expozice a kvalita ŘKS</strong> (sl. 11): expozice vůči riziku (inherentní) + funkčnost <strong>řídicího a kontrolního systému</strong>: 3 linie ochrany, oddělení neslučitelných funkcí, dodržování předpisů, kontroly 1. a 2. úrovně, interní audit, limity, reporting.</li>
+                        <li><strong>Zkreslení při posuzování rizik</strong> (sl. 12): <em>overconfidence</em> (přehnané sebevědomí), <em>status quo</em> a averze ke ztrátám, <em>anchoring</em> (ukotvení na první informaci), <em>slepá skvrna</em> (myslím, že se zkreslení týká ostatních), <em>konfirmační zkreslení</em>, <em>heuristika dostupnosti</em>, <em>framing</em>, <em>halo efekt</em>, <em>hindsight</em> (zpětný pohled).</li>
+                    </ul>
+
+                    <h4>3.6 Taxonomie rizik banky (sl. 20–21)</h4>
+                    <p>Palánova taxonomie: <strong>riziko likvidity a financování</strong> · <strong>úvěrové riziko</strong> · <strong>tržní riziko</strong> · <strong>úrokové riziko investičního portfolia</strong> a <strong>riziko úvěrových rozpětí</strong> · <strong>operační riziko</strong> · <strong>ESG rizika</strong> · <strong>ostatní rizika</strong>. Podrobně v tématech 4, 5, 10, 11, 12.</p>
+                    <div class="def-box"><strong>Solventnost × likvidita</strong> (sl. 21): instituce, která nemá dost prostředků na splatné závazky, je <em>technicky v selhání</em>. <strong>Likvidita</strong> = schopnost uhradit závazky v termínu, nedostatek má okamžitý a devastující účinek. <strong>Solventnost</strong> = porovnání hodnoty aktiv a pasiv (velikost vlastních zdrojů), dlouhodobá stabilita, neřeší bezodkladnost. Jsou to „dvě strany jedné mince“. Velké ztráty ovlivní likviditu přímo jen tehdy, pokud je třeba je hradit okamžitě, jinak zprostředkovaně přes reputační riziko.</div>
+
+                    <h4>3.7 Operační riziko a provozní odolnost (sl. 45–57)</h4>
+                    <div class="def-box"><strong>Operační riziko</strong> (sl. 48): obecně možnost ztráty v důsledku provozních nedostatků a chyb. Podle <strong>BIS (Basilej)</strong>: riziko ztráty vyplývající z <em>nedostatečnosti nebo selhání vnitřních procesů, osob a systémů nebo z externích událostí</em>. V širokém pojetí patří sem všechna rizika, která nelze přiřadit k úvěrovému, tržnímu nebo likviditnímu.</div>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Regulatorní pohled: kategorie událostí (sl. 50)</th><th>Obsah</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Podvod</strong> (fraud)</td><td>defraudace, zpronevěra, obcházení regulace; <em>interní</em> (zapojen alespoň 1 zaměstnanec) × <em>externí</em></td></tr>
+                            <tr><td><strong>Pracovní postupy a bezpečnost práce</strong></td><td>kompenzace zaměstnancům, nesoulad s předpisy, úrazy, diskriminace</td></tr>
+                            <tr><td><strong>Klienti, produkty a pracovní postupy</strong></td><td>porušení profesních povinností (nevhodný produkt), charakteristiky produktů</td></tr>
+                            <tr><td><strong>Zničení fyzických aktiv</strong></td><td>přírodní katastrofy a podobné události</td></tr>
+                            <tr><td><strong>Přerušení činnosti a selhání systémů</strong></td><td>nefunkční IS, zavření poboček</td></tr>
+                            <tr><td><strong>Selhání procesů, provádění a dodávek</strong></td><td>zpracování transakcí, procesní řízení, dodavatelé a partneři</td></tr>
+                        </tbody>
+                    </table>
+                    <p><em>Poznámka:</em> slide uvádí šest položek, protože <strong>podvod se dělí na interní a externí</strong>. Basilejské členění tak má <strong>sedm</strong> kategorií ztrátových událostí.</p>
+                    <p><strong>Funkční pohled</strong> (sl. 51–57): IT riziko · riziko třetích stran (outsourcing) · právní riziko · compliance a conduct risk · AML · daňové riziko · riziko modelů.</p>
+                    <ul>
+                        <li><strong>IT riziko</strong> (sl. 52): riziko ztrát ze selhání komponent IT (hardware, software, infrastruktura) nebo jejich nevhodnosti vzhledem k <em>dostupnosti, integritě a bezpečnosti</em>. Dílčí oblasti: dostupnost a kontinuita, zabezpečení (kybernetické útoky), změny IKT, integrita dat, externí zajištění IKT.</li>
+                        <li><strong>Třetí strany</strong> (sl. 53): riziko ztrát z neochoty, neschopnosti nebo nedbalosti poskytovatele služeb. Podoby: strategické, reputační, provozní, transakční, úvěrové, compliance.</li>
+                        <li><strong>Právní riziko</strong> (sl. 54): chyby v právní dokumentaci, chybné právní posouzení, nedostatky právního systému, zahraniční právo, nezapojení právníků. <strong>Compliance riziko</strong>: nesoulad se zákony, pravidly a kodexy → sankce, ztráty, ztráta dobrého jména. <strong>Daňové riziko</strong>: neočekávaná změna daňových závazků (chyby při výpočtu a platbě daní patří obvykle do operačního rizika).</li>
+                        <li><strong>Conduct risk</strong> (sl. 55): aktivity vedoucí k újmě zákazníků nebo zaměstnanců: <em>mis-selling</em>, tlak při křížovém prodeji, střet zájmů, <strong>manipulace referenčních sazeb</strong> a kurzů, bariéry změny poskytovatele, špatné distribuční kanály a odměňování, automatické obnovování produktů, neférové řešení stížností.</li>
+                        <li><strong>AML a financování terorismu</strong> (sl. 56): rizikové faktory (sankce, neobvyklé transakce, hotovost, nejasný původ peněz, složitá vlastnická struktura) → selhání KYC, monitoringu transakcí, hlášení podezřelých obchodů → primární dopad pokuty a reputační riziko, sekundární dopad obchodní a strategické riziko a riziko likvidity.</li>
+                        <li><strong>Riziko modelů</strong> (sl. 57): ztráta z toho, že model nesprávně reprezentuje realitu: chybná specifikace, nejistota parametrů, chybná implementace (nebo použití „mimo rozsah“). Je třeba rovnováha mezi složitostí modelu a nejistotou odhadu.</li>
+                    </ul>
+                    <div class="def-box"><strong>Provozní odolnost</strong> (operational resilience, sl. 46–47): schopnost zajistit <em>kritické nebo důležité služby</em> i při narušení běžné činnosti. Složky: identifikace hrozeb, obrana (prevence, příprava), reakce při materializaci, <strong>obnova činnosti</strong> (recovery plans), poučení z vlastních i cizích problémů. <strong>Řízení extrémních událostí</strong> má 4 fáze: <em>loss prevention</em> (snížení dopadu, včasné varování, přístup k riziku), <em>event preparedness</em> (plány zachování a obnovy činnosti a jejich testování), <em>event response</em> (krizové řízení během události), <em>recovery</em> (realizace plánu obnovy). Plány je žádoucí tvořit i s informacemi z událostí u jiných subjektů, protože expozici vůči operačnímu riziku nelze odvodit jen z vlastní historie (sl. 49).</div>
+                    <p><em>Doplněk (není ve slidech; neověřeno v původních předpisech):</em> kapitálový požadavek na operační riziko stanoví od 2025 jednotný standardizovaný přístup nařízení CRR3 založený na <em>business indicatoru</em>; ICT riziko, hlášení incidentů a dohled nad ICT dodavateli řeší nařízení <strong>DORA</strong> (platí od ledna 2025).</p>
+
+                    <h4>3.8 Ostatní a nově vznikající rizika (sl. 59–60, 79–89)</h4>
+                    <ul>
+                        <li><strong>Nově vznikající rizika</strong> (sl. 59–60): geopolitická, klimatická a environmentální (ESG), umělá inteligence, demografie a změna preferencí. Dopady se určují komplexními zátěžovými testy, citlivostními analýzami a expertním posouzením a promítají se do <em>existujících</em> rizik (likvidita, úvěrové, tržní, operační). <strong>Nezpůsobují změnu přístupu k řízení rizik, jen zvyšují komplexnost</strong>; vstupují do strategie, ICAAP/ILAAP, plánu kontinuity a ozdravného plánu, Risk Appetite a limitů.</li>
+                        <li><strong>Geopolitické riziko</strong> (sl. 85): přímé (expozice v rizikových zemích) a nepřímé (přerušení dodavatelských řetězců, cla, kybernetické útoky, AML sankce, nálada trhů). KRI: expozice v rizikových zemích, zahraniční obchod, makroekonomika, cla, bezpečnostní situace.</li>
+                        <li><strong>Umělá inteligence</strong> (sl. 79–84): přínosy (efektivita, méně chyb, kreativita) × rizika právní a etická (vysvětlitelnost, předsudky, soukromí), socioekonomická, bezpečnostní a existenční (AGI).</li>
+                        <li><strong>Ostatní rizika</strong> (sl. 86–88): obchodní riziko (nižší než očekávaný zisk z nepříznivých změn výnosů či nákladů; vyšší u institucí s vysokými fixními náklady), strategické riziko (nevhodné strategické rozhodnutí nebo neschopnost je realizovat), reputační, systémové, riziko kapitálového plánování, makroekonomické, penzijní, pojistné, riziko vlastních fixních aktiv, riziko koncentrace přes rizika (inter-risk), riziko nadměrné páky, step-in risk.</li>
+                        <li><strong>Globální kontext</strong> (sl. 13–18): existenční rizika (Ord, <em>Nad propastí</em>, 2022), <em>Global Risks Report 2026</em> (WEF); ekonomická rizika s dopadem na EU: geopolitické napětí, cla, narušení dodavatelských řetězců, volatilita trhů, fiskální nejistota, silné EUR, extrémní klima.</li>
+                    </ul>
+
+                    <h4>3.9 Proč a jak se rizika regulují (doplněk)</h4>
+                    <p><em>Osnova zahrnuje „důvody a způsoby regulace rizik“, ve slidech Palána tato část není (jen odkazy na ICAAP/ILAAP, Pilíř 1 a ozdravný plán). Níže je obecná teorie, ne požadavek konkrétní přednášky.</em></p>
+                    <ul>
+                        <li><strong>Důvody:</strong> banky jsou vysoce zadlužené (kapitál ≈ 8 %, téma 1), selhání jedné se šíří (systémové riziko, nákaza), vkladatelé nemohou posoudit jejich rizikovost (informační asymetrie) a pojištění vkladů a pomoc centrální banky vyvolávají <em>morální hazard</em>.</li>
+                        <li><strong>Způsoby:</strong> kapitálové požadavky (Pilíř 1), likviditní požadavky (LCR, NSFR), limity koncentrace, dohledové hodnocení (Pilíř 2: ICAAP, SREP), zveřejňování (Pilíř 3), plány ozdravení a řešení krize. Podrobně v tématech 11 a 14.</li>
+                    </ul>
+
+                    <div class="summary-box"><strong>Shrnutí:</strong>
+                        <ul>
+                            <li>Riziko = nežádoucí odchylka od očekávání; úroveň = hodnota aktiva × zranitelnost × úroveň hrozby.</li>
+                            <li>Jedna událost se projeví v P&amp;L, likviditě i kapitálu; rizika nelze posuzovat izolovaně.</li>
+                            <li>Matice frekvence × dopad: nízká/velký dopad = kapitál; vysoká/malý = očekávané ztráty a KRI; vysoká/velký = neslučitelné s životaschopností.</li>
+                            <li>Čtyři přístupy: odmítnout, přenést, přizpůsobit se, přijmout.</li>
+                            <li>Solventnost (hodnota aktiv vs pasiv) × likvidita (platit včas) jsou dvě strany jedné mince.</li>
+                            <li>Operační riziko podle Basileje: procesy, lidé, systémy, externí události; funkčně IT, třetí strany, právní, compliance/conduct, AML, daně, modely.</li>
+                            <li>Nová rizika (ESG, AI, geopolitika) nemění přístup, jen zvyšují komplexnost a promítají se do standardních rizik.</li>
+                        </ul>
+                    </div>
+                    <p class="mb-0"><a href="../quiz.html?course=1BP403&topic=3"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
+                </section>
+
+                <section class="topic-section" id="topic-4">
+                    <h3>4. Úrokové riziko</h3>
+                    <p class="text-muted small">Přednáška návrh 7. 10. · Palán (definice, složky) · zdroj: slidy <em>Rizika v bankovnictví</em> (<code>TaxonomieRizik.pdf</code>, sl. 41–44). Metody měření (GAP, durace, simulace) ve slidech nejsou, jsou označeny <em>doplněk</em> a vycházejí z osnovy kurzu a literatury (MacDonald &amp; Koch)</p>
+
+                    <h4>4.1 Podstata (sl. 42–43)</h4>
+                    <div class="def-box"><strong>Úrokové riziko</strong> je současné i budoucí riziko pro <strong>zisk i ekonomickou hodnotu</strong> instituce způsobené nepříznivými pohyby úrokových sazeb, které ovlivňují nástroje citlivé na sazby.</div>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Pohled na výnos (NII, „zisk“)</th><th>Pohled na hodnotu (EVE, „ekonomická hodnota“)</th></tr></thead>
+                        <tbody>
+                            <tr><td>mění se <em>budoucí výnosy a náklady</em>. Při refixaci (např. hypotéky) nebo nahrazení pozic novými se změna sazeb <strong>postupně</strong> promítá do úrokových výnosů a nákladů. Produkty s variabilní sazbou reagují rychle, s fixní pomaleji.</td><td>mění se <em>ceny aktiv a pasiv</em>. Týká se pozic v reálné hodnotě do zisku nebo do OCI, ale i pozic v naběhlé hodnotě, které musí banka prodat dřív, než se změní jejich sazba nebo než dosáhnou splatnosti.</td></tr>
+                        </tbody>
+                    </table>
+                    <ul>
+                        <li>Výše rizika závisí na <strong>současné i budoucí struktuře úrokově citlivých aktiv a pasiv</strong> (rozvahových i podrozvahových). Pokud se úroková citlivost aktiv v kterémkoli okamžiku nerovná citlivosti pasiv, je banka vystavena úrokovému riziku.</li>
+                        <li>Úplné vyloučení rizika by znamenalo rovnováhu aktiv a pasiv v časové struktuře <em>přecenění/splatností</em>, a to <strong>v každé měně zvlášť</strong>.</li>
+                        <li><strong>Otevřená úroková pozice</strong> v rámci schválených limitů může být zdrojem zisku i ztráty.</li>
+                        <li>Při <strong>poklesu sazeb</strong> může úrokový zisk klesnout <em>bez ohledu na strukturu aktiv a pasiv</em>, protože banka nedokáže pokles plně přenést na vkladatele (zejména záporné sazby). V prostředí dlouhodobě nízkých sazeb vede situace často k nízké ziskovosti.</li>
+                    </ul>
+
+                    <h4>4.2 Složky úrokového rizika bankovní knihy – IRRBB (sl. 44)</h4>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Složka</th><th>Podstata</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Gap risk</strong> (riziko časových rozdílů)</td><td>časový nesoulad přecenění (resp. splatností) nástrojů citlivých na sazby = <em>refinanční a reinvestiční riziko</em>. Posun výnosové křivky může být <em>paralelní</em> (stejný podél celé křivky) nebo <em>neparalelní</em> (liší se podle doby přecenění)</td></tr>
+                            <tr><td><strong>Bazické riziko</strong> (basis risk)</td><td>relativní změny sazeb u nástrojů s podobnou splatností, ale <em>oceněných různými referenčními sazbami</em>, a nedokonalá korelace změn výnosových a nákladových sazeb</td></tr>
+                            <tr><td><strong>Opční riziko</strong> (option risk)</td><td>vložené i explicitní opce, kdy banka nebo klient může měnit výši a načasování peněžních toků. Držitel opci téměř jistě uplatní, když je to v jeho zájmu. Zahrnuje <em>behaviorální opce</em> (změna chování klienta po změně sazeb, např. předčasné splacení)</td></tr>
+                            <tr><td><strong>Riziko úvěrového rozpětí</strong> (credit spread risk)</td><td>změny vnímání trhu ohledně ceny úvěrového rizika, přirážky za likviditu a dalších složek, které nevysvětlí IRRBB ani (náhlé) úvěrové selhání</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h4>4.3 Měření: GAP analýza (doplněk)</h4>
+                    <div class="def-box"><strong>GAP (repricing gap)</strong> v časovém pásmu: $\text{GAP} = RSA - RSL$, tedy úrokově citlivá aktiva (rate sensitive assets) minus úrokově citlivá pasiva. Změna čistého úrokového výnosu: $\Delta NII \approx \text{GAP}\cdot\Delta r$. <strong>Kumulativní gap</strong> je součet gapů za pásma od nejkratšího.</div>
+                    <div class="ex-box"><strong>Příklad (vlastní):</strong> do 1 roku RSA = 400, RSL = 300 → GAP = +100. Sazby +1 p. b. → ΔNII = +100 · 0,01 = +1. Sazby −1 p. b. → −1. <strong>Kladný gap = banka profituje z růstu sazeb</strong> (aktiva se přeceňují dřív než pasiva). Záporný gap profituje z poklesu.</div>
+                    <ul>
+                        <li>Výhoda: jednoduchost, srozumitelnost. Nevýhody: pracuje s přeceněním, ne s hodnotou; neřeší opční riziko ani bazické riziko; předpokládá paralelní posun.</li>
+                    </ul>
+
+                    <h4>4.4 Měření: durační analýza a EVE (doplněk)</h4>
+                    <div class="thm-box"><strong>Durační gap (pohled na hodnotu):</strong> $\Delta EVE \approx -\left(D_A\cdot A - D_L\cdot L\right)\dfrac{\Delta y}{1+y}$. Čím delší je durace aktiv oproti pasivům, tím víc hodnota kapitálu klesá při růstu sazeb.</div>
+                    <div class="ex-box"><strong>Příklad:</strong> A = 100, L = 90, $D_A$ = 4, $D_L$ = 2, y = 5 %, Δy = +1 p. b.<br>
+                        1) $D_A\cdot A = 400$, $D_L\cdot L = 180$ → rozdíl 220.<br>
+                        2) $\Delta EVE \approx -220\cdot 0{,}01/1{,}05 \approx -2{,}1$.<br>
+                        3) Kapitál $= A - L = 10$ → ztráta ≈ <strong>21 % kapitálu</strong> z posunu sazeb jen o 1 p. b.</div>
+                    <ul>
+                        <li><strong>NII × EVE:</strong> NII = krátkodobý pohled na výnos, EVE (ekonomická hodnota kapitálu) = dlouhodobý pohled na hodnotu aktiv minus pasiv.</li>
+                        <li><strong>Simulace:</strong> modelování NII a EVE v různých scénářích vývoje sazeb a chování klientů (včetně opcí). Zachytí i opční a bazické riziko, ale je náročná na předpoklady.</li>
+                        <li><strong>IRRBB regulace</strong> ✔ (EBA/RTS/2022/10, ověřeno): <strong>šest standardních šokových scénářů</strong> (paralelní nahoru/dolů, steepener, flattener, krátké sazby nahoru/dolů) a <strong>supervisory outlier test</strong>: pokles EVE o více než <strong>15 % Tier 1</strong> (u některého scénáře) spouští dohledovou pozornost; test se týká i velkého poklesu NII. Zdroj: <a href="https://www.eba.europa.eu/sites/default/files/document_library/Publications/Draft%20Technical%20Standards/2022/EBA-RTS-2022-10%20RTS%20on%20SOTs/1041756/Final%20draft%20RTS%20on%20SOTs.pdf" target="_blank" rel="noopener">EBA</a>.</li>
+                        <li>Řízení: úrokové swapy, FRA (téma 6), struktura splatností, limity.</li>
+                    </ul>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> <strong>kladný gap + růst sazeb = zisk, záporný gap + růst sazeb = ztráta.</strong> Metody ale mohou dávat <em>opačný signál</em>: banka s kladným gapem do 1 roku může mít zároveň dlouhodobá aktiva s vysokou durací, takže při růstu sazeb zvýší NII, ale <strong>ztratí na hodnotě</strong> ($D_A\cdot A &gt; D_L\cdot L$ → ΔEVE &lt; 0). Nezaměňuj pohled NII (gap) a EVE (durace).</div>
+
+                    <div class="summary-box"><strong>Shrnutí:</strong>
+                        <ul>
+                            <li>Úrokové riziko dopadá na zisk (NII) i na hodnotu (EVE); závisí na nesouladu přecenění aktiv a pasiv v každé měně.</li>
+                            <li>IRRBB: gap risk (paralelní × neparalelní), bazické, opční (vč. behaviorálních opcí), credit spread risk.</li>
+                            <li>GAP = RSA − RSL, ΔNII ≈ GAP · Δr; durační gap měří dopad na EVE.</li>
+                            <li>Pokles sazeb škodí bance i s vyrovnanou strukturou, protože sazby vkladů nejdou snížit pod nulu.</li>
+                        </ul>
+                    </div>
+                    <p class="mb-0"><a href="../quiz.html?course=1BP403&topic=4"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
+                </section>
+
+                <section class="topic-section" id="topic-5">
+                    <h3>5. Tržní riziko</h3>
+                    <p class="text-muted small">Přednáška návrh 7. 10. · Palán · zdroj: slidy <em>Rizika v bankovnictví</em> (<code>TaxonomieRizik.pdf</code>, sl. 36–40). VaR a měnová pozice ve slidech nejsou, jsou označeny <em>doplněk</em> (osnova uvádí „podstatu VaR, interpretaci, výhody a nevýhody“)</p>
+
+                    <h4>5.1 Podstata a specifika (sl. 37)</h4>
+                    <div class="def-box"><strong>Tržní riziko</strong> jsou rizika ze změn tržních cen (kurzů, sazeb) na finančních trzích. Je to souhrnný pojem pro <strong>úrokové, měnové, akciové</strong> a jiná rizika spojená s pohybem cen. Týká se obvykle aktiv v portfoliu <em>k obchodování</em> (trading), ale může se týkat i jiných účetních portfolií. Řízení = <strong>systém limitů pro obchodování</strong>.</div>
+                    <ul>
+                        <li><strong>Rychlost:</strong> ceny se mění rychle a výrazně, takže se zisk banky může během krátké doby výrazně změnit a odpovědné osoby musí reagovat rychle.</li>
+                        <li><strong>Komplexnost:</strong> některé transakce a obchodní techniky (např. <em>high frequency trading</em>).</li>
+                        <li><strong>Způsoby oceňování:</strong> tržní cenou, uznávaným modelem s tržními vstupy, jinak. Expozice často závisí na <strong>matematických modelech</strong> (riziko modelů).</li>
+                        <li><strong>Dynamika portfolia:</strong> banka při ztrátách uzavírá pozice, pokud to <em>likvidita trhu</em> dovolí (riziko tržní likvidity).</li>
+                        <li><strong>Koncentrace a korelace:</strong> v krizích korelace prudce roste.</li>
+                    </ul>
+
+                    <h4>5.2 Obchodní portfolio (sl. 38)</h4>
+                    <ul>
+                        <li>Obsahuje nástroje obchodovatelné na sekundárních trzích držené za účelem <strong>zisku ze změny ceny</strong>; banka nese riziko krátce a při nepříznivém vývoji pozici uzavírá.</li>
+                        <li>Nástroje se přeceňují na <strong>tržní bázi</strong> a změny cen jdou <strong>přímo do zisku nebo ztráty</strong>.</li>
+                        <li>Pokud banka modeluje riziko s horizontem jednoho či několika dnů (např. VaR), může expozici <strong>podcenit</strong>: v krizi 2008–2009 nebylo možné pozice včas uzavřít a banky je nesly déle, než předpokládaly.</li>
+                        <li>Banka musí mít <strong>striktní pravidla pro zařazování</strong> do obchodního a investičního portfolia i pro přesuny mezi nimi (výjimečné). Důvod: různé přístupy k oceňování a regulatorní dopady. V minulosti banky <strong>profitovaly z účelového přesouvání</strong> expozic do obchodního portfolia, kde byl mírnější kapitálový požadavek.</li>
+                    </ul>
+
+                    <h4>5.3 Podtypy tržního rizika (sl. 39)</h4>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Typ transakcí</th><th>Typ rizika</th></tr></thead>
+                        <tbody>
+                            <tr><td>akcie</td><td><strong>akciové riziko</strong> (equity risk)</td></tr>
+                            <tr><td>státní a korporátní dluhopisy, deriváty (fixed income) v obchodním portfoliu</td><td><strong>úrokové riziko obchodního portfolia</strong></td></tr>
+                            <tr><td>měnové nástroje (spot, forward, futures, CCS…) v obchodní i bankovní knize</td><td><strong>měnové riziko</strong> (FX mismatch risk)</td></tr>
+                            <tr><td>komodity (ropa, plyn, zemědělské produkty, elektřina, CO₂ povolenky)</td><td><strong>komoditní riziko</strong></td></tr>
+                            <tr><td>sekuritizace a resekuritizace (např. CDO)</td><td><strong>securitization risk</strong></td></tr>
+                            <tr><td>úvěry v cizí měně a obdobné pohledávky v investičním portfoliu</td><td><strong>strukturální měnové riziko</strong></td></tr>
+                            <tr><td>deriváty</td><td><strong>riziko CVA</strong> (úprava ocenění o úvěrové riziko protistrany)</td></tr>
+                        </tbody>
+                    </table>
+                    <ul>
+                        <li><strong>Obecné riziko</strong> = změna ceny v důsledku pohybu celého relevantního trhu. <strong>Specifické riziko</strong> = změna ceny instrumentu vyvolaná změnami na straně emitenta (vazba na úvěrové riziko).</li>
+                        <li>Úrokové riziko <em>investičního (bankovního)</em> portfolia je vyčleněno do samostatné kategorie (téma 4); měnové riziko vyčleněno není.</li>
+                    </ul>
+
+                    <h4>5.4 Riziko tržní likvidity (sl. 40)</h4>
+                    <div class="def-box"><strong>Riziko tržní likvidity</strong> = schopnost banky <em>uzavřít rizikovou pozici</em> (tím určuje velikost rizika). <strong>Realizační cena</strong> instrumentu závisí na <em>střední ceně</em> (mid-market price), na <em>objemu</em> (větší objem → nižší cena a širší <strong>bid-ask spread</strong>, který roste s objemem exponenciálně), na <em>době</em>, ve které chce banka prodat (kratší → nižší cena) a na ekonomických podmínkách.</div>
+                    <ul>
+                        <li><strong>Fire-sale:</strong> nucený výprodej za nevýhodnou cenu, když pro aktivum není dostatečně široký a hluboký trh.</li>
+                        <li><strong>Liquidity black-hole:</strong> více subjektů chce současně zavřít pozice (příliš nabídky, minimum poptávky).</li>
+                        <li><strong>Predatory trading:</strong> ostatní zneužijí situace, kdy někdo musí zavřít pozici → banky utajují zamýšlené operace.</li>
+                        <li>Riziko se přenáší do <strong>zisku</strong> (aktiva v reálné hodnotě do P&amp;L) a do <strong>vlastních zdrojů</strong> (reálná hodnota do OCI); roste i požadavek na kolaterál (vyšší haircut) a problémy se šíří skupinou aktiv (rostoucí korelace).</li>
+                    </ul>
+
+                    <h4>5.5 Value at Risk – VaR (doplněk)</h4>
+                    <div class="def-box"><strong>VaR</strong> je ztráta, která při dané pravděpodobnosti (např. 99 %) a na daném horizontu <em>nebude překročena</em>. Metody: <strong>historická simulace</strong>, <strong>parametrická</strong> (variance-kovariance, předpoklad normality), <strong>Monte Carlo</strong>.</div>
+                    <div class="ex-box"><strong>Příklad (parametrická metoda):</strong> pozice 10 mil. Kč, denní směrodatná odchylka výnosu σ = 1 %.<br>
+                        1) VaR 1 den, 99 % = $2{,}33\cdot 1\,\% \cdot 10 = 0{,}233$ mil. Kč.<br>
+                        2) VaR 10 dní = $0{,}233\cdot\sqrt{10} \approx 0{,}737$ mil. Kč (odmocninové pravidlo času).</div>
+                    <ul>
+                        <li><strong>Výhody:</strong> jedno číslo srovnatelné napříč portfolii a limity, snadná komunikace. <strong>Nevýhody:</strong> neříká nic o velikosti ztráty v 1 % nejhorších případů, závisí na modelu a datech (podhodnocení v krizích).</li>
+                        <li><strong>Backtesting:</strong> srovnání VaR se skutečnými ztrátami. <strong>Stresové testy</strong> doplňují VaR o extrémní scénáře. <em>Expected Shortfall</em> (průměrná ztráta v ocasu) používá nový rámec FRTB.</li>
+                    </ul>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> VaR 99 % znamená, že ztráta by měla být překročena <em>v 1 dni ze 100</em>, nikoli že je „maximální ztráta“. Při horizontu několika málo dnů může podcenit riziko, když nejde pozici uzavřít (sl. 38).</div>
+
+                    <h4>5.6 Měnové riziko (doplněk)</h4>
+                    <p><strong>Otevřená devizová pozice</strong> v dané měně = aktiva − pasiva (včetně podrozvahy, např. forwardů). <strong>Dlouhá</strong> pozice (aktiva &gt; pasiva) ztrácí, když domácí měna posílí vůči cizí; <strong>krátká</strong> ztrácí, když cizí měna posílí. <strong>Celková pozice</strong> = větší ze součtu dlouhých a součtu krátkých pozic.</p>
+                    <div class="ex-box"><strong>Příklad:</strong> EUR +15, GBP +4 (dlouhé), USD −8 (krátká) → součet dlouhých 19, krátkých 8 → <strong>celková otevřená pozice = 19</strong>. Zajištění: FX forward, FX swap (téma 6).</div>
+
+                    <div class="summary-box"><strong>Shrnutí:</strong>
+                        <ul>
+                            <li>Tržní riziko = změny cen (úroky, kurzy, akcie, komodity); řízené systémem limitů.</li>
+                            <li>Obchodní portfolio se přeceňuje do P&amp;L; pravidla pro zařazení a přesuny jsou přísná (regulatorní arbitráž).</li>
+                            <li>Obecné × specifické riziko; strukturální měnové riziko a CVA jsou samostatné podtypy.</li>
+                            <li>Riziko tržní likvidity: velký objem → širší spread; fire-sale, liquidity black-hole, predatory trading.</li>
+                            <li>VaR škáluje odmocninou času a neříká nic o ocasu rozdělení.</li>
+                        </ul>
+                    </div>
+                    <p class="mb-0"><a href="../quiz.html?course=1BP403&topic=5"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
+                </section>
+
+                <section class="topic-section" id="topic-6">
+                    <h3>6. Forward rate agreement (FRA)</h3>
+                    <p class="text-muted small">Přednáška návrh 14. 10. · doc. Dvořák · zdroj: slidy <em>Forwardové kontrakty</em> (Dvořák 2026, <code>Forwardy_26.pdf</code>, čísla slidů v závorkách); literatura slidů: Dvořák, P.: <em>Deriváty</em>, skripta VŠE. Číselné příklady jsou <strong>vlastní modelové</strong> (vzorce jsou ze slidů, čísla ne)</p>
+
+                    <div class="insight-box"><strong>Cíl přednášky</strong> (sl. 2): vysvětlit konstrukci zejména úrokových forwardů, analyzovat faktory určující termínové úrokové sazby a objasnit využití k zajištění úrokového rizika. V testu čekejte: <strong>výpočet plnění z FRA</strong>, <strong>odvození FRA sazby</strong>, <strong>kdo platí komu</strong> a <strong>jak se FRA používá k zajištění</strong>.</div>
+
+                    <h4>6.1 Forward a jeho druhy (sl. 3–7)</h4>
+                    <div class="def-box"><strong>Forwardový kontrakt</strong> je dohoda dvou stran, z nichž <strong>kupující</strong> má právo <em>a povinnost</em> koupit (dlouhá pozice), resp. <strong>prodávající</strong> prodat (krátká pozice) podkladový instrument v určitý čas v budoucnosti za <strong>dnes sjednanou forwardovou cenu</strong>. <strong>Při sjednání neprobíhá žádná platba</strong>; kupující platí až při realizaci ve splatnosti (sl. 3).</div>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Druh forwardu</th><th>Obsah (sl. 4)</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Úrokový forward</strong></td><td>dohoda o směně dvou úrokových plateb v jedné měně vztahujících se k určitému období v budoucnosti (→ FRA)</td></tr>
+                            <tr><td><strong>Měnový (devizový) forward</strong></td><td>dohoda o směně dvou částek v různých měnách k určitému datu v budoucnosti v předem dohodnutém kurzu</td></tr>
+                            <tr><td><strong>Akciový forward</strong></td><td>koupě (prodej) akciového instrumentu k datu v budoucnosti za předem dohodnutou cenu</td></tr>
+                            <tr><td><strong>Komoditní forward</strong></td><td>koupě (prodej) komodity k datu v budoucnosti za předem dohodnutou cenu</td></tr>
+                        </tbody>
+                    </table>
+                    <p>Slidy 5–7 ukazují data BIS o objemu FX trhu (podíl měn, typ instrumentu, protistrana); FX forwardy a swapy jsou jeho významnou částí.</p>
+
+                    <h4>6.2 Měnový forward a FX swap (sl. 8–11)</h4>
+                    <ul>
+                        <li><strong>Forward:</strong> 1. fáze sjednání (pevně se dohodne <em>forwardový kurz, objem a termín</em>), 2. fáze realizace (směna částek v různých měnách v dohodnutém kurzu).</li>
+                        <li><strong>FX swap</strong> (sl. 9): na počátku směna kapitálů ve <em>spotovém kurzu</em>, ve splatnosti <em>zpětná směna</em> ve <em>forwardovém kurzu</em>. Umožňuje získat jednu měnu na určitou dobu bez měnového rizika, protože zpětná směna je pevně sjednána.</li>
+                    </ul>
+                    <div class="thm-box"><strong>Ocenění měnového forwardu</strong> (sl. 10–11) z arbitráže: dva investoři mají stejnou částku v CZK a chtějí mít v $T_1$ eura. <em>A</em> směňuje CZK za EUR ve spotovém kurzu a ukládá v EUR s úrokem v EUR. <em>B</em> ukládá v CZK s úrokem v CZK a zároveň sjedná forwardový prodej CZK za EUR. Při stejné investici, riziku a době musí být výsledná částka v EUR shodná:<br>
+                        $$F_K = S_K\cdot\dfrac{1+\dfrac{p_{CZK}\cdot t}{36000}}{1+\dfrac{p_{EUR}\cdot t}{36000}}$$
+                        $S_K$ spotový kurz EUR/CZK, $F_K$ forwardový kurz, $p_{CZK}, p_{EUR}$ spotové sazby v % p.a., $t$ doba do splatnosti ve dnech (základ 360).</div>
+                    <div class="ex-box"><strong>Příklad:</strong> $S_K = 25{,}00$, $p_{CZK}=4\,\%$, $p_{EUR}=2\,\%$, $t = 180$ dní.<br>
+                        1) Čitatel: $1 + 4\cdot180/36000 = 1{,}02$. Jmenovatel: $1 + 2\cdot180/36000 = 1{,}01$.<br>
+                        2) $F_K = 25{,}00\cdot 1{,}02/1{,}01 \approx \mathbf{25{,}2475}$ CZK/EUR.<br>
+                        3) Forwardové body: $+0{,}2475$. EUR je na forwardu <strong>dražší</strong>, protože CZK má vyšší sazbu (a je na forwardu slabší).</div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> forwardový kurz <strong>není předpověď</strong> budoucího spotu. Plyne z úrokového rozdílu (krytá úroková parita). Měna s vyšší sazbou je na forwardu vždy slabší (kotuje se s diskontem).</div>
+
+                    <h4>6.3 Podstata FRA (sl. 12–20)</h4>
+                    <div class="def-box"><strong>Forward rate agreement (FRA)</strong> = dohoda o termínové úrokové sazbě: <strong>OTC kontrakt</strong>, pevná dohoda dvou subjektů o budoucí <em>směně dvou úrokových plateb (fix–float)</em> ve stejné měně vztahujících se k dohodnuté <strong>nominální částce</strong> a období v budoucnosti. Umožňuje <em>zafixovat sazbu</em> budoucího úvěru či depozita, popř. „změnit“ pohyblivé úročení pohledávky či závazku na fixní nebo naopak (sl. 12).</div>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Náležitost smlouvy (sl. 15)</th><th>Obsah</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Subjekty</strong> (counterparties)</td><td><strong>kupující FRA</strong> (long) = fixuje si sazbu pro budoucí <em>úvěr</em>; <strong>prodávající</strong> (short) = fixuje sazbu pro budoucí <em>depozitum</em> (sl. 16)</td></tr>
+                            <tr><td><strong>FRA sazba</strong> (forward rate)</td><td>pevná sazba sjednaná v den uzavření</td></tr>
+                            <tr><td><strong>FRA období</strong> (contract period)</td><td>úrokové období, k němuž se sazba vztahuje (délka a počátek v budoucnosti); zápis <strong>FRA 3 × 6</strong> = začíná za 3 měsíce, končí za 6, trvá 3 měsíce (sl. 17)</td></tr>
+                            <tr><td><strong>Nominální hodnota</strong> (notional)</td><td>slouží <em>jen k odvození výše plnění</em>; <strong>mezi stranami se nepřesouvá</strong> (na rozdíl od forward-forward kontraktu), proto „pomyslná“ (sl. 18)</td></tr>
+                            <tr><td><strong>Měna</strong></td><td>měna kontraktu</td></tr>
+                            <tr><td><strong>Referenční sazba</strong></td><td>tržní sazba, jejíž výše v <em>rozhodný den</em> na počátku FRA období určuje plnění. Podmínky (sl. 19): odráží úroveň tržních sazeb pro <em>délku FRA období</em>; <em>způsob stanovení je předem jednoznačně dán</em>; <em>žádná strana ji nemůže ovlivnit</em> ve svůj prospěch</td></tr>
+                            <tr><td><strong>Termín plnění</strong> (settlement date)</td><td>den, kdy se vyrovnání vypočte a zaplatí</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h4>6.4 Plnění z FRA (sl. 21–24)</h4>
+                    <div class="thm-box"><strong>Kdo platí komu</strong> (sl. 22): sjednaná FRA sazba se srovnává s referenční sazbou na počátku FRA období.<br>
+                        • <strong>Referenční sazba &gt; FRA sazba</strong> (tržní sazby vyrostly) → <strong>prodávající platí kupujícímu</strong>.<br>
+                        • <strong>Referenční sazba &lt; FRA sazba</strong> (sazby klesly) → <strong>kupující platí prodávajícímu</strong>.<br>
+                        Kupující (long) tedy profituje z <strong>růstu</strong> sazeb, prodávající (short) z jejich <strong>poklesu</strong> (sl. 16).</div>
+                    <div class="thm-box"><strong>Výše plnění</strong> (sl. 23–24), $p_{REF}$ referenční sazba, $p_{FRA}$ sjednaná sazba (obě v % p.a.), $t_{FRA}$ délka FRA období ve dnech, $NH$ nominál:<br>
+                        $$\text{Platba}_{T_2} = \dfrac{(p_{REF}-p_{FRA})\cdot t_{FRA}\cdot NH}{360\cdot100}$$
+                        Plnění se však vyrovnává už na <strong>začátku</strong> období (v $T_1$), proto se <strong>diskontuje referenční sazbou</strong> za dobu $t_{FRA}$:
+                        $$\text{Platba}_{T_1} = \dfrac{(p_{REF}-p_{FRA})\cdot t_{FRA}\cdot NH}{36000 + p_{REF}\cdot t_{FRA}}$$
+                        Kladný výsledek = platí prodávající kupujícímu, záporný = obráceně.</div>
+                    <div class="ex-box"><strong>Příklad (plnění):</strong> FRA 3 × 6, $NH = 100$ mil. Kč, $p_{FRA} = 4{,}00\,\%$, $t_{FRA} = 90$ dní. Za 3 měsíce je referenční sazba $p_{REF} = 4{,}60\,\%$.<br>
+                        1) Sazby vyrostly ($4{,}60 &gt; 4{,}00$) → <strong>prodávající platí kupujícímu</strong>.<br>
+                        2) Platba v $T_2$: $\dfrac{(4{,}60-4{,}00)\cdot 90\cdot 100\,000\,000}{36000} = \mathbf{150\,000}$ Kč.<br>
+                        3) Platba v $T_1$ (skutečné vyrovnání): $\dfrac{150\,000}{1 + 4{,}60\cdot 90/36000} = \dfrac{150\,000}{1{,}0115} \approx \mathbf{148\,295}$ Kč.<br>
+                        Při $p_{REF} = 3{,}60\,\%$ by vyšlo $\frac{(3{,}60-4{,}00)\cdot 90\cdot 100\,000\,000}{36000} = −100\,000$ Kč v $T_2$ → <strong>platí kupující prodávajícímu</strong>.</div>
+
+                    <h4>6.5 Využití FRA k zajištění (sl. 21)</h4>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Motivace</th><th>Pozice ve FRA</th><th>Základní transakce</th></tr></thead>
+                        <tbody>
+                            <tr><td>zajištění proti <strong>růstu</strong> sazeb</td><td><strong>kupující FRA</strong> (long): platí FRA sazbu, dostává referenční</td><td>přijetí <em>pohyblivě</em> úročeného <strong>úvěru</strong> (úroky vázané na referenční sazbu)</td></tr>
+                            <tr><td>zajištění proti <strong>poklesu</strong> sazeb</td><td><strong>prodávající FRA</strong> (short): platí referenční, dostává FRA sazbu</td><td>uložení pohyblivě úročeného <strong>depozita</strong> / koupě pohyblivě úročeného dluhopisu</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="ex-box"><strong>Příklad (zajištění úvěru):</strong> firma si za 3 měsíce vezme tříměsíční úvěr 100 mil. Kč na pohyblivou sazbu a bojí se růstu sazeb. Koupí FRA 3 × 6 s $p_{FRA} = 3{,}97\,\%$. Za 3 měsíce $p_{REF} = 4{,}60\,\%$.<br>
+                        1) Úrok z úvěru: $100\,000\,000\cdot 0{,}046\cdot 90/360 = 1\,150\,000$ Kč.<br>
+                        2) FRA vyrovnání (firma jako kupující dostává): $\dfrac{(4{,}60-3{,}97)\cdot 90\cdot 100\,000\,000}{36000} = 157\,500$ Kč (v $T_2$).<br>
+                        3) Čistý náklad: $1\,150\,000 - 157\,500 = 992\,500$ Kč = $3{,}97\,\%$ z $25$ mil. (čtvrtletní základ) → <strong>efektivní sazba přesně 3,97 %</strong>, nezávisle na tom, kam sazby šly.<br>
+                        Kdyby sazby klesly na 3,40 %, FRA vyjde záporné: firma doplatí, ale zaplatí méně na úvěru; efektivní sazba je opět 3,97 %. <strong>Zajištění fixuje sazbu, zbavuje i prospěchu z poklesu.</strong></div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> kdo je dlouhý a kdo krátký. <strong>Dlužník FRA kupuje</strong> (long, platí fix). <strong>Střadatel/investor FRA prodává</strong> (short). U opcí je tomu jinak: kupující opce má právo, ale u FRA má <em>povinnost</em> (je to pevný derivát).</div>
+
+                    <h4>6.6 Odvození rovnovážné FRA sazby (sl. 25–30)</h4>
+                    <div class="def-box"><strong>Cena × hodnota</strong> (sl. 25): <strong>cena</strong> = termínová cena, za kterou se kontrakt sjedná a realizuje (nebo rovnovážná teoretická cena z modelu); <strong>hodnota</strong> = aktuální zisk či ztráta při okamžitém uzavření pozice. Při sjednání je <em>hodnota FRA nulová</em>.<br>
+                        <strong>Podmínky dokonalého trhu</strong> (sl. 26, Jarrow &amp; Turnbull): žádné transakční náklady, bid-ask spread, marže, restrikce short sellingu, daně; žádné riziko protistrany; konkurenční trhy (price takers); subjekty preferují více bohatství; ceny se přizpůsobí tak, že <strong>neexistují arbitráže</strong>.</div>
+                    <p><strong>Princip</strong> (sl. 27–29): investor má kapitál $K$ na dobu $t$ (do $T_2$). <em>Strategie A:</em> uloží ho rovnou na dobu $t$ za spotovou sazbu $p$. <em>Strategie B:</em> uloží ho na kratší dobu $t_1$ za sazbu $p_1$, současně sjedná <strong>short FRA</strong> (prodávající, fixuje si výnos), a v $T_1$ reinvestuje celou částku (i s úrokem) na dobu $t_{FRA}$. Při stejné investici, riziku a době musí být výnos stejný. Ekvivalentně: hodnota FRA na počátku je 0, tedy součet současných hodnot budoucích peněžních toků je 0.</p>
+                    <div class="thm-box"><strong>Rovnovážná FRA sazba</strong> (sl. 29):
+                        $$p_{FRA} = \dfrac{(p\cdot t - p_1\cdot t_1)\cdot 36000}{(36000 + p_1\cdot t_1)\cdot t_{FRA}}$$
+                        $p_1$ spotová sazba na období $T_0T_1$ (délka $t_1$ dní), $p$ spotová sazba na období $T_0T_2$ (délka $t$ dní), $t_{FRA} = t - t_1$.</div>
+                    <div class="ex-box"><strong>Příklad:</strong> FRA 3 × 6: $p_1 = 3{,}0\,\%$ na 90 dní, $p = 3{,}5\,\%$ na 180 dní, $t_{FRA} = 90$ dní.<br>
+                        1) Čitatel: $(3{,}5\cdot180 - 3{,}0\cdot90)\cdot36000 = (630-270)\cdot36000 = 12\,960\,000$.<br>
+                        2) Jmenovatel: $(36000+3{,}0\cdot90)\cdot90 = 36270\cdot90 = 3\,264\,300$.<br>
+                        3) $p_{FRA} = 12\,960\,000/3\,264\,300 \approx \mathbf{3{,}970\,\%}$.<br>
+                        Kontrola: $(1+0{,}03\cdot\tfrac{90}{360})(1+f\cdot\tfrac{90}{360}) = 1+0{,}035\cdot\tfrac{180}{360}$ → $f = 3{,}970\,\%$ ✔.</div>
+                    <div class="insight-box"><strong>Intuice:</strong> FRA sazba je <em>sazba implicitní ve výnosové křivce</em>. Roste-li křivka (delší sazba vyšší, $p&gt;p_1$), je FRA sazba <em>vyšší</em> než $p$. Banka kotuje FRA sazby z křivky: <strong>nákup</strong> (banka platí fix) za nižší, <strong>prodej</strong> za vyšší sazbu; rozdíl je její marže (sl. 30). Ukázka z KB (8. 10. 2025, EUR): FRA 1M×4M 2,013 %, 3M×6M 2,003 %, 3M×9M 2,077 %, 6M×9M 1,956 %, 6M×12M 2,039 %.</div>
+
+                    <h4>6.7 Tržní hodnota FRA v průběhu života (sl. 31–33)</h4>
+                    <div class="def-box">Po uzavření se změní lhůty i spotové (diskontní) sazby. <strong>Hodnota původního FRA</strong> v čase $T_0^*$ = <strong>současná hodnota rozdílu plnění</strong> mezi původním a novým (aktuálním) FRA na stejné období (sl. 31–32). Hodnota finančního instrumentu = současná hodnota veškerého cash flow s ním spojeného.</div>
+                    <div class="thm-box"><strong>Změna hodnoty</strong> (sl. 33):<br>
+                        • <strong>růst</strong> aktuálních FRA sazeb → <strong>roste hodnota</strong> FRA kupujícího (long), <strong>klesá</strong> hodnota FRA prodávajícího;<br>
+                        • <strong>pokles</strong> aktuálních FRA sazeb → klesá hodnota long pozice, roste hodnota short pozice.</div>
+                    <div class="ex-box"><strong>Příklad (long FRA 3 × 6 při $p_{FRA}=3{,}97\,\%$, $NH=100$ mil.):</strong> po 1 měsíci zbývá do začátku období 60 dní a do konce 150 dní. Aktuální FRA sazba na stejné období je $4{,}30\,\%$ a spotová sazba na 150 dní je $3{,}6\,\%$.<br>
+                        1) Rozdíl sazeb vyjádřený v peněžním plnění v $T_2$: $\dfrac{(4{,}30-3{,}97)\cdot90\cdot100\,000\,000}{36000} = 82\,500$ Kč (kladné: long je ve výhodě).<br>
+                        2) Diskont na dnešek sazbou na 150 dní: $\dfrac{82\,500}{1+0{,}036\cdot150/360} = \dfrac{82\,500}{1{,}015} \approx \mathbf{81\,281}$ Kč.<br>
+                        Tržní hodnota long FRA ≈ <strong>+81 281 Kč</strong>; hodnota short je stejně velká, ale záporná.</div>
+                    <div class="warn-box"><strong>⚠️ Pozor (typické chyby):</strong> (1) <strong>zaměnit long a short</strong>; (2) zapomenout, že plnění v $T_1$ se <strong>diskontuje referenční</strong> (nikoli FRA) sazbou; (3) dosadit roční sazbu bez přepočtu na dny (základ <strong>360</strong>), nebo délku $t$ místo $t_{FRA}$; (4) zaměnit <strong>cenu</strong> (FRA sazbu) a <strong>hodnotu</strong> (zisk/ztrátu z pozice); (5) zaměnit nominál s přesouvanou částkou: <strong>nominál se nevyměňuje</strong>.</div>
+
+                    <div class="summary-box"><strong>Shrnutí:</strong>
+                        <ul>
+                            <li>Forward: povinnost koupit/prodat za dnes sjednanou cenu; při sjednání žádná platba; měnový forward z krytí úrokové parity $F = S\cdot\frac{1+p_{CZK}t/36000}{1+p_{EUR}t/36000}$.</li>
+                            <li>FRA = OTC fix–float na nominál, který se nevyměňuje; FRA 3 × 6 = začíná za 3 a končí za 6 měsíců.</li>
+                            <li>Referenční sazba &gt; FRA sazba → platí prodávající kupujícímu (a naopak). Kupující zajišťuje úvěr proti růstu sazeb, prodávající depozit proti poklesu.</li>
+                            <li>Plnění v $T_1$ = $\frac{(p_{REF}-p_{FRA})\,t_{FRA}\,NH}{36000+p_{REF}\,t_{FRA}}$ (diskont referenční sazbou).</li>
+                            <li>FRA sazba z arbitráže: $p_{FRA} = \frac{(pt-p_1t_1)\cdot36000}{(36000+p_1t_1)\,t_{FRA}}$; hodnota při sjednání = 0.</li>
+                            <li>Růst FRA sazeb zvyšuje hodnotu long a snižuje hodnotu short pozice.</li>
+                        </ul>
+                    </div>
+                    <p class="mb-0"><a href="../quiz.html?course=1BP403&topic=6"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
+                </section>
+
+                <section class="topic-section" id="topic-7">
+                    <h3>7. Swapy</h3>
+                    <p class="text-muted small">Přednáška návrh 21. 10. · doc. Dvořák · <strong>slidy zatím nejsou</strong>: rozsah podle osnovy kurzu (<code>Charakteristika_kurzu…pptx</code>, sl. 10), výklad z obecné derivátové teorie (Dvořák: <em>Deriváty</em>, Hull); příklady jsou vlastní modelové a nic zde jsem neověřoval ve slidech</p>
+
+                    <div class="def-box"><strong>Swap</strong> je dohoda o <em>výměně peněžních toků</em> v budoucnosti podle předem daných pravidel. Dá se chápat jako <strong>řada forwardů</strong> s týmž sjednaným kurzem/sazbou. Osnova uvádí: charakteristika a princip, druhy (aktivní a pasivní; úrokové, měnové, akciové, komoditní), kombinace a zvláštní druhy, oceňování, využití (zajištění, spekulace, snížení nákladů na získání kapitálu, dodatečné výnosy), předčasné ukončení, swapy na burzách.</div>
+
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Druh</th><th>Co se vyměňuje</th><th>Jistina</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Úrokový swap (IRS)</strong> – „plain vanilla“</td><td>fixní × pohyblivá úroková sazba v téže měně</td><td>nevyměňuje se, jen nominál pro výpočet</td></tr>
+                            <tr><td><strong>Basis swap</strong></td><td>dvě pohyblivé sazby s různou referencí</td><td>nevyměňuje se</td></tr>
+                            <tr><td><strong>Měnový swap (CCS)</strong></td><td>jistiny i úroky ve dvou měnách</td><td><strong>vyměňuje se</strong> na začátku i na konci (v téže kurzu)</td></tr>
+                            <tr><td><strong>FX swap</strong></td><td>spot směna a opačná forward směna</td><td>vyměňuje se</td></tr>
+                            <tr><td><strong>Akciový / komoditní swap</strong></td><td>výnos z akcie/indexu/komodity × pevná či pohyblivá sazba</td><td>obvykle ne</td></tr>
+                        </tbody>
+                    </table>
+                    <ul>
+                        <li><strong>Aktivní × pasivní swap</strong> (podle toho, zda se mění charakter <em>aktiva</em> nebo <em>závazku</em>): <em>aktivní</em> swap převede např. fixní výnos z dluhopisu na pohyblivý, <em>pasivní</em> převede úrok z úvěru či vlastní emise.</li>
+                        <li><strong>Pay fixed</strong> (platí fix, dostává float) se zajišťuje proti <strong>růstu</strong> sazeb (dlužník s pohyblivou sazbou). <strong>Receive fixed</strong> proti <strong>poklesu</strong> (investor s pohyblivým výnosem, banka s fixními úvěry financovanými krátkými zdroji).</li>
+                    </ul>
+
+                    <h4>7.1 Vyrovnání IRS</h4>
+                    <div class="ex-box"><strong>Příklad:</strong> nominál 100 mil., platím fix 3 % a dostávám 6M sazbu, ta je 3,5 %. Vyrovnání za půl roku (netto): $(3{,}5\,\% - 3\,\%)\cdot 100\cdot 0{,}5 = +0{,}25$ mil. pro mne. Platí se <strong>jen rozdíl</strong>, jistina se nepřesouvá.</div>
+
+                    <h4>7.2 Ocenění (princip)</h4>
+                    <div class="thm-box">Swap = <strong>fixní dluhopis versus pohyblivý dluhopis</strong> (nebo řada FRA). Hodnota pro platiče fixu: $V = PV(\text{pohyblivá}) - PV(\text{fixní})$. Pohyblivá noha má bezprostředně po nastavení sazby hodnotu nominálu: $PV_{float} = N\,(1-DF_n)$. Fixní: $PV_{fix} = c\,N\sum DF_i$. <strong>Swapová sazba</strong> (par rate) je takové $c$, při kterém je $V=0$: $c = \dfrac{1-DF_n}{\sum DF_i}$.</div>
+                    <div class="ex-box"><strong>Příklad (modelový):</strong> 2letý swap, roční platby, $N = 100$ mil., platím fix 3 %. Spotové sazby: 1Y 3,0 %, 2Y 3,5 %.<br>
+                        1) Diskontní faktory: $DF_1 = 1/1{,}03 = 0{,}9709$; $DF_2 = 1/1{,}035^2 = 0{,}9335$.<br>
+                        2) Tržní (par) swapová sazba: $c = \dfrac{1-0{,}9335}{0{,}9709+0{,}9335} = 3{,}49\,\%$.<br>
+                        3) $PV_{float} = 100\cdot(1-0{,}9335) = 6{,}649$; $PV_{fix} = 3\cdot1{,}9044 = 5{,}713$.<br>
+                        4) $V = 6{,}649 - 5{,}713 = \mathbf{+0{,}936}$ mil. pro platiče fixu: platí 3 % při tržních 3,49 %.</div>
+
+                    <h4>7.3 Využití: snížení nákladů (komparativní výhoda)</h4>
+                    <div class="ex-box"><strong>Příklad:</strong> firma A (lepší rating) si půjčí fixně za 4,0 % nebo pohyblivě za L + 0,2 %. Firma B (horší) fixně za 5,5 % nebo pohyblivě za L + 0,7 %. A chce pohyblivý dluh, B fixní.<br>
+                        1) Rozdíl v fixu 1,5 %, v pohyblivé 0,5 % → <strong>společná úspora 1,0 %</strong> (A má komparativní výhodu ve fixním financování).<br>
+                        2) A si půjčí fixně 4,0 %, B pohyblivě L + 0,7 %. Swap: A platí B pohyblivou L, B platí A fixní 4,3 %.<br>
+                        3) A: 4,0 % + L − 4,3 % = <strong>L − 0,3 %</strong> (místo L + 0,2 %, úspora 0,5 %). B: (L + 0,7 %) + 4,3 % − L = <strong>5,0 %</strong> fix (místo 5,5 %, úspora 0,5 %).</div>
+
+                    <h4>7.4 Ukončení a burza</h4>
+                    <ul>
+                        <li><strong>Předčasné ukončení:</strong> vyrovnáním tržní hodnoty swapu protistraně, uzavřením <em>opačného swapu</em> (offset, ale zůstává riziko protistrany) nebo převodem na třetí stranu (novace).</li>
+                        <li>Swapy jsou převážně <strong>OTC</strong>; standardizované IRS se podle reformy po roce 2009 zúčtují přes CCP (téma 2). Existují i burzovní kontrakty vázané na swapové sazby.</li>
+                    </ul>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> u IRS se <strong>nominál nevyměňuje</strong>; u měnového swapu (CCS) ano. Riziko protistrany u swapu je jen <em>na čistém rozdílu / tržní hodnotě</em>, ne na nominálu. Dlužník s pohyblivě úročeným úvěrem, který přidá swap „pay fixed“, má výsledně <em>fixní</em> náklad: pohyblivou sazbu z úvěru mu kompenzuje pohyblivá sazba ze swapu a on platí fix.</div>
+
+                    <div class="summary-box"><strong>Shrnutí:</strong>
+                        <ul>
+                            <li>Swap = řada forwardů; IRS vyměňuje jen úrokové toky, CCS i jistiny.</li>
+                            <li>Pay fixed chrání proti růstu sazeb, receive fixed proti poklesu.</li>
+                            <li>Hodnota = PV pohyblivé nohy − PV fixní nohy; při sjednání (par rate) je 0.</li>
+                            <li>Komparativní výhoda dělí úsporu mezi strany; swap lze ukončit offsetem nebo vyrovnáním hodnoty.</li>
+                        </ul>
+                    </div>
+                    <p class="mb-0"><a href="../quiz.html?course=1BP403&topic=7"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
+                </section>
+
+                <section class="topic-section" id="topic-8">
+                    <h3>8. Financial futures</h3>
+                    <p class="text-muted small">Přednáška návrh 11. 11. · doc. Dvořák · <strong>slidy zatím nejsou</strong>: rozsah podle osnovy kurzu (sl. 11), výklad z obecné derivátové teorie; příklady jsou vlastní modelové</p>
+
+                    <div class="def-box"><strong>Futures</strong> = <em>standardizovaný forward obchodovaný na burze</em>. Burza určuje objem kontraktu, podkladový instrument, splatnosti a způsob vypořádání. Obchod garantuje <strong>clearingový dům</strong>, strany skládají <strong>marži</strong> a pozice se <strong>denně přeceňují</strong>.</div>
+
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th></th><th>Forward</th><th>Futures</th></tr></thead>
+                        <tbody>
+                            <tr><td>Trh</td><td>OTC, na míru</td><td>burza, standardizované</td></tr>
+                            <tr><td>Riziko protistrany</td><td>je (bilaterální)</td><td>minimální (clearing, marže)</td></tr>
+                            <tr><td>Vypořádání</td><td>jednorázově ve splatnosti</td><td><strong>denně</strong> (marking to market)</td></tr>
+                            <tr><td>Uzavření pozice</td><td>obtížné (opačný kontrakt s protistranou)</td><td>snadné <em>zrcadlovým obchodem</em> přes clearing</td></tr>
+                            <tr><td>Likvidita</td><td>nižší</td><td>vysoká</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h4>8.1 Průběh: marže a denní přeceňování</h4>
+                    <ul>
+                        <li><strong>Počáteční marže</strong> se skládá při otevření pozice. <strong>Udržovací marže</strong> je minimum na účtu. Při poklesu pod ni přijde <strong>margin call</strong>: doplnit na počáteční marži.</li>
+                        <li>Zisk a ztráta se připisují <strong>denně</strong> (variační marže), proto je riziko protistrany malé.</li>
+                        <li><strong>Vypořádání:</strong> fyzické dodání nebo peněžní vyrovnání; většina pozic se <em>uzavře</em> opačným obchodem před splatností.</li>
+                    </ul>
+                    <div class="ex-box"><strong>Příklad (modelový):</strong> počáteční marže 5 000, udržovací 4 000. Den 1 ztráta 600 → zůstatek 4 400 (nad 4 000, bez výzvy). Den 2 ztráta 700 → 3 700 &lt; 4 000 → <strong>margin call</strong>: doplnit na počáteční marži, tedy <strong>1 300</strong> (na 5 000).</div>
+
+                    <h4>8.2 Ocenění (cost of carry)</h4>
+                    <div class="thm-box">Cena futures = spot + náklady držení podkladu − výnosy z něj: $F = S\,(1 + r\cdot t) - \text{výnosy}$ (u akcií dividendy, u měny úrok v cizí měně, u komodit i náklady skladování). U měny je to krytá úroková parita jako u forwardu (téma 6).</div>
+
+                    <h4>8.3 Druhy a použití</h4>
+                    <ul>
+                        <li><strong>Úrokové</strong> (krátkodobé např. na 3M sazbu, dlouhodobé na státní dluhopisy), <strong>měnové</strong>, <strong>akciové</strong> (na index), <strong>ostatní</strong> (komodity, emise CO₂ a další).</li>
+                        <li>Krátkodobé úrokové futures se kotují jako <strong>100 − sazba</strong>: cena 97,50 odpovídá sazbě 2,50 %. Při kontraktu na 1 mil. EUR a 3M sazbu je změna o 1 b. p. rovna $1\,000\,000\cdot0{,}0001\cdot\tfrac{3}{12} = 25$ EUR.</li>
+                        <li><strong>Zajištění (hedging):</strong> kdo je dlouhý v podkladu a bojí se poklesu ceny, <strong>prodá</strong> futures (short hedge). Kdo bude nakupovat a bojí se růstu, <strong>koupí</strong> (long hedge). Banka zajišťuje proti růstu sazeb <em>prodejem</em> úrokových futures (cena klesá, když sazby rostou).</li>
+                        <li><strong>Báze</strong> = spot − futures. Zajištění eliminuje riziko ceny, ale ponechává <strong>riziko báze</strong>. <strong>Spekulace:</strong> otevřená pozice s pákou.</li>
+                    </ul>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> u úrokových futures jde cena <strong>opačně než sazba</strong>. Zajištění proti růstu sazeb = <em>prodat</em> futures. Zajištění futures není dokonalé (báze, nesoulad objemů a termínů); forward sedí přesně na míru, ale nese riziko protistrany.</div>
+
+                    <div class="summary-box"><strong>Shrnutí:</strong>
+                        <ul>
+                            <li>Futures = forward + burza + clearing + marže + denní přeceňování.</li>
+                            <li>Margin call se doplňuje na počáteční marži, ne na udržovací.</li>
+                            <li>Úrokové futures: cena = 100 − sazba, zajištění proti růstu sazeb = prodej.</li>
+                            <li>Zajištění eliminuje cenové riziko, zůstává riziko báze.</li>
+                        </ul>
+                    </div>
+                    <p class="mb-0"><a href="../quiz.html?course=1BP403&topic=8"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
+                </section>
+
+                <section class="topic-section" id="topic-9">
+                    <h3>9. Finanční opce</h3>
+                    <p class="text-muted small">Přednáška návrh 18. 11. · doc. Dvořák · <strong>slidy zatím nejsou</strong>: rozsah podle osnovy kurzu (sl. 12), výklad z obecné teorie opcí; příklady jsou vlastní modelové</p>
+
+                    <div class="def-box"><strong>Call</strong> = právo koupit podklad za realizační cenu $K$; <strong>put</strong> = právo prodat. Kupující platí <strong>prémii</strong>, prodávající (<em>writer</em>) má <strong>povinnost</strong> plnit. Výplata při splatnosti: call $\max(S-K,0)$, put $\max(K-S,0)$. Hodnota opce = <strong>vnitřní + časová hodnota</strong>. <em>Evropská</em> opce se uplatní jen ve splatnosti, <em>americká</em> kdykoli.</div>
+
+                    <h4>9.1 Čtyři základní pozice</h4>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Pozice</th><th>Očekávání</th><th>Max. zisk</th><th>Max. ztráta</th><th>Break-even</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>long call</strong></td><td>růst</td><td>neomezený</td><td>prémie</td><td>$K + $ prémie</td></tr>
+                            <tr><td><strong>short call</strong></td><td>pokles/stagnace</td><td>prémie</td><td>neomezená</td><td>$K + $ prémie</td></tr>
+                            <tr><td><strong>long put</strong></td><td>pokles</td><td>$K -$ prémie</td><td>prémie</td><td>$K - $ prémie</td></tr>
+                            <tr><td><strong>short put</strong></td><td>růst/stagnace</td><td>prémie</td><td>$K -$ prémie</td><td>$K - $ prémie</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="ex-box"><strong>Příklad:</strong> dlouhý call, $K = 100$, prémie 5. Break-even = 105. Max. ztráta 5 (pro $S\le100$). Při $S = 120$ zisk $= 20 - 5 = 15$. Short call má opak: max. zisk 5, ztráta neomezená.</div>
+                    <p><strong>Srovnání s pevnými kontrakty:</strong> forward/futures mají symetrické výplaty a nulovou počáteční platbu; opce mají <em>asymetrické</em> výplaty a placenou prémii. Kupující opce zajistí nepříznivý směr a zachová prospěch z příznivého. <strong>Burzovní opce:</strong> prodávající (writer) skládá marži a <em>zajišťuje short pozice</em> (např. short call kryje nákupem podkladu nebo delta zajištěním).</p>
+
+                    <h4>9.2 Cena opce: meze, parita, faktory</h4>
+                    <ul>
+                        <li><strong>ITM/ATM/OTM:</strong> call je ITM, když $S &gt; K$; put je ITM, když $S &lt; K$.</li>
+                        <li><strong>Meze prémie</strong> (evropský call, bez dividend): $\max(S - Ke^{-rT},0) \le C \le S$. Put: $\max(Ke^{-rT} - S,0) \le P \le Ke^{-rT}$.</li>
+                        <li><strong>Put-call parita</strong> (evropské opce): $C - P = S - K e^{-rT}$.</li>
+                    </ul>
+                    <div class="ex-box"><strong>Příklad:</strong> $S = 100$, $K = 100$, $r = 5\,\%$, $T = 1$ rok, $C = 10$. Parita: $S - Ke^{-rT} = 100 - 95{,}12 = 4{,}88$ → $P = C - 4{,}88 = \mathbf{5{,}12}$. Kdyby trh nabízel put za 7, vznikla by arbitráž.</div>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Faktor ↑</th><th>Call</th><th>Put</th></tr></thead>
+                        <tbody>
+                            <tr><td>cena podkladu $S$</td><td>↑</td><td>↓</td></tr>
+                            <tr><td>realizační cena $K$</td><td>↓</td><td>↑</td></tr>
+                            <tr><td>volatilita $\sigma$</td><td>↑</td><td>↑</td></tr>
+                            <tr><td>doba do splatnosti $T$</td><td>↑ (obvykle)</td><td>↑ (obvykle)</td></tr>
+                            <tr><td>úroková sazba $r$</td><td>↑</td><td>↓</td></tr>
+                        </tbody>
+                    </table>
+                    <p><strong>Oceňovací modely:</strong> binomický strom a <em>Black–Scholes(–Merton)</em>. Princip: replikace opce portfoliem podkladu a bezrizikové půjčky; cena je nezávislá na očekávaném výnosu podkladu.</p>
+                    <div class="def-box"><strong>Řecké proměnné:</strong> <strong>delta</strong> $\Delta$ (citlivost ceny opce na $S$; call 0 až 1, put −1 až 0), <strong>gama</strong> (citlivost delty na $S$; nejvyšší u ATM), <strong>vega</strong> (citlivost na volatilitu), <strong>théta</strong> (časový rozpad, u dlouhé opce obvykle záporný), <strong>rho</strong> (citlivost na sazbu).</div>
+
+                    <h4>9.3 Druhy podle podkladu a strategie</h4>
+                    <ul>
+                        <li><strong>Podle podkladu:</strong> opce na akcie, akciové indexy, měny, <strong>futures</strong>, úrokové sazby a <strong>swaptions</strong> (opce na vstup do swapu).</li>
+                        <li><strong>Kombinace:</strong> <em>covered call</em> (akcie + short call), <em>protective put</em> (akcie + long put), <em>bull/bear spread</em> (dvě opce s různými $K$), <em>straddle</em> (call + put na stejné $K$, sázka na velký pohyb), <em>strangle</em> (OTM call + OTM put, levnější).</li>
+                        <li><strong>Exotické opce:</strong> bariérové (knock-in/out), asijské (průměrná cena), digitální (pevná výplata), lookback.</li>
+                    </ul>
+
+                    <h4>9.4 Úrokové opce: cap, floor, collar</h4>
+                    <ul>
+                        <li><strong>Cap:</strong> řada <em>call</em> opcí na sazbu (<strong>capletů</strong>, po jedné na úrokové období). Dlužník s pohyblivou sazbou je chráněn nad strop.</li>
+                        <li><strong>Floor:</strong> řada <em>put</em> opcí; chrání věřitele/investora před poklesem sazby.</li>
+                        <li><strong>Collar:</strong> nákup capu + prodej floor (nebo opačně). Prémie z prodeje financuje nákup; <em>zero-cost collar</em> má čistou prémii nulovou. Cena: vzdání se prospěchu z poklesu pod floor.</li>
+                    </ul>
+                    <div class="ex-box"><strong>Příklad (caplet):</strong> cap se stropem 3,0 %, nominál 100 mil. Kč, půlroční období. Referenční sazba při fixingu je 3,6 %.<br>
+                        Výplata capletu: $(3{,}6\,\% - 3{,}0\,\%)\cdot 0{,}5\cdot100\,000\,000 = \mathbf{300\,000}$ Kč (vyrovnává se na konci období, popř. diskontovaně). Při sazbě 2,8 % je výplata 0 a nákup capletu byl „ztracenou“ prémií.</div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> kdo je dlouhý a kdo krátký? Kupující opce má právo, prodávající povinnost. Banka s úvěry na pohyblivou sazbu a vklady na fix se chrání před <em>poklesem</em> sazeb floorem; klient-dlužník před <em>růstem</em> capem. U capu se <strong>prémie platí předem</strong>, u FRA a swapu se při sjednání neplatí nic.</div>
+
+                    <div class="summary-box"><strong>Shrnutí:</strong>
+                        <ul>
+                            <li>Kupující: ztráta omezená na prémii; prodávající: zisk omezený na prémii, ztráta u short call neomezená.</li>
+                            <li>Put-call parita $C - P = S - Ke^{-rT}$; cena roste s volatilitou.</li>
+                            <li>Delta, gama, vega, théta měří citlivost na $S$, delty, volatilitu a čas.</li>
+                            <li>Cap = strop, floor = podlaha sazby, collar = obojí; pevné deriváty (FRA, swap, futures) na rozdíl od opcí nemají prémii.</li>
+                        </ul>
+                    </div>
+                    <p class="mb-0"><a href="../quiz.html?course=1BP403&topic=9"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
+                </section>
+
+                <section class="topic-section" id="topic-10">
+                    <h3>10. ESG rizika</h3>
+                    <p class="text-muted small">Přednáška návrh 25. 11. · Palán · zdroj: slidy <em>Rizika v bankovnictví</em> (<code>TaxonomieRizik.pdf</code>, sl. 59–78; zdroje slidů: ECB <em>Guide on climate-related and environmental risks</em> 2020, NGFS <em>Guide for Supervisors</em>, Choudhry: <em>The Principles of Banking</em> 2023). Regulace a investiční produkty ve slidech nejsou, jsou označeny <em>doplněk</em></p>
+
+                    <div class="insight-box"><strong>Hlavní myšlenka slidů:</strong> ESG rizikové faktory <strong>nejsou samostatný „nový“ druh rizika</strong>. Materializují se přes standardní rizika (úvěrové, tržní, operační, likvidity a financování) a časem se stanou běžnou součástí jejich řízení (sl. 61).</div>
+
+                    <h4>10.1 Co jsou ESG faktory a rizika (sl. 62–63)</h4>
+                    <div class="def-box"><strong>ESG faktory</strong> jsou environmentální, sociální a governance záležitosti, které mohou mít pozitivní nebo negativní vliv na finanční situaci či solventnost právnické nebo fyzické osoby nebo státu (sovereign). <strong>ESG rizika</strong> = riziko negativního finančního dopadu v důsledku <em>současného nebo budoucího</em> dopadu vývoje ESG faktorů na aktiva instituce nebo její protistrany. Specifika: <strong>nedostatek historických dat</strong>, dopady v různých časových horizontech (od krátkých po velmi dlouhé). ESG je i <strong>příležitost</strong> (nové technologie, produkty, úspory nákladů).</div>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Environmentální (E)</th><th>Sociální (S)</th><th>Governance (G)</th></tr></thead>
+                        <tbody>
+                            <tr><td>klimatická změna, extrémní počasí; příroda a biodiverzita; využívání zdrojů (půda, voda, lesy); znečištění a odpady</td><td>lidský kapitál; odpovědnost za produkty a služby; lidská práva; nerovnost; diskriminace; sociální koheze</td><td>firemní kultura; transparentnost; práva a odpovědnosti vedení; odměňování; úplatky a korupce; leadership; střet zájmů</td></tr>
+                        </tbody>
+                    </table>
+                    <ul>
+                        <li><strong>Přímý dopad ESG rizik:</strong> operační rizika (včetně reputačního).</li>
+                        <li><strong>Nepřímý dopad:</strong> úvěrová, tržní, operační rizika a riziko likvidity a financování → potenciální pokles ziskovosti.</li>
+                    </ul>
+                    <p><strong>Příčiny rostoucího významu</strong> (osnova je požaduje, ve slidech nejsou vypsané; vlastní shrnutí z jejich obsahu): častější a nákladnější extrémní počasí, rostoucí regulace a politika (uhlíková cena), technologické změny, měnící se preference klientů a investorů a reputační tlak. Slidy uvádějí i <em>body zvratu</em> (sl. 65): s růstem globální teploty roste pravděpodobnost, že některý planetární systém přejde do kvalitativně jiného stavu (např. roztátí grónského ledovce zvýší hladinu moří o ~7,4 m).</p>
+
+                    <h4>10.2 Fyzická × přechodová environmentální rizika (sl. 64–67)</h4>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Typ</th><th>Podstata</th><th>Příklady</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Fyzická – akutní</strong></td><td>události s <em>okamžitými ztrátami</em>, časově a místně omezené</td><td>povodně, vlny veder, sucho, orkány, lesní požáry, sesuvy půdy</td></tr>
+                            <tr><td><strong>Fyzická – chronická</strong></td><td>dlouhodobé změny klimatu nebo postupná ztráta funkcí přírody, větší územní dopady</td><td>dlouhodobé sucho, nedostatek vody, ztráta biodiverzity, zvyšování hladiny a kyselosti oceánů</td></tr>
+                            <tr><td><strong>Přechodová</strong> (transitional)</td><td>negativní finanční dopady z <em>přechodu na nízkouhlíkovou</em> a udržitelnější ekonomiku (zejména změny legislativy a regulací)</td><td>uhlíková daň, emisní povolenky, zákazy výrobků, technologické změny, změny poptávky</td></tr>
+                        </tbody>
+                    </table>
+                    <ul>
+                        <li><strong>Materializace více fyzických faktorů najednou</strong> má obvykle větší dopad než součet jednotlivých (sl. 64). Velká nejistota ohledně velikosti i časování.</li>
+                        <li><strong>Pozdější/pomalejší přechod</strong> zvýší fyzická i přechodová rizika (tzv. <em>chaotický přechod</em>).</li>
+                        <li>Příklady dopadů na odvětví (sl. 67): zemědělství (sucho, povodně, chlazení), energetika (infrastruktura, voda na chlazení), doprava, stavebnictví (vlny veder i opravy po povodních), turismus, materiály (energeticky a uhlíkově náročné; příležitost: cirkulární ekonomika).</li>
+                    </ul>
+
+                    <h4>10.3 Jak se ESG rizika promítají do rizik banky (sl. 68–71)</h4>
+                    <p>Rizikový faktor → <strong>schopnost klienta se přizpůsobit</strong> (adaptace, provozní odolnost, schopnost obnovy) → <strong>rizikové parametry</strong> (PD, CCF, hodnota zajištění → LGD) → dopady na <strong>RWA a kapitálový poměr</strong>, <strong>ztráty ze znehodnocení, úrokové výnosy</strong> a <strong>provozní ztráty</strong> (sl. 68).</p>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Riziko</th><th>Dopad akutních fyzických ESG rizik (sl. 70)</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Úvěrové</strong></td><td>ohrožení činnosti dlužníků a jejich příjmů → ↑ <strong>PD</strong>, ↑ <strong>CCF</strong> (čerpání příslibů); pokles hodnoty <strong>zajištění</strong> → ↑ <strong>LGD</strong>; makroekonomické dopady; pokles produktivity práce; dopady na ručitele</td></tr>
+                            <tr><td><strong>Tržní</strong></td><td>pokles hodnoty finančních aktiv, protože ESG faktory <em>doposud nebyly v ceně</em>, možný prudký pokles; rozvolnění korelací a tržní likvidity; dopad na tržní sentiment</td></tr>
+                            <tr><td><strong>Likvidita a financování</strong></td><td>výběry depozit, čerpání úvěrových linek; zhoršený přístup ke stabilnímu financování; odklady splátek; dopad na hodnotu aktiv v likvidní rezervě</td></tr>
+                            <tr><td><strong>Operační</strong></td><td>přímé škody na infrastruktuře banky (centrála, pobočky, datová centra) → kontinuita a obnova činnosti; reputační riziko; outsourcing; <strong>greenwashing</strong> (skutečný i domnělý)</td></tr>
+                        </tbody>
+                    </table>
+                    <p><strong>Chronická rizika</strong> (sl. 71): omezení přístupu ke zdrojům, narušení dodavatelských řetězců, snižování úrodnosti půdy, pokles produktivity práce při vyšších teplotách, migrace, zdravotní dopady. <strong>Největší klimatické riziko</strong> vzniká u expozic s vysokou citlivostí na extrémní jevy a <em>nízkým LTV</em> (po zohlednění dopadu na hodnotu zajištění; sl. 69).</p>
+                    <div class="ex-box"><strong>Příklad (sl. 72, sucho):</strong> banka se ptá: jaké jsou expozice vůči zemědělcům v nejvíce zasažených oblastech, mají závlahy, jsou pojištěni a dostatečně; jaké jsou expozice vůči firmám závislým na velkém odběru vody a jejich dodavatelům a odběratelům; jsou v regionu opatření ke zvýšení odolnosti. Dopad se zohlední v <strong>ratingu, PD, LGD, kovenantech, stabilitě depozit</strong> a v procesech řízení.</div>
+
+                    <h4>10.4 Přechodová rizika a jejich faktory (sl. 73–76)</h4>
+                    <ul>
+                        <li><strong>Faktory rychlosti přechodu:</strong> postup klimatické změny, vládní opatření (emisní povolenky, uhlíková daň, zákazy výrobků), technologický pokrok, produktivita, vývoj populace a preferencí, finanční zdraví subjektů, reputace.</li>
+                        <li><strong>Dopady:</strong> ekologické daně a poplatky (dražší energie), náklady na compliance a pokuty, horší přístup k financování, ukončení výroby (stranded assets), náklady na nové technologie a materiály.</li>
+                        <li><strong>Uhlíková daň</strong> (sl. 74): do cen se promítne jen část (zbytek absorbují firmy → nižší zisk). U firem s vysokými emisemi a nízkou EBITA ve srovnání s úroky se zhorší schopnost splácet → ↑ náklady na riziko, ↑ RWA, ↓ kapitálový poměr.</li>
+                        <li><strong>Domácnosti a ETS2</strong> (sl. 75): dopady zejména u vytápění uhlím, plynem a topnými oleji, vlastního auta na benzín či naftu a lidí v okolí měst s horší dopravní dostupností. Vyšší opravné položky (přesuny do Stage 2 a 3), vyšší rizikové váhy, nižší úrokové výnosy, nižší zůstatky na depozitních účtech, delší splatnost aktiv (IRRBB).</li>
+                        <li><strong>Hodnocení adaptace klienta</strong> (sl. 76–77): finanční situace, investice do výzkumu a vývoje, energetická náročnost, citlivost produkce na ESG, schopnost managementu, <em>skutečná splatnost expozice</em>; zranitelnost lokality, závislost na infrastruktuře, zranitelnost dodavatelů a odběratelů, <strong>plány zachování a obnovy činnosti</strong> a jejich testování.</li>
+                    </ul>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> neplést <strong>akutní</strong> a <strong>chronická</strong> fyzická rizika a <strong>fyzická × přechodová</strong>. Povodeň = akutní fyzické; dlouhodobé sucho = chronické fyzické; uhlíková daň = přechodové. <strong>Greenwashing</strong> je operační (právní a reputační) riziko, nikoli úvěrové.</div>
+
+                    <h4>10.5 Regulace a přístup autorit (doplněk)</h4>
+                    <ul>
+                        <li><strong>ECB Guide on climate-related and environmental risks</strong> (2020; zdroj slidů): očekávání dohledu k obchodnímu modelu, řízení a řízení rizik. <strong>NGFS</strong> (síť centrálních bank): scénáře klimatických stresových testů a doporučení pro dohled.</li>
+                        <li><strong>EBA Guidelines on the management of ESG risks</strong> (EBA/GL/2025/01, leden 2025): pro většinu institucí platí od <strong>11. 1. 2026</strong>, pro malé a nekomplexní nejpozději od <strong>11. 1. 2027</strong>. Zdroj: <a href="https://www.eba.europa.eu/activities/single-rulebook/regulatory-activities/sustainable-finance/guidelines-management-esg-risks" target="_blank" rel="noopener">EBA</a>. Podobně EBA vydala Guidelines on environmental scenario analysis (EBA/GL/2025/04).</li>
+                        <li>Banky ESG riziko zohledňují ve strategii, Risk Appetite, ICAAP/ILAAP, limitech a stresových testech (téma 3).</li>
+                    </ul>
+                    <h4>10.6 Odraz ESG do investičních produktů banky (doplněk)</h4>
+                    <p><em>Osnova zmiňuje „odraz ESG faktorů do nabídky investičních produktů“; slidy Palána tuto část neobsahují. Níže je jen orientační shrnutí.</em> Banky nabízejí zelené a udržitelné dluhopisy, ESG fondy a produkty s udržitelnostním zaměřením. Při investičním poradenství zjišťují <strong>preference klienta v oblasti udržitelnosti</strong> (podle MiFID II; neověřeno v původním znění) a musí se vyhnout <strong>greenwashingu</strong>, tedy nepravdivému či zavádějícímu tvrzení o udržitelnosti produktu.</p>
+
+                    <div class="summary-box"><strong>Shrnutí:</strong>
+                        <ul>
+                            <li>ESG rizika působí přes standardní rizika; přímo na operační (vč. reputačního), nepřímo na úvěrové, tržní a likviditní.</li>
+                            <li>Environmentální: fyzická (akutní, chronická) × přechodová; pozdější přechod zvyšuje obě.</li>
+                            <li>Úvěrově se promítají do PD, CCF a LGD (hodnota zajištění); tržně do ocenění a korelací; operačně do provozu banky a greenwashingu.</li>
+                            <li>Hodnocení klienta: adaptační kapacita, provozní odolnost, schopnost obnovy a skutečná splatnost expozice.</li>
+                            <li>Regulace: ECB Guide (2020), EBA GL/2025/01 (od 11. 1. 2026).</li>
+                        </ul>
+                    </div>
+                    <p class="mb-0"><a href="../quiz.html?course=1BP403&topic=10"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
+                </section>
+
+                <section class="topic-section" id="topic-11">
+                    <h3>11. Likvidita</h3>
+                    <p class="text-muted small">Přednáška návrh 25. 11. · Palán · zdroj: slidy <em>Rizika v bankovnictví</em> (<code>TaxonomieRizik.pdf</code>, sl. 21–26). Regulace (LCR, NSFR, ILAAP) ve slidech není, jen odkaz na LCR; je označena <em>doplněk</em></p>
+
+                    <h4>11.1 Podstata a význam (sl. 21–23)</h4>
+                    <div class="def-box"><strong>Riziko likvidity</strong>: banka nebude schopna <em>vyrovnat závazky v okamžiku splatnosti</em>, aniž by byla vystavena značným ztrátám nebo nepřiměřeným nákladům. Vyplývá z běžných každodenních aktivit: <strong>transformace splatností</strong> je základní činnost banky a splatnost významné části bilance je založena na předpokladech, které nemusí být naplněny.</div>
+                    <ul>
+                        <li>Obvykle se projeví <strong>v návaznosti na jinou událost</strong> (tržní, operační, úvěrovou) nebo je vyvolána externím vlivem. Nelze ho jednoduše poznat z rozvahy ani z VZZ.</li>
+                        <li><strong>Run na banku</strong> = extrémní materializace: velké množství vkladatelů se rozhodne vybrat depozita, protože se (oprávněně či ne) obává krachu.</li>
+                        <li><strong>Solventnost × likvidita</strong>: dvě strany jedné mince (téma 3). Instituce bez prostředků na splatné závazky je <em>technicky v selhání</em>.</li>
+                    </ul>
+
+                    <h4>11.2 Druhy likvidity a přehled toků (sl. 23–24)</h4>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Složka</th><th>Charakter</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Přítoky likvidity</strong></td><td><em>vždy nepředvídatelné nebo nejisté</em> (s každým přítokem je spojeno riziko, např. úvěrové)</td></tr>
+                            <tr><td><strong>Odtoky – předvídatelné</strong> (deterministické)</td><td>vypořádání termínovaných vkladů, splacení emitovaných papírů a jejich příslušenství</td></tr>
+                            <tr><td><strong>Odtoky – nepředvídatelné</strong> (stochastické)</td><td>výběry z běžných účtů, čerpání úvěrových příslibů, doplnění kolaterálu (u derivátů)</td></tr>
+                            <tr><td><strong>Volná likvidita / likviditní rezerva</strong></td><td>aktiva banky, která lze použít k pokrytí odtoků</td></tr>
+                        </tbody>
+                    </table>
+                    <ul>
+                        <li><strong>Podtypy rizika likvidity:</strong> <em>riziko tržní likvidity</em> (téma 5), vnitrodenní likvidita, vnitroskupinové riziko, více měn, systémové riziko (korelace a šíření nákazy).</li>
+                        <li><strong>Riziko financování</strong> (liquidity funding risk): financování od profesionálních protistran, retailové financování, podrozvahové položky, koncentrace financování, riziko vysokých nákladů na financování.</li>
+                    </ul>
+                    <div class="def-box"><strong>Příčiny rizika financování</strong> (sl. 25, obvykle více najednou): (1) <em>nedostatek likvidity na trhu</em> (systémové riziko; investoři financují jen kvalitní aktiva; jedna z příčin krize 2008–2009); (2) <em>příliš agresivní transformace splatností</em> (dlouhá aktiva z krátkých zdrojů, „riding the yield curve“); (3) <em>špatná finanční situace banky</em> → ztráta důvěry → odliv (zejména nepojištěných) vkladů a neobnovení zdrojů z mezibankovního trhu či emisí; (4) nepříznivá externí událost.</div>
+
+                    <h4>11.3 Měření: likvidita za zátěže a GAP (sl. 25)</h4>
+                    <p><strong>Analýza nesouladů přítoků a odtoků likvidity</strong> (liquidity gap) po splatnostních pásmech za podmínek zátěže: odtoky (předvídatelné + nepředvídatelné) se porovnají s přítoky (vždy nejistými) a nedostatek v pásmu se kryje <strong>zdroji likvidity</strong> (likviditní polštář, vyrovnávací kapacita). Klíčové je <strong>krátké až střední období</strong>.</p>
+                    <div class="ex-box"><strong>Příklad (modelový):</strong> pásmo do 7 dní: odtoky 80 (z toho nepředvídatelné 50), přítoky 20 → čistý odtok 60. Likvidní rezerva (hotovost + státní dluhopisy) 90 → rezerva po pásmu 30. Do 1 měsíce další čistý odtok 40 → <strong>deficit −10</strong>, nutno doplnit mezibankovním trhem nebo zdrojem od centrální banky.</div>
+
+                    <h4>11.4 Zdroje likvidity (sl. 26)</h4>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Zdroj</th><th>Charakteristika podle slidů</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Hotovost a aktiva okamžitě převoditelná na hotovost</strong> (státní CP)</td><td>výborný, ale <em>nákladný</em> zdroj; výše dána částečně regulací (LCR); držení se zohledňuje v cenotvorbě (<strong>FTP</strong>)</td></tr>
+                            <tr><td><strong>Zpeněžení obchodní knihy</strong></td><td>ocenění v podmínkách zátěže → vazba na riziko tržní likvidity</td></tr>
+                            <tr><td><strong>Mezibankovní půjčka</strong></td><td>za zátěže vyžaduje vysokou kredibilitu, vyšší zajištění a vyšší sazby; trvalá přítomnost na trhu a úvěrové přísliby od jiných bank snižují riziko odmítnutí</td></tr>
+                            <tr><td><strong>Klientská depozita</strong></td><td>vysoce volatilní <em>wholesale</em> depozita, rostoucí volatilita retailových (konkurence, snadný převod, srovnání sazeb, fintech); zvýšení sazeb může vést k odlivu nepojištěných vkladů</td></tr>
+                            <tr><td><strong>Sekuritizace aktiv</strong></td><td>závislá na vhodných aktivech a reputaci; za zátěže vysoce volatilní (2007 zmizela „přes noc“)</td></tr>
+                            <tr><td><strong>Zdroje od centrální banky</strong></td><td>výsostné rozhodnutí; pomoc nelikvidní, ale <em>solventní</em> instituci; proti zajištění (vyšší haircut), za vyšší sazby; musí se utajit</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h4>11.5 Regulace likvidity (doplněk)</h4>
+                    <div class="thm-box"><strong>LCR</strong> $= \dfrac{HQLA}{\text{čisté odtoky za 30 dní ve stresu}} \ge 100\,\%$ &nbsp;·&nbsp; <strong>NSFR</strong> $= \dfrac{\text{dostupné stabilní financování}}{\text{požadované stabilní financování}} \ge 100\,\%$</div>
+                    <div class="ex-box"><strong>Příklad (LCR):</strong> HQLA = 120, odtoky 150, přítoky 40.<br>
+                        1) Přítoky se do výpočtu započítají nejvýše do 75 % odtoků, tedy do 112,5; 40 &lt; 112,5, limit nehraje roli.<br>
+                        2) Čisté odtoky = 150 − 40 = 110.<br>
+                        3) LCR = 120/110 ≈ <strong>109 %</strong> ✔ (≥ 100 %).<br>
+                        <strong>NSFR:</strong> dostupné stabilní financování 130, požadované 120 → 130/120 ≈ 108 % ✔.</div>
+                    <ul>
+                        <li><strong>HQLA</strong> = vysoce kvalitní likvidní aktiva (hotovost, rezervy u centrální banky, státní dluhopisy).</li>
+                        <li>Interní řízení: stresové testy, <strong>contingency funding plan</strong> (plán pro krizi), <strong>ILAAP</strong> (interní proces hodnocení likvidity), limity splatnostních nesouladů, diverzifikace zdrojů. <strong>Věřitel poslední instance</strong> = centrální banka.</li>
+                    </ul>
+                    <div class="insight-box"><strong>Intuice:</strong> LCR = přežití měsíc bez cizí pomoci (krátký horizont, kvalita aktiv); NSFR = strukturální rovnováha na horizontu roku (dlouhá aktiva z dlouhých zdrojů).</div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> <strong>přítoky jsou nejisté</strong>, odtoky mohou být jisté i nejisté, proto regulace omezuje započitatelné přítoky (75 % odtoků). Velká <em>ztráta</em> sama o sobě likviditu neohrozí, dokud není nutné ji ihned zaplatit; škodí zprostředkovaně přes důvěru.</div>
+
+                    <div class="summary-box"><strong>Shrnutí:</strong>
+                        <ul>
+                            <li>Riziko likvidity vyplývá z transformace splatností a obvykle se projeví po jiné události; extrém = run.</li>
+                            <li>Přítoky jsou vždy nejisté; odtoky předvídatelné (termínované vklady) × nepředvídatelné (běžné účty, přísliby, kolaterál).</li>
+                            <li>Měření: liquidity gap za zátěže po pásmech; zdroje: rezervy, trh, depozita, sekuritizace, centrální banka.</li>
+                            <li>LCR (30 dní) a NSFR (1 rok) ≥ 100 %.</li>
+                        </ul>
+                    </div>
+                    <p class="mb-0"><a href="../quiz.html?course=1BP403&topic=11"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
+                </section>
+
+                <section class="topic-section" id="topic-12">
+                    <h3>12. Kreditní riziko</h3>
+                    <p class="text-muted small">Přednáška návrh 2. 12. · Palán · zdroj: slidy <em>Rizika v bankovnictví</em> (<code>TaxonomieRizik.pdf</code>, sl. 27–35). Měření (PD/LGD/EAD, scoring, modely) a regulace ve slidech nejsou, jsou označeny <em>doplněk</em></p>
+
+                    <h4>12.1 Podstata a členění (sl. 28)</h4>
+                    <div class="def-box"><strong>Úvěrové (kreditní) riziko</strong> je riziko potenciální ztráty hodnoty nároku instituce na plnění z důvodu poklesu pravděpodobnosti, že protistrana (klient nebo skupina klientů) nesplní závazky, <em>nebo</em> že poklesne hodnota zajištění těchto závazků. Nejtypičtější: ztráty ze selhání protistrany.</div>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Dílčí riziko</th><th>Podstata</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Riziko selhání</strong> (default risk)</td><td>klient nesplní závazek (po splatnosti ≥ 90 dní nebo banka nevěří, že splatí; sl. 31)</td></tr>
+                            <tr><td><strong>Riziko migrace</strong> (migration risk)</td><td>zhoršení úvěruschopnosti stávajícího klienta (↑ PD) bez selhání</td></tr>
+                            <tr><td><strong>FX lending risk</strong></td><td>úvěry v cizí měně klientům bez příjmů v ní (nezajištěné) i úvěry v Kč klientům s příjmem v cizí měně; příklad: hypotéky v CHF v Maďarsku → zásah vlády</td></tr>
+                            <tr><td><strong>Riziko financování státních institucí</strong> (sovereign risk)</td><td>ztráty ze snížení hodnoty nebo selhání pohledávek za vládními institucemi</td></tr>
+                            <tr><td><strong>Residual risk</strong></td><td>techniky snížení rizika (zajištění) nefungují: právní mechanismus nezaručuje realizaci kolaterálu nebo je jeho hodnota nižší, než se předpokládalo</td></tr>
+                            <tr><td><strong>Riziko koncentrace</strong></td><td>viz 12.3</td></tr>
+                            <tr><td><strong>Riziko země</strong> (country risk)</td><td>viz 12.4</td></tr>
+                            <tr><td><strong>Counterparty credit risk</strong></td><td>selhání protistrany v průběhu kontraktu (zejm. derivátu)</td></tr>
+                            <tr><td><strong>Riziko vypořádání a dodávky</strong></td><td>protistrana ve splatnosti nesplní závazek; časový nesoulad dodávky a platby</td></tr>
+                            <tr><td>další</td><td>specializované úvěrování, rozmělnění (dilution), emitent CP, dvojí selhání (double default), custodian, sekuritizace, akcie v bankovní knize, vlastní nemovitosti</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h4>12.2 Nevýkonné úvěry a příčiny selhání (sl. 29–31)</h4>
+                    <ul>
+                        <li><strong>Příčiny vzniku nevýkonných úvěrů</strong> (retail, sl. 29): ekonomická situace (nezaměstnanost, pokles HDP, růst nákladů při stagnaci příjmů), produktové (zvýšení sazby, ztráta výhody), osobní (pokles příjmu, předlužení, ztráta zaměstnání, zdraví), <em>nedostatky v procesech banky</em> (monitoring, vymáhání), <strong>podvod</strong>.</li>
+                        <li><strong>Dopad NPL:</strong> nižší úrokové a poplatkové výnosy, vyšší náklady na riziko (opravné položky) a kapitál (vyšší rizikové váhy), vyšší provozní náklady (vymáhání), menší příležitost k cross-sellu. Porovnání s plánem a s <em>Risk Appetite</em>.</li>
+                        <li><strong>Příčiny nesplácení u domácností</strong> (sl. 30): <em>nedostatek prostředků</em> (individuální, makro/odvětvové/regionální, změna na produktu např. refixace), <em>neochota splácet</em> (podvod dlužníka, interní podvod, podvod zprostředkovatele), <em>nedostatek informací</em> (komunikace o splátkách, nevhodný produkt, špatné incentivy). Může jít o <strong>úvěrové a/nebo operační riziko</strong>.</li>
+                        <li><strong>Migrační matice</strong> (sl. 31): rating na začátku × na konci období. Zhoršení ratingu = <em>migrace</em> (↑ PD) → ↑ opravné položky, ↑ RWA (u IRB), ↑ provozní náklady; selhání = vstup do stavu F/default; zlepšení = pozitivní dopad do výsledku a kapitálu.</li>
+                    </ul>
+
+                    <h4>12.3 Riziko koncentrace (sl. 33)</h4>
+                    <div class="def-box"><strong>Credit concentration risk:</strong> ztráty z koncentrace expozic na malou skupinu dlužníků, na dlužníky s podobným chováním při selhání nebo na vysoce korelovaná aktiva. Podoby: <em>single-name</em> (několik málo klientů či skupin s vazbami), <em>sektorová a odvětvová</em>, <em>geografická</em>, <em>produktová</em>, koncentrace ve vztahu k <em>zajištění</em> (včetně záruk).</div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> riziko koncentrace <strong>není pokryto kapitálovým požadavkem Pilíře 1</strong>, protože jeho výpočet předpokládá nekonečně granulární portfolio. Řeší se v Pilíři 2 (téma 14).</div>
+
+                    <h4>12.4 Riziko země a protistrany (sl. 34–35)</h4>
+                    <ul>
+                        <li><strong>Riziko země:</strong> <em>transfer risk</em> (dlužník nemá měnu, v níž je dluh), <em>sovereign intervention risk</em> (zmrazení depozit, vyvlastnění, represivní zdanění), <em>collective debtor risk</em> (událost zasáhne celou zemi), politické prostředí (revoluce, znárodnění).</li>
+                        <li><strong>Riziko protistrany</strong> (deriváty, CP třetích stran): faktory = důvěryhodnost protistrany, <strong>vysoká korelace úvěrového rizika protistrany s hodnotou transakce</strong> (wrong-way risk), komplexnost, dohody o započtení (existence, vymahatelnost). <strong>Riziko vypořádání</strong> = selhání při vypořádání, časový nesoulad dodávky a platby.</li>
+                    </ul>
+
+                    <h4>12.5 Měření: PD, LGD, EAD (doplněk)</h4>
+                    <div class="def-box">Tři parametry: <strong>PD</strong> (pravděpodobnost selhání), <strong>LGD</strong> (ztráta při selhání po započtení zajištění), <strong>EAD</strong> (expozice v okamžiku selhání, včetně čerpání příslibů, CCF).</div>
+                    <div class="thm-box"><strong>Očekávaná ztráta:</strong> $EL = PD\cdot LGD\cdot EAD$. Kryje se cenou (marží) a opravnými položkami. <strong>Neočekávaná ztráta</strong> (odchylka od EL) se kryje <strong>kapitálem</strong> (vazba na matici frekvence × dopad, téma 3).</div>
+                    <div class="ex-box"><strong>Příklad:</strong> úvěr 10 mil. Kč zajištěný zástavou s tržní hodnotou 6 mil. (srážka 20 % na nucený prodej). PD = 2 %.<br>
+                        1) Realizovatelná hodnota zástavy: $6\cdot(1-0{,}2) = 4{,}8$ mil.<br>
+                        2) LGD = $(10-4{,}8)/10 = 52\,\%$.<br>
+                        3) $EL = 0{,}02\cdot0{,}52\cdot10 = \mathbf{0{,}104}$ mil. Kč (104 tis.).</div>
+                    <ul>
+                        <li><strong>Scoring</strong> (statistický model, který z charakteristik klienta odvodí skóre/PD, typicky pro retail) × <strong>rating</strong> (stupnice kvality dlužníka, u firem kombinace modelu a odborného posudku).</li>
+                        <li><strong>Modely portfoliového rizika</strong> (orientačně): strukturální (Merton/KMV), migrační (CreditMetrics), aktuárské (CreditRisk+).</li>
+                        <li><strong>IFRS 9</strong> a opravné položky: Stage 1/2/3 (téma 1).</li>
+                        <li><strong>Regulace:</strong> standardizovaný přístup (rizikové váhy podle ratingu a typu expozice) × <strong>IRB</strong> (vlastní odhady PD, případně LGD a EAD); makroobezřetnostní nástroje (limity LTV, DSTI) u hypoték.</li>
+                    </ul>
+
+                    <h4>12.6 Zelené úvěry (doplněk)</h4>
+                    <p>Účelové financování environmentálně udržitelných projektů (<em>Green Loan Principles</em>, taxonomie EU); banka sleduje podíl takových expozic (green asset ratio). Fyzická a přechodová rizika při hodnocení úvěrů viz téma 10.</p>
+
+                    <div class="summary-box"><strong>Shrnutí:</strong>
+                        <ul>
+                            <li>Kreditní riziko = selhání protistrany nebo pokles hodnoty zajištění; selhání (90+ dní) × migrace (↑ PD).</li>
+                            <li>Dopady NPL: nižší výnosy, vyšší opravné položky a RWA, vyšší provozní náklady.</li>
+                            <li>Koncentrace není v Pilíři 1; riziko země = transfer, intervence, kolektivní selhání.</li>
+                            <li>EL = PD · LGD · EAD (cena + opravné položky); neočekávaná ztráta = kapitál.</li>
+                            <li>Riziko protistrany roste s korelací s hodnotou transakce a klesá s dohodami o započtení.</li>
+                        </ul>
+                    </div>
+                    <p class="mb-0"><a href="../quiz.html?course=1BP403&topic=12"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
+                </section>
+
+                <section class="topic-section" id="topic-13">
+                    <h3>13. Kreditní deriváty</h3>
+                    <p class="text-muted small">Přednáška návrh 2. 12. · doc. Dvořák · <strong>slidy zatím nejsou</strong>: rozsah podle osnovy kurzu (sl. 14: podstata jednotlivých druhů, využití při řízení úvěrového rizika), výklad z obecné teorie; příklady jsou vlastní modelové. Ve slidech k derivátům (téma 2): kreditní deriváty vznikly v 90. letech a plnění je vázáno na stanovenou <em>kreditní událost</em></p>
+
+                    <div class="def-box"><strong>Credit default swap (CDS):</strong> kupující ochrany platí pravidelně <em>CDS spread</em> (prémii v b. p. z nominálu ročně); při <strong>kreditní události</strong> (selhání, restrukturalizace) mu prodávající ochrany nahradí ztrátu. Funguje jako pojištění úvěrové pohledávky (referenční subjekt a nominál jsou ve smlouvě).</div>
+                    <div class="ex-box"><strong>Příklad:</strong> banka má úvěr 100 mil. firmě a koupí CDS se spreadem 150 b. p. na 5 let.<br>
+                        1) Ročně platí $100\cdot0{,}015 = 1{,}5$ mil.<br>
+                        2) Při selhání s návratností 40 % je ztráta $100\cdot(1-0{,}4)=60$ mil. a tu dostane od prodávajícího.<br>
+                        3) <em>Fyzické vypořádání:</em> banka odevzdá dluh (nominál 100) a dostane 100. <em>Peněžní:</em> dostane $100 - 40 = 60$ (rozdíl nominálu a tržní ceny dluhu po selhání).</div>
+                    <div class="insight-box"><strong>Intuice:</strong> spread přibližně odpovídá <em>očekávané ztrátě za rok</em>: $\text{spread}\approx PD\cdot(1-R)$. Při spreadu 150 b. p. a návratnosti 40 % je implikované $PD \approx 1{,}5\,\%/0{,}6 = 2{,}5\,\%$ ročně. Růst spreadu = trh vidí vyšší riziko.</div>
+
+                    <h4>Druhy</h4>
+                    <ul>
+                        <li><strong>Total return swap (TRS):</strong> jedna strana předá <em>celkový výnos</em> aktiva (úrok + změna ceny) a dostane pohyblivou sazbu (+ marži). Přenáší i <strong>tržní riziko</strong>, ne jen úvěrové.</li>
+                        <li><strong>Credit-linked note (CLN):</strong> dluhopis, jehož výplata (kupón, jistina) závisí na úvěrové události referenčního subjektu; emitent tím přenáší riziko na investora (je „funded“, jistinu investor zaplatí předem).</li>
+                        <li><strong>Sekuritizace a CDO:</strong> pool pohledávek rozdělený na <em>tranše</em> (senior, mezanin, equity). Ztráty nesou nejdřív nižší tranše. Syntetická varianta používá CDS místo skutečných pohledávek.</li>
+                        <li><strong>Credit spread opce / forwardy</strong> a <strong>basket CDS</strong> (first-to-default) se používají méně.</li>
+                    </ul>
+
+                    <h4>Využití při řízení úvěrového rizika</h4>
+                    <ul>
+                        <li><strong>Zajištění</strong> konkrétní expozice (CDS) a <strong>přenos rizika</strong> bez prodeje úvěru klientovi (ten o zajištění nemusí vědět).</li>
+                        <li><strong>Snížení koncentrace</strong> (kupuji ochranu na velký single-name) a <strong>uvolnění kapitálu</strong> (pokud regulace zajištění uzná).</li>
+                        <li><strong>Spekulace</strong> a arbitráž: koupě CDS bez expozice je sázka na zhoršení kvality dlužníka.</li>
+                    </ul>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> kdo je kdo: <strong>kupující ochrany je krátký na úvěrové riziko</strong> (profituje ze zhoršení), prodávající ochrany je dlouhý (jako věřitel). <strong>Riziko protistrany:</strong> prodávající může sám selhat v krizi (AIG 2008); k riziku patří i <em>basis risk</em> (referenční subjekt a krytý dlužník se neshodují) a <em>právní riziko definice kreditní události</em>.</div>
+
+                    <div class="summary-box"><strong>Shrnutí:</strong>
+                        <ul>
+                            <li>CDS = pojištění úvěru; cena = spread ≈ PD · (1 − R); plnění při kreditní události.</li>
+                            <li>TRS přenáší i tržní riziko; CLN je dluhopis s úvěrovou složkou; CDO dělí ztráty na tranše.</li>
+                            <li>Využití: zajištění, přenos rizika, snížení koncentrace, spekulace. Pozor na riziko protistrany.</li>
+                        </ul>
+                    </div>
+                    <p class="mb-0"><a href="../quiz.html?course=1BP403&topic=13"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
+                </section>
+
+                <section class="topic-section" id="topic-14">
+                    <h3>14. Kapitálové riziko</h3>
+                    <p class="text-muted small">Přednáška návrh 9. 12. · doc. Dvořák · <strong>slidy zatím nejsou</strong>: rozsah podle osnovy kurzu (sl. 15: podstata rizika nesolventnosti, vztah k ostatním rizikům, vymezení kapitálu a požadavky k jednotlivým rizikům, aktuální problémy, Basel III), výklad z regulace (CRR/CRD, Basel III); údaje označené ✔ jsem ověřil v primárním zdroji, ostatní neověřoval. Vlastní kapitál v bilanci viz téma 1</p>
+
+                    <div class="def-box"><strong>Kapitálové riziko</strong> (riziko nesolventnosti): banka nemá dost kapitálu na pokrytí ztrát, tedy hodnota aktiv klesne pod hodnotu závazků. Kapitál je <em>tlumič neočekávaných ztrát</em>. Regulace určuje minimum vzhledem k <strong>rizikově váženým aktivům (RWA)</strong>. <strong>Vztah k ostatním rizikům:</strong> ztráty z úvěrového, tržního, operačního i dalších rizik snižují kapitál; kapitál naopak „kryje“ jejich neočekávanou část (téma 3).</div>
+
+                    <h4>14.1 Kapitálová přiměřenost</h4>
+                    <div class="thm-box">$$\text{kapitálový poměr} = \dfrac{\text{kapitál}}{RWA}\qquad RWA = \sum \text{expozice}\cdot\text{rizikové váhy} \;(+\text{tržní a operační riziko})$$</div>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Požadavek (Pilíř 1)</th><th>Min. podíl na RWA</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>CET1</strong> (základní kapitál Tier 1: akcie, nerozdělený zisk, rezervní fondy)</td><td>4,5 %</td></tr>
+                            <tr><td><strong>Tier 1</strong> (CET1 + AT1: vydané nástroje s možností odpisu/konverze)</td><td>6 %</td></tr>
+                            <tr><td><strong>Celkový kapitál</strong> (Tier 1 + <strong>Tier 2</strong>: např. podřízený dluh)</td><td>8 %</td></tr>
+                        </tbody>
+                    </table>
+                    <ul>
+                        <li><strong>Rezervy navíc (CET1):</strong> ochranná 2,5 %, proticyklická (nastavuje ČNB), systémové (O-SII a další).</li>
+                        <li><strong>Pákový poměr</strong> (Tier 1 / celková expozice, min. 3 %) nezávisí na rizikových vahách. <strong>MREL</strong> = požadavek na pohltivé zdroje při řešení krize.</li>
+                    </ul>
+                    <div class="ex-box"><strong>Příklad:</strong> expozice firmě 100 s rizikovou váhou 100 % → RWA 100. Banka s RWA 100, CET1 = 9, Tier 1 = 10 a celkovým kapitálem = 12 má poměry 9 % / 10 % / 12 %.<br>
+                        Požadavek CET1 včetně ochranné rezervy = 4,5 % + 2,5 % = <strong>7 %</strong> → splněno s přebytkem 2 p. b. (plus případné další rezervy a požadavek Pilíře 2). Ztráta 3 z úvěru, který patřil do RWA, sníží CET1 na 6 (6 % &lt; 7 %): <strong>pokles pod požadavek vede k omezení výplat dividend a bonusů</strong>.</div>
+
+                    <h4>14.2 Požadavky podle rizik a pilíře</h4>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Riziko</th><th>Přístupy k RWA / požadavku</th></tr></thead>
+                        <tbody>
+                            <tr><td>úvěrové</td><td>standardizovaný (váhy podle ratingu a typu expozice) × <strong>IRB</strong> (vlastní PD, případně LGD, EAD)</td></tr>
+                            <tr><td>tržní</td><td>standardizovaný × interní modely (VaR/ES); nový rámec FRTB</td></tr>
+                            <tr><td>operační</td><td>od 2025 jednotný standardizovaný přístup podle <em>business indicatoru</em> (CRR3)</td></tr>
+                        </tbody>
+                    </table>
+                    <ul>
+                        <li><strong>Pilíř 1:</strong> minimální požadavky (úvěrové, tržní, operační riziko). <strong>Pilíř 2:</strong> ICAAP (interní hodnocení kapitálu) a SREP (dohledové hodnocení; dodatečný požadavek, např. na koncentraci a IRRBB). <strong>Pilíř 3:</strong> zveřejňování.</li>
+                        <li><strong>Ekonomický kapitál</strong> a <strong>RAROC:</strong> interní měření kapitálu a výnosu očištěného o riziko.</li>
+                        <li><strong>Riziko kapitálového plánování</strong> (z taxonomie Palána, téma 3): banka nesplní budoucí kapitálové potřeby podle obchodního plánu a stresu.</li>
+                    </ul>
+
+                    <h4>14.3 Vývoj a aktuální problémy: Basel III a CRR3</h4>
+                    <ul>
+                        <li><strong>Basel I</strong> (rizikové váhy, 8 %) → <strong>Basel II</strong> (3 pilíře, interní modely) → <strong>Basel III</strong> (po krizi 2008: lepší kvalita kapitálu, rezervy, pákový poměr, likviditní poměry LCR a NSFR).</li>
+                        <li>V EU „dokončení Basel III“ nařízením <strong>CRR3</strong> (Nařízení (EU) 2024/1623, používá se od <strong>1. 1. 2025</strong>) ✔: <strong>output floor</strong> = kapitálový požadavek z interních modelů nesmí klesnout pod <strong>72,5 %</strong> požadavku podle standardizovaných přístupů; přechodné období 5 let, <strong>50 % v roce 2025 → 72,5 % v roce 2030</strong>. Zdroje: <a href="https://eur-lex.europa.eu/eli/reg/2024/1623/oj/eng" target="_blank" rel="noopener">EUR-Lex</a>, <a href="https://www.ecb.europa.eu/press/financial-stability-publications/macroprudential-bulletin/focus/2023/html/ecb.mpbu202312_focus01.en.html" target="_blank" rel="noopener">ECB</a>.</li>
+                        <li>Diskuse (kriticky podle osnovy kurzu): vyšší kapitál × schopnost úvěrovat a ziskovost, složitost regulace, výjimky v EU, konkurenceschopnost vůči jiným jurisdikcím.</li>
+                    </ul>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> <strong>kapitálový poměr × pákový poměr</strong>: první je vůči RWA (citlivý na rizikové váhy), druhý vůči celkové expozici (3 %, bez vah). Do Tier 2 patří podřízený dluh (téma 1), ne akcie. Pokles RWA zvyšuje poměr stejně jako růst kapitálu.</div>
+
+                    <div class="summary-box"><strong>Shrnutí:</strong>
+                        <ul>
+                            <li>Kapitál = tlumič neočekávaných ztrát; poměr = kapitál / RWA.</li>
+                            <li>Minima 4,5 % CET1, 6 % Tier 1, 8 % celkem + ochranná rezerva 2,5 %; páka min. 3 %.</li>
+                            <li>Pilíře: minima, dohled (ICAAP, SREP), zveřejňování.</li>
+                            <li>CRR3 od 2025: output floor 50 % (2025) → 72,5 % (2030); nový standardizovaný přístup k operačnímu riziku.</li>
+                        </ul>
+                    </div>
+                    <p class="mb-0"><a href="../quiz.html?course=1BP403&topic=14"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
                 </section>
             </div>
         </div>
