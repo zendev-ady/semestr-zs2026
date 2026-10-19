@@ -24,6 +24,7 @@ python3 quiz.py add '[
 - `subtopic` = číslo tématu = index v `topics` + 1 = sekce `#topic-N` na stránce předmětu
 - `correct` = `"A"`–`"D"`, správnou pozici rovnoměrně střídej
 - max ~10 otázek na jeden `add` (délka příkazu); apostrof v textu zapiš jako `’`
+- vzorce v MathJaxu (`$...$`) quiz vykreslí; částky v dolarech proto piš jako `USD`, ne `$`
 - 1BP461: otázky anglicky
 
 ## Zdroj otázek
