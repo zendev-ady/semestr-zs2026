@@ -69,6 +69,8 @@ Před psaním si přečti `studijni_plan.md`, stávající stránku a `shared.cs
 
 MathJax: inline `$...$`, blokově `$$...$$`.
 
+**Předmět stojí na prezentacích** (např. 1MT461): výpisky pište ze slajdů, grafy a příklady vkládejte jako obrázky slajdů (`<figure class="slide-fig">`). Víc témat najednou zpracujte paralelně, jedním agentem na téma, podle [poznamky-ze-slidu.md](poznamky-ze-slidu.md).
+
 **Filozofie** — podklad pro test a zkoušku, ne učebnice:
 - ke každému tématu: **co to je**, **proč to tak funguje**, **jak se na to ptají v testu**
 - terminologie podle základní literatury ze sylabu; když se liší přednáška, přednost má přednášející
