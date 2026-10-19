@@ -1,6 +1,6 @@
 # 1MT461 Mezinárodní finanční management
 
-> Zdroje: `sylabus.txt` (InSIS) a `Zakladni_info_o_1MT461_Mezinarodni_financni_management.doc` (oficiální harmonogram od vyučujících — **má přednost**). Sekce **Klíčové pojmy** je u témat bez prezentace můj návrh podle literatury — upřesnit podle přednášek.
+> Zdroje: `sylabus.txt` (InSIS) a `Zakladni_info_o_1MT461_Mezinarodni_financni_management.doc` (oficiální harmonogram od vyučujících — **má přednost**). Sekce **Klíčové pojmy** je u témat 6–11 (zatím bez prezentace) můj návrh podle literatury — upřesnit podle přednášek.
 
 ## Přehled
 
@@ -34,12 +34,12 @@ Podle oficiálního harmonogramu (pořadí se liší od InSIS sylabu). Číslo t
 
 | Týden | Datum | Téma | Kdo | Podklady |
 |---|---|---|---|---|
-| 1 | 21. 9. | **1** Nadnárodní a exportně/importně orientovaná firma na devizovém trhu | KB | prezentace 1 ✔ |
+| 1 | 21. 9. | **1** Nadnárodní a exportně/importně orientovaná firma na devizovém trhu | KB | prezentace 1 + cvičení Kotace, spread a křížový kurz ✔ |
 | 2 | 28. 9. | *státní svátek — výuka odpadá* (v dokumentu překlep „28. října“) | | |
-| 3 | 5. 10. | **2** Řízení kurzového rizika prostřednictvím měnových forwardů | OŠ | |
-| 4 | 12. 10. | **3** Řízení kurzového rizika prostřednictvím měnových opcí | OŠ | |
-| 5 | 19. 10. | **4** Technologie a motivace obchodování firem na devizovém trhu | KB | |
-| 6 | 26. 10. | **5** Investování nadnárodních firem a predikce měnového kurzu v dlouhém období | OŠ | |
+| 3 | 5. 10. | **2** Řízení kurzového rizika prostřednictvím měnových forwardů | OŠ | prezentace ✔ |
+| 4 | 12. 10. | **3** Řízení kurzového rizika prostřednictvím měnových opcí | OŠ | prezentace + zadání příkladů ✔ |
+| 5 | 19. 10. | **4** Technologie a motivace obchodování firem na devizovém trhu | KB | prezentace ✔ |
+| 6 | 26. 10. | **5** Investování nadnárodních firem a predikce měnového kurzu v dlouhém období | OŠ | prezentace + data BRL/USD (xlsx) ✔ |
 | 7 | 2. 11. | *inovační týden — výuka odpadá* | | |
 | 8 | 9. 11. | **6** Řízení devizové likvidity a predikce měnového kurzu v krátkém období | KB | |
 | 9 | 16. 11. | **7** Transakční a ekonomická devizová expozice exportně/importně orientované firmy | KB | |
@@ -53,10 +53,10 @@ Podle oficiálního harmonogramu (pořadí se liší od InSIS sylabu). Číslo t
 | # | Klíčové pojmy |
 |---|---|
 | 1 | *(z prezentace)* zdroje volatility (flash crash GBP 2016, intervence JPY), časová pásma a likvidita, struktura obratu podle místa / měny / protistrany / instrumentu (BIS 2025), trendové změny struktury trhu, market maker × price taker, bid/ask/spread/volume, OTC a fragmentace trhu, klient × agregátor, riziko × expozice, spot (T+2) × forward, vehicle currency (USD, EUR), evropská vs. americká kotace (podle pozice VC), big/small figure, base/quoted currency, křížový kurz vč. bid/ask, trojúhelníková arbitráž |
-| 2 | krytá úroková parita, forwardové body, prémie/diskont, outright vs. swap, forward s volným datem plnění, NDF |
-| 3 | call/put, evropská/americká, prémie, vnitřní a časová hodnota, exportér kupuje put / importér call, collar (zero-cost), participating forward, bariérové opce |
-| 4 | single-bank vs. multi-bank platformy, ECN, prime brokerage, algoritmické a vysokofrekvenční obchodování, last look; motivy obchodů firem (zajištění, platby, investice) |
-| 5 | PPP (absolutní/relativní), reálný kurz, Balassa–Samuelson, produktivita, dlouhodobá predikce kurzu a její limity; mezinárodní portfoliové investice |
+| 2 | *(z prezentace)* otevřená devizová pozice, interní × externí zajištění, kotace outright × swapové body, krytá úroková parita (CIP), forwardová prémie/diskont, PRIBID/PRIBOR, výpočet FR bid/ask a swapových bodů, hedgová (syntetický forward) a okružní arbitráž, hraniční kurz, zajištění pohledávky/závazku forwardem, NDF, forward ≠ předpověď, odchylky od CIP (Lehman), forwardy za kurzového závazku ČNB |
+| 3 | *(z prezentace)* call/put, evropská/americká, burzovní × OTC, držitel × vypisovatel, prémie, strike (SP), ITM/ATM/OTM, payoff long/short call a put, čistá pozice při zajištění závazku (long call) a pohledávky (long put), bod zvratu SP ± Pr, opce vs. forward, straddle, arbitráž, vnitřní a časová hodnota, determinanty prémie, Black–Scholes a řecká písmena (jen orientačně) |
+| 4 | *(z prezentace)* rozvoj elektronického obchodování, model devizového trhu (BIS WP 1094: dealer, klient, inter-dealer × dealer-to-customer, SDP/MDP, ECN, prime brokerage, PTF), direct trading, EBS Market, Cboe FX, primární CLOB, taxonomie obchodních míst, last look, manuální × algoritmické obchody, retail, AT × HFT, network latency |
+| 5 | *(z prezentace)* determinanty kurzu podle horizontu, fundamentální analýza, absolutní/relativní PKS a její kritika, reálný kurz a REER, ERDI, Balassa–Samuelson, platebně bilanční přístup (běžný účet, výkonová bilance), UIP, mezinárodní Fisherův efekt, reálný úrokový diferenciál, carry trade, risk on/off, monetární přístup a QE; příklad predikce BRL/USD 1996–2014 |
 | 6 | FX swap pro řízení likvidity, úrokový diferenciál, carry trade, kapitálové toky, intervence, sentiment; krátkodobá predikce (technická analýza, forward jako prediktor) |
 | 7 | transakční vs. ekonomická (vs. translační) expozice, přirozený hedging, matching, leading & lagging, volba fakturační měny |
 | 8 | pevný, řízený floating, volný floating, currency board, měnová unie, kurzový závazek ČNB 2013–2017 jako zdroj rizika |

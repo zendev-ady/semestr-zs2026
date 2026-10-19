@@ -41,6 +41,10 @@
                     <ul class="nav flex-column">
                         <li><a class="nav-link py-1" href="#harmonogram">Harmonogram</a></li>
                         <li><a class="nav-link py-1" href="#topic-1">1. Firmy na devizovém trhu</a></li>
+                        <li><a class="nav-link py-1" href="#topic-2">2. Měnové forwardy</a></li>
+                        <li><a class="nav-link py-1" href="#topic-3">3. Měnové opce</a></li>
+                        <li><a class="nav-link py-1" href="#topic-4">4. Technologie a motivace</a></li>
+                        <li><a class="nav-link py-1" href="#topic-5">5. Kurz v dlouhém období</a></li>
                     </ul>
                 </nav>
             </div>
@@ -224,6 +228,63 @@
                     <div class="thm-box"><strong>Jak nastavit kotaci, aby arbitráž nebyla možná:</strong> kótovaný křížový kurz se musí <strong>překrývat</strong> s rozpětím spočteným z ostatních dvou kotací. Vlastní bid nesmí být nad syntetickým askem a vlastní ask pod syntetickým bidem. V příkladu by to znamenalo EUR/GBP bid ≤ 1,1554 a ask ≥ 1,1525.</div>
                     <div class="warn-box"><strong>⚠️ Postup v testu:</strong> u každé směny si nejdřív řekni, která měna je báze a jestli ji kupuješ (ask) nebo prodáváš (bid). Pak <strong>násobíš</strong>, když směňuješ bázi na kotovanou měnu, a <strong>dělíš</strong>, když směňuješ kotovanou měnu na bázi. Spočítej oba směry trojúhelníku: jeden vyjde se ztrátou (spread) a jeden případně se ziskem.</div>
 
+                    <h4>Cvičení: kotace, spread a křížový kurz</h4>
+                    <p class="text-muted small">Cvičení K. Brůny, <em>Kotace, spread a křížový kurz</em> (<code>Kotace,_spread_a_krizovy_kurz.doc</code>). Řešení níže jsou vlastní a ověřená výpočtem, ve cvičení řešení uvedena nejsou.</p>
+
+                    <div class="ex-box"><strong>Úloha 1: evropská, americká, nebo křížová kotace? (Yahoo Finance)</strong>
+                        <br>Yahoo Finance (a Reuters, Bloomberg) píše pár <strong>tržně</strong>, tedy báze první: <code>EUR/USD 1,17</code> = 1,17 USD za 1 EUR. Na přednášce je to opačně, proto si každý ticker nejdřív přepiš do zápisu přednášky a podívej se, <strong>kde stojí vehicle currency</strong>:
+                        <table class="table table-bordered summary-table mt-2 mb-2">
+                            <thead><tr><th>Yahoo (tržní zápis)</th><th>Zápis přednášky</th><th>Typ kotace</th><th>Proč</th></tr></thead>
+                            <tbody>
+                                <tr><td>USD/CZK, USD/JPY, USD/CAD</td><td>CZK/USD, JPY/USD, CAD/USD</td><td><strong>evropská</strong></td><td>USD (VC) je za lomítkem</td></tr>
+                                <tr><td>EUR/USD, GBP/USD, AUD/USD</td><td>USD/EUR, USD/GBP, USD/AUD</td><td><strong>americká</strong></td><td>USD (VC) je před lomítkem</td></tr>
+                                <tr><td>EUR/CZK, EUR/HUF, EUR/SEK</td><td>CZK/EUR, HUF/EUR, SEK/EUR</td><td><strong>evropská</strong></td><td>EUR je regionální VC, stojí za lomítkem</td></tr>
+                                <tr><td>EUR/GBP, EUR/JPY, GBP/JPY</td><td>GBP/EUR, JPY/EUR, JPY/GBP</td><td><strong>křížový kurz</strong></td><td>pár bez USD (a bez VC): kurz se počítá přes USD</td></tr>
+                            </tbody>
+                        </table>
+                        Konkrétní seznam i hodnoty na Yahoo se mění. Postup je ale vždy stejný: <strong>(1)</strong> poznej, která měna je báze (za lomítkem v zápisu přednášky), <strong>(2)</strong> je-li jednou z měn USD, jde o evropskou/americkou kotaci podle místa USD, <strong>(3)</strong> nejsou-li v páru USD ani jiná vehicle currency, jde o křížový kurz.</div>
+
+                    <div class="ex-box"><strong>Úloha 2: small figures a spread</strong> (dealer kótuje USD/EUR = 1,1145 / 1,1152)
+                        <br><strong>a) Small figures:</strong> big figure je 1,11, small figures jsou poslední dvě číslice: <strong>45 / 52</strong> (dealer řekne „čtyřicet pět, padesát dva“).
+                        <br><strong>b) Spread v pipech:</strong> pip je 4. desetinné místo, tedy 0,0001. $$\text{spread} = \text{ask} - \text{bid} = 1{,}1152 - 1{,}1145 = 0{,}0007 \;\Rightarrow\; \mathbf{7\ pipů}$$
+                        <strong>Spread v procentech:</strong> $$\frac{\text{ask} - \text{bid}}{\text{ask}} = \frac{0{,}0007}{1{,}1152} \approx \mathbf{0{,}063\ \%}$$
+                        <span class="text-muted small">(při dělení bidem nebo středem vyjde prakticky totéž: 0,0628 %; ve zdroji není určeno, čím se dělí.)</span></div>
+
+                    <div class="ex-box"><strong>Úloha 3: křížové kurzy AUD/EUR a GBP/CHF z tabulky</strong>
+                        <br>Tabulka (v .doc přiložená jako obrázek, jde o úlohu z učebnice Eun–Resnick) udává střední kurzy, bez bid a ask. Buňka v <strong>řádku X a sloupci Y</strong> je kurz <strong>X/Y</strong> v zápisu přednášky, tedy kolik X za 1 Y. Ověření: řádek USD, sloupec EUR = 1,3247 USD/EUR; řádek EUR, sloupec USD = 0,7549 EUR/USD; $1{,}3247 \cdot 0{,}7549 = 1{,}0000$ ✔. Hledané buňky (AUD/EUR, GBP/CHF) jsou v tabulce prázdné. Dopočítáme je přes USD: prostřední měna se vykrátí, kurzy se tedy <strong>násobí</strong>.
+                        <br><strong>AUD/EUR</strong> (kolik AUD za 1 EUR): $\text{AUD/EUR} = \text{AUD/USD} \cdot \text{USD/EUR} = 1{,}015 \cdot 1{,}3247 = \mathbf{1{,}3446}$
+                        <br>Kontrola: převrácená hodnota buňky EUR/AUD, $1 / 0{,}7437 = 1{,}3446$ ✔
+                        <br><strong>GBP/CHF</strong> (kolik GBP za 1 CHF): $\text{GBP/CHF} = \text{GBP/USD} \cdot \text{USD/CHF} = 0{,}6328 \cdot 1{,}0184 = \mathbf{0{,}6444}$
+                        <br>Kontrola: převrácená hodnota buňky CHF/GBP, $1 / 1{,}5519 = 0{,}6444$ ✔
+                        <br><span class="text-muted small">Jiná cesta k témuž: dělení se stejnou bází, např. AUD/EUR = AUD/USD ÷ EUR/USD. Zde to není potřeba, protože USD je jednou báze a jednou kotovaná měna.</span></div>
+
+                    <div class="ex-box"><strong>Úloha 4: trojstranná arbitráž s 10 mil. CZK</strong>
+                        <br>Kotace: A = CZK/EUR 27,862 / 27,875, B = USD/EUR 1,1587 / 1,1589, C = CZK/USD 26,436 / 26,553.
+                        <br><strong>0. Křížový kurz z A a B</strong> (společná báze EUR → dělení, bid / ask a ask / bid):
+                        $$\text{CZK/USD}_{bid} = \frac{27{,}862}{1{,}1589} = 24{,}0418 \qquad \text{CZK/USD}_{ask} = \frac{27{,}875}{1{,}1587} = 24{,}0571$$
+                        Dealer C kótuje 26,436 / 26,553, tedy <strong>výrazně výš</strong>: dolar je u C drahý, arbitráž je možná. Vyhraje směr, ve kterém dolary u C <strong>prodáme</strong>.
+                        <br><strong>Směr 1: CZK → EUR → USD → CZK</strong>
+                        <br>CZK → EUR (A): kupujeme EUR (bázi) za ask: $10\,000\,000 / 27{,}875 = 358\,744$ EUR
+                        <br>EUR → USD (B): prodáváme EUR (bázi) za bid: $358\,744 \cdot 1{,}1587 = 415\,677$ USD
+                        <br>USD → CZK (C): prodáváme USD (bázi) za bid: $415\,677 \cdot 26{,}436 = 10\,988\,841$ CZK → <strong>zisk 988 841 CZK (+9,9 %)</strong>
+                        <br><strong>Směr 2: CZK → USD → EUR → CZK</strong>
+                        <br>CZK → USD (C): kupujeme USD za ask: $10\,000\,000 / 26{,}553 = 376\,605$ USD
+                        <br>USD → EUR (B): kupujeme EUR za ask: $376\,605 / 1{,}1589 = 324\,968$ EUR
+                        <br>EUR → CZK (A): prodáváme EUR za bid: $324\,968 \cdot 27{,}862 = 9\,054\,255$ CZK → <strong>ztráta 945 745 CZK (−9,5 %)</strong></div>
+                    <div class="thm-box"><strong>Jak má C změnit kotaci:</strong> aby arbitráž zmizela, musí se jeho rozpětí překrývat se syntetickým 24,0418 / 24,0571. Konkrétně:
+                        <ul class="mb-0">
+                            <li><strong>bid C ≤ 24,0571</strong> (syntetický ask): to je podmínka, která ruší směr 1. Při přesně 24,0571 vyjde ve směru 1 zisk 0 CZK,</li>
+                            <li><strong>ask C ≥ 24,0418</strong> (syntetický bid): ruší opačný směr; stávající ask 26,553 podmínku splňuje, ale je nereálně vysoko.</li>
+                        </ul>
+                        Dealer C tedy musí kotaci posunout dolů z cca 26,4–26,6 na úroveň kolem 24,05, např. <strong>24,04 / 24,06</strong>. Zadané kurzy nejsou tržní (skutečný CZK/USD je při těchto kurzech A a B zhruba 24), jde o procvičení postupu.</div>
+                    <div class="warn-box"><strong>⚠️ Pozor ve cvičení:</strong>
+                        <ul class="mb-0">
+                            <li>V této úloze je <strong>USD/EUR</strong> v zápisu přednášky, tedy USD za 1 EUR. A i B proto mají bázi EUR, dělí se jejich kurzy (CZK/EUR ÷ USD/EUR). Násobit by se mělo jen tehdy, kdyby se prostřední měna na jedné straně vykrátila (např. AUD/USD · USD/EUR v úloze 3).</li>
+                            <li>Spread v procentech se dělí <strong>cenou</strong>, ne počtem pipů. Pip je 4. desetinné místo (u JPY 2.), takže 7 pipů ≠ 0,7 %.</li>
+                            <li>Na Yahoo je zápis tržní (báze první). Před klasifikací kotace jako evropské nebo americké ji vždy přepiš do zápisu přednášky.</li>
+                        </ul>
+                    </div>
+
                     <div class="summary-box"><strong>Shrnutí:</strong>
                         <ul>
                             <li>Devizový trh je OTC, běží 24 h denně od pondělí do pátku a jeho obrat je zhruba 9,6 bil. USD denně. Nefinanční firmy tvoří jen asi 5 % obratu.</li>
@@ -237,13 +298,1060 @@
                             <li>Zápis na přednášce: CZK/EUR = CZK za 1 EUR, báze je za lomítkem. Evropská kotace má vehicle currency za lomítkem (25,264 CZK/EUR), americká před lomítkem (1,1527 USD/EUR).</li>
                             <li>Křížový kurz: se stejnou bází se dělí (bid/ask, ask/bid), s prostřední měnou, která se vykrátí, se násobí (bid·bid, ask·ask).</li>
                             <li>Trojúhelníková arbitráž: když kótovaný křížový kurz leží mimo rozpětí spočtené z ostatních kotací, jeden směr trojúhelníku (USD → GBP → EUR → USD) vydělá a opačný prodělá. Bez arbitráže se rozpětí musí překrývat.</li>
+                            <li>Small figures kotace 1,1145 / 1,1152 jsou 45 / 52, spread je 7 pipů (zhruba 0,063 % ask). Pip je 4. desetinné místo.</li>
+                            <li>Postup v arbitráži: spočítej syntetický kurz (dělení se stejnou bází, jinak násobení) a porovnej ho s kótovaným. Dealer s odchylnou kotací ji musí posunout tak, aby se rozpětí překrývalo se syntetickým, jinak se vyplatí obchodovat s ním (cvičení: bid C ≤ 24,0571 CZK/USD).</li>
                         </ul>
                     </div>
                     <p class="mb-0"><a href="../quiz.html?course=1MT461&topic=1"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
                 </section>
 
+                <section class="topic-section" id="topic-2">
+                    <h3>2. Řízení kurzového rizika prostřednictvím měnových forwardů</h3>
+                    <p class="text-muted small">Přednáška 5. 10. · Ondřej Šíma · zdroj: <em>Řízení kurzového rizika prostřednictvím měnových forwardů</em> (<code>1MT461_02_forwardy_ZS2026.pdf</code>, čísla slajdů v závorkách)</p>
+
+                    <h4>Návaznost: otevřená devizová pozice a proč zajišťovat</h4>
+                    <div class="def-box"><strong>Otevřená devizová pozice (s. 7):</strong>
+                        <ul class="mb-0">
+                            <li><strong>dlouhá</strong>: k dané splatnosti jsou aktiva v cizí měně větší než pasiva v této měně. Držitel „sází“ na zhodnocení cizí měny.</li>
+                            <li><strong>krátká</strong>: pasiva v cizí měně jsou větší než aktiva. Držitel „sází“ na znehodnocení cizí měny.</li>
+                        </ul>
+                    </div>
+                    <ul>
+                        <li><strong>Pohledávka v EUR</strong> (český exportér) = <strong>dlouhá</strong> pozice. Škodí mu posílení CZK (depreciace EUR): za eura dostane méně korun (s. 8).</li>
+                        <li><strong>Závazek v EUR</strong> (český importér) = <strong>krátká</strong> pozice. Škodí mu oslabení CZK (apreciace EUR): za eura zaplatí víc korun (s. 9).</li>
+                    </ul>
+                    <p><strong>Interní zajištění</strong> (zavřít pozici bez derivátu, tzv. přirozené zajištění) je např. nákup vstupů v eurech, eurové úvěry nebo platby v eurech i mezi tuzemskými firmami, takže se příjmy a výdaje v EUR vyrovnají (s. 11–13). <strong>Externí zajištění</strong> je finanční nástroj, nejčastěji měnový forward, a řešíme ho v tomto tématu. Opce navazují v tématu 3 (s. 10). Motivací jsou výkyvy kurzů: propad měn rozvíjejících se trhů v roce 2013 (s. 14) nebo „horké léto“ 2022, kdy firmy zajišťovaly hlavně kvůli <em>volatilitě</em> kurzu, ne kvůli tomu, jestli je koruna silná či slabá (s. 16).</p>
+
+                    <h4>Základní logika forwardu</h4>
+                    <div class="def-box"><strong>Forward:</strong> kontrakt uzavřený „dnes“ (t), který začíná o dva pracovní dny později (t + 2D) a plní se v pevně dohodnutém budoucím termínu (t + 2D + x) za <strong>kurz FR</strong> (forward rate) dohodnutý už dnes (s. 17).</div>
+                    <ul>
+                        <li>Splatnost obvykle <strong>do 1 roku</strong> (tam je likvidní), existují i delší, ale s nižší likviditou a širším spreadem.</li>
+                        <li>Spread bid/ask závisí na výši SR, délce splatnosti, volatilitě SR, měnovém páru a okamžiku sjednání.</li>
+                        <li><strong>OTC</strong> trh: forwardy jsou „šité na míru“ (částka, termín) a <strong>sekundárně neobchodovatelné</strong>.</li>
+                    </ul>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> forward kurz <strong>zafixuje</strong> kurz pro obě strany. Zajišťuje proti nepříznivému pohybu, ale <strong>zároveň se vzdává příznivého</strong> (s. 59, 82). Chce-li firma zisk z příznivého pohybu, je lepší opce (téma 3).</div>
+
+                    <h4>Kotace forwardového kurzu: outright a swapové body</h4>
+                    <p>Forward se kotuje buď jako <strong>outright</strong> (celý kurz FR<sub>BID</sub> / FR<sub>ASK</sub>), nebo ve <strong>swapových (forwardových) bodech</strong> jako rozdíl vůči spotu (s. 19).</p>
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/forwardy-19.jpg" loading="lazy" alt="Forwardové kotace CZK/EUR: outright a v bodech">
+                        <figcaption>Slajd 19 (Šíma, Forwardy): tržní kotace CZK/EUR k 19. 10. 2015, vlevo outright, vpravo v bodech. U každé splatnosti jsou body záporné, tedy forwardový diskont na EUR. S delší splatností se body zvětšují (u 1 roku −153,40 / −128,20). Body se tedy jen přičtou nebo odečtou od spotu.</figcaption>
+                    </figure>
+                    <div class="formula-block">$$\text{swapové body}_{BID} = (FR_{BID} - SR_{BID}) \cdot X \qquad \text{swapové body}_{ASK} = (FR_{ASK} - SR_{ASK}) \cdot X$$</div>
+                    <p>Převodní konstanta <em>X</em> odpovídá počtu desetinných míst kotace: 10 000 u kurzu na 4 desetinná místa (s. 20), 1 000 u kurzu na 3 desetinná místa (s. 51–52).</p>
+                    <div class="ex-box"><strong>Příklad (CZK/EUR, FR &gt; SR, s. 20):</strong> SR = 27,2266 / 27,2276, FR 6M = 27,2507 / 27,2545.
+                        <br>Body bid: $(27{,}2507 - 27{,}2266) \cdot 10\,000 = 241$, body ask: $(27{,}2545 - 27{,}2276) \cdot 10\,000 = 269$ → kotace <strong>241 / 269</strong>.
+                        <br>Zpět: $FR_{BID} = 27{,}2266 + 0{,}0241 = 27{,}2507$, $FR_{ASK} = 27{,}2276 + 0{,}0269 = 27{,}2545$. FR &gt; SR = <strong>prémie</strong> bazické měny (EUR).</div>
+                    <div class="ex-box"><strong>Příklad (CHF/EUR, FR &lt; SR, s. 21):</strong> SR = 0,9913 / 0,9916, FR 3M v bodech −25,42 / −23,38.
+                        <br>$FR_{BID} = 0{,}9913 - \tfrac{25{,}42}{10\,000} = 0{,}9913 - 0{,}002542 \approx 0{,}9888$
+                        <br>$FR_{ASK} = 0{,}9916 - \tfrac{23{,}38}{10\,000} = 0{,}9916 - 0{,}002338 \approx 0{,}9893$
+                        <br>FR &lt; SR = <strong>diskont</strong> bazické měny (EUR). Přepočet sedí se slajdem (0,98876 a 0,98926).</div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong>
+                        <ul class="mb-0">
+                            <li>Při <strong>prémii</strong> se body přičítají: bid + <em>nižší</em> číslo (low points), ask + <em>vyšší</em> číslo (high points). Při <strong>diskontu</strong> se odečítají: bid − <em>vyšší</em> číslo (high points), ask − <em>nižší</em> (low points) (s. 20–21). Výsledek musí vždy dát FR<sub>BID</sub> &lt; FR<sub>ASK</sub>.</li>
+                            <li><em>doplněk:</em> podle velikosti se pozná směr, i když znaménka v kotaci chybí. Když je první číslo (bid) menší než druhé (ask), jde o prémii. Když je větší, jde o diskont. Je to běžná tržní konvence, ne výslovně ze slajdů.</li>
+                            <li>Správné <em>X</em> vždy odvoď z počtu desetinných míst (jinak se spleteš o řád).</li>
+                        </ul>
+                    </div>
+
+                    <h4>Krytá úroková parita (CIP)</h4>
+                    <div class="def-box"><strong>Krytá úroková parita (covered interest parity):</strong> vztah mezi forwardovým a spotovým kurzem, který vyplývá z úrokových sazeb obou měn (s. 22).</div>
+                    <div class="formula-block">$$FR_{(D/F)} = SR_{(D/F)} \cdot \frac{1 + IR_{D} \cdot n/360}{1 + IR_{F} \cdot n/360}$$</div>
+                    <div class="formula-block">$$f = \frac{FR - SR}{SR} = \frac{(1+IR_D) - (1+IR_F)}{1+IR_F} \;\approx\; IR_D - IR_F$$</div>
+                    <p>Značení: <em>D</em> = domácí měna (kótovaná, např. CZK), <em>F</em> = zahraniční (bazická, např. EUR), <em>n</em> = počet dní. Úroky se počítají na 360 dní (s. 22). <em>f</em> je <strong>forwardová prémie (diskont)</strong>.</p>
+                    <ul>
+                        <li><strong>Proč „krytá“?</strong> Výnos je zajištěn forwardem, v rovnici není očekávaný spot E(SR) jako u nekryté parity.</li>
+                        <li><strong>Proč „úroková parita“?</strong> Kurz se odvozuje z úrokových sazeb různých zemí.</li>
+                        <li><strong>Proč FR ≠ SR?</strong> Kvůli času: kurz platí pro různá data a úroky se liší.</li>
+                    </ul>
+                    <div class="thm-box"><strong>Kdy prémie a kdy diskont (s. 23):</strong> je-li $IR_D &gt; IR_F$, pak $f &gt; 0$ = <strong>prémie</strong> na bazickou měnu (CZK/EUR: kurz vzroste, např. z 27,2266 na 27,2507). Je-li $IR_D &lt; IR_F$, pak $f &lt; 0$ = <strong>diskont</strong> (CHF/EUR: kurz klesne, 0,9913 → 0,9888). Měna s <strong>vyšší</strong> úrokovou sazbou je na forwardu <strong>slabší</strong>.</div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> slajd 23 píše, že při prémii je „kótovaná měna (CZK) na forwardu dražší“. Správně je dražší <em>bazická měna</em> (EUR): za 1 EUR zaplatíš víc CZK, tedy CZK je na forwardu <strong>slabší</strong>. Řiď se číselným příkladem na slajdu (27,2266 → 27,2507 CZK/EUR) a pravidlem „vyšší sazba = slabší měna“ (potvrzuje ho i s. 123).</div>
+                    <p>Sazby: <strong>PRIBOR</strong> (zápůjční sazba na českém mezibankovním trhu) &gt; <strong>PRIBID</strong> (depozitní sazba). Stejně LIBOR &gt; LIBID. Banka si tedy půjčuje dráž, než ukládá (s. 24–25, 39). Proto se v kotaci rozlišují <strong>IR<sub>D</sub></strong> (depozitní) a <strong>IR<sub>L</sub></strong> (zápůjční) a platí $IR_L &gt; IR_D$.</p>
+
+                    <h4>Úrokový diferenciál a forwardová prémie (diskont)</h4>
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/forwardy-27.jpg" loading="lazy" alt="Graf úrokového diferenciálu a forwardové prémie">
+                        <figcaption>Slajd 27 (Šíma, Forwardy): na ose x je úrokový diferenciál $IR_D - IR_F$, na ose y forwardová prémie (diskont) $f$. Na 45° linii platí CIP. Body pod linií (W, X, B…) a nad linií (Y, A, Z) ukazují odchylky. Z grafu si odnes směr odchylky a směr, kterým se trh vrací k linii.</figcaption>
+                    </figure>
+                    <div class="ex-box"><strong>Příklad bod W (s. 28–30): $f &lt; IR_D - IR_F$.</strong> SR = 27,00 CZK/EUR, FR 12M = 27,27, IR<sub>CZK</sub> = 4 %, IR<sub>EUR</sub> = 1 %. Prémie $f = (27{,}27-27{,}00)/27{,}00 = 1\,\%$, diferenciál $= 3\,\%$.
+                        <br><strong>Investor z eurozóny:</strong> 1 EUR → 27 CZK, uloží na 4 % → $27 \cdot 1{,}04 = 28{,}08$ CZK, forwardem (27,27) zpět: $28{,}08 / 27{,}27 = 1{,}0297$ EUR. Investice přímo do EUR: $1{,}01$ EUR. <strong>Do CZK je výhodnější</strong> (1,0297 &gt; 1,01).
+                        <br><strong>Český investor:</strong> do CZK $27{,}00 \cdot 1{,}04 = 28{,}08$ CZK. Do EUR s forwardem: $1{,}01 \cdot 27{,}27 = 27{,}5427$ CZK. Preferuje CZK (28,08 &gt; 27,5427).
+                        <br><strong>Reakce trhu:</strong> roste poptávka po CZK na spotu ($\downarrow SR$, CZK apreciuje) a nabídka CZK na forwardu ($\uparrow FR$, CZK deprecieuje) → $f$ roste až k 3 % na linii (s. 29).</div>
+                    <div class="ex-box"><strong>Příklad bod Z (s. 31–32): $f &gt; IR_D - IR_F$.</strong> SR = 27,00, FR 12M = 26,73, IR<sub>CZK</sub> = 2 %, IR<sub>EUR</sub> = 5 %. Prémie $f = (26{,}73-27{,}00)/27{,}00 = -1\,\%$, diferenciál $= -3\,\%$.
+                        <br>Investice do CZK s forwardem: $27 \cdot 1{,}02 / 26{,}73 = 1{,}0303$ EUR. Přímo do EUR: $1{,}05$ EUR. <strong>Výhodnější je EUR</strong>. Český investor: CZK $27{,}54$, EUR s forwardem $1{,}05 \cdot 26{,}73 = 28{,}07$ CZK (28,07 &gt; 27,54).
+                        <br><strong>Reakce trhu:</strong> poptávka po EUR na spotu ($\uparrow SR$), nabídka EUR na forwardu ($\downarrow FR$) → $f$ klesá k −3 %.</div>
+                    <p>U subjektů, které si <strong>půjčují</strong>, platí opačná preference (s. 33). Pointa: arbitráž „žene“ trh zpátky na 45° linii.</p>
+
+                    <h4>Propojení forwardového a spotového trhu</h4>
+                    <p>Tři vztahy tvoří trojúhelník (s. 35):</p>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Vztah</th><th>Kdo ho hlídá</th><th>Rovnice</th></tr></thead>
+                        <tbody>
+                            <tr><td>SR a očekávaný SR<sup>e</sup></td><td>devizová <strong>spekulace</strong></td><td>nekrytá úroková parita (později)</td></tr>
+                            <tr><td>FR a SR</td><td>devizová <strong>arbitráž</strong></td><td>krytá úroková parita (nyní)</td></tr>
+                            <tr><td>FR a SR<sup>e</sup></td><td>devizová <strong>spekulace</strong></td><td>$FR = E_t(SR_{t+n})$</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h4>Devizové arbitráže</h4>
+                    <p>Arbitráže „obnovují“ platnost CIP. Skládají se z devizových, depozitních a úvěrových operací, takže subjekty svým jednáním působí na SR, FR i IR. Tři typy (s. 37–38):</p>
+                    <ul>
+                        <li><strong>okružní (úvěrová):</strong> kapitál si půjčíme, směníme ho do jiné měny, uložíme na termínový vklad a forwardem převedeme zpět (s. 40–41),</li>
+                        <li><strong>depozitní:</strong> máme vlastní kapitál a volíme mezi termínovým vkladem v původní měně, nebo směnou do jiné měny, vkladem a forwardovým návratem (s. 42–43),</li>
+                        <li><strong>hedgová:</strong> zajišťujeme uzavřenou pozici (pohledávku, závazek) buď forwardem, nebo operacemi na peněžním a spotovém trhu (<strong>syntetický forward</strong>) (s. 44–45).</li>
+                    </ul>
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/forwardy-41.jpg" loading="lazy" alt="Okružní úvěrová arbitráž">
+                        <figcaption>Slajd 41 (Šíma, Forwardy): okružní arbitráž. Vlevo si půjčíme CZK (IR<sub>CZK,L</sub>), na spotu nakoupíme USD za SR<sub>ASK</sub>, uložíme za IR<sub>USD,D</sub> a forwardem prodáme za FR<sub>BID</sub>. Vpravo je opačný směr. Při platnosti CIP vyjde přesně splacená půjčka. Jinak vznikne zisk, nebo ztráta.</figcaption>
+                    </figure>
+                    <div class="def-box"><strong>Který kurz a která sazba (s. 39):</strong> kotace mají $SR_{BID} &lt; SR_{ASK}$, $FR_{BID} &lt; FR_{ASK}$ a sazby $IR_L &gt; IR_D$. Vždy platí: <em>půjčuji → IR<sub>L</sub>, ukládám → IR<sub>D</sub></em>. Banka bázi od klienta <em>kupuje za bid</em> a <em>prodává za ask</em>.</div>
+
+                    <h4>Hedgová arbitráž a syntetický forward</h4>
+                    <p>Firma má <strong>uzavřenou</strong> devizovou pozici (známe částku i splatnost). Otevřenou pozici zajistí (s. 45):</p>
+                    <ol>
+                        <li><strong>forwardem</strong>, nebo</li>
+                        <li><strong>operacemi na peněžním a spotovém trhu</strong> (úvěr, spot, depozitum) = <strong>syntetický forward</strong>.</li>
+                    </ol>
+                    <p>Platí-li CIP, jsou obě varianty stejně výhodné. Syntetický forward se užívá, když klasický forward není dostupný (např. rozvíjející se země), nebo když firma nemá přístup na mezibankovní trh. Na klientském trhu navíc nemusí být trh absolutně efektivní.</p>
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/forwardy-44.jpg" loading="lazy" alt="Hedgová arbitráž: schéma zajištění pohledávky a závazku">
+                        <figcaption>Slajd 44 (Šíma, Forwardy): hedging pohledávky (vlevo) a závazku (vpravo). Cesta „po kruhu“ musí vyjít stejně jako přímý forward. Odtud vzorce pro FR<sub>BID</sub> a FR<sub>ASK</sub>: pohledávka = USD přicházejí v čase t, závazek = CZK potřebujeme v čase t.</figcaption>
+                    </figure>
+                    <div class="thm-box"><strong>Vzorce syntetického forwardu (s. 44, 84–93):</strong>
+                        <div class="formula-block mb-0">$$\text{pohledávka v cizí měně: } FR_{BID} = SR_{BID} \cdot \frac{1 + IR_{D,\,dom} \cdot t/360}{1 + IR_{L,\,zahr} \cdot t/360}$$ $$\text{závazek v cizí měně: } FR_{ASK} = SR_{ASK} \cdot \frac{1 + IR_{L,\,dom} \cdot t/360}{1 + IR_{D,\,zahr} \cdot t/360}$$</div></div>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th></th><th>Zajištění pohledávky (dlouhá pozice)</th><th>Zajištění závazku (krátká pozice)</th></tr></thead>
+                        <tbody>
+                            <tr><td>Forward</td><td>firma <strong>prodává</strong> cizí měnu, banka kupuje → <strong>FR<sub>BID</sub></strong></td><td>firma <strong>kupuje</strong> cizí měnu, banka prodává → <strong>FR<sub>ASK</sub></strong></td></tr>
+                            <tr><td>Syntetický forward, kroky</td><td>1) půjčka v cizí měně (IR<sub>zahr,L</sub>), 2) směna na spotu (SR<sub>BID</sub>), 3) vklad v domácí měně (IR<sub>dom,D</sub>)</td><td>1) půjčka v domácí měně (IR<sub>dom,L</sub>), 2) směna na spotu (SR<sub>ASK</sub>), 3) vklad v cizí měně (IR<sub>zahr,D</sub>)</td></tr>
+                            <tr><td>Vyplatí se forward, když</td><td>$FR_{BID} &gt;$ pravá strana (dostanu <strong>víc</strong> korun) (s. 88)</td><td>$FR_{ASK} &lt;$ pravá strana (zaplatím <strong>míň</strong> korun) (s. 93)</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="insight-box"><strong>Intuice:</strong> pravá strana vzorce je „cena“, za kterou vyrobím forward sám z peněžního trhu. Exportér chce dostat co nejvíc korun, tedy forward bere, jen když ho banka platí líp než „domácí výroba“. Importér chce zaplatit co nejméně a bere forward, když ho banka prodává levněji.</div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong>
+                        <ul class="mb-0">
+                            <li>U pohledávky se bere <strong>bid</strong> (SR<sub>BID</sub>, FR<sub>BID</sub>) a u závazku <strong>ask</strong>, protože klient je price taker a banka kupuje eura od exportéra a prodává je importérovi (s. 55, 72).</li>
+                            <li>Ve vzorcích jsou vždy kombinace <strong>(domácí D, zahraniční L)</strong> u pohledávky a <strong>(domácí L, zahraniční D)</strong> u závazku. Nikdy ne stejná sazba D/L v obou měnách.</li>
+                            <li>Značení: na slajdech 84–93 je <em>t</em> doba trvání forwardu v dnech (v učebnici <em>n</em>). Kratší podoba $\tfrac{FR-SR}{SR} \approx (IR_D - IR_L)\cdot \tfrac{t}{360}$ platí jen při nízkých sazbách (s. 84).</li>
+                        </ul>
+                    </div>
+                    <p><strong>Od kotace k swapovým bodům (s. 48–52):</strong> z vzorce pro FR vychází rozdíl $FR - SR = \dfrac{(IR_{D} - IR_{F})\cdot n/360}{1 + IR_{F}\cdot n/360}\cdot SR$ (zjednodušeně: swapové body ≈ úrokový diferenciál × SR × n/360). Do bidu se dosazují sazby jako u FR<sub>BID</sub> a do asku jako u FR<sub>ASK</sub>.</p>
+
+                    <h4>Příklad 1: výpočet FR a swapových bodů (s. 47–52)</h4>
+                    <div class="ex-box"><strong>Zadání:</strong> forward 3M (90 dní), SR (CZK/EUR) = 28,573 / 28,591. Sazby 3M: CZK depozitní 2,15 %, zápůjční 2,18 %, EUR depozitní 1,08 %, zápůjční 1,11 % (% p.a.). Spočti FR<sub>BID</sub>, FR<sub>ASK</sub> a swapové body.
+                        <br><strong>Bid</strong> (zajištění pohledávky: CZK D, EUR L): $FR_{BID}-SR_{BID} = \dfrac{(0{,}0215-0{,}0111)\cdot \frac{90}{360}}{1+0{,}0111\cdot\frac{90}{360}} \cdot 28{,}573 \approx 0{,}074$
+                        <br><strong>Ask</strong> (CZK L, EUR D): $FR_{ASK}-SR_{ASK} = \dfrac{(0{,}0218-0{,}0108)\cdot \frac{90}{360}}{1+0{,}0108\cdot\frac{90}{360}} \cdot 28{,}591 \approx 0{,}078$
+                        <br>Swapové body ($X = 1000$): <strong>74 / 78</strong>, tedy $FR_{BID} = 28{,}573 + 0{,}074 = 28{,}647$ a $FR_{ASK} = 28{,}591 + 0{,}078 = 28{,}669$.
+                        <br><span class="text-muted small">Přepočet: přesné hodnoty jsou 0,07408 a 0,07841 (FR 28,6471 / 28,6694), na 3 desetinná místa sedí se slajdem.</span></div>
+
+                    <h4>Příklad 2: zajištění pohledávky (s. 54–63)</h4>
+                    <p>Tonak vyvezl zboží za <strong>100 000 EUR</strong> se splatností za 3 měsíce (90 dní). Exportér je v <strong>dlouhé</strong> pozici a bojí se posílení CZK. Na slajdech 55–56 se ukazuje, že pohledávka přináší zisk při oslabení koruny a ztrátu při posílení. Kurz pro přepočet je SR<sub>BID</sub>, protože banka eura od exportéra kupuje.</p>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th></th><th>BID</th><th>ASK</th><th></th><th>Depozitní (D)</th><th>Zápůjční (L)</th></tr></thead>
+                        <tbody>
+                            <tr><td>SR (CZK/EUR)</td><td>27,2146</td><td>27,2205</td><td>IR CZK 3M</td><td>4,00 %</td><td>6,50 %</td></tr>
+                            <tr><td>FR (CZK/EUR)</td><td>27,1949</td><td>27,2375</td><td>IR EUR 3M</td><td>0,75 %</td><td>2,00 %</td></tr>
+                        </tbody>
+                    </table>
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/forwardy-59.jpg" loading="lazy" alt="Pohledávka v EUR a její zajištění forwardem">
+                        <figcaption>Slajd 59 (Šíma, Forwardy): vlevo výsledek neuzavřené pohledávky (zisk při depreciaci CZK, ztráta při apreciaci), vpravo forward na prodej EUR s opačným sklonem. Součet obou čar je vodorovný: výsledek exportéra je zafixovaný.</figcaption>
+                    </figure>
+                    <div class="ex-box"><strong>Řešení (s. 56–62):</strong>
+                        <br><strong>Scénáře bez zajištění</strong> (s. 56): při 27 CZK/EUR exportér dostane $100\,000 \cdot 27 = 2\,700\,000$ CZK, tedy o 21 460 méně než při $SR_{BID} = 27{,}2146$ ($2\,721\,460$ CZK). Při 28 dostane $2\,800\,000$, tedy o 78 540 více.
+                        <br><strong>I. Forward:</strong> $100\,000 \cdot FR_{BID} = 100\,000 \cdot 27{,}1949 = \mathbf{2\,719\,490}$ CZK (jisté bez ohledu na budoucí SR).
+                        <br><strong>II. Syntetický forward</strong> (půjčit EUR, směnit, uložit CZK):
+                        <br>A) půjčka v EUR, která za 90 dní naroste na 100 000: $\dfrac{100\,000}{1+0{,}02\cdot\frac{90}{360}} = 99\,502{,}49$ EUR (sazba L = 2 %)
+                        <br>B) směna na spotu: $99\,502{,}49 \cdot 27{,}2146 = 2\,707\,920{,}40$ CZK
+                        <br>C) vklad v CZK (D = 4 %): $2\,707\,920{,}40 \cdot (1+0{,}04\cdot\frac{90}{360}) = \mathbf{2\,734\,999{,}60}$ CZK
+                        <br><strong>Závěr:</strong> syntetický forward vynese o $2\,734\,999{,}60 - 2\,719\,490 = 15\,509{,}60$ CZK víc. Výhodnější je <strong>syntetický forward</strong>. Přepočet sedí se slajdy.</div>
+                    <div class="ex-box"><strong>Proč a jak se nastolí rovnováha (s. 63):</strong> ověřujeme, zda $FR_{BID} \gtrless SR_{BID}\cdot\frac{1+IR_{CZK,D}\,t/360}{1+IR_{EUR,L}\,t/360}$. Zjednodušeně: $\dfrac{27{,}1949-27{,}2146}{27{,}2146} = -0{,}07\,\%$ vs. $(0{,}04-0{,}02)\cdot\frac{90}{360} = 0{,}5\,\%$ → $-0{,}07\,\% &lt; 0{,}5\,\%$, forward je pro exportéra <strong>horší</strong> než syntetický. Exportéři proto půjčují v EUR, směňují na CZK (CZK apreciuje na spotu, $\downarrow SR_{BID}$) a na forwardu prodávají CZK ($\uparrow FR$). Rozdíl se zmenšuje. Úrokové sazby reagují s odstupem.
+                        <br><span class="text-muted small">Pozn.: slajd 63 má nadpis „Příklad 4b“, ale jde o stejný příklad č. 2 (Tonak).</span></div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> slajd 58 píše v jednom místě 2 719 460 CZK místo správných 2 719 490 CZK (překlep). Hodnota 97 124,64 EUR v třetím scénáři je ale spočítaná z 2 719 490 a je správně.</div>
+
+                    <h4>Příklad 3: zajištění závazku (s. 65–69)</h4>
+                    <p>CzechFruit dovezl zboží za <strong>100 000 EUR</strong> se splatností za 3 měsíce. Je v <strong>krátké</strong> pozici a bojí se oslabení CZK. Používá se <strong>FR<sub>ASK</sub></strong> a <strong>SR<sub>ASK</sub></strong> (firma eura kupuje, banka je prodává), stejná tabulka jako u příkladu 2.</p>
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/forwardy-68.jpg" loading="lazy" alt="Závazek v EUR a jeho zajištění forwardem">
+                        <figcaption>Slajd 68 (Šíma, Forwardy): závazek (vlevo) a forwardový nákup EUR (vpravo) mají opačný sklon, takže se vyruší. Zrcadlově k pohledávce: importér prodělá na závazku při depreciaci CZK, ale vydělá na forwardu.</figcaption>
+                    </figure>
+                    <div class="ex-box"><strong>Rovnováha (s. 69):</strong> $\dfrac{27{,}2375-27{,}2205}{27{,}2205} = 0{,}0625\,\%$, diferenciál $(0{,}065-0{,}0075)\cdot\frac{90}{360} = 1{,}4375\,\%$ → $FR_{ASK} &lt; SR_{ASK}\cdot\frac{1+IR_{CZK,L}t/360}{1+IR_{EUR,D}t/360}$, takže pro importéra je <strong>forward levnější</strong>. Subjekty poptávají EUR na forwardu → $\uparrow FR_{ASK}$ a parita se postupně vrací.
+                        <br><em>dopočet</em> (na slajdech je jen nerovnost): syntetický forward = vklad v EUR $\dfrac{100\,000}{1+0{,}0075\cdot\frac14} = 99\,812{,}85$ EUR → za ně $99\,812{,}85\cdot 27{,}2205 = 2\,716\,955{,}71$ CZK → splatit úvěr $2\,716\,955{,}71\cdot(1+0{,}065\cdot\frac14) = 2\,761\,106{,}24$ CZK. Forward: $100\,000 \cdot 27{,}2375 = 2\,723\,750$ CZK, tedy o 37 356 CZK levnější.</div>
+
+                    <h4>Příklad 3b: závazek 10 mil. EUR na 6 měsíců (s. 70–81)</h4>
+                    <div class="ex-box"><strong>Zadání (s. 70):</strong> importér má závazek 10 000 000 EUR za 6 měsíců (180 dní). Banka kotuje FR (CZK/EUR) = 32,238 / 32,293, SR = 32,257 / 32,271, IR CZK 6M: D 2,04 %, L 2,09 %, IR EUR 6M: D 2,06 %, L 2,08 %. Je lepší klasický, nebo syntetický forward?
+                        <br><strong>Bez zajištění</strong> (s. 71): při SR = 32,271 stojí splátka $322\,710\,000$ CZK. Při posílení CZK na 29 vyjde $290\,000\,000$ (zisk 32,71 mil. CZK), při oslabení na 34 vyjde $340\,000\,000$ (ztráta 17,29 mil. CZK).
+                        <br><strong>1) Klasický forward</strong> (FR<sub>ASK</sub>): $10\,000\,000 \cdot 32{,}293 = \mathbf{322\,930\,000}$ CZK. Při jakémkoli budoucím SR (s. 73): při 29 je forward ztrátový o $10\,000\,000\cdot(32{,}293-29)=32{,}93$ mil. CZK, při 34 ziskový o $17{,}07$ mil. CZK, ale celková cena splátky je vždy 322,93 mil. CZK.
+                        <br><strong>2) Syntetický forward</strong> (počítá se „odzadu“, s. 77):
+                        <br>a) velikost EUR vkladu (D = 2,06 %): $x = \dfrac{10\,000\,000}{1+0{,}0206\cdot\frac{180}{360}} = 9\,898\,050{,}08$ EUR
+                        <br>b) CZK na jejich nákup za SR<sub>ASK</sub>: $9\,898\,050{,}08 \cdot 32{,}271 = 319\,419\,974{,}3$ CZK
+                        <br>c) splátka CZK úvěru (L = 2,09 %): $319\,419\,974{,}3 \cdot (1+0{,}0209\cdot\frac{180}{360}) = \mathbf{322\,757\,913}$ CZK
+                        <br><strong>Závěr:</strong> $322\,930\,000 - 322\,757\,913 = 172\,087$ CZK → <strong>syntetický forward je levnější</strong>. Na slajdu 80 vychází 172 090 CZK (zaokrouhlování). Souhlasí.
+                        <br><strong>Hraniční kurz</strong> (s. 81): oba způsoby jsou stejné při $FR_{ASK} = 32{,}271\cdot\dfrac{1+0{,}0209\cdot\frac{180}{360}}{1+0{,}0206\cdot\frac{180}{360}} = 32{,}276$. Kótovaný 32,293 je vyšší, tedy pro importéra horší.</div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> postup <em>výpočtu</em> syntetického forwardu je opačný než <em>postup operací</em> (s. 80): operace jdou úvěr → směna → vklad, ale počítá se vklad → úvěr v CZK → splátka s úroky. A vždy se zajímej, v jakém čase a v jaké měně je částka: depozitum v EUR je současná hodnota 10 mil. EUR.</div>
+                    <div class="insight-box"><strong>Nastolení rovnováhy (s. 81):</strong> využívání syntetického forwardu sníží depozitní sazbu na EUR a zvýší zápůjční sazbu na CZK. Hlavně ale vzroste poptávka po EUR na spotu (EUR apreciuje), takže syntetický forward je méně výhodný a rozdíl mezi způsoby se zmenší.</div>
+
+                    <h4>Jak se stanoví FR<sub>BID</sub> a FR<sub>ASK</sub> (příklady navíc, s. 84–93)</h4>
+                    <p>Dva příklady bez čísel na ukázku postupu. <strong>Pivovar Černá hora</strong> má pohledávku 100 000 USD za 1 měsíc (t = 30 dní): dlouhá pozice, obává se apreciace CZK. <strong>Vinselekt Michlovský</strong> má závazek 250 000 EUR za 3 měsíce (t = 90 dní): krátká pozice, obává se depreciace CZK.</p>
+                    <div class="thm-box"><strong>Rozhodovací pravidlo (s. 88, 93):</strong>
+                        <br>Pohledávka (pivovar): $100\,000\,USD \cdot FR_{BID} \;\gtrless\; 100\,000\,USD\cdot SR_{BID}\cdot\dfrac{1+IR_{CZK,D}\,t/360}{1+IR_{USD,L}\,t/360}$. Je-li levá strana větší, použij forward.
+                        <br>Závazek (vinselekt): $250\,000\,EUR \cdot FR_{ASK} \;\gtrless\; 250\,000\,EUR\cdot SR_{ASK}\cdot\dfrac{1+IR_{CZK,L}\,t/360}{1+IR_{EUR,D}\,t/360}$. Je-li levá strana menší, použij forward.</div>
+                    <p>Kroky u pohledávky (s. 85): půjčím <strong>současnou hodnotu</strong> $\dfrac{100\,000}{1+IR_{USD,L}\,t/360}$ v USD → směním za SR<sub>BID</sub> → vložím na CZK vklad (IR<sub>CZK,D</sub>). U závazku (s. 90) počítám odzadu: velikost EUR vkladu pro 250 000 EUR → CZK na jeho nákup za SR<sub>ASK</sub> → splátka CZK úvěru včetně úroků.</p>
+
+                    <h4>Vhodnost forwardu (s. 82)</h4>
+                    <ul>
+                        <li>Obvykle jen <strong>do jednoho roku</strong>.</li>
+                        <li>Když se kurz může vyvinout <strong>příznivě</strong>, je lepší opce, protože forward příznivý vývoj „zahodí“.</li>
+                        <li>Když nevíme přesnou <strong>splatnost nebo výši</strong>, je lepší opce nebo futures (s delší splatností).</li>
+                        <li>Když forwardový kurz jen „sleduje“ spot, je otázka, zda má zajištění smysl (problém rozvíjejících se ekonomik s trendovou apreciací).</li>
+                    </ul>
+
+                    <h4>Spekulace: vztah FR a očekávaného spotu</h4>
+                    <div class="def-box"><strong>Dokonalá predikce (s. 95):</strong> $SR_{t+n} = FR_{t;t+n}$. Platí při dvou předpokladech: (1) forward odráží očekávání trhu, $FR = E_t(SR_{t+n})$, a (2) očekávání jsou „perfektní“, $E_t(SR_{t+n}) = SR_{t+n}$.</div>
+                    <p>Predikce není dokonalá kvůli <strong>nákladům na spekulaci</strong> (transakční náklady, riziková prémie) a kvůli povaze očekávání (jsou racionální, adaptivní?).</p>
+                    <div class="insight-box"><strong>Forward jako nástroj spekulace (s. 104–105, Komerční banka 2017):</strong> spekulant, který <em>prodá</em> forward na EUR za CZK, vydělá, když bude spot při splatnosti nižší (koruna silnější). Je to to samé jako zajištění exportu, jen bez podkladových eur. Protistrana (banka) se kryje opačným obchodem na spotu, a když se tlak dotkne hranice kurzového závazku, musí intervenovat ČNB. Forwardové body proto neodrážejí jen úrokový diferenciál, ale i <strong>poptávku a nabídku, tržní nerovnováhy a rizikové přirážky</strong>.</div>
+
+                    <h4>Praxe: forwardy za kurzového závazku ČNB (2013–2017)</h4>
+                    <p>ČNB držela kurz CZK/EUR na hodnotě 27 od listopadu 2013 do dubna 2017 (s. 97). Exportéři se v té době zajišťovali méně, protože „pojišťovnou“ byla centrální banka (s. 99, 111). Blížící se konec závazku ale změnil situaci.</p>
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/forwardy-107.jpg" loading="lazy" alt="Spot a forwardové kurzy CZK/EUR 2015–2017">
+                        <figcaption>Slajd 107 (Šíma, Forwardy; Komerční banka, leden 2017): spot (modře) drží těsně nad kurzovým závazkem 27, ale 3M, 6M a zejména 1R forward klesají hluboko pod 27 (až ke 26,55). Trh sází na posílení koruny po konci závazku a exportéři se zajišťují. To je ukázka, že FR je „hlídán“ nejen arbitráží, ale i spekulací.</figcaption>
+                    </figure>
+                    <ul>
+                        <li><strong>Cena zajištění vzrostla</strong> (s. 102): loni v létě byl 1R forwardový kurz 5–10 haléřů pod spotem, v lednu 2017 až −50 haléřů (kolem 26,50). „Čím větší poptávka na budoucí nákup koruny za eura, tím horší zajišťovací kurz.“</li>
+                        <li><strong>Příliv spekulativního kapitálu</strong> (s. 100, 104): 12M forward bid se krátce dostal na 26,55 CZK/EUR.</li>
+                        <li><strong>Riziko chybějící protistrany</strong> (s. 106): spekulanti už koruny koupili a exportéři zajistili. Po konci závazku může chybět strana nabízející eura k prodeji a koruna může dočasně oslabit.</li>
+                        <li>S koncem závazku končí „bezplatné zajištění“ od ČNB. Před jeho zavedením byly běžné denní změny kurzu o půl procenta i procento (s. 106).</li>
+                    </ul>
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/forwardy-108.jpg" loading="lazy" alt="Zajištění vývozu proti kurzovému riziku v následujících 12 měsících">
+                        <figcaption>Slajd 108 (Šíma, Forwardy; data ČNB): podíl vývozu zajištěného na následujících 12 měsíců (vážený průměr, zahrnuje i jiné nástroje než forward). Maximum kolem 44 % na konci roku 2015, propad na asi 25 % v polovině 2016, k 37 % v roce 2017. Hodnoty jsou odečtené z grafu. Odpovídá to textu: v roce 2016 byla zajištěnost 25 % (s. 101).</figcaption>
+                    </figure>
+                    <div class="ex-box"><strong>Brexit (s. 98):</strong> libra po referendu oslabila vůči koruně o 7,5 % za den, o 10 % do pondělí. Většina vývozců se nezajistila, a když začali, cena zajištění v květnu a červnu 2016 už vzrostla natolik, že by se jim nevyplatilo. Ponaučení: zajišťovat se musí <strong>předem</strong>, než volatilita zdraží forward.</div>
+
+                    <h4>Postavení forwardů a platnost CIP v praxi</h4>
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/forwardy-109.jpg" loading="lazy" alt="Obrat devizového trhu podle instrumentu, BIS 2022">
+                        <figcaption>Slajd 109 (Šíma, Forwardy; BIS 2022): spot 28 %, outright forwardy 15 %, FX swapy 51 %, měnové swapy 2 %, opce 4 %. Forwardy tvoří kolem sedminy obratu. Novější údaje BIS 2025 (forwardy 19 %) jsou v tématu 1.</figcaption>
+                    </figure>
+                    <p><strong>Důvody odchylek od CIP (s. 110, 119–120):</strong> arbitráž poblíž 45° linie nemusí být možná. Odchylka je omezena pásmem celkových transakčních nákladů, $-TC &lt; \dfrac{(1+r_d)S}{(1+r_f)F} - 1 &lt; +TC$ (s. 119):</p>
+                    <ul>
+                        <li>transakční náklady (spready),</li>
+                        <li>politické riziko a riziková prémie obecně (rating),</li>
+                        <li>různé zdanění, resp. kapitálové kontroly,</li>
+                        <li>ovlivňování kurzu autoritami (např. Čína).</li>
+                    </ul>
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/forwardy-115.jpg" loading="lazy" alt="Odchylky od kryté úrokové parity 2007–2009">
+                        <figcaption>Slajd 115 (Šíma, Forwardy; Bekaert, Hodrick 2012): odchylka od CIP do srpna 2007 téměř nulová, po začátku turbulencí (BNP Paribas, 2007) a hlavně po pádu Lehman Brothers (září 2008) prudce vzrostla. Důvodem byla vysoká poptávka po USD a jejich nedostatek: banky si půjčovaly v jiných měnách, směňovaly na USD a forwardem nakupovaly zpět, takže USD na spotu apreciovalo víc, než odpovídal forward.</figcaption>
+                    </figure>
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/forwardy-122.jpg" loading="lazy" alt="Čína: spotový kurz a NDF">
+                        <figcaption>Slajd 122 (Šíma, Forwardy; Rieti): u čínského renminbi forward (NDF) ukazoval očekávanou apreciaci RMB podle úrokového diferenciálu, zatímco spot se pohyboval pomaleji. <strong>NDF</strong> (non-deliverable forward) se nevypořádává dodáním měny, ale v třetí měně (USD), protože RMB měla omezenou směnitelnost.</figcaption>
+                    </figure>
+                    <div class="warn-box"><strong>⚠️ Forward není předpověď (s. 123):</strong> podle ČNB (Globální ekonomický výhled, červenec 2023) „forwardový kurz nepředstavuje výhled, vychází z kryté úrokové parity, tj. kurz země s vyšší úrokovou sazbou oslabuje. Představuje aktuální možnost zajištění budoucího kurzu.“</div>
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/forwardy-123.jpg" loading="lazy" alt="Forwardový kurz a předpověď ČNB pro GBP a JPY">
+                        <figcaption>Slajd 123 (Šíma, Forwardy; ČNB 2023): forwardový kurz (zelené body) se od předpovědi ČNB (žluté body) liší. Forwardový kurz jen přenáší úrokový diferenciál (např. JPY/USD: spot 141,7, forward na 7/24 133,3, předpověď 129,4).</figcaption>
+                    </figure>
+                    <p><strong>Kurzový režim a riziko (s. 111–114):</strong> při méně flexibilním režimu volatilita klesá a firmy se zajišťují méně (Indie 2001–2007 vs. po roce 2008, s. 112), ale riziko tím nezmizí. Devalvace měn v tzv. pevném režimu přišly skokově: venezuelský bolívar u Diagea (s. 113), kazašský tenge v roce 2015 (s. 114). Home Credit financoval úvěry v Kazachstánu místními vklady v tenge, tedy <strong>uzavřel devizovou pozici</strong>. Slajd ho uvádí jako vhodný příklad.</p>
+                    <p>Dlouhodobě sledují spot a forward navzájem a forwardová prémie kopíruje úrokový diferenciál (kanadský dolar vs. USD, s. 124).</p>
+
+                    <p class="text-muted small">Samostatné „zadání příkladů“ k forwardům v podkladech není. Slajdy ho nezmiňují, příklady 1, 2, 3, 3b a „příklady navíc“ jsou přímo v prezentaci (s. 47–93).</p>
+
+                    <div class="summary-box"><strong>Shrnutí:</strong>
+                        <ul>
+                            <li>Exportér (pohledávka) má dlouhou pozici a bojí se posílení CZK, importér (závazek) má krátkou a bojí se oslabení CZK. Forward fixuje kurz FR dnes pro budoucí termín (OTC, na míru, do 1 roku, neobchodovatelný).</li>
+                            <li>Forward kotuje outright, nebo ve swapových bodech: $\text{body} = (FR - SR)\cdot X$. Při prémii se body přičítají (bid + low, ask + high), při diskontu odečítají (bid − high, ask − low).</li>
+                            <li>CIP: $FR = SR\cdot\frac{1+IR_D\,n/360}{1+IR_F\,n/360}$, přibližně $f = (FR-SR)/SR \approx IR_D - IR_F$. Vyšší úroková sazba = slabší měna na forwardu (prémie na bázi, když $IR_D &gt; IR_F$).</li>
+                            <li>FR a SR hlídá <strong>arbitráž</strong> (okružní, depozitní, hedgová), FR a SR<sup>e</sup> hlídá <strong>spekulace</strong>. Odchylku od 45° linie arbitráž „vrací“ (W: SR↓, FR↑; Z: SR↑, FR↓).</li>
+                            <li>Pohledávka: $FR_{BID} = SR_{BID}\cdot\frac{1+IR_{dom,D}t/360}{1+IR_{zahr,L}t/360}$, závazek: $FR_{ASK} = SR_{ASK}\cdot\frac{1+IR_{dom,L}t/360}{1+IR_{zahr,D}t/360}$. Forward použij, když dá exportérovi víc, resp. importérovi méně korun než syntetický forward.</li>
+                            <li>Příklad 2 (100 000 EUR): forward 2 719 490, syntetický 2 734 999,6 CZK. Příklad 3b (10 mil. EUR): forward 322 930 000, syntetický 322 757 913 CZK (lepší o 172 087). Hraniční FR<sub>ASK</sub> = 32,276.</li>
+                            <li>Syntetický forward se počítá odzadu (vklad → úvěr → splátka). Forward se vzdává příznivého vývoje kurzu, opce ne.</li>
+                            <li>Forwardové body odrážejí i poptávku, nabídku a rizika, ne jen úrokový diferenciál (kurzový závazek ČNB: forwardy hluboko pod 27). CIP se rozbíjí při transakčních nákladech, politickém riziku, kapitálových kontrolách a v krizi (Lehman 2008). Forward není předpověď kurzu.</li>
+                        </ul>
+                    </div>
+                    <p class="mb-0"><a href="../quiz.html?course=1MT461&topic=2"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
+                </section>
+
+                <section class="topic-section" id="topic-3">
+                    <h3>3. Řízení kurzového rizika prostřednictvím měnových opcí</h3>
+                    <p class="text-muted small">Přednáška 12. 10. · Ondřej Šíma · zdroj: <em>Řízení kurzového rizika prostřednictvím měnových opcí</em> (<code>1MT461_03_opce_ZS2026.pdf</code>, 76 slajdů) a <em>Zadání příkladů</em> (<code>1MT461_03_opce_zadani_prikladu.pptx</code>, 5 slajdů); čísla slajdů v závorkách, <em>zadání</em> = zadání příkladů</p>
+
+                    <h4>Základní informace a terminologie</h4>
+                    <div class="def-box"><strong>Opce:</strong> smlouva mezi <strong>držitelem</strong> (kupujícím, holder, buyer) a <strong>vypisovatelem</strong> (prodávajícím, writer, seller). Držitel kupuje <strong>právo, ne povinnost</strong>, koupit nebo prodat devizu za předem dohodnutou cenu. Vypisovatel musí plnit na pokyn držitele (s. 4).</div>
+                    <ul>
+                        <li>Smluvní strany se předem dohodnou na <strong>velikosti kontraktu</strong>, <strong>podkladovém instrumentu</strong> (spotový kurz) a <strong>dni splatnosti</strong> (s. 4).</li>
+                        <li><strong>Opční prémie (Pr)</strong> je <em>cena opce</em>. Držitel ji platí <strong>vždy</strong>, ať opci využije, nebo ne. Udává se <strong>na jednotku bazické měny</strong> (např. 1,20 CZK za 1 GBP) (s. 4).</li>
+                        <li><strong>Realizační cena (SP, strike price)</strong> je kurz, za který lze devizu koupit nebo prodat. Nesmí se zaměňovat s prémií (s. 4).</li>
+                        <li>Kotace na přednášce: <strong>SR = kótovaná měna / bazická měna</strong> (např. CZK/GBP). Bazická měna je ta, kterou opce kupuje nebo prodává. <span class="text-muted small">SR<sub>t+n</sub> je spotový kurz v době splatnosti opce (s. 9, 14).</span></li>
+                    </ul>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> prémie (cena opce, platí se vždy) a strike (kurz, za který se případně směňuje) jsou dvě různé věci. V testu se na jejich záměnu často ptají.</div>
+
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Dělení opcí</th><th>Druhy</th></tr></thead>
+                        <tbody>
+                            <tr><td>podle trhu</td><td><strong>OTC</strong> (mimoburzovní) × <strong>burzovní</strong></td></tr>
+                            <tr><td>podle práva</td><td><strong>call</strong> (kupní): právo koupit bazickou měnu × <strong>put</strong> (prodejní): právo bazickou měnu prodat</td></tr>
+                            <tr><td>podle okamžiku plnění</td><td><strong>americká</strong>: uplatnit lze kdykoli do splatnosti × <strong>evropská</strong>: až v den splatnosti</td></tr>
+                        </tbody>
+                    </table>
+                    <p>Tyto tři dělení se navzájem kombinují (např. evropská OTC call opce) (s. 5).</p>
+
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th></th><th>Call (kupní)</th><th>Put (prodejní)</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Držitel</strong></td><td>právo <strong>koupit</strong> bazickou měnu za SP; povinnost zaplatit prémii</td><td>právo <strong>prodat</strong> bazickou měnu za SP; povinnost zaplatit prémii</td></tr>
+                            <tr><td><strong>Vypisovatel</strong></td><td>povinnost <strong>prodat</strong> bazickou měnu za SP; právo na prémii</td><td>povinnost <strong>koupit</strong> bazickou měnu za SP; právo na prémii</td></tr>
+                        </tbody>
+                    </table>
+                    <p class="small text-muted">Tabulka podle s. 6.</p>
+
+                    <h4>Základní opční pozice a jejich payoff</h4>
+                    <p>Čtyři pozice: <strong>long call</strong> (koupě kupní opce), <strong>short call</strong> (prodej kupní opce), <strong>long put</strong> (koupě prodejní opce), <strong>short put</strong> (prodej prodejní opce) (s. 8). Payoff = zisk nebo ztráta na jednotku bazické měny v závislosti na spotovém kurzu SR<sub>t+n</sub> v den splatnosti.</p>
+
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/opce-09.jpg" loading="lazy" alt="Payoff dlouhé kupní opce (long call)">
+                        <figcaption>Slajd 9 (Šíma, Opce): payoff long call. Pod SP opce propadne a držitel ztrácí prémii (vodorovná čára na úrovni −Pr). Nad SP zisk roste, zlom je v SP a nulový výsledek je až v <strong>SP + Pr</strong>.</figcaption>
+                    </figure>
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/opce-11.jpg" loading="lazy" alt="Payoff dlouhé prodejní opce (long put)">
+                        <figcaption>Slajd 11 (Šíma, Opce): payoff long put. Nad SP opce propadne a ztráta je jen prémie. Pod SP zisk roste s poklesem kurzu, nulový výsledek je v <strong>SP − Pr</strong>.</figcaption>
+                    </figure>
+
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Pozice</th><th>Výsledek na jednotku</th><th>Zlom</th><th>Nulový výsledek</th><th>Max. ztráta / zisk</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Long call</strong></td><td>$\max(SR-SP,0)-Pr$</td><td>SP</td><td>SP + Pr</td><td>ztráta jen Pr, zisk neomezený (s. 9)</td></tr>
+                            <tr><td><strong>Short call</strong></td><td>$Pr-\max(SR-SP,0)$</td><td>SP</td><td>SP + Pr</td><td>zisk jen Pr, ztráta teoreticky neomezená (s. 10)</td></tr>
+                            <tr><td><strong>Long put</strong></td><td>$\max(SP-SR,0)-Pr$</td><td>SP</td><td>SP − Pr</td><td>ztráta jen Pr, zisk velký (kurz nemůže klesnout pod 0) (s. 11)</td></tr>
+                            <tr><td><strong>Short put</strong></td><td>$Pr-\max(SP-SR,0)$</td><td>SP</td><td>SP − Pr</td><td>zisk jen Pr, ztráta velká (s. 12)</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="insight-box"><strong>Intuice:</strong> vypisovatel je zrcadlový obraz držitele (zisk jednoho je ztráta druhého, součet je nula). Držitel má ztrátu omezenou prémií, vypisovatel call opce má ztrátu teoreticky neomezenou. Proto prémii vždy dostává. <span class="text-muted small">Úvaha o zrcadlení je doplněk; slajdy 9–12 ukazují jen čtyři diagramy.</span></div>
+                    <p>Stav opce vůči kurzu: <strong>ITM</strong> (in the money, uplatnění se vyplatí), <strong>ATM</strong> (at the money, SR = SP), <strong>OTM</strong> (out of the money, uplatnění se nevyplatí). U call je ITM, když SR &gt; SP, u put, když SR &lt; SP (s. 9–12, 60–61).</p>
+
+                    <h4>Zajištění závazku kupní opcí</h4>
+                    <p>Kdo má závazek v cizí měně (importér), bojí se, že cizí měna zdraží, tedy že kurz CZK/GBP vyroste (<strong>depreciace CZK</strong>). Kurz si zajistí <strong>nákupem call opce</strong> na tuto měnu. Opce mu dává právo koupit ji za SP (s. 14–23, zadání s. 2).</p>
+
+                    <div class="ex-box"><strong>Příklad 1 (zadání s. 2, slajdy 14–21): závazek 1,5 mil. GBP, call opce</strong>
+                        <br>Splatnost závazku i opce za 1 měsíc, SP = 36,80 CZK/GBP, Pr = 1,20 CZK/GBP, spotový kurz při vzniku závazku $SR_0 = 37{,}0$ CZK/GBP. Nakreslete čistou pozici firmy.
+                        <ol class="mt-2 mb-0">
+                            <li><strong>Závazek samotný</strong> (výsledek na 1 GBP = kolik firma ušetří nebo přeplatí proti kurzu při vzniku):
+                                $$\pi_{záv}=SR_0-SR_{t+n}=37{,}0-SR_{t+n}$$
+                                Klesne-li kurz (CZK posílí), firma ušetří (zisk). Vzroste-li kurz, přeplatí (ztráta). Přímka klesá, protíná osu x v 37,0.</li>
+                            <li><strong>Call opce</strong>: kurz pod SP → opce propadne a výsledek je $-Pr=-1{,}2$. Nad SP → opci využijeme a výsledek je $SR_{t+n}-36{,}8-1{,}2$. Zlom je v 36,8, nulový výsledek v $SP+Pr=38{,}0$.</li>
+                            <li><strong>Čistá pozice</strong> = součet obou čar:
+                                <div class="formula-block">$$\pi=(37{,}0-SR_{t+n})+\max(SR_{t+n}-36{,}8;\,0)-1{,}2$$</div>
+                                <ul>
+                                    <li>$SR_{t+n}\le 36{,}8$: $\pi=35{,}8-SR_{t+n}$ (klesající přímka s nulou v <strong>35,8</strong>)</li>
+                                    <li>$SR_{t+n}\ge 36{,}8$: $\pi=37{,}0-36{,}8-1{,}2=\mathbf{-1{,}0}$ (vodorovná čára)</li>
+                                </ul></li>
+                            <li><strong>Kontrola na slajdech</strong> (s. 17–19): při $SR=35{,}2$: $(37{,}0-35{,}2)-1{,}2=+0{,}6$. Při $SR=38{,}6$: $-1{,}6+(38{,}6-36{,}8-1{,}2)=-1{,}6+0{,}6=-1{,}0$. Obojí vychází stejně jako na slajdech.</li>
+                            <li><strong>V korunách</strong> (× 1,5 mil. GBP): maximální ztráta proti kurzu 37,0 je $1{,}0\cdot1\,500\,000=1\,500\,000$ CZK. Nejhorší efektivní cena libry je $SP+Pr=38{,}0$ CZK/GBP, tedy $38{,}0\cdot1{,}5\text{ mil.}=57{,}0$ mil. CZK. <span class="text-muted small">Přepočet do CZK a efektivní cena jsou doplněk (vlastní výpočet).</span></li>
+                        </ol>
+                    </div>
+
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/opce-21.jpg" loading="lazy" alt="Čistá pozice firmy se závazkem zajištěným kupní opcí">
+                        <figcaption>Slajd 21 (Šíma, Opce): čistá pozice domácí firmy (červeně). Černá přerušovaná čára je závazek (klesá, nula v 37,0), zelená je držitel kupní opce (−1,2 do 36,8, potom roste, nula v 38,0).</figcaption>
+                    </figure>
+                    <p><strong>Popis grafu čisté pozice:</strong> osa x je kurz CZK/GBP při splatnosti, osa y zisk nebo ztráta na 1 GBP. Čistá pozice je <em>klesající přímka</em> s nulou v 35,8, která v <strong>36,8 (strike)</strong> „zlomí“ do <em>vodorovné čáry</em> na úrovni <strong>−1,0</strong>. Vlevo (CZK posiluje) si firma ponechává zisk z levnějšího nákupu liber, minus prémie. Vpravo (CZK slábne) je ztráta shora omezená na 1,0 CZK/GBP. Opce tedy firmě <em>seřízne nevýhodnou stranu</em> a zachová výhodnou. Slajd 20 značí jeden čtvereček = 0,2 CZK/GBP.</p>
+
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/opce-23.jpg" loading="lazy" alt="Zobecnění zajištění závazku kupní opcí">
+                        <figcaption>Slajd 23 (Šíma, Opce): zobecnění. Zlom výsledné pozice je v SP. Vodorovná část leží na úrovni <strong>SR − SP − Pr</strong> (kurz při vzniku závazku mínus strike mínus prémie).</figcaption>
+                    </figure>
+                    <div class="thm-box"><strong>Zobecnění zajištění závazku (call):</strong>
+                        $$\pi=(SR_0-SR_{t+n})+\max(SR_{t+n}-SP;\,0)-Pr$$
+                        <ul class="mb-0">
+                            <li>Nad SP (opce využita): $\pi=SR_0-SP-Pr$ (konstantní, zde −1,0).</li>
+                            <li>Pod SP (opce propadla): $\pi=SR_0-SR_{t+n}-Pr$ (zde $35{,}8-SR_{t+n}$).</li>
+                            <li>Nejvyšší efektivní cena měny: $SP+Pr$.</li>
+                        </ul>
+                    </div>
+                    <div class="warn-box"><strong>⚠️ Pozor (otázka na s. 23, „NE!!! Proč?“):</strong> závazek se nedá zajistit <strong>vypsáním prodejní opce</strong> (short put). Firma by dostala prémii, ale při <em>oslabení</em> CZK (kurz roste), před kterým se chce chránit, by put propadla a závazek by jí zdražil bez jakékoli kompenzace. Vypsaný put by „pracoval“ jen při posílení CZK, kdy ochranu nepotřebuje. Ochranu dává jen <strong>koupě call</strong>. Obecně: zajišťující pozice musí mít <em>opačný</em> sklon než zajišťovaná.</div>
+
+                    <h4>Zajištění pohledávky put opcí</h4>
+                    <p>Kdo má pohledávku v cizí měně (exportér), bojí se, že cizí měna zlevní, tedy že vzroste hodnota domácí měny. Zajistí se <strong>nákupem put opce</strong>, která mu dává právo cizí měnu prodat za SP (s. 25–32, zadání s. 3).</p>
+
+                    <div class="ex-box"><strong>Příklad 2 (zadání s. 3, slajdy 25–31): brazilský exportér kávy, pohledávka 100 000 USD</strong>
+                        <br>Splatnost za měsíc, obává se posílení BRL (kurz BRL/USD klesne). SP = 3,6 BRL/USD, Pr = 0,3 BRL/USD, $SR_0=3{,}8$ BRL/USD.
+                        <ol class="mt-2 mb-0">
+                            <li><strong>Pohledávka</strong>: $\pi_{poh}=SR_{t+n}-SR_0=SR_{t+n}-3{,}8$. Roste s kurzem (za dolar dostane víc reálů), nula v 3,8.</li>
+                            <li><strong>Put opce</strong>: kurz nad 3,6 → opce propadne, výsledek $-0{,}3$. Pod 3,6 → prodá dolary za 3,6, výsledek $3{,}6-SR_{t+n}-0{,}3$. Nula v $SP-Pr=3{,}3$, zlom v 3,6.</li>
+                            <li><strong>Čistá pozice</strong>:
+                                <div class="formula-block">$$\pi=(SR_{t+n}-3{,}8)+\max(3{,}6-SR_{t+n};\,0)-0{,}3$$</div>
+                                <ul>
+                                    <li>$SR_{t+n}\le 3{,}6$: $\pi=3{,}6-3{,}8-0{,}3=\mathbf{-0{,}5}$ (vodorovná čára)</li>
+                                    <li>$SR_{t+n}\ge 3{,}6$: $\pi=SR_{t+n}-4{,}1$ (rostoucí přímka s nulou v <strong>4,1</strong>)</li>
+                                </ul></li>
+                            <li><strong>Kontrola podle tabulky na s. 28</strong>:
+                                <table class="table table-bordered table-sm summary-table mt-2 mb-2">
+                                    <thead><tr><th>$SR_{t+n}$ (BRL/USD)</th><th>3,00</th><th>3,20</th><th>4,00</th><th>4,50</th></tr></thead>
+                                    <tbody>
+                                        <tr><td>Pohledávka ($SR-3{,}8$)</td><td>−0,80</td><td>−0,60</td><td>0,20</td><td>0,70</td></tr>
+                                        <tr><td>Put opce (využita?)</td><td>0,30 (ano)</td><td>0,10 (ano)</td><td>−0,30 (ne)</td><td>−0,30 (ne)</td></tr>
+                                        <tr><td><strong>Výsledná pozice</strong></td><td><strong>−0,50</strong></td><td><strong>−0,50</strong></td><td><strong>−0,10</strong></td><td><strong>0,40</strong></td></tr>
+                                    </tbody>
+                                </table>
+                                Čísla sedí se slajdem. Na sestavení grafu stačí dva kurzy: jeden, kdy se opce využije, a jeden, kdy ne (s. 28).</li>
+                            <li><strong>V reálech</strong> (× 100 000 USD): nejhorší případ je $-0{,}5\cdot100\,000=-50\,000$ BRL proti kurzu 3,8. Nejnižší efektivní kurz prodeje je $SP-Pr=3{,}3$, tj. minimálně $330\,000$ BRL. <span class="text-muted small">Doplněk (vlastní výpočet); souhlasí se slajdem 44.</span></li>
+                        </ol>
+                    </div>
+
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/opce-26.jpg" loading="lazy" alt="Pohledávka a put opce, nákres">
+                        <figcaption>Slajd 26 (Šíma, Opce): pomocný nákres. Pohledávka (šedě, roste s kurzem, nula v 3,8) a držitel put opce (modře, −0,3 nad 3,6, klesá pod 3,6, nula v 3,3).</figcaption>
+                    </figure>
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/opce-31.jpg" loading="lazy" alt="Čistá pozice exportéra se zajištěním put opcí">
+                        <figcaption>Slajd 31 (Šíma, Opce): čistá pozice exportéra (červeně). Vodorovná čára −0,5 do SP = 3,6, potom rostoucí přímka s nulou v 4,1.</figcaption>
+                    </figure>
+                    <p><strong>Popis grafu čisté pozice:</strong> osa x je kurz BRL/USD při splatnosti, osa y zisk nebo ztráta na 1 USD. Do zlomu v <strong>SP = 3,6</strong> (BRL posiluje, kurz klesá) je čistá pozice <em>vodorovná na −0,5</em>: put opce kompenzuje každou další ztrátu z pohledávky, zůstane jen rozdíl 0,2 mezi 3,8 a 3,6 plus prémie 0,3. Od 3,6 doprava (BRL slábne) pozice <em>roste</em> se sklonem +1 a exportér se podílí na výhodném vývoji, jen o prémii míň než bez zajištění. Vlevo od SP je pohledávka zajištěna, vpravo firma ponechává zisk z příznivého vývoje (slajd 46 to označuje jako „spekulaci“).</p>
+
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/opce-32.jpg" loading="lazy" alt="Zobecnění zajištění pohledávky put opcí">
+                        <figcaption>Slajd 32 (Šíma, Opce): zobecnění. Zlom v SP, vodorovná část na úrovni <strong>SP − SR − Pr</strong>, nulový bod rostoucí části v SR + Pr (kurz při vzniku pohledávky plus prémie).</figcaption>
+                    </figure>
+                    <div class="thm-box"><strong>Zobecnění zajištění pohledávky (put):</strong>
+                        $$\pi=(SR_{t+n}-SR_0)+\max(SP-SR_{t+n};\,0)-Pr$$
+                        <ul class="mb-0">
+                            <li>Pod SP (opce využita): $\pi=SP-SR_0-Pr$ (konstantní, zde −0,5).</li>
+                            <li>Nad SP (opce propadla): $\pi=SR_{t+n}-SR_0-Pr$ (zde $SR_{t+n}-4{,}1$).</li>
+                            <li>Nejnižší efektivní příjem z jednotky měny: $SP-Pr$.</li>
+                        </ul>
+                    </div>
+                    <div class="warn-box"><strong>⚠️ Pozor (otázka na s. 32):</strong> pohledávku se <strong>nedá</strong> zajistit vypsáním kupní opce (short call). Exportér dostane prémii, ale při poklesu kurzu (posílení BRL), před kterým se chce chránit, call propadne a pohledávka dál ztrácí bez kompenzace. Jako zajištění funguje jen <strong>koupě put</strong>. <span class="text-muted small">Vysvětlení je doplněk, slajd jen klade otázku.</span></div>
+
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th></th><th>Závazek (importér)</th><th>Pohledávka (exportér)</th></tr></thead>
+                        <tbody>
+                            <tr><td>Čeho se bojí</td><td>oslabení domácí měny (kurz roste)</td><td>posílení domácí měny (kurz klesá)</td></tr>
+                            <tr><td>Nástroj</td><td><strong>koupě call</strong> na cizí měnu</td><td><strong>koupě put</strong> na cizí měnu</td></tr>
+                            <tr><td>Tvar čisté pozice</td><td>klesající přímka, od SP vodorovná</td><td>vodorovná do SP, od SP rostoucí přímka</td></tr>
+                            <tr><td>Vodorovná úroveň</td><td>$SR_0-SP-Pr$ (−1,0)</td><td>$SP-SR_0-Pr$ (−0,5)</td></tr>
+                            <tr><td>Hranice efektivního kurzu</td><td>nejvýš $SP+Pr$ (38,0)</td><td>nejméně $SP-Pr$ (3,3)</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h4>Opce versus forward: zajištění závazku</h4>
+                    <div class="ex-box"><strong>Příklad 3 (zadání s. 4, slajdy 34–40): závazek 1,5 mil. GBP, opce, nebo forward?</strong>
+                        <br>Možnost 1: call opce SP = 36,80, Pr = 1,20 CZK/GBP. Možnost 2: forwardový nákup za $FR=37{,}50$ CZK/GBP (1M). $SR_0=37{,}0$.
+                        <ol class="mt-2 mb-0">
+                            <li><strong>Forward</strong> fixuje kurz, takže čistá pozice je <em>vodorovná</em>:
+                                <div class="formula-block">$$\pi_{FW}=(SR_0-SR_{t+n})+(SR_{t+n}-FR)=SR_0-FR=37{,}0-37{,}5=\mathbf{-0{,}5}$$</div>
+                                Na každé libře „ztrácíme“ 0,50 CZK proti kurzu 37,0, ať kurz při splatnosti bude jakýkoli (s. 39–40). Celkem $0{,}5\cdot1{,}5\text{ mil.}=750\,000$ CZK.</li>
+                            <li><strong>Opce</strong> viz příklad 1: pod 36,8 platí $\pi=35{,}8-SR$, nad 36,8 platí $\pi=-1{,}0$.</li>
+                            <li><strong>Srovnání pro $SR_{t+n}=35{,}2$</strong> (s. 36):
+                                <ul>
+                                    <li>Opce: prémie $1{,}20\cdot1{,}5\text{ mil.}=1\,800\,000$ CZK, opce propadne, libry koupíme za $35{,}2\cdot1{,}5\text{ mil.}=52\,800\,000$ CZK. Celkem <strong>54 600 000 CZK</strong>.</li>
+                                    <li>Forward: $37{,}5\cdot1{,}5\text{ mil.}=\mathbf{56\,250\,000}$ CZK.</li>
+                                    <li>Opce je levnější o $1\,650\,000$ CZK.</li>
+                                </ul></li>
+                            <li><strong>Srovnání pro $SR_{t+n}=38{,}6$</strong> (s. 37):
+                                <ul>
+                                    <li>Opce: prémie $1\,800\,000$ + nákup za strike $36{,}8\cdot1{,}5\text{ mil.}=55\,200\,000$, celkem <strong>57 000 000 CZK</strong>.</li>
+                                    <li>Forward: <strong>56 250 000 CZK</strong>. Forward je levnější o $750\,000$ CZK.</li>
+                                </ul>
+                                Slajd 37 uvádí u forwardu 56 200 000 CZK, to je překlep, správně je 56 250 000 CZK ($37{,}5\cdot1{,}5$ mil.).</li>
+                            <li><strong>Bod zvratu</strong> (doplněk, vlastní výpočet): pod SP je efektivní cena opce $SR+Pr$. Rovná se forwardu v $SR=FR-Pr=37{,}5-1{,}2=36{,}3$. Pro $SR_{t+n}<36{,}3$ vychází lépe opce, pro $SR_{t+n}>36{,}3$ forward.</li>
+                        </ol>
+                    </div>
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/opce-38.jpg" loading="lazy" alt="Srovnání opce a forwardu při zajištění závazku">
+                        <figcaption>Slajd 38 (Šíma, Opce): vlevo čistá pozice s opcí (klesající přímka do 36,8, potom −1,0), vpravo s forwardem (vodorovná čára −0,5). Vpravo od zlomu opce chrání (<em>hedging</em>), vlevo firma drží zisk z posílení CZK (<em>spekulace</em>).</figcaption>
+                    </figure>
+                    <p><strong>Popis a výklad:</strong> forward je <em>vodorovná</em> čára na −0,5: jistota, ale firma se vzdá zisku z posílení CZK. Opce je <em>lomená</em> čára: zisk zůstane, ale nejhorší výsledek je −1,0 (horší než forward) a prémie se platí předem. Čáry se protínají v 36,3 (doplněk). Čára forwardu leží na −0,5, protože forwardový kurz 37,5 je vyšší než spot 37,0 (forwardová přirážka vychází z úrokového diferenciálu, viz téma o forwardech). <span class="text-muted small">Doplněk.</span></p>
+                    <div class="warn-box"><strong>⚠️ Jak vznikla čára forwardu (s. 39–40):</strong> příklad s $SR_{t+n}=35{,}2$: forward ztrácí $35{,}2-37{,}5=-2{,}30$ (mohli jsme koupit levněji), závazek zisk $37{,}0-35{,}2=+1{,}80$. Součet $-2{,}30+1{,}80=-0{,}50$. Pro <em>každý</em> kurz vyjde −0,50, proto je čára vodorovná.</div>
+
+                    <h4>Opce versus forward: zajištění pohledávky</h4>
+                    <div class="ex-box"><strong>Příklad 4 (zadání s. 5, slajdy 42–48): pohledávka 100 000 USD, opce, nebo forward?</strong>
+                        <br>Opce: SP = 3,6, Pr = 0,3 BRL/USD, $SR_0=3{,}8$. Forward (prodej USD, 1M): $FR=3{,}7$ BRL/USD.
+                        <ol class="mt-2 mb-0">
+                            <li><strong>Forward</strong>: $\pi_{FW}=(SR_{t+n}-SR_0)+(FR-SR_{t+n})=FR-SR_0=3{,}7-3{,}8=\mathbf{-0{,}1}$ (vodorovná čára). Za 100 000 USD je to $-10\,000$ BRL oproti kurzu 3,8.</li>
+                            <li><strong>Opce</strong> viz příklad 2: pod 3,6 platí $\pi=-0{,}5$, nad 3,6 platí $\pi=SR-4{,}1$.</li>
+                            <li><strong>Srovnání pro $SR_{t+n}=3{,}00$</strong> (s. 44):
+                                <ul>
+                                    <li>Opce: prémie $-0{,}3\cdot100\,000=-30\,000$ BRL, využijeme a prodáme za $3{,}6\cdot100\,000=360\,000$ BRL. Celkem <strong>330 000 BRL</strong>.</li>
+                                    <li>Forward: <strong>370 000 BRL</strong>. Forward je lepší o 40 000 BRL. Bez zajištění by příjem byl 300 000 BRL.</li>
+                                </ul></li>
+                            <li><strong>Srovnání pro $SR_{t+n}=4{,}50$</strong> (s. 45):
+                                <ul>
+                                    <li>Opce: opce propadne, prodáme za $4{,}5\cdot100\,000=450\,000$ BRL a odečteme prémii 30 000, tedy <strong>420 000 BRL</strong>.</li>
+                                    <li>Forward: <strong>370 000 BRL</strong>. Opce je lepší o 50 000 BRL.</li>
+                                </ul>
+                                Slajd 44 uvádí „příjmy bez zajištění: 300 000 CZK“, má být BRL (překlep).</li>
+                            <li><strong>Bod zvratu</strong> (doplněk, vlastní výpočet): nad SP je efektivní příjem opce $SR-Pr$. Rovná se forwardu v $SR=FR+Pr=3{,}7+0{,}3=4{,}0$. Pro $SR_{t+n}>4{,}0$ je lepší opce, pro $SR_{t+n}<4{,}0$ forward.</li>
+                        </ol>
+                    </div>
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/opce-46.jpg" loading="lazy" alt="Srovnání opce a forwardu při zajištění pohledávky">
+                        <figcaption>Slajd 46 (Šíma, Opce): vlevo čistá pozice s put opcí (−0,5 do 3,6, potom roste, nula v 4,1), vpravo s forwardem (vodorovná čára −0,1). Vlevo od zlomu je opce zajištění (<em>hedging</em>), vpravo ponechává zisk (<em>spekulace</em>).</figcaption>
+                    </figure>
+                    <p><strong>Popis a výklad:</strong> forward je opět vodorovná čára, tentokrát jen −0,1, protože forwardový kurz 3,7 leží blízko spotu 3,8. Opce je při kurzu pod 3,6 „dražší“ (−0,5 proti −0,1 u forwardu), ale od kurzu 4,0 je lepší. Odpověď na otázku „opce, nebo forward?“ tedy závisí na tom, <strong>kam se kurz podle firmy pravděpodobně vyvine</strong> (viz tabulka níže).</p>
+                    <div class="warn-box"><strong>⚠️ Pozor, forwardový kurz:</strong> u pohledávky firma prodává cizí měnu bance, použije se kurz <strong>bid</strong>. U závazku firma kupuje, použije se <strong>ask</strong>. Slajdy rozdíl pro zjednodušení nerozlišují (poznámky pod čarou s. 34, 42).</div>
+
+                    <h4>Výhody a nevýhody: opce versus forward</h4>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th></th><th>Měnová opce (kupující)</th><th>Forward</th></tr></thead>
+                        <tbody>
+                            <tr><td>Právo / povinnost</td><td><strong>právo</strong>, ne povinnost uplatnit</td><td><strong>povinnost</strong> kontrakt splnit</td></tr>
+                            <tr><td>Náklad</td><td>vždy se platí <strong>prémie</strong></td><td>prémie se neplatí</td></tr>
+                            <tr><td>Nejistá platba partnera</td><td>vhodná: když partner nezaplatí, opci nevyužijeme a ztratíme jen prémii</td><td>forward musíme splnit i tak</td></tr>
+                            <tr><td>Vývoj kurzu</td><td>zachová příznivý vývoj (v teorii neomezeně), ztráta omezená</td><td>eliminuje nepříznivý i příznivý vývoj</td></tr>
+                            <tr><td>Vypořádání</td><td>americká opce kdykoli do splatnosti</td><td>jen v jeden stanovený den</td></tr>
+                        </tbody>
+                    </table>
+                    <p class="small text-muted">Tabulka podle s. 49.</p>
+                    <div class="thm-box"><strong>Rozhodovací pravidlo (shrnutí z příkladů 3 a 4, doplněk):</strong>
+                        <ul class="mb-0">
+                            <li><strong>Jistá platba, chci jistotu a žádnou prémii předem</strong> → forward. Rozdíl proti spotu je daný forwardovým kurzem.</li>
+                            <li><strong>Nejistá platba (např. výběrové řízení, partner nemusí zaplatit)</strong> → opce. Když platba nepřijde, ztratím jen prémii.</li>
+                            <li><strong>Chci být chráněn před nepříznivým kurzem, ale těžit z příznivého</strong> → opce (za cenu prémie).</li>
+                            <li>Závazek: opce vyhrává, když kurz při splatnosti klesne pod $FR-Pr$. Pohledávka: opce vyhrává, když kurz stoupne nad $FR+Pr$.</li>
+                        </ul>
+                    </div>
+                    <p>Souhrn technik zajištění (s. 50):</p>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Technika</th><th>Závazek v cizí měně</th><th>Pohledávka v cizí měně</th></tr></thead>
+                        <tbody>
+                            <tr><td>Forward</td><td>forwardový <strong>nákup</strong> cizí měny</td><td>forwardový <strong>prodej</strong> cizí měny</td></tr>
+                            <tr><td>Peněžní trh („syntetický forward“)</td><td>půjčit si domácí měnu, směnit na cizí, uložit do splatnosti</td><td>půjčit si cizí měnu, směnit na domácí, uložit do splatnosti</td></tr>
+                            <tr><td>Měnová opce</td><td>nákup <strong>call</strong> opce</td><td>nákup <strong>put</strong> opce</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h4>Další užití opcí a opční strategie</h4>
+                    <ul>
+                        <li><strong>Zajištění nabídky do výběrového řízení</strong> (s. 52): česká firma se hlásí o zakázku v Londýně, výsledek se dozví za 2 měsíce a po výhře musí hned začít, bude potřebovat 100 000 GBP. Bojí se oslabení CZK. Koupí <em>call</em> opci na 100 000 GBP. Když vyhraje, opci užije. Když ne, opci nechá propadnout a ztratí jen prémii. Forward by tu nebyl vhodný (musela by ho splnit i bez zakázky). Obdobně u akvizice zahraniční firmy.</li>
+                        <li><strong>Arbitráž</strong> a <strong>spekulace</strong> (s. 52–55).</li>
+                    </ul>
+
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/opce-53.jpg" loading="lazy" alt="Arbitráž mezi dvěma kupními opcemi">
+                        <figcaption>Slajd 53 (Šíma, Opce): arbitráž. Koupíme call se SP = 25 za prémii 1 a vypíšeme call se SP = 30 za prémii 2. Výsledná pozice (červeně) je všude kladná: minimálně +1 (kurz pod 25), maximálně +6 (kurz nad 30).</figcaption>
+                    </figure>
+                    <p><strong>Arbitráž</strong> vznikne při chybném ocenění: výhodnější opce (call s nižším strikem 25) je levnější (prémie 1) než méně výhodná (strike 30, prémie 2). Kombinace dává zaručený zisk a arbitrážní obchody pak prémii výhodnější opce zvýší a méně výhodné sníží (s. 53). <span class="text-muted small">Interpretace čísel z obrázku (minimum +1, maximum +6) je doplněk.</span></p>
+
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/opce-54.jpg" loading="lazy" alt="Long straddle">
+                        <figcaption>Slajd 54 (Šíma, Opce): long straddle (bottom straddle). Koupě call a put se stejným SP = 1,353 USD/EUR; prémie 0,004 + 0,002 = 0,006. Zisk, když kurz vyjede mimo pásmo 1,347 až 1,359.</figcaption>
+                    </figure>
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/opce-55.jpg" loading="lazy" alt="Short straddle">
+                        <figcaption>Slajd 55 (Šíma, Opce): short straddle. Prodej call a put se stejným SP = 3,6410 QAR/USD; zisk, když kurz zůstane v pásmu 3,6406 až 3,6414.</figcaption>
+                    </figure>
+                    <ul>
+                        <li><strong>Long straddle</strong> (bottom straddle): koupě call i put se stejným SP. Hodí se při <strong>očekávání vysoké volatility</strong>. Ztráta je nejvýš součet prémií, zisk je mimo pásmo $SP\pm(Pr_{call}+Pr_{put})$ (s. 54).</li>
+                        <li><strong>Short straddle</strong>: prodej call i put se stejným SP. Hodí se při <strong>očekávání nízké volatility</strong>. Zisk je nejvýš součet prémií, kurz se musí držet kolem SP (s. 55).</li>
+                    </ul>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> straddle je <em>spekulace na volatilitu</em>, ne zajištění. Směr pohybu kurzu nehraje roli, rozhoduje jen jeho velikost. Short straddle má teoreticky neomezenou ztrátu.</div>
+
+                    <h4>Faktory ovlivňující opční prémii</h4>
+                    <div class="def-box"><strong>Opční prémie = vnitřní hodnota + časová hodnota</strong> (s. 57). Podle Bigerova–Hullova modelu je $Pr=f(SP,\,SR,\,t,\,\sigma_{SR},\,IR_D,\,IR_F)$, tedy závisí na realizační ceně, spotu, době do splatnosti, volatilitě a úrokových sazbách (s. 71).</div>
+
+                    <p><strong>Vnitřní hodnota</strong> = výhodnost okamžitého uplatnění opce (výsledek uplatnění spolu s kompenzujícím obchodem na spotu). Nemůže být záporná (s. 59–61).</p>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Opce</th><th>Vztah SR a SP</th><th>Vnitřní hodnota</th><th>Název</th></tr></thead>
+                        <tbody>
+                            <tr><td rowspan="3"><strong>Call</strong></td><td>SR &gt; SP</td><td>$SR-SP$</td><td>ITM (v penězích)</td></tr>
+                            <tr><td>SR = SP</td><td>0</td><td>ATM (na penězích)</td></tr>
+                            <tr><td>SR &lt; SP</td><td>0</td><td>OTM (mimo peníze)</td></tr>
+                            <tr><td rowspan="3"><strong>Put</strong></td><td>SR &lt; SP</td><td>$SP-SR$</td><td>ITM</td></tr>
+                            <tr><td>SR = SP</td><td>0</td><td>ATM</td></tr>
+                            <tr><td>SR &gt; SP</td><td>0</td><td>OTM</td></tr>
+                        </tbody>
+                    </table>
+                    <ul>
+                        <li><strong>Americká opce:</strong> prémie nemůže být nižší než vnitřní hodnota (jinak by šlo ihned arbitrážovat mezi opcí a spotem).</li>
+                        <li><strong>Evropská opce:</strong> prémie <em>může</em> být nižší než vnitřní hodnota, protože ji lze uplatnit jen ve splatnosti (s. 59).</li>
+                    </ul>
+
+                    <p><strong>Časová hodnota</strong> = prémie − vnitřní hodnota. Odráží pravděpodobnost, že opční právo bude využito, a „cenu času“ do splatnosti (s. 63).</p>
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/opce-64.jpg" loading="lazy" alt="Časová hodnota kupní a prodejní opce">
+                        <figcaption>Slajd 64 (Šíma, Opce): nahoře prémie (modře) a vnitřní hodnota (černě), dole časová hodnota. Je <strong>nejvyšší, když je opce na penězích (SR ≈ SP)</strong>, a klesá s tím, jak je opce hluboko v penězích nebo hluboko mimo peníze.</figcaption>
+                    </figure>
+                    <div class="insight-box"><strong>Intuice (s. 65–66):</strong> hluboko OTM (např. SP 27, spot 20) je téměř jisté, že opce propadne, a časová hodnota je nízká. Hluboko ITM (SP 27, spot 33) je téměř jisté, že opce bude uplatněna, a prémie se blíží vnitřní hodnotě, časová hodnota je opět nízká. Kolem SP (26,95 nebo 27,03) je to „padesát na padesát“, nejistota i časová hodnota jsou maximální.</div>
+
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/opce-70.jpg" loading="lazy" alt="Shrnutí determinantů opční prémie">
+                        <figcaption>Slajd 70 (Šíma, Opce): jak se mění prémie call a put opce, když faktor roste (kotace CZK/EUR, SP konstantní). Úrokové sazby jsou na slajdu označené vykřičníkem, protože se na ně nejčastěji ptají.</figcaption>
+                    </figure>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Faktor ↑</th><th>Prémie call</th><th>Prémie put</th><th>Proč</th></tr></thead>
+                        <tbody>
+                            <tr><td>Doba do splatnosti</td><td>↑</td><td>↑</td><td>víc času na příznivý vývoj, ztráta držitele je omezena prémií (s. 67)</td></tr>
+                            <tr><td>Volatilita</td><td>↑</td><td>↑</td><td>širší rozdělení kurzu, vyšší šance na uplatnění (s. 68)</td></tr>
+                            <tr><td>Domácí úroková sazba $IR_D$</td><td>↑</td><td>↓</td><td>call: držitel může déle držet levnější domácí měnu (s. 69)</td></tr>
+                            <tr><td>Zahraniční úroková sazba $IR_F$</td><td>↓</td><td>↑</td><td>opačně než $IR_D$ (s. 69)</td></tr>
+                            <tr><td>Spotový kurz (CZK/EUR ↑, SP konst.)</td><td>↑</td><td>↓</td><td>call je víc v penězích, put míň (s. 70)</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> směr vlivu úrokové sazby se u call a put <strong>liší</strong>. Zapamatuj: úrokový diferenciál $IR_D-IR_F$ roste → call dražší, put levnější. Doba do splatnosti a volatilita zvyšují prémii obou typů. Spotový „↑“ znamená oslabení CZK (kotace CZK/EUR).</div>
+
+                    <h4>Black–Scholes a řecká písmena</h4>
+                    <p>Blackův–Scholesův model pro evropské opce slajdy jen naznačují a výslovně uvádějí, že je to rozšíření textu, které není nutné umět (s. 71–72). <strong>Řecká písmena (Greeks)</strong> měří vliv změny jednoho faktoru na prémii, ostatní faktory se nemění (s. 73):</p>
+                    <ul>
+                        <li><strong>Delta</strong>: citlivost prémie na malou změnu kurzu.</li>
+                        <li><strong>Gamma</strong>: citlivost delty na změnu kurzu („delta delty“).</li>
+                        <li><strong>Theta</strong>: změna prémie s kratší dobou do splatnosti (o jeden den).</li>
+                        <li><strong>Vega</strong>: citlivost na změnu volatility (o jeden procentní bod).</li>
+                        <li><strong>Rho</strong>: citlivost na změnu úrokové sazby.</li>
+                    </ul>
+                    <p class="small text-muted">Literatura z prezentace (s. 75): Bekaert–Hodrick, <em>International Financial Management</em> (2012); Dvořák, <em>Deriváty</em> (2009); Jílek, <em>Finanční a komoditní deriváty v praxi</em> (2010); Kodera–Marková, <em>Devizové obchody</em> (2001); Durčáková–Mandel, <em>Mezinárodní finance</em> (2007).</p>
+
+                    <div class="summary-box"><strong>Shrnutí:</strong>
+                        <ul>
+                            <li>Opce dává držiteli právo, ne povinnost. Prémie (cena) se platí vždy, strike je kurz plnění. Call = právo koupit bazickou měnu, put = právo prodat. Vypisovatel má povinnost a dostane prémii.</li>
+                            <li>Payoff long call: $\max(SR-SP,0)-Pr$, nulový bod SP + Pr. Long put: $\max(SP-SR,0)-Pr$, nulový bod SP − Pr. Ztráta držitele je omezena prémií.</li>
+                            <li><strong>Závazek</strong> v cizí měně zajistí <strong>koupě call</strong>. Čistá pozice: klesající přímka do SP, od SP vodorovná na $SR_0-SP-Pr$. Příklad: 37,0 − 36,8 − 1,2 = −1,0 CZK/GBP, nejhorší cena 38,0.</li>
+                            <li><strong>Pohledávku</strong> v cizí měně zajistí <strong>koupě put</strong>. Čistá pozice: vodorovná do SP na $SP-SR_0-Pr$, od SP rostoucí přímka. Příklad: 3,6 − 3,8 − 0,3 = −0,5 BRL/USD, nejnižší kurz 3,3.</li>
+                            <li>Vypsáním opce zajistit nelze: dostaneš jen prémii a před nepříznivým kurzem nejsi chráněn.</li>
+                            <li><strong>Forward</strong>: čistá pozice vodorovná (závazek: 37,0 − 37,5 = −0,5; pohledávka: 3,7 − 3,8 = −0,1), žádná prémie, povinnost plnit, vzdání se příznivého vývoje.</li>
+                            <li>Závazek (1,5 mil. GBP): kurz 35,2 → opce 54,6 mil. CZK, forward 56,25 mil. Kurz 38,6 → opce 57,0 mil., forward 56,25 mil. Bod zvratu 36,3.</li>
+                            <li>Pohledávka (100 000 USD): kurz 3,00 → opce 330 000 BRL, forward 370 000. Kurz 4,50 → opce 420 000, forward 370 000. Bod zvratu 4,0.</li>
+                            <li>Opce se hodí při nejisté platbě a když chceme ponechat příznivý vývoj. Forward při jisté platbě a bez prémie. Další použití: výběrové řízení, arbitráž, straddle (long = vysoká volatilita, short = nízká).</li>
+                            <li>Prémie = vnitřní hodnota + časová hodnota. Časová hodnota je nejvyšší u opce na penězích. Delší splatnost a vyšší volatilita zvyšují prémii call i put. Vyšší $IR_D$ zvyšuje prémii call (a snižuje put), vyšší $IR_F$ naopak.</li>
+                        </ul>
+                    </div>
+                    <p class="mb-0"><a href="../quiz.html?course=1MT461&topic=3"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
+                </section>
+
+                <section class="topic-section" id="topic-4">
+                    <h3>4. Technologie a motivace obchodování firem na devizovém trhu</h3>
+                    <p class="text-muted small">Přednáška 19. 10. · Karel Brůna · zdroj: <em>4. Technologie a motivace obchodování firem na devizovém trhu</em> (<code>2._Technologie_a_motivace_obchodovani_firem_na_devizovem_trhu.pptx</code>, slajdy 1–14), doplňky z <a href="https://www.bis.org/publications/working-paper-1094-foreign-exchange-market.pdf" target="_blank" rel="noopener">BIS Working Papers No 1094</a></p>
+
+                    <h4>Hlavní oblasti a rozvoj elektronických obchodních systémů</h4>
+                    <p>Přednáška má tři oblasti: <strong>technologické změny</strong> v obchodování, <strong>hlavní obchodní platformy</strong> a <strong>algoritmické a vysokofrekvenční obchodování</strong> (s. 2). Společné téma je, že devizový trh (téma 1: OTC, bez centrální burzy) se za posledních 30 let výrazně zelektronizoval. Slajd 3 uvádí pět směrů vývoje:</p>
+                    <ul>
+                        <li>roste <strong>podíl elektronických transakcí</strong> (místo telefonu a telexu obchody zadává počítač),</li>
+                        <li>vznikají <strong>e-brokeři</strong> a <strong>multibankovní obchodní systémy</strong> (jedna platforma, více bank),</li>
+                        <li>vznikají platformy pro <strong>algoritmické a vysokofrekvenční obchodování</strong>,</li>
+                        <li>rozvíjí se <strong>prime-brokerage</strong> (banka půjčuje své úvěrové jméno nebankovním hráčům, viz níže),</li>
+                        <li>vznikají <strong>webové obchodní systémy pro retailové klienty</strong> (s. 3).</li>
+                    </ul>
+                    <div class="insight-box"><strong>Jak číst zbytek tématu:</strong> slajd 4 je „mapa“ trhu a všechno ostatní jsou její části. Platformy (s. 5–9) popisují, <em>kde</em> se obchoduje, retail a HFT (s. 10–13) popisují, <em>kdo</em> nově obchoduje, a latence (s. 14) popisuje, <em>proč na rychlosti záleží</em>.</div>
+
+                    <h4>Model devizového trhu (BIS Working Paper 1094)</h4>
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/technologie-4.jpg" loading="lazy" alt="Model devizového trhu: inter-dealer market, dealer, prime broker, EB, VB, SDP, MDP, ECN, PTF a klienti">
+                        <figcaption>Slajd 4 (Brůna): model devizového trhu. Šedá oblast = trh mezi dealery, okolo ní trh dealerů se zákazníky. Zdroj: Chaboud, Rime, Sushko, BIS WP No 1094, obr. 3c.</figcaption>
+                    </figure>
+                    <p class="small text-muted">Slajd 4 zkratky nevysvětluje. Zkratky, rozlišení voice × elektronické a historii níže jsem převzal z <em>doplněk</em>: Chaboud, A., Rime, D., Sushko, V. (2023): <em>The foreign exchange market</em>, BIS Working Papers No 1094, kap. 2–3, obr. 3 (<a href="https://www.bis.org/publications/working-paper-1094-foreign-exchange-market.pdf" target="_blank" rel="noopener">PDF</a>). Obrázek na slajdu odpovídá panelu (c), tedy stavu za poslední dekádu.</p>
+
+                    <div class="def-box"><strong>Dvouvrstvý trh:</strong>
+                        <ul class="mb-0">
+                            <li><strong>vnitřní vrstva = inter-dealer market</strong> (šedý obdélník): dealerské banky obchodují mezi sebou, aby řídily své pozice (zásoby měn) a ceny,</li>
+                            <li><strong>vnější vrstva = dealer-to-customer market</strong> (vše mimo šedou plochu): dealeři obchodují se zákazníky, tj. s klienty (firmy, investiční fondy, menší banky) a s PTF.</li>
+                        </ul>
+                    </div>
+
+                    <h5>Kdo jsou účastníci (zkratky na obrázku)</h5>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Zkratka</th><th>Význam</th><th>Co dělá</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Dealer</strong></td><td>dealerská banka (market maker, téma 1)</td><td>kotuje bid/ask klientům i ostatním dealerům a nese riziko z držené pozice. Zákazníkům vydělává spreadem a z jejich pokynů se dozvídá informace o trhu.</td></tr>
+                            <tr><td><strong>Client</strong></td><td>zákazník (liquidity consumer)</td><td>firma, investiční fond, správce aktiv, menší banka. <strong>Nefinanční firma je tedy klient</strong>, který cenu přijímá (price taker, téma 1).</td></tr>
+                            <tr><td><strong>VB</strong></td><td>voice broker</td><td>zprostředkuje obchod mezi dealery po telefonu; nejstarší nepřímá cesta (červené čárkované šipky = hlas).</td></tr>
+                            <tr><td><strong>EB</strong></td><td>electronic broker</td><td>elektronická platforma pro obchod mezi dealery: EBS a Reuters (dnes Refinitiv Matching), od začátku 90. let. V obrázku jsou to „primary CLOB“.</td></tr>
+                            <tr><td><strong>PB</strong></td><td>prime broker</td><td>dealerská banka, která poskytuje <em>úvěrové zázemí</em> (viz níže). Na obrázku je dealer rozdělen úhlopříčkou: stejná banka je zároveň dealer i prime broker.</td></tr>
+                            <tr><td><strong>PTF</strong></td><td>principal trading firm</td><td>nebankovní obchodní firma, obchoduje vlastním jménem a často vysokofrekvenčně (HFT). Obchoduje na EB i na ECN přes prime brokera a streamuje ceny klientům.</td></tr>
+                            <tr><td><strong>SDP</strong></td><td>single-dealer platform</td><td>platforma jedné banky, přes kterou klient obchoduje jen s touto bankou (např. J.P. Morgan eXecute, UBS Neo).</td></tr>
+                            <tr><td><strong>MDP</strong></td><td>multi-dealer platform</td><td>platforma s více dealery: klient pošle žádost o cenu (RFQ) několika bankám najednou a vybere nejlepší (např. 360T, FXall, Currenex).</td></tr>
+                            <tr><td><strong>ECN</strong></td><td>electronic communication network</td><td>sekundární obchodní síť (např. Cboe FX, LMAX); klienti na ní obchodují na ceny více dodavatelů likvidity, často v podobě order booku nebo streamovaných cen.</td></tr>
+                        </tbody>
+                    </table>
+                    <p class="small text-muted mb-1">Všechny zkratky výše: <em>doplněk</em> z BIS WP 1094, obr. 3 a oddíl 3.1. Příklady platforem pocházejí z pozn. 15–17 stejného dokumentu.</p>
+
+                    <h5>Jak spolu vrstvy souvisejí (čtení obrázku)</h5>
+                    <ol>
+                        <li><strong>Klient → dealer.</strong> Klient může jít za dealerem třemi cestami: přímo (telefon, chat; čárkovaná šipka), přes <strong>SDP</strong> jedné banky (vlevo na obrázku), nebo přes <strong>MDP</strong> (dole), kde mezi sebou banky soutěží o jeho pokyn. Barva šipky v obrázku odlišuje hlasový a elektronický způsob provedení.</li>
+                        <li><strong>Dealer ↔ dealer.</strong> Dealeři obchodují přímo mezi sebou (šipka mezi dvěma dealery) nebo nepřímo přes brokera: <strong>VB</strong> (hlasově) a <strong>EB</strong> (elektronicky). EB je dnes hlavní místo objevování ceny.</li>
+                        <li><strong>PTF a ECN vstupují do obou vrstev.</strong> PTF obchoduje na EB (uvnitř šedé oblasti) přes prime brokera, a zároveň streamuje ceny klientům přes ECN (vnější vrstva). Hranice mezi „interdealer“ a „zákaznickým“ trhem je proto dnes rozmazaná.</li>
+                        <li><strong>Prime broker</strong> je spojovací článek: nebankovní hráč (hedge fond, PTF) se díky němu dostane k mnoha bankám a platformám, i když s nimi nemá vlastní úvěrovou linku (viz box níže).</li>
+                    </ol>
+                    <div class="def-box"><strong>Prime brokerage (doplněk, BIS WP 1094, s. 6):</strong> FX obchod se vypořádává za 2 pracovní dny (T+2), takže je to ve skutečnosti úvěr protistraně. Banky proto dlouho obchodovaly jen mezi sebou. Prime broker (velká banka) umožní nebankovnímu klientovi obchodovat s mnoha protistranami <em>pod svým úvěrovým jménem</em>: protistrana nese riziko prime brokera a ten riziko klienta. Díky tomu se dostaly na trh PTF a hedge fondy.</div>
+                    <div class="insight-box"><strong>Intuice: jak trh vznikl.</strong> V 90. letech byl trh jednoduchý: zákazníci telefonovali bankám (vnější vrstva), banky si vyrovnávaly pozice mezi sebou (vnitřní vrstva, nejdřív voice brokeři). Reuters a EBS přinesly elektronické brokery, kde se utvářela referenční cena. Kolem roku 2000 přibyly SDP a MDP, tedy elektronizace vnější vrstvy. Dnes přibyly ECN a PTF, které banky ve vnitřní i vnější vrstvě konkurenčně doplňují (BIS WP 1094, oddíl 3.1, obr. 3a–c).</div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong>
+                        <ul class="mb-0">
+                            <li>Dealer × client není rozdíl „banka × nebanka“. Menší banka nebo hedge fond je pro dealera <em>klient</em>; PTF může být současně dodavatel i spotřebitel likvidity.</li>
+                            <li>PB není samostatný typ účastníka vedle dealera, je to <strong>role dealerské banky</strong> (na obrázku jedno pole rozdělené úhlopříčkou).</li>
+                            <li>V testu bývá otázka na význam zkratek a na to, <em>kudy se dostane firma k ceně</em>: nefinanční firma jde typicky přes SDP nebo MDP, ne přes EB.</li>
+                        </ul>
+                    </div>
+
+                    <h4>Obchodní platformy</h4>
+                    <h5>Direct trading: obchodní konverzace</h5>
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/technologie-5.jpg" loading="lazy" alt="Příklad obchodní konverzace v direct trading">
+                        <figcaption>Slajd 5 (Brůna): příklad konverzace v „direct trading“. Dvě strany si textem sdělí cenu a potvrdí obchod.</figcaption>
+                    </figure>
+                    <p><strong>Direct trading</strong> je původní bilaterální způsob obchodování: dealer s dealerem nebo s klientem komunikuje přímo, dříve telefonem, později textovým terminálem (např. Reuters Direct Dealing; doplněk, BIS WP 1094, pozn. 12). Konverzace na slajdu má vždy stejnou kostru:</p>
+                    <ol>
+                        <li><strong>záhlaví</strong>: kód a jméno terminálu, uživatele, čas (GMT) a datum,</li>
+                        <li><strong>dotaz a cena</strong>: tazatel zadá měnu a objem v milionech (<code>CHF 10</code>), dealer odpoví kotací (<code>25.27</code>; dealeři často uvádějí jen small figure, téma 1),</li>
+                        <li><strong>rozhodnutí</strong>: tazatel cenu přijme (<code>I BUY</code>),</li>
+                        <li><strong>potvrzení</strong>: <code>TO CONFIRM AT 1,0227 I SELL 10 MIO USD</code>, tj. kurz, směr, objem; <code>VAL 5AUG12</code> = datum valuty (vypořádání); <code>MY EUR TO …</code> = kam má druhá strana poslat peníze (platební instrukce),</li>
+                        <li><strong>rozloučení</strong> (<code>THANKS AND BYE</code>); druhá strana pošle zrcadlové potvrzení (<code>I BUY</code> místo <code>I SELL</code>).</li>
+                    </ol>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> čísla na slajdu nesedí do jednoho obchodu (cena 25,27 u CHF, kurz 1,0227, valuta v neděli 5. 8. 2012). Je to pravděpodobně upravený ukázkový přepis. Odnes si <em>strukturu</em> konverzace (cena → přijetí → potvrzení kurzu, objemu, valuty a platebních instrukcí), ne konkrétní čísla.</div>
+
+                    <h5>EBS Market a Cboe FX: dvě ukázky platforem</h5>
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/technologie-6.jpg" loading="lazy" alt="Obrazovka obchodní platformy EBS Market">
+                        <figcaption>Slajd 6 (Brůna): obrazovka EBS Market. Dlaždice s páry (EUR/USD, USD/JPY, GBP/USD…), každá má dvě ceny a objem; vpravo aktivní pokyny, dole proběhlé obchody.</figcaption>
+                    </figure>
+                    <p><strong>EBS Market</strong> je elektronický broker pro obchody mezi dealery a patří mezi tzv. <strong>primární CLOB</strong> (Central Limit Order Book, centrální kniha pokynů: pokyny od všech účastníků se řadí podle ceny a času). Kdo nabídne nejlepší cenu, je spárován první. EBS je hlavní místo pro EUR/USD, USD/JPY a EUR/CHF, Refinitiv Matching pro GBP/USD, USD/CAD, AUD/USD a většinu měn rozvíjejících se trhů (doplněk, BIS WP 1094, pozn. 13). Co z obrazovky vyčíst: velká čísla uprostřed dlaždice jsou <strong>small figure</strong> bid a ask (např. „62 | 63“ u 1,12<em>62</em>/1,12<em>63</em>), objem nad nimi udává velikost kotace (1M, 5M, 3M). Malá číslice vedle velkého čísla je zlomek pipu (odhad z obrázku).</p>
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/technologie-7.jpg" loading="lazy" alt="Hlavní okno Cboe FX (původně Hotspot FX) s popisky Market View, Order Activity, Ticker, Blotters">
+                        <figcaption>Slajd 7 (Brůna): hlavní okno Cboe FX (původně Hotspot FX). Popisky: Market View (ceny), Change Quantity and Price, Options &amp; Customization, Order Activity, Blotters, Ticker.</figcaption>
+                    </figure>
+                    <p><strong>Cboe FX</strong> (původně <strong>Hotspot FX</strong>, dnes patří burzové skupině Cboe) je příklad <strong>sekundární ECN</strong>. Uživatel vidí zpracované ceny u každého páru, může okamžitě změnit objem a cenu pokynu a sleduje seznam svých pokynů a proběhlých obchodů (blotter) a proud obchodů na trhu (ticker). BIS řadí CboeFX mezi sekundární ECN (pozn. 16), tedy platformy mimo vnitřní vrstvu primárních CLOB. Na přednášku jde hlavně o <em>vidět, jak platformy vypadají</em>, ne o zapamatování tlačítek.</p>
+
+                    <h5>Taxonomie obchodních míst</h5>
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/technologie-8.jpg" loading="lazy" alt="Taxonomie obchodních míst: anonymita a pevnost likvidity, primary CLOB, secondary ECN, MDP a SDP">
+                        <figcaption>Slajd 8 (Brůna): taxonomie obchodních míst. Vodorovně míra anonymity před obchodem, svisle „pevnost“ likvidity (firm × last look), dole typ párování. Zdroj: BIS WP 1094, obr. 6.</figcaption>
+                    </figure>
+                    <p>Taxonomie třídí platformy podle <strong>dvou dimenzí</strong>:</p>
+                    <ul>
+                        <li><strong>anonymita před obchodem</strong> (vodorovná osa): od <em>fully anonymous</em> (protistrany se před obchodem neznají) po <em>fully disclosed</em> (protistrany jsou známy),</li>
+                        <li><strong>pevnost likvidity</strong> (svislá osa): <em>firm liquidity</em> (bez last look) × <em>liquidity not firm</em> (last look povolen).</li>
+                    </ul>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Místo</th><th>Anonymita</th><th>Likvidita</th><th>Párování</th></tr></thead>
+                        <tbody>
+                            <tr><td>Futures burza (stranou)</td><td>nejvyšší (protistranou je burza)</td><td>pevná</td><td>burzovní</td></tr>
+                            <tr><td><strong>Primary CLOB</strong> (EBS Market, Refinitiv Matching)</td><td>plně anonymní</td><td><strong>pevná</strong> (bez last look)</td><td>CLOB</td></tr>
+                            <tr><td><strong>Secondary ECN</strong></td><td>částečná: skupiny protistran nebo „tag“</td><td>většinou s last look, výjimky existují</td><td>CLOB / streaming</td></tr>
+                            <tr><td><strong>MDP a SDP</strong></td><td>plně známá protistrana</td><td><strong>není pevná</strong> (last look)</td><td>RFQ / RFS</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="def-box"><strong>Last look:</strong> dealer (přesněji jeho počítač) dostane pokyn klienta k obchodu na svou kotaci a <em>ještě chvíli</em> (milisekundy) se rozhoduje, zda ho přijme. Zjišťuje, jestli má klient dost úvěrové kapacity a jestli kotace nezastarala. Proto na takové platformě není jistota, že obchod na ukázanou cenu proběhne (doplněk, BIS WP 1094, oddíl 3.3).</div>
+                    <div class="def-box"><strong>RFQ a RFS (doplněk, BIS WP 1094, pozn. 14):</strong> <em>request for quote</em> = klient pošle jednorázovou žádost o cenu jednoho obchodu více dealerům; <em>request for stream</em> = klient žádá průběžný proud cen pro danou velikost po určitou dobu (např. celý den).</div>
+                    <div class="insight-box"><strong>Co si odnést:</strong> čím anonymnější místo, tím <em>pevnější</em> likvidita: když na anonymní CLOB vidíš cenu, můžeš na ni opravdu obchodovat. Proto jsou ceny z primárních CLOB stále referenční pro celý trh, i když přes ně prochází stále menší část objemu. Naopak u SDP a MDP je protistrana známá, takže si dealer může dovolit „poslední pohled“ a klientům nabídnout cenu na míru. Pro firmu je důležité vědět, že pevná cena a obchod za cenu na obrazovce nejsou totéž.</div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> last look <em>smí</em> být použit, nemusí být použit (BIS: „may or may not be exercised“). Slajd tedy vyznačuje <em>možnost</em> kvůli povaze platformy, ne zaručené odmítnutí obchodu. Za přijatelné se dnes považuje jen krátké ověření ceny a platnosti; zdržení kvůli čekání na další pohyb ceny („additional hold time“) kritizuje FX Global Code (2021).</div>
+
+                    <h5>Hlavní hráči podle Euromoney</h5>
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/technologie-9.jpg" loading="lazy" alt="Největší FX banky podle objemu (Euromoney 2025) a multi-dealer platformy 2020">
+                        <figcaption>Slajd 9 (Brůna): vlevo největší FX banky podle objemu (Euromoney, 2025), vpravo vedoucí multi-dealer platformy (2020, podíl na trhu).</figcaption>
+                    </figure>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Pořadí</th><th>Banky (Euromoney 2025)</th><th>MDP (rok 2020)</th><th>Podíl</th></tr></thead>
+                        <tbody>
+                            <tr><td>1</td><td>Deutsche Bank (Německo)</td><td>Refinitiv</td><td>37,0 %</td></tr>
+                            <tr><td>2</td><td>UBS (Švýcarsko)</td><td>GlobalLink</td><td>26,2 %</td></tr>
+                            <tr><td>3</td><td>JPMorgan (USA)</td><td>360T</td><td>8,7 %</td></tr>
+                            <tr><td>4</td><td>State Street (USA)</td><td>Bloomberg</td><td>8,5 %</td></tr>
+                            <tr><td>5</td><td>Citi (USA)</td><td>CME Group</td><td>5,1 %</td></tr>
+                            <tr><td>6</td><td>BNY (USA)</td><td>SmartTrade Technologies</td><td>4,2 %</td></tr>
+                            <tr><td>7</td><td>HSBC (Velká Británie)</td><td>FX SpotStream</td><td>2,4 %</td></tr>
+                            <tr><td>8</td><td>Goldman Sachs (USA)</td><td>FlexTrade</td><td>1,5 %</td></tr>
+                            <tr><td>9</td><td>Barclays (Velká Británie)</td><td>Cboe FX</td><td>1,5 %</td></tr>
+                            <tr><td>10</td><td>BNP Paribas (Francie)</td><td>Integral – FX Inside</td><td>1,2 %</td></tr>
+                        </tbody>
+                    </table>
+                    <p>Z tabulky plyne <strong>koncentrace</strong>: dvě největší MDP (Refinitiv a GlobalLink) mají dohromady 63,2 % a prvních pět 85,5 % trhu MDP. Podobně i likvidita je soustředěna u malé skupiny bank (téma 1: klesá počet market makerů).</p>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> levá tabulka je podle poznámky na obrázku jen <em>vzorek z úplné matice, pouze pro ilustraci</em>. Neučit se pořadí jmen nazpaměť. Euromoney průzkum navíc sbírá hlasy firem, které se v něm samy snaží uspět, takže jde o orientační údaj (BIS WP 1094, pozn. 10). Dále: kontext slajdu je „market makeři / platformy“, ne tržní podíl bank na obratu. Platformy napravo jsou z roku 2020, ne 2025.</div>
+
+                    <h4>Pozice retailových obchodníků</h4>
+                    <ul>
+                        <li><strong>Podíl</strong> prudce vzrostl na cca <strong>10 % obratu</strong> trhu; v Japonsku je to kolem <strong>30 %</strong> (s. 11).</li>
+                        <li>Obchodují přes <strong>internetové platformy</strong> určené pro tento segment: FXCM, FX Dealer Direct, Gain Capital, OANDA, SaxoBank, IG Markets, Gaitame (s. 11).</li>
+                        <li><strong>Retail aggregators</strong> jsou zprostředkovatelé a zároveň market makeři: sbírají ceny od více dodavatelů likvidity a retailovému klientovi ukazují nejlepší z nich (s. 11; viz agregátor v tématu 1).</li>
+                        <li>Obchodují <strong>pákově</strong>, přes <strong>margin účty</strong> a na úvěr (s. 11). S malým vkladem (marží) drží pozici mnohem větší, takže zisk i ztráta jsou násobeny pákou.</li>
+                    </ul>
+                    <div class="warn-box"><strong>⚠️ Pozor na rozdíl od literatury:</strong> slajd udává pro retail cca 10 % trhu. BIS WP 1094 (pozn. 9) uvádí, že retail představuje obvykle <em>velmi malou část</em> aktivity velkoobchodního trhu a Japonsko je výjimka. Pro test ber číslo ze slajdu (10 %, Japonsko 30 %), ale nespojuj ho se segmentem nefinančních firem. Ty tvoří jen asi 5 % obratu (téma 1).</div>
+
+                    <h4>Algoritmické (AT) a vysokofrekvenční obchodování (HFT)</h4>
+                    <div class="def-box"><strong>Algoritmické obchodování (AT):</strong> automatické generování obchodů v určitém čase a objemu podle nastaveného algoritmu, tj. podle určité účelové funkce a omezení (s. 12). Počítač tedy sám rozhoduje, kdy, kolik a za kolik obchodovat.</div>
+                    <div class="def-box"><strong>Vysokofrekvenční obchodování (HFT):</strong> speciální typ AT s <strong>velmi vysokým počtem obchodů</strong> (s. 12). Hlavní obchodní systémy pro něj vytvořily vlastní platformy: <strong>CME v roce 2002</strong>, <strong>EBS v roce 2004</strong> (s. 12).</div>
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/technologie-10.jpg" loading="lazy" alt="Podíl manuálních a algoritmických obchodů (bank API, non-bank API) na EBS Market 2004–2022">
+                        <figcaption>Slajd 10 (Brůna): podíl objemu na EBS Market zadaný ručně (Manual) a algoritmicky bankami (Bank API) a nebankami (Non-bank API), 2004–2022, v %. Zdroj: EBS, BIS WP 1094, obr. 7.</figcaption>
+                    </figure>
+                    <p><strong>Co z grafu vyčíst</strong> (hodnoty jsou odhady z obrázku):</p>
+                    <ul>
+                        <li><strong>Manuální obchody (červená)</strong> klesly z téměř <strong>97 % v roce 2004</strong> na zhruba <strong>10–15 % v roce 2022</strong>. Na začátku byli na EBS jen bankovní dealeři a obchodovali ručně přes speciální klávesnici.</li>
+                        <li><strong>Bank API (modrá)</strong> začíná 2004 (EBS umožnil přímé propojení počítače s platformou), roste a od roku 2015 je kolem 40 %.</li>
+                        <li><strong>Non-bank API (žlutá)</strong> začíná 2005, kdy nebanky dostaly přístup přes prime brokery. Roste nejrychleji a kolem 2011 dosáhne asi 45 %; od roku 2015 je spolu s bank API na zhruba 40 % objemu.</li>
+                        <li><strong>Křížení kolem 2010–2011:</strong> manuální obchody už nejsou největší skupinou. Od té doby <em>dominuje algoritmické obchodování</em>.</li>
+                    </ul>
+                    <p class="small text-muted mb-1"><em>doplněk</em> (BIS WP 1094, oddíl 4 a pozn. 20–21): většina non-bank API jsou PTF, které algoritmem automatizují rozhodnutí <em>i</em> provedení obchodu. Bank API je často jen automatizované provedení, zatímco rozhodnutí učinil člověk. Pokles manuálu na jaře 2020 odpovídá práci z domova během covidu.</p>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> graf ukazuje podíl <em>na jedné platformě (EBS)</em>, ne na celém trhu, a podíl na objemu, ne počet účastníků.</div>
+
+                    <h4>Základní charakteristiky HFT (s. 13)</h4>
+                    <ul>
+                        <li><strong>vysoký počet pokynů a rychlé rušení</strong> pokynů (většina pokynů nikdy nevede k obchodu),</li>
+                        <li>zisk z nákupu a prodeje jako <strong>prostředník, resp. market maker</strong> (HFT firma kotuje bid/ask a vydělává spread),</li>
+                        <li><strong>malé nebo nulové otevřené pozice</strong> na konci dne (nenese noční riziko),</li>
+                        <li><strong>velmi krátká doba držení</strong> aktiva (sekundy a méně),</li>
+                        <li><strong>nízká marže</strong> z jednoho obchodu, vydělává na množství,</li>
+                        <li>požadavek na <strong>vysoce likvidní</strong> trhy a instrumenty: spotové obchody, pár EUR/USD,</li>
+                        <li>požadavek <strong>nízké latence</strong> a umístění výpočetní techniky co nejblíže trhům: <strong>Velká Británie pro EBS a Reuters, USA pro multibankovní systémy</strong>.</li>
+                    </ul>
+                    <div class="insight-box"><strong>Proč právě spot EUR/USD:</strong> HFT vydělává velmi malý spread na velmi mnoho obchodech. Funguje to jen tam, kde je velký objem, těsný spread a snadno se vyrovná pozice (téma 1: EUR/USD je nejobchodovanější pár). Servery u matching enginu zkracují cestu signálu, a tím i latenci. Podle BIS (WP 1094, pozn. 7) jsou hlavní datová centra LD4 (Londýn), NY4 (New York), TY3 (Tokio) a SG1 (Singapur) <em>doplněk</em>.</div>
+                    <div class="warn-box"><strong>⚠️ AT × HFT:</strong> každé HFT je AT, ale ne každé AT je HFT. AT může být i jen algoritmus, který rozloží velký obchod firmy do několika menších v čase. HFT se pozná podle vysokého počtu obchodů, krátké doby držení a nulové pozice na konci dne. V terminologii BIS patří HFT hlavně mezi <strong>PTF</strong> (principal trading firms).</div>
+
+                    <h4>Network latency</h4>
+                    <div class="def-box"><strong>Network latency:</strong> míra zpoždění mezi nastáním události (změna ceny, uskutečnění nebo zrušení významného, cenotvorného obchodu) a získáním informace o ní (komunikace mezi dvěma uzly sítě) (s. 14).</div>
+                    <p><strong>Proč je zpoždění riziko.</strong> Zpoždění oproti reálnému stavu trhu vytváří nové riziko (s. 14):</p>
+                    <ul>
+                        <li><strong>riziko kotace mimo trh</strong> (zastaralá cena, kterou jsem ještě neaktualizoval),</li>
+                        <li><strong>riziko arbitráže</strong> (rychlejší hráč využije mou starou cenu),</li>
+                        <li><strong>riziko chybné spekulativní nebo zajišťovací strategie</strong> (rozhoduji podle stavu, který už neplatí).</li>
+                    </ul>
+                    <p><strong>Od čeho latence závisí</strong> (s. 14). Architektura obchodních systémů:</p>
+                    <ul>
+                        <li>synchronizace dat mezi regiony (<em>books synchronization</em>),</li>
+                        <li>použitá technologie komunikace mezi klientem a systémem (<em>trading protocols</em>),</li>
+                        <li>způsob ověřování úvěrové kapacity protistrany,</li>
+                        <li>stáří obchodní infrastruktury.</li>
+                    </ul>
+                    <p>Dále působí vzdálenost uzlů, objem přenášených dat, počet prvků, přes které data procházejí a zpracovávají se, kapacita zpracování a efektivnost distribuce dat. <strong>Latence je náhodná veličina</strong> a je obtížné ji předvídat, což komplikuje <strong>časovou a cenovou prioritu</strong> pokynů (kdo dřív přišel, ten je dřív spárován; kvůli zpoždění nemusí platit pořadí, v jakém pokyny skutečně vznikly).</p>
+                    <div class="ex-box"><strong>Příklad (vlastní modelový, nejde o údaj ze slajdů):</strong> dealer kotuje EUR/USD 1,1000 / 1,1002. Na trhu se vyskytne zpráva a cena skočí o 5 pipů nahoru, ale dealerův systém se o tom dozví o několik milisekund později. Rychlý HFT obchodník to zjistí dřív a koupí EUR za starou ask cenu 1,1002, i když nová ask cena by už byla 1,1007. Dealer prodal o 5 pipů levněji, než měl: realizoval se <em>latency arbitrage</em>. Tomu se banky brání např. <strong>last look</strong> (viz taxonomie) a platformy <em>speed bumps</em> (doplněk, BIS WP 1094, oddíl 4: ParFX 2013, EBS a Refinitiv 2013–2014).</div>
+                    <div class="insight-box"><strong>Proč to patří do tématu o firmách:</strong> latence a HFT jsou ukázkou, že cena, kterou vidí firma na obrazovce, je výsledkem soutěže strojů. Firma s podnikovými platbami v řádu minut nebo dnů rychlost neřeší, ale měla by vědět, že kotace s last look nemusí být plně závazná a že spread platí i za riziko, které dealer nese vůči rychlejším hráčům.</div>
+
+                    <h4>Proč firmy obchodují na devizovém trhu</h4>
+                    <p class="small text-muted mb-1"><em>doplněk</em>: slajdy samotné nemají samostatný výklad motivů nefinančních firem, i když je téma v názvu a ve studijním plánu (klíčové pojmy plánu jsou návrh, ne potvrzený požadavek přednášejícího). Níže jen krátký souhrn z BIS WP 1094, oddíl 2.2, a z tématu 1.</p>
+                    <ul>
+                        <li><strong>Platby a inkasa v cizí měně</strong> (obchodní motiv): nefinanční zákazníci, především firmy, používají FX trh k podpoře hlavní činnosti, zejména mezinárodního obchodu.</li>
+                        <li><strong>Zajištění</strong> kurzového rizika (hedging, téma 2 a 3: forwardy, opce).</li>
+                        <li><strong>Finanční motivy</strong> (investice a financování v cizí měně), které u nefinančních firem hrají menší roli. Většinu obratu trhu dnes tvoří finanční zákazníci (v BIS WP 1094 více než 50 %), nefinanční zákazníci tvoří méně než 10 %.</li>
+                    </ul>
+                    <p>Technologie z této kapitoly určují, <em>jakým kanálem</em> se firma k ceně dostane: typicky přes <strong>SDP</strong> své banky nebo přes <strong>MDP</strong>, které umožní porovnat ceny více bank (RFQ). To odpovídá obrázku ze slajdu 4: firma je „client“ ve vnější vrstvě a primární CLOB (EB) je pro ni zprostředkovaně přítomen jen jako zdroj referenční ceny. Přímý přístup k EB mají dealeři a PTF přes prime brokera.</p>
+
+                    <div class="summary-box"><strong>Shrnutí:</strong>
+                        <ul>
+                            <li>Trh se zelektronizoval: e-brokeři, multibankovní systémy, platformy pro AT a HFT, prime brokerage a webové systémy pro retail (s. 3).</li>
+                            <li>Model trhu (s. 4): <strong>inter-dealer</strong> vnitřní vrstva (dealeři, VB, EB, PB) a <strong>dealer-to-customer</strong> vnější vrstva (klienti, SDP, MDP, ECN, PTF). Vrstvy se prolínají hlavně kvůli PTF a prime brokerage.</li>
+                            <li>Platformy se liší anonymitou a pevností likvidity (s. 8): primary CLOB (EBS, Refinitiv) = anonymní, pevná; secondary ECN (Cboe FX) = střed; MDP a SDP = známá protistrana, last look.</li>
+                            <li>Last look = krátká poslední kontrola dealera před přijetím obchodu (úvěrová kapacita, zastaralá cena).</li>
+                            <li>Na EBS klesl podíl ručních obchodů z cca 97 % (2004) na 10–15 % (2022); zbytek dělí zhruba rovným dílem bank API a non-bank API (s. 10).</li>
+                            <li>Retail: cca 10 % obratu (Japonsko 30 %), pákové obchodování přes margin účty, retail aggregators (s. 11).</li>
+                            <li>AT = obchody generované algoritmem; HFT = AT s velmi vysokým počtem obchodů, krátkou dobou držení, nulovou pozicí na konci dne a nízkou latencí (s. 12–13).</li>
+                            <li>Latence je zpoždění informace a vytváří riziko kotace mimo trh, arbitráže a chybné strategie; je náhodná a komplikuje časovou a cenovou prioritu pokynů (s. 14).</li>
+                        </ul>
+                    </div>
+                    <p class="small text-muted mb-1">Zdroje: slajdy přednášky 4 (viz výše); Chaboud, A., Rime, D., Sushko, V. (2023): <em>The foreign exchange market</em>, BIS Working Papers No 1094, <a href="https://www.bis.org/publications/working-paper-1094-foreign-exchange-market.pdf" target="_blank" rel="noopener">bis.org</a>: oddíl 2.2 (účastníci), 3 (PB, obr. 3, 6), 4 (algo, obr. 7), 5.1 (FX Global Code), poznámky 7, 9, 10, 12–17, 20–23 (stav údajů: duben 2022).</p>
+                    <p class="mb-0"><a href="../quiz.html?course=1MT461&topic=4"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
+                </section>
+
+                <section class="topic-section" id="topic-5">
+                    <h3>5. Investování nadnárodních firem a predikce měnového kurzu v dlouhém období</h3>
+                    <p class="text-muted small">Přednáška 26. 10. (podle harmonogramu) · Ondřej Šíma · zdroj: <em>Investování nadnárodních firem a predikce měnového kurzu v dlouhém období</em> (<code>1MT461_05_ER-long-term_prednaska_2026zima.pdf</code>, čísla slajdů v závorkách) a data k příkladu <code>1MT461_data_USA_Brazilie_predikce_kurzu.xlsx</code></p>
+
+                    <h4>Proč řešit rovnovážný kurz</h4>
+                    <p>Přednáška ukazuje, jak odhadnout, kam se kurz dlouhodobě ubírá. Motivace jsou aktuální otázky: jaká je „rovnovážná“ úroveň CZK/EUR a proč koruna po konci intervencí ČNB (2017) příliš neposilovala, nelogické chování koruny v roce 2023, výroky D. Trumpa o podhodnoceném jenu (s. 2–5).</p>
+                    <div class="def-box"><strong>Fundamentální analýza:</strong> odhaduje budoucí vývoj kurzu (ER) z vývoje <strong>fundamentálních proměnných</strong>, tedy hlavních makroekonomických veličin. V širším smyslu zahrnuje i očekávání trhu a nástroje hospodářské politiky. Pro dlouhé období je často nutné nejdřív prognózovat samotné fundamenty (s. 8, 15).</div>
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/kurz-dlouhe-9.jpg" loading="lazy" alt="Stylizovaný dlouhodobý vývoj reálného kurzu">
+                        <figcaption>Slajd 9 (Šíma): kurz osciluje v pásmu kolem trendu, který určují fundamenty. Když z pásma dlouho „vybočuje“, existuje tendence k návratu. Nestacionární trend je typický pro rozvíjející se a tranzitivní ekonomiky, vyspělé ekonomiky jsou spíš stacionární.</figcaption>
+                    </figure>
+                    <div class="insight-box"><strong>Proč na tom záleží:</strong> když kurz dlouho neodpovídá fundamentům, hromadí se nerovnováha a firmy i státy za to platí. Příklad eurozóny: podle odhadů FEER (kurz odpovídající fundamentům) je euro pro Německo příliš slabé (vlastní měna by téměř ihned posílila) a pro Řecko, Portugalsko a Španělsko příliš silné (potřebovaly by slabší měnu, ztrácejí konkurenceschopnost). Irsko by potřebovalo mírně slabší kurz, Itálie je přibližně v rovnováze (s. 10–12, zdroj Saadaoui 2013). Podobně je na s. 13 u Číny tržní kurz CNY/USD od roku 2000 numericky nad rovnovážným, tedy yuan byl podhodnocený (slabší, než odpovídá fundamentům).</div>
+
+                    <h4>Jak se dělá fundamentální analýza</h4>
+                    <p>Tři kroky (s. 16): <strong>1)</strong> ekonomický model (teorie kurzu), <strong>2)</strong> formalizovaný matematický model, <strong>3)</strong> ekonometrický model a empirické ověření. Příklad „navíc“ je model FEER/BEER pro CZK/EUR od ČNB (Komárek, Motl 2012). Rovnice na s. 25 má tvar $\ln RER_t = \beta_0 - \beta_1 \ln DPROD_t - \beta_2 NFA_t - \beta_3 \ln THFK_{t-1} - \beta_4 NX_{t-1} + u_t$ (rozdíl produktivity, čistá zahraniční aktiva, směnné relace, výkonová bilance).</p>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Fundament (s. 17–25)</th><th>Kanál působení na kurz</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Produktivita</strong> (rozdíl domácí × zahraniční)</td><td>cenový kanál: vyšší produktivita → vyšší domácí inflace → reálná apreciace; kurzový kanál: vyšší růst → vyšší poptávka po měně → nominální apreciace</td></tr>
+                            <tr><td><strong>Přímé zahraniční investice</strong></td><td>příliv PZI → poptávka po domácí měně (finanční účet) a vyšší produktivita → apreciace. Dlouhodobě ale odliv zisků (negativní saldo prvotních důchodů ČR) tlačí opačně</td></tr>
+                            <tr><td><strong>Směnné relace</strong> (cenový index exportu / importu)</td><td>růst cen exportu (kvalita) nebo pokles cen dovážených surovin → reálná apreciace</td></tr>
+                            <tr><td><strong>Čistá zahraniční aktiva</strong></td><td>lepší čistá investiční pozice → vyšší důchod → vyšší ceny neobchodovatelných statků → reálná apreciace. Záleží na struktuře: PZI × dluh</td></tr>
+                            <tr><td><strong>Reálný úrokový diferenciál</strong></td><td>vyšší diferenciál → vyšší poptávka po domácích aktivech → apreciace (dočasně); podle UIP ale očekávané oslabení</td></tr>
+                            <tr><td><strong>Vládní výdaje</strong></td><td>vyšší G → vyšší ceny → reálná apreciace; dlouhodobě vyšší dluh → tlak na znehodnocení</td></tr>
+                        </tbody>
+                    </table>
+                    <p><em>doplněk:</em> kanál produktivity přes ceny neobchodovatelných statků se v literatuře nazývá Balassův–Samuelsonův efekt (původní práce Balassa 1964, Samuelson 1964; zdroje jsem pro tento text neotevíral); na slajdu 17 pojmenován není.</p>
+
+                    <h4>Determinanty kurzu podle časového horizontu</h4>
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/kurz-dlouhe-27.jpg" loading="lazy" alt="Krátkodobé, střednědobé a dlouhodobé determinanty měnového kurzu">
+                        <figcaption>Slajd 27 (Šíma, podle Rosenberga 2002): jaké faktory působí na kurz v jakém horizontu. Co si odnést: pro prognózu na 10 let je podstatná parita kupní síly, čistá zahraniční aktiva, produktivita, úspory a investice a směnné relace. Sentiment a pozice spekulantů rozhodují jen krátkodobě.</figcaption>
+                    </figure>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Horizont</th><th>Faktory a příklady z přednášky (s. 28–46)</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Dlouhé</strong> (10 let a více): trend kurzu</td><td>vývoj cenových hladin (Brazílie a USA), exportní výkonnost a směnné relace (ČR), zahraniční zadlužení (Singapur), míra úspor a investic (asijská krize 1997/98), demografie (stárnutí, Japonsko)</td></tr>
+                            <tr><td><strong>Střední</strong> (3–5 let): oscilace kurzu</td><td>saldo platební bilance (krize), světový hospodářský cyklus a ceny surovin, úroková míra a mix měnové a fiskální politiky (sjednocení Německa), očekávání výnosů na trzích (USA), cyklus averze k riziku (risk on / risk off, carry trades; JPY, CHF)</td></tr>
+                            <tr><td><strong>Velmi krátké</strong> (minuty, dny)</td><td>očekávání trhu a jejich naplnění (AUD po překvapivém růstu HDP 2. 12. 2015), devizové intervence (Ukrajina), technické faktory, sentiment, náhodné a politické události</td></tr>
+                        </tbody>
+                    </table>
+                    <ul>
+                        <li><strong>Demografie:</strong> stárnutí snižuje úspory i investice, vliv na běžný účet a kurz je proto nejednoznačný a specifický pro zemi (Imam 2013, s. 34).</li>
+                        <li><strong>Sjednocení Německa:</strong> fiskální expanze a zároveň měnová restrikce (vyšší IR) → příliv kapitálu → posílení marky (s. 38–39, model IS-LM).</li>
+                        <li><strong>Singapur:</strong> růst čistých zahraničních aktiv provází apreciace SGD (s. 32). <strong>Asijské krize:</strong> před krizí vysoké deficity běžného účtu, po ní prudké oslabení měn a přebytky (s. 36).</li>
+                    </ul>
+
+                    <h4>Základní teoretické přístupy</h4>
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/kurz-dlouhe-48.jpg" loading="lazy" alt="Základní kauzality mezi makroproměnnými a měnovým kurzem">
+                        <figcaption>Slajd 48 (Šíma): kauzální schéma. Peněžní zásoby určují ceny (parita kupní síly), ceny, důchody a úrokové míry určují platební bilanci a ta nabídku a poptávku na devizovém trhu. Úrokový diferenciál působí na kurz přes UIP. Pozor na režim kurzu a zásahy měnové autority.</figcaption>
+                    </figure>
+                    <ol>
+                        <li><strong>Platební bilance</strong> (platebně bilanční přístup, toky × stavy),</li>
+                        <li><strong>ceny</strong> (parita kupní síly absolutní a relativní, modely reálného rovnovážného kurzu),</li>
+                        <li><strong>úrokové míry</strong> (úrokový diferenciál, teorie efektivních trhů + nekrytá úroková parita, mezinárodní Fisherův efekt),</li>
+                        <li><strong>monetární přístup</strong> (flexibilní ceny, „sticky“ ceny – Dornbuschův model).</li>
+                    </ol>
+
+                    <h4>Platební bilance a měnový kurz</h4>
+                    <div class="def-box"><strong>Platebně bilanční přístup:</strong> kladné saldo vybrané části platební bilance (výkonová bilance, běžný účet) → tendence k <strong>apreciaci</strong> domácí měny, záporné saldo → tendence k <strong>depreciaci</strong> (s. 50). Kreditní položky bilance vytvářejí nabídku deviz (= poptávku po domácí měně), debetní poptávku po devizách (s. 51).</div>
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/kurz-dlouhe-51.jpg" loading="lazy" alt="Kreditní a debetní strana platební bilance">
+                        <figcaption>Slajd 51 (Šíma): kdo vytváří nabídku a poptávku po devizách. Export zboží a služeb je kredit (nabídka deviz), import debet. Příliv kapitálu (zvýšení zahraničních pasiv) je kredit, odliv kapitálu debet. Převažují-li kredity, domácí měna apreciuje.</figcaption>
+                    </figure>
+                    <ul>
+                        <li>Sleduje se <strong>struktura</strong> platební bilance a způsob financování deficitu: přímé zahraniční investice jsou stabilnější než krátkodobý dluhový kapitál (s. 50).</li>
+                        <li><strong>Kritické hodnoty</strong> kombinují tokový a stavový přístup: deficit běžného účtu −5 až −7 % HDP, čistá investiční pozice kolem −35 % HDP (hranice EU), hrubý zahraniční dluh −40 % HDP. Turecko je u nich často mimo limity a lira oslabovala (s. 56, údaje 2005–2015).</li>
+                        <li>EU sleduje nerovnováhy procedurou <strong>MIP</strong> (Macroeconomic Imbalance Procedure, od 2011, reakce na dluhovou krizi): vnější a vnitřní nerovnováhy a trh práce, výroční zpráva v listopadu (s. 57).</li>
+                    </ul>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> platební bilance předpovídá dobře <em>velké</em> změny (měnové krize), u drobných pohybů selhává. Příliš velký přebytek (Čína) může být nerovnováha, která se bude muset napravit. Teorii nelze používat mechanicky (s. 121).</div>
+
+                    <h4>Parita kupní síly (PKS, PPP)</h4>
+                    <p>Myšlenka sahá k Ricardovi, jejím „otcem“ je Švéd Gustav Cassel (po 1. světové válce, jak správně stanovit kurzy). Platí pro obchodovatelné statky a stojí na <strong>zákonu jediné ceny</strong>: identické zboží stojí všude stejně, jinak vzniká arbitráž. Předpoklady: dokonalá konkurence, žádné transakční náklady a cla, stejná kvalita zboží a podobné preference (s. 59–60).</p>
+                    <div class="def-box"><strong>Absolutní PKS:</strong> kurz je poměr cenových hladin (spotřebních košů) obou zemí. <strong>Relativní PKS:</strong> procentní změna kurzu odpovídá rozdílu inflací.</div>
+                    <div class="formula-block">$$SR_{PPP} = \frac{\sum P_{D,i} Q_i}{\sum P_{F,i} Q_i} \qquad SR_{PPP,t+n} = SR_{PPP,t} \cdot \frac{1 + p_{D(t,t+n)}}{1 + p_{F(t,t+n)}} \approx SR_{PPP,t}\,(1 + p_D - p_F)$$ $$sr_{PPP} \approx p_D - p_F$$</div>
+                    <div class="thm-box"><strong>Interpretace (s. 62):</strong> je-li domácí inflace vyšší než zahraniční, domácí měna <strong>depreciuje</strong> (kurz D/F roste), a naopak. Aproximace platí jen pro nízké inflace.</div>
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/kurz-dlouhe-63.jpg" loading="lazy" alt="Relativní verze PKS, linie 45 stupňů">
+                        <figcaption>Slajd 63 (Šíma): na vodorovné ose inflační diferenciál $p_D - p_F$, na svislé změna kurzu $sr$. Při platnosti PKS leží body na linii 45°. Nad linií je domácí měna slabší, než odpovídá PKS (vyšší konkurenceschopnost domácího zboží), pod linií silnější (nižší konkurenceschopnost).</figcaption>
+                    </figure>
+                    <p>Aplikace: v eurozóně měla periferie (Řecko) vyšší inflaci než jádro (Německo), a bez možnosti oslabit kurz proto ztratila konkurenceschopnost (s. 64–65, 78).</p>
+                    <div class="warn-box"><strong>⚠️ Kritika PKS (s. 70):</strong> nevysvětluje krátkodobé pohyby, ignoruje měnovou a fiskální politiku a intervence, existují neobchodovatelné statky (T × NT), liší se koše, kvalita a preference, existují cla a bariéry a exporty komodit mají nízkou cenovou elasticitu (růst cen ropy vede ke <em>posílení</em> měny exportéra). Cenová elasticita je podíl relativní změny exportovaného množství a relativní změny ceny, &gt; 1 je elastická.</div>
+
+                    <h4>ERDI a reálný kurz</h4>
+                    <div class="def-box"><strong>ERDI</strong> (exchange rate deviation index) je podíl tržního kurzu a kurzu podle PKS: $ERDI = SR_{tržní} / SR_{PPP}$. Vyjadřuje vliv ostatních faktorů. U tranzitivních ekonomik je $ERDI &gt; 1$ (neobchodovatelné statky, ceny určuje domácí poptávka, arbitráž není možná) a postupně se blíží 1, u vyspělých ekonomik zhruba 1 (s. 72).</div>
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/kurz-dlouhe-73.jpg" loading="lazy" alt="ERDI vyspělých ekonomik">
+                        <figcaption>Slajd 73 (Šíma): ERDI vyspělých ekonomik (Austrálie, Kanada, Německo, Japonsko, Švýcarsko) kolísá kolem 1 s odchylkami v desítkách procent. Co si odnést: PKS platí jako dlouhodobé těžiště, ne jako rovnost každý rok.</figcaption>
+                    </figure>
+                    <p><strong>Proč reálně apreciuje domácí měna „úspěšných“ tranzitivních ekonomik</strong> (s. 71): strukturálně vhodný růst exportu, zlepšování směnných relací, růst cen neobchodovatelných statků a dorovnání regulovaných cen (doprava, vodné, kultura).</p>
+                    <div class="formula-block">$$SR_{real,t+n} = SR_{t+n}\cdot\frac{1 + p_{F(t,t+n)}}{1 + p_{D(t,t+n)}} \qquad I_{RER,t+n} = \frac{SR_{t+n}}{SR_t}\cdot\frac{1 + p_{F(t,t+n)}}{1 + p_{D(t,t+n)}}$$</div>
+                    <p>Index reálného kurzu (bilaterální) je ukazatel reálné kupní síly a <strong>cenové konkurenceschopnosti</strong>. Platí-li PKS, je v dlouhém období přibližně 1 (resp. 100). Je to indexové číslo, ne $1\,USD = 1\,CZK$ (s. 75). <strong>REER</strong> (real effective exchange rate) je vážený geometrický průměr bilaterálních kurzů s váhami podle podílu partnerů na zahraničním obchodě, deflovaný inflací nebo mzdovými náklady; publikují ČNB, IMF, OECD.</p>
+                    <div class="ex-box"><strong>Příklad (reálný kurz BRL/USD, 2003 → 2004):</strong> $SR_{2003} = 3{,}08$, $SR_{2004} = 2{,}93$, inflace Brazílie 6,60 %, USA 2,67 % (údaje ze s. 126, přesněji ze souboru 3,0775 a 2,9251).
+                        <br>$I_{RER} = \dfrac{2{,}9251}{3{,}0775}\cdot\dfrac{1{,}0267}{1{,}0660} = 0{,}9505 \cdot 0{,}9631 \approx 0{,}915$
+                        <br>Index je pod 1, takže BRL reálně posílil přibližně o 8,5 %: nominálně apreciovalo (kurz klesl) a navíc vyšší brazilská inflace zdražila brazilské zboží. Brazílie ztratila cenovou konkurenceschopnost. <span class="text-muted small">(vlastní výpočet podle vzorce ze s. 75)</span></div>
+                    <div class="warn-box"><strong>⚠️ Pozor na směr:</strong> v tomto vzorci je kurz D/F (BRL za USD), <em>pokles</em> indexu znamená reálnou apreciaci domácí měny. Grafy REER na s. 76–78 (ČNB/IMF konvence) mají naopak numerický <em>růst</em> = reálná apreciace. Vždy si přečti popis osy.</div>
+
+                    <h4>Úrokové míry a měnový kurz</h4>
+                    <p>Teorie parity úrokové míry je podmínka rovnováhy na mezinárodním kapitálovém trhu: při volném pohybu kapitálu požaduje investor stejný očekávaný (ex ante) výnos z aktiv bez ohledu na měnu. Zanedbává se riziková prémie, omezení pohybu kapitálu, preference měn a transakční náklady (s. 81). Existují tři přístupy (s. 86): úrokový diferenciál, teorie efektivních trhů s nekrytou úrokovou paritou a mezinárodní Fisherův efekt.</p>
+
+                    <h4>Nekrytá úroková parita (UIP)</h4>
+                    <div class="formula-block">$$SR_t\,(1 + IR_D) = (1 + IR_F)\cdot SR^e_{t+n} \;\Rightarrow\; \frac{SR^e - SR}{SR} = \frac{IR_D - IR_F}{1 + IR_F} \approx IR_D - IR_F$$ $$E_t(sr_{t,t+n}) \approx IR_{D(t,t+n)} - IR_{F(t,t+n)}$$</div>
+                    <div class="thm-box"><strong>Klíčový vztah:</strong> vyšší úročení měny je kompenzováno jejím očekávaným oslabením (a naopak). Podle teorie efektivních trhů se očekávání stává skutečností, takže $sr = IR_D - IR_F$ (s. 99–100).</div>
+                    <div class="ex-box"><strong>Příklad (HUF/EUR, s. 82–85):</strong> $SR = 300$ HUF/EUR, $IR_{HUF} = 5\,\%$, $IR_{EUR} \approx 0\,\%$.
+                        <br><strong>A)</strong> Maďar vloží 300 HUF doma: za rok $300 \cdot 1{,}05 = 315$ HUF (výnos 5 %).
+                        <br><strong>B)</strong> Směnit 300 HUF → 1 EUR, uložit při 0 % → 1 EUR, očekávaný kurz za rok $SR^e = 315$, tedy $1 \cdot 315 = 315$ HUF (výnos 0 % + 5 % kurzová změna).
+                        <br>Rovnost: $300 \cdot 1{,}05 = 1{,}00 \cdot 315$, tj. oslabení HUF o 5 % přesně vyrovná úrokový diferenciál 5 p.b.</div>
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/kurz-dlouhe-101.jpg" loading="lazy" alt="Úrokový diferenciál a změna kurzu, linie 45 stupňů">
+                        <figcaption>Slajd 101 (Šíma): osa x je úrokový diferenciál $IR_D - IR_F$, osa y očekávaná změna kurzu $sr$. Platí-li UIP, bod leží na linii 45°. Bod W je pod linií (změna kurzu je menší než diferenciál), bod Z nad linií (změna je větší než diferenciál). Odchylka vyvolá přesun kapitálu, který bod vrátí na linii.</figcaption>
+                    </figure>
+                    <div class="ex-box"><strong>Příklad (bod W, s. 102–104, koruna):</strong> $SR = 27{,}00$ CZK/EUR, $E\,SR = 27{,}27$ (očekávané oslabení CZK o 1 %), $IR_{CZK} = 4\,\%$, $IR_{EUR} = 1\,\%$ (diferenciál 3 p.b.). Investor z eurozóny:
+                        <br>do CZK: $27{,}00 \cdot 1{,}04 = 28{,}08$ CZK → zpět $\dfrac{28{,}08}{27{,}27} = 1{,}0297$ EUR,
+                        <br>do EUR: $1 \cdot 1{,}01 = 1{,}01$ EUR (český investor: $1{,}01 \cdot 27{,}27 = 27{,}54$ CZK &lt; $28{,}08$ CZK).
+                        <br>Koruna vychází výhodněji ($1{,}03 &gt; 1{,}01$), takže roste současná poptávka po CZK (↓ SR, apreciace) a očekávaná budoucí nabídka CZK (↑ $E\,SR$, depreciace). Rovnováha: změna kurzu se zvětšuje, až se rovná diferenciálu.</div>
+                    <div class="ex-box"><strong>Příklad (bod Z, s. 105–106):</strong> $SR = 27{,}00$, $E\,SR = 26{,}73$ (očekávaná apreciace CZK o 1 %), $IR_{CZK} = 2\,\%$, $IR_{EUR} = 5\,\%$.
+                        <br>do CZK: $27 \cdot 1{,}02 = 27{,}54$ CZK → $\dfrac{27{,}54}{26{,}73} = 1{,}0303$ EUR,
+                        <br>do EUR: $1 \cdot 1{,}05 = 1{,}05$ EUR (= $1{,}05 \cdot 26{,}73 = 28{,}07$ CZK).
+                        <br>Výhodnější je EUR ($1{,}05 &gt; 1{,}03$): roste poptávka po EUR (↑ SR) a očekávaná nabídka EUR (↓ $E\,SR$), až se vztah vyrovná. U dlužníků (kdo si půjčuje) platí opačná preference.</div>
+                    <div class="warn-box"><strong>⚠️ Dvě podobná, ale opačná tvrzení:</strong> <em>přístup přes úrokový diferenciál</em> (s. 87) říká, že růst domácí IR vede k <strong>apreciaci</strong> domácí měny teď (příliv kapitálu zvýší nabídku deviz; předpoklad: očekávaný kurz se nemění, riziková prémie neexistuje). <em>UIP</em> říká, že vyšší domácí IR je spojena s <strong>očekávanou depreciací</strong>. Skutečný pohyb je nejasný, protože vyšší IR často signalizuje špatné zprávy (inflace, deficit rozpočtu nebo běžného účtu), které zhoršují očekávání (Rusko a Turecko, s. 88–89).</div>
+                    <div class="def-box"><strong>Riziková prémie (rP):</strong> $SR_t = E_t SR_{t+n}\cdot\dfrac{1 + IR_F}{1 + IR_D}\cdot(1 + rP)$ (s. 90). Závisí na objektivním riziku (pravděpodobnost defaultu, volatilita) a na averzi k riziku. Schématický příklad (Moody’s, Damodaran 2015, s. 91): stejný rating = stejná prémie, např. Aaa 0 %, A1 (ČR) 1,05 %, Baa3 (Turecko) 3,30 %, Caa3 15 %.</div>
+
+                    <h4>Carry trades, risk on a risk off</h4>
+                    <div class="def-box"><strong>Carry trade:</strong> půjčka v nízko úročené měně (JPY, CHF) a investice do vysoko úročené (BRL, TRY, MXN) (s. 92).</div>
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/kurz-dlouhe-94.jpg" loading="lazy" alt="Identifikace období risk-on a risk-off">
+                        <figcaption>Slajd 94 (Šíma): JPY a CHF posilují v době vysoké averze k riziku, BRL, TRY a MXN posilují v době nízké averze. Co si odnést: kurzy měn s vysokým úrokem mění směr podle globální nálady, ne jen podle domácích fundamentů.</figcaption>
+                    </figure>
+                    <ul>
+                        <li><strong>Risk on</strong> (nízká averze): měny s vysokými sazbami posilují, měny s nízkými sazbami slábnou.</li>
+                        <li><strong>Risk off</strong> (vysoká averze): opačně, posilují „bezpečné přístavy“ (JPY, CHF).</li>
+                        <li><strong>Měření averze:</strong> VIX (implikovaná volatilita S&amp;P 500), spread LIBOR–OIS, spready státních dluhopisů, syntetické Financial Stress Indexy (s. 92).</li>
+                        <li><strong>Obtížnost bezpečného přístavu:</strong> centrální banka Švýcarska držela od září 2011 do ledna 2015 kurzový závazek (CHF nesmí apreciovat pod 1,20 CHF/EUR), pak ho zrušila (s. 97).</li>
+                    </ul>
+
+                    <h4>Mezinárodní Fisherův efekt (MFE)</h4>
+                    <p><strong>Fisherův efekt:</strong> nominální IR = reálná IR + očekávaná inflace, přesněji $1 + IR = (1 + IR_{real})(1 + E\,p)$. Reálné úrokové míry jsou v dlouhém období stabilní a v obou zemích stejné, takže pohyby nominálních sazeb určují inflační očekávání (s. 108).</p>
+                    <div class="thm-box"><strong>MFE (s. 109–110):</strong> $IR_D - IR_F = E_t p_D - E_t p_F$. Spojením s PKS a UIP platí $E_t(sr) = E_t p_D - E_t p_F = IR_D - IR_F$. Při stejných reálných sazbách je vysoká domácí nominální sazba spojena s očekávanou (a skutečnou?) depreciací měny. MFE je syntéza PKS a UIP.</div>
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/kurz-dlouhe-111.jpg" loading="lazy" alt="Schéma vztahů PKS, UIP, MFE, Fisherova efektu a forwardové prémie">
+                        <figcaption>Slajd 111 (Šíma, podle Durčáková, Mandel 2007): čtyři vztahy v jednom okruhu. Očekávaná změna spotu $E(sr)$ je svázána s rozdílem očekávané inflace (PKS), s úrokovým diferenciálem (UIP) a s forwardovou prémií (termínový kurz jako nevychýlený odhad budoucího spotu). Rozdíl inflací a úrokový diferenciál spojuje Fisherův efekt.</figcaption>
+                    </figure>
+                    <p><em>Doplňková poznámka (s. 110):</em> při stejných <em>nominálních</em> sazbách je vysoká domácí <em>reálná</em> sazba spojena s očekávanou apreciací.</p>
+
+                    <h4>Monetární přístup a QE</h4>
+                    <p>Z absolutní PKS ($SR = P_D / P_F$) a rovnice směny $M V_Y = P Y$ vychází kurz $SR_{PPP} = \dfrac{M_D V_{D,Y} / Y_D}{M_F V_{F,Y} / Y_F}$ (flexibilní ceny, s. 113). Růst peněžní zásoby doma (měnová báze $MB$ krát multiplikátor $m$) vede k oslabení měny. Takto se vysvětluje slábnutí USD při třech kolech kvantitativního uvolňování Fedu (březen 2009, listopad 2010, září 2012), nikoli však proporcionálně, protože multiplikátor $m$ silně klesl (s. 114–115). Variantou jsou „sticky“ ceny (Dornbuschův model), který přednáška jen jmenuje.</p>
+
+                    <h4>Příklad: predikce BRL/USD (Brazílie a USA, 1995–2014)</h4>
+                    <p>Úkol (s. 117–126 a soubor k příkladu): <strong>předpovědět směr</strong> pohybu kurzu brazilského realu vůči dolaru pro každý rok 1996–2014 čtyřmi přístupy (výkonová bilance NX, běžný účet CA, relativní PKS, UIP) a porovnat s tím, co skutečně nastalo. Důležitější než přesná hodnota je <strong>směr</strong>. „A“ = nominální apreciace BRL (kurz BRL/USD klesne), „D“ = depreciace. Makrodata se berou jako <em>dokonalá prognóza</em> (v roce $t-1$ známe hodnoty roku $t$). Soubor obsahuje čtyři tabulky: skutečný kurz, data Brazílie, data USA a prázdnou tabulku predikcí (4), kterou máme vyplnit (s. 125). Slajd 126 ukazuje vyplněné roky 2003–2009.</p>
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/kurz-dlouhe-126.jpg" loading="lazy" alt="Data Brazílie a USA a predikce teorií pro roky 2003 až 2009">
+                        <figcaption>Slajd 126 (Šíma): zadání příkladu v malém. Nahoře skutečný kurz BRL/USD, pod ním NX, CA, inflace a úroková míra Brazílie a USA, dole predikce čtyř přístupů (A/D). Pro 2003–2009 dávají platební bilance „A“, PKS a UIP „D“.</figcaption>
+                    </figure>
+                    <div class="formula-block">$$\text{NX: } X_{BRA}^e(t) > X_{USA}^e(t) \Rightarrow SR^e_t < SR_{t-1}\ (A) \qquad \text{PKS: } SR^e_t = SR_{t-1}\cdot\frac{1 + p^e_{BRA}}{1 + p^e_{USA}} \qquad \text{UIP: } SR^e_t = SR_{t-1}\cdot\frac{1 + IR^e_{BRA}}{1 + IR^e_{USA}}$$</div>
+                    <div class="ex-box"><strong>Řešení krok za krokem (postup z s. 127–130):</strong>
+                        <ol class="mb-2">
+                            <li><strong>Výkonová bilance (rok 2005, jsme v 2004):</strong> $4{,}08\,\% > -5{,}51\,\%$ (Brazílie vyšší než USA) → BRL by měl v roce 2005 posílit, tedy A. Brazilské NX je od roku 1999 každý rok vyšší než americké, proto je predikce A (viz tabulka níže).</li>
+                            <li><strong>Běžný účet (rok 2004, jsme v 2003):</strong> $1{,}75\,\% > -5{,}16\,\%$ → A.</li>
+                            <li><strong>Relativní PKS (rok 2009, jsme v 2008):</strong> $SR^e_{2009} = 1{,}83\cdot\dfrac{1 + 0{,}0489}{1 + (-0{,}0032)} = 1{,}83 \cdot 1{,}0523 \approx 1{,}93$ BRL/USD (s přesnějším $SR_{2008} = 1{,}8338$ vyjde 1,930). Inflace Brazílie je vyšší než USA → očekávané oslabení BRL, tedy D. Skutečný kurz 2009 byl 2,00, tedy D, trefa.</li>
+                            <li><strong>UIP (rok 2008, jsme v 2007):</strong> $SR^e_{2008} = 1{,}95\cdot\dfrac{1 + 0{,}1368}{1 + 0{,}0367} = 1{,}95 \cdot 1{,}0966 \approx 2{,}14$ → D. Skutečný kurz 2008 byl 1,83, tedy A, <strong>netrefa</strong> (období „risk on“ před krizí).</li>
+                        </ol>
+                        Výsledky jsem přepočítal pro všechna léta 1996–2014 z dat souboru. Pravidla: A, když $NX_{BRA} > NX_{USA}$ (resp. $CA$); u PKS A, když $p_{BRA} < p_{USA}$; u UIP A, když $IR_{BRA} < IR_{USA}$. Výsledek tabulky 4 přesně souhlasí s tabulkou v souboru i se slajdem 126:
+                        <table class="table table-bordered summary-table mt-2 mb-2">
+                            <thead><tr><th>Přístup</th><th>Predikce 1996–2014</th><th>Trefy z 19</th></tr></thead>
+                            <tbody>
+                                <tr><td>Skutečnost</td><td>DDDDDDDD AAAAA D AA DDD (12× D, 7× A)</td><td>–</td></tr>
+                                <tr><td>Výkonová bilance (NX)</td><td>DDD + 16× A (A od 1999)</td><td>10</td></tr>
+                                <tr><td>Běžný účet (CA)</td><td>DDDDADAAAAAAAADADDD</td><td>14</td></tr>
+                                <tr><td>Relativní PKS</td><td>19× D</td><td>12</td></tr>
+                                <tr><td>UIP</td><td>19× D</td><td>12</td></tr>
+                            </tbody>
+                        </table>
+                        <strong>Závěry:</strong> (1) PKS a UIP předpovídají D pokaždé, protože Brazílie měla v každém roce vyšší inflaci i vyšší úrokovou míru než USA; trefí tedy přesně tolik, kolik bylo skutečných depreciací (12 ze 19). (2) Běžný účet vyšel nejlépe (14/19), výkonová bilance nejhůř (10/19). (3) Žádná teorie sama nestačí: je třeba brát v úvahu ceny komodit, risk on / risk off, politickou stabilitu a režim kurzu (s. 125, 131).</div>
+                    <div class="ex-box"><strong>Dlouhodobá kontrola PKS (vlastní výpočet z dat):</strong> kumulace inflačního diferenciálu $\prod \dfrac{1 + p_{BRA}}{1 + p_{USA}}$ za 1996–2014 dává faktor 2,23, a skutečný kurz vzrostl z 0,92 na 2,35, tedy 2,56násobně. Dlouhodobě tedy PKS směr i velikost trendu obstojně vystihuje (s. 138: „PPP neplatí??? Ale platí“). Za 2003–2014 ale PKS předpovídala 1,41násobek, kurz klesl z 3,08 na 2,35 (reálná apreciace BRL: komodity, carry trades).</div>
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/kurz-dlouhe-138.jpg" loading="lazy" alt="BRL/USD tržní kurz a kurz podle PKS 1995 až 2014">
+                        <figcaption>Slajd 138 (Šíma): tržní kurz BRL/USD (tečky) a kurz podle PKS (černá čára). PKS vystihuje dlouhodobý trend růstu kurzu, tržní kurz kolem něj kolísá (vrchol 2003, přiblížení 2011). PKS nepředpovídá jednotlivé roky.</figcaption>
+                    </figure>
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/kurz-dlouhe-30.jpg" loading="lazy" alt="Inflace v Brazílii a USA a kurz BRL/USD">
+                        <figcaption>Slajd 30 (Šíma): vrchol brazilské inflace (14,7 % v roce 2003) se časově shoduje s vrcholem kurzu BRL/USD (3,08, nejslabší real). Po 2003 inflace klesla a real posiloval, ale inflační diferenciál zůstal kladný.</figcaption>
+                    </figure>
+
+                    <h4>Co ještě ovlivnilo BRL/USD</h4>
+                    <figure class="slide-fig">
+                        <img src="img/1MT461/kurz-dlouhe-132.jpg" loading="lazy" alt="Řetězec: nadbytek likvidity, carry trades, komodity a apreciace měn EME">
+                        <figcaption>Slajd 132 (Šíma): nadbytek likvidity a nízké sazby ve vyspělých zemích → carry trades → příliv kapitálu do rozvíjejících se zemí → reálná apreciace a nižší konkurenceschopnost; růst cen komodit → možná Dutch disease (holandská nemoc) u exportérů komodit, volatilita směnných relací, silná apreciace, pokles průmyslu a větší podíl neobchodovatelného sektoru.</figcaption>
+                    </figure>
+                    <ul>
+                        <li><strong>Kapitálové toky:</strong> příliv do Brazílie vyvolaly kvantitativní uvolňování Fedu (QE1–QE3) a carry trades; BCB reagovala kapitálovými kontrolami (s. 134).</li>
+                        <li><strong>Režim kurzu a intervence:</strong> free floating 1999–2007, řízený floating 2008–2014, měnové rezervy (s. 135).</li>
+                        <li><strong>Ceny komodit:</strong> sója, hovězí, cukr, ropa a železná ruda ovlivňují REER Brazílie (s. 136). <strong>Směnné relace</strong> Brazílie a USA (s. 137).</li>
+                        <li><strong>Krize:</strong> Brazílie 1999 (po asijské a ruské krizi, s. 36).</li>
+                    </ul>
+
+                    <div class="summary-box"><strong>Shrnutí:</strong>
+                        <ul>
+                            <li>Fundamentální analýza odhaduje kurz z makroproměnných. V dlouhém období (10+ let) rozhodují ceny, produktivita, čistá zahraniční aktiva, úspory a investice, směnné relace a demografie, ve středním období bilance, úroky a cyklus averze k riziku, v krátkém sentiment a intervence.</li>
+                            <li>Dlouhodobé odchylky od fundamentů (eurozóna, Čína) vedou k nerovnováze. Kurz se vrací do „pásma“ kolem rovnovážné úrovně.</li>
+                            <li>Platební bilance: přebytek → apreciace, deficit → depreciace. Dobře předpovídá velké pohyby (krize); kritické hodnoty CA −5 až −7 % HDP, NIIP −35 %, hrubý dluh −40 % HDP.</li>
+                            <li>Relativní PKS: $sr \approx p_D - p_F$, vyšší inflace → depreciace. Reálný kurz $I_{RER} = \frac{SR_{t+n}}{SR_t}\cdot\frac{1+p_F}{1+p_D}$ měří konkurenceschopnost, při platnosti PKS je ≈ 1. ERDI = tržní / PPP, u tranzitivních ekonomik &gt; 1.</li>
+                            <li>UIP: $E(sr) \approx IR_D - IR_F$, vyšší úrok = očekávané oslabení. Přístup přes úrokový diferenciál říká opak (apreciace teď). Riziková prémie a risk on / risk off tuto logiku mění.</li>
+                            <li>MFE: stejné reálné sazby → $IR_D - IR_F = E p_D - E p_F$ → $E(sr)$ je dáno diferenciálem. Spojuje PKS a UIP. Monetární přístup: růst měnové zásoby (QE) oslabuje měnu.</li>
+                            <li>Příklad BRL/USD 1996–2014: PKS a UIP předpovídají vždy D (12/19 správně), běžný účet 14/19, výkonová bilance 10/19. Pro směr kurzu nestačí jediná teorie.</li>
+                        </ul>
+                    </div>
+                    <p class="mb-0"><a href="../quiz.html?course=1MT461&topic=5"><i class="fas fa-question-circle me-1"></i>Procvičit téma</a></p>
+                </section>
+
                 <div class="alert alert-secondary">
-                    Další témata přibudou s prezentacemi z přednášek (<code>podklady/1MT461/</code>).
+                    Témata 6–11 přibudou s prezentacemi z přednášek (<code>podklady/1MT461/</code>).
                 </div>
             </div>
         </div>
