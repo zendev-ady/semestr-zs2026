@@ -148,6 +148,52 @@ body {
 body.dark-mode .slide-fig img { border-color: #334155; }
 body.dark-mode .slide-fig figcaption { color: #94a3b8; }
 
+/* ── Vlastní SVG diagram (barvy přes proměnné, funguje i v dark mode) ── */
+.fx-fig {
+    --d-text: #1e293b;
+    --d-muted: #64748b;
+    --d-node-fill: #f1f5f9;
+    --d-node-stroke: #94a3b8;
+    --d-good: #16a34a;
+    --d-bad: #dc2626;
+    --d-info: #0891b2;
+    --d-warn: #b45309;
+    margin: 1rem 0;
+    max-width: 720px;
+}
+body.dark-mode .fx-fig {
+    --d-text: #e2e8f0;
+    --d-muted: #94a3b8;
+    --d-node-fill: #1e293b;
+    --d-node-stroke: #475569;
+    --d-good: #4ade80;
+    --d-bad: #f87171;
+    --d-info: #22d3ee;
+    --d-warn: #fbbf24;
+}
+.fx-fig svg { display: block; width: 100%; height: auto; }
+.fx-fig figcaption { margin-top: 0.35rem; font-size: 0.82rem; color: #64748b; }
+body.dark-mode .fx-fig figcaption { color: #94a3b8; }
+.fx-fig .t { fill: var(--d-text); font-size: 14px; }
+.fx-fig .t-m { fill: var(--d-muted); font-size: 12px; }
+.fx-fig .t-b { font-weight: 700; }
+.fx-fig .t-l { font-size: 17px; }
+.fx-fig .t-bad { fill: var(--d-bad); }
+.fx-fig .t-good { fill: var(--d-good); }
+.fx-fig .t-warn { fill: var(--d-warn); }
+.fx-fig .mono { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 20px; }
+.fx-fig .node { fill: var(--d-node-fill); stroke: var(--d-node-stroke); stroke-width: 1.5; }
+.fx-fig .node-res { fill: var(--d-node-fill); stroke: var(--d-good); stroke-width: 2.5; }
+.fx-fig .e-bad { stroke: var(--d-bad); fill: none; stroke-width: 2.5; }
+.fx-fig .e-good { stroke: var(--d-good); fill: none; stroke-width: 2.5; }
+.fx-fig .m-bad { fill: var(--d-bad); }
+.fx-fig .m-good { fill: var(--d-good); }
+.fx-fig .bar-info { fill: var(--d-info); fill-opacity: 0.25; stroke: var(--d-info); stroke-width: 1.5; }
+.fx-fig .bar-warn { fill: var(--d-warn); fill-opacity: 0.25; stroke: var(--d-warn); stroke-width: 1.5; }
+.fx-fig .axis { stroke: var(--d-muted); stroke-width: 1.5; }
+.fx-fig .guide { stroke: var(--d-muted); stroke-dasharray: 4 3; fill: none; }
+.fx-fig .link { stroke: var(--d-warn); stroke-width: 2; fill: none; }
+
 /* ── Vzorce ────────────────────────────────────────────────── */
 .formula-block {
     background: #f1f5f9;
