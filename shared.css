@@ -358,3 +358,21 @@ body.dark-mode .week-row.current { background: #334155; }
     white-space: pre;
 }
 .r-box code { color: inherit; background: none; padding: 0; font-size: inherit; }
+
+/* ── Tisk / export do PDF ──────────────────────────────────── */
+@media print {
+    @page { margin: 14mm 12mm; }
+    body { padding-top: 0 !important; background: #fff !important; font-size: 10.5pt; }
+    .subject-navbar, .topic-nav, #harmonogram, #course-harmonogram,
+    .topic-section a[href*="quiz.html"] { display: none !important; }
+    .col-lg-3 { display: none !important; }
+    .col-lg-9 { width: 100% !important; flex: 0 0 100% !important; max-width: 100% !important; }
+    .container { max-width: 100% !important; }
+    .topic-section { border: none !important; padding: 0 !important; margin-bottom: 0 !important; break-before: page; }
+    .topic-section:first-of-type { break-before: auto; }
+    .def-box, .thm-box, .ex-box, .warn-box, .insight-box, .summary-box,
+    figure, table, tr { break-inside: avoid; }
+    h3, h4 { break-after: avoid; }
+    .slide-fig, .fx-fig { max-width: 100%; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
