@@ -8,7 +8,7 @@ Zdrojová data jsou čisté JSON soubory v UTF-8:
 | `events.json` | Termíny všech předmětů; `courseCode` odkazuje na `code` v katalogu |
 | `semester.json` | Název semestru, začátek výuky, počet týdnů a společná volna |
 
-Pořadí předmětů v katalogu určuje pořadí na webu. Pořadí `topics` určuje čísla témat v poznámkách a quizu, proto je nepřehazuj bez aktualizace těchto vazeb. Volitelné `topicWeeks` přiřazuje každému tématu týden výuky (číslovaný od 1); více témat může být ve stejném týdnu.
+Pořadí předmětů v katalogu určuje pořadí na webu. Pořadí `topics` určuje čísla témat v poznámkách a quizu, proto je nepřehazuj bez aktualizace těchto vazeb. Volitelné `topicWeeks` přiřazuje každému tématu týden výuky (číslovaný od 1); více témat může být ve stejném týdnu. Volitelné `lessons` je seznam konkrétních hodin (`date`, `time` např. `12:45–14:15`, `kind` `Přednáška`/`Cvičení`, `room`, `title`); používá se, když rozvrh nejde zapsat pravidelným slotem v `schedule`. Předmět s `lessons` bez `topicWeeks` nepřiřazuje témata týdnům a týdenní rozvrh na dashboardu bere hodiny jen z `lessons`.
 
 Termín má `courseCode`, `date` ve formátu `YYYY-MM-DD`, `type` (`test`, `zkouska`, `deadline`, `jine`) a `title`. Datum bez času nepředpokládá konkrétní hodinu odevzdání.
 

@@ -65,7 +65,7 @@
 
                 <section class="topic-section" id="harmonogram">
                     <h3>Harmonogram</h3>
-                    <p class="text-muted">Přiřazení dvojic témat k lichým týdnům je návrh podle rozvrhu, nikoli potvrzený harmonogram přednášek. Termíny testů a práce sylabus neuvádí.</p>
+                    <p class="text-muted">Harmonogram podle aktualizovaného rozvrhu od vyučujících (hodiny, místnosti a hosté). Témata ze sylabu se už neřadí po týdnech, protože přednášky vedou externí hosté (EY, Horová, Fadrhonc). Týdny jsou číslované kalendářně od 21. 9., takže se liší od číslování vyučujících (od 12. 11. o jedna výš).</p>
                     <div id="course-harmonogram"></div>
                 </section>
 
@@ -155,6 +155,7 @@
                             <tr><td>Podle způsobu plnění</td><td><strong>škodové</strong> (plní se skutečná škoda, max. do výše škody — nelze se obohatit) × <strong>obnosové</strong> (plní se sjednaná částka bez ohledu na škodu — typicky život, úraz)</td></tr>
                             <tr><td>Podle vzniku</td><td><strong>smluvní dobrovolné</strong> × <strong>povinné smluvní</strong> (zákon ukládá pojištění uzavřít, např. povinné ručení) × <strong>zákonné</strong> (vzniká přímo ze zákona, např. zákonné pojištění odpovědnosti zaměstnavatele)</td></tr>
                             <tr><td>Podle tvorby rezervy</td><td><strong>rizikové</strong> (jen krytí rizika) × <strong>rezervotvorné</strong> (část pojistného se spoří — kapitálové, investiční životní pojištění)</td></tr>
+                            <tr><td>Příklady produktů</td><td><strong>životní:</strong> rizikové životní pojištění (smrt, invalidita), kapitálové a investiční životní pojištění, důchodové pojištění · <strong>neživotní:</strong> povinné ručení (POV), havarijní pojištění, pojištění majetku (domácnost, nemovitost), cestovní pojištění, pojištění odpovědnosti</td></tr>
                             <tr><td>Podle klienta</td><td>pojištění <strong>občanů</strong> × <strong>podnikatelů</strong> (průmyslová a podnikatelská rizika)</td></tr>
                         </tbody>
                     </table>
@@ -240,6 +241,67 @@
                     <p>Podle <strong>Solvency II</strong> se technické rezervy oceňují tržně: <strong>nejlepší odhad</strong> (best estimate — diskontované očekávané budoucí toky) + <strong>riziková přirážka</strong> (risk margin). Více v tématu 5.</p>
                     <div class="warn-box"><strong>⚠️ Pozor:</strong> RBNS × IBNR — rozhoduje, jestli pojišťovna o události <strong>už ví</strong>. Dlouhé zpoždění hlášení (odpovědnost, zdravotní škody) znamená velké IBNR.</div>
 
+<h4>Rezerva na nezasloužené pojistné (UPR)</h4>
+                    <div class="def-box"><strong>UPR (unearned premium reserve):</strong> část předepsaného pojistného, která se vztahuje k <strong>době po datu účetní závěrky</strong>, tedy ke krytí, které pojišťovna ještě neposkytla. Pojistné se „zasluhuje“ rovnoměrně v čase (<em>pro rata temporis</em>).</div>
+                    <div class="formula-block">$$\text{UPR} = \text{pojistné} \times \frac{\text{zbývající doba pojištění k datu závěrky}}{\text{celková doba pojištění}}$$</div>
+                    <div class="ex-box"><strong>Příklad (průběžný test 29. 10. 2026):</strong> roční pojistné 3 600 Kč, pojištění začíná 1. 10. 2024, UPR k 31. 12. 2024.
+                        <ol class="mb-0">
+                            <li>uplynuly 3 měsíce (říjen–prosinec) → zasloužené pojistné $3\,600 \cdot \frac{3}{12} = 900$ Kč</li>
+                            <li>zbývá 9 měsíců → $\text{UPR} = 3\,600 \cdot \frac{9}{12} = \mathbf{2\,700}$ Kč</li>
+                        </ol>
+                    </div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> UPR je <strong>zbývající</strong> část, ne uplynulá. Zasloužené + UPR = celé pojistné. Pro ostatní data přesně počítej dny (nebo měsíce), jak zadání říká.</div>
+
+                    <h4>Trojúhelníky škod</h4>
+                    <p>Škody se sledují podle <strong>škodního roku</strong> (řádek: kdy škoda nastala) a <strong>vývojového roku</strong> (sloupec 0, 1, 2…: kolik let po vzniku). V <strong>kumulativním</strong> trojúhelníku je v každém políčku součet od vzniku do daného vývojového roku; z dostupných dat tak vznikne trojúhelník, jehož pravý dolní roh chybí (je to budoucnost).</p>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th></th><th>Trojúhelník vyplacených škod</th><th>Trojúhelník nahlášených škod</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Co obsahuje</strong></td><td>skutečně <strong>vyplacené</strong> peníze (cash)</td><td>vyplacené + <strong>rezerva RBNS</strong> (to, co pojišťovna o škodách už ví, tzv. incurred)</td></tr>
+                            <tr><td><strong>Hodnota ve vývoji</strong></td><td>roste pomalu (výplaty se opožďují)</td><td>je blíž ultimate, protože zahrnuje i odhady (RBNS) k už nahlášeným škodám</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="insight-box"><strong>Intuice:</strong> <strong>poslední diagonála</strong> jsou nejnovější dostupné hodnoty pro každý škodní rok. Součet poslední diagonály v kumulativním trojúhelníku <em>vyplacených</em> škod = <strong>kolik pojišťovna dosud celkem vyplatila</strong> na škody všech škodních let (stav k datu analýzy). V <em>nahlášeném</em> trojúhelníku je to „co o škodách víme“ (vyplacené + RBNS).</div>
+
+                    <h4>Chain ladder a IBNR</h4>
+                    <p>Metoda <strong>chain ladder</strong> předpokládá, že škody se vyvíjejí ve všech škodních letech podobně. Z historie spočteme <strong>vývojové faktory</strong> (age-to-age) a jimi „dopočítáme“ pravý dolní roh trojúhelníku.</p>
+                    <div class="formula-block">$$f_j = \frac{\sum_{i} C_{i,\,j+1}}{\sum_{i} C_{i,\,j}} \quad\text{(vážený průměr — sčítají se jen řádky, kde je znám i } j+1\text{)}$$
+                    $$\hat C_{i,\,j+1} = C_{i,\,j} \cdot f_j \qquad \text{IBNR} = \sum_i \left(\text{ultimate}_i - \text{poslední nahlášená hodnota}_i\right)$$</div>
+                    <div class="ex-box"><strong>Příklad (test, úloha 2):</strong> kumulativní nahlášené škody, vývoj ukončen po 2. roce.
+                        <table class="table table-bordered summary-table mt-2">
+                            <thead><tr><th></th><th>0</th><th>1</th><th>2</th></tr></thead>
+                            <tbody>
+                                <tr><td>2023</td><td>800</td><td>1 500</td><td>2 250</td></tr>
+                                <tr><td>2024</td><td>900</td><td>1 900</td><td><strong>2 850</strong></td></tr>
+                                <tr><td>2025</td><td>1 000</td><td><strong>2 000</strong></td><td><strong>3 000</strong></td></tr>
+                            </tbody>
+                        </table>
+                        <ol class="mb-0">
+                            <li>$f_0 = \frac{1\,500 + 1\,900}{800 + 900} = \frac{3\,400}{1\,700} = \mathbf{2{,}0}$ (2025 se nepočítá — chybí mu sloupec 1)</li>
+                            <li>$f_1 = \frac{2\,250}{1\,500} = \mathbf{1{,}5}$ (jen 2023 má sloupec 2)</li>
+                            <li>2024: $1\,900 \cdot 1{,}5 = 2\,850$ · 2025: $1\,000 \cdot 2{,}0 = 2\,000$, pak $2\,000 \cdot 1{,}5 = 3\,000$</li>
+                        </ol>
+                    </div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> <strong>vážený průměr</strong> = součet navázaných hodnot / součet výchozích hodnot (velké škodní roky mají větší váhu). Neváženě by se zprůměrovaly poměry jednotlivých let. Test výslovně říká, který použít.</div>
+                    <div class="ex-box"><strong>Příklad (test, úloha 3):</strong> trojúhelník je už doplněný, vývoj končí po 3. roce, poslední sloupec = ultimate.
+                        <ol class="mb-0">
+                            <li>poslední známé hodnoty (diagonála): 2022 → 3 150, 2023 → 6 000, 2024 → 6 000, 2025 → 4 000, součet 19 150</li>
+                            <li>ultimate (poslední sloupec): 3 150 + 6 300 + 9 450 + 12 600 = 31 500</li>
+                            <li>$\text{IBNR} = 31\,500 - 19\,150 = \mathbf{12\,350}$</li>
+                        </ol>
+                    </div>
+
+                    <h4>Životní pojištění: cash-flow model</h4>
+                    <p>Hodnota životního pojištění se počítá <strong>cash-flow modelem</strong>: pro každou smlouvu se projektují budoucí příjmy (pojistné) a výdaje (plnění, provize, náklady), diskontují se a sečtou. Vstupují do něj <strong>předpoklady</strong>:</p>
+                    <table class="table table-bordered summary-table">
+                        <thead><tr><th>Ekonomické</th><th>Neekonomické (pojistně-technické)</th></tr></thead>
+                        <tbody>
+                            <tr><td>diskontní sazby / výnosová křivka<br>výnosy z investic<br>inflace (nárůst nákladů)<br>kurzy, akciové výnosy (u investičních produktů)</td><td>úmrtnost (mortalita)<br>nemocnost / invalidita (morbidita)<br>storno (zánik smlouvy, předčasné ukončení)<br>náklady (správní, akviziční)</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> „neekonomické“ neznamená bez peněz — jsou to <strong>nefinanční</strong> předpoklady o chování pojištěných (úmrtí, storno). Úrokové sazby, inflace a výnosy jsou ekonomické.</div>
+
+                    
                     <h4>Pojistné podmínky a životní cyklus produktu</h4>
                     <p>Produkt je právně popsán <strong>pojistnou smlouvou</strong>, <strong>všeobecnými a zvláštními pojistnými podmínkami</strong>. Při prodeji spotřebiteli se v neživotním pojištění předává standardizovaný informační dokument <strong>IPID</strong> (podle IDD). Pojišťovna musí mít proces schvalování produktu <strong>POG</strong> (product oversight and governance): určit <strong>cílový trh</strong>, otestovat produkt a sledovat, zda mu slouží (téma 5).</p>
 
@@ -285,6 +347,7 @@
                         <li><strong>výplata</strong> plnění (podle OZ do 15 dnů po skončení šetření; šetření má být skončeno do 3 měsíců od oznámení),</li>
                         <li>případný <strong>regres</strong>: pojišťovna vymáhá plnění po tom, kdo škodu zavinil.</li>
                     </ol>
+                    <div class="insight-box"><strong>Zpoždění vyřízení škody:</strong> mezi vznikem škody a výplatou uplyne čas — škoda se nahlásí pozdě (klient si události všimne později), šetření a znalecké posudky trvají, škoda se řeší soudně, nebo se rozsah škody vyvíjí dlouho (odpovědnost, zdravotní újmy). Proto vznikají rezervy RBNS a IBNR a proto se používají trojúhelníky škod.</div>
                     <p>Likvidace je pro klienta „okamžik pravdy“: tady se ukáže kvalita pojištění. Zároveň je to místo, kde se odhalují <strong>pojistné podvody</strong> (v ČR odhalí pojišťovny ročně podvody za zhruba 1–1,5 mld. Kč — údaj ČAP, řádově, ověřit aktuální rok).</p>
 
                     <h4>Zajištění</h4>
@@ -316,6 +379,13 @@
                             <li>s investicemi celkem $50 + 80 = 130$ mil.</li>
                         </ol>
                     </div>
+                    <div class="ex-box"><strong>Příklad (test, úloha 4):</strong> škodní procento = (vyplacené škody + škodní rezerva) / zasloužené pojistné.
+                        <ul class="mb-0">
+                            <li>2024: $\frac{500 + 500}{2\,000} = \mathbf{50\,\%}$</li>
+                            <li>2025: $\frac{800 + 1\,600}{3\,200} = \mathbf{75\,\%}$</li>
+                        </ul>
+                    </div>
+                    <div class="warn-box"><strong>⚠️ Pozor:</strong> do škodního procenta patří i <strong>škodní rezerva</strong>, ne jen vyplacené škody. Jen z vyplacených by vyšlo 25 % v obou letech a to by škody podhodnotilo. Výklad podle zadání testu; přednášky mohou vzorec uvádět jinak.</div>
                     <div class="insight-box"><strong>Intuice:</strong> kombinovaný ukazatel pod 100 % = pojišťovna vydělává už na samotném pojišťování. Nad 100 % prodělává na pojištění a musí to dohnat investicemi — funguje to při vysokých úrokových sazbách, při nízkých ne. Kombinovaný ukazatel se používá u <strong>neživotního</strong> pojištění; u životního rozhodují hlavně investice a rezervy.</div>
                     <div class="warn-box"><strong>⚠️ Pozor:</strong> ve jmenovateli je <strong>zasloužené</strong> (ne předepsané) pojistné. Předepsané = co bylo za období vyúčtováno klientům; zasloužené = část, která připadá na uplynulé období (předepsané − změna rezervy na nezasloužené pojistné).</div>
 

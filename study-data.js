@@ -236,9 +236,128 @@ window.COURSES = [
     "lang": "cz",
     "group": "P",
     "schedule": [
-      "Př Čt 11:00–12:30 NB 177A (L)",
-      "Př Čt 12:45–14:15 NB 177A (L)",
-      "Cv Čt 12:45–14:15 NB 177A (S)"
+      "Čt 11:00–14:15 NB 177A/B — přednášky a cvičení podle harmonogramu"
+    ],
+    "lessons": [
+      {
+        "date": "2026-09-24",
+        "time": "12:45–14:15",
+        "kind": "Cvičení",
+        "room": "NB 177B",
+        "title": "Základy pojišťovnictví"
+      },
+      {
+        "date": "2026-10-01",
+        "time": "12:45–14:15",
+        "kind": "Cvičení",
+        "room": "NB 177B",
+        "title": "Prezentace studentů"
+      },
+      {
+        "date": "2026-10-08",
+        "time": "11:00–12:30",
+        "kind": "Přednáška",
+        "room": "NB 177B",
+        "title": "EY"
+      },
+      {
+        "date": "2026-10-08",
+        "time": "12:45–14:15",
+        "kind": "Přednáška",
+        "room": "NB 177B",
+        "title": "EY"
+      },
+      {
+        "date": "2026-10-15",
+        "time": "11:00–12:30",
+        "kind": "Přednáška",
+        "room": "NB 177B",
+        "title": "EY"
+      },
+      {
+        "date": "2026-10-15",
+        "time": "12:45–14:15",
+        "kind": "Přednáška",
+        "room": "NB 177B",
+        "title": "EY"
+      },
+      {
+        "date": "2026-10-22",
+        "time": "12:45–14:15",
+        "kind": "Cvičení",
+        "room": "NB 177B",
+        "title": "EY"
+      },
+      {
+        "date": "2026-10-29",
+        "time": "12:45–14:15",
+        "kind": "Cvičení",
+        "room": "NB 177A",
+        "title": "EY"
+      },
+      {
+        "date": "2026-11-12",
+        "time": "12:45–14:15",
+        "kind": "Cvičení",
+        "room": "NB 177A",
+        "title": "Prezentace studentů"
+      },
+      {
+        "date": "2026-11-19",
+        "time": "11:00–12:30",
+        "kind": "Přednáška",
+        "room": "NB 177A",
+        "title": "Horová – Insurtech"
+      },
+      {
+        "date": "2026-11-19",
+        "time": "12:45–14:15",
+        "kind": "Přednáška",
+        "room": "NB 177A",
+        "title": "Prezentace studentů"
+      },
+      {
+        "date": "2026-11-26",
+        "time": "12:45–14:15",
+        "kind": "Cvičení",
+        "room": "NB 177A",
+        "title": "Prezentace studentů"
+      },
+      {
+        "date": "2026-12-03",
+        "time": "11:00–12:30",
+        "kind": "Přednáška",
+        "room": "NB 177A",
+        "title": "Fadrhonc – AI v pojišťovnictví"
+      },
+      {
+        "date": "2026-12-03",
+        "time": "12:45–14:15",
+        "kind": "Přednáška",
+        "room": "NB 177A",
+        "title": "Fadrhonc – AI v pojišťovnictví"
+      },
+      {
+        "date": "2026-12-10",
+        "time": "12:45–14:15",
+        "kind": "Cvičení",
+        "room": "NB 177A",
+        "title": "Prezentace studentů"
+      },
+      {
+        "date": "2026-12-17",
+        "time": "11:00–12:30",
+        "kind": "Přednáška",
+        "room": "NB 177A",
+        "title": "Insurtech"
+      },
+      {
+        "date": "2026-12-17",
+        "time": "12:45–14:15",
+        "kind": "Přednáška",
+        "room": "NB 177A",
+        "title": "Insurtech"
+      }
     ],
     "topics": [
       "Principy pojištění a pojistných produktů",
@@ -254,22 +373,14 @@ window.COURSES = [
       "Inovace v konstrukci produktů",
       "Insurtech v pojistných procesech"
     ],
-    "grading": "Semestrální práce (10 %) · Prezentace nebo obhajoba (10 %) · Průběžný test (testy) (40 %) · Závěrečný test (40 %)",
-    "topicWeeks": [
-      1,
-      1,
-      3,
-      3,
-      5,
-      5,
-      9,
-      9,
-      11,
-      11,
-      13,
-      13
-    ],
-    "events": []
+    "grading": "Semestrální práce (10 %) · Prezentace nebo obhajoba (10 %) · Průběžný test (testy) (40 %; 1. test 29. 10., max 40 b.) · Závěrečný test (40 %)",
+    "events": [
+      {
+        "date": "2026-10-29",
+        "type": "test",
+        "title": "1. průběžný test (max 40 b.): UPR, chain ladder, IBNR, škodní procento, produkty, CF model"
+      }
+    ]
   },
   {
     "code": "1BP461",

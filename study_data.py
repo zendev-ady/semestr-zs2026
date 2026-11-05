@@ -42,6 +42,12 @@ def load_study_data(data_dir: Path = DATA_DIR) -> tuple[list, dict]:
                 type(week) is not int or not 1 <= week <= weeks for week in topic_weeks
             ):
                 raise ValueError(f"{code}: topicWeeks musí přiřazovat platný týden každému tématu.")
+        for lesson in course.get("lessons", []):
+            date.fromisoformat(lesson["date"])
+            if lesson["kind"] not in {"Přednáška", "Cvičení"} or not all(
+                isinstance(lesson.get(field), str) and lesson[field].strip() for field in ("time", "room", "title")
+            ):
+                raise ValueError(f"{code}: neplatná hodina {lesson.get('date')} (kind, time, room, title).")
         by_code[code] = course
         slugs.add(course["slug"])
         course["events"] = []

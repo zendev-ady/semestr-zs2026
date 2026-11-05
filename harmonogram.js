@@ -63,6 +63,7 @@
 
     /* indexy témat probíraných v daném týdnu (může jich být víc, nebo žádné) */
     function topicIndicesForWeek(course, week) {
+        if (!course.topicWeeks && course.lessons) return [];
         if (!course.topicWeeks) return week - 1 < course.topics.length ? [week - 1] : [];
         return course.topicWeeks.flatMap((w, i) => (w === week ? [i] : []));
     }
@@ -70,6 +71,19 @@
     function slotRunsInWeek(slot, week) {
         if (!slot.parity) return true;
         return slot.parity === 'L' ? week % 2 === 1 : week % 2 === 0;
+    }
+
+    /* hodiny předmětu s explicitním seznamem `lessons` (datum, čas, typ, místnost, téma) */
+    function lessonsOf(course) {
+        return (course.lessons || []).map((l) => ({ ...l, dateObj: parseDate(l.date) }));
+    }
+
+    function holidaysInWeek(week) {
+        const from = weekStart(week);
+        const to = addDays(from, 4);
+        return (window.SEMESTER.holidays || [])
+            .filter((h) => parseDate(h.from) <= to && parseDate(h.to) >= from)
+            .map((h) => h.title);
     }
 
     function allEvents(courses) {
@@ -108,17 +122,27 @@
         const week = weekOf(now);
         const todayIdx = now.getDay() - 1;
         const cols = DAYS.map(() => []);
-        courses.forEach((c) =>
+        courses.forEach((c) => {
+            if (c.lessons) {
+                /* předmět s konkrétními hodinami: jen ty, které připadají na aktuální týden */
+                lessonsOf(c)
+                    .filter((l) => weekOf(l.dateObj) === week)
+                    .forEach((l) => {
+                        const [from, to] = l.time.split('–');
+                        cols[(l.dateObj.getDay() + 6) % 7].push({ slot: { kind: l.kind, day: 0, from, to, room: l.room, parity: null }, course: c, lesson: l });
+                    });
+                return;
+            }
             c.schedule.forEach((s) => {
                 const slot = parseSlot(s);
                 if (slot && slot.day >= 0) cols[slot.day].push({ slot, course: c });
-            })
-        );
+            });
+        });
         el.innerHTML = cols
             .map((items, i) => {
                 items.sort((a, b) => a.slot.from.localeCompare(b.slot.from, 'cs', { numeric: true }));
                 const slots = items
-                    .map(({ slot, course }) => {
+                    .map(({ slot, course, lesson }) => {
                         const teaching = week >= 1 && week <= window.SEMESTER.weeks;
                         const holiday = teaching ? holidayOn(slotDate(slot, week)) : null;
                         const off = teaching && (!slotRunsInWeek(slot, week) || holiday);
@@ -128,7 +152,7 @@
                                    title="${course.code}${reason}">
                             <div class="slot-time">${slot.from}–${slot.to}</div>
                             <div>${course.name}</div>
-                            <div class="slot-room">${slot.kind} · ${slot.room}${parity}</div>
+                            <div class="slot-room">${slot.kind} · ${slot.room}${parity}${lesson ? ' · ' + lesson.title : ''}</div>
                         </a>`;
                     })
                     .join('');
@@ -151,14 +175,21 @@
         const current = weekOf(today());
         const events = allEvents([course]);
         const slots = course.schedule.map(parseSlot).filter((s) => s && s.day >= 0);
+        const lessons = lessonsOf(course);
         const rows = [];
         for (let w = 1; w <= weeks; w++) {
             const from = weekStart(w);
             const to = addDays(from, 6);
             const idxs = topicIndicesForWeek(course, w);
             const topic = idxs.length > 0;
-            const holidays = [...new Set(slots.filter((s) => slotRunsInWeek(s, w)).map((s) => holidayOn(slotDate(s, w))).filter(Boolean))];
-            const topicCell = topic
+            const wLessons = lessons.filter((l) => weekOf(l.dateObj) === w);
+            const holidays = course.lessons
+                ? holidaysInWeek(w)
+                : [...new Set(slots.filter((s) => slotRunsInWeek(s, w)).map((s) => holidayOn(slotDate(s, w))).filter(Boolean))];
+            const lessonLines = wLessons.map((l) => `<span class="text-muted small">${fmtDate(l.dateObj, true)} ${l.time} · ${l.kind} · ${l.room}</span> ${l.title}`);
+            const topicCell = wLessons.length
+                ? lessonLines.concat(idxs.map((i) => `<a href="#topic-${i + 1}">${i + 1}. ${course.topics[i]}</a>`)).join('<br>')
+                : topic
                 ? idxs.map((i) => `<a href="#topic-${i + 1}">${i + 1}. ${course.topics[i]}</a>`).join('<br>')
                 : `<span class="text-muted">${holidays.length ? holidays.join(', ') + ' — výuka odpadá' : '—'}</span>`;
             const wEvents = events

@@ -1,13 +1,13 @@
 # 1BP441 Pojišťovnictví a Insurtech
 
-> Zdroj: `sylabus.txt` (InSIS). Oficiální harmonogram od vyučujících zatím nemám, proto je **rozvržení témat do týdnů můj návrh** podle rozvrhu (dvojitá přednáška v lichých týdnech, cvičení v sudých). Klíčové pojmy jsou mimo sylabus **návrh** podle základní literatury (Ducháčková, Daňhel 2012; *The InsurTECH Book* 2018) a platné regulace (Solvency II, IDD, DORA, AI Act). Upřesnit podle přednášek.
+> Zdroj: `sylabus.txt` (InSIS). Harmonogram hodin je podle oficiálního rozpisu od vyučujících; **přiřazení témat ze sylabu k hodinám je můj odhad**. Klíčové pojmy jsou mimo sylabus **návrh** podle základní literatury (Ducháčková, Daňhel 2012; *The InsurTECH Book* 2018) a platné regulace (Solvency II, IDD, DORA, AI Act). Upřesnit podle přednášek.
 
 ## Přehled
 
 | | |
 |---|---|
 | Kredity | 4 ECTS · 2/1 (přednáška/cvičení) |
-| Rozvrh | Čt 11:00–14:15 NB 177A — 2 přednášky v lichých týdnech · Čt 12:45–14:15 NB 177A — cvičení v sudých týdnech |
+| Rozvrh | Čt, nepravidelně: 11:00–12:30 přednáška + 12:45–14:15 přednáška nebo cvičení (viz harmonogram) · NB 177B do 22. 10., od 29. 10. NB 177A |
 | Vyučující | prof. Ing. Eva Ducháčková, CSc. (**ED**, garant, přednášející) · Ing. Petra Vojtíková Tisová, Ph.D. (**PVT**, cvičící, přednášející) |
 | Jazyk | čeština |
 | Ukončení | zkouška = semestrální práce + prezentace + průběžný test + závěrečný test |
@@ -27,27 +27,47 @@ Známky: 1 = 90–100 % · 2 = 75–89 % · 3 = 60–74 % · 4 = pod 60 %
 
 Testy dohromady dávají 80 % hodnocení. Sylabus neuvádí počet průběžných testů ani jejich rozsah; z počtu hodin přípravy nelze rozsah odvodit.
 
-Zatím neznámé: termín a rozsah průběžného testu, termíny závěrečného testu, zadání a termín semestrální práce a prezentace, forma testů (uzavřené / otevřené otázky), minimum z jednotlivých částí.
+**1. průběžný test — čt 29. 10. 2026, max 40 b., 11 úloh** (zadání zpětně od studenta). Byl převážně výpočetní a procesní, ne o Insurtechu:
 
-## Harmonogram a témata
-
-**Návrh** podle rozvrhu (Čt, liché týdny 2 přednášky = 2 témata). Inovační týden (5. 11.) výuka odpadá. Číslo tématu = sekce `#topic-N` = `subtopic` v quizu.
-
-| Týden | Datum | Přednáška (téma) | Cvičení |
+| Úloha | Body | Co se ptalo | Téma |
 |---|---|---|---|
-| 1 | 24. 9. | **1** Principy fungování pojištění a pojistných produktů · **2** Konstrukce pojistných produktů | |
-| 2 | 1. 10. | | cvičení |
-| 3 | 8. 10. | **3** Procesy v pojišťovně · **4** Typy pojišťoven | |
-| 4 | 15. 10. | | cvičení |
-| 5 | 22. 10. | **5** Regulatorní přístupy v rámci pojišťovnictví · **6** Analýza situace na pojistném trhu | |
-| 6 | 29. 10. | | cvičení |
-| 7 | 5. 11. | *inovační týden — výuka odpadá* | |
-| 8 | 12. 11. | | cvičení |
-| 9 | 19. 11. | **7** Outsourcing · **8** Umělá inteligence v pojišťovnictví a její podoby | |
-| 10 | 26. 11. | | cvičení |
-| 11 | 3. 12. | **9** P-2-P pojišťovny a jejich role na pojistných trzích, mikropojištění · **10** Inovace v rámci distribuce pojistných produktů | |
-| 12 | 10. 12. | | cvičení |
-| 13 | 17. 12. | **11** Inovace v konstrukci pojistných produktů · **12** Uplatnění Insurtech v rámci procesů spojených s provozováním pojištění | |
+| 1 | 6 | UPR k 31. 12. u ročního pojistného od 1. 10. | 2 |
+| 2 | 6 | doplnění kumulativního trojúhelníku chain ladder (vážený průměr) | 2 |
+| 3 | 6 | IBNR rezerva z doplněného trojúhelníku nahlášených škod | 2 |
+| 4 | 2 | škodní procento (zasloužené pojistné, vyplacené škody, škodní rezerva) | 3 |
+| 5 | 2 | interpretace součtu poslední diagonály trojúhelníku vyplacených škod | 2 |
+| 6 | 4 | dva produkty životního a dva neživotního pojištění | 1 |
+| 7 | 4 | dva ekonomické a dva neekonomické předpoklady životního cash-flow modelu | 2 |
+| 8 | 2 | rozdíl trojúhelníku nahlášených a vyplacených škod | 2 |
+| 9 | 4 | význam IBNR a RBNS | 2 |
+| 10 | 2 | co je zajištění a motivace k němu | 3 |
+| 11 | 2 | příčina zpoždění ve vyřízení škodní události | 3 |
+
+Zadání s řešením: `prubezny_test_1.md`.
+
+Zatím neznámé: termín a rozsah dalšího průběžného testu, termíny závěrečného testu, zadání a termín semestrální práce a prezentace, forma testů (uzavřené / otevřené otázky), minimum z jednotlivých částí.
+
+## Harmonogram
+
+Oficiální harmonogram od vyučujících (aktualizovaný, číslování týdnů v tabulce je kalendářní od 21. 9.; vyučující číslují od 12. 11. o jedna méně). Místnosti: **NB 177B** 24. 9., 1. 10., 8. 10., 15. 10., 22. 10.; **NB 177A** od 29. 10. Zdroj: harmonogram od vyučujících, `lessons` v `data/courses.json`.
+
+| Týden | Datum | Typ | Čas | Místnost | Téma |
+|---|---|---|---|---|---|
+| 1 | 24. 9. | cvičení | 12:45–14:15 | NB 177B | Základy pojišťovnictví |
+| 2 | 1. 10. | cvičení | 12:45–14:15 | NB 177B | Prezentace studentů |
+| 3 | 8. 10. | přednáška ×2 | 11:00–12:30, 12:45–14:15 | NB 177B | EY |
+| 4 | 15. 10. | přednáška ×2 | 11:00–12:30, 12:45–14:15 | NB 177B | EY |
+| 5 | 22. 10. | cvičení | 12:45–14:15 | NB 177B | EY |
+| 6 | 29. 10. | cvičení | 12:45–14:15 | NB 177A | EY (1. průběžný test) |
+| 7 | 5. 11. | — | | | inovační týden, výuka odpadá |
+| 8 | 12. 11. | cvičení | 12:45–14:15 | NB 177A | Prezentace studentů |
+| 9 | 19. 11. | přednáška ×2 | 11:00–12:30 / 12:45–14:15 | NB 177A | Horová – Insurtech / Prezentace studentů |
+| 10 | 26. 11. | cvičení | 12:45–14:15 | NB 177A | Prezentace studentů |
+| 11 | 3. 12. | přednáška ×2 | 11:00–12:30, 12:45–14:15 | NB 177A | Fadrhonc – AI v pojišťovnictví |
+| 12 | 10. 12. | cvičení | 12:45–14:15 | NB 177A | Prezentace studentů |
+| 13 | 17. 12. | přednáška ×2 | 11:00–12:30, 12:45–14:15 | NB 177A | Insurtech |
+
+**Vazba na témata (můj odhad, nepotvrzeno):** přednášky EY (8.–29. 10.) odpovídají tématům 1–3 (základy, rezervy a trojúhelníky, procesy — látka 1. průběžného testu); Horová a 17. 12. patří k blokům Insurtech (7, 9–12), Fadrhonc k tématu 8 (AI). Témata 4–6 (typy pojišťoven, regulace, trh) v harmonogramu zatím nemají vlastní hodinu. Číslo tématu = sekce `#topic-N` = `subtopic` v quizu; `topicWeeks` se proto pro tento předmět nepoužívá.
 
 ## Témata a klíčové pojmy
 
@@ -57,8 +77,8 @@ Text tématu je ze sylabu; klíčové pojmy jsou **návrh**.
 |---|---|---|---|
 | **Blok 1** | | **Principy pojištění** | |
 | 1 | Principy pojištění | Principy fungování pojištění a pojistných produktů | riziko a jeho přenos, pojistitelné riziko (nahodilost, odhadnutelnost, nezávislost, nevelká ekonomická škoda vůči rezervě), zákon velkých čísel, vyrovnání rizika v kolektivu a v čase, solidarita vs. ekvivalence, pojistný zájem, pojistná událost, pojistné plnění, obnosové vs. škodové pojištění, životní vs. neživotní pojištění, zákonné / povinné / smluvní pojištění, morální hazard, nepříznivý výběr (adverse selection), informační asymetrie |
-| 2 | Konstrukce produktů | Konstrukce pojistných produktů | netto a brutto pojistné, riziková přirážka, správní náklady a provize, pojistná matematika (pravděpodobnost × výše škody), technické rezervy (rezerva na nezasloužené pojistné, na pojistná plnění – RBNS, IBNR, životní rezerva), pojistné podmínky, pojistná částka, podpojištění a pravidlo proporcionality, spoluúčast (integrální, excedentní, procentní), limity, výluky, bonus/malus, segmentace a tarifní faktory, cenotvorba (pricing) |
-| 3 | Procesy v pojišťovně | Procesy v pojišťovně | hodnotový řetězec pojišťovny: vývoj produktu → distribuce → upisování (underwriting) → správa smluv → likvidace pojistných událostí (claims handling) → zajištění → investování; škodní poměr (loss ratio), nákladový poměr (expense ratio), kombinovaný ukazatel (combined ratio), prevence a řízení rizik, pojistné podvody, back office vs. front office |
+| 2 | Konstrukce produktů | Konstrukce pojistných produktů | netto a brutto pojistné, riziková přirážka, správní náklady a provize, pojistná matematika (pravděpodobnost × výše škody), technické rezervy (rezerva na nezasloužené pojistné – UPR a výpočet pro rata, na pojistná plnění – RBNS, IBNR, životní rezerva), trojúhelníky škod (kumulativní, vyplacené × nahlášené, poslední diagonála), chain ladder (vývojové faktory, vážený průměr, ultimate, IBNR = ultimate − nahlášené), životní cash-flow model (ekonomické × neekonomické předpoklady), pojistné podmínky, pojistná částka, podpojištění a pravidlo proporcionality, spoluúčast (integrální, excedentní, procentní), limity, výluky, bonus/malus, segmentace a tarifní faktory, cenotvorba (pricing) |
+| 3 | Procesy v pojišťovně | Procesy v pojišťovně | hodnotový řetězec pojišťovny: vývoj produktu → distribuce → upisování (underwriting) → správa smluv → likvidace pojistných událostí (claims handling) → zajištění → investování; škodní poměr / škodní procento (loss ratio; vč. škodní rezervy), zpoždění vyřízení škody, zajištění a jeho motivace, nákladový poměr (expense ratio), kombinovaný ukazatel (combined ratio), prevence a řízení rizik, pojistné podvody, back office vs. front office |
 | **Blok 2** | | **Regulace pojišťovnictví a pojistný trh** | |
 | 4 | Typy pojišťoven | Typy pojišťoven | akciová pojišťovna, vzájemná pojišťovna (mutual), družstevní pojišťovna, captive pojišťovna, univerzální vs. specializovaná (životní / neživotní), zajišťovna, pobočka zahraniční pojišťovny, jednotná licence EU, bankopojištění (bancassurance), finanční skupiny a konglomeráty, managing general agent (MGA) |
 | 5 | Regulace | Regulatorní přístupy v rámci pojišťovnictví | důvody regulace (ochrana spotřebitele, systémová stabilita, informační asymetrie), materiální vs. normativní regulace, Solvency II (tři pilíře: kapitálové požadavky SCR a MCR, ORSA a řídicí systém, uveřejňování SFCR), regulace distribuce IDD (v ČR zákon o distribuci pojištění), zákon o pojišťovnictví, ČNB jako dohled, EIOPA, IFRS 17, DORA, AI Act, GDPR; regulatorní sandbox a inovační hub |
@@ -98,13 +118,15 @@ Přiřazení je studijní návrh, nikoli potvrzený rozsah testů.
 
 - **Principy jako měřítko:** u každé inovace umět říct, jestli zachovává zákon velkých čísel, pojistitelnost a vyrovnání rizika — a co se stane s morálním hazardem a nepříznivým výběrem (např. personalizace ceny a telematika snižují solidaritu)
 - **Pojmové dvojice na test:** obnosové × škodové · netto × brutto pojistné · RBNS × IBNR · akciová × vzájemná × captive · SCR × MCR · penetrace × hustota · škodní × kombinovaný ukazatel · P2P × mikropojištění · parametrické × škodové plnění
-- **Jednoduché výpočty (návrh):** pojistné plnění při podpojištění a spoluúčasti, netto pojistné z pravděpodobnosti a škody, škodní a kombinovaný ukazatel, penetrace a hustota
+- **Výpočty z 1. průběžného testu:** UPR (pro rata temporis), chain ladder s váženým průměrem vývojových faktorů, ultimate a IBNR = ultimate − poslední diagonála, škodní procento = (vyplacené + škodní rezerva) / zasloužené pojistné; škodní a kombinovaný ukazatel
+- **Další možné výpočty (návrh):** pojistné plnění při podpojištění a spoluúčasti, netto pojistné z pravděpodobnosti a škody, penetrace a hustota
+- **Slovní otázky z testu:** produkty životní × neživotní, předpoklady životního CF modelu (ekonomické × neekonomické), nahlášené × vyplacené škody, RBNS × IBNR, zajištění a jeho motivace, příčiny zpoždění vyřízení škody
 - **Regulace u Insurtech:** outsourcing nezbavuje odpovědnosti, IDD platí i pro online a embedded prodej, AI Act a GDPR u automatizovaného upisování
 - **Aktuální čísla trhu** (ČAP, ČNB, EIOPA) vždy s rokem
 
 ## Stav podkladů a studijní zátěž
 
 - Sylabus je uložen v podobě dodané uživatelem pro ZS 2026/2027.
-- Témata 1–3 mají rozpracované poznámky z literatury, bez prezentací. U témat 4–12 je zatím osnova.
+- Témata 1–3 mají rozpracované poznámky z literatury, bez prezentací; po 1. průběžném testu doplněno UPR, trojúhelníky, chain ladder, škodní procento a životní CF model (vykládáno podle zadání testu, ne podle přednášek). U témat 4–12 je zatím osnova.
 - Celková zátěž je 104 h: přednášky 26 h, samostudium 23 h, práce 10 h, prezentace či obhajoba 10 h, příprava na průběžné testy 20 h a na závěrečný test 15 h.
-- Po dodání prezentací a oficiálního harmonogramu je potřeba upřesnit poznámky i přiřazení témat k týdnům.
+- Po dodání prezentací (EY, Horová, Fadrhonc) je potřeba upřesnit poznámky i přiřazení témat k hodinám.

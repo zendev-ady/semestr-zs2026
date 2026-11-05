@@ -35,7 +35,7 @@ Pokud není jasné, na čem pracovat:
 Vstup: `podklady/<KÓD>/sylabus.txt` (text zkopírovaný z InSIS — neměnit), případně oficiální harmonogram od vyučujících (.doc/.pdf). **Harmonogram od vyučujících má přednost** před pořadím v InSIS. `.doc` převeď přes `soffice --headless --convert-to txt:Text --outdir <scratchpad> soubor.doc`.
 
 1. Napiš `podklady/<KÓD>/studijni_plan.md` podle vzoru `podklady/1MT461/studijni_plan.md`: přehled, hodnocení, tabulka témat (zkratka · text ze sylabu · klíčové pojmy), výsledky učení → témata, literatura, na co se zaměřit. Klíčové pojmy, které nejsou ze sylabu, označ jako návrh. Pak `python3 quiz.py export`, aby se plán objevil na webu.
-2. V `data/courses.json` doplň `grading` a `topics` (krátké názvy; index + 1 = `#topic-N` = `subtopic` v quizu). Pokud výuka odpadá (svátky, inovační týden), doplň `topicWeeks` = týden výuky pro každé téma; jinak platí téma N = týden N. Celoškolní volna patří do `holidays` v `data/semester.json`. Po změně JSON spusť `python3 quiz.py export`.
+2. V `data/courses.json` doplň `grading` a `topics` (krátké názvy; index + 1 = `#topic-N` = `subtopic` v quizu). Pokud výuka odpadá (svátky, inovační týden), doplň `topicWeeks` = týden výuky pro každé téma; jinak platí téma N = týden N. Nepravidelný rozvrh (hosté, měnící se místnosti) zapiš do `lessons` (viz `data/README.md`) a `topicWeeks` vynech. Celoškolní volna patří do `holidays` v `data/semester.json`. Po změně JSON spusť `python3 quiz.py export`.
 3. V `courses/<slug>.html` nahraď pod `<h1>` „zkouška“ textem z `grading`.
 4. Na co sylabus neodpovídá (termíny testů, rozsah průběžného testu), napiš uživateli jako otevřené otázky.
 
