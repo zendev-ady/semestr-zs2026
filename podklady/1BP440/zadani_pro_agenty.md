@@ -1,5 +1,7 @@
 # Zadání pro přípravu poznámek — 1BP440
 
+> **Archiv:** 9. 11. 2026 byly poznámky a otázky přepsány podle skutečných slajdů (4 přednášky, `topic-1..4`). Níže původní zadání z 1. 10. 2026 (externí rešerše, 12 témat); stav stránky už mu neodpovídá. Výstupy v `priprava/` jsou jen zdroj doplňků.
+
 Stav: dokončeno 1. 10. 2026. Všech 12 témat je zkontrolováno a vloženo do stránky předmětu; 96 kvízových otázek (8 na téma) je vloženo do databáze a exportováno pro web. Použitý model GPT-6.1 Sol, reasoning medium. Zdrojové reporty a souhrnný audit kvízu jsou v `priprava/`.
 
 ## Cíl a rozsah

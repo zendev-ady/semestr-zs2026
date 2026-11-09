@@ -133,32 +133,16 @@ window.COURSES = [
     ],
     "grading": "Průběžný online test 11. 11. (20 %) · Semestrální práce (30 %) · Závěrečný online test (50 %) · min. 60 bodů",
     "topics": [
-      "Finanční trhy, banky a instituce",
-      "Fintech",
-      "CeFi: regulace a rizika",
-      "Kryptoměny a blockchain",
-      "DeFi ekosystém",
-      "DeFi: regulace a rizika",
-      "Udržitelné finanční trhy a instrumenty",
-      "Veřejný sektor v udržitelných financích",
-      "Udržitelné finance: regulace a rizika",
-      "ESG",
-      "ESG: regulace a rizika",
-      "Trendy v ESG"
+      "Banky, fintech a finanční instituce",
+      "Decentralizované finance",
+      "Udržitelné finance a ESG",
+      "ESG regulace bank (EY)"
     ],
     "topicWeeks": [
-      1,
       2,
       3,
       4,
-      5,
-      8,
-      9,
-      10,
-      11,
-      12,
-      13,
-      13
+      5
     ],
     "events": [
       {
@@ -169,7 +153,7 @@ window.COURSES = [
       {
         "date": "2026-11-11",
         "type": "test",
-        "title": "Průběžný online test 11:00–11:20, NB177B (první polovina semestru, 20 %)"
+        "title": "Průběžný online test 11:00–11:20, NB177B (přednášky 2–5A, 30. 9.–21. 10.; 20 %)"
       },
       {
         "date": "2026-11-30",

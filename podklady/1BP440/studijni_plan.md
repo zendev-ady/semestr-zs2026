@@ -39,7 +39,23 @@ Zadání doplněno podle informace od studenta dne 30. 9. 2026.
 
 Šablony zatím nejsou v repozitáři. Zbývá upřesnit rozsah dokumentu Word, složení a rozdělení práce v týmu a zda 30 minut zahrnuje diskusi. Samostatné datum vystoupení zatím není potvrzené.
 
-## Harmonogram a témata
+## Skutečné přednášky a průběžný test (stav 9. 11. 2026)
+
+Poznámky na webu (`#topic-N`) sledují od 9. 11. **skutečné přednášky podle slajdů**, ne 12 témat ze sylabu; přednášky jdou rychleji a každá pokrývá celou oblast přehledově. Slajdy jsou v `podklady/1BP440/*.pdf`. Další přednášky přibudou jako topic-5+.
+
+| Téma | Přednáška | Datum | Vyučující | Soubor |
+|---|---|---|---|---|
+| – | 1 Úvod, organizace | 23. 9. | Teplý, Jílková | slidy nejsou, jen sekce Organizace |
+| 1 | 2 Banky, fintech a finanční instituce | 30. 9. | prof. Teplý | `1BP440_P02A-2026 Banky a fintech final.pdf` (101 s.) |
+| 2 | 3A Decentralizované finance | 7. 10. | prof. Teplý | `1BP440 P03A-2026 DEFI.pdf` (92 s.) |
+| 3 | 4A Udržitelné finance a ESG | 14. 10. | prof. Teplý | `1BP440 P04-2026 Udržitelnost a ESG.pdf` (100 s.) |
+| 4 | 5A Přehled klíčových ESG regulací bank | 21. 10. | EY (Laštovička, Líkař) | `1BP440_P05A-2026 ESG regulace bank (EY).pdf` (57 s.) + `EY CSRD Nefinanční reporty bank 2025.pdf` (13 s.) |
+
+**Průběžný test 11. 11. 2026, 11:00–11:20, NB177B, Moodle:** látka = přednášky 2–5A. Formát (20 otázek ABCD, 1 správná, 1 bod, bez minima, bez opakování, základní zdroj prezentace včetně hostujících) odpovídá prezentaci `1BP440_P06B-2025 Informace o testu.pdf` (loňský test 29. 10. 2025); student potvrdil 9. 11. 2026, že 20 otázek ABCD platí i letos. Na webu sekce „Před testem 11. 11.“ shrnuje číslované otázky ze slajdů a klíčová čísla.
+
+Otevřené: zda test zahrnuje i přednášku 1 (organizace); zadání úkolu z přednášky EY (ESG cíle české banky bez zveřejněných cílů) není zatím zařazeno mezi hodnocené složky.
+
+## Harmonogram a témata podle sylabu (původní návrh, přednášky se od něj liší)
 
 Výuka ve středu. Odpadá 6. týden (28. 10., státní svátek) a 7. týden (4. 11., inovační týden) → **11 výukových týdnů na 12 témat**. Návrh: témata 11 a 12 (ESG: regulace a trendy) spolu ve 13. týdnu. Číslo tématu = `#topic-N` = `subtopic` v quizu. Názvy témat 1–4 podle úvodní prezentace (liší se od InSIS: banky patří do tématu 1, fintech je samostatné téma 2).
 
