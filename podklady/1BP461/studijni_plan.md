@@ -1,86 +1,101 @@
 # 1BP461 Case Studies in Capital Markets and Banking
 
-> Zdroj: `sylabus.txt` (InSIS). Oficiální harmonogram od vyučujícího zatím není — rozvržení témat do týdnů je **můj návrh** podle volen. Sekce **Klíčové pojmy** nad rámec sylabu jsou návrh podle literatury (Witzany, Hull) — upřesnit podle přednášek. Poznámky jsou **česky** s anglickými pojmy v závorce, otázky do quizu **anglicky** (výuka i test jsou anglicky).
+> Zdroje: materiály vyučujícího nahrané do InSIS (`1BP453_00…04_*.pdf`, `Lecture_*.R`, `1BP461_Homework_01_2026.pdf`) a `sylabus.txt`. Poznámky jsou **česky** s anglickými pojmy v závorce, otázky do quizu **anglicky** (výuka i test jsou anglicky).
+
+## ⚠️ Sylabus ≠ skutečná výuka
+
+Sylabus v InSIS slibuje teorii derivátů a řízení rizika podle Witzanyho (swapy, CDS, exotické opce, VaR/ES). **Skutečný předmět je kvantitativní správa portfolia v R.** Slidy mají v záhlaví „Quantitative Portfolio Management“ a soubory se jmenují `1BP453_*`, takže je vyučující převzal z jiného kurzu. Řídíme se osnovou z úvodní prezentace (`1BP453_00`, s. 4), ne sylabem. Dřívější verze poznámek (psaná ze sylabu a literatury) zůstává v gitu (commit `d44e18b` a starší) a použije se jako zdroj, až budou slidy k derivátům.
 
 ## Přehled
 
 | | |
 |---|---|
-| Kredity | 4 ECTS · v InSIS 0/2, ve skutečnosti jen přednášky (cvičení nejsou — 1. hodina 22. 9.) |
-| Rozvrh | Út 14:30–16:00 NB B (přednáška) |
-| Vyučující | Ing. Milan Fičura, Ph.D. (přednášející, garant, zkoušející) |
+| Kredity | 4 ECTS, jen přednášky (Út 14:30–16:00 NB B) |
+| Vyučující | Ing. Milan Fičura, Ph.D. (milan.ficura@vse.cz) |
 | Jazyk | angličtina |
-| Ukončení | zkouška = semestrální práce + závěrečný test |
-| Navazuje na | Kapitálové trhy II, Finanční deriváty I |
-
-**O čem to je:** praktická aplikace modelů výnosnosti a rizika (akcie, dluhopisy, deriváty) na reálná data — CAPM/APT/faktorové modely, výnosová křivka, oceňování derivátů, contango/backwardation, stochastické procesy cen a Value at Risk. Důraz na „case studies“ → počítání na datech v **R (RStudio)** — instalace a úvod do R na 1. přednášce 22. 9.
+| Nástroj | R + RStudio (balíčky tidyverse, tidyquant, MASS, pracma) |
+| Ukončení | semestrální projekty (50 %) + závěrečný test (50 %) |
 
 ## Hodnocení
 
-| Část | Váha | Příprava podle sylabu |
+| Část | Váha |
+|---|---|
+| Course projects (semestrální projekty) | **50 %** |
+| Final test (závěrečný test) | **50 %** |
+
+Známky: 1 = 90–100 % · 2 = 75–89 % · 3 = 60–74 % · 4+ = 50–59 % (možná oprava) · 4 = 0–49 % (bez opravy). Slajd píše „projects“ v množném čísle, takže úkolů bude nejspíš víc než jeden.
+
+## Osnova z úvodní prezentace (`1BP453_00`, s. 4)
+
+1. **Introduction to R** (2 přednášky): datové typy, vektory, podmínky a cykly, funkce, matice, listy, grafy, balíčky
+2. **Stock markets** (4): MPT, CAPM, faktorové modely, tržní riziková prémie, equity premium puzzle, aktivní × pasivní investování, EMH, fundamentální a technická analýza, testy efektivity, anomálie, statistická arbitráž, global macro
+3. **Bond markets** (1): rizika, durace a konvexita, časová struktura, modely výnosové křivky, likviditní prémie, forwardové sazby, riding the yield curve
+4. **Foreign exchange markets** (1): měnové riziko, absolutní a relativní PPP, reálný kurz, CIP a UIP, faktorové modely kurzů
+5. **Futures markets** (1): forward × futures, zajištění akcií a dluhopisů, rovnováha spekulantů a arbitražérů, contango × normal backwardation
+6. **Option markets** (4): put-call parita, Black–Scholes, binomické stromy, Monte Carlo, metoda konečných diferencí, greeks, hedging, opční strategie, implikovaná volatilita, volatility surface, model-free volatilita, volatility risk premium, CEV, IVF, Heston, SABR, exotické opce
+
+## Co už je odpřednášené (stav k 10. 11. 2026)
+
+| Datum v InSIS | Podklad | Téma v poznámkách |
 |---|---|---|
-| Semestrální práce | **50 %** | 26 h |
-| Závěrečný test | **50 %** | 26 h |
+| 24. 9. | `1BP453_00_Course_Introduction`, `1BP453_01_Introduction_to_R` | 1 |
+| 6. 10. | `Lecture_01_Script_01–06` (Basics, Vectors, Cycles, Functions, Matrices, Lists) | 1 |
+| 13. 10. | `1BP453_02_R_Packages` | 2 |
+| 14. 10. | `Lecture_02_Script_01–03` (Tidyverse, Tidyquant, Case Study SP500 Crashes) | 2 |
+| 20. 10. | `1BP453_03_Portfolio_Optimization` | 3 |
+| 27. 10. | `1BP453_04_Factor_Models` (skripty k přednášce zatím chybí) | 4 |
+| 10. 11. | `Lecture_03_Script_01–02` (Portfolio Optimization ETF, + Constrained) a **zadání Homework 1** | 3 |
 
-Známky: 1 = 90–100 % · 2 = 75–89 % · 3 = 60–74 % · 4 = pod 60 %
-
-Termíny: zatím neznámé (zadání a odevzdání semestrální práce, termíny závěrečného testu, forma testu).
+Data jsou data nahrání podkladů v InSIS, ne nutně dny přednášek.
 
 ## Harmonogram a témata
 
-Výuka v úterý. Odpadá: 7. týden (3. 11., inovační týden) a 9. týden (17. 11., státní svátek) → 11 přednášek na 10 témat. **Návrh** rozvržení (téma N = týden N do 6. týdne, pak posun), 13. týden rezerva / opakování. Číslo tématu = `#topic-N` = `subtopic` v quizu.
+Výuka v úterý. Odpadá 7. týden (3. 11., inovační týden) a 9. týden (17. 11., státní svátek). Týdny témat 5–12 jsou **odhad** (zbývají týdny 8, 10, 11, 12, 13), až bude oficiální rozvrh, upravit `topicWeeks` v `data/courses.json`.
 
-| Týden | Datum | Téma |
-|---|---|---|
-| 1 | 22. 9. | **1** Capital Markets Overview |
-| 2 | 29. 9. | **2** Portfolio Theory, CAPM & APT |
-| 3 | 6. 10. | **3** Market Efficiency |
-| 4 | 13. 10. | **4** Bond Markets & Yield Curve |
-| 5 | 20. 10. | **5** Forwards & Futures Hedging |
-| 6 | 27. 10. | **6** Contango & Backwardation |
-| 7 | 3. 11. | *inovační týden — výuka odpadá* |
-| 8 | 10. 11. | **7** Swaps & CDS |
-| 9 | 17. 11. | *státní svátek — výuka odpadá* |
-| 10 | 24. 11. | **8** Options Pricing & Greeks |
-| 11 | 1. 12. | **9** Asset Price Dynamics & Exotics |
-| 12 | 8. 12. | **10** Market Risk, VaR & ES |
-| 13 | 15. 12. | *rezerva / opakování (návrh)* |
-
-## Témata ze sylabu a klíčové pojmy
-
-| # | Zkratka | Text ze sylabu | Klíčové pojmy |
+| # | Zkratka | Podklady | Klíčové pojmy |
 |---|---|---|---|
-| 1 | Capital Markets Overview | typy kapitálových trhů, instrumenty, funkce, subjekty, postavení bank a pojišťoven | *(návrh)* primary vs. secondary market, money vs. capital market, exchange vs. OTC, market participants (issuers, investors, intermediaries), bank vs. insurance balance sheet, disintermediation |
-| 2 | Portfolio Theory, CAPM & APT | akciové trhy, teorie portfolia, CAPM, APT, faktorové modely, tržní riziková prémie, equity premium puzzle | *(návrh)* mean-variance, efficient frontier, diversification, systematic vs. idiosyncratic risk, beta, SML/CML, Sharpe ratio, alpha, Fama–French 3/5-factor, market risk premium estimation |
-| 3 | Market Efficiency | aktivní vs. pasivní investování, EMH, fundamentální a technická analýza, empirické testy efektivnosti, anomálie | *(návrh)* weak/semi-strong/strong form, random walk, event study, abnormal returns, momentum, size/value effect, January effect, joint hypothesis problem |
-| 4 | Bond Markets & Yield Curve | dluhopisové trhy, rizika, durace a konvexita, modely výnosové křivky, likviditní prémie, forwardové sazby | *(návrh)* YTM, spot/zero rates, bootstrapping, Macaulay/modified duration, convexity, DV01, Nelson–Siegel, expectations vs. liquidity preference theory, credit/interest-rate/reinvestment risk |
-| 5 | Forwards & Futures Hedging | forwardové a futures trhy, rozdíl forward × futures, zajištění akciového a dluhopisového portfolia futures | *(návrh)* cost of carry, marking to market, margin, basis risk, minimum-variance hedge ratio, beta hedging with index futures, duration-based hedging, CTD bond |
-| 6 | Contango & Backwardation | rovnováha spekulanta a arbitražéra, rovnovážná cena futures, normální vs. invertovaná křivka, contango a backwardation | *(návrh)* Keynes normal backwardation, hedging pressure, convenience yield, storage costs, roll yield, expected spot vs. futures price |
-| 7 | Swaps & CDS | swapové trhy, úrokové, měnové a equity swapy, CDS | *(návrh)* IRS valuation (bond vs. FRA approach), swap rate, currency swap, equity swap, CDS spread, hazard rate, recovery rate |
-| 8 | Options Pricing & Greeks | put-call parita, Black–Scholes, binomické stromy, Monte Carlo, greeks, hedging opčního portfolia, opční strategie | *(návrh)* delta/gamma/vega/theta/rho, delta hedging, risk-neutral valuation, CRR tree, spreads, straddle, strangle, protective put, covered call |
-| 9 | Asset Price Dynamics & Exotics | dynamika cen, volatility smile, alternativní stochastické procesy, exotické opce, dynamika úrokových sazeb | *(návrh)* GBM, implied volatility, smile/skew, jump diffusion, local vol, barrier/Asian/lookback options, Vasicek, CIR, Hull–White, mean reversion |
-| 10 | Market Risk, VaR & ES | modelování cen, stochastická volatilita a korelace, řízení tržního rizika, VaR a ES různými přístupy | *(návrh)* historical simulation, parametric (variance-covariance), Monte Carlo VaR, EWMA, GARCH(1,1), Heston, correlation modelling, backtesting (Kupiec), Expected Shortfall, Basel/FRTB |
+| 1 | Úvod do R | slidy 01, skripty L1 | proměnné, vektory a sekvence, statistické funkce, `if`/`for`, vlastní funkce, matice a maticové operace, simulace náhodné procházky, lineární regrese přes matice, listy |
+| 2 | Tidyverse a tidyquant | slidy 02, skripty L2 | tibble, dplyr (`filter`, `arrange`, `select`, `mutate`, `group_by`, `summarize`), tidyr (`gather`, `spread`), `tq_get`, OHLCV, dividendy a splity, upravené ceny, kumulativní výnosy, drawdown, log × prosté výnosy, case study S&P 500 po propadech |
+| 3 | Optimalizace portfolia a CAPM | slidy 03, skripty L3 | averze k riziku, equity premium puzzle, diverzifikace, MPT, CML, CAPM, SCL, SML, equal-weight, minimum-variance, tangency, Kelly, omezení vah, numerická optimalizace |
+| 4 | Faktorové modely | slidy 04 | faktorové prémie, factor-mimicking portfolia, rebalancing, Fama–MacBeth |
+| 5 | Efektivita trhu a strategie | *(zatím bez podkladů)* | aktivní × pasivní investování, EMH, fundamentální a technická analýza, anomálie, statistická arbitráž, global macro |
+| 6 | Dluhopisové trhy | *(zatím bez podkladů)* | durace, konvexita, časová struktura, modely výnosové křivky, likviditní prémie, forwardové sazby, riding the yield curve |
+| 7 | Devizové trhy | *(zatím bez podkladů)* | PPP, reálný kurz, CIP, UIP, faktorové modely kurzů |
+| 8 | Futures | *(zatím bez podkladů)* | forward × futures, hedging, contango, normal backwardation |
+| 9 | Oceňování opcí | *(zatím bez podkladů)* | put-call parita, Black–Scholes, binomické stromy, Monte Carlo, konečné diference |
+| 10 | Řecká písmena a hedging | *(zatím bez podkladů)* | greeks, hedging opčního portfolia, opční strategie |
+| 11 | Implikovaná volatilita a VRP | *(zatím bez podkladů)* | implikovaná volatilita, volatility surface, model-free volatilita, volatility risk premium |
+| 12 | Stochastické modely a exotické opce | *(zatím bez podkladů)* | CEV, IVF, Heston, SABR, exotické opce |
 
-## Výsledky učení → kde se testují
+## Úkol 1 (Homework 1)
 
-- modelovat výnosnost a riziko portfolia (akcie, dluhopisy, deriváty) → 2, 4, 10
-- oceňovat standardní i exotické deriváty (forwardy, swapy, opce) → 5, 7, 8, 9
-- zajistit portfolio proti různým rizikům → 4, 5, 8
-- modelovat dynamiku akcií, sazeb a volatility → 9, 10
+| | |
+|---|---|
+| Deadline | **15. 12. 2026** |
+| Kam | odevzdávárna v InSIS |
+| Jazyk | R |
+| Co odevzdat | **(A)** krátký report (Word/PDF): kroky analýzy, výsledky, diskuse a interpretace · **(B)** R kód. Obojí je povinné. |
+| Část 1 | mean-variance optimalizace 8 ETF (SPY, EFA, LQD, HYG, VNQ, REM, GLD, TLT): portfolia A equal-weight, B minimum-variance, C tangency, D constrained tangency (0 < w < 0,5); in-sample 2007/05–2023/12, out-sample 2024/01–2026/10, rf = 3 % p.a. |
+| Část 2 | čtyři dual-momentum strategie (Equity SPY/EFA, Credit LQD/HYG, Real estate VNQ/REM, Stress GLD/TLT, vždy proti BIL), pak stejná optimalizace A–D na výnosech strategií |
 
-## Literatura
+Návod krok za krokem je v poznámkách (`courses/case-studies.html#ukol-1`).
 
-- **Základní:** WITZANY, J. *Financial Derivatives. Valuation, Hedging and Risk Management.* Oeconomica, 2013 → terminologie a značení v poznámkách podle ní
-- Doporučená: WITZANY, J. *International Financial Markets.* 2012 (téma 1)
-- Doporučená: HULL, J. *Options, Futures and Other Derivatives.* 2015 (5–9)
-- Doporučená: HULL, J. *Risk Management and Financial Institutions.* 2012 (10)
-- Doporučená: BODIE, KANE, MARCUS. *Investments.* 2009 (2, 3, 4)
-- Doporučená: MISHKIN, EAKINS. *Financial Markets and Institutions.* 2018 (1)
-- Doporučená: WILMOTT, P. *Paul Wilmott on Quantitative Finance, Vol. 2.* 2006 (9)
-- Doporučená: RAČEV, S. *Financial Econometrics.* 2007 (10)
+## Literatura (slajd 3 úvodní prezentace)
 
-## Na co se zaměřit v podkladech
+- **Základní (RQ):** WITZANY, J. *Financial Derivatives. Valuation, Hedging and Risk Management.* 2013
+- Doporučená (RE): WITZANY, J. *International Financial Markets.* 2012 · HULL, J. *Options, Futures and Other Derivatives.* 2015 · HULL, J. *Risk Management and Financial Institutions.* 2012 · BODIE, KANE, MARCUS. *Investments.* 2009 · EAKINS, MISHKIN. *Financial Markets and Institutions.* 2018 · WILMOTT, P. *Paul Wilmott on Quantitative Finance, Vol. 2.* 2006 · RAČEV, S. *Financial Econometrics.* 2007
+- K úkolu 2: ANTONACCI, G. (2017) *Risk Premia Harvesting Through Dual Momentum* (odkaz v zadání, v podkladech není)
 
-- **Početní příklady:** beta a očekávaný výnos z CAPM, durace/konvexita a změna ceny dluhopisu, forwardová sazba z výnosové křivky, cena forwardu/futures (cost of carry), počet kontraktů pro zajištění (beta / durace), ocenění IRS, binomický strom, Black–Scholes, delta hedge, VaR (parametrický × historický) a ES
-- **Pojmové otázky:** formy EMH a anomálie, contango × backwardation a proč vzniká, forward × futures, smile a co vypovídá o rozdělení, VaR × ES (subaditivita)
-- **Semestrální práce** = polovina známky → jakmile bude zadání, uložit do `podklady/1BP461/`
+## Na co se zaměřit
+
+- **Test:** nejspíš R kód (co vypíše, doplnit funkci) a teorie z přednášek (MPT, CAPM, faktory). Forma zatím není známá.
+- **Početní příklady:** váhy minimum-variance a tangency portfolia, Sharpe ratio (anualizace $\sqrt{12}$), beta a očekávaný výnos z CAPM, převody log × prosté výnosy
+- **Projekt:** úkol 1 je hlavní hmatatelná práce v následujících týdnech
+
+## Otevřené otázky
+
+- Datum a forma závěrečného testu (teorie? R kód? obojí?)
+- Kolik bude „course projects“ a jak se dělí 50 %?
+- Zadání úkolu 1 má dvě nesrovnalosti: úvod Části 1 mluví o „6 factor ETFs (Value a Size)“, ale vyjmenovává 8 multi-asset ETF; dále „data do 2024/10“ × kroky „2007/05–2026/10“ a out-sample do 2026/10. Doporučení: držet se seznamu 8 ETF a období do 2026/10, v reportu to uvést, případně se zeptat vyučujícího.
+- Co se přednášelo 10. 11. (skripty k portfoliím jsou z tohoto data) a kdy přijdou skripty k faktorovým modelům?
+- Zůstanou v kurzu bloky o dluhopisech, FX, futures a opcích tak, jak je uvádí osnova? Čekáme na slidy.

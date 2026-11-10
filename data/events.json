@@ -70,5 +70,11 @@
     "date": "2027-01-04",
     "type": "zkouska",
     "title": "Ústní zkouška 8:30–11:00 (další termíny 5., 7., 12., 14., 18., 21., 28. 1.)"
+  },
+  {
+    "courseCode": "1BP461",
+    "date": "2026-12-15",
+    "type": "deadline",
+    "title": "Homework 1: ETF optimalizace + dual momentum (report + R kód, odevzdávárna InSIS)"
   }
 ]

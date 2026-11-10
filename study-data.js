@@ -378,32 +378,42 @@ window.COURSES = [
     "schedule": [
       "Př Út 14:30–16:00 NB B"
     ],
-    "grading": "Semestrální práce (50 %) · Závěrečný test (50 %)",
+    "grading": "Semestrální projekty (50 %) · Závěrečný test (50 %)",
     "topics": [
-      "Kapitálové trhy",
-      "Portfolio, CAPM a APT",
-      "Efektivita trhu",
-      "Dluhopisy a výnosová křivka",
-      "Forwardy, futures a zajištění",
-      "Contango a backwardation",
-      "Swapy a CDS",
-      "Opce a řecká písmena",
-      "Dynamika cen a exotické opce",
-      "Tržní riziko, VaR a ES"
+      "Úvod do R",
+      "Tidyverse a tidyquant",
+      "Optimalizace portfolia a CAPM",
+      "Faktorové modely",
+      "Efektivita trhu a strategie",
+      "Dluhopisové trhy",
+      "Devizové trhy",
+      "Futures",
+      "Oceňování opcí",
+      "Řecká písmena a hedging",
+      "Implikovaná volatilita a VRP",
+      "Stochastické modely a exotické opce"
     ],
     "topicWeeks": [
       1,
-      2,
-      3,
       4,
       5,
       6,
       8,
       10,
+      10,
       11,
-      12
+      11,
+      12,
+      12,
+      13
     ],
-    "events": []
+    "events": [
+      {
+        "date": "2026-12-15",
+        "type": "deadline",
+        "title": "Homework 1: ETF optimalizace + dual momentum (report + R kód, odevzdávárna InSIS)"
+      }
+    ]
   },
   {
     "code": "1BP443",
