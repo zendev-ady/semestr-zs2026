@@ -1,6 +1,6 @@
 # 1BP404 Kapitálové trhy II
 
-> Zdroje: `sylabus.txt` (InSIS) a `zakladni_info.txt` (oficiální podklady od vyučujícího + ručně psané poznámky z 1. přednášky, **mají přednost**). Pořadí témat je podle podkladů od vyučujícího: dluhové instrumenty jsou tu téma 4 (v InSIS 9), penzijní fondy a investiční management téma 5. Přiřazení témat k týdnům je **můj odhad**, protože podklady data přednášek neuvádějí. Klíčové pojmy mimo sylabus jsou **návrh** podle Musílka (2011), upřesnit podle přednášek.
+> Zdroje: `sylabus.txt` (InSIS) a `zakladni_info.txt` (oficiální podklady od vyučujícího + ručně psané poznámky z 1. přednášky, **mají přednost**). Pořadí témat je podle podkladů od vyučujícího: dluhové instrumenty jsou tu téma 4 (v InSIS 9), penzijní fondy a investiční management téma 5. Přiřazení témat k týdnům je **můj odhad**, protože podklady data přednášek neuvádějí. Klíčové pojmy mimo sylabus jsou **návrh** podle Musílka (2011), upřesnit podle přednášek. **Poznámky na webu jsou od 19. 11. 2026 přepsané podle slajdů z přednášek** (`podklady/1BP404/*.pptx`; téma 4 = soubor 09, téma 5 = soubory 03B, 03C a 04).
 
 ## Přehled
 
