@@ -359,8 +359,58 @@ body.dark-mode .week-row.current { background: #334155; }
 }
 .r-box code { color: inherit; background: none; padding: 0; font-size: inherit; }
 
+/* ── Textbook karty (výklad v souvislostech, styl učebnice FIT) ─
+   Markup: <div class="tb-card tb-def" data-title="Název"><div class="tb-body">…</div></div>
+   Hlavičku (číslo N.k, název, ikonu) doplní inline skript na stránce. */
+.tb-card {
+    --tb: #64748b;
+    --tb-fg: #fff;
+    margin: 1rem 0;
+    border: 1px solid color-mix(in srgb, var(--tb) 45%, #fff);
+    border-radius: 6px;
+    overflow: hidden;
+    font-size: 0.92rem;
+    background: #fff;
+}
+.tb-card .tb-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .75rem;
+    padding: .4rem .85rem;
+    background: var(--tb);
+    color: var(--tb-fg);
+    font-weight: 600;
+    font-size: .92rem;
+}
+.tb-card .tb-head a { color: inherit; text-decoration: none; }
+.tb-card .tb-head i { opacity: .85; }
+.tb-card .tb-body { padding: .7rem .95rem; }
+.tb-card .tb-body > :last-child { margin-bottom: 0; }
+.tb-card .tb-body ul { padding-left: 1.2rem; }
+.tb-def  { --tb: #198754; }
+.tb-link { --tb: #0d6efd; }
+.tb-ex   { --tb: #ffc107; --tb-fg: #000; }
+.tb-note { --tb: #ffc107; --tb-fg: #000; }
+.tb-warn { --tb: #dc3545; }
+.tb-sum  { --tb: #64748b; }
+
+.tb-page .topic-section h4 { font-size: 1.05rem; margin-top: 1.6rem; margin-bottom: .6rem; color: var(--accent); }
+.tb-page .topic-section p { line-height: 1.6; }
+.tb-lead { font-size: 1rem; color: #334155; }
+.tb-toc-sub { list-style: none; padding-left: .9rem; margin: 0 0 .25rem; display: none; }
+.topic-nav li:has(> a.active) > .tb-toc-sub { display: block; }
+.tb-toc-sub .nav-link { font-size: .78rem; color: #64748b; }
+.tb-links { font-size: .85rem; }
+
+body.dark-mode .tb-card { background: #1e293b; border-color: #334155; }
+body.dark-mode .tb-card .tb-head { filter: brightness(.8); }
+body.dark-mode .tb-lead { color: #cbd5e1; }
+body.dark-mode .tb-toc-sub .nav-link { color: #94a3b8; }
+
 /* ── Tisk / export do PDF ──────────────────────────────────── */
 @media print {
+    .tb-card { break-inside: avoid; }
     @page { margin: 14mm 12mm; }
     body { padding-top: 0 !important; background: #fff !important; font-size: 10.5pt; }
     .subject-navbar, .topic-nav, #harmonogram, #course-harmonogram,
